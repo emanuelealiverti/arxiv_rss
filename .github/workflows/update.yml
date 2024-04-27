@@ -29,6 +29,9 @@ jobs:
         with:
           python-version: '3.9'  # Adjust if needed
 
+      - name: get requirements
+        run: pip install -r requirements.txt
+
       - name: Run update script
         run: python rss_arxiv.py
 
@@ -40,7 +43,10 @@ jobs:
         with:
           ref: gh-pages  # Checkout gh-pages branch again
 
-      - name: Build Jekyll site (replace with actual command)
+      - name: get requirements bundle
+        run: bundle install
+        
+      - name: Build Jekyll site
         run: bundle exec jekyll build  # Replace with your specific build command
 
       - name: Move files (replace with actual commands)
