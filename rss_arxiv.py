@@ -9,10 +9,10 @@ today = date.today()
 converter = TeX.AccentConverter()
 
 # Debug: file locale
-#feed_urls = [
-#    'https://rss.arxiv.org/rss/stat',
-#]
-feed_urls = [r'./test.xml']
+feed_urls = [
+    'https://rss.arxiv.org/rss/stat',
+]
+#feed_urls = [r'./test.xml']
 
 def clean_author_name(name):
     nn = re.sub(r'\([^)]*\)', '', name)
