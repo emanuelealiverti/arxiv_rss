@@ -6,6 +6,4 @@ gem "no-style-please"
 
 
 
-gemspec
-
 gem "webrick", "~> 1.8"
