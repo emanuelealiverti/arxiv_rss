@@ -6,23 +6,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  checkout_and_switch:
-    runs-on: ubuntu-latest  # Replace with desired runner OS (if needed)
-    steps:
-      - uses: actions/checkout@v3  # Checkout your code
-
-      - name: Switch to gh-pages branch
-        uses: actions/checkout@v3
-        with:
-          ref: gh-pages  # Checkout gh-pages branch
 
   update_content:
     runs-on: ubuntu-latest  # Replace with desired runner OS (if needed)
-    needs: checkout_and_switch  # This job depends on checkout_and_switch job
     steps:
       - uses: actions/checkout@v3  # Checkout code (within this job too)
         with:
-          ref: gh-pages  # Checkout gh-pages branch again
+          ref: static
 
       - name: Use Python
         uses: actions/setup-python@v3
