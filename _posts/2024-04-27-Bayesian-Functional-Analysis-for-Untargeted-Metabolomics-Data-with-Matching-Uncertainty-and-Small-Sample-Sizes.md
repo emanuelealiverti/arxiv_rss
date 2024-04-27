@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Bayesian Functional Analysis for Untargeted Metabolomics Data with Matching Uncertainty and Small Sample Sizes"
+date: 2024-04-27
+author: Guoxuan Ma, Jian Kang, Tianwei Yu
+tags: stat.ME, stat.AP
+---
+
+Untargeted metabolomics based on liquid chromatography-mass spectrometry technology is quickly gaining widespread application given its ability to depict the global metabolic pattern in biological samples. However, the data is noisy and plagued by the lack of clear identity of data features measured from samples. Multiple potential matchings exist between data features and known metabolites, while the truth can only be one-to-one matches. Some existing methods attempt to reduce the matching uncertainty, but are far from being able to remove the uncertainty for most features. The existence of the uncertainty causes major difficulty in downstream functional analysis. To address these issues, we develop a novel approach for Bayesian Analysis of Untargeted Metabolomics data (BAUM) to integrate previously separate tasks into a single framework, including matching uncertainty inference, metabolite selection, and functional analysis. By incorporating the knowledge graph between variables and using relatively simple assumptions, BAUM can analyze datasets with small sample sizes. By allowing different confidence levels of feature-metabolite matching, the method is applicable to datasets in which feature identities are partially known. Simulation studies demonstrate that, compared with other existing methods, BAUM achieves better accuracy in selecting important metabolites that tend to be functionally consistent and assigning confidence scores to feature-metabolite matches. We analyze a COVID-19 metabolomics dataset and a mouse brain metabolomics dataset using BAUM. Even with a very small sample size of 16 mice per group, BAUM is robust and stable. It finds pathways that conform to existing knowledge, as well as novel pathways that are biologically plausible.
+
+[Read more](https://arxiv.org/abs/2312.03257)

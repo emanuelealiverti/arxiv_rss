@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Generalized Rosenbaum Bounds Sensitivity Analysis for Matched Observational Studies with Treatment Doses: Sufficiency, Consistency, and Efficiency"
+date: 2024-04-27
+author: Siyu Heng, Hyunseung Kang
+tags: stat.ME, stat.TH
+---
+
+In matched observational studies with binary treatments, the Rosenbaum bounds framework is arguably the most widely used sensitivity analysis framework for assessing sensitivity to unobserved covariates. Unlike the binary treatment case, although widely needed in practice, sensitivity analysis for matched observational studies with treatment doses (i.e., non-binary treatments such as ordinal treatments or continuous treatments) still lacks solid foundations and valid methodologies. We fill in this blank by establishing theoretical foundations and novel methodologies under a generalized Rosenbaum bounds sensitivity analysis framework. First, we present a criterion for assessing the validity of sensitivity analysis in matched observational studies with treatment doses and use that criterion to justify the necessity of incorporating the treatment dose information into sensitivity analysis through generalized Rosenbaum sensitivity bounds. We also generalize Rosenbaum's classic sensitivity parameter $\Gamma$ to the non-binary treatment case and prove its sufficiency. Second, we study the asymptotic properties of sensitivity analysis by generalizing Rosenbaum's classic design sensitivity and Bahadur efficiency for testing Fisher's sharp null to the non-binary treatment case and deriving novel formulas for them. Our theoretical results showed the importance of appropriately incorporating the treatment dose into a test, which is an intrinsic distinction with the binary treatment case. Third, for testing Neyman's weak null (i.e., null sample average treatment effect), we propose the first valid sensitivity analysis procedure for matching with treatment dose through generalizing an existing optimization-based sensitivity analysis for the binary treatment case, built on the generalized Rosenbaum sensitivity bounds and large-scale mixed integer programming.
+
+[Read more](https://arxiv.org/abs/2403.14152)

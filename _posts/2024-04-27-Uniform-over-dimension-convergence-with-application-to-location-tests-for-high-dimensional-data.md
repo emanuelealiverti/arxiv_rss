@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Uniform-over-dimension convergence with application to location tests for high-dimensional data"
+date: 2024-04-27
+author: Joydeep Chowdhury, Subhajit Dutta, Marc G. Genton
+tags: stat.TH
+---
+
+Asymptotic methods for hypothesis testing in high-dimensional data usually require the dimension of the observations to increase to infinity, often with an additional condition on its rate of increase compared to the sample size. On the other hand, multivariate asymptotic methods are valid for fixed dimension only, and their practical implementations in hypothesis testing methodology typically require the sample size to be large compared to the dimension for yielding desirable results. However, in practical scenarios, it is usually not possible to determine whether the dimension of the data at hand conform to the conditions required for the validity of the high-dimensional asymptotic methods, or whether the sample size is large enough compared to the dimension of the data. In this work, a theory of asymptotic convergence is proposed, which holds uniformly over the dimension of the random vectors. This theory attempts to unify the asymptotic results for fixed-dimensional multivariate data and high-dimensional data, and accounts for the effect of the dimension of the data on the performance of the hypothesis testing procedures. The methodology developed based on this asymptotic theory can be applied to data of any dimension. An application of this theory is demonstrated in the two-sample test for the equality of locations. The test statistic proposed is unscaled by the sample covariance, similar to usual tests for high-dimensional data. Using simulated examples, it is demonstrated that the proposed test exhibits better performance compared to several popular tests in the literature for high-dimensional data. Further, it is demonstrated in simulated models that the proposed unscaled test performs better than the usual scaled two-sample tests for multivariate data, including the Hotelling's $T^2$ test for multivariate Gaussian data.
+
+[Read more](https://arxiv.org/abs/2403.16328)
