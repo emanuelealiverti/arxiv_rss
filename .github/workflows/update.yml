@@ -2,42 +2,50 @@ name: Update Website Daily
 
 on:
   schedule:
-    - cron: '*/10 * * * *' 
-  
-# Allows you to run this workflow manually from the Actions tab
-workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    - cron: '0 9 * * *'  # Runs every day at 9:00 AM (adjust as needed)
 
 jobs:
-  update_and_deploy:
+  checkout_and_switch:
     runs-on: ubuntu-latest  # Replace with desired runner OS (if needed)
-      steps:
-        - uses: actions/checkout@v3  # Checkout your code
+    steps:
+      - uses: actions/checkout@v3  # Checkout your code
 
-        - name: Switch to gh-pages branch
-          uses: actions/checkout@v3
-          with:
-            ref: gh-pages  # Checkout gh-pages branch
-  
-        - name: Use Python 3.9
-          uses: actions/setup-python@v3
-          with:
-            python-version: '3.9'  # Adjust if needed
-  
-        - name: Run update script
-          run: python rss_app.py
-  
-        - name: Build Jekyll site (replace with actual command)
-          run: bundle exec jekyll build  # Replace with your specific build command
-         - name: Move files (replace with actual commands)
-          run: |
-            mv _site/* .
-            rm -R _site/
+      - name: Switch to gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages  # Checkout gh-pages branch
+
+  update_content:
+    runs-on: ubuntu-latest  # Replace with desired runner OS (if needed)
+    needs: checkout_and_switch  # This job depends on checkout_and_switch job
+    steps:
+      - uses: actions/checkout@v3  # Checkout code (within this job too)
+        with:
+          ref: gh-pages  # Checkout gh-pages branch again
+
+      - name: Use Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'  # Adjust if needed
+
+      - name: Run update script
+        run: python rss_arxiv.py
+
+  build_and_deploy:
+    runs-on: ubuntu-latest  # Replace with desired runner OS (if needed)
+    needs: update_content  # This job depends on update_content job
+    steps:
+      - uses: actions/checkout@v3  # Checkout code (within this job too)
+        with:
+          ref: gh-pages  # Checkout gh-pages branch again
+
+      - name: Build Jekyll site (replace with actual command)
+        run: bundle exec jekyll build  # Replace with your specific build command
+
+      - name: Move files (replace with actual commands)
+        run: |
+          mv _site/* .
+          # Add more move commands for additional files (if needed)
+
 env:
   # Add any environment variables needed by your build script (if applicable)
-
