@@ -24,29 +24,32 @@ jobs:
           python -m pip install -r requirements.txt
           python rss_arxiv.py
 
-  build_and_deploy:
-    runs-on: ubuntu-latest  # Replace with desired runner OS (if needed)
-    needs: update_content  # This job depends on update_content job
+  # Build job
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3  # Checkout code (within this job too)
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          ref: gh-pages  # Checkout gh-pages branch again
-
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
-        with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          ref: static
       - name: Setup Pages
-        id: pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
-        run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
 
-      - name: Move files (replace with actual commands)
-        run: |
-          mv _site/* .
-          # Add more move commands for additional files (if needed)
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
