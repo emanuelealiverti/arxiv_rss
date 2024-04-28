@@ -76,11 +76,14 @@ def write_article_to_markdown(article, filename):
 
 
 
-articles = fetch_articles(feed_urls)
+#articles = fetch_articles(feed_urls)
 
 def main():
+    print("Deleting old posts")
     os.system('rm -rf _posts/*')
+    print("Fetching new articles")
     articles = fetch_articles(feed_urls)
+    print(f"Writing { len(articles) } new articles")
     for article in articles:
         filename = f"_posts/{today}-{article['title'].replace(' ', '-')}.md"
         write_article_to_markdown(article, filename)
