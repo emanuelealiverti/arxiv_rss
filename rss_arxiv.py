@@ -5,12 +5,13 @@ import re
 import os
 from datetime import date
 
-debug = True
+
+# Debug: file locale (non ci sono rss sabato e domenica)
+debug = False
 
 today = date.today()
 converter = TeX.AccentConverter()
 
-# Debug: file locale
 feed_urls = [
     'https://rss.arxiv.org/rss/stat',
 ]
@@ -89,7 +90,7 @@ def main():
     print("Fetching new articles")
     articles = fetch_articles(feed_urls)
     print(f"Writing { len(articles) } new articles")
-    os.mkdir("_posts") # check is there
+    os.makedirs("_posts", exist_ok=True) # check is there
     for article in articles:
         filename = f"_posts/{today}-{article['title'].replace(' ', '-')}.md"
         write_article_to_markdown(article, filename)
