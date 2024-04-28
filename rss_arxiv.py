@@ -5,6 +5,8 @@ import re
 import os
 from datetime import date
 
+debug = True
+
 today = date.today()
 converter = TeX.AccentConverter()
 
@@ -12,7 +14,9 @@ converter = TeX.AccentConverter()
 feed_urls = [
     'https://rss.arxiv.org/rss/stat',
 ]
-#feed_urls = [r'./test.xml']
+
+if(debug): 
+    feed_urls = [r'./test.xml']
 
 def clean_author_name(name):
     nn = re.sub(r'\([^)]*\)', '', name)
