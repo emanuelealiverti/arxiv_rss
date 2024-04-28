@@ -5,6 +5,8 @@ import re
 import os
 from datetime import date
 
+debug = True
+
 today = date.today()
 converter = TeX.AccentConverter()
 
@@ -12,7 +14,9 @@ converter = TeX.AccentConverter()
 feed_urls = [
     'https://rss.arxiv.org/rss/stat',
 ]
-#feed_urls = [r'./test.xml']
+
+if(debug): 
+    feed_urls = [r'./test.xml']
 
 def clean_author_name(name):
     nn = re.sub(r'\([^)]*\)', '', name)
@@ -79,11 +83,13 @@ def write_article_to_markdown(article, filename):
 #articles = fetch_articles(feed_urls)
 
 def main():
+    os.listdir()
     print("Deleting old posts")
     os.system('rm -rf _posts/*')
     print("Fetching new articles")
     articles = fetch_articles(feed_urls)
     print(f"Writing { len(articles) } new articles")
+    os.mkdir("_posts") # check is there
     for article in articles:
         filename = f"_posts/{today}-{article['title'].replace(' ', '-')}.md"
         write_article_to_markdown(article, filename)
