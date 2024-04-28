@@ -90,7 +90,7 @@ def main():
     print("Fetching new articles")
     articles = fetch_articles(feed_urls)
     print(f"Writing { len(articles) } new articles")
-    os.mkdir("_posts") # check is there
+    os.makedirs("_posts", exist_ok=True) # check is there
     for article in articles:
         filename = f"_posts/{today}-{article['title'].replace(' ', '-')}.md"
         write_article_to_markdown(article, filename)
