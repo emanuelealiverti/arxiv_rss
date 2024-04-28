@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Confidence on the Focal: Conformal Prediction with Selection-Conditional Coverage</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Confidence on the Focal: Conformal Prediction with Selection-Conditional Coverage" />
+<meta name="author" content="Ying Jin, Zhimei Ren" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Conformal prediction builds marginally valid prediction intervals that cover the unknown outcome of a randomly drawn new test point with a prescribed probability. However, a common scenario in practice is that, after seeing the data, practitioners decide which test unit(s) to focus on in a data-driven manner and seek for uncertainty quantification of the focal unit(s). In such cases, marginally valid conformal prediction intervals may not provide valid coverage for the focal unit(s) due to selection bias. This paper presents a general framework for constructing a prediction set with finite-sample exact coverage conditional on the unit being selected by a given procedure. The general form of our method works for arbitrary selection rules that are invariant to the permutation of the calibration units, and generalizes Mondrian Conformal Prediction to multiple test units and non-equivariant classifiers. We then work out the computationally efficient implementation of our framework for a number of realistic selection rules, including top-K selection, optimization-based selection, selection based on conformal p-values, and selection based on properties of preliminary conformal prediction sets. The performance of our methods is demonstrated via applications in drug discovery and health risk prediction." />
+<meta property="og:description" content="Conformal prediction builds marginally valid prediction intervals that cover the unknown outcome of a randomly drawn new test point with a prescribed probability. However, a common scenario in practice is that, after seeing the data, practitioners decide which test unit(s) to focus on in a data-driven manner and seek for uncertainty quantification of the focal unit(s). In such cases, marginally valid conformal prediction intervals may not provide valid coverage for the focal unit(s) due to selection bias. This paper presents a general framework for constructing a prediction set with finite-sample exact coverage conditional on the unit being selected by a given procedure. The general form of our method works for arbitrary selection rules that are invariant to the permutation of the calibration units, and generalizes Mondrian Conformal Prediction to multiple test units and non-equivariant classifiers. We then work out the computationally efficient implementation of our framework for a number of realistic selection rules, including top-K selection, optimization-based selection, selection based on conformal p-values, and selection based on properties of preliminary conformal prediction sets. The performance of our methods is demonstrated via applications in drug discovery and health risk prediction." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/04/27/Confidence-on-the-Focal-Conformal-Prediction-with-Selection-Conditional-Coverage.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/04/27/Confidence-on-the-Focal-Conformal-Prediction-with-Selection-Conditional-Coverage.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-04-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Confidence on the Focal: Conformal Prediction with Selection-Conditional Coverage" />
+<script type="application/ld+json">
+{"description":"Conformal prediction builds marginally valid prediction intervals that cover the unknown outcome of a randomly drawn new test point with a prescribed probability. However, a common scenario in practice is that, after seeing the data, practitioners decide which test unit(s) to focus on in a data-driven manner and seek for uncertainty quantification of the focal unit(s). In such cases, marginally valid conformal prediction intervals may not provide valid coverage for the focal unit(s) due to selection bias. This paper presents a general framework for constructing a prediction set with finite-sample exact coverage conditional on the unit being selected by a given procedure. The general form of our method works for arbitrary selection rules that are invariant to the permutation of the calibration units, and generalizes Mondrian Conformal Prediction to multiple test units and non-equivariant classifiers. We then work out the computationally efficient implementation of our framework for a number of realistic selection rules, including top-K selection, optimization-based selection, selection based on conformal p-values, and selection based on properties of preliminary conformal prediction sets. The performance of our methods is demonstrated via applications in drug discovery and health risk prediction.","headline":"Confidence on the Focal: Conformal Prediction with Selection-Conditional Coverage","dateModified":"2024-04-27T00:00:00+00:00","datePublished":"2024-04-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/04/27/Confidence-on-the-Focal-Conformal-Prediction-with-Selection-Conditional-Coverage.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/04/27/Confidence-on-the-Focal-Conformal-Prediction-with-Selection-Conditional-Coverage.html","author":{"@type":"Person","name":"Ying Jin, Zhimei Ren"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-04-27 00:00:00 +0000">04-27</time>
+  </p>
+  
+  <h1>Confidence on the Focal: Conformal Prediction with Selection-Conditional Coverage</h1>
+
+  <p>Conformal prediction builds marginally valid prediction intervals that cover the unknown outcome of a randomly drawn new test point with a prescribed probability. However, a common scenario in practice is that, after seeing the data, practitioners decide which test unit(s) to focus on in a data-driven manner and seek for uncertainty quantification of the focal unit(s). In such cases, marginally valid conformal prediction intervals may not provide valid coverage for the focal unit(s) due to selection bias. This paper presents a general framework for constructing a prediction set with finite-sample exact coverage conditional on the unit being selected by a given procedure. The general form of our method works for arbitrary selection rules that are invariant to the permutation of the calibration units, and generalizes Mondrian Conformal Prediction to multiple test units and non-equivariant classifiers. We then work out the computationally efficient implementation of our framework for a number of realistic selection rules, including top-K selection, optimization-based selection, selection based on conformal p-values, and selection based on properties of preliminary conformal prediction sets. The performance of our methods is demonstrated via applications in drug discovery and health risk prediction.</p>
+
+<p><a href="https://arxiv.org/abs/2403.03868">Read more</a></p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>
