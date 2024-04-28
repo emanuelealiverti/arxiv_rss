@@ -5,12 +5,13 @@ import re
 import os
 from datetime import date
 
-debug = True
+
+# Debug: file locale (non ci sono rss sabato e domenica)
+debug = False
 
 today = date.today()
 converter = TeX.AccentConverter()
 
-# Debug: file locale
 feed_urls = [
     'https://rss.arxiv.org/rss/stat',
 ]
