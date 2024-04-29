@@ -25,10 +25,9 @@ def clean_author_name(name):
     # nn = re.sub("[^\w ,']*",'', nn)  # Uncomment for stricter cleanup
     return nn
 
-
-def feed_info():
-    feeds = [feedparser.parse(url) for url in feed_urls]
-    return feeds[0]['feed']['published']
+def clean_title(tit):
+    nn = rf'{converter.decode_Tex_Accents(tit, utf8_or_ascii=1)}'.replace('\\','\\\\')
+    return nn # raw string per gli slash
 
 
 def fetch_articles(feed_urls):
@@ -38,7 +37,7 @@ def fetch_articles(feed_urls):
             feed = feedparser.parse(url)
             for entry in feed.entries:
                 # Extract relevant data
-                title = clean_author_name(entry.title)
+                title = clean_title(entry.title)
                 link = entry.link
                 author = clean_author_name(entry.author) 
                 abstract = entry.summary 
@@ -61,7 +60,7 @@ def write_article_to_markdown(article, filename):
     lines = [
         "---",
         "layout: post",
-        f'title: "{article["title"]}"',
+        rf'title: "{article["title"]}"',
         f"date: {today}",  # Use publication date from feed
         f"author: {article['author']}",
         f"tags: {', '.join(article['tags'])}",  # Combine tags with comma and space
@@ -81,7 +80,7 @@ def write_article_to_markdown(article, filename):
 
 
 
-#articles = fetch_articles(feed_urls)
+articles = fetch_articles(feed_urls)
 
 def main():
     os.listdir()
@@ -92,7 +91,9 @@ def main():
     print(f"Writing { len(articles) } new articles")
     os.makedirs("_posts", exist_ok=True) # check is there
     for article in articles:
-        filename = f"_posts/{today}-{article['title'].replace(' ', '-')}.md"
+        # Sanitize file names
+        title_ok = ''.join(filter(str.isalnum,article['title']))
+        filename = f"_posts/{today}-{title_ok.replace(' ', '-')}.md"
         write_article_to_markdown(article, filename)
 
 
