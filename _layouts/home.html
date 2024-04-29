@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<header>
+  <h1>{{ site.title }} - {{ site.time | date: "%-d %b"}}</h1>
+  {%-if site.theme_config.show_description-%}
+    <p>{{ site.description }}</p>
+  {%-endif-%}
+</header>
+
+{%-include post_list.html -%}
+
