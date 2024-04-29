@@ -9,12 +9,20 @@ from datetime import date
 # Debug: file locale (non ci sono rss sabato e domenica)
 debug = False
 
+# Aggiungi anche statML e statTH
+all_stat_feeds = False
+
 today = date.today()
 converter = TeX.AccentConverter()
 
 feed_urls = [
-    'https://rss.arxiv.org/rss/stat',
-]
+        'https://rss.arxiv.org/rss/stat.ME',
+        'https://rss.arxiv.org/rss/stat.CO',
+        'https://rss.arxiv.org/rss/stat.AP'
+        ]
+
+if(all_stat_feeds):
+    feed_urls = ['https://rss.arxiv.org/rss/stat']
 
 if(debug): 
     feed_urls = [r'./test.xml']
@@ -79,8 +87,8 @@ def write_article_to_markdown(article, filename):
         f.write(markdown_content)
 
 
+#articles = fetch_articles(feed_urls)
 
-articles = fetch_articles(feed_urls)
 
 def main():
     os.listdir()
@@ -88,6 +96,8 @@ def main():
     os.system('rm -rf _posts/*')
     print("Fetching new articles")
     articles = fetch_articles(feed_urls)
+    # remove duplicates
+    articles = [i for n, i in enumerate(articles) if i not in articles[n + 1:]]
     print(f"Writing { len(articles) } new articles")
     os.makedirs("_posts", exist_ok=True) # check is there
     for article in articles:
