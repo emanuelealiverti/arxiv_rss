@@ -10,30 +10,22 @@ on:
 
 jobs:
   update_content:
-    runs-on: ubuntu-latest  # Replace with desired runner OS (if needed)
+    runs-on: ubuntu-latest  
     steps:
-      - uses: actions/checkout@v4  # Checkout code (within this job too)
+      - uses: actions/checkout@v4  #  Cambia branch
         with:
-          ref: static
-          persist-credentials: true
+          ref: main  # change branch if on another
+          persist-credentials: true # E lascialo per tutto
 
       - name: Use Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'  # Adjust if needed
+          python-version: '3.9'
 
-      - name: update rss
+      - name: update rss # Aggiorna sito con python
         run: |
           python -m pip install -r requirements.txt
           python rss_arxiv.py
- # deploy:
-  #  runs-on: ubuntu-latest  # Replace with desired runner OS (if needed)
-   # needs: update_content  # This job depends on update_content job
-    #steps:
-      #      - name: Checkout
-      #        uses: actions/checkout@v4
-      #        with:
-      #          ref: static
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -45,7 +37,7 @@ jobs:
       - name: Build Jekyll site 
         run: bundle exec jekyll build  
 
-      - name: Deploy to GitHub Pages 
+      - name: Deploy to GitHub Pages  # Deploy tramite secret creato da impostazioni generali
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.JK_TOKEN }}
