@@ -30,14 +30,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest  # Replace with desired runner OS (if needed)
     needs: update_content  # This job depends on update_content job
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: static
+      #    steps: # avoid this to keep changes mande beforehand
+      #      - name: Checkout
+      #        uses: actions/checkout@v4
+      #        with:
+      #          ref: static
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
