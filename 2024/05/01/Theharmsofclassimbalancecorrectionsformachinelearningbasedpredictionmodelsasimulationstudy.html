@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The harms of class imbalance corrections for machine learning based prediction models: a simulation study</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The harms of class imbalance corrections for machine learning based prediction models: a simulation study" />
+<meta name="author" content="Alex Carriero, Kim Luijken, Anne de Hond, Karel GM Moons, Ben van Calster, Maarten van Smeden" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Risk prediction models are increasingly used in healthcare to aid in clinical decision making. In most clinical contexts, model calibration (i.e., assessing the reliability of risk estimates) is critical. Data available for model development are often not perfectly balanced with respect to the modeled outcome (i.e., individuals with vs. without the event of interest are not equally represented in the data). It is common for researchers to correct this class imbalance, yet, the effect of such imbalance corrections on the calibration of machine learning models is largely unknown. We studied the effect of imbalance corrections on model calibration for a variety of machine learning algorithms. Using extensive Monte Carlo simulations we compared the out-of-sample predictive performance of models developed with an imbalance correction to those developed without a correction for class imbalance across different data-generating scenarios (varying sample size, the number of predictors and event fraction). Our findings were illustrated in a case study using MIMIC-III data. In all simulation scenarios, prediction models developed without a correction for class imbalance consistently had equal or better calibration performance than prediction models developed with a correction for class imbalance. The miscalibration introduced by correcting for class imbalance was characterized by an over-estimation of risk and was not always able to be corrected with re-calibration. Correcting for class imbalance is not always necessary and may even be harmful for clinical prediction models which aim to produce reliable risk estimates on an individual basis." />
+<meta property="og:description" content="Risk prediction models are increasingly used in healthcare to aid in clinical decision making. In most clinical contexts, model calibration (i.e., assessing the reliability of risk estimates) is critical. Data available for model development are often not perfectly balanced with respect to the modeled outcome (i.e., individuals with vs. without the event of interest are not equally represented in the data). It is common for researchers to correct this class imbalance, yet, the effect of such imbalance corrections on the calibration of machine learning models is largely unknown. We studied the effect of imbalance corrections on model calibration for a variety of machine learning algorithms. Using extensive Monte Carlo simulations we compared the out-of-sample predictive performance of models developed with an imbalance correction to those developed without a correction for class imbalance across different data-generating scenarios (varying sample size, the number of predictors and event fraction). Our findings were illustrated in a case study using MIMIC-III data. In all simulation scenarios, prediction models developed without a correction for class imbalance consistently had equal or better calibration performance than prediction models developed with a correction for class imbalance. The miscalibration introduced by correcting for class imbalance was characterized by an over-estimation of risk and was not always able to be corrected with re-calibration. Correcting for class imbalance is not always necessary and may even be harmful for clinical prediction models which aim to produce reliable risk estimates on an individual basis." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/01/Theharmsofclassimbalancecorrectionsformachinelearningbasedpredictionmodelsasimulationstudy.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/01/Theharmsofclassimbalancecorrectionsformachinelearningbasedpredictionmodelsasimulationstudy.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The harms of class imbalance corrections for machine learning based prediction models: a simulation study" />
+<script type="application/ld+json">
+{"description":"Risk prediction models are increasingly used in healthcare to aid in clinical decision making. In most clinical contexts, model calibration (i.e., assessing the reliability of risk estimates) is critical. Data available for model development are often not perfectly balanced with respect to the modeled outcome (i.e., individuals with vs. without the event of interest are not equally represented in the data). It is common for researchers to correct this class imbalance, yet, the effect of such imbalance corrections on the calibration of machine learning models is largely unknown. We studied the effect of imbalance corrections on model calibration for a variety of machine learning algorithms. Using extensive Monte Carlo simulations we compared the out-of-sample predictive performance of models developed with an imbalance correction to those developed without a correction for class imbalance across different data-generating scenarios (varying sample size, the number of predictors and event fraction). Our findings were illustrated in a case study using MIMIC-III data. In all simulation scenarios, prediction models developed without a correction for class imbalance consistently had equal or better calibration performance than prediction models developed with a correction for class imbalance. The miscalibration introduced by correcting for class imbalance was characterized by an over-estimation of risk and was not always able to be corrected with re-calibration. Correcting for class imbalance is not always necessary and may even be harmful for clinical prediction models which aim to produce reliable risk estimates on an individual basis.","headline":"The harms of class imbalance corrections for machine learning based prediction models: a simulation study","dateModified":"2024-05-01T00:00:00+00:00","datePublished":"2024-05-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/01/Theharmsofclassimbalancecorrectionsformachinelearningbasedpredictionmodelsasimulationstudy.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/01/Theharmsofclassimbalancecorrectionsformachinelearningbasedpredictionmodelsasimulationstudy.html","author":{"@type":"Person","name":"Alex Carriero, Kim Luijken, Anne de Hond, Karel GM Moons, Ben van Calster, Maarten van Smeden"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-01 00:00:00 +0000">05-01</time>
+  </p>
+  
+  <h1>The harms of class imbalance corrections for machine learning based prediction models: a simulation study</h1>
+  <br>Alex Carriero, Kim Luijken, Anne de Hond, Karel GM Moons, Ben van Calster, Maarten van Smeden</h3>
+  <br> [stat.ME]
+
+  <p>Risk prediction models are increasingly used in healthcare to aid in clinical decision making. In most clinical contexts, model calibration (i.e., assessing the reliability of risk estimates) is critical. Data available for model development are often not perfectly balanced with respect to the modeled outcome (i.e., individuals with vs. without the event of interest are not equally represented in the data). It is common for researchers to correct this class imbalance, yet, the effect of such imbalance corrections on the calibration of machine learning models is largely unknown. We studied the effect of imbalance corrections on model calibration for a variety of machine learning algorithms. Using extensive Monte Carlo simulations we compared the out-of-sample predictive performance of models developed with an imbalance correction to those developed without a correction for class imbalance across different data-generating scenarios (varying sample size, the number of predictors and event fraction). Our findings were illustrated in a case study using MIMIC-III data. In all simulation scenarios, prediction models developed without a correction for class imbalance consistently had equal or better calibration performance than prediction models developed with a correction for class imbalance. The miscalibration introduced by correcting for class imbalance was characterized by an over-estimation of risk and was not always able to be corrected with re-calibration. Correcting for class imbalance is not always necessary and may even be harmful for clinical prediction models which aim to produce reliable risk estimates on an individual basis.</p>
+
+<p><a href="https://arxiv.org/abs/2404.19494">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
