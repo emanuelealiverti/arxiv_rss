@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Propensity weighting plus adjustment in proportional hazards model is not doubly robust</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Propensity weighting plus adjustment in proportional hazards model is not doubly robust" />
+<meta name="author" content="Erin E Gabriel, Michael C Sachs, Ingeborg Waernbaum, Els Goetghebeur, Paul F Blanche, Stijn Vansteelandt, Arvid Sjölander, Thomas Scheike" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recently, it has become common for applied works to combine commonly used survival analysis modeling methods, such as the multivariable Cox model and propensity score weighting, with the intention of forming a doubly robust estimator of an exposure effect hazard ratio that is unbiased in large samples when either the Cox model or the propensity score model is correctly specified. This combination does not, in general, produce a doubly robust estimator, even after regression standardization, when there is truly a causal effect. We demonstrate via simulation this lack of double robustness for the semiparametric Cox model, the Weibull proportional hazards model, and a simple proportional hazards flexible parametric model, with both the latter models fit via maximum likelihood. We provide a novel proof that the combination of propensity score weighting and a proportional hazards survival model, fit either via full or partial likelihood, is consistent under the null of no causal effect of the exposure on the outcome under particular censoring mechanisms if either the propensity score or the outcome model is correctly specified and contains all confounders. Given our results suggesting that double robustness only exists under the null, we outline two simple alternative estimators that are doubly robust for the survival difference at a given time point (in the above sense), provided the censoring mechanism can be correctly modeled, and one doubly robust method of estimation for the full survival curve. We provide R code to use these estimators for estimation and inference in the supporting information." />
+<meta property="og:description" content="Recently, it has become common for applied works to combine commonly used survival analysis modeling methods, such as the multivariable Cox model and propensity score weighting, with the intention of forming a doubly robust estimator of an exposure effect hazard ratio that is unbiased in large samples when either the Cox model or the propensity score model is correctly specified. This combination does not, in general, produce a doubly robust estimator, even after regression standardization, when there is truly a causal effect. We demonstrate via simulation this lack of double robustness for the semiparametric Cox model, the Weibull proportional hazards model, and a simple proportional hazards flexible parametric model, with both the latter models fit via maximum likelihood. We provide a novel proof that the combination of propensity score weighting and a proportional hazards survival model, fit either via full or partial likelihood, is consistent under the null of no causal effect of the exposure on the outcome under particular censoring mechanisms if either the propensity score or the outcome model is correctly specified and contains all confounders. Given our results suggesting that double robustness only exists under the null, we outline two simple alternative estimators that are doubly robust for the survival difference at a given time point (in the above sense), provided the censoring mechanism can be correctly modeled, and one doubly robust method of estimation for the full survival curve. We provide R code to use these estimators for estimation and inference in the supporting information." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/02/Propensityweightingplusadjustmentinproportionalhazardsmodelisnotdoublyrobust.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/02/Propensityweightingplusadjustmentinproportionalhazardsmodelisnotdoublyrobust.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Propensity weighting plus adjustment in proportional hazards model is not doubly robust" />
+<script type="application/ld+json">
+{"description":"Recently, it has become common for applied works to combine commonly used survival analysis modeling methods, such as the multivariable Cox model and propensity score weighting, with the intention of forming a doubly robust estimator of an exposure effect hazard ratio that is unbiased in large samples when either the Cox model or the propensity score model is correctly specified. This combination does not, in general, produce a doubly robust estimator, even after regression standardization, when there is truly a causal effect. We demonstrate via simulation this lack of double robustness for the semiparametric Cox model, the Weibull proportional hazards model, and a simple proportional hazards flexible parametric model, with both the latter models fit via maximum likelihood. We provide a novel proof that the combination of propensity score weighting and a proportional hazards survival model, fit either via full or partial likelihood, is consistent under the null of no causal effect of the exposure on the outcome under particular censoring mechanisms if either the propensity score or the outcome model is correctly specified and contains all confounders. Given our results suggesting that double robustness only exists under the null, we outline two simple alternative estimators that are doubly robust for the survival difference at a given time point (in the above sense), provided the censoring mechanism can be correctly modeled, and one doubly robust method of estimation for the full survival curve. We provide R code to use these estimators for estimation and inference in the supporting information.","headline":"Propensity weighting plus adjustment in proportional hazards model is not doubly robust","dateModified":"2024-05-02T00:00:00+00:00","datePublished":"2024-05-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/02/Propensityweightingplusadjustmentinproportionalhazardsmodelisnotdoublyrobust.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/02/Propensityweightingplusadjustmentinproportionalhazardsmodelisnotdoublyrobust.html","author":{"@type":"Person","name":"Erin E Gabriel, Michael C Sachs, Ingeborg Waernbaum, Els Goetghebeur, Paul F Blanche, Stijn Vansteelandt, Arvid Sjölander, Thomas Scheike"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-02 00:00:00 +0000">05-02</time>
+  </p>
+  
+  <h1>Propensity weighting plus adjustment in proportional hazards model is not doubly robust</h1>
+  <br>Erin E Gabriel, Michael C Sachs, Ingeborg Waernbaum, Els Goetghebeur, Paul F Blanche, Stijn Vansteelandt, Arvid Sjölander, Thomas Scheike</h3>
+  <br> [stat.ME]
+
+  <p>Recently, it has become common for applied works to combine commonly used survival analysis modeling methods, such as the multivariable Cox model and propensity score weighting, with the intention of forming a doubly robust estimator of an exposure effect hazard ratio that is unbiased in large samples when either the Cox model or the propensity score model is correctly specified. This combination does not, in general, produce a doubly robust estimator, even after regression standardization, when there is truly a causal effect. We demonstrate via simulation this lack of double robustness for the semiparametric Cox model, the Weibull proportional hazards model, and a simple proportional hazards flexible parametric model, with both the latter models fit via maximum likelihood. We provide a novel proof that the combination of propensity score weighting and a proportional hazards survival model, fit either via full or partial likelihood, is consistent under the null of no causal effect of the exposure on the outcome under particular censoring mechanisms if either the propensity score or the outcome model is correctly specified and contains all confounders. Given our results suggesting that double robustness only exists under the null, we outline two simple alternative estimators that are doubly robust for the survival difference at a given time point (in the above sense), provided the censoring mechanism can be correctly modeled, and one doubly robust method of estimation for the full survival curve. We provide R code to use these estimators for estimation and inference in the supporting information.</p>
+
+<p><a href="https://arxiv.org/abs/2310.16207">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
