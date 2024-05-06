@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Handling missing data when estimating causal effects with Targeted Maximum Likelihood Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Handling missing data when estimating causal effects with Targeted Maximum Likelihood Estimation" />
+<meta name="author" content="S. Ghazaleh Dashti, Katherine J. Lee, Julie A. Simpson, Ian R. White, John B. Carlin, Margarita Moreno-Betancur" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Targeted Maximum Likelihood Estimation (TMLE) is increasingly used for doubly robust causal inference, but how missing data should be handled when using TMLE with data-adaptive approaches is unclear. Based on the Victorian Adolescent Health Cohort Study, we conducted a simulation study to evaluate eight missing data methods in this context: complete-case analysis, extended TMLE incorporating outcome-missingness model, missing covariate missing indicator method, five multiple imputation (MI) approaches using parametric or machine-learning models. Six scenarios were considered, varying in exposure/outcome generation models (presence of confounder-confounder interactions) and missingness mechanisms (whether outcome influenced missingness in other variables and presence of interaction/non-linear terms in missingness models). Complete-case analysis and extended TMLE had small biases when outcome did not influence missingness in other variables. Parametric MI without interactions had large bias when exposure/outcome generation models included interactions. Parametric MI including interactions performed best in bias and variance reduction across all settings, except when missingness models included a non-linear term. When choosing a method to handle missing data in the context of TMLE, researchers must consider the missingness mechanism and, for MI, compatibility with the analysis method. In many settings, a parametric MI approach that incorporates interactions and non-linearities is expected to perform well." />
+<meta property="og:description" content="Targeted Maximum Likelihood Estimation (TMLE) is increasingly used for doubly robust causal inference, but how missing data should be handled when using TMLE with data-adaptive approaches is unclear. Based on the Victorian Adolescent Health Cohort Study, we conducted a simulation study to evaluate eight missing data methods in this context: complete-case analysis, extended TMLE incorporating outcome-missingness model, missing covariate missing indicator method, five multiple imputation (MI) approaches using parametric or machine-learning models. Six scenarios were considered, varying in exposure/outcome generation models (presence of confounder-confounder interactions) and missingness mechanisms (whether outcome influenced missingness in other variables and presence of interaction/non-linear terms in missingness models). Complete-case analysis and extended TMLE had small biases when outcome did not influence missingness in other variables. Parametric MI without interactions had large bias when exposure/outcome generation models included interactions. Parametric MI including interactions performed best in bias and variance reduction across all settings, except when missingness models included a non-linear term. When choosing a method to handle missing data in the context of TMLE, researchers must consider the missingness mechanism and, for MI, compatibility with the analysis method. In many settings, a parametric MI approach that incorporates interactions and non-linearities is expected to perform well." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/06/HandlingmissingdatawhenestimatingcausaleffectswithTargetedMaximumLikelihoodEstimation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/06/HandlingmissingdatawhenestimatingcausaleffectswithTargetedMaximumLikelihoodEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Handling missing data when estimating causal effects with Targeted Maximum Likelihood Estimation" />
+<script type="application/ld+json">
+{"description":"Targeted Maximum Likelihood Estimation (TMLE) is increasingly used for doubly robust causal inference, but how missing data should be handled when using TMLE with data-adaptive approaches is unclear. Based on the Victorian Adolescent Health Cohort Study, we conducted a simulation study to evaluate eight missing data methods in this context: complete-case analysis, extended TMLE incorporating outcome-missingness model, missing covariate missing indicator method, five multiple imputation (MI) approaches using parametric or machine-learning models. Six scenarios were considered, varying in exposure/outcome generation models (presence of confounder-confounder interactions) and missingness mechanisms (whether outcome influenced missingness in other variables and presence of interaction/non-linear terms in missingness models). Complete-case analysis and extended TMLE had small biases when outcome did not influence missingness in other variables. Parametric MI without interactions had large bias when exposure/outcome generation models included interactions. Parametric MI including interactions performed best in bias and variance reduction across all settings, except when missingness models included a non-linear term. When choosing a method to handle missing data in the context of TMLE, researchers must consider the missingness mechanism and, for MI, compatibility with the analysis method. In many settings, a parametric MI approach that incorporates interactions and non-linearities is expected to perform well.","headline":"Handling missing data when estimating causal effects with Targeted Maximum Likelihood Estimation","dateModified":"2024-05-06T00:00:00+00:00","datePublished":"2024-05-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/06/HandlingmissingdatawhenestimatingcausaleffectswithTargetedMaximumLikelihoodEstimation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/06/HandlingmissingdatawhenestimatingcausaleffectswithTargetedMaximumLikelihoodEstimation.html","author":{"@type":"Person","name":"S. Ghazaleh Dashti, Katherine J. Lee, Julie A. Simpson, Ian R. White, John B. Carlin, Margarita Moreno-Betancur"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-06 00:00:00 +0000">05-06</time>
+  </p>
+  
+  <h1>Handling missing data when estimating causal effects with Targeted Maximum Likelihood Estimation</h1>
+  <br>S. Ghazaleh Dashti, Katherine J. Lee, Julie A. Simpson, Ian R. White, John B. Carlin, Margarita Moreno-Betancur</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Targeted Maximum Likelihood Estimation (TMLE) is increasingly used for doubly robust causal inference, but how missing data should be handled when using TMLE with data-adaptive approaches is unclear. Based on the Victorian Adolescent Health Cohort Study, we conducted a simulation study to evaluate eight missing data methods in this context: complete-case analysis, extended TMLE incorporating outcome-missingness model, missing covariate missing indicator method, five multiple imputation (MI) approaches using parametric or machine-learning models. Six scenarios were considered, varying in exposure/outcome generation models (presence of confounder-confounder interactions) and missingness mechanisms (whether outcome influenced missingness in other variables and presence of interaction/non-linear terms in missingness models). Complete-case analysis and extended TMLE had small biases when outcome did not influence missingness in other variables. Parametric MI without interactions had large bias when exposure/outcome generation models included interactions. Parametric MI including interactions performed best in bias and variance reduction across all settings, except when missingness models included a non-linear term. When choosing a method to handle missing data in the context of TMLE, researchers must consider the missingness mechanism and, for MI, compatibility with the analysis method. In many settings, a parametric MI approach that incorporates interactions and non-linearities is expected to perform well.</p>
+
+<p><a href="https://arxiv.org/abs/2112.05274">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
