@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Grouping predictors via network-wide metrics</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Grouping predictors via network-wide metrics" />
+<meta name="author" content="Brandon Woosuk Park, Anand N. Vidyashankar, Tucker S. McElroy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When multitudes of features can plausibly be associated with a response, both privacy considerations and model parsimony suggest grouping them to increase the predictive power of a regression model. Specifically, the identification of groups of predictors significantly associated with the response variable eases further downstream analysis and decision-making. This paper proposes a new data analysis methodology that utilizes the high-dimensional predictor space to construct an implicit network with weighted edges %and weights on the edges to identify significant associations between the response and the predictors. Using a population model for groups of predictors defined via network-wide metrics, a new supervised grouping algorithm is proposed to determine the correct group, with probability tending to one as the sample size diverges to infinity. For this reason, we establish several theoretical properties of the estimates of network-wide metrics. A novel model-assisted bootstrap procedure that substantially decreases computational complexity is developed, facilitating the assessment of uncertainty in the estimates of network-wide metrics. The proposed methods account for several challenges that arise in the high-dimensional data setting, including (i) a large number of predictors, (ii) uncertainty regarding the true statistical model, and (iii) model selection variability. The performance of the proposed methods is demonstrated through numerical experiments, data from sports analytics, and breast cancer data." />
+<meta property="og:description" content="When multitudes of features can plausibly be associated with a response, both privacy considerations and model parsimony suggest grouping them to increase the predictive power of a regression model. Specifically, the identification of groups of predictors significantly associated with the response variable eases further downstream analysis and decision-making. This paper proposes a new data analysis methodology that utilizes the high-dimensional predictor space to construct an implicit network with weighted edges %and weights on the edges to identify significant associations between the response and the predictors. Using a population model for groups of predictors defined via network-wide metrics, a new supervised grouping algorithm is proposed to determine the correct group, with probability tending to one as the sample size diverges to infinity. For this reason, we establish several theoretical properties of the estimates of network-wide metrics. A novel model-assisted bootstrap procedure that substantially decreases computational complexity is developed, facilitating the assessment of uncertainty in the estimates of network-wide metrics. The proposed methods account for several challenges that arise in the high-dimensional data setting, including (i) a large number of predictors, (ii) uncertainty regarding the true statistical model, and (iii) model selection variability. The performance of the proposed methods is demonstrated through numerical experiments, data from sports analytics, and breast cancer data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/07/Groupingpredictorsvianetworkwidemetrics.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/07/Groupingpredictorsvianetworkwidemetrics.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Grouping predictors via network-wide metrics" />
+<script type="application/ld+json">
+{"description":"When multitudes of features can plausibly be associated with a response, both privacy considerations and model parsimony suggest grouping them to increase the predictive power of a regression model. Specifically, the identification of groups of predictors significantly associated with the response variable eases further downstream analysis and decision-making. This paper proposes a new data analysis methodology that utilizes the high-dimensional predictor space to construct an implicit network with weighted edges %and weights on the edges to identify significant associations between the response and the predictors. Using a population model for groups of predictors defined via network-wide metrics, a new supervised grouping algorithm is proposed to determine the correct group, with probability tending to one as the sample size diverges to infinity. For this reason, we establish several theoretical properties of the estimates of network-wide metrics. A novel model-assisted bootstrap procedure that substantially decreases computational complexity is developed, facilitating the assessment of uncertainty in the estimates of network-wide metrics. The proposed methods account for several challenges that arise in the high-dimensional data setting, including (i) a large number of predictors, (ii) uncertainty regarding the true statistical model, and (iii) model selection variability. The performance of the proposed methods is demonstrated through numerical experiments, data from sports analytics, and breast cancer data.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/07/Groupingpredictorsvianetworkwidemetrics.html"},"headline":"Grouping predictors via network-wide metrics","dateModified":"2024-05-07T00:00:00+00:00","datePublished":"2024-05-07T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/07/Groupingpredictorsvianetworkwidemetrics.html","author":{"@type":"Person","name":"Brandon Woosuk Park, Anand N. Vidyashankar, Tucker S. McElroy"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-07 00:00:00 +0000">05-07</time>
+  </p>
+  
+  <h1>Grouping predictors via network-wide metrics</h1>
+  <br>Brandon Woosuk Park, Anand N. Vidyashankar, Tucker S. McElroy</h3>
+  <br> [stat.ME,stat.TH]
+
+  <p>When multitudes of features can plausibly be associated with a response, both privacy considerations and model parsimony suggest grouping them to increase the predictive power of a regression model. Specifically, the identification of groups of predictors significantly associated with the response variable eases further downstream analysis and decision-making. This paper proposes a new data analysis methodology that utilizes the high-dimensional predictor space to construct an implicit network with weighted edges %and weights on the edges to identify significant associations between the response and the predictors. Using a population model for groups of predictors defined via network-wide metrics, a new supervised grouping algorithm is proposed to determine the correct group, with probability tending to one as the sample size diverges to infinity. For this reason, we establish several theoretical properties of the estimates of network-wide metrics. A novel model-assisted bootstrap procedure that substantially decreases computational complexity is developed, facilitating the assessment of uncertainty in the estimates of network-wide metrics. The proposed methods account for several challenges that arise in the high-dimensional data setting, including (i) a large number of predictors, (ii) uncertainty regarding the true statistical model, and (iii) model selection variability. The performance of the proposed methods is demonstrated through numerical experiments, data from sports analytics, and breast cancer data.</p>
+
+<p><a href="https://arxiv.org/abs/2405.02715">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
