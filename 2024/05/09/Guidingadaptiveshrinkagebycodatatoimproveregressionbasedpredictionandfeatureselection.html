@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Guiding adaptive shrinkage by co-data to improve regression-based prediction and feature selection</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Guiding adaptive shrinkage by co-data to improve regression-based prediction and feature selection" />
+<meta name="author" content="Mark A. van de Wiel, Wessel N. van Wieringen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The high dimensional nature of genomics data complicates feature selection, in particular in low sample size studies - not uncommon in clinical prediction settings. It is widely recognized that complementary data on the features, co-data&#39;, may improve results. Examples are prior feature groups or p-values from a related study. Such co-data are ubiquitous in genomics settings due to the availability of public repositories. Yet, the uptake of learning methods that structurally use such co-data is limited. We review guided adaptive shrinkage methods: a class of regression-based learners that use co-data to adapt the shrinkage parameters, crucial for the performance of those learners. We discuss technical aspects, but also the applicability in terms of types of co-data that can be handled. This class of methods is contrasted with several others. In particular, group-adaptive shrinkage is compared with the better-known sparse group-lasso by evaluating feature selection. Finally, we demonstrate the versatility of the guided shrinkage methodology by showing how to do-it-yourself’: we integrate implementations of a co-data learner and the spike-and-slab prior for the purpose of improving feature selection in genetics studies." />
+<meta property="og:description" content="The high dimensional nature of genomics data complicates feature selection, in particular in low sample size studies - not uncommon in clinical prediction settings. It is widely recognized that complementary data on the features, co-data&#39;, may improve results. Examples are prior feature groups or p-values from a related study. Such co-data are ubiquitous in genomics settings due to the availability of public repositories. Yet, the uptake of learning methods that structurally use such co-data is limited. We review guided adaptive shrinkage methods: a class of regression-based learners that use co-data to adapt the shrinkage parameters, crucial for the performance of those learners. We discuss technical aspects, but also the applicability in terms of types of co-data that can be handled. This class of methods is contrasted with several others. In particular, group-adaptive shrinkage is compared with the better-known sparse group-lasso by evaluating feature selection. Finally, we demonstrate the versatility of the guided shrinkage methodology by showing how to do-it-yourself’: we integrate implementations of a co-data learner and the spike-and-slab prior for the purpose of improving feature selection in genetics studies." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/09/Guidingadaptiveshrinkagebycodatatoimproveregressionbasedpredictionandfeatureselection.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/09/Guidingadaptiveshrinkagebycodatatoimproveregressionbasedpredictionandfeatureselection.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Guiding adaptive shrinkage by co-data to improve regression-based prediction and feature selection" />
+<script type="application/ld+json">
+{"description":"The high dimensional nature of genomics data complicates feature selection, in particular in low sample size studies - not uncommon in clinical prediction settings. It is widely recognized that complementary data on the features, co-data&#39;, may improve results. Examples are prior feature groups or p-values from a related study. Such co-data are ubiquitous in genomics settings due to the availability of public repositories. Yet, the uptake of learning methods that structurally use such co-data is limited. We review guided adaptive shrinkage methods: a class of regression-based learners that use co-data to adapt the shrinkage parameters, crucial for the performance of those learners. We discuss technical aspects, but also the applicability in terms of types of co-data that can be handled. This class of methods is contrasted with several others. In particular, group-adaptive shrinkage is compared with the better-known sparse group-lasso by evaluating feature selection. Finally, we demonstrate the versatility of the guided shrinkage methodology by showing how to do-it-yourself’: we integrate implementations of a co-data learner and the spike-and-slab prior for the purpose of improving feature selection in genetics studies.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/09/Guidingadaptiveshrinkagebycodatatoimproveregressionbasedpredictionandfeatureselection.html"},"headline":"Guiding adaptive shrinkage by co-data to improve regression-based prediction and feature selection","dateModified":"2024-05-09T00:00:00+00:00","datePublished":"2024-05-09T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/09/Guidingadaptiveshrinkagebycodatatoimproveregressionbasedpredictionandfeatureselection.html","author":{"@type":"Person","name":"Mark A. van de Wiel, Wessel N. van Wieringen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-09 00:00:00 +0000">05-09</time>
+  </p>
+  
+  <h1>Guiding adaptive shrinkage by co-data to improve regression-based prediction and feature selection</h1>
+  <br>Mark A. van de Wiel, Wessel N. van Wieringen</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>The high dimensional nature of genomics data complicates feature selection, in particular in low sample size studies - not uncommon in clinical prediction settings. It is widely recognized that complementary data on the features, <code class="language-plaintext highlighter-rouge">co-data', may improve results. Examples are prior feature groups or p-values from a related study. Such co-data are ubiquitous in genomics settings due to the availability of public repositories. Yet, the uptake of learning methods that structurally use such co-data is limited. We review guided adaptive shrinkage methods: a class of regression-based learners that use co-data to adapt the shrinkage parameters, crucial for the performance of those learners. We discuss technical aspects, but also the applicability in terms of types of co-data that can be handled. This class of methods is contrasted with several others. In particular, group-adaptive shrinkage is compared with the better-known sparse group-lasso by evaluating feature selection. Finally, we demonstrate the versatility of the guided shrinkage methodology by showing how to </code>do-it-yourself’: we integrate implementations of a co-data learner and the spike-and-slab prior for the purpose of improving feature selection in genetics studies.</p>
+
+<p><a href="https://arxiv.org/abs/2405.04917">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
