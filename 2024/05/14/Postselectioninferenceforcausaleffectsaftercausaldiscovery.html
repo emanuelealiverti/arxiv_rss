@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Post-selection inference for causal effects after causal discovery</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Post-selection inference for causal effects after causal discovery" />
+<meta name="author" content="Ting-Hsuan Chang, Zijian Guo, Daniel Malinsky" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Algorithms for constraint-based causal discovery select graphical causal models among a space of possible candidates (e.g., all directed acyclic graphs) by executing a sequence of conditional independence tests. These may be used to inform the estimation of causal effects (e.g., average treatment effects) when there is uncertainty about which covariates ought to be adjusted for, or which variables act as confounders versus mediators. However, naively using the data twice, for model selection and estimation, would lead to invalid confidence intervals. Moreover, if the selected graph is incorrect, the inferential claims may apply to a selected functional that is distinct from the actual causal effect. We propose an approach to post-selection inference that is based on a resampling and screening procedure, which essentially performs causal discovery multiple times with randomly varying intermediate test statistics. Then, an estimate of the target causal effect and corresponding confidence sets are constructed from a union of individual graph-based estimates and intervals. We show that this construction has asymptotically correct coverage for the true causal effect parameter. Importantly, the guarantee holds for a fixed population-level effect, not a data-dependent or selection-dependent quantity. Most of our exposition focuses on the PC-algorithm for learning directed acyclic graphs and the multivariate Gaussian case for simplicity, but the approach is general and modular, so it may be used with other conditional independence based discovery algorithms and distributional families." />
+<meta property="og:description" content="Algorithms for constraint-based causal discovery select graphical causal models among a space of possible candidates (e.g., all directed acyclic graphs) by executing a sequence of conditional independence tests. These may be used to inform the estimation of causal effects (e.g., average treatment effects) when there is uncertainty about which covariates ought to be adjusted for, or which variables act as confounders versus mediators. However, naively using the data twice, for model selection and estimation, would lead to invalid confidence intervals. Moreover, if the selected graph is incorrect, the inferential claims may apply to a selected functional that is distinct from the actual causal effect. We propose an approach to post-selection inference that is based on a resampling and screening procedure, which essentially performs causal discovery multiple times with randomly varying intermediate test statistics. Then, an estimate of the target causal effect and corresponding confidence sets are constructed from a union of individual graph-based estimates and intervals. We show that this construction has asymptotically correct coverage for the true causal effect parameter. Importantly, the guarantee holds for a fixed population-level effect, not a data-dependent or selection-dependent quantity. Most of our exposition focuses on the PC-algorithm for learning directed acyclic graphs and the multivariate Gaussian case for simplicity, but the approach is general and modular, so it may be used with other conditional independence based discovery algorithms and distributional families." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/14/Postselectioninferenceforcausaleffectsaftercausaldiscovery.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/14/Postselectioninferenceforcausaleffectsaftercausaldiscovery.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Post-selection inference for causal effects after causal discovery" />
+<script type="application/ld+json">
+{"description":"Algorithms for constraint-based causal discovery select graphical causal models among a space of possible candidates (e.g., all directed acyclic graphs) by executing a sequence of conditional independence tests. These may be used to inform the estimation of causal effects (e.g., average treatment effects) when there is uncertainty about which covariates ought to be adjusted for, or which variables act as confounders versus mediators. However, naively using the data twice, for model selection and estimation, would lead to invalid confidence intervals. Moreover, if the selected graph is incorrect, the inferential claims may apply to a selected functional that is distinct from the actual causal effect. We propose an approach to post-selection inference that is based on a resampling and screening procedure, which essentially performs causal discovery multiple times with randomly varying intermediate test statistics. Then, an estimate of the target causal effect and corresponding confidence sets are constructed from a union of individual graph-based estimates and intervals. We show that this construction has asymptotically correct coverage for the true causal effect parameter. Importantly, the guarantee holds for a fixed population-level effect, not a data-dependent or selection-dependent quantity. Most of our exposition focuses on the PC-algorithm for learning directed acyclic graphs and the multivariate Gaussian case for simplicity, but the approach is general and modular, so it may be used with other conditional independence based discovery algorithms and distributional families.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/14/Postselectioninferenceforcausaleffectsaftercausaldiscovery.html"},"headline":"Post-selection inference for causal effects after causal discovery","dateModified":"2024-05-14T00:00:00+00:00","datePublished":"2024-05-14T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/14/Postselectioninferenceforcausaleffectsaftercausaldiscovery.html","author":{"@type":"Person","name":"Ting-Hsuan Chang, Zijian Guo, Daniel Malinsky"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-14 00:00:00 +0000">05-14</time>
+  </p>
+  
+  <h1>Post-selection inference for causal effects after causal discovery</h1>
+  <br>Ting-Hsuan Chang, Zijian Guo, Daniel Malinsky</h3>
+  <br> [stat.ME]
+
+  <p>Algorithms for constraint-based causal discovery select graphical causal models among a space of possible candidates (e.g., all directed acyclic graphs) by executing a sequence of conditional independence tests. These may be used to inform the estimation of causal effects (e.g., average treatment effects) when there is uncertainty about which covariates ought to be adjusted for, or which variables act as confounders versus mediators. However, naively using the data twice, for model selection and estimation, would lead to invalid confidence intervals. Moreover, if the selected graph is incorrect, the inferential claims may apply to a selected functional that is distinct from the actual causal effect. We propose an approach to post-selection inference that is based on a resampling and screening procedure, which essentially performs causal discovery multiple times with randomly varying intermediate test statistics. Then, an estimate of the target causal effect and corresponding confidence sets are constructed from a union of individual graph-based estimates and intervals. We show that this construction has asymptotically correct coverage for the true causal effect parameter. Importantly, the guarantee holds for a fixed population-level effect, not a data-dependent or selection-dependent quantity. Most of our exposition focuses on the PC-algorithm for learning directed acyclic graphs and the multivariate Gaussian case for simplicity, but the approach is general and modular, so it may be used with other conditional independence based discovery algorithms and distributional families.</p>
+
+<p><a href="https://arxiv.org/abs/2405.06763">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

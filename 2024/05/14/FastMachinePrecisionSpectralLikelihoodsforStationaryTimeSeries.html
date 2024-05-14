@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fast Machine-Precision Spectral Likelihoods for Stationary Time Series</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Fast Machine-Precision Spectral Likelihoods for Stationary Time Series" />
+<meta name="author" content="Christopher J. Geoga" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We provide in this work an algorithm for approximating a very broad class of symmetric Toeplitz matrices to machine precision in $\mathcal{O}(n \log n)$ time with applications to fitting time series models. In particular, for a symmetric Toeplitz matrix $\mathbf{\Sigma}$ with values $\mathbf{\Sigma}{j,k} = h{ j-k } = \int_{-1/2}^{1/2} e^{2 \pi i j-k \omega} S(\omega) \mathrm{d} \omega$ where $S(\omega)$ is piecewise smooth, we give an approximation $\mathbf{\mathcal{F}} \mathbf{\Sigma} \mathbf{\mathcal{F}}^H \approx \mathbf{D} + \mathbf{U} \mathbf{V}^H$, where $\mathbf{\mathcal{F}}$ is the DFT matrix, $\mathbf{D}$ is diagonal, and the matrices $\mathbf{U}$ and $\mathbf{V}$ are in $\mathbb{C}^{n \times r}$ with $r \ll n$. Studying these matrices in the context of time series, we offer a theoretical explanation of this structure and connect it to existing spectral-domain approximation frameworks. We then give a complete discussion of the numerical method for assembling the approximation and demonstrate its efficiency for improving Whittle-type likelihood approximations, including dramatic examples where a correction of rank $r = 2$ to the standard Whittle approximation increases the accuracy from $3$ to $14$ digits for a matrix $\mathbf{\Sigma} \in \mathbb{R}^{10^5 \times 10^5}$. The method and analysis of this work applies well beyond time series analysis, providing an algorithm for extremely accurate direct solves with a wide variety of symmetric Toeplitz matrices. The analysis employed here largely depends on asymptotic expansions of oscillatory integrals, and also provides a new perspective on when existing spectral-domain approximation methods for Gaussian log-likelihoods can be particularly problematic." />
+<meta property="og:description" content="We provide in this work an algorithm for approximating a very broad class of symmetric Toeplitz matrices to machine precision in $\mathcal{O}(n \log n)$ time with applications to fitting time series models. In particular, for a symmetric Toeplitz matrix $\mathbf{\Sigma}$ with values $\mathbf{\Sigma}{j,k} = h{ j-k } = \int_{-1/2}^{1/2} e^{2 \pi i j-k \omega} S(\omega) \mathrm{d} \omega$ where $S(\omega)$ is piecewise smooth, we give an approximation $\mathbf{\mathcal{F}} \mathbf{\Sigma} \mathbf{\mathcal{F}}^H \approx \mathbf{D} + \mathbf{U} \mathbf{V}^H$, where $\mathbf{\mathcal{F}}$ is the DFT matrix, $\mathbf{D}$ is diagonal, and the matrices $\mathbf{U}$ and $\mathbf{V}$ are in $\mathbb{C}^{n \times r}$ with $r \ll n$. Studying these matrices in the context of time series, we offer a theoretical explanation of this structure and connect it to existing spectral-domain approximation frameworks. We then give a complete discussion of the numerical method for assembling the approximation and demonstrate its efficiency for improving Whittle-type likelihood approximations, including dramatic examples where a correction of rank $r = 2$ to the standard Whittle approximation increases the accuracy from $3$ to $14$ digits for a matrix $\mathbf{\Sigma} \in \mathbb{R}^{10^5 \times 10^5}$. The method and analysis of this work applies well beyond time series analysis, providing an algorithm for extremely accurate direct solves with a wide variety of symmetric Toeplitz matrices. The analysis employed here largely depends on asymptotic expansions of oscillatory integrals, and also provides a new perspective on when existing spectral-domain approximation methods for Gaussian log-likelihoods can be particularly problematic." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/14/FastMachinePrecisionSpectralLikelihoodsforStationaryTimeSeries.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/14/FastMachinePrecisionSpectralLikelihoodsforStationaryTimeSeries.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fast Machine-Precision Spectral Likelihoods for Stationary Time Series" />
+<script type="application/ld+json">
+{"description":"We provide in this work an algorithm for approximating a very broad class of symmetric Toeplitz matrices to machine precision in $\\mathcal{O}(n \\log n)$ time with applications to fitting time series models. In particular, for a symmetric Toeplitz matrix $\\mathbf{\\Sigma}$ with values $\\mathbf{\\Sigma}{j,k} = h{ j-k } = \\int_{-1/2}^{1/2} e^{2 \\pi i j-k \\omega} S(\\omega) \\mathrm{d} \\omega$ where $S(\\omega)$ is piecewise smooth, we give an approximation $\\mathbf{\\mathcal{F}} \\mathbf{\\Sigma} \\mathbf{\\mathcal{F}}^H \\approx \\mathbf{D} + \\mathbf{U} \\mathbf{V}^H$, where $\\mathbf{\\mathcal{F}}$ is the DFT matrix, $\\mathbf{D}$ is diagonal, and the matrices $\\mathbf{U}$ and $\\mathbf{V}$ are in $\\mathbb{C}^{n \\times r}$ with $r \\ll n$. Studying these matrices in the context of time series, we offer a theoretical explanation of this structure and connect it to existing spectral-domain approximation frameworks. We then give a complete discussion of the numerical method for assembling the approximation and demonstrate its efficiency for improving Whittle-type likelihood approximations, including dramatic examples where a correction of rank $r = 2$ to the standard Whittle approximation increases the accuracy from $3$ to $14$ digits for a matrix $\\mathbf{\\Sigma} \\in \\mathbb{R}^{10^5 \\times 10^5}$. The method and analysis of this work applies well beyond time series analysis, providing an algorithm for extremely accurate direct solves with a wide variety of symmetric Toeplitz matrices. The analysis employed here largely depends on asymptotic expansions of oscillatory integrals, and also provides a new perspective on when existing spectral-domain approximation methods for Gaussian log-likelihoods can be particularly problematic.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/14/FastMachinePrecisionSpectralLikelihoodsforStationaryTimeSeries.html"},"headline":"Fast Machine-Precision Spectral Likelihoods for Stationary Time Series","dateModified":"2024-05-14T00:00:00+00:00","datePublished":"2024-05-14T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/14/FastMachinePrecisionSpectralLikelihoodsforStationaryTimeSeries.html","author":{"@type":"Person","name":"Christopher J. Geoga"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-14 00:00:00 +0000">05-14</time>
+  </p>
+  
+  <h1>Fast Machine-Precision Spectral Likelihoods for Stationary Time Series</h1>
+  <br>Christopher J. Geoga</h3>
+  <br> [stat.CO,stat.ME]
+
+  <table>
+  <tbody>
+    <tr>
+      <td>We provide in this work an algorithm for approximating a very broad class of symmetric Toeplitz matrices to machine precision in $\mathcal{O}(n \log n)$ time with applications to fitting time series models. In particular, for a symmetric Toeplitz matrix $\mathbf{\Sigma}$ with values $\mathbf{\Sigma}<em>{j,k} = h</em>{</td>
+      <td>j-k</td>
+      <td>} = \int_{-1/2}^{1/2} e^{2 \pi i</td>
+      <td>j-k</td>
+      <td>\omega} S(\omega) \mathrm{d} \omega$ where $S(\omega)$ is piecewise smooth, we give an approximation $\mathbf{\mathcal{F}} \mathbf{\Sigma} \mathbf{\mathcal{F}}^H \approx \mathbf{D} + \mathbf{U} \mathbf{V}^H$, where $\mathbf{\mathcal{F}}$ is the DFT matrix, $\mathbf{D}$ is diagonal, and the matrices $\mathbf{U}$ and $\mathbf{V}$ are in $\mathbb{C}^{n \times r}$ with $r \ll n$. Studying these matrices in the context of time series, we offer a theoretical explanation of this structure and connect it to existing spectral-domain approximation frameworks. We then give a complete discussion of the numerical method for assembling the approximation and demonstrate its efficiency for improving Whittle-type likelihood approximations, including dramatic examples where a correction of rank $r = 2$ to the standard Whittle approximation increases the accuracy from $3$ to $14$ digits for a matrix $\mathbf{\Sigma} \in \mathbb{R}^{10^5 \times 10^5}$. The method and analysis of this work applies well beyond time series analysis, providing an algorithm for extremely accurate direct solves with a wide variety of symmetric Toeplitz matrices. The analysis employed here largely depends on asymptotic expansions of oscillatory integrals, and also provides a new perspective on when existing spectral-domain approximation methods for Gaussian log-likelihoods can be particularly problematic.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://arxiv.org/abs/2404.16583">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
