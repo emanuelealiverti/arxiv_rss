@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Studying continuous, time-varying, and/or complex exposures using longitudinal modified treatment policies</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Studying continuous, time-varying, and/or complex exposures using longitudinal modified treatment policies" />
+<meta name="author" content="Katherine L. Hoffman, Diego Salazar-Barreto, Nicholas Williams, Kara E. Rudolph, Ivan Diaz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This tutorial discusses methodology for causal inference using longitudinal modified treatment policies. This method facilitates the mathematical formalization, identification, and estimation of many novel parameters, and mathematically generalizes many commonly used parameters, such as the average treatment effect. Longitudinal modified treatment policies apply to a wide variety of exposures, including binary, multivariate, and continuous, and can accommodate time-varying treatments and confounders, competing risks, loss-to-follow-up, as well as survival, binary, or continuous outcomes. Longitudinal modified treatment policies can be seen as an extension of static and dynamic interventions to involve the natural value of treatment, and, like dynamic interventions, can be used to define alternative estimands with a positivity assumption that is more likely to be satisfied than estimands corresponding to static interventions. This tutorial aims to illustrate several practical uses of the longitudinal modified treatment policy methodology, including describing different estimation strategies and their corresponding advantages and disadvantages. We provide numerous examples of types of research questions which can be answered using longitudinal modified treatment policies. We go into more depth with one of these examples–specifically, estimating the effect of delaying intubation on critically ill COVID-19 patients’ mortality. We demonstrate the use of the open-source R package lmtp to estimate the effects, and we provide code on https://github.com/kathoffman/lmtp-tutorial." />
+<meta property="og:description" content="This tutorial discusses methodology for causal inference using longitudinal modified treatment policies. This method facilitates the mathematical formalization, identification, and estimation of many novel parameters, and mathematically generalizes many commonly used parameters, such as the average treatment effect. Longitudinal modified treatment policies apply to a wide variety of exposures, including binary, multivariate, and continuous, and can accommodate time-varying treatments and confounders, competing risks, loss-to-follow-up, as well as survival, binary, or continuous outcomes. Longitudinal modified treatment policies can be seen as an extension of static and dynamic interventions to involve the natural value of treatment, and, like dynamic interventions, can be used to define alternative estimands with a positivity assumption that is more likely to be satisfied than estimands corresponding to static interventions. This tutorial aims to illustrate several practical uses of the longitudinal modified treatment policy methodology, including describing different estimation strategies and their corresponding advantages and disadvantages. We provide numerous examples of types of research questions which can be answered using longitudinal modified treatment policies. We go into more depth with one of these examples–specifically, estimating the effect of delaying intubation on critically ill COVID-19 patients’ mortality. We demonstrate the use of the open-source R package lmtp to estimate the effects, and we provide code on https://github.com/kathoffman/lmtp-tutorial." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/Studyingcontinuoustimevaryingandorcomplexexposuresusinglongitudinalmodifiedtreatmentpolicies.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/Studyingcontinuoustimevaryingandorcomplexexposuresusinglongitudinalmodifiedtreatmentpolicies.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Studying continuous, time-varying, and/or complex exposures using longitudinal modified treatment policies" />
+<script type="application/ld+json">
+{"description":"This tutorial discusses methodology for causal inference using longitudinal modified treatment policies. This method facilitates the mathematical formalization, identification, and estimation of many novel parameters, and mathematically generalizes many commonly used parameters, such as the average treatment effect. Longitudinal modified treatment policies apply to a wide variety of exposures, including binary, multivariate, and continuous, and can accommodate time-varying treatments and confounders, competing risks, loss-to-follow-up, as well as survival, binary, or continuous outcomes. Longitudinal modified treatment policies can be seen as an extension of static and dynamic interventions to involve the natural value of treatment, and, like dynamic interventions, can be used to define alternative estimands with a positivity assumption that is more likely to be satisfied than estimands corresponding to static interventions. This tutorial aims to illustrate several practical uses of the longitudinal modified treatment policy methodology, including describing different estimation strategies and their corresponding advantages and disadvantages. We provide numerous examples of types of research questions which can be answered using longitudinal modified treatment policies. We go into more depth with one of these examples–specifically, estimating the effect of delaying intubation on critically ill COVID-19 patients’ mortality. We demonstrate the use of the open-source R package lmtp to estimate the effects, and we provide code on https://github.com/kathoffman/lmtp-tutorial.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/Studyingcontinuoustimevaryingandorcomplexexposuresusinglongitudinalmodifiedtreatmentpolicies.html"},"headline":"Studying continuous, time-varying, and/or complex exposures using longitudinal modified treatment policies","dateModified":"2024-05-15T00:00:00+00:00","datePublished":"2024-05-15T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/Studyingcontinuoustimevaryingandorcomplexexposuresusinglongitudinalmodifiedtreatmentpolicies.html","author":{"@type":"Person","name":"Katherine L. Hoffman, Diego Salazar-Barreto, Nicholas Williams, Kara E. Rudolph, Ivan Diaz"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-15 00:00:00 +0000">05-15</time>
+  </p>
+  
+  <h1>Studying continuous, time-varying, and/or complex exposures using longitudinal modified treatment policies</h1>
+  <br>Katherine L. Hoffman, Diego Salazar-Barreto, Nicholas Williams, Kara E. Rudolph, Ivan Diaz</h3>
+  <br> [stat.ME,stat.AP,stat.OT]
+
+  <p>This tutorial discusses methodology for causal inference using longitudinal modified treatment policies. This method facilitates the mathematical formalization, identification, and estimation of many novel parameters, and mathematically generalizes many commonly used parameters, such as the average treatment effect. Longitudinal modified treatment policies apply to a wide variety of exposures, including binary, multivariate, and continuous, and can accommodate time-varying treatments and confounders, competing risks, loss-to-follow-up, as well as survival, binary, or continuous outcomes. Longitudinal modified treatment policies can be seen as an extension of static and dynamic interventions to involve the natural value of treatment, and, like dynamic interventions, can be used to define alternative estimands with a positivity assumption that is more likely to be satisfied than estimands corresponding to static interventions. This tutorial aims to illustrate several practical uses of the longitudinal modified treatment policy methodology, including describing different estimation strategies and their corresponding advantages and disadvantages. We provide numerous examples of types of research questions which can be answered using longitudinal modified treatment policies. We go into more depth with one of these examples–specifically, estimating the effect of delaying intubation on critically ill COVID-19 patients’ mortality. We demonstrate the use of the open-source R package lmtp to estimate the effects, and we provide code on https://github.com/kathoffman/lmtp-tutorial.</p>
+
+<p><a href="https://arxiv.org/abs/2304.09460">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

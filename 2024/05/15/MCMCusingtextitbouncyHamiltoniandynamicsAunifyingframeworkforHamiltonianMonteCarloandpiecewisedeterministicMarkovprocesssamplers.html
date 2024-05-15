@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>MCMC using $\textit{bouncy}$ Hamiltonian dynamics: A unifying framework for Hamiltonian Monte Carlo and piecewise deterministic Markov process samplers</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="MCMC using $\textit{bouncy}$ Hamiltonian dynamics: A unifying framework for Hamiltonian Monte Carlo and piecewise deterministic Markov process samplers" />
+<meta name="author" content="Andrew Chin, Akihiko Nishimura" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Piecewise-deterministic Markov process (PDMP) samplers constitute a state of the art Markov chain Monte Carlo (MCMC) paradigm in Bayesian computation, with examples including the zig-zag and bouncy particle sampler (BPS). Recent work on the zig-zag has indicated its connection to Hamiltonian Monte Carlo, a version of the Metropolis algorithm that exploits Hamiltonian dynamics. Here we establish that, in fact, the connection between the paradigms extends far beyond the specific instance. The key lies in (1) the fact that any time-reversible deterministic dynamics provides a valid Metropolis proposal and (2) how PDMPs’ characteristic velocity changes constitute an alternative to the usual acceptance-rejection. We turn this observation into a rigorous framework for constructing rejection-free Metropolis proposals based on bouncy Hamiltonian dynamics which simultaneously possess Hamiltonian-like properties and generate discontinuous trajectories similar in appearance to PDMPs. When combined with periodic refreshment of the inertia, the dynamics converge strongly to PDMP equivalents in the limit of increasingly frequent refreshment. We demonstrate the practical implications of this new paradigm, with a sampler based on a bouncy Hamiltonian dynamics closely related to the BPS. The resulting sampler exhibits competitive performance on challenging real-data posteriors involving tens of thousands of parameters." />
+<meta property="og:description" content="Piecewise-deterministic Markov process (PDMP) samplers constitute a state of the art Markov chain Monte Carlo (MCMC) paradigm in Bayesian computation, with examples including the zig-zag and bouncy particle sampler (BPS). Recent work on the zig-zag has indicated its connection to Hamiltonian Monte Carlo, a version of the Metropolis algorithm that exploits Hamiltonian dynamics. Here we establish that, in fact, the connection between the paradigms extends far beyond the specific instance. The key lies in (1) the fact that any time-reversible deterministic dynamics provides a valid Metropolis proposal and (2) how PDMPs’ characteristic velocity changes constitute an alternative to the usual acceptance-rejection. We turn this observation into a rigorous framework for constructing rejection-free Metropolis proposals based on bouncy Hamiltonian dynamics which simultaneously possess Hamiltonian-like properties and generate discontinuous trajectories similar in appearance to PDMPs. When combined with periodic refreshment of the inertia, the dynamics converge strongly to PDMP equivalents in the limit of increasingly frequent refreshment. We demonstrate the practical implications of this new paradigm, with a sampler based on a bouncy Hamiltonian dynamics closely related to the BPS. The resulting sampler exhibits competitive performance on challenging real-data posteriors involving tens of thousands of parameters." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/MCMCusingtextitbouncyHamiltoniandynamicsAunifyingframeworkforHamiltonianMonteCarloandpiecewisedeterministicMarkovprocesssamplers.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/MCMCusingtextitbouncyHamiltoniandynamicsAunifyingframeworkforHamiltonianMonteCarloandpiecewisedeterministicMarkovprocesssamplers.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MCMC using $\textit{bouncy}$ Hamiltonian dynamics: A unifying framework for Hamiltonian Monte Carlo and piecewise deterministic Markov process samplers" />
+<script type="application/ld+json">
+{"description":"Piecewise-deterministic Markov process (PDMP) samplers constitute a state of the art Markov chain Monte Carlo (MCMC) paradigm in Bayesian computation, with examples including the zig-zag and bouncy particle sampler (BPS). Recent work on the zig-zag has indicated its connection to Hamiltonian Monte Carlo, a version of the Metropolis algorithm that exploits Hamiltonian dynamics. Here we establish that, in fact, the connection between the paradigms extends far beyond the specific instance. The key lies in (1) the fact that any time-reversible deterministic dynamics provides a valid Metropolis proposal and (2) how PDMPs’ characteristic velocity changes constitute an alternative to the usual acceptance-rejection. We turn this observation into a rigorous framework for constructing rejection-free Metropolis proposals based on bouncy Hamiltonian dynamics which simultaneously possess Hamiltonian-like properties and generate discontinuous trajectories similar in appearance to PDMPs. When combined with periodic refreshment of the inertia, the dynamics converge strongly to PDMP equivalents in the limit of increasingly frequent refreshment. We demonstrate the practical implications of this new paradigm, with a sampler based on a bouncy Hamiltonian dynamics closely related to the BPS. The resulting sampler exhibits competitive performance on challenging real-data posteriors involving tens of thousands of parameters.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/MCMCusingtextitbouncyHamiltoniandynamicsAunifyingframeworkforHamiltonianMonteCarloandpiecewisedeterministicMarkovprocesssamplers.html"},"headline":"MCMC using $\\textit{bouncy}$ Hamiltonian dynamics: A unifying framework for Hamiltonian Monte Carlo and piecewise deterministic Markov process samplers","dateModified":"2024-05-15T00:00:00+00:00","datePublished":"2024-05-15T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/MCMCusingtextitbouncyHamiltoniandynamicsAunifyingframeworkforHamiltonianMonteCarloandpiecewisedeterministicMarkovprocesssamplers.html","author":{"@type":"Person","name":"Andrew Chin, Akihiko Nishimura"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-15 00:00:00 +0000">05-15</time>
+  </p>
+  
+  <h1>MCMC using $\textit{bouncy}$ Hamiltonian dynamics: A unifying framework for Hamiltonian Monte Carlo and piecewise deterministic Markov process samplers</h1>
+  <br>Andrew Chin, Akihiko Nishimura</h3>
+  <br> [stat.CO,stat.ME]
+
+  <p>Piecewise-deterministic Markov process (PDMP) samplers constitute a state of the art Markov chain Monte Carlo (MCMC) paradigm in Bayesian computation, with examples including the zig-zag and bouncy particle sampler (BPS). Recent work on the zig-zag has indicated its connection to Hamiltonian Monte Carlo, a version of the Metropolis algorithm that exploits Hamiltonian dynamics. Here we establish that, in fact, the connection between the paradigms extends far beyond the specific instance. The key lies in (1) the fact that any time-reversible deterministic dynamics provides a valid Metropolis proposal and (2) how PDMPs’ characteristic velocity changes constitute an alternative to the usual acceptance-rejection. We turn this observation into a rigorous framework for constructing rejection-free Metropolis proposals based on bouncy Hamiltonian dynamics which simultaneously possess Hamiltonian-like properties and generate discontinuous trajectories similar in appearance to PDMPs. When combined with periodic refreshment of the inertia, the dynamics converge strongly to PDMP equivalents in the limit of increasingly frequent refreshment. We demonstrate the practical implications of this new paradigm, with a sampler based on a bouncy Hamiltonian dynamics closely related to the BPS. The resulting sampler exhibits competitive performance on challenging real-data posteriors involving tens of thousands of parameters.</p>
+
+<p><a href="https://arxiv.org/abs/2405.08290">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

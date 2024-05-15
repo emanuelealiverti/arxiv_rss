@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Zigzag path connects two Monte Carlo samplers: Hamiltonian counterpart to a piecewise deterministic Markov process</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Zigzag path connects two Monte Carlo samplers: Hamiltonian counterpart to a piecewise deterministic Markov process" />
+<meta name="author" content="Akihiko Nishimura, Zhenyu Zhang, Marc A. Suchard" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Zigzag and other piecewise deterministic Markov process samplers have attracted significant interest for their non-reversibility and other appealing properties for Bayesian posterior computation. Hamiltonian Monte Carlo is another state-of-the-art sampler, exploiting fictitious momentum to guide Markov chains through complex target distributions. We establish an important connection between the zigzag sampler and a variant of Hamiltonian Monte Carlo based on Laplace-distributed momentum. The position and velocity component of the corresponding Hamiltonian dynamics travels along a zigzag path paralleling the Markovian zigzag process; however, the dynamics is non-Markovian in this position-velocity space as the momentum component encodes non-immediate pasts. This information is partially lost during a momentum refreshment step, in which we preserve its direction but re-sample magnitude. In the limit of increasingly frequent momentum refreshments, we prove that Hamiltonian zigzag converges strongly to its Markovian counterpart. This theoretical insight suggests that, when retaining full momentum information, Hamiltonian zigzag can better explore target distributions with highly correlated parameters by suppressing the diffusive behavior of Markovian zigzag. We corroborate this intuition by comparing performance of the two zigzag cousins on high-dimensional truncated multivariate Gaussians, including a 11,235-dimensional target arising from a Bayesian phylogenetic multivariate probit modeling of HIV virus data." />
+<meta property="og:description" content="Zigzag and other piecewise deterministic Markov process samplers have attracted significant interest for their non-reversibility and other appealing properties for Bayesian posterior computation. Hamiltonian Monte Carlo is another state-of-the-art sampler, exploiting fictitious momentum to guide Markov chains through complex target distributions. We establish an important connection between the zigzag sampler and a variant of Hamiltonian Monte Carlo based on Laplace-distributed momentum. The position and velocity component of the corresponding Hamiltonian dynamics travels along a zigzag path paralleling the Markovian zigzag process; however, the dynamics is non-Markovian in this position-velocity space as the momentum component encodes non-immediate pasts. This information is partially lost during a momentum refreshment step, in which we preserve its direction but re-sample magnitude. In the limit of increasingly frequent momentum refreshments, we prove that Hamiltonian zigzag converges strongly to its Markovian counterpart. This theoretical insight suggests that, when retaining full momentum information, Hamiltonian zigzag can better explore target distributions with highly correlated parameters by suppressing the diffusive behavior of Markovian zigzag. We corroborate this intuition by comparing performance of the two zigzag cousins on high-dimensional truncated multivariate Gaussians, including a 11,235-dimensional target arising from a Bayesian phylogenetic multivariate probit modeling of HIV virus data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/ZigzagpathconnectstwoMonteCarlosamplersHamiltoniancounterparttoapiecewisedeterministicMarkovprocess.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/ZigzagpathconnectstwoMonteCarlosamplersHamiltoniancounterparttoapiecewisedeterministicMarkovprocess.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Zigzag path connects two Monte Carlo samplers: Hamiltonian counterpart to a piecewise deterministic Markov process" />
+<script type="application/ld+json">
+{"description":"Zigzag and other piecewise deterministic Markov process samplers have attracted significant interest for their non-reversibility and other appealing properties for Bayesian posterior computation. Hamiltonian Monte Carlo is another state-of-the-art sampler, exploiting fictitious momentum to guide Markov chains through complex target distributions. We establish an important connection between the zigzag sampler and a variant of Hamiltonian Monte Carlo based on Laplace-distributed momentum. The position and velocity component of the corresponding Hamiltonian dynamics travels along a zigzag path paralleling the Markovian zigzag process; however, the dynamics is non-Markovian in this position-velocity space as the momentum component encodes non-immediate pasts. This information is partially lost during a momentum refreshment step, in which we preserve its direction but re-sample magnitude. In the limit of increasingly frequent momentum refreshments, we prove that Hamiltonian zigzag converges strongly to its Markovian counterpart. This theoretical insight suggests that, when retaining full momentum information, Hamiltonian zigzag can better explore target distributions with highly correlated parameters by suppressing the diffusive behavior of Markovian zigzag. We corroborate this intuition by comparing performance of the two zigzag cousins on high-dimensional truncated multivariate Gaussians, including a 11,235-dimensional target arising from a Bayesian phylogenetic multivariate probit modeling of HIV virus data.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/ZigzagpathconnectstwoMonteCarlosamplersHamiltoniancounterparttoapiecewisedeterministicMarkovprocess.html"},"headline":"Zigzag path connects two Monte Carlo samplers: Hamiltonian counterpart to a piecewise deterministic Markov process","dateModified":"2024-05-15T00:00:00+00:00","datePublished":"2024-05-15T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/15/ZigzagpathconnectstwoMonteCarlosamplersHamiltoniancounterparttoapiecewisedeterministicMarkovprocess.html","author":{"@type":"Person","name":"Akihiko Nishimura, Zhenyu Zhang, Marc A. Suchard"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-15 00:00:00 +0000">05-15</time>
+  </p>
+  
+  <h1>Zigzag path connects two Monte Carlo samplers: Hamiltonian counterpart to a piecewise deterministic Markov process</h1>
+  <br>Akihiko Nishimura, Zhenyu Zhang, Marc A. Suchard</h3>
+  <br> [stat.CO]
+
+  <p>Zigzag and other piecewise deterministic Markov process samplers have attracted significant interest for their non-reversibility and other appealing properties for Bayesian posterior computation. Hamiltonian Monte Carlo is another state-of-the-art sampler, exploiting fictitious momentum to guide Markov chains through complex target distributions. We establish an important connection between the zigzag sampler and a variant of Hamiltonian Monte Carlo based on Laplace-distributed momentum. The position and velocity component of the corresponding Hamiltonian dynamics travels along a zigzag path paralleling the Markovian zigzag process; however, the dynamics is non-Markovian in this position-velocity space as the momentum component encodes non-immediate pasts. This information is partially lost during a momentum refreshment step, in which we preserve its direction but re-sample magnitude. In the limit of increasingly frequent momentum refreshments, we prove that Hamiltonian zigzag converges strongly to its Markovian counterpart. This theoretical insight suggests that, when retaining full momentum information, Hamiltonian zigzag can better explore target distributions with highly correlated parameters by suppressing the diffusive behavior of Markovian zigzag. We corroborate this intuition by comparing performance of the two zigzag cousins on high-dimensional truncated multivariate Gaussians, including a 11,235-dimensional target arising from a Bayesian phylogenetic multivariate probit modeling of HIV virus data.</p>
+
+<p><a href="https://arxiv.org/abs/2104.07694">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
