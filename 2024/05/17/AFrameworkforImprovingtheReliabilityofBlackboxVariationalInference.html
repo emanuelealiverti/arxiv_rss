@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Framework for Improving the Reliability of Black-box Variational Inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Framework for Improving the Reliability of Black-box Variational Inference" />
+<meta name="author" content="Manushi Welandawe, Michael Riis Andersen, Aki Vehtari, Jonathan H. Huggins" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Black-box variational inference (BBVI) now sees widespread use in machine learning and statistics as a fast yet flexible alternative to Markov chain Monte Carlo methods for approximate Bayesian inference. However, stochastic optimization methods for BBVI remain unreliable and require substantial expertise and hand-tuning to apply effectively. In this paper, we propose Robust and Automated Black-box VI (RABVI), a framework for improving the reliability of BBVI optimization. RABVI is based on rigorously justified automation techniques, includes just a small number of intuitive tuning parameters, and detects inaccurate estimates of the optimal variational approximation. RABVI adaptively decreases the learning rate by detecting convergence of the fixed–learning-rate iterates, then estimates the symmetrized Kullback–Leibler (KL) divergence between the current variational approximation and the optimal one. It also employs a novel optimization termination criterion that enables the user to balance desired accuracy against computational cost by comparing (i) the predicted relative decrease in the symmetrized KL divergence if a smaller learning were used and (ii) the predicted computation required to converge with the smaller learning rate. We validate the robustness and accuracy of RABVI through carefully designed simulation studies and on a diverse set of real-world model and data examples." />
+<meta property="og:description" content="Black-box variational inference (BBVI) now sees widespread use in machine learning and statistics as a fast yet flexible alternative to Markov chain Monte Carlo methods for approximate Bayesian inference. However, stochastic optimization methods for BBVI remain unreliable and require substantial expertise and hand-tuning to apply effectively. In this paper, we propose Robust and Automated Black-box VI (RABVI), a framework for improving the reliability of BBVI optimization. RABVI is based on rigorously justified automation techniques, includes just a small number of intuitive tuning parameters, and detects inaccurate estimates of the optimal variational approximation. RABVI adaptively decreases the learning rate by detecting convergence of the fixed–learning-rate iterates, then estimates the symmetrized Kullback–Leibler (KL) divergence between the current variational approximation and the optimal one. It also employs a novel optimization termination criterion that enables the user to balance desired accuracy against computational cost by comparing (i) the predicted relative decrease in the symmetrized KL divergence if a smaller learning were used and (ii) the predicted computation required to converge with the smaller learning rate. We validate the robustness and accuracy of RABVI through carefully designed simulation studies and on a diverse set of real-world model and data examples." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/17/AFrameworkforImprovingtheReliabilityofBlackboxVariationalInference.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/17/AFrameworkforImprovingtheReliabilityofBlackboxVariationalInference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Framework for Improving the Reliability of Black-box Variational Inference" />
+<script type="application/ld+json">
+{"description":"Black-box variational inference (BBVI) now sees widespread use in machine learning and statistics as a fast yet flexible alternative to Markov chain Monte Carlo methods for approximate Bayesian inference. However, stochastic optimization methods for BBVI remain unreliable and require substantial expertise and hand-tuning to apply effectively. In this paper, we propose Robust and Automated Black-box VI (RABVI), a framework for improving the reliability of BBVI optimization. RABVI is based on rigorously justified automation techniques, includes just a small number of intuitive tuning parameters, and detects inaccurate estimates of the optimal variational approximation. RABVI adaptively decreases the learning rate by detecting convergence of the fixed–learning-rate iterates, then estimates the symmetrized Kullback–Leibler (KL) divergence between the current variational approximation and the optimal one. It also employs a novel optimization termination criterion that enables the user to balance desired accuracy against computational cost by comparing (i) the predicted relative decrease in the symmetrized KL divergence if a smaller learning were used and (ii) the predicted computation required to converge with the smaller learning rate. We validate the robustness and accuracy of RABVI through carefully designed simulation studies and on a diverse set of real-world model and data examples.","author":{"@type":"Person","name":"Manushi Welandawe, Michael Riis Andersen, Aki Vehtari, Jonathan H. Huggins"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/17/AFrameworkforImprovingtheReliabilityofBlackboxVariationalInference.html"},"dateModified":"2024-05-17T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/17/AFrameworkforImprovingtheReliabilityofBlackboxVariationalInference.html","headline":"A Framework for Improving the Reliability of Black-box Variational Inference","@type":"BlogPosting","datePublished":"2024-05-17T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-17 00:00:00 +0000">05-17</time>
+  </p>
+  
+  <h1>A Framework for Improving the Reliability of Black-box Variational Inference</h1>
+  <br>Manushi Welandawe, Michael Riis Andersen, Aki Vehtari, Jonathan H. Huggins</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>Black-box variational inference (BBVI) now sees widespread use in machine learning and statistics as a fast yet flexible alternative to Markov chain Monte Carlo methods for approximate Bayesian inference. However, stochastic optimization methods for BBVI remain unreliable and require substantial expertise and hand-tuning to apply effectively. In this paper, we propose Robust and Automated Black-box VI (RABVI), a framework for improving the reliability of BBVI optimization. RABVI is based on rigorously justified automation techniques, includes just a small number of intuitive tuning parameters, and detects inaccurate estimates of the optimal variational approximation. RABVI adaptively decreases the learning rate by detecting convergence of the fixed–learning-rate iterates, then estimates the symmetrized Kullback–Leibler (KL) divergence between the current variational approximation and the optimal one. It also employs a novel optimization termination criterion that enables the user to balance desired accuracy against computational cost by comparing (i) the predicted relative decrease in the symmetrized KL divergence if a smaller learning were used and (ii) the predicted computation required to converge with the smaller learning rate. We validate the robustness and accuracy of RABVI through carefully designed simulation studies and on a diverse set of real-world model and data examples.</p>
+
+<p><a href="https://arxiv.org/abs/2203.15945">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
