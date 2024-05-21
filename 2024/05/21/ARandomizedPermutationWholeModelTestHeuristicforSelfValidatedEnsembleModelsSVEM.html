@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Randomized Permutation Whole-Model Test Heuristic for Self-Validated Ensemble Models (SVEM)</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Randomized Permutation Whole-Model Test Heuristic for Self-Validated Ensemble Models (SVEM)" />
+<meta name="author" content="Andrew T. Karl" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce a heuristic to test the significance of fit of Self-Validated Ensemble Models (SVEM) against the null hypothesis of a constant response. A SVEM model averages predictions from nBoot fits of a model, applied to fractionally weighted bootstraps of the target dataset. It tunes each fit on a validation copy of the training data, utilizing anti-correlated weights for training and validation. The proposed test computes SVEM predictions centered by the response column mean and normalized by the ensemble variability at each of nPoint points spaced throughout the factor space. A reference distribution is constructed by refitting the SVEM model to nPerm randomized permutations of the response column and recording the corresponding standardized predictions at the nPoint points. A reduced-rank singular value decomposition applied to the centered and scaled nPerm x nPoint reference matrix is used to calculate the Mahalanobis distance for each of the nPerm permutation results as well as the jackknife (holdout) Mahalanobis distance of the original response column. The process is repeated independently for each response in the experiment, producing a joint graphical summary. We present a simulation driven power analysis and discuss limitations of the test relating to model flexibility and design adequacy. The test maintains the nominal Type I error rate even when the base SVEM model contains more parameters than observations." />
+<meta property="og:description" content="We introduce a heuristic to test the significance of fit of Self-Validated Ensemble Models (SVEM) against the null hypothesis of a constant response. A SVEM model averages predictions from nBoot fits of a model, applied to fractionally weighted bootstraps of the target dataset. It tunes each fit on a validation copy of the training data, utilizing anti-correlated weights for training and validation. The proposed test computes SVEM predictions centered by the response column mean and normalized by the ensemble variability at each of nPoint points spaced throughout the factor space. A reference distribution is constructed by refitting the SVEM model to nPerm randomized permutations of the response column and recording the corresponding standardized predictions at the nPoint points. A reduced-rank singular value decomposition applied to the centered and scaled nPerm x nPoint reference matrix is used to calculate the Mahalanobis distance for each of the nPerm permutation results as well as the jackknife (holdout) Mahalanobis distance of the original response column. The process is repeated independently for each response in the experiment, producing a joint graphical summary. We present a simulation driven power analysis and discuss limitations of the test relating to model flexibility and design adequacy. The test maintains the nominal Type I error rate even when the base SVEM model contains more parameters than observations." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/ARandomizedPermutationWholeModelTestHeuristicforSelfValidatedEnsembleModelsSVEM.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/ARandomizedPermutationWholeModelTestHeuristicforSelfValidatedEnsembleModelsSVEM.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Randomized Permutation Whole-Model Test Heuristic for Self-Validated Ensemble Models (SVEM)" />
+<script type="application/ld+json">
+{"description":"We introduce a heuristic to test the significance of fit of Self-Validated Ensemble Models (SVEM) against the null hypothesis of a constant response. A SVEM model averages predictions from nBoot fits of a model, applied to fractionally weighted bootstraps of the target dataset. It tunes each fit on a validation copy of the training data, utilizing anti-correlated weights for training and validation. The proposed test computes SVEM predictions centered by the response column mean and normalized by the ensemble variability at each of nPoint points spaced throughout the factor space. A reference distribution is constructed by refitting the SVEM model to nPerm randomized permutations of the response column and recording the corresponding standardized predictions at the nPoint points. A reduced-rank singular value decomposition applied to the centered and scaled nPerm x nPoint reference matrix is used to calculate the Mahalanobis distance for each of the nPerm permutation results as well as the jackknife (holdout) Mahalanobis distance of the original response column. The process is repeated independently for each response in the experiment, producing a joint graphical summary. We present a simulation driven power analysis and discuss limitations of the test relating to model flexibility and design adequacy. The test maintains the nominal Type I error rate even when the base SVEM model contains more parameters than observations.","author":{"@type":"Person","name":"Andrew T. Karl"},"datePublished":"2024-05-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/ARandomizedPermutationWholeModelTestHeuristicforSelfValidatedEnsembleModelsSVEM.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/ARandomizedPermutationWholeModelTestHeuristicforSelfValidatedEnsembleModelsSVEM.html","headline":"A Randomized Permutation Whole-Model Test Heuristic for Self-Validated Ensemble Models (SVEM)","@type":"BlogPosting","dateModified":"2024-05-21T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-21 00:00:00 +0000">05-21</time>
+  </p>
+  
+  <h1>A Randomized Permutation Whole-Model Test Heuristic for Self-Validated Ensemble Models (SVEM)</h1>
+  <br>Andrew T. Karl</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>We introduce a heuristic to test the significance of fit of Self-Validated Ensemble Models (SVEM) against the null hypothesis of a constant response. A SVEM model averages predictions from nBoot fits of a model, applied to fractionally weighted bootstraps of the target dataset. It tunes each fit on a validation copy of the training data, utilizing anti-correlated weights for training and validation. The proposed test computes SVEM predictions centered by the response column mean and normalized by the ensemble variability at each of nPoint points spaced throughout the factor space. A reference distribution is constructed by refitting the SVEM model to nPerm randomized permutations of the response column and recording the corresponding standardized predictions at the nPoint points. A reduced-rank singular value decomposition applied to the centered and scaled nPerm x nPoint reference matrix is used to calculate the Mahalanobis distance for each of the nPerm permutation results as well as the jackknife (holdout) Mahalanobis distance of the original response column. The process is repeated independently for each response in the experiment, producing a joint graphical summary. We present a simulation driven power analysis and discuss limitations of the test relating to model flexibility and design adequacy. The test maintains the nominal Type I error rate even when the base SVEM model contains more parameters than observations.</p>
+
+<p><a href="https://arxiv.org/abs/2405.11156">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

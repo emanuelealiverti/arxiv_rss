@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Analyze Additive and Interaction Effects via Collaborative Trees</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Analyze Additive and Interaction Effects via Collaborative Trees" />
+<meta name="author" content="Chien-Ming Chi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We present Collaborative Trees, a novel tree model designed for regression prediction, along with its bagging version, which aims to analyze complex statistical associations between features and uncover potential patterns inherent in the data. We decompose the mean decrease in impurity from the proposed tree model to analyze the additive and interaction effects of features on the response variable. Additionally, we introduce network diagrams to visually depict how each feature contributes additively to the response and how pairs of features contribute interaction effects. Through a detailed demonstration using an embryo growth dataset, we illustrate how the new statistical tools aid data analysis, both visually and numerically. Moreover, we delve into critical aspects of tree modeling, such as prediction performance, inference stability, and bias in feature importance measures, leveraging real datasets and simulation experiments for comprehensive discussions. On the theory side, we show that Collaborative Trees, built upon a ``sum of trees’’ approach with our own innovative tree model regularization, exhibit characteristics akin to matching pursuit, under the assumption of high-dimensional independent binary input features (or one-hot feature groups). This newfound link sheds light on the superior capability of our tree model in estimating additive effects of features, a crucial factor for accurate interaction effect estimation." />
+<meta property="og:description" content="We present Collaborative Trees, a novel tree model designed for regression prediction, along with its bagging version, which aims to analyze complex statistical associations between features and uncover potential patterns inherent in the data. We decompose the mean decrease in impurity from the proposed tree model to analyze the additive and interaction effects of features on the response variable. Additionally, we introduce network diagrams to visually depict how each feature contributes additively to the response and how pairs of features contribute interaction effects. Through a detailed demonstration using an embryo growth dataset, we illustrate how the new statistical tools aid data analysis, both visually and numerically. Moreover, we delve into critical aspects of tree modeling, such as prediction performance, inference stability, and bias in feature importance measures, leveraging real datasets and simulation experiments for comprehensive discussions. On the theory side, we show that Collaborative Trees, built upon a ``sum of trees’’ approach with our own innovative tree model regularization, exhibit characteristics akin to matching pursuit, under the assumption of high-dimensional independent binary input features (or one-hot feature groups). This newfound link sheds light on the superior capability of our tree model in estimating additive effects of features, a crucial factor for accurate interaction effect estimation." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/AnalyzeAdditiveandInteractionEffectsviaCollaborativeTrees.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/AnalyzeAdditiveandInteractionEffectsviaCollaborativeTrees.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Analyze Additive and Interaction Effects via Collaborative Trees" />
+<script type="application/ld+json">
+{"description":"We present Collaborative Trees, a novel tree model designed for regression prediction, along with its bagging version, which aims to analyze complex statistical associations between features and uncover potential patterns inherent in the data. We decompose the mean decrease in impurity from the proposed tree model to analyze the additive and interaction effects of features on the response variable. Additionally, we introduce network diagrams to visually depict how each feature contributes additively to the response and how pairs of features contribute interaction effects. Through a detailed demonstration using an embryo growth dataset, we illustrate how the new statistical tools aid data analysis, both visually and numerically. Moreover, we delve into critical aspects of tree modeling, such as prediction performance, inference stability, and bias in feature importance measures, leveraging real datasets and simulation experiments for comprehensive discussions. On the theory side, we show that Collaborative Trees, built upon a ``sum of trees’’ approach with our own innovative tree model regularization, exhibit characteristics akin to matching pursuit, under the assumption of high-dimensional independent binary input features (or one-hot feature groups). This newfound link sheds light on the superior capability of our tree model in estimating additive effects of features, a crucial factor for accurate interaction effect estimation.","author":{"@type":"Person","name":"Chien-Ming Chi"},"datePublished":"2024-05-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/AnalyzeAdditiveandInteractionEffectsviaCollaborativeTrees.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/AnalyzeAdditiveandInteractionEffectsviaCollaborativeTrees.html","headline":"Analyze Additive and Interaction Effects via Collaborative Trees","@type":"BlogPosting","dateModified":"2024-05-21T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-21 00:00:00 +0000">05-21</time>
+  </p>
+  
+  <h1>Analyze Additive and Interaction Effects via Collaborative Trees</h1>
+  <br>Chien-Ming Chi</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>We present Collaborative Trees, a novel tree model designed for regression prediction, along with its bagging version, which aims to analyze complex statistical associations between features and uncover potential patterns inherent in the data. We decompose the mean decrease in impurity from the proposed tree model to analyze the additive and interaction effects of features on the response variable. Additionally, we introduce network diagrams to visually depict how each feature contributes additively to the response and how pairs of features contribute interaction effects. Through a detailed demonstration using an embryo growth dataset, we illustrate how the new statistical tools aid data analysis, both visually and numerically. Moreover, we delve into critical aspects of tree modeling, such as prediction performance, inference stability, and bias in feature importance measures, leveraging real datasets and simulation experiments for comprehensive discussions. On the theory side, we show that Collaborative Trees, built upon a ``sum of trees’’ approach with our own innovative tree model regularization, exhibit characteristics akin to matching pursuit, under the assumption of high-dimensional independent binary input features (or one-hot feature groups). This newfound link sheds light on the superior capability of our tree model in estimating additive effects of features, a crucial factor for accurate interaction effect estimation.</p>
+
+<p><a href="https://arxiv.org/abs/2405.11477">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

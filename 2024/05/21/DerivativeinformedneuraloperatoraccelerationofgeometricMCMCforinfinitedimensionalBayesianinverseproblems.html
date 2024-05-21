@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Derivative-informed neural operator acceleration of geometric MCMC for infinite-dimensional Bayesian inverse problems</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Derivative-informed neural operator acceleration of geometric MCMC for infinite-dimensional Bayesian inverse problems" />
+<meta name="author" content="Lianghao Cao, Thomas O'Leary-Roseberry, Omar Ghattas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose an operator learning approach to accelerate geometric Markov chain Monte Carlo (MCMC) for solving infinite-dimensional Bayesian inverse problems (BIPs). While geometric MCMC employs high-quality proposals that adapt to posterior local geometry, it requires repeated computations of gradients and Hessians of the log-likelihood, which becomes prohibitive when the parameter-to-observable (PtO) map is defined through expensive-to-solve parametric partial differential equations (PDEs). We consider a delayed-acceptance geometric MCMC method driven by a neural operator surrogate of the PtO map, where the proposal exploits fast surrogate predictions of the log-likelihood and, simultaneously, its gradient and Hessian. To achieve a substantial speedup, the surrogate must accurately approximate the PtO map and its Jacobian, which often demands a prohibitively large number of PtO map samples via conventional operator learning methods. In this work, we present an extension of derivative-informed operator learning [O’Leary-Roseberry et al., J. Comput. Phys., 496 (2024)] that uses joint samples of the PtO map and its Jacobian. This leads to derivative-informed neural operator (DINO) surrogates that accurately predict the observables and posterior local geometry at a significantly lower training cost than conventional methods. Cost and error analysis for reduced basis DINO surrogates are provided. Numerical studies demonstrate that DINO-driven MCMC generates effective posterior samples 3–9 times faster than geometric MCMC and 60–97 times faster than prior geometry-based MCMC. Furthermore, the training cost of DINO surrogates breaks even compared to geometric MCMC after just 10–25 effective posterior samples." />
+<meta property="og:description" content="We propose an operator learning approach to accelerate geometric Markov chain Monte Carlo (MCMC) for solving infinite-dimensional Bayesian inverse problems (BIPs). While geometric MCMC employs high-quality proposals that adapt to posterior local geometry, it requires repeated computations of gradients and Hessians of the log-likelihood, which becomes prohibitive when the parameter-to-observable (PtO) map is defined through expensive-to-solve parametric partial differential equations (PDEs). We consider a delayed-acceptance geometric MCMC method driven by a neural operator surrogate of the PtO map, where the proposal exploits fast surrogate predictions of the log-likelihood and, simultaneously, its gradient and Hessian. To achieve a substantial speedup, the surrogate must accurately approximate the PtO map and its Jacobian, which often demands a prohibitively large number of PtO map samples via conventional operator learning methods. In this work, we present an extension of derivative-informed operator learning [O’Leary-Roseberry et al., J. Comput. Phys., 496 (2024)] that uses joint samples of the PtO map and its Jacobian. This leads to derivative-informed neural operator (DINO) surrogates that accurately predict the observables and posterior local geometry at a significantly lower training cost than conventional methods. Cost and error analysis for reduced basis DINO surrogates are provided. Numerical studies demonstrate that DINO-driven MCMC generates effective posterior samples 3–9 times faster than geometric MCMC and 60–97 times faster than prior geometry-based MCMC. Furthermore, the training cost of DINO surrogates breaks even compared to geometric MCMC after just 10–25 effective posterior samples." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/DerivativeinformedneuraloperatoraccelerationofgeometricMCMCforinfinitedimensionalBayesianinverseproblems.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/DerivativeinformedneuraloperatoraccelerationofgeometricMCMCforinfinitedimensionalBayesianinverseproblems.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Derivative-informed neural operator acceleration of geometric MCMC for infinite-dimensional Bayesian inverse problems" />
+<script type="application/ld+json">
+{"description":"We propose an operator learning approach to accelerate geometric Markov chain Monte Carlo (MCMC) for solving infinite-dimensional Bayesian inverse problems (BIPs). While geometric MCMC employs high-quality proposals that adapt to posterior local geometry, it requires repeated computations of gradients and Hessians of the log-likelihood, which becomes prohibitive when the parameter-to-observable (PtO) map is defined through expensive-to-solve parametric partial differential equations (PDEs). We consider a delayed-acceptance geometric MCMC method driven by a neural operator surrogate of the PtO map, where the proposal exploits fast surrogate predictions of the log-likelihood and, simultaneously, its gradient and Hessian. To achieve a substantial speedup, the surrogate must accurately approximate the PtO map and its Jacobian, which often demands a prohibitively large number of PtO map samples via conventional operator learning methods. In this work, we present an extension of derivative-informed operator learning [O’Leary-Roseberry et al., J. Comput. Phys., 496 (2024)] that uses joint samples of the PtO map and its Jacobian. This leads to derivative-informed neural operator (DINO) surrogates that accurately predict the observables and posterior local geometry at a significantly lower training cost than conventional methods. Cost and error analysis for reduced basis DINO surrogates are provided. Numerical studies demonstrate that DINO-driven MCMC generates effective posterior samples 3–9 times faster than geometric MCMC and 60–97 times faster than prior geometry-based MCMC. Furthermore, the training cost of DINO surrogates breaks even compared to geometric MCMC after just 10–25 effective posterior samples.","author":{"@type":"Person","name":"Lianghao Cao, Thomas O'Leary-Roseberry, Omar Ghattas"},"datePublished":"2024-05-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/DerivativeinformedneuraloperatoraccelerationofgeometricMCMCforinfinitedimensionalBayesianinverseproblems.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/DerivativeinformedneuraloperatoraccelerationofgeometricMCMCforinfinitedimensionalBayesianinverseproblems.html","headline":"Derivative-informed neural operator acceleration of geometric MCMC for infinite-dimensional Bayesian inverse problems","@type":"BlogPosting","dateModified":"2024-05-21T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-21 00:00:00 +0000">05-21</time>
+  </p>
+  
+  <h1>Derivative-informed neural operator acceleration of geometric MCMC for infinite-dimensional Bayesian inverse problems</h1>
+  <br>Lianghao Cao, Thomas O'Leary-Roseberry, Omar Ghattas</h3>
+  <br> [stat.CO,stat.ML]
+
+  <p>We propose an operator learning approach to accelerate geometric Markov chain Monte Carlo (MCMC) for solving infinite-dimensional Bayesian inverse problems (BIPs). While geometric MCMC employs high-quality proposals that adapt to posterior local geometry, it requires repeated computations of gradients and Hessians of the log-likelihood, which becomes prohibitive when the parameter-to-observable (PtO) map is defined through expensive-to-solve parametric partial differential equations (PDEs). We consider a delayed-acceptance geometric MCMC method driven by a neural operator surrogate of the PtO map, where the proposal exploits fast surrogate predictions of the log-likelihood and, simultaneously, its gradient and Hessian. To achieve a substantial speedup, the surrogate must accurately approximate the PtO map and its Jacobian, which often demands a prohibitively large number of PtO map samples via conventional operator learning methods. In this work, we present an extension of derivative-informed operator learning [O’Leary-Roseberry et al., J. Comput. Phys., 496 (2024)] that uses joint samples of the PtO map and its Jacobian. This leads to derivative-informed neural operator (DINO) surrogates that accurately predict the observables and posterior local geometry at a significantly lower training cost than conventional methods. Cost and error analysis for reduced basis DINO surrogates are provided. Numerical studies demonstrate that DINO-driven MCMC generates effective posterior samples 3–9 times faster than geometric MCMC and 60–97 times faster than prior geometry-based MCMC. Furthermore, the training cost of DINO surrogates breaks even compared to geometric MCMC after just 10–25 effective posterior samples.</p>
+
+<p><a href="https://arxiv.org/abs/2403.08220">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

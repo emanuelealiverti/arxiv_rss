@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Distributed Tensor Principal Component Analysis</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Distributed Tensor Principal Component Analysis" />
+<meta name="author" content="Elynn Chen, Xi Chen, Wenbo Jing, Yichen Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As tensors become widespread in modern data analysis, Tucker low-rank Principal Component Analysis (PCA) has become essential for dimensionality reduction and structural discovery in tensor datasets. Motivated by the common scenario where large-scale tensors are distributed across diverse geographic locations, this paper investigates tensor PCA within a distributed framework where direct data pooling is impractical. We offer a comprehensive analysis of three specific scenarios in distributed Tensor PCA: a homogeneous setting in which tensors at various locations are generated from a single noise-affected model; a heterogeneous setting where tensors at different locations come from distinct models but share some principal components, aiming to improve estimation across all locations; and a targeted heterogeneous setting, designed to boost estimation accuracy at a specific location with limited samples by utilizing transferred knowledge from other sites with ample data. We introduce novel estimation methods tailored to each scenario, establish statistical guarantees, and develop distributed inference techniques to construct confidence regions. Our theoretical findings demonstrate that these distributed methods achieve sharp rates of accuracy by efficiently aggregating shared information across different tensors, while maintaining reasonable communication costs. Empirical validation through simulations and real-world data applications highlights the advantages of our approaches, particularly in managing heterogeneous tensor data." />
+<meta property="og:description" content="As tensors become widespread in modern data analysis, Tucker low-rank Principal Component Analysis (PCA) has become essential for dimensionality reduction and structural discovery in tensor datasets. Motivated by the common scenario where large-scale tensors are distributed across diverse geographic locations, this paper investigates tensor PCA within a distributed framework where direct data pooling is impractical. We offer a comprehensive analysis of three specific scenarios in distributed Tensor PCA: a homogeneous setting in which tensors at various locations are generated from a single noise-affected model; a heterogeneous setting where tensors at different locations come from distinct models but share some principal components, aiming to improve estimation across all locations; and a targeted heterogeneous setting, designed to boost estimation accuracy at a specific location with limited samples by utilizing transferred knowledge from other sites with ample data. We introduce novel estimation methods tailored to each scenario, establish statistical guarantees, and develop distributed inference techniques to construct confidence regions. Our theoretical findings demonstrate that these distributed methods achieve sharp rates of accuracy by efficiently aggregating shared information across different tensors, while maintaining reasonable communication costs. Empirical validation through simulations and real-world data applications highlights the advantages of our approaches, particularly in managing heterogeneous tensor data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/DistributedTensorPrincipalComponentAnalysis.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/DistributedTensorPrincipalComponentAnalysis.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Distributed Tensor Principal Component Analysis" />
+<script type="application/ld+json">
+{"description":"As tensors become widespread in modern data analysis, Tucker low-rank Principal Component Analysis (PCA) has become essential for dimensionality reduction and structural discovery in tensor datasets. Motivated by the common scenario where large-scale tensors are distributed across diverse geographic locations, this paper investigates tensor PCA within a distributed framework where direct data pooling is impractical. We offer a comprehensive analysis of three specific scenarios in distributed Tensor PCA: a homogeneous setting in which tensors at various locations are generated from a single noise-affected model; a heterogeneous setting where tensors at different locations come from distinct models but share some principal components, aiming to improve estimation across all locations; and a targeted heterogeneous setting, designed to boost estimation accuracy at a specific location with limited samples by utilizing transferred knowledge from other sites with ample data. We introduce novel estimation methods tailored to each scenario, establish statistical guarantees, and develop distributed inference techniques to construct confidence regions. Our theoretical findings demonstrate that these distributed methods achieve sharp rates of accuracy by efficiently aggregating shared information across different tensors, while maintaining reasonable communication costs. Empirical validation through simulations and real-world data applications highlights the advantages of our approaches, particularly in managing heterogeneous tensor data.","author":{"@type":"Person","name":"Elynn Chen, Xi Chen, Wenbo Jing, Yichen Zhang"},"datePublished":"2024-05-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/DistributedTensorPrincipalComponentAnalysis.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/21/DistributedTensorPrincipalComponentAnalysis.html","headline":"Distributed Tensor Principal Component Analysis","@type":"BlogPosting","dateModified":"2024-05-21T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-21 00:00:00 +0000">05-21</time>
+  </p>
+  
+  <h1>Distributed Tensor Principal Component Analysis</h1>
+  <br>Elynn Chen, Xi Chen, Wenbo Jing, Yichen Zhang</h3>
+  <br> [stat.ME,stat.TH]
+
+  <p>As tensors become widespread in modern data analysis, Tucker low-rank Principal Component Analysis (PCA) has become essential for dimensionality reduction and structural discovery in tensor datasets. Motivated by the common scenario where large-scale tensors are distributed across diverse geographic locations, this paper investigates tensor PCA within a distributed framework where direct data pooling is impractical.
+  We offer a comprehensive analysis of three specific scenarios in distributed Tensor PCA: a homogeneous setting in which tensors at various locations are generated from a single noise-affected model; a heterogeneous setting where tensors at different locations come from distinct models but share some principal components, aiming to improve estimation across all locations; and a targeted heterogeneous setting, designed to boost estimation accuracy at a specific location with limited samples by utilizing transferred knowledge from other sites with ample data.
+  We introduce novel estimation methods tailored to each scenario, establish statistical guarantees, and develop distributed inference techniques to construct confidence regions. Our theoretical findings demonstrate that these distributed methods achieve sharp rates of accuracy by efficiently aggregating shared information across different tensors, while maintaining reasonable communication costs. Empirical validation through simulations and real-world data applications highlights the advantages of our approaches, particularly in managing heterogeneous tensor data.</p>
+
+<p><a href="https://arxiv.org/abs/2405.11681">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
