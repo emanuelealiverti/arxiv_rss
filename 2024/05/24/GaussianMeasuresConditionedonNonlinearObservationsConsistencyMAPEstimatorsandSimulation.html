@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Gaussian Measures Conditioned on Nonlinear Observations: Consistency, MAP Estimators, and Simulation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Gaussian Measures Conditioned on Nonlinear Observations: Consistency, MAP Estimators, and Simulation" />
+<meta name="author" content="Yifan Chen, Bamdad Hosseini, Houman Owhadi, Andrew M Stuart" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The article presents a systematic study of the problem of conditioning a Gaussian random variable $\xi$ on nonlinear observations of the form $F \circ \phi(\xi)$ where $\phi: \mathcal{X} \to \mathbb{R}^N$ is a bounded linear operator and $F$ is nonlinear. Such problems arise in the context of Bayesian inference and recent machine learning-inspired PDE solvers. We give a representer theorem for the conditioned random variable $\xi \mid F\circ \phi(\xi)$, stating that it decomposes as the sum of an infinite-dimensional Gaussian (which is identified analytically) as well as a finite-dimensional non-Gaussian measure. We also introduce a novel notion of the mode of a conditional measure by taking the limit of the natural relaxation of the problem, to which we can apply the existing notion of maximum a posteriori estimators of posterior measures. Finally, we introduce a variant of the Laplace approximation for the efficient simulation of the aforementioned conditioned Gaussian random variables towards uncertainty quantification." />
+<meta property="og:description" content="The article presents a systematic study of the problem of conditioning a Gaussian random variable $\xi$ on nonlinear observations of the form $F \circ \phi(\xi)$ where $\phi: \mathcal{X} \to \mathbb{R}^N$ is a bounded linear operator and $F$ is nonlinear. Such problems arise in the context of Bayesian inference and recent machine learning-inspired PDE solvers. We give a representer theorem for the conditioned random variable $\xi \mid F\circ \phi(\xi)$, stating that it decomposes as the sum of an infinite-dimensional Gaussian (which is identified analytically) as well as a finite-dimensional non-Gaussian measure. We also introduce a novel notion of the mode of a conditional measure by taking the limit of the natural relaxation of the problem, to which we can apply the existing notion of maximum a posteriori estimators of posterior measures. Finally, we introduce a variant of the Laplace approximation for the efficient simulation of the aforementioned conditioned Gaussian random variables towards uncertainty quantification." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/GaussianMeasuresConditionedonNonlinearObservationsConsistencyMAPEstimatorsandSimulation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/GaussianMeasuresConditionedonNonlinearObservationsConsistencyMAPEstimatorsandSimulation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Gaussian Measures Conditioned on Nonlinear Observations: Consistency, MAP Estimators, and Simulation" />
+<script type="application/ld+json">
+{"description":"The article presents a systematic study of the problem of conditioning a Gaussian random variable $\\xi$ on nonlinear observations of the form $F \\circ \\phi(\\xi)$ where $\\phi: \\mathcal{X} \\to \\mathbb{R}^N$ is a bounded linear operator and $F$ is nonlinear. Such problems arise in the context of Bayesian inference and recent machine learning-inspired PDE solvers. We give a representer theorem for the conditioned random variable $\\xi \\mid F\\circ \\phi(\\xi)$, stating that it decomposes as the sum of an infinite-dimensional Gaussian (which is identified analytically) as well as a finite-dimensional non-Gaussian measure. We also introduce a novel notion of the mode of a conditional measure by taking the limit of the natural relaxation of the problem, to which we can apply the existing notion of maximum a posteriori estimators of posterior measures. Finally, we introduce a variant of the Laplace approximation for the efficient simulation of the aforementioned conditioned Gaussian random variables towards uncertainty quantification.","author":{"@type":"Person","name":"Yifan Chen, Bamdad Hosseini, Houman Owhadi, Andrew M Stuart"},"datePublished":"2024-05-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/GaussianMeasuresConditionedonNonlinearObservationsConsistencyMAPEstimatorsandSimulation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/GaussianMeasuresConditionedonNonlinearObservationsConsistencyMAPEstimatorsandSimulation.html","headline":"Gaussian Measures Conditioned on Nonlinear Observations: Consistency, MAP Estimators, and Simulation","@type":"BlogPosting","dateModified":"2024-05-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-24 00:00:00 +0000">05-24</time>
+  </p>
+  
+  <h1>Gaussian Measures Conditioned on Nonlinear Observations: Consistency, MAP Estimators, and Simulation</h1>
+  <br>Yifan Chen, Bamdad Hosseini, Houman Owhadi, Andrew M Stuart</h3>
+  <br> [stat.ML,stat.CO]
+
+  <p>The article presents a systematic study of the problem of conditioning a Gaussian random variable $\xi$ on nonlinear observations of the form $F \circ \phi(\xi)$ where $\phi: \mathcal{X} \to \mathbb{R}^N$ is a bounded linear operator and $F$ is nonlinear. Such problems arise in the context of Bayesian inference and recent machine learning-inspired PDE solvers. We give a representer theorem for the conditioned random variable $\xi \mid F\circ \phi(\xi)$, stating that it decomposes as the sum of an infinite-dimensional Gaussian (which is identified analytically) as well as a finite-dimensional non-Gaussian measure. We also introduce a novel notion of the mode of a conditional measure by taking the limit of the natural relaxation of the problem, to which we can apply the existing notion of maximum a posteriori estimators of posterior measures. Finally, we introduce a variant of the Laplace approximation for the efficient simulation of the aforementioned conditioned Gaussian random variables towards uncertainty quantification.</p>
+
+<p><a href="https://arxiv.org/abs/2405.13149">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

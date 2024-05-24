@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Contraction and Convergence Rates for Discretized Kinetic Langevin Dynamics</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Contraction and Convergence Rates for Discretized Kinetic Langevin Dynamics" />
+<meta name="author" content="Benedict Leimkuhler, Daniel Paulin, Peter A. Whalley" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We provide a framework to analyze the convergence of discretized kinetic Langevin dynamics for $M$-$\nabla$Lipschitz, $m$-convex potentials. Our approach gives convergence rates of $\mathcal{O}(m/M)$, with explicit stepsize restrictions, which are of the same order as the stability threshold for Gaussian targets and are valid for a large interval of the friction parameter. We apply this methodology to various integration schemes which are popular in the molecular dynamics and machine learning communities. Further, we introduce the property ``$\gamma$-limit convergent” (GLC) to characterize underdamped Langevin schemes that converge to overdamped dynamics in the high-friction limit and which have stepsize restrictions that are independent of the friction parameter; we show that this property is not generic by exhibiting methods from both the class and its complement. Finally, we provide asymptotic bias estimates for the BAOAB scheme, which remain accurate in the high-friction limit by comparison to a modified stochastic dynamics which preserves the invariant measure." />
+<meta property="og:description" content="We provide a framework to analyze the convergence of discretized kinetic Langevin dynamics for $M$-$\nabla$Lipschitz, $m$-convex potentials. Our approach gives convergence rates of $\mathcal{O}(m/M)$, with explicit stepsize restrictions, which are of the same order as the stability threshold for Gaussian targets and are valid for a large interval of the friction parameter. We apply this methodology to various integration schemes which are popular in the molecular dynamics and machine learning communities. Further, we introduce the property ``$\gamma$-limit convergent” (GLC) to characterize underdamped Langevin schemes that converge to overdamped dynamics in the high-friction limit and which have stepsize restrictions that are independent of the friction parameter; we show that this property is not generic by exhibiting methods from both the class and its complement. Finally, we provide asymptotic bias estimates for the BAOAB scheme, which remain accurate in the high-friction limit by comparison to a modified stochastic dynamics which preserves the invariant measure." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/ContractionandConvergenceRatesforDiscretizedKineticLangevinDynamics.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/ContractionandConvergenceRatesforDiscretizedKineticLangevinDynamics.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Contraction and Convergence Rates for Discretized Kinetic Langevin Dynamics" />
+<script type="application/ld+json">
+{"description":"We provide a framework to analyze the convergence of discretized kinetic Langevin dynamics for $M$-$\\nabla$Lipschitz, $m$-convex potentials. Our approach gives convergence rates of $\\mathcal{O}(m/M)$, with explicit stepsize restrictions, which are of the same order as the stability threshold for Gaussian targets and are valid for a large interval of the friction parameter. We apply this methodology to various integration schemes which are popular in the molecular dynamics and machine learning communities. Further, we introduce the property ``$\\gamma$-limit convergent” (GLC) to characterize underdamped Langevin schemes that converge to overdamped dynamics in the high-friction limit and which have stepsize restrictions that are independent of the friction parameter; we show that this property is not generic by exhibiting methods from both the class and its complement. Finally, we provide asymptotic bias estimates for the BAOAB scheme, which remain accurate in the high-friction limit by comparison to a modified stochastic dynamics which preserves the invariant measure.","author":{"@type":"Person","name":"Benedict Leimkuhler, Daniel Paulin, Peter A. Whalley"},"datePublished":"2024-05-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/ContractionandConvergenceRatesforDiscretizedKineticLangevinDynamics.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/ContractionandConvergenceRatesforDiscretizedKineticLangevinDynamics.html","headline":"Contraction and Convergence Rates for Discretized Kinetic Langevin Dynamics","@type":"BlogPosting","dateModified":"2024-05-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-24 00:00:00 +0000">05-24</time>
+  </p>
+  
+  <h1>Contraction and Convergence Rates for Discretized Kinetic Langevin Dynamics</h1>
+  <br>Benedict Leimkuhler, Daniel Paulin, Peter A. Whalley</h3>
+  <br> [stat.CO]
+
+  <p>We provide a framework to analyze the convergence of discretized kinetic Langevin dynamics for $M$-$\nabla$Lipschitz, $m$-convex potentials. Our approach gives convergence rates of $\mathcal{O}(m/M)$, with explicit stepsize restrictions, which are of the same order as the stability threshold for Gaussian targets and are valid for a large interval of the friction parameter. We apply this methodology to various integration schemes which are popular in the molecular dynamics and machine learning communities. Further, we introduce the property ``$\gamma$-limit convergent” (GLC) to characterize underdamped Langevin schemes that converge to overdamped dynamics in the high-friction limit and which have stepsize restrictions that are independent of the friction parameter; we show that this property is not generic by exhibiting methods from both the class and its complement. Finally, we provide asymptotic bias estimates for the BAOAB scheme, which remain accurate in the high-friction limit by comparison to a modified stochastic dynamics which preserves the invariant measure.</p>
+
+<p><a href="https://arxiv.org/abs/2302.10684">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

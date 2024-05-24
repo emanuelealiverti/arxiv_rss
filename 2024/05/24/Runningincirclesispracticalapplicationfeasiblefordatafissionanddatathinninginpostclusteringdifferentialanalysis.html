@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Running in circles: is practical application feasible for data fission and data thinning in post-clustering differential analysis?</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Running in circles: is practical application feasible for data fission and data thinning in post-clustering differential analysis?" />
+<meta name="author" content="Benjamin Hivert, Denis Agniel, Rodolphe Thiébaut, Boris P. Hejblum" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The standard pipeline to analyse single-cell RNA sequencing (scRNA-seq) often involves two steps : clustering and Differential Expression Analysis (DEA) to annotate cell populations based on gene expression. However, using clustering results for data-driven hypothesis formulation compromises statistical properties, especially Type I error control. Data fission was introduced to split the information contained in each observation into two independent parts that can be used for clustering and testing. However, data fission was originally designed for non-mixture distributions, and adapting it for mixtures requires knowledge of the unknown clustering structure to estimate component-specific scale parameters. As components are typically unavailable in practice, scale parameter estimators often exhibit bias. We explicitly quantify how this bias affects subsequent post-clustering differential analysis Type I error rate despite employing data fission. In response, we propose a novel approach that involves modeling each observation as a realization of its distribution, with scale parameters estimated non-parametrically. Simulations study showcase the efficacy of our method when component are clearly separated. However, the level of separability required to reach good performance presents complexities in its application to real scRNA-seq data." />
+<meta property="og:description" content="The standard pipeline to analyse single-cell RNA sequencing (scRNA-seq) often involves two steps : clustering and Differential Expression Analysis (DEA) to annotate cell populations based on gene expression. However, using clustering results for data-driven hypothesis formulation compromises statistical properties, especially Type I error control. Data fission was introduced to split the information contained in each observation into two independent parts that can be used for clustering and testing. However, data fission was originally designed for non-mixture distributions, and adapting it for mixtures requires knowledge of the unknown clustering structure to estimate component-specific scale parameters. As components are typically unavailable in practice, scale parameter estimators often exhibit bias. We explicitly quantify how this bias affects subsequent post-clustering differential analysis Type I error rate despite employing data fission. In response, we propose a novel approach that involves modeling each observation as a realization of its distribution, with scale parameters estimated non-parametrically. Simulations study showcase the efficacy of our method when component are clearly separated. However, the level of separability required to reach good performance presents complexities in its application to real scRNA-seq data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/Runningincirclesispracticalapplicationfeasiblefordatafissionanddatathinninginpostclusteringdifferentialanalysis.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/Runningincirclesispracticalapplicationfeasiblefordatafissionanddatathinninginpostclusteringdifferentialanalysis.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Running in circles: is practical application feasible for data fission and data thinning in post-clustering differential analysis?" />
+<script type="application/ld+json">
+{"description":"The standard pipeline to analyse single-cell RNA sequencing (scRNA-seq) often involves two steps : clustering and Differential Expression Analysis (DEA) to annotate cell populations based on gene expression. However, using clustering results for data-driven hypothesis formulation compromises statistical properties, especially Type I error control. Data fission was introduced to split the information contained in each observation into two independent parts that can be used for clustering and testing. However, data fission was originally designed for non-mixture distributions, and adapting it for mixtures requires knowledge of the unknown clustering structure to estimate component-specific scale parameters. As components are typically unavailable in practice, scale parameter estimators often exhibit bias. We explicitly quantify how this bias affects subsequent post-clustering differential analysis Type I error rate despite employing data fission. In response, we propose a novel approach that involves modeling each observation as a realization of its distribution, with scale parameters estimated non-parametrically. Simulations study showcase the efficacy of our method when component are clearly separated. However, the level of separability required to reach good performance presents complexities in its application to real scRNA-seq data.","author":{"@type":"Person","name":"Benjamin Hivert, Denis Agniel, Rodolphe Thiébaut, Boris P. Hejblum"},"datePublished":"2024-05-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/Runningincirclesispracticalapplicationfeasiblefordatafissionanddatathinninginpostclusteringdifferentialanalysis.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/24/Runningincirclesispracticalapplicationfeasiblefordatafissionanddatathinninginpostclusteringdifferentialanalysis.html","headline":"Running in circles: is practical application feasible for data fission and data thinning in post-clustering differential analysis?","@type":"BlogPosting","dateModified":"2024-05-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-24 00:00:00 +0000">05-24</time>
+  </p>
+  
+  <h1>Running in circles: is practical application feasible for data fission and data thinning in post-clustering differential analysis?</h1>
+  <br>Benjamin Hivert, Denis Agniel, Rodolphe Thiébaut, Boris P. Hejblum</h3>
+  <br> [stat.ME]
+
+  <p>The standard pipeline to analyse single-cell RNA sequencing (scRNA-seq) often involves two steps : clustering and Differential Expression Analysis (DEA) to annotate cell populations based on gene expression. However, using clustering results for data-driven hypothesis formulation compromises statistical properties, especially Type I error control. Data fission was introduced to split the information contained in each observation into two independent parts that can be used for clustering and testing. However, data fission was originally designed for non-mixture distributions, and adapting it for mixtures requires knowledge of the unknown clustering structure to estimate component-specific scale parameters. As components are typically unavailable in practice, scale parameter estimators often exhibit bias. We explicitly quantify how this bias affects subsequent post-clustering differential analysis Type I error rate despite employing data fission. In response, we propose a novel approach that involves modeling each observation as a realization of its distribution, with scale parameters estimated non-parametrically. Simulations study showcase the efficacy of our method when component are clearly separated. However, the level of separability required to reach good performance presents complexities in its application to real scRNA-seq data.</p>
+
+<p><a href="https://arxiv.org/abs/2405.13591">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
