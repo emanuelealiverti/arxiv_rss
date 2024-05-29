@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Random measure priors in Bayesian recovery from sketches</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Random measure priors in Bayesian recovery from sketches" />
+<meta name="author" content="Mario Beraha, Stefano Favaro, Matteo Sesia" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper introduces a Bayesian nonparametric approach to frequency recovery from lossy-compressed discrete data, leveraging all information contained in a sketch obtained through random hashing. By modeling the data points as random samples from an unknown discrete distribution endowed with a Poisson-Kingman prior, we derive the posterior distribution of a symbol’s empirical frequency given the sketch. This leads to principled frequency estimates through mean functionals, e.g., the posterior mean, median and mode. We highlight applications of this general result to Dirichlet process and Pitman-Yor process priors. Notably, we prove that the former prior uniquely satisfies a sufficiency property that simplifies the posterior distribution, while the latter enables a convenient large-sample asymptotic approximation. Additionally, we extend our approach to the problem of cardinality recovery, estimating the number of distinct symbols in the sketched dataset. Our approach to frequency recovery also adapts to a more general traits&#39;&#39; setting, where each data point has integer levels of association with multiple symbols, typically referred to astraits’’. By employing a generalized Indian buffet process, we compute the posterior distribution of a trait’s frequency using both the Poisson and Bernoulli distributions for the trait association levels, respectively yielding exact and approximate posterior frequency distributions." />
+<meta property="og:description" content="This paper introduces a Bayesian nonparametric approach to frequency recovery from lossy-compressed discrete data, leveraging all information contained in a sketch obtained through random hashing. By modeling the data points as random samples from an unknown discrete distribution endowed with a Poisson-Kingman prior, we derive the posterior distribution of a symbol’s empirical frequency given the sketch. This leads to principled frequency estimates through mean functionals, e.g., the posterior mean, median and mode. We highlight applications of this general result to Dirichlet process and Pitman-Yor process priors. Notably, we prove that the former prior uniquely satisfies a sufficiency property that simplifies the posterior distribution, while the latter enables a convenient large-sample asymptotic approximation. Additionally, we extend our approach to the problem of cardinality recovery, estimating the number of distinct symbols in the sketched dataset. Our approach to frequency recovery also adapts to a more general traits&#39;&#39; setting, where each data point has integer levels of association with multiple symbols, typically referred to astraits’’. By employing a generalized Indian buffet process, we compute the posterior distribution of a trait’s frequency using both the Poisson and Bernoulli distributions for the trait association levels, respectively yielding exact and approximate posterior frequency distributions." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/05/29/RandommeasurepriorsinBayesianrecoveryfromsketches.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/05/29/RandommeasurepriorsinBayesianrecoveryfromsketches.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Random measure priors in Bayesian recovery from sketches" />
+<script type="application/ld+json">
+{"description":"This paper introduces a Bayesian nonparametric approach to frequency recovery from lossy-compressed discrete data, leveraging all information contained in a sketch obtained through random hashing. By modeling the data points as random samples from an unknown discrete distribution endowed with a Poisson-Kingman prior, we derive the posterior distribution of a symbol’s empirical frequency given the sketch. This leads to principled frequency estimates through mean functionals, e.g., the posterior mean, median and mode. We highlight applications of this general result to Dirichlet process and Pitman-Yor process priors. Notably, we prove that the former prior uniquely satisfies a sufficiency property that simplifies the posterior distribution, while the latter enables a convenient large-sample asymptotic approximation. Additionally, we extend our approach to the problem of cardinality recovery, estimating the number of distinct symbols in the sketched dataset. Our approach to frequency recovery also adapts to a more general traits&#39;&#39; setting, where each data point has integer levels of association with multiple symbols, typically referred to astraits’’. By employing a generalized Indian buffet process, we compute the posterior distribution of a trait’s frequency using both the Poisson and Bernoulli distributions for the trait association levels, respectively yielding exact and approximate posterior frequency distributions.","author":{"@type":"Person","name":"Mario Beraha, Stefano Favaro, Matteo Sesia"},"datePublished":"2024-05-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/29/RandommeasurepriorsinBayesianrecoveryfromsketches.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/05/29/RandommeasurepriorsinBayesianrecoveryfromsketches.html","headline":"Random measure priors in Bayesian recovery from sketches","@type":"BlogPosting","dateModified":"2024-05-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-29 00:00:00 +0000">05-29</time>
+  </p>
+  
+  <h1>Random measure priors in Bayesian recovery from sketches</h1>
+  <br>Mario Beraha, Stefano Favaro, Matteo Sesia</h3>
+  <br> [stat.ME,stat.TH]
+
+  <p>This paper introduces a Bayesian nonparametric approach to frequency recovery from lossy-compressed discrete data, leveraging all information contained in a sketch obtained through random hashing. By modeling the data points as random samples from an unknown discrete distribution endowed with a Poisson-Kingman prior, we derive the posterior distribution of a symbol’s empirical frequency given the sketch. This leads to principled frequency estimates through mean functionals, e.g., the posterior mean, median and mode. We highlight applications of this general result to Dirichlet process and Pitman-Yor process priors. Notably, we prove that the former prior uniquely satisfies a sufficiency property that simplifies the posterior distribution, while the latter enables a convenient large-sample asymptotic approximation. Additionally, we extend our approach to the problem of cardinality recovery, estimating the number of distinct symbols in the sketched dataset. Our approach to frequency recovery also adapts to a more general <code class="language-plaintext highlighter-rouge">traits'' setting, where each data point has integer levels of association with multiple symbols, typically referred to as</code>traits’’. By employing a generalized Indian buffet process, we compute the posterior distribution of a trait’s frequency using both the Poisson and Bernoulli distributions for the trait association levels, respectively yielding exact and approximate posterior frequency distributions.</p>
+
+<p><a href="https://arxiv.org/abs/2303.15029">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
