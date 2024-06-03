@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Numerical Generalized Randomized HMC processes for restricted domains</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Numerical Generalized Randomized HMC processes for restricted domains" />
+<meta name="author" content="Tore Selland Kleppe, Roman Liesenfeld" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose a generic approach for numerically efficient simulation from analytically intractable distributions with constrained support. Our approach relies upon Generalized Randomized Hamiltonian Monte Carlo (GRHMC) processes and combines these with a randomized transition kernel that appropriately adjusts the Hamiltonian flow at the boundary of the constrained domain, ensuring that it remains within the domain. The numerical implementation of this constrained GRHMC process exploits the sparsity of the randomized transition kernel and the specific structure of the constraints so that the proposed approach is numerically accurate, computationally fast and operational even in high-dimensional applications. We illustrate this approach with posterior distributions of several Bayesian models with challenging parameter domain constraints in applications to real-word data sets. Building on the capability of GRHMC processes to efficiently explore otherwise challenging and high-dimensional posteriors, the proposed method expands the set of Bayesian models that can be analyzed by using the standard Markov-Chain Monte-Carlo (MCMC) methodology, As such, it can advance the development and use of Bayesian models with useful constrained priors, which are difficult to handle with existing methods. The article is accompanied by an R-package (\url{https://github.com/torekleppe/pdmphmc}), which allows for automatically implementing GRHMC processes for arbitrary target distributions and domain constraints." />
+<meta property="og:description" content="We propose a generic approach for numerically efficient simulation from analytically intractable distributions with constrained support. Our approach relies upon Generalized Randomized Hamiltonian Monte Carlo (GRHMC) processes and combines these with a randomized transition kernel that appropriately adjusts the Hamiltonian flow at the boundary of the constrained domain, ensuring that it remains within the domain. The numerical implementation of this constrained GRHMC process exploits the sparsity of the randomized transition kernel and the specific structure of the constraints so that the proposed approach is numerically accurate, computationally fast and operational even in high-dimensional applications. We illustrate this approach with posterior distributions of several Bayesian models with challenging parameter domain constraints in applications to real-word data sets. Building on the capability of GRHMC processes to efficiently explore otherwise challenging and high-dimensional posteriors, the proposed method expands the set of Bayesian models that can be analyzed by using the standard Markov-Chain Monte-Carlo (MCMC) methodology, As such, it can advance the development and use of Bayesian models with useful constrained priors, which are difficult to handle with existing methods. The article is accompanied by an R-package (\url{https://github.com/torekleppe/pdmphmc}), which allows for automatically implementing GRHMC processes for arbitrary target distributions and domain constraints." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/03/NumericalGeneralizedRandomizedHMCprocessesforrestricteddomains.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/03/NumericalGeneralizedRandomizedHMCprocessesforrestricteddomains.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Numerical Generalized Randomized HMC processes for restricted domains" />
+<script type="application/ld+json">
+{"description":"We propose a generic approach for numerically efficient simulation from analytically intractable distributions with constrained support. Our approach relies upon Generalized Randomized Hamiltonian Monte Carlo (GRHMC) processes and combines these with a randomized transition kernel that appropriately adjusts the Hamiltonian flow at the boundary of the constrained domain, ensuring that it remains within the domain. The numerical implementation of this constrained GRHMC process exploits the sparsity of the randomized transition kernel and the specific structure of the constraints so that the proposed approach is numerically accurate, computationally fast and operational even in high-dimensional applications. We illustrate this approach with posterior distributions of several Bayesian models with challenging parameter domain constraints in applications to real-word data sets. Building on the capability of GRHMC processes to efficiently explore otherwise challenging and high-dimensional posteriors, the proposed method expands the set of Bayesian models that can be analyzed by using the standard Markov-Chain Monte-Carlo (MCMC) methodology, As such, it can advance the development and use of Bayesian models with useful constrained priors, which are difficult to handle with existing methods. The article is accompanied by an R-package (\\url{https://github.com/torekleppe/pdmphmc}), which allows for automatically implementing GRHMC processes for arbitrary target distributions and domain constraints.","author":{"@type":"Person","name":"Tore Selland Kleppe, Roman Liesenfeld"},"datePublished":"2024-06-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/03/NumericalGeneralizedRandomizedHMCprocessesforrestricteddomains.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/03/NumericalGeneralizedRandomizedHMCprocessesforrestricteddomains.html","headline":"Numerical Generalized Randomized HMC processes for restricted domains","@type":"BlogPosting","dateModified":"2024-06-03T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-03 00:00:00 +0000">06-03</time>
+  </p>
+  
+  <h1>Numerical Generalized Randomized HMC processes for restricted domains</h1>
+  <br>Tore Selland Kleppe, Roman Liesenfeld</h3>
+  <br> [stat.CO]
+
+  <p>We propose a generic approach for numerically efficient simulation from analytically intractable distributions with constrained support. Our approach relies upon Generalized Randomized Hamiltonian Monte Carlo (GRHMC) processes and combines these with a randomized transition kernel that appropriately adjusts the Hamiltonian flow at the boundary of the constrained domain, ensuring that it remains within the domain. The numerical implementation of this constrained GRHMC process exploits the sparsity of the randomized transition kernel and the specific structure of the constraints so that the proposed approach is numerically accurate, computationally fast and operational even in high-dimensional applications. We illustrate this approach with posterior distributions of several Bayesian models with challenging parameter domain constraints in applications to real-word data sets. Building on the capability of GRHMC processes to efficiently explore otherwise challenging and high-dimensional posteriors, the proposed method expands the set of Bayesian models that can be analyzed by using the standard Markov-Chain Monte-Carlo (MCMC) methodology, As such, it can advance the development and use of Bayesian models with useful constrained priors, which are difficult to handle with existing methods. The article is accompanied by an R-package (\url{https://github.com/torekleppe/pdmphmc}), which allows for automatically implementing GRHMC processes for arbitrary target distributions and domain constraints.</p>
+
+<p><a href="https://arxiv.org/abs/2311.14492">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
