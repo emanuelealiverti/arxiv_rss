@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Partition-insensitive Parallel Framework for Distributed Model Fitting</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Partition-insensitive Parallel Framework for Distributed Model Fitting" />
+<meta name="author" content="Xiaofei Wu, Rongmei Liang, Fabio Roli, Marcello Pelillo, Jing Yuan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Distributed model fitting refers to the process of fitting a mathematical or statistical model to the data using distributed computing resources, such that computing tasks are divided among multiple interconnected computers or nodes, often organized in a cluster or network. Most of the existing methods for distributed model fitting are to formulate it in a consensus optimization problem, and then build up algorithms based on the alternating direction method of multipliers (ADMM). This paper introduces a novel parallel framework for achieving a distributed model fitting. In contrast to previous consensus frameworks, the introduced parallel framework offers two notable advantages. Firstly, it exhibits insensitivity to sample partitioning, meaning that the solution of the algorithm remains unaffected by variations in the number of slave nodes or/and the amount of data each node carries. Secondly, fewer variables are required to be updated at each iteration, so that the proposed parallel framework performs in a more succinct and efficient way, and adapts to high-dimensional data. In addition, we prove that the algorithms under the new parallel framework have a worst-case linear convergence rate in theory. Numerical experiments confirm the generality, robustness, and accuracy of our proposed parallel framework." />
+<meta property="og:description" content="Distributed model fitting refers to the process of fitting a mathematical or statistical model to the data using distributed computing resources, such that computing tasks are divided among multiple interconnected computers or nodes, often organized in a cluster or network. Most of the existing methods for distributed model fitting are to formulate it in a consensus optimization problem, and then build up algorithms based on the alternating direction method of multipliers (ADMM). This paper introduces a novel parallel framework for achieving a distributed model fitting. In contrast to previous consensus frameworks, the introduced parallel framework offers two notable advantages. Firstly, it exhibits insensitivity to sample partitioning, meaning that the solution of the algorithm remains unaffected by variations in the number of slave nodes or/and the amount of data each node carries. Secondly, fewer variables are required to be updated at each iteration, so that the proposed parallel framework performs in a more succinct and efficient way, and adapts to high-dimensional data. In addition, we prove that the algorithms under the new parallel framework have a worst-case linear convergence rate in theory. Numerical experiments confirm the generality, robustness, and accuracy of our proposed parallel framework." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/APartitioninsensitiveParallelFrameworkforDistributedModelFitting.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/APartitioninsensitiveParallelFrameworkforDistributedModelFitting.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Partition-insensitive Parallel Framework for Distributed Model Fitting" />
+<script type="application/ld+json">
+{"description":"Distributed model fitting refers to the process of fitting a mathematical or statistical model to the data using distributed computing resources, such that computing tasks are divided among multiple interconnected computers or nodes, often organized in a cluster or network. Most of the existing methods for distributed model fitting are to formulate it in a consensus optimization problem, and then build up algorithms based on the alternating direction method of multipliers (ADMM). This paper introduces a novel parallel framework for achieving a distributed model fitting. In contrast to previous consensus frameworks, the introduced parallel framework offers two notable advantages. Firstly, it exhibits insensitivity to sample partitioning, meaning that the solution of the algorithm remains unaffected by variations in the number of slave nodes or/and the amount of data each node carries. Secondly, fewer variables are required to be updated at each iteration, so that the proposed parallel framework performs in a more succinct and efficient way, and adapts to high-dimensional data. In addition, we prove that the algorithms under the new parallel framework have a worst-case linear convergence rate in theory. Numerical experiments confirm the generality, robustness, and accuracy of our proposed parallel framework.","author":{"@type":"Person","name":"Xiaofei Wu, Rongmei Liang, Fabio Roli, Marcello Pelillo, Jing Yuan"},"datePublished":"2024-06-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/APartitioninsensitiveParallelFrameworkforDistributedModelFitting.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/APartitioninsensitiveParallelFrameworkforDistributedModelFitting.html","headline":"A Partition-insensitive Parallel Framework for Distributed Model Fitting","@type":"BlogPosting","dateModified":"2024-06-04T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-04 00:00:00 +0000">06-04</time>
+  </p>
+  
+  <h1>A Partition-insensitive Parallel Framework for Distributed Model Fitting</h1>
+  <br>Xiaofei Wu, Rongmei Liang, Fabio Roli, Marcello Pelillo, Jing Yuan</h3>
+  <br> [stat.CO]
+
+  <p>Distributed model fitting refers to the process of fitting a mathematical or statistical model to the data using distributed computing resources, such that computing tasks are divided among multiple interconnected computers or nodes, often organized in a cluster or network. Most of the existing methods for distributed model fitting are to formulate it in a consensus optimization problem, and then build up algorithms based on the alternating direction method of multipliers (ADMM). This paper introduces a novel parallel framework for achieving a distributed model fitting. In contrast to previous consensus frameworks, the introduced parallel framework offers two notable advantages. Firstly, it exhibits insensitivity to sample partitioning, meaning that the solution of the algorithm remains unaffected by variations in the number of slave nodes or/and the amount of data each node carries. Secondly, fewer variables are required to be updated at each iteration, so that the proposed parallel framework performs in a more succinct and efficient way, and adapts to high-dimensional data. In addition, we prove that the algorithms under the new parallel framework have a worst-case linear convergence rate in theory. Numerical experiments confirm the generality, robustness, and accuracy of our proposed parallel framework.</p>
+
+<p><a href="https://arxiv.org/abs/2406.00703">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

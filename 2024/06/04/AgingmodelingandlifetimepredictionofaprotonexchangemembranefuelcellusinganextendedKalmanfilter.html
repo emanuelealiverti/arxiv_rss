@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Aging modeling and lifetime prediction of a proton exchange membrane fuel cell using an extended Kalman filter</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Aging modeling and lifetime prediction of a proton exchange membrane fuel cell using an extended Kalman filter" />
+<meta name="author" content="Serigne Daouda Pene, Antoine Picot, Fabrice Gamboa, Nicolas Savy, Christophe Turpin, Amine Jaafar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This article presents a methodology that aims to model and to provide predictive capabilities for the lifetime of Proton Exchange Membrane Fuel Cell (PEMFC). The approach integrates parametric identification, dynamic modeling, and Extended Kalman Filtering (EKF). The foundation is laid with the creation of a representative aging database, emphasizing specific operating conditions. Electrochemical behavior is characterized through the identification of critical parameters. The methodology extends to capture the temporal evolution of the identified parameters. We also address challenges posed by the limiting current density through a differential analysis-based modeling technique and the detection of breakpoints. This approach, involving Monte Carlo simulations, is coupled with an EKF for predicting voltage degradation. The Remaining Useful Life (RUL) is also estimated. The results show that our approach accurately predicts future voltage and RUL with very low relative errors." />
+<meta property="og:description" content="This article presents a methodology that aims to model and to provide predictive capabilities for the lifetime of Proton Exchange Membrane Fuel Cell (PEMFC). The approach integrates parametric identification, dynamic modeling, and Extended Kalman Filtering (EKF). The foundation is laid with the creation of a representative aging database, emphasizing specific operating conditions. Electrochemical behavior is characterized through the identification of critical parameters. The methodology extends to capture the temporal evolution of the identified parameters. We also address challenges posed by the limiting current density through a differential analysis-based modeling technique and the detection of breakpoints. This approach, involving Monte Carlo simulations, is coupled with an EKF for predicting voltage degradation. The Remaining Useful Life (RUL) is also estimated. The results show that our approach accurately predicts future voltage and RUL with very low relative errors." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/AgingmodelingandlifetimepredictionofaprotonexchangemembranefuelcellusinganextendedKalmanfilter.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/AgingmodelingandlifetimepredictionofaprotonexchangemembranefuelcellusinganextendedKalmanfilter.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Aging modeling and lifetime prediction of a proton exchange membrane fuel cell using an extended Kalman filter" />
+<script type="application/ld+json">
+{"description":"This article presents a methodology that aims to model and to provide predictive capabilities for the lifetime of Proton Exchange Membrane Fuel Cell (PEMFC). The approach integrates parametric identification, dynamic modeling, and Extended Kalman Filtering (EKF). The foundation is laid with the creation of a representative aging database, emphasizing specific operating conditions. Electrochemical behavior is characterized through the identification of critical parameters. The methodology extends to capture the temporal evolution of the identified parameters. We also address challenges posed by the limiting current density through a differential analysis-based modeling technique and the detection of breakpoints. This approach, involving Monte Carlo simulations, is coupled with an EKF for predicting voltage degradation. The Remaining Useful Life (RUL) is also estimated. The results show that our approach accurately predicts future voltage and RUL with very low relative errors.","author":{"@type":"Person","name":"Serigne Daouda Pene, Antoine Picot, Fabrice Gamboa, Nicolas Savy, Christophe Turpin, Amine Jaafar"},"datePublished":"2024-06-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/AgingmodelingandlifetimepredictionofaprotonexchangemembranefuelcellusinganextendedKalmanfilter.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/AgingmodelingandlifetimepredictionofaprotonexchangemembranefuelcellusinganextendedKalmanfilter.html","headline":"Aging modeling and lifetime prediction of a proton exchange membrane fuel cell using an extended Kalman filter","@type":"BlogPosting","dateModified":"2024-06-04T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-04 00:00:00 +0000">06-04</time>
+  </p>
+  
+  <h1>Aging modeling and lifetime prediction of a proton exchange membrane fuel cell using an extended Kalman filter</h1>
+  <br>Serigne Daouda Pene, Antoine Picot, Fabrice Gamboa, Nicolas Savy, Christophe Turpin, Amine Jaafar</h3>
+  <br> [stat.AP,stat.CO,stat.ME]
+
+  <p>This article presents a methodology that aims to model and to provide predictive capabilities for the lifetime of Proton Exchange Membrane Fuel Cell (PEMFC). The approach integrates parametric identification, dynamic modeling, and Extended Kalman Filtering (EKF). The foundation is laid with the creation of a representative aging database, emphasizing specific operating conditions. Electrochemical behavior is characterized through the identification of critical parameters. The methodology extends to capture the temporal evolution of the identified parameters. We also address challenges posed by the limiting current density through a differential analysis-based modeling technique and the detection of breakpoints. This approach, involving Monte Carlo simulations, is coupled with an EKF for predicting voltage degradation. The Remaining Useful Life (RUL) is also estimated. The results show that our approach accurately predicts future voltage and RUL with very low relative errors.</p>
+
+<p><a href="https://arxiv.org/abs/2406.01259">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

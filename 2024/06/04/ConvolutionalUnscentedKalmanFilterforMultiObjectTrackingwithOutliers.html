@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Convolutional Unscented Kalman Filter for Multi-Object Tracking with Outliers</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Convolutional Unscented Kalman Filter for Multi-Object Tracking with Outliers" />
+<meta name="author" content="Shiqi Liu, Wenhan Cao, Chang Liu, Tianyi Zhang, Shengbo Eben Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Multi-object tracking (MOT) is an essential technique for navigation in autonomous driving. In tracking-by-detection systems, biases, false positives, and misses, which are referred to as outliers, are inevitable due to complex traffic scenarios. Recent tracking methods are based on filtering algorithms that overlook these outliers, leading to reduced tracking accuracy or even loss of the objects trajectory. To handle this challenge, we adopt a probabilistic perspective, regarding the generation of outliers as misspecification between the actual distribution of measurement data and the nominal measurement model used for filtering. We further demonstrate that, by designing a convolutional operation, we can mitigate this misspecification. Incorporating this operation into the widely used unscented Kalman filter (UKF) in commonly adopted tracking algorithms, we derive a variant of the UKF that is robust to outliers, called the convolutional UKF (ConvUKF). We show that ConvUKF maintains the Gaussian conjugate property, thus allowing for real-time tracking. We also prove that ConvUKF has a bounded tracking error in the presence of outliers, which implies robust stability. The experimental results on the KITTI and nuScenes datasets show improved accuracy compared to representative baseline algorithms for MOT tasks." />
+<meta property="og:description" content="Multi-object tracking (MOT) is an essential technique for navigation in autonomous driving. In tracking-by-detection systems, biases, false positives, and misses, which are referred to as outliers, are inevitable due to complex traffic scenarios. Recent tracking methods are based on filtering algorithms that overlook these outliers, leading to reduced tracking accuracy or even loss of the objects trajectory. To handle this challenge, we adopt a probabilistic perspective, regarding the generation of outliers as misspecification between the actual distribution of measurement data and the nominal measurement model used for filtering. We further demonstrate that, by designing a convolutional operation, we can mitigate this misspecification. Incorporating this operation into the widely used unscented Kalman filter (UKF) in commonly adopted tracking algorithms, we derive a variant of the UKF that is robust to outliers, called the convolutional UKF (ConvUKF). We show that ConvUKF maintains the Gaussian conjugate property, thus allowing for real-time tracking. We also prove that ConvUKF has a bounded tracking error in the presence of outliers, which implies robust stability. The experimental results on the KITTI and nuScenes datasets show improved accuracy compared to representative baseline algorithms for MOT tasks." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/ConvolutionalUnscentedKalmanFilterforMultiObjectTrackingwithOutliers.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/ConvolutionalUnscentedKalmanFilterforMultiObjectTrackingwithOutliers.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Convolutional Unscented Kalman Filter for Multi-Object Tracking with Outliers" />
+<script type="application/ld+json">
+{"description":"Multi-object tracking (MOT) is an essential technique for navigation in autonomous driving. In tracking-by-detection systems, biases, false positives, and misses, which are referred to as outliers, are inevitable due to complex traffic scenarios. Recent tracking methods are based on filtering algorithms that overlook these outliers, leading to reduced tracking accuracy or even loss of the objects trajectory. To handle this challenge, we adopt a probabilistic perspective, regarding the generation of outliers as misspecification between the actual distribution of measurement data and the nominal measurement model used for filtering. We further demonstrate that, by designing a convolutional operation, we can mitigate this misspecification. Incorporating this operation into the widely used unscented Kalman filter (UKF) in commonly adopted tracking algorithms, we derive a variant of the UKF that is robust to outliers, called the convolutional UKF (ConvUKF). We show that ConvUKF maintains the Gaussian conjugate property, thus allowing for real-time tracking. We also prove that ConvUKF has a bounded tracking error in the presence of outliers, which implies robust stability. The experimental results on the KITTI and nuScenes datasets show improved accuracy compared to representative baseline algorithms for MOT tasks.","author":{"@type":"Person","name":"Shiqi Liu, Wenhan Cao, Chang Liu, Tianyi Zhang, Shengbo Eben Li"},"datePublished":"2024-06-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/ConvolutionalUnscentedKalmanFilterforMultiObjectTrackingwithOutliers.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/04/ConvolutionalUnscentedKalmanFilterforMultiObjectTrackingwithOutliers.html","headline":"Convolutional Unscented Kalman Filter for Multi-Object Tracking with Outliers","@type":"BlogPosting","dateModified":"2024-06-04T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-04 00:00:00 +0000">06-04</time>
+  </p>
+  
+  <h1>Convolutional Unscented Kalman Filter for Multi-Object Tracking with Outliers</h1>
+  <br>Shiqi Liu, Wenhan Cao, Chang Liu, Tianyi Zhang, Shengbo Eben Li</h3>
+  <br> [stat.AP]
+
+  <p>Multi-object tracking (MOT) is an essential technique for navigation in autonomous driving. In tracking-by-detection systems, biases, false positives, and misses, which are referred to as outliers, are inevitable due to complex traffic scenarios. Recent tracking methods are based on filtering algorithms that overlook these outliers, leading to reduced tracking accuracy or even loss of the objects trajectory. To handle this challenge, we adopt a probabilistic perspective, regarding the generation of outliers as misspecification between the actual distribution of measurement data and the nominal measurement model used for filtering. We further demonstrate that, by designing a convolutional operation, we can mitigate this misspecification. Incorporating this operation into the widely used unscented Kalman filter (UKF) in commonly adopted tracking algorithms, we derive a variant of the UKF that is robust to outliers, called the convolutional UKF (ConvUKF). We show that ConvUKF maintains the Gaussian conjugate property, thus allowing for real-time tracking. We also prove that ConvUKF has a bounded tracking error in the presence of outliers, which implies robust stability. The experimental results on the KITTI and nuScenes datasets show improved accuracy compared to representative baseline algorithms for MOT tasks.</p>
+
+<p><a href="https://arxiv.org/abs/2406.01380">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
