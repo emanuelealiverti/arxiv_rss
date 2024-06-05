@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An efficient solution to Hidden Markov Models on trees with coupled branches</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="An efficient solution to Hidden Markov Models on trees with coupled branches" />
+<meta name="author" content="Farzan Vafa, Sahand Hormoz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hidden Markov Models (HMMs) are powerful tools for modeling sequential data, where the underlying states evolve in a stochastic manner and are only indirectly observable. Traditional HMM approaches are well-established for linear sequences, and have been extended to other structures such as trees. In this paper, we extend the framework of HMMs on trees to address scenarios where the tree-like structure of the data includes coupled branches – a common feature in biological systems where entities within the same lineage exhibit dependent characteristics. We develop a dynamic programming algorithm that efficiently solves the likelihood, decoding, and parameter learning problems for tree-based HMMs with coupled branches. Our approach scales polynomially with the number of states and nodes, making it computationally feasible for a wide range of applications and does not suffer from the underflow problem. We demonstrate our algorithm by applying it to simulated data and propose self-consistency checks for validating the assumptions of the model used for inference. This work not only advances the theoretical understanding of HMMs on trees but also provides a practical tool for analyzing complex biological data where dependencies between branches cannot be ignored." />
+<meta property="og:description" content="Hidden Markov Models (HMMs) are powerful tools for modeling sequential data, where the underlying states evolve in a stochastic manner and are only indirectly observable. Traditional HMM approaches are well-established for linear sequences, and have been extended to other structures such as trees. In this paper, we extend the framework of HMMs on trees to address scenarios where the tree-like structure of the data includes coupled branches – a common feature in biological systems where entities within the same lineage exhibit dependent characteristics. We develop a dynamic programming algorithm that efficiently solves the likelihood, decoding, and parameter learning problems for tree-based HMMs with coupled branches. Our approach scales polynomially with the number of states and nodes, making it computationally feasible for a wide range of applications and does not suffer from the underflow problem. We demonstrate our algorithm by applying it to simulated data and propose self-consistency checks for validating the assumptions of the model used for inference. This work not only advances the theoretical understanding of HMMs on trees but also provides a practical tool for analyzing complex biological data where dependencies between branches cannot be ignored." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/05/AnefficientsolutiontoHiddenMarkovModelsontreeswithcoupledbranches.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/05/AnefficientsolutiontoHiddenMarkovModelsontreeswithcoupledbranches.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="An efficient solution to Hidden Markov Models on trees with coupled branches" />
+<script type="application/ld+json">
+{"description":"Hidden Markov Models (HMMs) are powerful tools for modeling sequential data, where the underlying states evolve in a stochastic manner and are only indirectly observable. Traditional HMM approaches are well-established for linear sequences, and have been extended to other structures such as trees. In this paper, we extend the framework of HMMs on trees to address scenarios where the tree-like structure of the data includes coupled branches – a common feature in biological systems where entities within the same lineage exhibit dependent characteristics. We develop a dynamic programming algorithm that efficiently solves the likelihood, decoding, and parameter learning problems for tree-based HMMs with coupled branches. Our approach scales polynomially with the number of states and nodes, making it computationally feasible for a wide range of applications and does not suffer from the underflow problem. We demonstrate our algorithm by applying it to simulated data and propose self-consistency checks for validating the assumptions of the model used for inference. This work not only advances the theoretical understanding of HMMs on trees but also provides a practical tool for analyzing complex biological data where dependencies between branches cannot be ignored.","author":{"@type":"Person","name":"Farzan Vafa, Sahand Hormoz"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/05/AnefficientsolutiontoHiddenMarkovModelsontreeswithcoupledbranches.html"},"dateModified":"2024-06-05T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/05/AnefficientsolutiontoHiddenMarkovModelsontreeswithcoupledbranches.html","headline":"An efficient solution to Hidden Markov Models on trees with coupled branches","@type":"BlogPosting","datePublished":"2024-06-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-05 00:00:00 +0000">06-05</time>
+  </p>
+  
+  <h1>An efficient solution to Hidden Markov Models on trees with coupled branches</h1>
+  <br>Farzan Vafa, Sahand Hormoz</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>Hidden Markov Models (HMMs) are powerful tools for modeling sequential data, where the underlying states evolve in a stochastic manner and are only indirectly observable. Traditional HMM approaches are well-established for linear sequences, and have been extended to other structures such as trees. In this paper, we extend the framework of HMMs on trees to address scenarios where the tree-like structure of the data includes coupled branches – a common feature in biological systems where entities within the same lineage exhibit dependent characteristics. We develop a dynamic programming algorithm that efficiently solves the likelihood, decoding, and parameter learning problems for tree-based HMMs with coupled branches. Our approach scales polynomially with the number of states and nodes, making it computationally feasible for a wide range of applications and does not suffer from the underflow problem. We demonstrate our algorithm by applying it to simulated data and propose self-consistency checks for validating the assumptions of the model used for inference. This work not only advances the theoretical understanding of HMMs on trees but also provides a practical tool for analyzing complex biological data where dependencies between branches cannot be ignored.</p>
+
+<p><a href="https://arxiv.org/abs/2406.01663">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
