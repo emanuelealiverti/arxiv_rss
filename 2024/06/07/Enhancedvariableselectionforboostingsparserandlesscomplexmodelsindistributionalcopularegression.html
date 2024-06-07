@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Enhanced variable selection for boosting sparser and less complex models in distributional copula regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Enhanced variable selection for boosting sparser and less complex models in distributional copula regression" />
+<meta name="author" content="Annika Strömer, Nadja Klein, Christian Staerk, Florian Faschingbauer, Hannah Klinkhammer, Andreas Mayr" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Structured additive distributional copula regression allows to model the joint distribution of multivariate outcomes by relating all distribution parameters to covariates. Estimation via statistical boosting enables accounting for high-dimensional data and incorporating data-driven variable selection, both of which are useful given the complexity of the model class. However, as known from univariate (distributional) regression, the standard boosting algorithm tends to select too many variables with minor importance, particularly in settings with large sample sizes, leading to complex models with difficult interpretation. To counteract this behavior and to avoid selecting base-learners with only a negligible impact, we combined the ideas of probing, stability selection and a new deselection approach with statistical boosting for distributional copula regression. In a simulation study and an application to the joint modelling of weight and length of newborns, we found that all proposed methods enhance variable selection by reducing the number of false positives. However, only stability selection and the deselection approach yielded similar predictive performance to classical boosting. Finally, the deselection approach is better scalable to larger datasets and led to a competitive predictive performance, which we further illustrated in a genomic cohort study from the UK Biobank by modelling the joint genetic predisposition for two phenotypes." />
+<meta property="og:description" content="Structured additive distributional copula regression allows to model the joint distribution of multivariate outcomes by relating all distribution parameters to covariates. Estimation via statistical boosting enables accounting for high-dimensional data and incorporating data-driven variable selection, both of which are useful given the complexity of the model class. However, as known from univariate (distributional) regression, the standard boosting algorithm tends to select too many variables with minor importance, particularly in settings with large sample sizes, leading to complex models with difficult interpretation. To counteract this behavior and to avoid selecting base-learners with only a negligible impact, we combined the ideas of probing, stability selection and a new deselection approach with statistical boosting for distributional copula regression. In a simulation study and an application to the joint modelling of weight and length of newborns, we found that all proposed methods enhance variable selection by reducing the number of false positives. However, only stability selection and the deselection approach yielded similar predictive performance to classical boosting. Finally, the deselection approach is better scalable to larger datasets and led to a competitive predictive performance, which we further illustrated in a genomic cohort study from the UK Biobank by modelling the joint genetic predisposition for two phenotypes." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/07/Enhancedvariableselectionforboostingsparserandlesscomplexmodelsindistributionalcopularegression.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/07/Enhancedvariableselectionforboostingsparserandlesscomplexmodelsindistributionalcopularegression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Enhanced variable selection for boosting sparser and less complex models in distributional copula regression" />
+<script type="application/ld+json">
+{"description":"Structured additive distributional copula regression allows to model the joint distribution of multivariate outcomes by relating all distribution parameters to covariates. Estimation via statistical boosting enables accounting for high-dimensional data and incorporating data-driven variable selection, both of which are useful given the complexity of the model class. However, as known from univariate (distributional) regression, the standard boosting algorithm tends to select too many variables with minor importance, particularly in settings with large sample sizes, leading to complex models with difficult interpretation. To counteract this behavior and to avoid selecting base-learners with only a negligible impact, we combined the ideas of probing, stability selection and a new deselection approach with statistical boosting for distributional copula regression. In a simulation study and an application to the joint modelling of weight and length of newborns, we found that all proposed methods enhance variable selection by reducing the number of false positives. However, only stability selection and the deselection approach yielded similar predictive performance to classical boosting. Finally, the deselection approach is better scalable to larger datasets and led to a competitive predictive performance, which we further illustrated in a genomic cohort study from the UK Biobank by modelling the joint genetic predisposition for two phenotypes.","author":{"@type":"Person","name":"Annika Strömer, Nadja Klein, Christian Staerk, Florian Faschingbauer, Hannah Klinkhammer, Andreas Mayr"},"datePublished":"2024-06-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/07/Enhancedvariableselectionforboostingsparserandlesscomplexmodelsindistributionalcopularegression.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/07/Enhancedvariableselectionforboostingsparserandlesscomplexmodelsindistributionalcopularegression.html","headline":"Enhanced variable selection for boosting sparser and less complex models in distributional copula regression","@type":"BlogPosting","dateModified":"2024-06-07T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-07 00:00:00 +0000">06-07</time>
+  </p>
+  
+  <h1>Enhanced variable selection for boosting sparser and less complex models in distributional copula regression</h1>
+  <br>Annika Strömer, Nadja Klein, Christian Staerk, Florian Faschingbauer, Hannah Klinkhammer, Andreas Mayr</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Structured additive distributional copula regression allows to model the joint distribution of multivariate outcomes by relating all distribution parameters to covariates. Estimation via statistical boosting enables accounting for high-dimensional data and incorporating data-driven variable selection, both of which are useful given the complexity of the model class. However, as known from univariate (distributional) regression, the standard boosting algorithm tends to select too many variables with minor importance, particularly in settings with large sample sizes, leading to complex models with difficult interpretation. To counteract this behavior and to avoid selecting base-learners with only a negligible impact, we combined the ideas of probing, stability selection and a new deselection approach with statistical boosting for distributional copula regression. In a simulation study and an application to the joint modelling of weight and length of newborns, we found that all proposed methods enhance variable selection by reducing the number of false positives. However, only stability selection and the deselection approach yielded similar predictive performance to classical boosting. Finally, the deselection approach is better scalable to larger datasets and led to a competitive predictive performance, which we further illustrated in a genomic cohort study from the UK Biobank by modelling the joint genetic predisposition for two phenotypes.</p>
+
+<p><a href="https://arxiv.org/abs/2406.03900">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
