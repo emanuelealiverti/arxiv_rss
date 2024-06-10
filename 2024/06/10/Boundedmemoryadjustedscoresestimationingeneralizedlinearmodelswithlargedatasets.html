@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bounded-memory adjusted scores estimation in generalized linear models with large data sets</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bounded-memory adjusted scores estimation in generalized linear models with large data sets" />
+<meta name="author" content="Patrick Zietkiewicz, Ioannis Kosmidis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The widespread use of maximum Jeffreys’-prior penalized likelihood in binomial-response generalized linear models, and in logistic regression, in particular, are supported by the results of Kosmidis and Firth (2021, Biometrika), who show that the resulting estimates are always finite-valued, even in cases where the maximum likelihood estimates are not, which is a practical issue regardless of the size of the data set. In logistic regression, the implied adjusted score equations are formally bias-reducing in asymptotic frameworks with a fixed number of parameters and appear to deliver a substantial reduction in the persistent bias of the maximum likelihood estimator in high-dimensional settings where the number of parameters grows asymptotically as a proportion of the number of observations. In this work, we develop and present two new variants of iteratively reweighted least squares for estimating generalized linear models with adjusted score equations for mean bias reduction and maximization of the likelihood penalized by a positive power of the Jeffreys-prior penalty, which eliminate the requirement of storing $O(n)$ quantities in memory, and can operate with data sets that exceed computer memory or even hard drive capacity. We achieve that through incremental QR decompositions, which enable IWLS iterations to have access only to data chunks of predetermined size. Both procedures can also be readily adapted to fit generalized linear models when distinct parts of the data is stored across different sites and, due to privacy concerns, cannot be fully transferred across sites. We assess the procedures through a real-data application with millions of observations." />
+<meta property="og:description" content="The widespread use of maximum Jeffreys’-prior penalized likelihood in binomial-response generalized linear models, and in logistic regression, in particular, are supported by the results of Kosmidis and Firth (2021, Biometrika), who show that the resulting estimates are always finite-valued, even in cases where the maximum likelihood estimates are not, which is a practical issue regardless of the size of the data set. In logistic regression, the implied adjusted score equations are formally bias-reducing in asymptotic frameworks with a fixed number of parameters and appear to deliver a substantial reduction in the persistent bias of the maximum likelihood estimator in high-dimensional settings where the number of parameters grows asymptotically as a proportion of the number of observations. In this work, we develop and present two new variants of iteratively reweighted least squares for estimating generalized linear models with adjusted score equations for mean bias reduction and maximization of the likelihood penalized by a positive power of the Jeffreys-prior penalty, which eliminate the requirement of storing $O(n)$ quantities in memory, and can operate with data sets that exceed computer memory or even hard drive capacity. We achieve that through incremental QR decompositions, which enable IWLS iterations to have access only to data chunks of predetermined size. Both procedures can also be readily adapted to fit generalized linear models when distinct parts of the data is stored across different sites and, due to privacy concerns, cannot be fully transferred across sites. We assess the procedures through a real-data application with millions of observations." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/10/Boundedmemoryadjustedscoresestimationingeneralizedlinearmodelswithlargedatasets.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/10/Boundedmemoryadjustedscoresestimationingeneralizedlinearmodelswithlargedatasets.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bounded-memory adjusted scores estimation in generalized linear models with large data sets" />
+<script type="application/ld+json">
+{"description":"The widespread use of maximum Jeffreys’-prior penalized likelihood in binomial-response generalized linear models, and in logistic regression, in particular, are supported by the results of Kosmidis and Firth (2021, Biometrika), who show that the resulting estimates are always finite-valued, even in cases where the maximum likelihood estimates are not, which is a practical issue regardless of the size of the data set. In logistic regression, the implied adjusted score equations are formally bias-reducing in asymptotic frameworks with a fixed number of parameters and appear to deliver a substantial reduction in the persistent bias of the maximum likelihood estimator in high-dimensional settings where the number of parameters grows asymptotically as a proportion of the number of observations. In this work, we develop and present two new variants of iteratively reweighted least squares for estimating generalized linear models with adjusted score equations for mean bias reduction and maximization of the likelihood penalized by a positive power of the Jeffreys-prior penalty, which eliminate the requirement of storing $O(n)$ quantities in memory, and can operate with data sets that exceed computer memory or even hard drive capacity. We achieve that through incremental QR decompositions, which enable IWLS iterations to have access only to data chunks of predetermined size. Both procedures can also be readily adapted to fit generalized linear models when distinct parts of the data is stored across different sites and, due to privacy concerns, cannot be fully transferred across sites. We assess the procedures through a real-data application with millions of observations.","datePublished":"2024-06-10T00:00:00+00:00","dateModified":"2024-06-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/10/Boundedmemoryadjustedscoresestimationingeneralizedlinearmodelswithlargedatasets.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/10/Boundedmemoryadjustedscoresestimationingeneralizedlinearmodelswithlargedatasets.html","author":{"@type":"Person","name":"Patrick Zietkiewicz, Ioannis Kosmidis"},"@type":"BlogPosting","headline":"Bounded-memory adjusted scores estimation in generalized linear models with large data sets","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-10 00:00:00 +0000">06-10</time>
+  </p>
+  
+  <h1>Bounded-memory adjusted scores estimation in generalized linear models with large data sets</h1>
+  <br>Patrick Zietkiewicz, Ioannis Kosmidis</h3>
+  <br> [stat.ME,stat.AP,stat.CO]
+
+  <p>The widespread use of maximum Jeffreys’-prior penalized likelihood in binomial-response generalized linear models, and in logistic regression, in particular, are supported by the results of Kosmidis and Firth (2021, Biometrika), who show that the resulting estimates are always finite-valued, even in cases where the maximum likelihood estimates are not, which is a practical issue regardless of the size of the data set. In logistic regression, the implied adjusted score equations are formally bias-reducing in asymptotic frameworks with a fixed number of parameters and appear to deliver a substantial reduction in the persistent bias of the maximum likelihood estimator in high-dimensional settings where the number of parameters grows asymptotically as a proportion of the number of observations. In this work, we develop and present two new variants of iteratively reweighted least squares for estimating generalized linear models with adjusted score equations for mean bias reduction and maximization of the likelihood penalized by a positive power of the Jeffreys-prior penalty, which eliminate the requirement of storing $O(n)$ quantities in memory, and can operate with data sets that exceed computer memory or even hard drive capacity. We achieve that through incremental QR decompositions, which enable IWLS iterations to have access only to data chunks of predetermined size. Both procedures can also be readily adapted to fit generalized linear models when distinct parts of the data is stored across different sites and, due to privacy concerns, cannot be fully transferred across sites. We assess the procedures through a real-data application with millions of observations.</p>
+
+<p><a href="https://arxiv.org/abs/2307.07342">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
