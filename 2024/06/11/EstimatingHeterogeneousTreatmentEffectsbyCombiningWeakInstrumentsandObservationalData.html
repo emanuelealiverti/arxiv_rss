@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Estimating Heterogeneous Treatment Effects by Combining Weak Instruments and Observational Data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Estimating Heterogeneous Treatment Effects by Combining Weak Instruments and Observational Data" />
+<meta name="author" content="Miruna Oprescu, Nathan Kallus" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Accurately predicting conditional average treatment effects (CATEs) is crucial in personalized medicine and digital platform analytics. Since often the treatments of interest cannot be directly randomized, observational data is leveraged to learn CATEs, but this approach can incur significant bias from unobserved confounding. One strategy to overcome these limitations is to seek latent quasi-experiments in instrumental variables (IVs) for the treatment, for example, a randomized intent to treat or a randomized product recommendation. This approach, on the other hand, can suffer from low compliance, i.e., IV weakness. Some subgroups may even exhibit zero compliance meaning we cannot instrument for their CATEs at all. In this paper we develop a novel approach to combine IV and observational data to enable reliable CATE estimation in the presence of unobserved confounding in the observational data and low compliance in the IV data, including no compliance for some subgroups. We propose a two-stage framework that first learns biased CATEs from the observational data, and then applies a compliance-weighted correction using IV data, effectively leveraging IV strength variability across covariates. We characterize the convergence rates of our method and validate its effectiveness through a simulation study. Additionally, we demonstrate its utility with real data by analyzing the heterogeneous effects of 401(k) plan participation on wealth." />
+<meta property="og:description" content="Accurately predicting conditional average treatment effects (CATEs) is crucial in personalized medicine and digital platform analytics. Since often the treatments of interest cannot be directly randomized, observational data is leveraged to learn CATEs, but this approach can incur significant bias from unobserved confounding. One strategy to overcome these limitations is to seek latent quasi-experiments in instrumental variables (IVs) for the treatment, for example, a randomized intent to treat or a randomized product recommendation. This approach, on the other hand, can suffer from low compliance, i.e., IV weakness. Some subgroups may even exhibit zero compliance meaning we cannot instrument for their CATEs at all. In this paper we develop a novel approach to combine IV and observational data to enable reliable CATE estimation in the presence of unobserved confounding in the observational data and low compliance in the IV data, including no compliance for some subgroups. We propose a two-stage framework that first learns biased CATEs from the observational data, and then applies a compliance-weighted correction using IV data, effectively leveraging IV strength variability across covariates. We characterize the convergence rates of our method and validate its effectiveness through a simulation study. Additionally, we demonstrate its utility with real data by analyzing the heterogeneous effects of 401(k) plan participation on wealth." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/11/EstimatingHeterogeneousTreatmentEffectsbyCombiningWeakInstrumentsandObservationalData.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/11/EstimatingHeterogeneousTreatmentEffectsbyCombiningWeakInstrumentsandObservationalData.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Estimating Heterogeneous Treatment Effects by Combining Weak Instruments and Observational Data" />
+<script type="application/ld+json">
+{"description":"Accurately predicting conditional average treatment effects (CATEs) is crucial in personalized medicine and digital platform analytics. Since often the treatments of interest cannot be directly randomized, observational data is leveraged to learn CATEs, but this approach can incur significant bias from unobserved confounding. One strategy to overcome these limitations is to seek latent quasi-experiments in instrumental variables (IVs) for the treatment, for example, a randomized intent to treat or a randomized product recommendation. This approach, on the other hand, can suffer from low compliance, i.e., IV weakness. Some subgroups may even exhibit zero compliance meaning we cannot instrument for their CATEs at all. In this paper we develop a novel approach to combine IV and observational data to enable reliable CATE estimation in the presence of unobserved confounding in the observational data and low compliance in the IV data, including no compliance for some subgroups. We propose a two-stage framework that first learns biased CATEs from the observational data, and then applies a compliance-weighted correction using IV data, effectively leveraging IV strength variability across covariates. We characterize the convergence rates of our method and validate its effectiveness through a simulation study. Additionally, we demonstrate its utility with real data by analyzing the heterogeneous effects of 401(k) plan participation on wealth.","dateModified":"2024-06-11T00:00:00+00:00","datePublished":"2024-06-11T00:00:00+00:00","headline":"Estimating Heterogeneous Treatment Effects by Combining Weak Instruments and Observational Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/11/EstimatingHeterogeneousTreatmentEffectsbyCombiningWeakInstrumentsandObservationalData.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/11/EstimatingHeterogeneousTreatmentEffectsbyCombiningWeakInstrumentsandObservationalData.html","author":{"@type":"Person","name":"Miruna Oprescu, Nathan Kallus"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-11 00:00:00 +0000">06-11</time>
+  </p>
+  
+  <h1>Estimating Heterogeneous Treatment Effects by Combining Weak Instruments and Observational Data</h1>
+  <br>Miruna Oprescu, Nathan Kallus</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Accurately predicting conditional average treatment effects (CATEs) is crucial in personalized medicine and digital platform analytics. Since often the treatments of interest cannot be directly randomized, observational data is leveraged to learn CATEs, but this approach can incur significant bias from unobserved confounding. One strategy to overcome these limitations is to seek latent quasi-experiments in instrumental variables (IVs) for the treatment, for example, a randomized intent to treat or a randomized product recommendation. This approach, on the other hand, can suffer from low compliance, i.e., IV weakness. Some subgroups may even exhibit zero compliance meaning we cannot instrument for their CATEs at all. In this paper we develop a novel approach to combine IV and observational data to enable reliable CATE estimation in the presence of unobserved confounding in the observational data and low compliance in the IV data, including no compliance for some subgroups. We propose a two-stage framework that first learns biased CATEs from the observational data, and then applies a compliance-weighted correction using IV data, effectively leveraging IV strength variability across covariates. We characterize the convergence rates of our method and validate its effectiveness through a simulation study. Additionally, we demonstrate its utility with real data by analyzing the heterogeneous effects of 401(k) plan participation on wealth.</p>
+
+<p><a href="https://arxiv.org/abs/2406.06452">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
