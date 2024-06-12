@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Hybrid$^2$ Neural ODE Causal Modeling and an Application to Glycemic Response</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Hybrid$^2$ Neural ODE Causal Modeling and an Application to Glycemic Response" />
+<meta name="author" content="Bob Junyi Zou, Matthew E. Levine, Dessi P. Zaharieva, Ramesh Johari, Emily B. Fox" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hybrid models composing mechanistic ODE-based dynamics with flexible and expressive neural network components have grown rapidly in popularity, especially in scientific domains where such ODE-based modeling offers important interpretability and validated causal grounding (e.g., for counterfactual reasoning). The incorporation of mechanistic models also provides inductive bias in standard blackbox modeling approaches, critical when learning from small datasets or partially observed, complex systems. Unfortunately, as the hybrid models become more flexible, the causal grounding provided by the mechanistic model can quickly be lost. We address this problem by leveraging another common source of domain knowledge: \emph{ranking} of treatment effects for a set of interventions, even if the precise treatment effect is unknown. We encode this information in a \emph{causal loss} that we combine with the standard predictive loss to arrive at a \emph{hybrid loss} that biases our learning towards causally valid hybrid models. We demonstrate our ability to achieve a win-win, state-of-the-art predictive performance \emph{and} causal validity, in the challenging task of modeling glucose dynamics post-exercise in individuals with type 1 diabetes." />
+<meta property="og:description" content="Hybrid models composing mechanistic ODE-based dynamics with flexible and expressive neural network components have grown rapidly in popularity, especially in scientific domains where such ODE-based modeling offers important interpretability and validated causal grounding (e.g., for counterfactual reasoning). The incorporation of mechanistic models also provides inductive bias in standard blackbox modeling approaches, critical when learning from small datasets or partially observed, complex systems. Unfortunately, as the hybrid models become more flexible, the causal grounding provided by the mechanistic model can quickly be lost. We address this problem by leveraging another common source of domain knowledge: \emph{ranking} of treatment effects for a set of interventions, even if the precise treatment effect is unknown. We encode this information in a \emph{causal loss} that we combine with the standard predictive loss to arrive at a \emph{hybrid loss} that biases our learning towards causally valid hybrid models. We demonstrate our ability to achieve a win-win, state-of-the-art predictive performance \emph{and} causal validity, in the challenging task of modeling glucose dynamics post-exercise in individuals with type 1 diabetes." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/12/Hybrid2NeuralODECausalModelingandanApplicationtoGlycemicResponse.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/12/Hybrid2NeuralODECausalModelingandanApplicationtoGlycemicResponse.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Hybrid$^2$ Neural ODE Causal Modeling and an Application to Glycemic Response" />
+<script type="application/ld+json">
+{"description":"Hybrid models composing mechanistic ODE-based dynamics with flexible and expressive neural network components have grown rapidly in popularity, especially in scientific domains where such ODE-based modeling offers important interpretability and validated causal grounding (e.g., for counterfactual reasoning). The incorporation of mechanistic models also provides inductive bias in standard blackbox modeling approaches, critical when learning from small datasets or partially observed, complex systems. Unfortunately, as the hybrid models become more flexible, the causal grounding provided by the mechanistic model can quickly be lost. We address this problem by leveraging another common source of domain knowledge: \\emph{ranking} of treatment effects for a set of interventions, even if the precise treatment effect is unknown. We encode this information in a \\emph{causal loss} that we combine with the standard predictive loss to arrive at a \\emph{hybrid loss} that biases our learning towards causally valid hybrid models. We demonstrate our ability to achieve a win-win, state-of-the-art predictive performance \\emph{and} causal validity, in the challenging task of modeling glucose dynamics post-exercise in individuals with type 1 diabetes.","datePublished":"2024-06-12T00:00:00+00:00","dateModified":"2024-06-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/12/Hybrid2NeuralODECausalModelingandanApplicationtoGlycemicResponse.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/12/Hybrid2NeuralODECausalModelingandanApplicationtoGlycemicResponse.html","author":{"@type":"Person","name":"Bob Junyi Zou, Matthew E. Levine, Dessi P. Zaharieva, Ramesh Johari, Emily B. Fox"},"@type":"BlogPosting","headline":"Hybrid$^2$ Neural ODE Causal Modeling and an Application to Glycemic Response","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-12 00:00:00 +0000">06-12</time>
+  </p>
+  
+  <h1>Hybrid$^2$ Neural ODE Causal Modeling and an Application to Glycemic Response</h1>
+  <br>Bob Junyi Zou, Matthew E. Levine, Dessi P. Zaharieva, Ramesh Johari, Emily B. Fox</h3>
+  <br> [stat.AP,stat.ME]
+
+  <p>Hybrid models composing mechanistic ODE-based dynamics with flexible and expressive neural network components have grown rapidly in popularity, especially in scientific domains where such ODE-based modeling offers important interpretability and validated causal grounding (e.g., for counterfactual reasoning). The incorporation of mechanistic models also provides inductive bias in standard blackbox modeling approaches, critical when learning from small datasets or partially observed, complex systems. Unfortunately, as the hybrid models become more flexible, the causal grounding provided by the mechanistic model can quickly be lost. We address this problem by leveraging another common source of domain knowledge: \emph{ranking} of treatment effects for a set of interventions, even if the precise treatment effect is unknown. We encode this information in a \emph{causal loss} that we combine with the standard predictive loss to arrive at a \emph{hybrid loss} that biases our learning towards causally valid hybrid models. We demonstrate our ability to achieve a win-win, state-of-the-art predictive performance \emph{and} causal validity, in the challenging task of modeling glucose dynamics post-exercise in individuals with type 1 diabetes.</p>
+
+<p><a href="https://arxiv.org/abs/2402.17233">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

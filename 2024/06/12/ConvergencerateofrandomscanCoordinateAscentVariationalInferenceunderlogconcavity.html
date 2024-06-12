@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Convergence rate of random scan Coordinate Ascent Variational Inference under log-concavity</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Convergence rate of random scan Coordinate Ascent Variational Inference under log-concavity" />
+<meta name="author" content="Hugo Lavenant, Giacomo Zanella" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Coordinate Ascent Variational Inference scheme is a popular algorithm used to compute the mean-field approximation of a probability distribution of interest. We analyze its random scan version, under log-concavity assumptions on the target density. Our approach builds on the recent work of M. Arnese and D. Lacker, \emph{Convergence of coordinate ascent variational inference for log-concave measures via optimal transport} [arXiv:2404.08792] which studies the deterministic scan version of the algorithm, phrasing it as a block-coordinate descent algorithm in the space of probability distributions endowed with the geometry of optimal transport. We obtain tight rates for the random scan version, which imply that the total number of factor updates required to converge scales linearly with the condition number and the number of blocks of the target distribution. By contrast, available bounds for the deterministic scan case scale quadratically in the same quantities, which is analogue to what happens for optimization of convex functions in Euclidean spaces." />
+<meta property="og:description" content="The Coordinate Ascent Variational Inference scheme is a popular algorithm used to compute the mean-field approximation of a probability distribution of interest. We analyze its random scan version, under log-concavity assumptions on the target density. Our approach builds on the recent work of M. Arnese and D. Lacker, \emph{Convergence of coordinate ascent variational inference for log-concave measures via optimal transport} [arXiv:2404.08792] which studies the deterministic scan version of the algorithm, phrasing it as a block-coordinate descent algorithm in the space of probability distributions endowed with the geometry of optimal transport. We obtain tight rates for the random scan version, which imply that the total number of factor updates required to converge scales linearly with the condition number and the number of blocks of the target distribution. By contrast, available bounds for the deterministic scan case scale quadratically in the same quantities, which is analogue to what happens for optimization of convex functions in Euclidean spaces." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/12/ConvergencerateofrandomscanCoordinateAscentVariationalInferenceunderlogconcavity.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/12/ConvergencerateofrandomscanCoordinateAscentVariationalInferenceunderlogconcavity.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Convergence rate of random scan Coordinate Ascent Variational Inference under log-concavity" />
+<script type="application/ld+json">
+{"description":"The Coordinate Ascent Variational Inference scheme is a popular algorithm used to compute the mean-field approximation of a probability distribution of interest. We analyze its random scan version, under log-concavity assumptions on the target density. Our approach builds on the recent work of M. Arnese and D. Lacker, \\emph{Convergence of coordinate ascent variational inference for log-concave measures via optimal transport} [arXiv:2404.08792] which studies the deterministic scan version of the algorithm, phrasing it as a block-coordinate descent algorithm in the space of probability distributions endowed with the geometry of optimal transport. We obtain tight rates for the random scan version, which imply that the total number of factor updates required to converge scales linearly with the condition number and the number of blocks of the target distribution. By contrast, available bounds for the deterministic scan case scale quadratically in the same quantities, which is analogue to what happens for optimization of convex functions in Euclidean spaces.","datePublished":"2024-06-12T00:00:00+00:00","dateModified":"2024-06-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/12/ConvergencerateofrandomscanCoordinateAscentVariationalInferenceunderlogconcavity.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/12/ConvergencerateofrandomscanCoordinateAscentVariationalInferenceunderlogconcavity.html","author":{"@type":"Person","name":"Hugo Lavenant, Giacomo Zanella"},"@type":"BlogPosting","headline":"Convergence rate of random scan Coordinate Ascent Variational Inference under log-concavity","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-12 00:00:00 +0000">06-12</time>
+  </p>
+  
+  <h1>Convergence rate of random scan Coordinate Ascent Variational Inference under log-concavity</h1>
+  <br>Hugo Lavenant, Giacomo Zanella</h3>
+  <br> [stat.ML,stat.CO,stat.TH]
+
+  <p>The Coordinate Ascent Variational Inference scheme is a popular algorithm used to compute the mean-field approximation of a probability distribution of interest. We analyze its random scan version, under log-concavity assumptions on the target density. Our approach builds on the recent work of M. Arnese and D. Lacker, \emph{Convergence of coordinate ascent variational inference for log-concave measures via optimal transport} [arXiv:2404.08792] which studies the deterministic scan version of the algorithm, phrasing it as a block-coordinate descent algorithm in the space of probability distributions endowed with the geometry of optimal transport. We obtain tight rates for the random scan version, which imply that the total number of factor updates required to converge scales linearly with the condition number and the number of blocks of the target distribution. By contrast, available bounds for the deterministic scan case scale quadratically in the same quantities, which is analogue to what happens for optimization of convex functions in Euclidean spaces.</p>
+
+<p><a href="https://arxiv.org/abs/2406.07292">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
