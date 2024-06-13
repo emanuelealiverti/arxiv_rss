@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A flexible empirical Bayes approach to multiple linear regression and connections with penalized regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A flexible empirical Bayes approach to multiple linear regression and connections with penalized regression" />
+<meta name="author" content="Youngseok Kim, Wei Wang, Peter Carbonetto, Matthew Stephens" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce a new empirical Bayes approach for large-scale multiple linear regression. Our approach combines two key ideas: (i) the use of flexible “adaptive shrinkage” priors, which approximate the nonparametric family of scale mixture of normal distributions by a finite mixture of normal distributions; and (ii) the use of variational approximations to efficiently estimate prior hyperparameters and compute approximate posteriors. Combining these two ideas results in fast and flexible methods, with computational speed comparable to fast penalized regression methods such as the Lasso, and with competitive prediction accuracy across a wide range of scenarios. Further, we provide new results that establish conceptual connections between our empirical Bayes methods and penalized methods. Specifically, we show that the posterior mean from our method solves a penalized regression problem, with the form of the penalty function being learned from the data by directly solving an optimization problem (rather than being tuned by cross-validation). Our methods are implemented in an R package, mr.ash.alpha, available from https://github.com/stephenslab/mr.ash.alpha." />
+<meta property="og:description" content="We introduce a new empirical Bayes approach for large-scale multiple linear regression. Our approach combines two key ideas: (i) the use of flexible “adaptive shrinkage” priors, which approximate the nonparametric family of scale mixture of normal distributions by a finite mixture of normal distributions; and (ii) the use of variational approximations to efficiently estimate prior hyperparameters and compute approximate posteriors. Combining these two ideas results in fast and flexible methods, with computational speed comparable to fast penalized regression methods such as the Lasso, and with competitive prediction accuracy across a wide range of scenarios. Further, we provide new results that establish conceptual connections between our empirical Bayes methods and penalized methods. Specifically, we show that the posterior mean from our method solves a penalized regression problem, with the form of the penalty function being learned from the data by directly solving an optimization problem (rather than being tuned by cross-validation). Our methods are implemented in an R package, mr.ash.alpha, available from https://github.com/stephenslab/mr.ash.alpha." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/13/AflexibleempiricalBayesapproachtomultiplelinearregressionandconnectionswithpenalizedregression.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/13/AflexibleempiricalBayesapproachtomultiplelinearregressionandconnectionswithpenalizedregression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A flexible empirical Bayes approach to multiple linear regression and connections with penalized regression" />
+<script type="application/ld+json">
+{"description":"We introduce a new empirical Bayes approach for large-scale multiple linear regression. Our approach combines two key ideas: (i) the use of flexible “adaptive shrinkage” priors, which approximate the nonparametric family of scale mixture of normal distributions by a finite mixture of normal distributions; and (ii) the use of variational approximations to efficiently estimate prior hyperparameters and compute approximate posteriors. Combining these two ideas results in fast and flexible methods, with computational speed comparable to fast penalized regression methods such as the Lasso, and with competitive prediction accuracy across a wide range of scenarios. Further, we provide new results that establish conceptual connections between our empirical Bayes methods and penalized methods. Specifically, we show that the posterior mean from our method solves a penalized regression problem, with the form of the penalty function being learned from the data by directly solving an optimization problem (rather than being tuned by cross-validation). Our methods are implemented in an R package, mr.ash.alpha, available from https://github.com/stephenslab/mr.ash.alpha.","datePublished":"2024-06-13T00:00:00+00:00","dateModified":"2024-06-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/13/AflexibleempiricalBayesapproachtomultiplelinearregressionandconnectionswithpenalizedregression.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/13/AflexibleempiricalBayesapproachtomultiplelinearregressionandconnectionswithpenalizedregression.html","author":{"@type":"Person","name":"Youngseok Kim, Wei Wang, Peter Carbonetto, Matthew Stephens"},"@type":"BlogPosting","headline":"A flexible empirical Bayes approach to multiple linear regression and connections with penalized regression","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-13 00:00:00 +0000">06-13</time>
+  </p>
+  
+  <h1>A flexible empirical Bayes approach to multiple linear regression and connections with penalized regression</h1>
+  <br>Youngseok Kim, Wei Wang, Peter Carbonetto, Matthew Stephens</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>We introduce a new empirical Bayes approach for large-scale multiple linear regression. Our approach combines two key ideas: (i) the use of flexible “adaptive shrinkage” priors, which approximate the nonparametric family of scale mixture of normal distributions by a finite mixture of normal distributions; and (ii) the use of variational approximations to efficiently estimate prior hyperparameters and compute approximate posteriors. Combining these two ideas results in fast and flexible methods, with computational speed comparable to fast penalized regression methods such as the Lasso, and with competitive prediction accuracy across a wide range of scenarios. Further, we provide new results that establish conceptual connections between our empirical Bayes methods and penalized methods. Specifically, we show that the posterior mean from our method solves a penalized regression problem, with the form of the penalty function being learned from the data by directly solving an optimization problem (rather than being tuned by cross-validation). Our methods are implemented in an R package, mr.ash.alpha, available from https://github.com/stephenslab/mr.ash.alpha.</p>
+
+<p><a href="https://arxiv.org/abs/2208.10910">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
