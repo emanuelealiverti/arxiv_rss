@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Generative vs. Discriminative modeling under the lens of uncertainty quantification</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Generative vs. Discriminative modeling under the lens of uncertainty quantification" />
+<meta name="author" content="Elouan Argouarc'h, François Desbouvries, Eric Barat, Eiji Kawasaki" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Learning a parametric model from a given dataset indeed enables to capture intrinsic dependencies between random variables via a parametric conditional probability distribution and in turn predict the value of a label variable given observed variables. In this paper, we undertake a comparative analysis of generative and discriminative approaches which differ in their construction and the structure of the underlying inference problem. Our objective is to compare the ability of both approaches to leverage information from various sources in an epistemic uncertainty aware inference via the posterior predictive distribution. We assess the role of a prior distribution, explicit in the generative case and implicit in the discriminative case, leading to a discussion about discriminative models suffering from imbalanced dataset. We next examine the double role played by the observed variables in the generative case, and discuss the compatibility of both approaches with semi-supervised learning. We also provide with practical insights and we examine how the modeling choice impacts the sampling from the posterior predictive distribution. With regard to this, we propose a general sampling scheme enabling supervised learning for both approaches, as well as semi-supervised learning when compatible with the considered modeling approach. Throughout this paper, we illustrate our arguments and conclusions using the example of affine regression, and validate our comparative analysis through classification simulations using neural network based models." />
+<meta property="og:description" content="Learning a parametric model from a given dataset indeed enables to capture intrinsic dependencies between random variables via a parametric conditional probability distribution and in turn predict the value of a label variable given observed variables. In this paper, we undertake a comparative analysis of generative and discriminative approaches which differ in their construction and the structure of the underlying inference problem. Our objective is to compare the ability of both approaches to leverage information from various sources in an epistemic uncertainty aware inference via the posterior predictive distribution. We assess the role of a prior distribution, explicit in the generative case and implicit in the discriminative case, leading to a discussion about discriminative models suffering from imbalanced dataset. We next examine the double role played by the observed variables in the generative case, and discuss the compatibility of both approaches with semi-supervised learning. We also provide with practical insights and we examine how the modeling choice impacts the sampling from the posterior predictive distribution. With regard to this, we propose a general sampling scheme enabling supervised learning for both approaches, as well as semi-supervised learning when compatible with the considered modeling approach. Throughout this paper, we illustrate our arguments and conclusions using the example of affine regression, and validate our comparative analysis through classification simulations using neural network based models." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/14/GenerativevsDiscriminativemodelingunderthelensofuncertaintyquantification.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/14/GenerativevsDiscriminativemodelingunderthelensofuncertaintyquantification.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Generative vs. Discriminative modeling under the lens of uncertainty quantification" />
+<script type="application/ld+json">
+{"description":"Learning a parametric model from a given dataset indeed enables to capture intrinsic dependencies between random variables via a parametric conditional probability distribution and in turn predict the value of a label variable given observed variables. In this paper, we undertake a comparative analysis of generative and discriminative approaches which differ in their construction and the structure of the underlying inference problem. Our objective is to compare the ability of both approaches to leverage information from various sources in an epistemic uncertainty aware inference via the posterior predictive distribution. We assess the role of a prior distribution, explicit in the generative case and implicit in the discriminative case, leading to a discussion about discriminative models suffering from imbalanced dataset. We next examine the double role played by the observed variables in the generative case, and discuss the compatibility of both approaches with semi-supervised learning. We also provide with practical insights and we examine how the modeling choice impacts the sampling from the posterior predictive distribution. With regard to this, we propose a general sampling scheme enabling supervised learning for both approaches, as well as semi-supervised learning when compatible with the considered modeling approach. Throughout this paper, we illustrate our arguments and conclusions using the example of affine regression, and validate our comparative analysis through classification simulations using neural network based models.","datePublished":"2024-06-14T00:00:00+00:00","dateModified":"2024-06-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/14/GenerativevsDiscriminativemodelingunderthelensofuncertaintyquantification.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/14/GenerativevsDiscriminativemodelingunderthelensofuncertaintyquantification.html","author":{"@type":"Person","name":"Elouan Argouarc'h, François Desbouvries, Eric Barat, Eiji Kawasaki"},"@type":"BlogPosting","headline":"Generative vs. Discriminative modeling under the lens of uncertainty quantification","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-14 00:00:00 +0000">06-14</time>
+  </p>
+  
+  <h1>Generative vs. Discriminative modeling under the lens of uncertainty quantification</h1>
+  <br>Elouan Argouarc'h, François Desbouvries, Eric Barat, Eiji Kawasaki</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>Learning a parametric model from a given dataset indeed enables to capture intrinsic dependencies between random variables via a parametric conditional probability distribution and in turn predict the value of a label variable given observed variables. In this paper, we undertake a comparative analysis of generative and discriminative approaches which differ in their construction and the structure of the underlying inference problem. Our objective is to compare the ability of both approaches to leverage information from various sources in an epistemic uncertainty aware inference via the posterior predictive distribution. We assess the role of a prior distribution, explicit in the generative case and implicit in the discriminative case, leading to a discussion about discriminative models suffering from imbalanced dataset. We next examine the double role played by the observed variables in the generative case, and discuss the compatibility of both approaches with semi-supervised learning. We also provide with practical insights and we examine how the modeling choice impacts the sampling from the posterior predictive distribution. With regard to this, we propose a general sampling scheme enabling supervised learning for both approaches, as well as semi-supervised learning when compatible with the considered modeling approach. Throughout this paper, we illustrate our arguments and conclusions using the example of affine regression, and validate our comparative analysis through classification simulations using neural network based models.</p>
+
+<p><a href="https://arxiv.org/abs/2406.09172">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
