@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Lasso Multinomial Performance Indicators for in-play Basketball Data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Lasso Multinomial Performance Indicators for in-play Basketball Data" />
+<meta name="author" content="Argyro Damoulaki, Ioannis Ntzoufras, Konstantinos Pelechrinis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A typical approach to quantify the contribution of each player in basketball uses the plus/minus approach. Such plus/minus ratings are estimated using simple regression models and their regularised variants with response variable either the points scored or the point differences. To capture more precisely the effect of each player and the combined effects of specific lineups, more detailed possession-based play-by-play data are needed. This is the direction we take in this article, in which we investigate the performance of regularized adjusted plus/minus (RAPM) indicators estimated by different regularized models having as a response the number of points scored in each possession. Therefore, we use possession play-by-play data from all NBA games for the season 2021-22 (322,852 possessions). We initially present simple regression model-based indices starting from the implementation of ridge regression which is the standard technique in the relevant literature. We proceed with the lasso approach which has specific advantages and better performance than ridge regression when compared with selected objective validation criteria. Then, we implement regularized binary and multinomial logistic regression models to obtain more accurate performance indicators since the response is a discrete variable taking values mainly from zero to three. Our final proposal is an improved RAPM measure which is based on the expected points of a multinomial logistic regression model where each player’s contribution is weighted by his participation in the team’s possessions. The proposed indicator, called weighted expected points (wEPTS), outperforms all other RAPM measures we investigate in this study." />
+<meta property="og:description" content="A typical approach to quantify the contribution of each player in basketball uses the plus/minus approach. Such plus/minus ratings are estimated using simple regression models and their regularised variants with response variable either the points scored or the point differences. To capture more precisely the effect of each player and the combined effects of specific lineups, more detailed possession-based play-by-play data are needed. This is the direction we take in this article, in which we investigate the performance of regularized adjusted plus/minus (RAPM) indicators estimated by different regularized models having as a response the number of points scored in each possession. Therefore, we use possession play-by-play data from all NBA games for the season 2021-22 (322,852 possessions). We initially present simple regression model-based indices starting from the implementation of ridge regression which is the standard technique in the relevant literature. We proceed with the lasso approach which has specific advantages and better performance than ridge regression when compared with selected objective validation criteria. Then, we implement regularized binary and multinomial logistic regression models to obtain more accurate performance indicators since the response is a discrete variable taking values mainly from zero to three. Our final proposal is an improved RAPM measure which is based on the expected points of a multinomial logistic regression model where each player’s contribution is weighted by his participation in the team’s possessions. The proposed indicator, called weighted expected points (wEPTS), outperforms all other RAPM measures we investigate in this study." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/17/LassoMultinomialPerformanceIndicatorsforinplayBasketballData.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/17/LassoMultinomialPerformanceIndicatorsforinplayBasketballData.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lasso Multinomial Performance Indicators for in-play Basketball Data" />
+<script type="application/ld+json">
+{"description":"A typical approach to quantify the contribution of each player in basketball uses the plus/minus approach. Such plus/minus ratings are estimated using simple regression models and their regularised variants with response variable either the points scored or the point differences. To capture more precisely the effect of each player and the combined effects of specific lineups, more detailed possession-based play-by-play data are needed. This is the direction we take in this article, in which we investigate the performance of regularized adjusted plus/minus (RAPM) indicators estimated by different regularized models having as a response the number of points scored in each possession. Therefore, we use possession play-by-play data from all NBA games for the season 2021-22 (322,852 possessions). We initially present simple regression model-based indices starting from the implementation of ridge regression which is the standard technique in the relevant literature. We proceed with the lasso approach which has specific advantages and better performance than ridge regression when compared with selected objective validation criteria. Then, we implement regularized binary and multinomial logistic regression models to obtain more accurate performance indicators since the response is a discrete variable taking values mainly from zero to three. Our final proposal is an improved RAPM measure which is based on the expected points of a multinomial logistic regression model where each player’s contribution is weighted by his participation in the team’s possessions. The proposed indicator, called weighted expected points (wEPTS), outperforms all other RAPM measures we investigate in this study.","datePublished":"2024-06-17T00:00:00+00:00","dateModified":"2024-06-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/17/LassoMultinomialPerformanceIndicatorsforinplayBasketballData.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/17/LassoMultinomialPerformanceIndicatorsforinplayBasketballData.html","author":{"@type":"Person","name":"Argyro Damoulaki, Ioannis Ntzoufras, Konstantinos Pelechrinis"},"@type":"BlogPosting","headline":"Lasso Multinomial Performance Indicators for in-play Basketball Data","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-17 00:00:00 +0000">06-17</time>
+  </p>
+  
+  <h1>Lasso Multinomial Performance Indicators for in-play Basketball Data</h1>
+  <br>Argyro Damoulaki, Ioannis Ntzoufras, Konstantinos Pelechrinis</h3>
+  <br> [stat.AP]
+
+  <p>A typical approach to quantify the contribution of each player in basketball uses the plus/minus approach. Such plus/minus ratings are estimated using simple regression models and their regularised variants with response variable either the points scored or the point differences. To capture more precisely the effect of each player and the combined effects of specific lineups, more detailed possession-based play-by-play data are needed. This is the direction we take in this article, in which we investigate the performance of regularized adjusted plus/minus (RAPM) indicators estimated by different regularized models having as a response the number of points scored in each possession. Therefore, we use possession play-by-play data from all NBA games for the season 2021-22 (322,852 possessions). We initially present simple regression model-based indices starting from the implementation of ridge regression which is the standard technique in the relevant literature. We proceed with the lasso approach which has specific advantages and better performance than ridge regression when compared with selected objective validation criteria. Then, we implement regularized binary and multinomial logistic regression models to obtain more accurate performance indicators since the response is a discrete variable taking values mainly from zero to three. Our final proposal is an improved RAPM measure which is based on the expected points of a multinomial logistic regression model where each player’s contribution is weighted by his participation in the team’s possessions. The proposed indicator, called weighted expected points (wEPTS), outperforms all other RAPM measures we investigate in this study.</p>
+
+<p><a href="https://arxiv.org/abs/2406.09895">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

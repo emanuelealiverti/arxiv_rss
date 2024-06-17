@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Measure This, Not That: Optimizing the Cost and Model-Based Information Content of Measurements</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Measure This, Not That: Optimizing the Cost and Model-Based Information Content of Measurements" />
+<meta name="author" content="Jialu Wang, Zedong Peng, Ryan Hughes, Debangsu Bhattacharyya, David E. Bernal Neira, Alexander W. Dowling" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Model-based design of experiments (MBDoE) is a powerful framework for selecting and calibrating science-based mathematical models from data. This work extends popular MBDoE workflows by proposing a convex mixed integer (non)linear programming (MINLP) problem to optimize the selection of measurements. The solver MindtPy is modified to support calculating the D-optimality objective and its gradient via an external package, \texttt{SciPy}, using the grey-box module in Pyomo. The new approach is demonstrated in two case studies: estimating highly correlated kinetics from a batch reactor and estimating transport parameters in a large-scale rotary packed bed for CO$_2$ capture. Both case studies show how examining the Pareto-optimal trade-offs between information content measured by A- and D-optimality versus measurement budget offers practical guidance for selecting measurements for scientific experiments." />
+<meta property="og:description" content="Model-based design of experiments (MBDoE) is a powerful framework for selecting and calibrating science-based mathematical models from data. This work extends popular MBDoE workflows by proposing a convex mixed integer (non)linear programming (MINLP) problem to optimize the selection of measurements. The solver MindtPy is modified to support calculating the D-optimality objective and its gradient via an external package, \texttt{SciPy}, using the grey-box module in Pyomo. The new approach is demonstrated in two case studies: estimating highly correlated kinetics from a batch reactor and estimating transport parameters in a large-scale rotary packed bed for CO$_2$ capture. Both case studies show how examining the Pareto-optimal trade-offs between information content measured by A- and D-optimality versus measurement budget offers practical guidance for selecting measurements for scientific experiments." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/17/MeasureThisNotThatOptimizingtheCostandModelBasedInformationContentofMeasurements.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/17/MeasureThisNotThatOptimizingtheCostandModelBasedInformationContentofMeasurements.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Measure This, Not That: Optimizing the Cost and Model-Based Information Content of Measurements" />
+<script type="application/ld+json">
+{"description":"Model-based design of experiments (MBDoE) is a powerful framework for selecting and calibrating science-based mathematical models from data. This work extends popular MBDoE workflows by proposing a convex mixed integer (non)linear programming (MINLP) problem to optimize the selection of measurements. The solver MindtPy is modified to support calculating the D-optimality objective and its gradient via an external package, \\texttt{SciPy}, using the grey-box module in Pyomo. The new approach is demonstrated in two case studies: estimating highly correlated kinetics from a batch reactor and estimating transport parameters in a large-scale rotary packed bed for CO$_2$ capture. Both case studies show how examining the Pareto-optimal trade-offs between information content measured by A- and D-optimality versus measurement budget offers practical guidance for selecting measurements for scientific experiments.","datePublished":"2024-06-17T00:00:00+00:00","dateModified":"2024-06-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/17/MeasureThisNotThatOptimizingtheCostandModelBasedInformationContentofMeasurements.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/17/MeasureThisNotThatOptimizingtheCostandModelBasedInformationContentofMeasurements.html","author":{"@type":"Person","name":"Jialu Wang, Zedong Peng, Ryan Hughes, Debangsu Bhattacharyya, David E. Bernal Neira, Alexander W. Dowling"},"@type":"BlogPosting","headline":"Measure This, Not That: Optimizing the Cost and Model-Based Information Content of Measurements","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-17 00:00:00 +0000">06-17</time>
+  </p>
+  
+  <h1>Measure This, Not That: Optimizing the Cost and Model-Based Information Content of Measurements</h1>
+  <br>Jialu Wang, Zedong Peng, Ryan Hughes, Debangsu Bhattacharyya, David E. Bernal Neira, Alexander W. Dowling</h3>
+  <br> [stat.AP]
+
+  <p>Model-based design of experiments (MBDoE) is a powerful framework for selecting and calibrating science-based mathematical models from data. This work extends popular MBDoE workflows by proposing a convex mixed integer (non)linear programming (MINLP) problem to optimize the selection of measurements. The solver MindtPy is modified to support calculating the D-optimality objective and its gradient via an external package, \texttt{SciPy}, using the grey-box module in Pyomo. The new approach is demonstrated in two case studies: estimating highly correlated kinetics from a batch reactor and estimating transport parameters in a large-scale rotary packed bed for CO$_2$ capture. Both case studies show how examining the Pareto-optimal trade-offs between information content measured by A- and D-optimality versus measurement budget offers practical guidance for selecting measurements for scientific experiments.</p>
+
+<p><a href="https://arxiv.org/abs/2406.09557">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
