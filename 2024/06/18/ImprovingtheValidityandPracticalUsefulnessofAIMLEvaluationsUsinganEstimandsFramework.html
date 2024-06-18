@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Improving the Validity and Practical Usefulness of AI/ML Evaluations Using an Estimands Framework</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Improving the Validity and Practical Usefulness of AI/ML Evaluations Using an Estimands Framework" />
+<meta name="author" content="Olivier Binette, Jerome P. Reiter" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Commonly, AI or machine learning (ML) models are evaluated on benchmark datasets. This practice supports innovative methodological research, but benchmark performance can be poorly correlated with performance in real-world applications – a construct validity issue. To improve the validity and practical usefulness of evaluations, we propose using an estimands framework adapted from international clinical trials guidelines. This framework provides a systematic structure for inference and reporting in evaluations, emphasizing the importance of a well-defined estimation target. We illustrate our proposal on examples of commonly used evaluation methodologies - involving cross-validation, clustering evaluation, and LLM benchmarking - that can lead to incorrect rankings of competing models (rank reversals) with high probability, even when performance differences are large. We demonstrate how the estimands framework can help uncover underlying issues, their causes, and potential solutions. Ultimately, we believe this framework can improve the validity of evaluations through better-aligned inference, and help decision-makers and model users interpret reported results more effectively." />
+<meta property="og:description" content="Commonly, AI or machine learning (ML) models are evaluated on benchmark datasets. This practice supports innovative methodological research, but benchmark performance can be poorly correlated with performance in real-world applications – a construct validity issue. To improve the validity and practical usefulness of evaluations, we propose using an estimands framework adapted from international clinical trials guidelines. This framework provides a systematic structure for inference and reporting in evaluations, emphasizing the importance of a well-defined estimation target. We illustrate our proposal on examples of commonly used evaluation methodologies - involving cross-validation, clustering evaluation, and LLM benchmarking - that can lead to incorrect rankings of competing models (rank reversals) with high probability, even when performance differences are large. We demonstrate how the estimands framework can help uncover underlying issues, their causes, and potential solutions. Ultimately, we believe this framework can improve the validity of evaluations through better-aligned inference, and help decision-makers and model users interpret reported results more effectively." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/ImprovingtheValidityandPracticalUsefulnessofAIMLEvaluationsUsinganEstimandsFramework.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/ImprovingtheValidityandPracticalUsefulnessofAIMLEvaluationsUsinganEstimandsFramework.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Improving the Validity and Practical Usefulness of AI/ML Evaluations Using an Estimands Framework" />
+<script type="application/ld+json">
+{"description":"Commonly, AI or machine learning (ML) models are evaluated on benchmark datasets. This practice supports innovative methodological research, but benchmark performance can be poorly correlated with performance in real-world applications – a construct validity issue. To improve the validity and practical usefulness of evaluations, we propose using an estimands framework adapted from international clinical trials guidelines. This framework provides a systematic structure for inference and reporting in evaluations, emphasizing the importance of a well-defined estimation target. We illustrate our proposal on examples of commonly used evaluation methodologies - involving cross-validation, clustering evaluation, and LLM benchmarking - that can lead to incorrect rankings of competing models (rank reversals) with high probability, even when performance differences are large. We demonstrate how the estimands framework can help uncover underlying issues, their causes, and potential solutions. Ultimately, we believe this framework can improve the validity of evaluations through better-aligned inference, and help decision-makers and model users interpret reported results more effectively.","datePublished":"2024-06-18T00:00:00+00:00","dateModified":"2024-06-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/ImprovingtheValidityandPracticalUsefulnessofAIMLEvaluationsUsinganEstimandsFramework.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/ImprovingtheValidityandPracticalUsefulnessofAIMLEvaluationsUsinganEstimandsFramework.html","author":{"@type":"Person","name":"Olivier Binette, Jerome P. Reiter"},"@type":"BlogPosting","headline":"Improving the Validity and Practical Usefulness of AI/ML Evaluations Using an Estimands Framework","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-18 00:00:00 +0000">06-18</time>
+  </p>
+  
+  <h1>Improving the Validity and Practical Usefulness of AI/ML Evaluations Using an Estimands Framework</h1>
+  <br>Olivier Binette, Jerome P. Reiter</h3>
+  <br> [stat.AP,stat.ME]
+
+  <p>Commonly, AI or machine learning (ML) models are evaluated on benchmark datasets. This practice supports innovative methodological research, but benchmark performance can be poorly correlated with performance in real-world applications – a construct validity issue. To improve the validity and practical usefulness of evaluations, we propose using an estimands framework adapted from international clinical trials guidelines. This framework provides a systematic structure for inference and reporting in evaluations, emphasizing the importance of a well-defined estimation target. We illustrate our proposal on examples of commonly used evaluation methodologies - involving cross-validation, clustering evaluation, and LLM benchmarking - that can lead to incorrect rankings of competing models (rank reversals) with high probability, even when performance differences are large. We demonstrate how the estimands framework can help uncover underlying issues, their causes, and potential solutions. Ultimately, we believe this framework can improve the validity of evaluations through better-aligned inference, and help decision-makers and model users interpret reported results more effectively.</p>
+
+<p><a href="https://arxiv.org/abs/2406.10366">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

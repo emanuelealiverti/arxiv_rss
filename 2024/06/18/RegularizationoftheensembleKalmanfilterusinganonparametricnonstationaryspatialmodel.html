@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Regularization of the ensemble Kalman filter using a non-parametric, non-stationary spatial model</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Regularization of the ensemble Kalman filter using a non-parametric, non-stationary spatial model" />
+<meta name="author" content="Michael Tsyrulnikov, Arseniy Sotskiy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The sample covariance matrix of a random vector is a good estimate of the true covariance matrix if the sample size is much larger than the length of the vector. In high-dimensional problems, this condition is never met. As a result, in high dimensions the Ensemble Kalman Filter’s (EnKF) ensemble does not contain enough information to specify the prior covariance matrix accurately. This necessitates the need for regularization of the analysis (observation update) problem. We propose a regularization technique based on a new spatial model. The model is a constrained version of the general Gaussian process convolution model. The constraints include local stationarity and smoothness of local spectra. We regularize EnKF by postulating that its prior covariances obey the spatial model. Placing a hyperprior distribution on the model parameters and using the likelihood of the prior ensemble data allows for an optimized use of both the ensemble and the hyperprior. The respective estimator is shown to be consistent. Its neural Bayes implementation proved to be both accurate and computationally efficient. In simulation experiments, the new technique led to substantially better EnKF performance than several existing techniques." />
+<meta property="og:description" content="The sample covariance matrix of a random vector is a good estimate of the true covariance matrix if the sample size is much larger than the length of the vector. In high-dimensional problems, this condition is never met. As a result, in high dimensions the Ensemble Kalman Filter’s (EnKF) ensemble does not contain enough information to specify the prior covariance matrix accurately. This necessitates the need for regularization of the analysis (observation update) problem. We propose a regularization technique based on a new spatial model. The model is a constrained version of the general Gaussian process convolution model. The constraints include local stationarity and smoothness of local spectra. We regularize EnKF by postulating that its prior covariances obey the spatial model. Placing a hyperprior distribution on the model parameters and using the likelihood of the prior ensemble data allows for an optimized use of both the ensemble and the hyperprior. The respective estimator is shown to be consistent. Its neural Bayes implementation proved to be both accurate and computationally efficient. In simulation experiments, the new technique led to substantially better EnKF performance than several existing techniques." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/RegularizationoftheensembleKalmanfilterusinganonparametricnonstationaryspatialmodel.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/RegularizationoftheensembleKalmanfilterusinganonparametricnonstationaryspatialmodel.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Regularization of the ensemble Kalman filter using a non-parametric, non-stationary spatial model" />
+<script type="application/ld+json">
+{"description":"The sample covariance matrix of a random vector is a good estimate of the true covariance matrix if the sample size is much larger than the length of the vector. In high-dimensional problems, this condition is never met. As a result, in high dimensions the Ensemble Kalman Filter’s (EnKF) ensemble does not contain enough information to specify the prior covariance matrix accurately. This necessitates the need for regularization of the analysis (observation update) problem. We propose a regularization technique based on a new spatial model. The model is a constrained version of the general Gaussian process convolution model. The constraints include local stationarity and smoothness of local spectra. We regularize EnKF by postulating that its prior covariances obey the spatial model. Placing a hyperprior distribution on the model parameters and using the likelihood of the prior ensemble data allows for an optimized use of both the ensemble and the hyperprior. The respective estimator is shown to be consistent. Its neural Bayes implementation proved to be both accurate and computationally efficient. In simulation experiments, the new technique led to substantially better EnKF performance than several existing techniques.","datePublished":"2024-06-18T00:00:00+00:00","dateModified":"2024-06-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/RegularizationoftheensembleKalmanfilterusinganonparametricnonstationaryspatialmodel.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/RegularizationoftheensembleKalmanfilterusinganonparametricnonstationaryspatialmodel.html","author":{"@type":"Person","name":"Michael Tsyrulnikov, Arseniy Sotskiy"},"@type":"BlogPosting","headline":"Regularization of the ensemble Kalman filter using a non-parametric, non-stationary spatial model","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-18 00:00:00 +0000">06-18</time>
+  </p>
+  
+  <h1>Regularization of the ensemble Kalman filter using a non-parametric, non-stationary spatial model</h1>
+  <br>Michael Tsyrulnikov, Arseniy Sotskiy</h3>
+  <br> [stat.AP,stat.ME]
+
+  <p>The sample covariance matrix of a random vector is a good estimate of the true covariance matrix if the sample size is much larger than the length of the vector. In high-dimensional problems, this condition is never met. As a result, in high dimensions the Ensemble Kalman Filter’s (EnKF) ensemble does not contain enough information to specify the prior covariance matrix accurately. This necessitates the need for regularization of the analysis (observation update) problem. We propose a regularization technique based on a new spatial model. The model is a constrained version of the general Gaussian process convolution model. The constraints include local stationarity and smoothness of local spectra. We regularize EnKF by postulating that its prior covariances obey the spatial model. Placing a hyperprior distribution on the model parameters and using the likelihood of the prior ensemble data allows for an optimized use of both the ensemble and the hyperprior. The respective estimator is shown to be consistent. Its neural Bayes implementation proved to be both accurate and computationally efficient. In simulation experiments, the new technique led to substantially better EnKF performance than several existing techniques.</p>
+
+<p><a href="https://arxiv.org/abs/2306.14318">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

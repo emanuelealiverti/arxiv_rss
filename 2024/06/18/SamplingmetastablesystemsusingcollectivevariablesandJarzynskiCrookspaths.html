@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sampling metastable systems using collective variables and Jarzynski-Crooks paths</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sampling metastable systems using collective variables and Jarzynski-Crooks paths" />
+<meta name="author" content="Christoph Schönle, Marylou Gabrié, Tony Lelièvre, Gabriel Stoltz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We consider the problem of sampling a high dimensional multimodal target probability measure. We assume that a good proposal kernel to move only a subset of the degrees of freedoms (also known as collective variables) is known a priori. This proposal kernel can for example be built using normalizing flows. We show how to extend the move from the collective variable space to the full space and how to implement an accept-reject step in order to get a reversible chain with respect to a target probability measure. The accept-reject step does not require to know the marginal of the original measure in the collective variable (namely to know the free energy). The obtained algorithm admits several variants, some of them being very close to methods which have been proposed previously in the literature. We show how the obtained acceptance ratio can be expressed in terms of the work which appears in the Jarzynski-Crooks equality, at least for some variants. Numerical illustrations demonstrate the efficiency of the approach on various simple test cases, and allow us to compare the variants of the algorithm." />
+<meta property="og:description" content="We consider the problem of sampling a high dimensional multimodal target probability measure. We assume that a good proposal kernel to move only a subset of the degrees of freedoms (also known as collective variables) is known a priori. This proposal kernel can for example be built using normalizing flows. We show how to extend the move from the collective variable space to the full space and how to implement an accept-reject step in order to get a reversible chain with respect to a target probability measure. The accept-reject step does not require to know the marginal of the original measure in the collective variable (namely to know the free energy). The obtained algorithm admits several variants, some of them being very close to methods which have been proposed previously in the literature. We show how the obtained acceptance ratio can be expressed in terms of the work which appears in the Jarzynski-Crooks equality, at least for some variants. Numerical illustrations demonstrate the efficiency of the approach on various simple test cases, and allow us to compare the variants of the algorithm." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SamplingmetastablesystemsusingcollectivevariablesandJarzynskiCrookspaths.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SamplingmetastablesystemsusingcollectivevariablesandJarzynskiCrookspaths.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sampling metastable systems using collective variables and Jarzynski-Crooks paths" />
+<script type="application/ld+json">
+{"description":"We consider the problem of sampling a high dimensional multimodal target probability measure. We assume that a good proposal kernel to move only a subset of the degrees of freedoms (also known as collective variables) is known a priori. This proposal kernel can for example be built using normalizing flows. We show how to extend the move from the collective variable space to the full space and how to implement an accept-reject step in order to get a reversible chain with respect to a target probability measure. The accept-reject step does not require to know the marginal of the original measure in the collective variable (namely to know the free energy). The obtained algorithm admits several variants, some of them being very close to methods which have been proposed previously in the literature. We show how the obtained acceptance ratio can be expressed in terms of the work which appears in the Jarzynski-Crooks equality, at least for some variants. Numerical illustrations demonstrate the efficiency of the approach on various simple test cases, and allow us to compare the variants of the algorithm.","datePublished":"2024-06-18T00:00:00+00:00","dateModified":"2024-06-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SamplingmetastablesystemsusingcollectivevariablesandJarzynskiCrookspaths.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SamplingmetastablesystemsusingcollectivevariablesandJarzynskiCrookspaths.html","author":{"@type":"Person","name":"Christoph Schönle, Marylou Gabrié, Tony Lelièvre, Gabriel Stoltz"},"@type":"BlogPosting","headline":"Sampling metastable systems using collective variables and Jarzynski-Crooks paths","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-18 00:00:00 +0000">06-18</time>
+  </p>
+  
+  <h1>Sampling metastable systems using collective variables and Jarzynski-Crooks paths</h1>
+  <br>Christoph Schönle, Marylou Gabrié, Tony Lelièvre, Gabriel Stoltz</h3>
+  <br> [cond-mat.stat-mech,stat.CO]
+
+  <p>We consider the problem of sampling a high dimensional multimodal target probability measure. We assume that a good proposal kernel to move only a subset of the degrees of freedoms (also known as collective variables) is known a priori. This proposal kernel can for example be built using normalizing flows. We show how to extend the move from the collective variable space to the full space and how to implement an accept-reject step in order to get a reversible chain with respect to a target probability measure. The accept-reject step does not require to know the marginal of the original measure in the collective variable (namely to know the free energy). The obtained algorithm admits several variants, some of them being very close to methods which have been proposed previously in the literature. We show how the obtained acceptance ratio can be expressed in terms of the work which appears in the Jarzynski-Crooks equality, at least for some variants. Numerical illustrations demonstrate the efficiency of the approach on various simple test cases, and allow us to compare the variants of the algorithm.</p>
+
+<p><a href="https://arxiv.org/abs/2405.18160">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

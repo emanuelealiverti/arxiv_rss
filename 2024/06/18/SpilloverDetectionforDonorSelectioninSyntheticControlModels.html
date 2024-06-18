@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Spillover Detection for Donor Selection in Synthetic Control Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Spillover Detection for Donor Selection in Synthetic Control Models" />
+<meta name="author" content="Michael O'Riordan, Ciarán M. Gilligan-Lee" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Synthetic control (SC) models are widely used to estimate causal effects in settings with observational time-series data. To identify the causal effect on a target unit, SC requires the existence of correlated units that are not impacted by the intervention. Given one of these potential donor units, how can we decide whether it is in fact a valid donor - that is, one not subject to spillover effects from the intervention? Such a decision typically requires appealing to strong a priori domain knowledge specifying the units, which becomes infeasible in situations with large pools of potential donors. In this paper, we introduce a practical, theoretically-grounded donor selection procedure, aiming to weaken this domain knowledge requirement. Our main result is a Theorem that yields the assumptions required to identify donor values at post-intervention time points using only pre-intervention data. We show how this Theorem - and the assumptions underpinning it - can be turned into a practical method for detecting potential spillover effects and excluding invalid donors when constructing SCs. Importantly, we employ sensitivity analysis to formally bound the bias in our SC causal estimate in situations where an excluded donor was indeed valid, or where a selected donor was invalid. Using ideas from the proximal causal inference and instrumental variables literature, we show that the excluded donors can nevertheless be leveraged to further debias causal effect estimates. Finally, we illustrate our donor selection procedure on both simulated and real-world datasets." />
+<meta property="og:description" content="Synthetic control (SC) models are widely used to estimate causal effects in settings with observational time-series data. To identify the causal effect on a target unit, SC requires the existence of correlated units that are not impacted by the intervention. Given one of these potential donor units, how can we decide whether it is in fact a valid donor - that is, one not subject to spillover effects from the intervention? Such a decision typically requires appealing to strong a priori domain knowledge specifying the units, which becomes infeasible in situations with large pools of potential donors. In this paper, we introduce a practical, theoretically-grounded donor selection procedure, aiming to weaken this domain knowledge requirement. Our main result is a Theorem that yields the assumptions required to identify donor values at post-intervention time points using only pre-intervention data. We show how this Theorem - and the assumptions underpinning it - can be turned into a practical method for detecting potential spillover effects and excluding invalid donors when constructing SCs. Importantly, we employ sensitivity analysis to formally bound the bias in our SC causal estimate in situations where an excluded donor was indeed valid, or where a selected donor was invalid. Using ideas from the proximal causal inference and instrumental variables literature, we show that the excluded donors can nevertheless be leveraged to further debias causal effect estimates. Finally, we illustrate our donor selection procedure on both simulated and real-world datasets." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SpilloverDetectionforDonorSelectioninSyntheticControlModels.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SpilloverDetectionforDonorSelectioninSyntheticControlModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Spillover Detection for Donor Selection in Synthetic Control Models" />
+<script type="application/ld+json">
+{"description":"Synthetic control (SC) models are widely used to estimate causal effects in settings with observational time-series data. To identify the causal effect on a target unit, SC requires the existence of correlated units that are not impacted by the intervention. Given one of these potential donor units, how can we decide whether it is in fact a valid donor - that is, one not subject to spillover effects from the intervention? Such a decision typically requires appealing to strong a priori domain knowledge specifying the units, which becomes infeasible in situations with large pools of potential donors. In this paper, we introduce a practical, theoretically-grounded donor selection procedure, aiming to weaken this domain knowledge requirement. Our main result is a Theorem that yields the assumptions required to identify donor values at post-intervention time points using only pre-intervention data. We show how this Theorem - and the assumptions underpinning it - can be turned into a practical method for detecting potential spillover effects and excluding invalid donors when constructing SCs. Importantly, we employ sensitivity analysis to formally bound the bias in our SC causal estimate in situations where an excluded donor was indeed valid, or where a selected donor was invalid. Using ideas from the proximal causal inference and instrumental variables literature, we show that the excluded donors can nevertheless be leveraged to further debias causal effect estimates. Finally, we illustrate our donor selection procedure on both simulated and real-world datasets.","datePublished":"2024-06-18T00:00:00+00:00","dateModified":"2024-06-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SpilloverDetectionforDonorSelectioninSyntheticControlModels.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SpilloverDetectionforDonorSelectioninSyntheticControlModels.html","author":{"@type":"Person","name":"Michael O'Riordan, Ciarán M. Gilligan-Lee"},"@type":"BlogPosting","headline":"Spillover Detection for Donor Selection in Synthetic Control Models","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-18 00:00:00 +0000">06-18</time>
+  </p>
+  
+  <h1>Spillover Detection for Donor Selection in Synthetic Control Models</h1>
+  <br>Michael O'Riordan, Ciarán M. Gilligan-Lee</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Synthetic control (SC) models are widely used to estimate causal effects in settings with observational time-series data. To identify the causal effect on a target unit, SC requires the existence of correlated units that are not impacted by the intervention. Given one of these potential donor units, how can we decide whether it is in fact a valid donor - that is, one not subject to spillover effects from the intervention? Such a decision typically requires appealing to strong a priori domain knowledge specifying the units, which becomes infeasible in situations with large pools of potential donors. In this paper, we introduce a practical, theoretically-grounded donor selection procedure, aiming to weaken this domain knowledge requirement. Our main result is a Theorem that yields the assumptions required to identify donor values at post-intervention time points using only pre-intervention data. We show how this Theorem - and the assumptions underpinning it - can be turned into a practical method for detecting potential spillover effects and excluding invalid donors when constructing SCs. Importantly, we employ sensitivity analysis to formally bound the bias in our SC causal estimate in situations where an excluded donor was indeed valid, or where a selected donor was invalid. Using ideas from the proximal causal inference and instrumental variables literature, we show that the excluded donors can nevertheless be leveraged to further debias causal effect estimates. Finally, we illustrate our donor selection procedure on both simulated and real-world datasets.</p>
+
+<p><a href="https://arxiv.org/abs/2406.11399">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

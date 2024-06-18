@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sampling and estimation on manifolds using the Langevin diffusion</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sampling and estimation on manifolds using the Langevin diffusion" />
+<meta name="author" content="Karthik Bharath, Alexander Lewis, Akash Sharma, Michael V Tretyakov" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Error bounds are derived for sampling and estimation using a discretization of an intrinsically defined Langevin diffusion with invariant measure $\text{d}\mu_\phi \propto e^{-\phi} \mathrm{dvol}g $ on a compact Riemannian manifold. Two estimators of linear functionals of $\mu\phi $ based on the discretized Markov process are considered: a time-averaging estimator based on a single trajectory and an ensemble-averaging estimator based on multiple independent trajectories. Imposing no restrictions beyond a nominal level of smoothness on $\phi$, first-order error bounds, in discretization step size, on the bias and variance/mean-square error of both estimators are derived. The order of error matches the optimal rate in Euclidean and flat spaces, and leads to a first-order bound on distance between the invariant measure $\mu_\phi$ and a stationary measure of the discretized Markov process. This order is preserved even upon using retractions when exponential maps are unavailable in closed form, thus enhancing practicality of the proposed algorithms. Generality of the proof techniques, which exploit links between two partial differential equations and the semigroup of operators corresponding to the Langevin diffusion, renders them amenable for the study of a more general class of sampling algorithms related to the Langevin diffusion. Conditions for extending analysis to the case of non-compact manifolds are discussed. Numerical illustrations with distributions, log-concave and otherwise, on the manifolds of positive and negative curvature elucidate on the derived bounds and demonstrate practical utility of the sampling algorithm." />
+<meta property="og:description" content="Error bounds are derived for sampling and estimation using a discretization of an intrinsically defined Langevin diffusion with invariant measure $\text{d}\mu_\phi \propto e^{-\phi} \mathrm{dvol}g $ on a compact Riemannian manifold. Two estimators of linear functionals of $\mu\phi $ based on the discretized Markov process are considered: a time-averaging estimator based on a single trajectory and an ensemble-averaging estimator based on multiple independent trajectories. Imposing no restrictions beyond a nominal level of smoothness on $\phi$, first-order error bounds, in discretization step size, on the bias and variance/mean-square error of both estimators are derived. The order of error matches the optimal rate in Euclidean and flat spaces, and leads to a first-order bound on distance between the invariant measure $\mu_\phi$ and a stationary measure of the discretized Markov process. This order is preserved even upon using retractions when exponential maps are unavailable in closed form, thus enhancing practicality of the proposed algorithms. Generality of the proof techniques, which exploit links between two partial differential equations and the semigroup of operators corresponding to the Langevin diffusion, renders them amenable for the study of a more general class of sampling algorithms related to the Langevin diffusion. Conditions for extending analysis to the case of non-compact manifolds are discussed. Numerical illustrations with distributions, log-concave and otherwise, on the manifolds of positive and negative curvature elucidate on the derived bounds and demonstrate practical utility of the sampling algorithm." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SamplingandestimationonmanifoldsusingtheLangevindiffusion.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SamplingandestimationonmanifoldsusingtheLangevindiffusion.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sampling and estimation on manifolds using the Langevin diffusion" />
+<script type="application/ld+json">
+{"description":"Error bounds are derived for sampling and estimation using a discretization of an intrinsically defined Langevin diffusion with invariant measure $\\text{d}\\mu_\\phi \\propto e^{-\\phi} \\mathrm{dvol}g $ on a compact Riemannian manifold. Two estimators of linear functionals of $\\mu\\phi $ based on the discretized Markov process are considered: a time-averaging estimator based on a single trajectory and an ensemble-averaging estimator based on multiple independent trajectories. Imposing no restrictions beyond a nominal level of smoothness on $\\phi$, first-order error bounds, in discretization step size, on the bias and variance/mean-square error of both estimators are derived. The order of error matches the optimal rate in Euclidean and flat spaces, and leads to a first-order bound on distance between the invariant measure $\\mu_\\phi$ and a stationary measure of the discretized Markov process. This order is preserved even upon using retractions when exponential maps are unavailable in closed form, thus enhancing practicality of the proposed algorithms. Generality of the proof techniques, which exploit links between two partial differential equations and the semigroup of operators corresponding to the Langevin diffusion, renders them amenable for the study of a more general class of sampling algorithms related to the Langevin diffusion. Conditions for extending analysis to the case of non-compact manifolds are discussed. Numerical illustrations with distributions, log-concave and otherwise, on the manifolds of positive and negative curvature elucidate on the derived bounds and demonstrate practical utility of the sampling algorithm.","datePublished":"2024-06-18T00:00:00+00:00","dateModified":"2024-06-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SamplingandestimationonmanifoldsusingtheLangevindiffusion.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/18/SamplingandestimationonmanifoldsusingtheLangevindiffusion.html","author":{"@type":"Person","name":"Karthik Bharath, Alexander Lewis, Akash Sharma, Michael V Tretyakov"},"@type":"BlogPosting","headline":"Sampling and estimation on manifolds using the Langevin diffusion","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-18 00:00:00 +0000">06-18</time>
+  </p>
+  
+  <h1>Sampling and estimation on manifolds using the Langevin diffusion</h1>
+  <br>Karthik Bharath, Alexander Lewis, Akash Sharma, Michael V Tretyakov</h3>
+  <br> [stat.CO,stat.ML,stat.TH]
+
+  <p>Error bounds are derived for sampling and estimation using a discretization of an intrinsically defined Langevin diffusion with invariant measure $\text{d}\mu_\phi \propto e^{-\phi} \mathrm{dvol}<em>g $ on a compact Riemannian manifold. Two estimators of linear functionals of $\mu</em>\phi $ based on the discretized Markov process are considered: a time-averaging estimator based on a single trajectory and an ensemble-averaging estimator based on multiple independent trajectories. Imposing no restrictions beyond a nominal level of smoothness on $\phi$, first-order error bounds, in discretization step size, on the bias and variance/mean-square error of both estimators are derived. The order of error matches the optimal rate in Euclidean and flat spaces, and leads to a first-order bound on distance between the invariant measure $\mu_\phi$ and a stationary measure of the discretized Markov process. This order is preserved even upon using retractions when exponential maps are unavailable in closed form, thus enhancing practicality of the proposed algorithms. Generality of the proof techniques, which exploit links between two partial differential equations and the semigroup of operators corresponding to the Langevin diffusion, renders them amenable for the study of a more general class of sampling algorithms related to the Langevin diffusion. Conditions for extending analysis to the case of non-compact manifolds are discussed. Numerical illustrations with distributions, log-concave and otherwise, on the manifolds of positive and negative curvature elucidate on the derived bounds and demonstrate practical utility of the sampling algorithm.</p>
+
+<p><a href="https://arxiv.org/abs/2312.14882">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
