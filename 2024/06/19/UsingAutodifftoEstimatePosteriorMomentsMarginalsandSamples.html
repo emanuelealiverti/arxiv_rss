@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Using Autodiff to Estimate Posterior Moments, Marginals and Samples</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Using Autodiff to Estimate Posterior Moments, Marginals and Samples" />
+<meta name="author" content="Sam Bowyer, Thomas Heap, Laurence Aitchison" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Importance sampling is a popular technique in Bayesian inference: by reweighting samples drawn from a proposal distribution we are able to obtain samples and moment estimates from a Bayesian posterior over latent variables. Recent work, however, indicates that importance sampling scales poorly – in order to accurately approximate the true posterior, the required number of importance samples grows is exponential in the number of latent variables [Chatterjee and Diaconis, 2018]. Massively parallel importance sampling works around this issue by drawing $K$ samples for each of the $n$ latent variables and reasoning about all $K^n$ combinations of latent samples. In principle, we can reason efficiently over $K^n$ combinations of samples by exploiting conditional independencies in the generative model. However, in practice this requires complex algorithms that traverse backwards through the graphical model, and we need separate backward traversals for each computation (posterior expectations, marginals and samples). Our contribution is to exploit the source term trick from physics to entirely avoid the need to hand-write backward traversals. Instead, we demonstrate how to simply and easily compute all the required quantities – posterior expectations, marginals and samples – by differentiating through a slightly modified marginal likelihood estimator." />
+<meta property="og:description" content="Importance sampling is a popular technique in Bayesian inference: by reweighting samples drawn from a proposal distribution we are able to obtain samples and moment estimates from a Bayesian posterior over latent variables. Recent work, however, indicates that importance sampling scales poorly – in order to accurately approximate the true posterior, the required number of importance samples grows is exponential in the number of latent variables [Chatterjee and Diaconis, 2018]. Massively parallel importance sampling works around this issue by drawing $K$ samples for each of the $n$ latent variables and reasoning about all $K^n$ combinations of latent samples. In principle, we can reason efficiently over $K^n$ combinations of samples by exploiting conditional independencies in the generative model. However, in practice this requires complex algorithms that traverse backwards through the graphical model, and we need separate backward traversals for each computation (posterior expectations, marginals and samples). Our contribution is to exploit the source term trick from physics to entirely avoid the need to hand-write backward traversals. Instead, we demonstrate how to simply and easily compute all the required quantities – posterior expectations, marginals and samples – by differentiating through a slightly modified marginal likelihood estimator." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/19/UsingAutodifftoEstimatePosteriorMomentsMarginalsandSamples.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/19/UsingAutodifftoEstimatePosteriorMomentsMarginalsandSamples.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Using Autodiff to Estimate Posterior Moments, Marginals and Samples" />
+<script type="application/ld+json">
+{"description":"Importance sampling is a popular technique in Bayesian inference: by reweighting samples drawn from a proposal distribution we are able to obtain samples and moment estimates from a Bayesian posterior over latent variables. Recent work, however, indicates that importance sampling scales poorly – in order to accurately approximate the true posterior, the required number of importance samples grows is exponential in the number of latent variables [Chatterjee and Diaconis, 2018]. Massively parallel importance sampling works around this issue by drawing $K$ samples for each of the $n$ latent variables and reasoning about all $K^n$ combinations of latent samples. In principle, we can reason efficiently over $K^n$ combinations of samples by exploiting conditional independencies in the generative model. However, in practice this requires complex algorithms that traverse backwards through the graphical model, and we need separate backward traversals for each computation (posterior expectations, marginals and samples). Our contribution is to exploit the source term trick from physics to entirely avoid the need to hand-write backward traversals. Instead, we demonstrate how to simply and easily compute all the required quantities – posterior expectations, marginals and samples – by differentiating through a slightly modified marginal likelihood estimator.","datePublished":"2024-06-19T00:00:00+00:00","dateModified":"2024-06-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/19/UsingAutodifftoEstimatePosteriorMomentsMarginalsandSamples.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/19/UsingAutodifftoEstimatePosteriorMomentsMarginalsandSamples.html","author":{"@type":"Person","name":"Sam Bowyer, Thomas Heap, Laurence Aitchison"},"@type":"BlogPosting","headline":"Using Autodiff to Estimate Posterior Moments, Marginals and Samples","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-19 00:00:00 +0000">06-19</time>
+  </p>
+  
+  <h1>Using Autodiff to Estimate Posterior Moments, Marginals and Samples</h1>
+  <br>Sam Bowyer, Thomas Heap, Laurence Aitchison</h3>
+  <br> [stat.CO,stat.TH]
+
+  <p>Importance sampling is a popular technique in Bayesian inference: by reweighting samples drawn from a proposal distribution we are able to obtain samples and moment estimates from a Bayesian posterior over latent variables. Recent work, however, indicates that importance sampling scales poorly – in order to accurately approximate the true posterior, the required number of importance samples grows is exponential in the number of latent variables [Chatterjee and Diaconis, 2018]. Massively parallel importance sampling works around this issue by drawing $K$ samples for each of the $n$ latent variables and reasoning about all $K^n$ combinations of latent samples. In principle, we can reason efficiently over $K^n$ combinations of samples by exploiting conditional independencies in the generative model. However, in practice this requires complex algorithms that traverse backwards through the graphical model, and we need separate backward traversals for each computation (posterior expectations, marginals and samples). Our contribution is to exploit the source term trick from physics to entirely avoid the need to hand-write backward traversals. Instead, we demonstrate how to simply and easily compute all the required quantities – posterior expectations, marginals and samples – by differentiating through a slightly modified marginal likelihood estimator.</p>
+
+<p><a href="https://arxiv.org/abs/2310.17374">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
