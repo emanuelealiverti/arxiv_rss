@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning When the Concept Shifts: Confounding, Invariance, and Dimension Reduction</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Learning When the Concept Shifts: Confounding, Invariance, and Dimension Reduction" />
+<meta name="author" content="Kulunu Dharmakeerthi, YoonHaeng Hur, Tengyuan Liang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Practitioners often deploy a learned prediction model in a new environment where the joint distribution of covariate and response has shifted. In observational data, the distribution shift is often driven by unobserved confounding factors lurking in the environment, with the underlying mechanism unknown. Confounding can obfuscate the definition of the best prediction model (concept shift) and shift covariates to domains yet unseen (covariate shift). Therefore, a model maximizing prediction accuracy in the source environment could suffer a significant accuracy drop in the target environment. This motivates us to study the domain adaptation problem with observational data: given labeled covariate and response pairs from a source environment, and unlabeled covariates from a target environment, how can one predict the missing target response reliably? We root the adaptation problem in a linear structural causal model to address endogeneity and unobserved confounding. We study the necessity and benefit of leveraging exogenous, invariant covariate representations to cure concept shifts and improve target prediction. This further motivates a new representation learning method for adaptation that optimizes for a lower-dimensional linear subspace and, subsequently, a prediction model confined to that subspace. The procedure operates on a non-convex objective-that naturally interpolates between predictability and stability/invariance-constrained on the Stiefel manifold. We study the optimization landscape and prove that, when the regularization is sufficient, nearly all local optima align with an invariant linear subspace resilient to both concept and covariate shift. In terms of predictability, we show a model that uses the learned lower-dimensional subspace can incur a nearly ideal gap between target and source risk. Three real-world data sets are investigated to validate our method and theory." />
+<meta property="og:description" content="Practitioners often deploy a learned prediction model in a new environment where the joint distribution of covariate and response has shifted. In observational data, the distribution shift is often driven by unobserved confounding factors lurking in the environment, with the underlying mechanism unknown. Confounding can obfuscate the definition of the best prediction model (concept shift) and shift covariates to domains yet unseen (covariate shift). Therefore, a model maximizing prediction accuracy in the source environment could suffer a significant accuracy drop in the target environment. This motivates us to study the domain adaptation problem with observational data: given labeled covariate and response pairs from a source environment, and unlabeled covariates from a target environment, how can one predict the missing target response reliably? We root the adaptation problem in a linear structural causal model to address endogeneity and unobserved confounding. We study the necessity and benefit of leveraging exogenous, invariant covariate representations to cure concept shifts and improve target prediction. This further motivates a new representation learning method for adaptation that optimizes for a lower-dimensional linear subspace and, subsequently, a prediction model confined to that subspace. The procedure operates on a non-convex objective-that naturally interpolates between predictability and stability/invariance-constrained on the Stiefel manifold. We study the optimization landscape and prove that, when the regularization is sufficient, nearly all local optima align with an invariant linear subspace resilient to both concept and covariate shift. In terms of predictability, we show a model that uses the learned lower-dimensional subspace can incur a nearly ideal gap between target and source risk. Three real-world data sets are investigated to validate our method and theory." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/LearningWhentheConceptShiftsConfoundingInvarianceandDimensionReduction.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/LearningWhentheConceptShiftsConfoundingInvarianceandDimensionReduction.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learning When the Concept Shifts: Confounding, Invariance, and Dimension Reduction" />
+<script type="application/ld+json">
+{"description":"Practitioners often deploy a learned prediction model in a new environment where the joint distribution of covariate and response has shifted. In observational data, the distribution shift is often driven by unobserved confounding factors lurking in the environment, with the underlying mechanism unknown. Confounding can obfuscate the definition of the best prediction model (concept shift) and shift covariates to domains yet unseen (covariate shift). Therefore, a model maximizing prediction accuracy in the source environment could suffer a significant accuracy drop in the target environment. This motivates us to study the domain adaptation problem with observational data: given labeled covariate and response pairs from a source environment, and unlabeled covariates from a target environment, how can one predict the missing target response reliably? We root the adaptation problem in a linear structural causal model to address endogeneity and unobserved confounding. We study the necessity and benefit of leveraging exogenous, invariant covariate representations to cure concept shifts and improve target prediction. This further motivates a new representation learning method for adaptation that optimizes for a lower-dimensional linear subspace and, subsequently, a prediction model confined to that subspace. The procedure operates on a non-convex objective-that naturally interpolates between predictability and stability/invariance-constrained on the Stiefel manifold. We study the optimization landscape and prove that, when the regularization is sufficient, nearly all local optima align with an invariant linear subspace resilient to both concept and covariate shift. In terms of predictability, we show a model that uses the learned lower-dimensional subspace can incur a nearly ideal gap between target and source risk. Three real-world data sets are investigated to validate our method and theory.","headline":"Learning When the Concept Shifts: Confounding, Invariance, and Dimension Reduction","dateModified":"2024-06-25T00:00:00+00:00","datePublished":"2024-06-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/LearningWhentheConceptShiftsConfoundingInvarianceandDimensionReduction.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/LearningWhentheConceptShiftsConfoundingInvarianceandDimensionReduction.html","author":{"@type":"Person","name":"Kulunu Dharmakeerthi, YoonHaeng Hur, Tengyuan Liang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-25 00:00:00 +0000">06-25</time>
+  </p>
+  
+  <h1>Learning When the Concept Shifts: Confounding, Invariance, and Dimension Reduction</h1>
+  <br>Kulunu Dharmakeerthi, YoonHaeng Hur, Tengyuan Liang</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Practitioners often deploy a learned prediction model in a new environment where the joint distribution of covariate and response has shifted. In observational data, the distribution shift is often driven by unobserved confounding factors lurking in the environment, with the underlying mechanism unknown. Confounding can obfuscate the definition of the best prediction model (concept shift) and shift covariates to domains yet unseen (covariate shift). Therefore, a model maximizing prediction accuracy in the source environment could suffer a significant accuracy drop in the target environment. This motivates us to study the domain adaptation problem with observational data: given labeled covariate and response pairs from a source environment, and unlabeled covariates from a target environment, how can one predict the missing target response reliably? We root the adaptation problem in a linear structural causal model to address endogeneity and unobserved confounding. We study the necessity and benefit of leveraging exogenous, invariant covariate representations to cure concept shifts and improve target prediction. This further motivates a new representation learning method for adaptation that optimizes for a lower-dimensional linear subspace and, subsequently, a prediction model confined to that subspace. The procedure operates on a non-convex objective-that naturally interpolates between predictability and stability/invariance-constrained on the Stiefel manifold. We study the optimization landscape and prove that, when the regularization is sufficient, nearly all local optima align with an invariant linear subspace resilient to both concept and covariate shift. In terms of predictability, we show a model that uses the learned lower-dimensional subspace can incur a nearly ideal gap between target and source risk. Three real-world data sets are investigated to validate our method and theory.</p>
+
+<p><a href="https://arxiv.org/abs/2406.15904">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

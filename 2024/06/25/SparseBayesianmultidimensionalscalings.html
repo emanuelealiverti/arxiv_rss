@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sparse Bayesian multidimensional scaling(s)</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sparse Bayesian multidimensional scaling(s)" />
+<meta name="author" content="Ami Sheth, Aaron Smith, Andrew J. Holbrook" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian multidimensional scaling (BMDS) is a probabilistic dimension reduction tool that allows one to model and visualize data consisting of dissimilarities between pairs of objects. Although BMDS has proven useful within, e.g., Bayesian phylogenetic inference, its likelihood and gradient calculations require a burdensome order of $N^2$ floating-point operations, where $N$ is the number of data points. Thus, BMDS becomes impractical as $N$ grows large. We propose and compare two sparse versions of BMDS (sBMDS) that apply log-likelihood and gradient computations to subsets of the observed dissimilarity matrix data. Landmark sBMDS (L-sBMDS) extracts columns, while banded sBMDS (B-sBMDS) extracts diagonals of the data. These sparse variants let one specify a time complexity between $N^2$ and $N$. Under simplified settings, we prove posterior consistency for subsampled distance matrices. Through simulations, we examine the accuracy and computational efficiency across all models using both the Metropolis-Hastings and Hamiltonian Monte Carlo algorithms. We observe approximately 3-fold, 10-fold and 40-fold speedups with negligible loss of accuracy, when applying the sBMDS likelihoods and gradients to 500, 1,000 and 5,000 data points with 50 bands (landmarks); these speedups only increase with the size of data considered. Finally, we apply the sBMDS variants to the phylogeographic modeling of multiple influenza subtypes to better understand how these strains spread through global air transportation networks." />
+<meta property="og:description" content="Bayesian multidimensional scaling (BMDS) is a probabilistic dimension reduction tool that allows one to model and visualize data consisting of dissimilarities between pairs of objects. Although BMDS has proven useful within, e.g., Bayesian phylogenetic inference, its likelihood and gradient calculations require a burdensome order of $N^2$ floating-point operations, where $N$ is the number of data points. Thus, BMDS becomes impractical as $N$ grows large. We propose and compare two sparse versions of BMDS (sBMDS) that apply log-likelihood and gradient computations to subsets of the observed dissimilarity matrix data. Landmark sBMDS (L-sBMDS) extracts columns, while banded sBMDS (B-sBMDS) extracts diagonals of the data. These sparse variants let one specify a time complexity between $N^2$ and $N$. Under simplified settings, we prove posterior consistency for subsampled distance matrices. Through simulations, we examine the accuracy and computational efficiency across all models using both the Metropolis-Hastings and Hamiltonian Monte Carlo algorithms. We observe approximately 3-fold, 10-fold and 40-fold speedups with negligible loss of accuracy, when applying the sBMDS likelihoods and gradients to 500, 1,000 and 5,000 data points with 50 bands (landmarks); these speedups only increase with the size of data considered. Finally, we apply the sBMDS variants to the phylogeographic modeling of multiple influenza subtypes to better understand how these strains spread through global air transportation networks." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/SparseBayesianmultidimensionalscalings.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/SparseBayesianmultidimensionalscalings.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sparse Bayesian multidimensional scaling(s)" />
+<script type="application/ld+json">
+{"description":"Bayesian multidimensional scaling (BMDS) is a probabilistic dimension reduction tool that allows one to model and visualize data consisting of dissimilarities between pairs of objects. Although BMDS has proven useful within, e.g., Bayesian phylogenetic inference, its likelihood and gradient calculations require a burdensome order of $N^2$ floating-point operations, where $N$ is the number of data points. Thus, BMDS becomes impractical as $N$ grows large. We propose and compare two sparse versions of BMDS (sBMDS) that apply log-likelihood and gradient computations to subsets of the observed dissimilarity matrix data. Landmark sBMDS (L-sBMDS) extracts columns, while banded sBMDS (B-sBMDS) extracts diagonals of the data. These sparse variants let one specify a time complexity between $N^2$ and $N$. Under simplified settings, we prove posterior consistency for subsampled distance matrices. Through simulations, we examine the accuracy and computational efficiency across all models using both the Metropolis-Hastings and Hamiltonian Monte Carlo algorithms. We observe approximately 3-fold, 10-fold and 40-fold speedups with negligible loss of accuracy, when applying the sBMDS likelihoods and gradients to 500, 1,000 and 5,000 data points with 50 bands (landmarks); these speedups only increase with the size of data considered. Finally, we apply the sBMDS variants to the phylogeographic modeling of multiple influenza subtypes to better understand how these strains spread through global air transportation networks.","headline":"Sparse Bayesian multidimensional scaling(s)","dateModified":"2024-06-25T00:00:00+00:00","datePublished":"2024-06-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/SparseBayesianmultidimensionalscalings.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/SparseBayesianmultidimensionalscalings.html","author":{"@type":"Person","name":"Ami Sheth, Aaron Smith, Andrew J. Holbrook"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-25 00:00:00 +0000">06-25</time>
+  </p>
+  
+  <h1>Sparse Bayesian multidimensional scaling(s)</h1>
+  <br>Ami Sheth, Aaron Smith, Andrew J. Holbrook</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Bayesian multidimensional scaling (BMDS) is a probabilistic dimension reduction tool that allows one to model and visualize data consisting of dissimilarities between pairs of objects. Although BMDS has proven useful within, e.g., Bayesian phylogenetic inference, its likelihood and gradient calculations require a burdensome order of $N^2$ floating-point operations, where $N$ is the number of data points. Thus, BMDS becomes impractical as $N$ grows large. We propose and compare two sparse versions of BMDS (sBMDS) that apply log-likelihood and gradient computations to subsets of the observed dissimilarity matrix data. Landmark sBMDS (L-sBMDS) extracts columns, while banded sBMDS (B-sBMDS) extracts diagonals of the data. These sparse variants let one specify a time complexity between $N^2$ and $N$. Under simplified settings, we prove posterior consistency for subsampled distance matrices. Through simulations, we examine the accuracy and computational efficiency across all models using both the Metropolis-Hastings and Hamiltonian Monte Carlo algorithms. We observe approximately 3-fold, 10-fold and 40-fold speedups with negligible loss of accuracy, when applying the sBMDS likelihoods and gradients to 500, 1,000 and 5,000 data points with 50 bands (landmarks); these speedups only increase with the size of data considered. Finally, we apply the sBMDS variants to the phylogeographic modeling of multiple influenza subtypes to better understand how these strains spread through global air transportation networks.</p>
+
+<p><a href="https://arxiv.org/abs/2406.15573">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Scalable Composite Likelihood Estimation of Probit Models with Crossed Random Effects</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Scalable Composite Likelihood Estimation of Probit Models with Crossed Random Effects" />
+<meta name="author" content="Ruggero Bellio, Swarnadip Ghosh, Art B. Owen, Cristiano Varin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Crossed random effects structures arise in many scientific contexts. They raise severe computational problems with likelihood computations scaling like $N^{3/2}$ or worse for $N$ data points. In this paper we develop a new composite likelihood approach for crossed random effects probit models. For data arranged in R rows and C columns, the likelihood function includes a very difficult R + C dimensional integral. The composite likelihood we develop uses the marginal distribution of the response along with two hierarchical models. The cost is reduced to $\mathcal{O}(N)$ and it can be computed with $R + C$ one dimensional integrals. We find that the commonly used Laplace approximation has a cost that grows superlinearly. We get consistent estimates of the probit slope and variance components from our composite likelihood algorithm. We also show how to estimate the covariance of the estimated regression coefficients. The algorithm scales readily to a data set of five million observations from Stitch Fix with $R + C &gt; 700{,}000$." />
+<meta property="og:description" content="Crossed random effects structures arise in many scientific contexts. They raise severe computational problems with likelihood computations scaling like $N^{3/2}$ or worse for $N$ data points. In this paper we develop a new composite likelihood approach for crossed random effects probit models. For data arranged in R rows and C columns, the likelihood function includes a very difficult R + C dimensional integral. The composite likelihood we develop uses the marginal distribution of the response along with two hierarchical models. The cost is reduced to $\mathcal{O}(N)$ and it can be computed with $R + C$ one dimensional integrals. We find that the commonly used Laplace approximation has a cost that grows superlinearly. We get consistent estimates of the probit slope and variance components from our composite likelihood algorithm. We also show how to estimate the covariance of the estimated regression coefficients. The algorithm scales readily to a data set of five million observations from Stitch Fix with $R + C &gt; 700{,}000$." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/ScalableCompositeLikelihoodEstimationofProbitModelswithCrossedRandomEffects.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/ScalableCompositeLikelihoodEstimationofProbitModelswithCrossedRandomEffects.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Scalable Composite Likelihood Estimation of Probit Models with Crossed Random Effects" />
+<script type="application/ld+json">
+{"description":"Crossed random effects structures arise in many scientific contexts. They raise severe computational problems with likelihood computations scaling like $N^{3/2}$ or worse for $N$ data points. In this paper we develop a new composite likelihood approach for crossed random effects probit models. For data arranged in R rows and C columns, the likelihood function includes a very difficult R + C dimensional integral. The composite likelihood we develop uses the marginal distribution of the response along with two hierarchical models. The cost is reduced to $\\mathcal{O}(N)$ and it can be computed with $R + C$ one dimensional integrals. We find that the commonly used Laplace approximation has a cost that grows superlinearly. We get consistent estimates of the probit slope and variance components from our composite likelihood algorithm. We also show how to estimate the covariance of the estimated regression coefficients. The algorithm scales readily to a data set of five million observations from Stitch Fix with $R + C &gt; 700{,}000$.","headline":"Scalable Composite Likelihood Estimation of Probit Models with Crossed Random Effects","dateModified":"2024-06-25T00:00:00+00:00","datePublished":"2024-06-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/ScalableCompositeLikelihoodEstimationofProbitModelswithCrossedRandomEffects.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/25/ScalableCompositeLikelihoodEstimationofProbitModelswithCrossedRandomEffects.html","author":{"@type":"Person","name":"Ruggero Bellio, Swarnadip Ghosh, Art B. Owen, Cristiano Varin"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-25 00:00:00 +0000">06-25</time>
+  </p>
+  
+  <h1>Scalable Composite Likelihood Estimation of Probit Models with Crossed Random Effects</h1>
+  <br>Ruggero Bellio, Swarnadip Ghosh, Art B. Owen, Cristiano Varin</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Crossed random effects structures arise in many scientific contexts. They raise severe computational problems with likelihood computations scaling like $N^{3/2}$ or worse for $N$ data points. In this paper we develop a new composite likelihood approach for crossed random effects probit models. For data arranged in R rows and C columns, the likelihood function includes a very difficult R + C dimensional integral. The composite likelihood we develop uses the marginal distribution of the response along with two hierarchical models. The cost is reduced to $\mathcal{O}(N)$ and it can be computed with $R + C$ one dimensional integrals. We find that the commonly used Laplace approximation has a cost that grows superlinearly. We get consistent estimates of the probit slope and variance components from our composite likelihood algorithm. We also show how to estimate the covariance of the estimated regression coefficients. The algorithm scales readily to a data set of five million observations from Stitch Fix with $R + C &gt; 700{,}000$.</p>
+
+<p><a href="https://arxiv.org/abs/2308.15681">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
