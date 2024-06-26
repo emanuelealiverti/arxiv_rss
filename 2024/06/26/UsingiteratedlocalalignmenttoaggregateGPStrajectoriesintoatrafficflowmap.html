@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Using iterated local alignment to aggregate GPS trajectories into a traffic flow map</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Using iterated local alignment to aggregate GPS trajectories into a traffic flow map" />
+<meta name="author" content="Tarn Duong" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Desire line maps are widely deployed for traffic flow analysis by virtue of their ease of interpretation and computation. They can be considered to be simplified traffic flow maps, whereas the computational challenges in aggregating small scale traffic flows prevent the wider dissemination of high resolution flow maps. GPS trajectories are a promising data source to solve this challenging problem. The solution begins with the alignment (or map matching) of the GPS trajectories to the road network. However even the state-of-the-art map matching APIs produce sub-optimal results with small misalignments. While these misalignments are negligible for large scale flow aggregation in desire line maps, they pose substantial obstacles for small scale flow aggregation in high resolution maps. To remove these remaining misalignments, we introduce innovative local alignment algorithms, where we infer road segments to serve as local reference segments, and proceed to align nearby road segments to them. With each local alignment iteration, the misalignments of the GPS trajectories with each other and with the road network are reduced, and so converge closer to a minimal flow map. By analysing a set of empirical GPS trajectories collected in Hannover, Germany, we confirm that our minimal flow map has high levels of spatial resolution, accuracy and coverage." />
+<meta property="og:description" content="Desire line maps are widely deployed for traffic flow analysis by virtue of their ease of interpretation and computation. They can be considered to be simplified traffic flow maps, whereas the computational challenges in aggregating small scale traffic flows prevent the wider dissemination of high resolution flow maps. GPS trajectories are a promising data source to solve this challenging problem. The solution begins with the alignment (or map matching) of the GPS trajectories to the road network. However even the state-of-the-art map matching APIs produce sub-optimal results with small misalignments. While these misalignments are negligible for large scale flow aggregation in desire line maps, they pose substantial obstacles for small scale flow aggregation in high resolution maps. To remove these remaining misalignments, we introduce innovative local alignment algorithms, where we infer road segments to serve as local reference segments, and proceed to align nearby road segments to them. With each local alignment iteration, the misalignments of the GPS trajectories with each other and with the road network are reduced, and so converge closer to a minimal flow map. By analysing a set of empirical GPS trajectories collected in Hannover, Germany, we confirm that our minimal flow map has high levels of spatial resolution, accuracy and coverage." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/26/UsingiteratedlocalalignmenttoaggregateGPStrajectoriesintoatrafficflowmap.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/26/UsingiteratedlocalalignmenttoaggregateGPStrajectoriesintoatrafficflowmap.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Using iterated local alignment to aggregate GPS trajectories into a traffic flow map" />
+<script type="application/ld+json">
+{"description":"Desire line maps are widely deployed for traffic flow analysis by virtue of their ease of interpretation and computation. They can be considered to be simplified traffic flow maps, whereas the computational challenges in aggregating small scale traffic flows prevent the wider dissemination of high resolution flow maps. GPS trajectories are a promising data source to solve this challenging problem. The solution begins with the alignment (or map matching) of the GPS trajectories to the road network. However even the state-of-the-art map matching APIs produce sub-optimal results with small misalignments. While these misalignments are negligible for large scale flow aggregation in desire line maps, they pose substantial obstacles for small scale flow aggregation in high resolution maps. To remove these remaining misalignments, we introduce innovative local alignment algorithms, where we infer road segments to serve as local reference segments, and proceed to align nearby road segments to them. With each local alignment iteration, the misalignments of the GPS trajectories with each other and with the road network are reduced, and so converge closer to a minimal flow map. By analysing a set of empirical GPS trajectories collected in Hannover, Germany, we confirm that our minimal flow map has high levels of spatial resolution, accuracy and coverage.","author":{"@type":"Person","name":"Tarn Duong"},"headline":"Using iterated local alignment to aggregate GPS trajectories into a traffic flow map","dateModified":"2024-06-26T00:00:00+00:00","datePublished":"2024-06-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/26/UsingiteratedlocalalignmenttoaggregateGPStrajectoriesintoatrafficflowmap.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/26/UsingiteratedlocalalignmenttoaggregateGPStrajectoriesintoatrafficflowmap.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-26 00:00:00 +0000">06-26</time>
+  </p>
+  
+  <h1>Using iterated local alignment to aggregate GPS trajectories into a traffic flow map</h1>
+  <br>Tarn Duong</h3>
+  <br> [stat.AP]
+
+  <p>Desire line maps are widely deployed for traffic flow analysis by virtue of their ease of interpretation and computation. They can be considered to be simplified traffic flow maps, whereas the computational challenges in aggregating small scale traffic flows prevent the wider dissemination of high resolution flow maps. GPS trajectories are a promising data source to solve this challenging problem. The solution begins with the alignment (or map matching) of the GPS trajectories to the road network. However even the state-of-the-art map matching APIs produce sub-optimal results with small misalignments. While these misalignments are negligible for large scale flow aggregation in desire line maps, they pose substantial obstacles for small scale flow aggregation in high resolution maps. To remove these remaining misalignments, we introduce innovative local alignment algorithms, where we infer road segments to serve as local reference segments, and proceed to align nearby road segments to them. With each local alignment iteration, the misalignments of the GPS trajectories with each other and with the road network are reduced, and so converge closer to a minimal flow map. By analysing a set of empirical GPS trajectories collected in Hannover, Germany, we confirm that our minimal flow map has high levels of spatial resolution, accuracy and coverage.</p>
+
+<p><a href="https://arxiv.org/abs/2406.17500">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
