@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian inference: More than Bayes's theorem</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bayesian inference: More than Bayes’s theorem" />
+<meta name="author" content="Thomas J. Loredo, Robert L. Wolpert" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian inference gets its name from Bayes’s theorem, expressing posterior probabilities for hypotheses about a data generating process as the (normalized) product of prior probabilities and a likelihood function. But Bayesian inference uses all of probability theory, not just Bayes’s theorem. Many hypotheses of scientific interest are composite hypotheses, with the strength of evidence for the hypothesis dependent on knowledge about auxiliary factors, such as the values of nuisance parameters (e.g., uncertain background rates or calibration factors). Many important capabilities of Bayesian methods arise from use of the law of total probability, which instructs analysts to compute probabilities for composite hypotheses by marginalization over auxiliary factors. This tutorial targets relative newcomers to Bayesian inference, aiming to complement tutorials that focus on Bayes’s theorem and how priors modulate likelihoods. The emphasis here is on marginalization over parameter spaces – both how it is the foundation for important capabilities, and how it may motivate caution when parameter spaces are large. Topics covered include the difference between likelihood and probability, understanding the impact of priors beyond merely shifting the maximum likelihood estimate, and the role of marginalization in accounting for uncertainty in nuisance parameters, systematic error, and model misspecification." />
+<meta property="og:description" content="Bayesian inference gets its name from Bayes’s theorem, expressing posterior probabilities for hypotheses about a data generating process as the (normalized) product of prior probabilities and a likelihood function. But Bayesian inference uses all of probability theory, not just Bayes’s theorem. Many hypotheses of scientific interest are composite hypotheses, with the strength of evidence for the hypothesis dependent on knowledge about auxiliary factors, such as the values of nuisance parameters (e.g., uncertain background rates or calibration factors). Many important capabilities of Bayesian methods arise from use of the law of total probability, which instructs analysts to compute probabilities for composite hypotheses by marginalization over auxiliary factors. This tutorial targets relative newcomers to Bayesian inference, aiming to complement tutorials that focus on Bayes’s theorem and how priors modulate likelihoods. The emphasis here is on marginalization over parameter spaces – both how it is the foundation for important capabilities, and how it may motivate caution when parameter spaces are large. Topics covered include the difference between likelihood and probability, understanding the impact of priors beyond merely shifting the maximum likelihood estimate, and the role of marginalization in accounting for uncertainty in nuisance parameters, systematic error, and model misspecification." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/28/BayesianinferenceMorethanBayesstheorem.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/28/BayesianinferenceMorethanBayesstheorem.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bayesian inference: More than Bayes’s theorem" />
+<script type="application/ld+json">
+{"description":"Bayesian inference gets its name from Bayes’s theorem, expressing posterior probabilities for hypotheses about a data generating process as the (normalized) product of prior probabilities and a likelihood function. But Bayesian inference uses all of probability theory, not just Bayes’s theorem. Many hypotheses of scientific interest are composite hypotheses, with the strength of evidence for the hypothesis dependent on knowledge about auxiliary factors, such as the values of nuisance parameters (e.g., uncertain background rates or calibration factors). Many important capabilities of Bayesian methods arise from use of the law of total probability, which instructs analysts to compute probabilities for composite hypotheses by marginalization over auxiliary factors. This tutorial targets relative newcomers to Bayesian inference, aiming to complement tutorials that focus on Bayes’s theorem and how priors modulate likelihoods. The emphasis here is on marginalization over parameter spaces – both how it is the foundation for important capabilities, and how it may motivate caution when parameter spaces are large. Topics covered include the difference between likelihood and probability, understanding the impact of priors beyond merely shifting the maximum likelihood estimate, and the role of marginalization in accounting for uncertainty in nuisance parameters, systematic error, and model misspecification.","author":{"@type":"Person","name":"Thomas J. Loredo, Robert L. Wolpert"},"headline":"Bayesian inference: More than Bayes’s theorem","dateModified":"2024-06-28T00:00:00+00:00","datePublished":"2024-06-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/28/BayesianinferenceMorethanBayesstheorem.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/28/BayesianinferenceMorethanBayesstheorem.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-28 00:00:00 +0000">06-28</time>
+  </p>
+  
+  <h1>Bayesian inference: More than Bayes's theorem</h1>
+  <br>Thomas J. Loredo, Robert L. Wolpert</h3>
+  <br> [stat.ME]
+
+  <p>Bayesian inference gets its name from <em>Bayes’s theorem</em>, expressing posterior probabilities for hypotheses about a data generating process as the (normalized) product of prior probabilities and a likelihood function. But Bayesian inference uses all of probability theory, not just Bayes’s theorem. Many hypotheses of scientific interest are <em>composite hypotheses</em>, with the strength of evidence for the hypothesis dependent on knowledge about auxiliary factors, such as the values of nuisance parameters (e.g., uncertain background rates or calibration factors). Many important capabilities of Bayesian methods arise from use of the law of total probability, which instructs analysts to compute probabilities for composite hypotheses by <em>marginalization</em> over auxiliary factors. This tutorial targets relative newcomers to Bayesian inference, aiming to complement tutorials that focus on Bayes’s theorem and how priors modulate likelihoods. The emphasis here is on marginalization over parameter spaces – both how it is the foundation for important capabilities, and how it may motivate caution when parameter spaces are large. Topics covered include the difference between likelihood and probability, understanding the impact of priors beyond merely shifting the maximum likelihood estimate, and the role of marginalization in accounting for uncertainty in nuisance parameters, systematic error, and model misspecification.</p>
+
+<p><a href="https://arxiv.org/abs/2406.18905">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

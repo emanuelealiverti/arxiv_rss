@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Data Sketching and Stacking: A Confluence of Two Strategies for Predictive Inference in Gaussian Process Regressions with High-Dimensional Features</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Data Sketching and Stacking: A Confluence of Two Strategies for Predictive Inference in Gaussian Process Regressions with High-Dimensional Features" />
+<meta name="author" content="Samuel Gailliot, Rajarshi Guhaniyogi, Roger D. Peng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This article focuses on drawing computationally-efficient predictive inference from Gaussian process (GP) regressions with a large number of features when the response is conditionally independent of the features given the projection to a noisy low dimensional manifold. Bayesian estimation of the regression relationship using Markov Chain Monte Carlo and subsequent predictive inference is computationally prohibitive and may lead to inferential inaccuracies since accurate variable selection is essentially impossible in such high-dimensional GP regressions. As an alternative, this article proposes a strategy to sketch the high-dimensional feature vector with a carefully constructed sketching matrix, before fitting a GP with the scalar outcome and the sketched feature vector to draw predictive inference. The analysis is performed in parallel with many different sketching matrices and smoothing parameters in different processors, and the predictive inferences are combined using Bayesian predictive stacking. Since posterior predictive distribution in each processor is analytically tractable, the algorithm allows bypassing the robustness issues due to convergence and mixing of MCMC chains, leading to fast implementation with very large number of features. Simulation studies show superior performance of the proposed approach with a wide variety of competitors. The approach outperforms competitors in drawing point prediction with predictive uncertainties of outdoor air pollution from satellite images." />
+<meta property="og:description" content="This article focuses on drawing computationally-efficient predictive inference from Gaussian process (GP) regressions with a large number of features when the response is conditionally independent of the features given the projection to a noisy low dimensional manifold. Bayesian estimation of the regression relationship using Markov Chain Monte Carlo and subsequent predictive inference is computationally prohibitive and may lead to inferential inaccuracies since accurate variable selection is essentially impossible in such high-dimensional GP regressions. As an alternative, this article proposes a strategy to sketch the high-dimensional feature vector with a carefully constructed sketching matrix, before fitting a GP with the scalar outcome and the sketched feature vector to draw predictive inference. The analysis is performed in parallel with many different sketching matrices and smoothing parameters in different processors, and the predictive inferences are combined using Bayesian predictive stacking. Since posterior predictive distribution in each processor is analytically tractable, the algorithm allows bypassing the robustness issues due to convergence and mixing of MCMC chains, leading to fast implementation with very large number of features. Simulation studies show superior performance of the proposed approach with a wide variety of competitors. The approach outperforms competitors in drawing point prediction with predictive uncertainties of outdoor air pollution from satellite images." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/06/28/DataSketchingandStackingAConfluenceofTwoStrategiesforPredictiveInferenceinGaussianProcessRegressionswithHighDimensionalFeatures.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/06/28/DataSketchingandStackingAConfluenceofTwoStrategiesforPredictiveInferenceinGaussianProcessRegressionswithHighDimensionalFeatures.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Sketching and Stacking: A Confluence of Two Strategies for Predictive Inference in Gaussian Process Regressions with High-Dimensional Features" />
+<script type="application/ld+json">
+{"description":"This article focuses on drawing computationally-efficient predictive inference from Gaussian process (GP) regressions with a large number of features when the response is conditionally independent of the features given the projection to a noisy low dimensional manifold. Bayesian estimation of the regression relationship using Markov Chain Monte Carlo and subsequent predictive inference is computationally prohibitive and may lead to inferential inaccuracies since accurate variable selection is essentially impossible in such high-dimensional GP regressions. As an alternative, this article proposes a strategy to sketch the high-dimensional feature vector with a carefully constructed sketching matrix, before fitting a GP with the scalar outcome and the sketched feature vector to draw predictive inference. The analysis is performed in parallel with many different sketching matrices and smoothing parameters in different processors, and the predictive inferences are combined using Bayesian predictive stacking. Since posterior predictive distribution in each processor is analytically tractable, the algorithm allows bypassing the robustness issues due to convergence and mixing of MCMC chains, leading to fast implementation with very large number of features. Simulation studies show superior performance of the proposed approach with a wide variety of competitors. The approach outperforms competitors in drawing point prediction with predictive uncertainties of outdoor air pollution from satellite images.","author":{"@type":"Person","name":"Samuel Gailliot, Rajarshi Guhaniyogi, Roger D. Peng"},"headline":"Data Sketching and Stacking: A Confluence of Two Strategies for Predictive Inference in Gaussian Process Regressions with High-Dimensional Features","dateModified":"2024-06-28T00:00:00+00:00","datePublished":"2024-06-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/28/DataSketchingandStackingAConfluenceofTwoStrategiesforPredictiveInferenceinGaussianProcessRegressionswithHighDimensionalFeatures.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/06/28/DataSketchingandStackingAConfluenceofTwoStrategiesforPredictiveInferenceinGaussianProcessRegressionswithHighDimensionalFeatures.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-06-28 00:00:00 +0000">06-28</time>
+  </p>
+  
+  <h1>Data Sketching and Stacking: A Confluence of Two Strategies for Predictive Inference in Gaussian Process Regressions with High-Dimensional Features</h1>
+  <br>Samuel Gailliot, Rajarshi Guhaniyogi, Roger D. Peng</h3>
+  <br> [stat.ME]
+
+  <p>This article focuses on drawing computationally-efficient predictive inference from Gaussian process (GP) regressions with a large number of features when the response is conditionally independent of the features given the projection to a noisy low dimensional manifold. Bayesian estimation of the regression relationship using Markov Chain Monte Carlo and subsequent predictive inference is computationally prohibitive and may lead to inferential inaccuracies since accurate variable selection is essentially impossible in such high-dimensional GP regressions. As an alternative, this article proposes a strategy to sketch the high-dimensional feature vector with a carefully constructed sketching matrix, before fitting a GP with the scalar outcome and the sketched feature vector to draw predictive inference. The analysis is performed in parallel with many different sketching matrices and smoothing parameters in different processors, and the predictive inferences are combined using Bayesian predictive stacking. Since posterior predictive distribution in each processor is analytically tractable, the algorithm allows bypassing the robustness issues due to convergence and mixing of MCMC chains, leading to fast implementation with very large number of features. Simulation studies show superior performance of the proposed approach with a wide variety of competitors. The approach outperforms competitors in drawing point prediction with predictive uncertainties of outdoor air pollution from satellite images.</p>
+
+<p><a href="https://arxiv.org/abs/2406.18681">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
