@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>VARX Granger Analysis: Modeling, Inference, and Applications</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="VARX Granger Analysis: Modeling, Inference, and Applications" />
+<meta name="author" content="Lucas C. Parra, Aimar Silvan Ortubay, Maximilian Nentwich, Jens Madsen, Behtash Babadi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Complex systems, such as brains, markets, and societies, exhibit internal dynamics influenced by external factors. Disentangling delayed external effects from internal dynamics within these systems is often challenging. We propose using a Vector Autoregressive model with eXogenous input (VARX) to capture delayed interactions between internal and external variables. While this model aligns with Granger’s statistical formalism for testing “causal relations”, the connection between the two is not widely understood. Here, we bridge this gap by providing fundamental equations, user-friendly code, and demonstrations using simulated and real-world data from neuroscience, physiology, sociology, and economics. Our examples illustrate how the model avoids spurious correlation by factoring out external influences from internal dynamics, leading to more parsimonious explanations of the systems. We also provide methods for enhancing model efficiency, such as L2 regularization for limited data and basis functions to cope with extended delays. Additionally, we analyze model performance under various scenarios where model assumptions are violated. MATLAB, Python, and R code are provided for easy adoption: https://github.com/lcparra/varx" />
+<meta property="og:description" content="Complex systems, such as brains, markets, and societies, exhibit internal dynamics influenced by external factors. Disentangling delayed external effects from internal dynamics within these systems is often challenging. We propose using a Vector Autoregressive model with eXogenous input (VARX) to capture delayed interactions between internal and external variables. While this model aligns with Granger’s statistical formalism for testing “causal relations”, the connection between the two is not widely understood. Here, we bridge this gap by providing fundamental equations, user-friendly code, and demonstrations using simulated and real-world data from neuroscience, physiology, sociology, and economics. Our examples illustrate how the model avoids spurious correlation by factoring out external influences from internal dynamics, leading to more parsimonious explanations of the systems. We also provide methods for enhancing model efficiency, such as L2 regularization for limited data and basis functions to cope with extended delays. Additionally, we analyze model performance under various scenarios where model assumptions are violated. MATLAB, Python, and R code are provided for easy adoption: https://github.com/lcparra/varx" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/07/02/VARXGrangerAnalysisModelingInferenceandApplications.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/07/02/VARXGrangerAnalysisModelingInferenceandApplications.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="VARX Granger Analysis: Modeling, Inference, and Applications" />
+<script type="application/ld+json">
+{"description":"Complex systems, such as brains, markets, and societies, exhibit internal dynamics influenced by external factors. Disentangling delayed external effects from internal dynamics within these systems is often challenging. We propose using a Vector Autoregressive model with eXogenous input (VARX) to capture delayed interactions between internal and external variables. While this model aligns with Granger’s statistical formalism for testing “causal relations”, the connection between the two is not widely understood. Here, we bridge this gap by providing fundamental equations, user-friendly code, and demonstrations using simulated and real-world data from neuroscience, physiology, sociology, and economics. Our examples illustrate how the model avoids spurious correlation by factoring out external influences from internal dynamics, leading to more parsimonious explanations of the systems. We also provide methods for enhancing model efficiency, such as L2 regularization for limited data and basis functions to cope with extended delays. Additionally, we analyze model performance under various scenarios where model assumptions are violated. MATLAB, Python, and R code are provided for easy adoption: https://github.com/lcparra/varx","author":{"@type":"Person","name":"Lucas C. Parra, Aimar Silvan Ortubay, Maximilian Nentwich, Jens Madsen, Behtash Babadi"},"headline":"VARX Granger Analysis: Modeling, Inference, and Applications","dateModified":"2024-07-02T00:00:00+00:00","datePublished":"2024-07-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/02/VARXGrangerAnalysisModelingInferenceandApplications.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/02/VARXGrangerAnalysisModelingInferenceandApplications.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-02 00:00:00 +0000">07-02</time>
+  </p>
+  
+  <h1>VARX Granger Analysis: Modeling, Inference, and Applications</h1>
+  <br>Lucas C. Parra, Aimar Silvan Ortubay, Maximilian Nentwich, Jens Madsen, Behtash Babadi</h3>
+  <br> [stat.ME]
+
+  <p>Complex systems, such as brains, markets, and societies, exhibit internal dynamics influenced by external factors. Disentangling delayed external effects from internal dynamics within these systems is often challenging. We propose using a Vector Autoregressive model with eXogenous input (VARX) to capture delayed interactions between internal and external variables. While this model aligns with Granger’s statistical formalism for testing “causal relations”, the connection between the two is not widely understood. Here, we bridge this gap by providing fundamental equations, user-friendly code, and demonstrations using simulated and real-world data from neuroscience, physiology, sociology, and economics. Our examples illustrate how the model avoids spurious correlation by factoring out external influences from internal dynamics, leading to more parsimonious explanations of the systems. We also provide methods for enhancing model efficiency, such as L2 regularization for limited data and basis functions to cope with extended delays. Additionally, we analyze model performance under various scenarios where model assumptions are violated. MATLAB, Python, and R code are provided for easy adoption: https://github.com/lcparra/varx</p>
+
+<p><a href="https://arxiv.org/abs/2404.10834">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

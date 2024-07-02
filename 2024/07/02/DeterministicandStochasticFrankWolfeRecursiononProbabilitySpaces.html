@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Deterministic and Stochastic Frank-Wolfe Recursion on Probability Spaces</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Deterministic and Stochastic Frank-Wolfe Recursion on Probability Spaces" />
+<meta name="author" content="Di Yu, Shane G. Henderson, Raghu Pasupathy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Motivated by applications in emergency response and experimental design, we consider smooth stochastic optimization problems over probability measures supported on compact subsets of the Euclidean space. With the influence function as the variational object, we construct a deterministic Frank-Wolfe (dFW) recursion for probability spaces, made especially possible by a lemma that identifies a ``closed-form’’ solution to the infinite-dimensional Frank-Wolfe sub-problem. Each iterate in dFW is expressed as a convex combination of the incumbent iterate and a Dirac measure concentrating on the minimum of the influence function at the incumbent iterate. To address common application contexts that have access only to Monte Carlo observations of the objective and influence function, we construct a stochastic Frank-Wolfe (sFW) variation that generates a random sequence of probability measures constructed using minima of increasingly accurate estimates of the influence function. We demonstrate that sFW’s optimality gap sequence exhibits $O(k^{-1})$ iteration complexity almost surely and in expectation for smooth convex objectives, and $O(k^{-1/2})$ (in Frank-Wolfe gap) for smooth non-convex objectives. Furthermore, we show that an easy-to-implement fixed-step, fixed-sample version of (sFW) exhibits exponential convergence to $\varepsilon$-optimality. We end with a central limit theorem on the observed objective values at the sequence of generated random measures. To further intuition, we include several illustrative examples with exact influence function calculations." />
+<meta property="og:description" content="Motivated by applications in emergency response and experimental design, we consider smooth stochastic optimization problems over probability measures supported on compact subsets of the Euclidean space. With the influence function as the variational object, we construct a deterministic Frank-Wolfe (dFW) recursion for probability spaces, made especially possible by a lemma that identifies a ``closed-form’’ solution to the infinite-dimensional Frank-Wolfe sub-problem. Each iterate in dFW is expressed as a convex combination of the incumbent iterate and a Dirac measure concentrating on the minimum of the influence function at the incumbent iterate. To address common application contexts that have access only to Monte Carlo observations of the objective and influence function, we construct a stochastic Frank-Wolfe (sFW) variation that generates a random sequence of probability measures constructed using minima of increasingly accurate estimates of the influence function. We demonstrate that sFW’s optimality gap sequence exhibits $O(k^{-1})$ iteration complexity almost surely and in expectation for smooth convex objectives, and $O(k^{-1/2})$ (in Frank-Wolfe gap) for smooth non-convex objectives. Furthermore, we show that an easy-to-implement fixed-step, fixed-sample version of (sFW) exhibits exponential convergence to $\varepsilon$-optimality. We end with a central limit theorem on the observed objective values at the sequence of generated random measures. To further intuition, we include several illustrative examples with exact influence function calculations." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/07/02/DeterministicandStochasticFrankWolfeRecursiononProbabilitySpaces.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/07/02/DeterministicandStochasticFrankWolfeRecursiononProbabilitySpaces.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Deterministic and Stochastic Frank-Wolfe Recursion on Probability Spaces" />
+<script type="application/ld+json">
+{"description":"Motivated by applications in emergency response and experimental design, we consider smooth stochastic optimization problems over probability measures supported on compact subsets of the Euclidean space. With the influence function as the variational object, we construct a deterministic Frank-Wolfe (dFW) recursion for probability spaces, made especially possible by a lemma that identifies a ``closed-form’’ solution to the infinite-dimensional Frank-Wolfe sub-problem. Each iterate in dFW is expressed as a convex combination of the incumbent iterate and a Dirac measure concentrating on the minimum of the influence function at the incumbent iterate. To address common application contexts that have access only to Monte Carlo observations of the objective and influence function, we construct a stochastic Frank-Wolfe (sFW) variation that generates a random sequence of probability measures constructed using minima of increasingly accurate estimates of the influence function. We demonstrate that sFW’s optimality gap sequence exhibits $O(k^{-1})$ iteration complexity almost surely and in expectation for smooth convex objectives, and $O(k^{-1/2})$ (in Frank-Wolfe gap) for smooth non-convex objectives. Furthermore, we show that an easy-to-implement fixed-step, fixed-sample version of (sFW) exhibits exponential convergence to $\\varepsilon$-optimality. We end with a central limit theorem on the observed objective values at the sequence of generated random measures. To further intuition, we include several illustrative examples with exact influence function calculations.","author":{"@type":"Person","name":"Di Yu, Shane G. Henderson, Raghu Pasupathy"},"headline":"Deterministic and Stochastic Frank-Wolfe Recursion on Probability Spaces","dateModified":"2024-07-02T00:00:00+00:00","datePublished":"2024-07-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/02/DeterministicandStochasticFrankWolfeRecursiononProbabilitySpaces.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/02/DeterministicandStochasticFrankWolfeRecursiononProbabilitySpaces.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-02 00:00:00 +0000">07-02</time>
+  </p>
+  
+  <h1>Deterministic and Stochastic Frank-Wolfe Recursion on Probability Spaces</h1>
+  <br>Di Yu, Shane G. Henderson, Raghu Pasupathy</h3>
+  <br> [stat.CO]
+
+  <p>Motivated by applications in emergency response and experimental design, we consider smooth stochastic optimization problems over probability measures supported on compact subsets of the Euclidean space. With the influence function as the variational object, we construct a deterministic Frank-Wolfe (dFW) recursion for probability spaces, made especially possible by a lemma that identifies a ``closed-form’’ solution to the infinite-dimensional Frank-Wolfe sub-problem. Each iterate in dFW is expressed as a convex combination of the incumbent iterate and a Dirac measure concentrating on the minimum of the influence function at the incumbent iterate. To address common application contexts that have access only to Monte Carlo observations of the objective and influence function, we construct a stochastic Frank-Wolfe (sFW) variation that generates a random sequence of probability measures constructed using minima of increasingly accurate estimates of the influence function. We demonstrate that sFW’s optimality gap sequence exhibits $O(k^{-1})$ iteration complexity almost surely and in expectation for smooth convex objectives, and $O(k^{-1/2})$ (in Frank-Wolfe gap) for smooth non-convex objectives. Furthermore, we show that an easy-to-implement fixed-step, fixed-sample version of (sFW) exhibits exponential convergence to $\varepsilon$-optimality. We end with a central limit theorem on the observed objective values at the sequence of generated random measures. To further intuition, we include several illustrative examples with exact influence function calculations.</p>
+
+<p><a href="https://arxiv.org/abs/2407.00307">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
