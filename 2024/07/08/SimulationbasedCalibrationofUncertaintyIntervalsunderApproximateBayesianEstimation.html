@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Simulation-based Calibration of Uncertainty Intervals under Approximate Bayesian Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Simulation-based Calibration of Uncertainty Intervals under Approximate Bayesian Estimation" />
+<meta name="author" content="Terrance D. Savitsky, Julie Gershunskaya" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The mean field variational Bayes (VB) algorithm implemented in Stan is relatively fast and efficient, making it feasible to produce model-estimated official statistics on a rapid timeline. Yet, while consistent point estimates of parameters are achieved for continuous data models, the mean field approximation often produces inaccurate uncertainty quantification to the extent that parameters are correlated a posteriori. In this paper, we propose a simulation procedure that calibrates uncertainty intervals for model parameters estimated under approximate algorithms to achieve nominal coverages. Our procedure detects and corrects biased estimation of both first and second moments of approximate marginal posterior distributions induced by any estimation algorithm that produces consistent first moments under specification of the correct model. The method generates replicate datasets using parameters estimated in an initial model run. The model is subsequently re-estimated on each replicate dataset, and we use the empirical distribution over the re-samples to formulate calibrated confidence intervals of parameter estimates of the initial model run that are guaranteed to asymptotically achieve nominal coverage. We demonstrate the performance of our procedure in Monte Carlo simulation study and apply it to real data from the Current Employment Statistics survey." />
+<meta property="og:description" content="The mean field variational Bayes (VB) algorithm implemented in Stan is relatively fast and efficient, making it feasible to produce model-estimated official statistics on a rapid timeline. Yet, while consistent point estimates of parameters are achieved for continuous data models, the mean field approximation often produces inaccurate uncertainty quantification to the extent that parameters are correlated a posteriori. In this paper, we propose a simulation procedure that calibrates uncertainty intervals for model parameters estimated under approximate algorithms to achieve nominal coverages. Our procedure detects and corrects biased estimation of both first and second moments of approximate marginal posterior distributions induced by any estimation algorithm that produces consistent first moments under specification of the correct model. The method generates replicate datasets using parameters estimated in an initial model run. The model is subsequently re-estimated on each replicate dataset, and we use the empirical distribution over the re-samples to formulate calibrated confidence intervals of parameter estimates of the initial model run that are guaranteed to asymptotically achieve nominal coverage. We demonstrate the performance of our procedure in Monte Carlo simulation study and apply it to real data from the Current Employment Statistics survey." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/07/08/SimulationbasedCalibrationofUncertaintyIntervalsunderApproximateBayesianEstimation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/07/08/SimulationbasedCalibrationofUncertaintyIntervalsunderApproximateBayesianEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-08T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Simulation-based Calibration of Uncertainty Intervals under Approximate Bayesian Estimation" />
+<script type="application/ld+json">
+{"description":"The mean field variational Bayes (VB) algorithm implemented in Stan is relatively fast and efficient, making it feasible to produce model-estimated official statistics on a rapid timeline. Yet, while consistent point estimates of parameters are achieved for continuous data models, the mean field approximation often produces inaccurate uncertainty quantification to the extent that parameters are correlated a posteriori. In this paper, we propose a simulation procedure that calibrates uncertainty intervals for model parameters estimated under approximate algorithms to achieve nominal coverages. Our procedure detects and corrects biased estimation of both first and second moments of approximate marginal posterior distributions induced by any estimation algorithm that produces consistent first moments under specification of the correct model. The method generates replicate datasets using parameters estimated in an initial model run. The model is subsequently re-estimated on each replicate dataset, and we use the empirical distribution over the re-samples to formulate calibrated confidence intervals of parameter estimates of the initial model run that are guaranteed to asymptotically achieve nominal coverage. We demonstrate the performance of our procedure in Monte Carlo simulation study and apply it to real data from the Current Employment Statistics survey.","author":{"@type":"Person","name":"Terrance D. Savitsky, Julie Gershunskaya"},"headline":"Simulation-based Calibration of Uncertainty Intervals under Approximate Bayesian Estimation","dateModified":"2024-07-08T00:00:00+00:00","datePublished":"2024-07-08T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/08/SimulationbasedCalibrationofUncertaintyIntervalsunderApproximateBayesianEstimation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/08/SimulationbasedCalibrationofUncertaintyIntervalsunderApproximateBayesianEstimation.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-08 00:00:00 +0000">07-08</time>
+  </p>
+  
+  <h1>Simulation-based Calibration of Uncertainty Intervals under Approximate Bayesian Estimation</h1>
+  <br>Terrance D. Savitsky, Julie Gershunskaya</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>The mean field variational Bayes (VB) algorithm implemented in Stan is relatively fast and efficient, making it feasible to produce model-estimated official statistics on a rapid timeline. Yet, while consistent point estimates of parameters are achieved for continuous data models, the mean field approximation often produces inaccurate uncertainty quantification to the extent that parameters are correlated a posteriori. In this paper, we propose a simulation procedure that calibrates uncertainty intervals for model parameters estimated under approximate algorithms to achieve nominal coverages. Our procedure detects and corrects biased estimation of both first and second moments of approximate marginal posterior distributions induced by any estimation algorithm that produces consistent first moments under specification of the correct model. The method generates replicate datasets using parameters estimated in an initial model run. The model is subsequently re-estimated on each replicate dataset, and we use the empirical distribution over the re-samples to formulate calibrated confidence intervals of parameter estimates of the initial model run that are guaranteed to asymptotically achieve nominal coverage. We demonstrate the performance of our procedure in Monte Carlo simulation study and apply it to real data from the Current Employment Statistics survey.</p>
+
+<p><a href="https://arxiv.org/abs/2407.04659">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
