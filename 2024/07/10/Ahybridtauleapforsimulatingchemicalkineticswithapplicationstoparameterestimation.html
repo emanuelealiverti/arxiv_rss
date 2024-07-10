@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A hybrid tau-leap for simulating chemical kinetics with applications to parameter estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A hybrid tau-leap for simulating chemical kinetics with applications to parameter estimation" />
+<meta name="author" content="Thomas Trigo Trindade, Konstantinos C. Zygalakis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We consider the problem of efficiently simulating stochastic models of chemical kinetics. The Gillespie Stochastic Simulation algorithm (SSA) is often used to simulate these models, however, in many scenarios of interest, the computational cost quickly becomes prohibitive. This is further exasperated in the Bayesian inference context when estimating parameters of chemical models, as the intractability of the likelihood requires multiple simulations of the underlying system. To deal with issues of computational complexity in this paper, we propose a novel hybrid $\tau$-leap algorithm for simulating well-mixed chemical systems. In particular, the algorithm uses $\tau$-leap when appropriate (high population densities), and SSA when necessary (low population densities, when discrete effects become non-negligible). In the intermediate regime, a combination of the two methods, which leverages the properties of the underlying Poisson formulation, is employed. As illustrated through a number of numerical experiments the hybrid $\tau$ offers significant computational savings when compared to SSA without however sacrificing the overall accuracy. This feature is particularly welcomed in the Bayesian inference context, as it allows for parameter estimation of stochastic chemical kinetics at reduced computational cost." />
+<meta property="og:description" content="We consider the problem of efficiently simulating stochastic models of chemical kinetics. The Gillespie Stochastic Simulation algorithm (SSA) is often used to simulate these models, however, in many scenarios of interest, the computational cost quickly becomes prohibitive. This is further exasperated in the Bayesian inference context when estimating parameters of chemical models, as the intractability of the likelihood requires multiple simulations of the underlying system. To deal with issues of computational complexity in this paper, we propose a novel hybrid $\tau$-leap algorithm for simulating well-mixed chemical systems. In particular, the algorithm uses $\tau$-leap when appropriate (high population densities), and SSA when necessary (low population densities, when discrete effects become non-negligible). In the intermediate regime, a combination of the two methods, which leverages the properties of the underlying Poisson formulation, is employed. As illustrated through a number of numerical experiments the hybrid $\tau$ offers significant computational savings when compared to SSA without however sacrificing the overall accuracy. This feature is particularly welcomed in the Bayesian inference context, as it allows for parameter estimation of stochastic chemical kinetics at reduced computational cost." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/07/10/Ahybridtauleapforsimulatingchemicalkineticswithapplicationstoparameterestimation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/07/10/Ahybridtauleapforsimulatingchemicalkineticswithapplicationstoparameterestimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A hybrid tau-leap for simulating chemical kinetics with applications to parameter estimation" />
+<script type="application/ld+json">
+{"description":"We consider the problem of efficiently simulating stochastic models of chemical kinetics. The Gillespie Stochastic Simulation algorithm (SSA) is often used to simulate these models, however, in many scenarios of interest, the computational cost quickly becomes prohibitive. This is further exasperated in the Bayesian inference context when estimating parameters of chemical models, as the intractability of the likelihood requires multiple simulations of the underlying system. To deal with issues of computational complexity in this paper, we propose a novel hybrid $\\tau$-leap algorithm for simulating well-mixed chemical systems. In particular, the algorithm uses $\\tau$-leap when appropriate (high population densities), and SSA when necessary (low population densities, when discrete effects become non-negligible). In the intermediate regime, a combination of the two methods, which leverages the properties of the underlying Poisson formulation, is employed. As illustrated through a number of numerical experiments the hybrid $\\tau$ offers significant computational savings when compared to SSA without however sacrificing the overall accuracy. This feature is particularly welcomed in the Bayesian inference context, as it allows for parameter estimation of stochastic chemical kinetics at reduced computational cost.","author":{"@type":"Person","name":"Thomas Trigo Trindade, Konstantinos C. Zygalakis"},"headline":"A hybrid tau-leap for simulating chemical kinetics with applications to parameter estimation","dateModified":"2024-07-10T00:00:00+00:00","datePublished":"2024-07-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/10/Ahybridtauleapforsimulatingchemicalkineticswithapplicationstoparameterestimation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/10/Ahybridtauleapforsimulatingchemicalkineticswithapplicationstoparameterestimation.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-10 00:00:00 +0000">07-10</time>
+  </p>
+  
+  <h1>A hybrid tau-leap for simulating chemical kinetics with applications to parameter estimation</h1>
+  <br>Thomas Trigo Trindade, Konstantinos C. Zygalakis</h3>
+  <br> [stat.CO]
+
+  <p>We consider the problem of efficiently simulating stochastic models of chemical kinetics. The Gillespie Stochastic Simulation algorithm (SSA) is often used to simulate these models, however, in many scenarios of interest, the computational cost quickly becomes prohibitive. This is further exasperated in the Bayesian inference context when estimating parameters of chemical models, as the intractability of the likelihood requires multiple simulations of the underlying system. To deal with issues of computational complexity in this paper, we propose a novel hybrid $\tau$-leap algorithm for simulating well-mixed chemical systems. In particular, the algorithm uses $\tau$-leap when appropriate (high population densities), and SSA when necessary (low population densities, when discrete effects become non-negligible). In the intermediate regime, a combination of the two methods, which leverages the properties of the underlying Poisson formulation, is employed. As illustrated through a number of numerical experiments the hybrid $\tau$ offers significant computational savings when compared to SSA without however sacrificing the overall accuracy. This feature is particularly welcomed in the Bayesian inference context, as it allows for parameter estimation of stochastic chemical kinetics at reduced computational cost.</p>
+
+<p><a href="https://arxiv.org/abs/2401.09097">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
