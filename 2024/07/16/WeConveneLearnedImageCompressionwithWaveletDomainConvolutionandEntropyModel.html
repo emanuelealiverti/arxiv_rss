@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>WeConvene: Learned Image Compression with Wavelet-Domain Convolution and Entropy Model</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="WeConvene: Learned Image Compression with Wavelet-Domain Convolution and Entropy Model" />
+<meta name="author" content="Haisheng Fu, Jie Liang, Zhenman Fang, Jingning Han, Feng Liang, Guohe Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recently learned image compression (LIC) has achieved great progress and even outperformed the traditional approach using DCT or discrete wavelet transform (DWT). However, LIC mainly reduces spatial redundancy in the autoencoder networks and entropy coding, but has not fully removed the frequency-domain correlation explicitly as in DCT or DWT. To leverage the best of both worlds, we propose a surprisingly simple but efficient framework, which introduces the DWT to both the convolution layers and entropy coding of CNN-based LIC. First, in both the core and hyperprior autoencoder networks, we propose a Wavelet-domain Convolution (WeConv) module, which performs convolution after DWT, and then converts the data back to spatial domain via inverse DWT. This module is used at selected layers in a CNN network to reduce the frequency-domain correlation explicitly and make the signal sparser in DWT domain. We also propose a wavelet-domain Channel-wise Auto-Regressive entropy Model (WeChARM), where the output latent representations from the encoder network are first transformed by the DWT, before applying quantization and entropy coding, as in the traditional paradigm. Moreover, the entropy coding is split into two steps. We first code all low-frequency DWT coefficients, and then use them as prior to code high-frequency coefficients. The channel-wise entropy coding is further used in each step. By combining WeConv and WeChARM, the proposed WeConvene scheme achieves superior R-D performance compared to other state-of-the-art LIC methods as well as the latest H.266/VVC. For the Kodak dataset and the baseline network with -0.4% BD-Rate saving over H.266/VVC, introducing WeConv with the simplest Haar transform improves the saving to -4.7%. This is quite impressive given the simplicity of the Haar transform. Enabling Haar-based WeChARM entropy coding further boosts the saving to -8.2%." />
+<meta property="og:description" content="Recently learned image compression (LIC) has achieved great progress and even outperformed the traditional approach using DCT or discrete wavelet transform (DWT). However, LIC mainly reduces spatial redundancy in the autoencoder networks and entropy coding, but has not fully removed the frequency-domain correlation explicitly as in DCT or DWT. To leverage the best of both worlds, we propose a surprisingly simple but efficient framework, which introduces the DWT to both the convolution layers and entropy coding of CNN-based LIC. First, in both the core and hyperprior autoencoder networks, we propose a Wavelet-domain Convolution (WeConv) module, which performs convolution after DWT, and then converts the data back to spatial domain via inverse DWT. This module is used at selected layers in a CNN network to reduce the frequency-domain correlation explicitly and make the signal sparser in DWT domain. We also propose a wavelet-domain Channel-wise Auto-Regressive entropy Model (WeChARM), where the output latent representations from the encoder network are first transformed by the DWT, before applying quantization and entropy coding, as in the traditional paradigm. Moreover, the entropy coding is split into two steps. We first code all low-frequency DWT coefficients, and then use them as prior to code high-frequency coefficients. The channel-wise entropy coding is further used in each step. By combining WeConv and WeChARM, the proposed WeConvene scheme achieves superior R-D performance compared to other state-of-the-art LIC methods as well as the latest H.266/VVC. For the Kodak dataset and the baseline network with -0.4% BD-Rate saving over H.266/VVC, introducing WeConv with the simplest Haar transform improves the saving to -4.7%. This is quite impressive given the simplicity of the Haar transform. Enabling Haar-based WeChARM entropy coding further boosts the saving to -8.2%." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/07/16/WeConveneLearnedImageCompressionwithWaveletDomainConvolutionandEntropyModel.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/07/16/WeConveneLearnedImageCompressionwithWaveletDomainConvolutionandEntropyModel.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="WeConvene: Learned Image Compression with Wavelet-Domain Convolution and Entropy Model" />
+<script type="application/ld+json">
+{"description":"Recently learned image compression (LIC) has achieved great progress and even outperformed the traditional approach using DCT or discrete wavelet transform (DWT). However, LIC mainly reduces spatial redundancy in the autoencoder networks and entropy coding, but has not fully removed the frequency-domain correlation explicitly as in DCT or DWT. To leverage the best of both worlds, we propose a surprisingly simple but efficient framework, which introduces the DWT to both the convolution layers and entropy coding of CNN-based LIC. First, in both the core and hyperprior autoencoder networks, we propose a Wavelet-domain Convolution (WeConv) module, which performs convolution after DWT, and then converts the data back to spatial domain via inverse DWT. This module is used at selected layers in a CNN network to reduce the frequency-domain correlation explicitly and make the signal sparser in DWT domain. We also propose a wavelet-domain Channel-wise Auto-Regressive entropy Model (WeChARM), where the output latent representations from the encoder network are first transformed by the DWT, before applying quantization and entropy coding, as in the traditional paradigm. Moreover, the entropy coding is split into two steps. We first code all low-frequency DWT coefficients, and then use them as prior to code high-frequency coefficients. The channel-wise entropy coding is further used in each step. By combining WeConv and WeChARM, the proposed WeConvene scheme achieves superior R-D performance compared to other state-of-the-art LIC methods as well as the latest H.266/VVC. For the Kodak dataset and the baseline network with -0.4% BD-Rate saving over H.266/VVC, introducing WeConv with the simplest Haar transform improves the saving to -4.7%. This is quite impressive given the simplicity of the Haar transform. Enabling Haar-based WeChARM entropy coding further boosts the saving to -8.2%.","headline":"WeConvene: Learned Image Compression with Wavelet-Domain Convolution and Entropy Model","dateModified":"2024-07-16T00:00:00+00:00","datePublished":"2024-07-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/16/WeConveneLearnedImageCompressionwithWaveletDomainConvolutionandEntropyModel.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/16/WeConveneLearnedImageCompressionwithWaveletDomainConvolutionandEntropyModel.html","author":{"@type":"Person","name":"Haisheng Fu, Jie Liang, Zhenman Fang, Jingning Han, Feng Liang, Guohe Zhang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-16 00:00:00 +0000">07-16</time>
+  </p>
+  
+  <h1>WeConvene: Learned Image Compression with Wavelet-Domain Convolution and Entropy Model</h1>
+  <br>Haisheng Fu, Jie Liang, Zhenman Fang, Jingning Han, Feng Liang, Guohe Zhang</h3>
+  <br> [stat.AP]
+
+  <p>Recently learned image compression (LIC) has achieved great progress and even outperformed the traditional approach using DCT or discrete wavelet transform (DWT). However, LIC mainly reduces spatial redundancy in the autoencoder networks and entropy coding, but has not fully removed the frequency-domain correlation explicitly as in DCT or DWT. To leverage the best of both worlds, we propose a surprisingly simple but efficient framework, which introduces the DWT to both the convolution layers and entropy coding of CNN-based LIC. First, in both the core and hyperprior autoencoder networks, we propose a Wavelet-domain Convolution (WeConv) module, which performs convolution after DWT, and then converts the data back to spatial domain via inverse DWT. This module is used at selected layers in a CNN network to reduce the frequency-domain correlation explicitly and make the signal sparser in DWT domain. We also propose a wavelet-domain Channel-wise Auto-Regressive entropy Model (WeChARM), where the output latent representations from the encoder network are first transformed by the DWT, before applying quantization and entropy coding, as in the traditional paradigm. Moreover, the entropy coding is split into two steps. We first code all low-frequency DWT coefficients, and then use them as prior to code high-frequency coefficients. The channel-wise entropy coding is further used in each step. By combining WeConv and WeChARM, the proposed WeConvene scheme achieves superior R-D performance compared to other state-of-the-art LIC methods as well as the latest H.266/VVC. For the Kodak dataset and the baseline network with -0.4% BD-Rate saving over H.266/VVC, introducing WeConv with the simplest Haar transform improves the saving to -4.7%. This is quite impressive given the simplicity of the Haar transform. Enabling Haar-based WeChARM entropy coding further boosts the saving to -8.2%.</p>
+
+<p><a href="https://arxiv.org/abs/2407.09983">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
