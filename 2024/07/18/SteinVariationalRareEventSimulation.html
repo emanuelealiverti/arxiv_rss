@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Stein Variational Rare Event Simulation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Stein Variational Rare Event Simulation" />
+<meta name="author" content="Max Ehre, Iason Papaioannou, Daniel Straub" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Rare event simulation and rare event probability estimation are important tasks within the analysis of systems subject to uncertainty and randomness. Simultaneously, accurately estimating rare event probabilities is an inherently difficult task that calls for dedicated tools and methods. One way to improve estimation efficiency on difficult rare event estimation problems is to leverage gradients of the computational model representing the system in consideration, e.g., to explore the rare event faster and more reliably. We present a novel approach for estimating rare event probabilities using such model gradients by drawing on a technique to generate samples from non-normalized posterior distributions in Bayesian inference - the Stein variational gradient descent. We propagate samples generated from a tractable input distribution towards a near-optimal rare event importance sampling distribution by exploiting a similarity of the latter with Bayesian posterior distributions. Sample propagation takes the shape of passing samples through a sequence of invertible transforms such that their densities can be tracked and used to construct an unbiased importance sampling estimate of the rare event probability - the Stein variational rare event estimator. We discuss settings and parametric choices of the algorithm and suggest a method for balancing convergence speed with stability by choosing the step width or base learning rate adaptively. We analyze the method’s performance on several analytical test functions and two engineering examples in low to high stochastic dimensions ($d = 2 - 869$) and find that it consistently outperforms other state-of-the-art gradient-based rare event simulation methods." />
+<meta property="og:description" content="Rare event simulation and rare event probability estimation are important tasks within the analysis of systems subject to uncertainty and randomness. Simultaneously, accurately estimating rare event probabilities is an inherently difficult task that calls for dedicated tools and methods. One way to improve estimation efficiency on difficult rare event estimation problems is to leverage gradients of the computational model representing the system in consideration, e.g., to explore the rare event faster and more reliably. We present a novel approach for estimating rare event probabilities using such model gradients by drawing on a technique to generate samples from non-normalized posterior distributions in Bayesian inference - the Stein variational gradient descent. We propagate samples generated from a tractable input distribution towards a near-optimal rare event importance sampling distribution by exploiting a similarity of the latter with Bayesian posterior distributions. Sample propagation takes the shape of passing samples through a sequence of invertible transforms such that their densities can be tracked and used to construct an unbiased importance sampling estimate of the rare event probability - the Stein variational rare event estimator. We discuss settings and parametric choices of the algorithm and suggest a method for balancing convergence speed with stability by choosing the step width or base learning rate adaptively. We analyze the method’s performance on several analytical test functions and two engineering examples in low to high stochastic dimensions ($d = 2 - 869$) and find that it consistently outperforms other state-of-the-art gradient-based rare event simulation methods." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/07/18/SteinVariationalRareEventSimulation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/07/18/SteinVariationalRareEventSimulation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Stein Variational Rare Event Simulation" />
+<script type="application/ld+json">
+{"description":"Rare event simulation and rare event probability estimation are important tasks within the analysis of systems subject to uncertainty and randomness. Simultaneously, accurately estimating rare event probabilities is an inherently difficult task that calls for dedicated tools and methods. One way to improve estimation efficiency on difficult rare event estimation problems is to leverage gradients of the computational model representing the system in consideration, e.g., to explore the rare event faster and more reliably. We present a novel approach for estimating rare event probabilities using such model gradients by drawing on a technique to generate samples from non-normalized posterior distributions in Bayesian inference - the Stein variational gradient descent. We propagate samples generated from a tractable input distribution towards a near-optimal rare event importance sampling distribution by exploiting a similarity of the latter with Bayesian posterior distributions. Sample propagation takes the shape of passing samples through a sequence of invertible transforms such that their densities can be tracked and used to construct an unbiased importance sampling estimate of the rare event probability - the Stein variational rare event estimator. We discuss settings and parametric choices of the algorithm and suggest a method for balancing convergence speed with stability by choosing the step width or base learning rate adaptively. We analyze the method’s performance on several analytical test functions and two engineering examples in low to high stochastic dimensions ($d = 2 - 869$) and find that it consistently outperforms other state-of-the-art gradient-based rare event simulation methods.","headline":"Stein Variational Rare Event Simulation","dateModified":"2024-07-18T00:00:00+00:00","datePublished":"2024-07-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/18/SteinVariationalRareEventSimulation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/18/SteinVariationalRareEventSimulation.html","author":{"@type":"Person","name":"Max Ehre, Iason Papaioannou, Daniel Straub"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-18 00:00:00 +0000">07-18</time>
+  </p>
+  
+  <h1>Stein Variational Rare Event Simulation</h1>
+  <br>Max Ehre, Iason Papaioannou, Daniel Straub</h3>
+  <br> [stat.ME]
+
+  <p>Rare event simulation and rare event probability estimation are important tasks within the analysis of systems subject to uncertainty and randomness. Simultaneously, accurately estimating rare event probabilities is an inherently difficult task that calls for dedicated tools and methods. One way to improve estimation efficiency on difficult rare event estimation problems is to leverage gradients of the computational model representing the system in consideration, e.g., to explore the rare event faster and more reliably. We present a novel approach for estimating rare event probabilities using such model gradients by drawing on a technique to generate samples from non-normalized posterior distributions in Bayesian inference - the Stein variational gradient descent. We propagate samples generated from a tractable input distribution towards a near-optimal rare event importance sampling distribution by exploiting a similarity of the latter with Bayesian posterior distributions. Sample propagation takes the shape of passing samples through a sequence of invertible transforms such that their densities can be tracked and used to construct an unbiased importance sampling estimate of the rare event probability - the Stein variational rare event estimator. We discuss settings and parametric choices of the algorithm and suggest a method for balancing convergence speed with stability by choosing the step width or base learning rate adaptively. We analyze the method’s performance on several analytical test functions and two engineering examples in low to high stochastic dimensions ($d = 2 - 869$) and find that it consistently outperforms other state-of-the-art gradient-based rare event simulation methods.</p>
+
+<p><a href="https://arxiv.org/abs/2308.04971">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
