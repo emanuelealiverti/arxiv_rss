@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>$\Phi$-DVAE: Physics-Informed Dynamical Variational Autoencoders for Unstructured Data Assimilation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="$\Phi$-DVAE: Physics-Informed Dynamical Variational Autoencoders for Unstructured Data Assimilation" />
+<meta name="author" content="Alex Glyn-Davies, Connor Duffin, Ö. Deniz Akyildiz, Mark Girolami" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Incorporating unstructured data into physical models is a challenging problem that is emerging in data assimilation. Traditional approaches focus on well-defined observation operators whose functional forms are typically assumed to be known. This prevents these methods from achieving a consistent model-data synthesis in configurations where the mapping from data-space to model-space is unknown. To address these shortcomings, in this paper we develop a physics-informed dynamical variational autoencoder ($\Phi$-DVAE) to embed diverse data streams into time-evolving physical systems described by differential equations. Our approach combines a standard, possibly nonlinear, filter for the latent state-space model and a VAE, to assimilate the unstructured data into the latent dynamical system. Unstructured data, in our example systems, comes in the form of video data and velocity field measurements, however the methodology is suitably generic to allow for arbitrary unknown observation operators. A variational Bayesian framework is used for the joint estimation of the encoding, latent states, and unknown system parameters. To demonstrate the method, we provide case studies with the Lorenz-63 ordinary differential equation, and the advection and Korteweg-de Vries partial differential equations. Our results, with synthetic data, show that $\Phi$-DVAE provides a data efficient dynamics encoding methodology which is competitive with standard approaches. Unknown parameters are recovered with uncertainty quantification, and unseen data are accurately predicted." />
+<meta property="og:description" content="Incorporating unstructured data into physical models is a challenging problem that is emerging in data assimilation. Traditional approaches focus on well-defined observation operators whose functional forms are typically assumed to be known. This prevents these methods from achieving a consistent model-data synthesis in configurations where the mapping from data-space to model-space is unknown. To address these shortcomings, in this paper we develop a physics-informed dynamical variational autoencoder ($\Phi$-DVAE) to embed diverse data streams into time-evolving physical systems described by differential equations. Our approach combines a standard, possibly nonlinear, filter for the latent state-space model and a VAE, to assimilate the unstructured data into the latent dynamical system. Unstructured data, in our example systems, comes in the form of video data and velocity field measurements, however the methodology is suitably generic to allow for arbitrary unknown observation operators. A variational Bayesian framework is used for the joint estimation of the encoding, latent states, and unknown system parameters. To demonstrate the method, we provide case studies with the Lorenz-63 ordinary differential equation, and the advection and Korteweg-de Vries partial differential equations. Our results, with synthetic data, show that $\Phi$-DVAE provides a data efficient dynamics encoding methodology which is competitive with standard approaches. Unknown parameters are recovered with uncertainty quantification, and unseen data are accurately predicted." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/07/25/PhiDVAEPhysicsInformedDynamicalVariationalAutoencodersforUnstructuredDataAssimilation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/07/25/PhiDVAEPhysicsInformedDynamicalVariationalAutoencodersforUnstructuredDataAssimilation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="$\Phi$-DVAE: Physics-Informed Dynamical Variational Autoencoders for Unstructured Data Assimilation" />
+<script type="application/ld+json">
+{"description":"Incorporating unstructured data into physical models is a challenging problem that is emerging in data assimilation. Traditional approaches focus on well-defined observation operators whose functional forms are typically assumed to be known. This prevents these methods from achieving a consistent model-data synthesis in configurations where the mapping from data-space to model-space is unknown. To address these shortcomings, in this paper we develop a physics-informed dynamical variational autoencoder ($\\Phi$-DVAE) to embed diverse data streams into time-evolving physical systems described by differential equations. Our approach combines a standard, possibly nonlinear, filter for the latent state-space model and a VAE, to assimilate the unstructured data into the latent dynamical system. Unstructured data, in our example systems, comes in the form of video data and velocity field measurements, however the methodology is suitably generic to allow for arbitrary unknown observation operators. A variational Bayesian framework is used for the joint estimation of the encoding, latent states, and unknown system parameters. To demonstrate the method, we provide case studies with the Lorenz-63 ordinary differential equation, and the advection and Korteweg-de Vries partial differential equations. Our results, with synthetic data, show that $\\Phi$-DVAE provides a data efficient dynamics encoding methodology which is competitive with standard approaches. Unknown parameters are recovered with uncertainty quantification, and unseen data are accurately predicted.","headline":"$\\Phi$-DVAE: Physics-Informed Dynamical Variational Autoencoders for Unstructured Data Assimilation","dateModified":"2024-07-25T00:00:00+00:00","datePublished":"2024-07-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/25/PhiDVAEPhysicsInformedDynamicalVariationalAutoencodersforUnstructuredDataAssimilation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/25/PhiDVAEPhysicsInformedDynamicalVariationalAutoencodersforUnstructuredDataAssimilation.html","author":{"@type":"Person","name":"Alex Glyn-Davies, Connor Duffin, Ö. Deniz Akyildiz, Mark Girolami"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-25 00:00:00 +0000">07-25</time>
+  </p>
+  
+  <h1>$\Phi$-DVAE: Physics-Informed Dynamical Variational Autoencoders for Unstructured Data Assimilation</h1>
+  <br>Alex Glyn-Davies, Connor Duffin, Ö. Deniz Akyildiz, Mark Girolami</h3>
+  <br> [stat.ML,stat.CO]
+
+  <p>Incorporating unstructured data into physical models is a challenging problem that is emerging in data assimilation. Traditional approaches focus on well-defined observation operators whose functional forms are typically assumed to be known. This prevents these methods from achieving a consistent model-data synthesis in configurations where the mapping from data-space to model-space is unknown. To address these shortcomings, in this paper we develop a physics-informed dynamical variational autoencoder ($\Phi$-DVAE) to embed diverse data streams into time-evolving physical systems described by differential equations. Our approach combines a standard, possibly nonlinear, filter for the latent state-space model and a VAE, to assimilate the unstructured data into the latent dynamical system. Unstructured data, in our example systems, comes in the form of video data and velocity field measurements, however the methodology is suitably generic to allow for arbitrary unknown observation operators. A variational Bayesian framework is used for the joint estimation of the encoding, latent states, and unknown system parameters. To demonstrate the method, we provide case studies with the Lorenz-63 ordinary differential equation, and the advection and Korteweg-de Vries partial differential equations. Our results, with synthetic data, show that $\Phi$-DVAE provides a data efficient dynamics encoding methodology which is competitive with standard approaches. Unknown parameters are recovered with uncertainty quantification, and unseen data are accurately predicted.</p>
+
+<p><a href="https://arxiv.org/abs/2209.15609">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
