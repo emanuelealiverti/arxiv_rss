@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Using representation balancing to learn conditional-average dose responses from clustered data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Using representation balancing to learn conditional-average dose responses from clustered data" />
+<meta name="author" content="Christopher Bockel-Rickermann, Toon Vanderschueren, Jeroen Berrevoets, Tim Verdonck, Wouter Verbeke" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Estimating a unit’s responses to interventions with an associated dose, the “conditional average dose response” (CADR), is relevant in a variety of domains, from healthcare to business, economics, and beyond. Such a response typically needs to be estimated from observational data, which introduces several challenges. That is why the machine learning (ML) community has proposed several tailored CADR estimators. Yet, the proposal of most of these methods requires strong assumptions on the distribution of data and the assignment of interventions, which go beyond the standard assumptions in causal inference. Whereas previous works have so far focused on smooth shifts in covariate distributions across doses, in this work, we will study estimating CADR from clustered data and where different doses are assigned to different segments of a population. On a novel benchmarking dataset, we show the impacts of clustered data on model performance and propose an estimator, CBRNet, that learns cluster-agnostic and hence dose-agnostic covariate representations through representation balancing for unbiased CADR inference. We run extensive experiments to illustrate the workings of our method and compare it with the state of the art in ML for CADR estimation." />
+<meta property="og:description" content="Estimating a unit’s responses to interventions with an associated dose, the “conditional average dose response” (CADR), is relevant in a variety of domains, from healthcare to business, economics, and beyond. Such a response typically needs to be estimated from observational data, which introduces several challenges. That is why the machine learning (ML) community has proposed several tailored CADR estimators. Yet, the proposal of most of these methods requires strong assumptions on the distribution of data and the assignment of interventions, which go beyond the standard assumptions in causal inference. Whereas previous works have so far focused on smooth shifts in covariate distributions across doses, in this work, we will study estimating CADR from clustered data and where different doses are assigned to different segments of a population. On a novel benchmarking dataset, we show the impacts of clustered data on model performance and propose an estimator, CBRNet, that learns cluster-agnostic and hence dose-agnostic covariate representations through representation balancing for unbiased CADR inference. We run extensive experiments to illustrate the workings of our method and compare it with the state of the art in ML for CADR estimation." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/07/29/Usingrepresentationbalancingtolearnconditionalaveragedoseresponsesfromclustereddata.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/07/29/Usingrepresentationbalancingtolearnconditionalaveragedoseresponsesfromclustereddata.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Using representation balancing to learn conditional-average dose responses from clustered data" />
+<script type="application/ld+json">
+{"description":"Estimating a unit’s responses to interventions with an associated dose, the “conditional average dose response” (CADR), is relevant in a variety of domains, from healthcare to business, economics, and beyond. Such a response typically needs to be estimated from observational data, which introduces several challenges. That is why the machine learning (ML) community has proposed several tailored CADR estimators. Yet, the proposal of most of these methods requires strong assumptions on the distribution of data and the assignment of interventions, which go beyond the standard assumptions in causal inference. Whereas previous works have so far focused on smooth shifts in covariate distributions across doses, in this work, we will study estimating CADR from clustered data and where different doses are assigned to different segments of a population. On a novel benchmarking dataset, we show the impacts of clustered data on model performance and propose an estimator, CBRNet, that learns cluster-agnostic and hence dose-agnostic covariate representations through representation balancing for unbiased CADR inference. We run extensive experiments to illustrate the workings of our method and compare it with the state of the art in ML for CADR estimation.","headline":"Using representation balancing to learn conditional-average dose responses from clustered data","dateModified":"2024-07-29T00:00:00+00:00","datePublished":"2024-07-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/29/Usingrepresentationbalancingtolearnconditionalaveragedoseresponsesfromclustereddata.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/29/Usingrepresentationbalancingtolearnconditionalaveragedoseresponsesfromclustereddata.html","author":{"@type":"Person","name":"Christopher Bockel-Rickermann, Toon Vanderschueren, Jeroen Berrevoets, Tim Verdonck, Wouter Verbeke"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-29 00:00:00 +0000">07-29</time>
+  </p>
+  
+  <h1>Using representation balancing to learn conditional-average dose responses from clustered data</h1>
+  <br>Christopher Bockel-Rickermann, Toon Vanderschueren, Jeroen Berrevoets, Tim Verdonck, Wouter Verbeke</h3>
+  <br> [stat.ME]
+
+  <p>Estimating a unit’s responses to interventions with an associated dose, the “conditional average dose response” (CADR), is relevant in a variety of domains, from healthcare to business, economics, and beyond. Such a response typically needs to be estimated from observational data, which introduces several challenges. That is why the machine learning (ML) community has proposed several tailored CADR estimators. Yet, the proposal of most of these methods requires strong assumptions on the distribution of data and the assignment of interventions, which go beyond the standard assumptions in causal inference. Whereas previous works have so far focused on smooth shifts in covariate distributions across doses, in this work, we will study estimating CADR from clustered data and where different doses are assigned to different segments of a population. On a novel benchmarking dataset, we show the impacts of clustered data on model performance and propose an estimator, CBRNet, that learns cluster-agnostic and hence dose-agnostic covariate representations through representation balancing for unbiased CADR inference. We run extensive experiments to illustrate the workings of our method and compare it with the state of the art in ML for CADR estimation.</p>
+
+<p><a href="https://arxiv.org/abs/2309.03731">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
