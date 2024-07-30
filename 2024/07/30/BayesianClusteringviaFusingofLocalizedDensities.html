@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Clustering via Fusing of Localized Densities</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bayesian Clustering via Fusing of Localized Densities" />
+<meta name="author" content="Alexander Dombowsky, David B. Dunson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian clustering typically relies on mixture models, with each component interpreted as a different cluster. After defining a prior for the component parameters and weights, Markov chain Monte Carlo (MCMC) algorithms are commonly used to produce samples from the posterior distribution of the component labels. The data are then clustered by minimizing the expectation of a clustering loss function that favours similarity to the component labels. Unfortunately, although these approaches are routinely implemented, clustering results are highly sensitive to kernel misspecification. For example, if Gaussian kernels are used but the true density of data within a cluster is even slightly non-Gaussian, then clusters will be broken into multiple Gaussian components. To address this problem, we develop Fusing of Localized Densities (FOLD), a novel clustering method that melds components together using the posterior of the kernels. FOLD has a fully Bayesian decision theoretic justification, naturally leads to uncertainty quantification, can be easily implemented as an add-on to MCMC algorithms for mixtures, and favours a small number of distinct clusters. We provide theoretical support for FOLD including clustering optimality under kernel misspecification. In simulated experiments and real data, FOLD outperforms competitors by minimizing the number of clusters while inferring meaningful group structure." />
+<meta property="og:description" content="Bayesian clustering typically relies on mixture models, with each component interpreted as a different cluster. After defining a prior for the component parameters and weights, Markov chain Monte Carlo (MCMC) algorithms are commonly used to produce samples from the posterior distribution of the component labels. The data are then clustered by minimizing the expectation of a clustering loss function that favours similarity to the component labels. Unfortunately, although these approaches are routinely implemented, clustering results are highly sensitive to kernel misspecification. For example, if Gaussian kernels are used but the true density of data within a cluster is even slightly non-Gaussian, then clusters will be broken into multiple Gaussian components. To address this problem, we develop Fusing of Localized Densities (FOLD), a novel clustering method that melds components together using the posterior of the kernels. FOLD has a fully Bayesian decision theoretic justification, naturally leads to uncertainty quantification, can be easily implemented as an add-on to MCMC algorithms for mixtures, and favours a small number of distinct clusters. We provide theoretical support for FOLD including clustering optimality under kernel misspecification. In simulated experiments and real data, FOLD outperforms competitors by minimizing the number of clusters while inferring meaningful group structure." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/07/30/BayesianClusteringviaFusingofLocalizedDensities.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/07/30/BayesianClusteringviaFusingofLocalizedDensities.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bayesian Clustering via Fusing of Localized Densities" />
+<script type="application/ld+json">
+{"description":"Bayesian clustering typically relies on mixture models, with each component interpreted as a different cluster. After defining a prior for the component parameters and weights, Markov chain Monte Carlo (MCMC) algorithms are commonly used to produce samples from the posterior distribution of the component labels. The data are then clustered by minimizing the expectation of a clustering loss function that favours similarity to the component labels. Unfortunately, although these approaches are routinely implemented, clustering results are highly sensitive to kernel misspecification. For example, if Gaussian kernels are used but the true density of data within a cluster is even slightly non-Gaussian, then clusters will be broken into multiple Gaussian components. To address this problem, we develop Fusing of Localized Densities (FOLD), a novel clustering method that melds components together using the posterior of the kernels. FOLD has a fully Bayesian decision theoretic justification, naturally leads to uncertainty quantification, can be easily implemented as an add-on to MCMC algorithms for mixtures, and favours a small number of distinct clusters. We provide theoretical support for FOLD including clustering optimality under kernel misspecification. In simulated experiments and real data, FOLD outperforms competitors by minimizing the number of clusters while inferring meaningful group structure.","headline":"Bayesian Clustering via Fusing of Localized Densities","dateModified":"2024-07-30T00:00:00+00:00","datePublished":"2024-07-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/30/BayesianClusteringviaFusingofLocalizedDensities.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/07/30/BayesianClusteringviaFusingofLocalizedDensities.html","author":{"@type":"Person","name":"Alexander Dombowsky, David B. Dunson"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-30 00:00:00 +0000">07-30</time>
+  </p>
+  
+  <h1>Bayesian Clustering via Fusing of Localized Densities</h1>
+  <br>Alexander Dombowsky, David B. Dunson</h3>
+  <br> [stat.ME]
+
+  <p>Bayesian clustering typically relies on mixture models, with each component interpreted as a different cluster. After defining a prior for the component parameters and weights, Markov chain Monte Carlo (MCMC) algorithms are commonly used to produce samples from the posterior distribution of the component labels. The data are then clustered by minimizing the expectation of a clustering loss function that favours similarity to the component labels. Unfortunately, although these approaches are routinely implemented, clustering results are highly sensitive to kernel misspecification. For example, if Gaussian kernels are used but the true density of data within a cluster is even slightly non-Gaussian, then clusters will be broken into multiple Gaussian components. To address this problem, we develop Fusing of Localized Densities (FOLD), a novel clustering method that melds components together using the posterior of the kernels. FOLD has a fully Bayesian decision theoretic justification, naturally leads to uncertainty quantification, can be easily implemented as an add-on to MCMC algorithms for mixtures, and favours a small number of distinct clusters. We provide theoretical support for FOLD including clustering optimality under kernel misspecification. In simulated experiments and real data, FOLD outperforms competitors by minimizing the number of clusters while inferring meaningful group structure.</p>
+
+<p><a href="https://arxiv.org/abs/2304.00074">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
