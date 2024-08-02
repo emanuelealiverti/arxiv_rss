@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Confounder importance learning for treatment effect inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Confounder importance learning for treatment effect inference" />
+<meta name="author" content="Miquel Torrens-i-Dinarès, Omiros Papaspiliopoulos, David Rossell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We address modelling and computational issues for multiple treatment effect inference under many potential confounders. Our main contribution is providing a trade-off between preventing the omission of relevant confounders, while not running into an over-selection of instruments that significantly inflates variance. We propose a novel empirical Bayes framework for Bayesian model averaging that learns from data the extent to which the inclusion of key covariates should be encouraged. Our framework sets a prior that asymptotically matches the true amount of confounding in the data, as measured by a novel confounding coefficient. A key challenge is computational. We develop fast algorithms, using an exact gradient of the marginal likelihood that has linear cost in the number of covariates, and a variational counterpart. Our framework uses widely-used ingredients and largely existing software, and it is implemented within the R package mombf. We illustrate our work with two applications. The first is the association between salary variation and discriminatory factors. The second, that has been debated in previous works, is the association between abortion policies and crime. Our approach provides insights that differ from previous analyses especially in situations with weaker treatment effects." />
+<meta property="og:description" content="We address modelling and computational issues for multiple treatment effect inference under many potential confounders. Our main contribution is providing a trade-off between preventing the omission of relevant confounders, while not running into an over-selection of instruments that significantly inflates variance. We propose a novel empirical Bayes framework for Bayesian model averaging that learns from data the extent to which the inclusion of key covariates should be encouraged. Our framework sets a prior that asymptotically matches the true amount of confounding in the data, as measured by a novel confounding coefficient. A key challenge is computational. We develop fast algorithms, using an exact gradient of the marginal likelihood that has linear cost in the number of covariates, and a variational counterpart. Our framework uses widely-used ingredients and largely existing software, and it is implemented within the R package mombf. We illustrate our work with two applications. The first is the association between salary variation and discriminatory factors. The second, that has been debated in previous works, is the association between abortion policies and crime. Our approach provides insights that differ from previous analyses especially in situations with weaker treatment effects." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/08/02/Confounderimportancelearningfortreatmenteffectinference.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/08/02/Confounderimportancelearningfortreatmenteffectinference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Confounder importance learning for treatment effect inference" />
+<script type="application/ld+json">
+{"description":"We address modelling and computational issues for multiple treatment effect inference under many potential confounders. Our main contribution is providing a trade-off between preventing the omission of relevant confounders, while not running into an over-selection of instruments that significantly inflates variance. We propose a novel empirical Bayes framework for Bayesian model averaging that learns from data the extent to which the inclusion of key covariates should be encouraged. Our framework sets a prior that asymptotically matches the true amount of confounding in the data, as measured by a novel confounding coefficient. A key challenge is computational. We develop fast algorithms, using an exact gradient of the marginal likelihood that has linear cost in the number of covariates, and a variational counterpart. Our framework uses widely-used ingredients and largely existing software, and it is implemented within the R package mombf. We illustrate our work with two applications. The first is the association between salary variation and discriminatory factors. The second, that has been debated in previous works, is the association between abortion policies and crime. Our approach provides insights that differ from previous analyses especially in situations with weaker treatment effects.","headline":"Confounder importance learning for treatment effect inference","dateModified":"2024-08-02T00:00:00+00:00","datePublished":"2024-08-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/02/Confounderimportancelearningfortreatmenteffectinference.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/02/Confounderimportancelearningfortreatmenteffectinference.html","author":{"@type":"Person","name":"Miquel Torrens-i-Dinarès, Omiros Papaspiliopoulos, David Rossell"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-08-02 00:00:00 +0000">08-02</time>
+  </p>
+  
+  <h1>Confounder importance learning for treatment effect inference</h1>
+  <br>Miquel Torrens-i-Dinarès, Omiros Papaspiliopoulos, David Rossell</h3>
+  <br> [stat.ME,stat.AP,stat.CO]
+
+  <p>We address modelling and computational issues for multiple treatment effect inference under many potential confounders.
+  Our main contribution is providing a trade-off between preventing the omission of relevant confounders, while not running into an over-selection of instruments that significantly inflates variance. We propose a novel empirical Bayes framework for Bayesian model averaging that learns from data the extent to which the inclusion of key covariates should be encouraged.
+  Our framework sets a prior that asymptotically matches the true amount of confounding in the data, as measured by a novel confounding coefficient. A key challenge is computational. We develop fast algorithms, using an exact gradient of the marginal likelihood that has linear cost in the number of covariates, and a variational counterpart. Our framework uses widely-used ingredients and largely existing software, and it is implemented within the R package mombf. We illustrate our work with two applications. The first is the association between salary variation and discriminatory factors. The second, that has been debated in previous works, is the association between abortion policies and crime. Our approach provides insights that differ from previous analyses especially in situations with weaker treatment effects.</p>
+
+<p><a href="https://arxiv.org/abs/2110.00314">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
