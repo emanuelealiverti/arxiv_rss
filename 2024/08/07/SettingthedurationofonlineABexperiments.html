@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Setting the duration of online A/B experiments</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Setting the duration of online A/B experiments" />
+<meta name="author" content="Harrison H. Li, Chaoyu Yu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In designing an online A/B experiment, it is crucial to select a sample size and duration that ensure the resulting confidence interval (CI) for the treatment effect is the right width to detect an effect of meaningful magnitude with sufficient statistical power without wasting resources. While the relationship between sample size and CI width is well understood, the effect of experiment duration on CI width remains less clear. This paper provides an analytical formula for the width of a CI based on a ratio treatment effect estimator as a function of both sample size (N) and duration (T). The formula is derived from a mixed effects model with two variance components. One component, referred to as the temporal variance, persists over time for experiments where the same users are kept in the same experiment arm across different days. The remaining error variance component, by contrast, decays to zero as T gets large. The formula we derive introduces a key parameter that we call the user-specific temporal correlation (UTC), which quantifies the relative sizes of the two variance components and can be estimated from historical experiments. Higher UTC indicates a slower decay in CI width over time. On the other hand, when the UTC is 0 – as for experiments where users shuffle in and out of the experiment across days – the CI width decays at the standard parametric 1/T rate. We also study how access to pre-period data for the users in the experiment affects the CI width decay. We show our formula closely explains CI widths on real A/B experiments at YouTube." />
+<meta property="og:description" content="In designing an online A/B experiment, it is crucial to select a sample size and duration that ensure the resulting confidence interval (CI) for the treatment effect is the right width to detect an effect of meaningful magnitude with sufficient statistical power without wasting resources. While the relationship between sample size and CI width is well understood, the effect of experiment duration on CI width remains less clear. This paper provides an analytical formula for the width of a CI based on a ratio treatment effect estimator as a function of both sample size (N) and duration (T). The formula is derived from a mixed effects model with two variance components. One component, referred to as the temporal variance, persists over time for experiments where the same users are kept in the same experiment arm across different days. The remaining error variance component, by contrast, decays to zero as T gets large. The formula we derive introduces a key parameter that we call the user-specific temporal correlation (UTC), which quantifies the relative sizes of the two variance components and can be estimated from historical experiments. Higher UTC indicates a slower decay in CI width over time. On the other hand, when the UTC is 0 – as for experiments where users shuffle in and out of the experiment across days – the CI width decays at the standard parametric 1/T rate. We also study how access to pre-period data for the users in the experiment affects the CI width decay. We show our formula closely explains CI widths on real A/B experiments at YouTube." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/08/07/SettingthedurationofonlineABexperiments.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/08/07/SettingthedurationofonlineABexperiments.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Setting the duration of online A/B experiments" />
+<script type="application/ld+json">
+{"description":"In designing an online A/B experiment, it is crucial to select a sample size and duration that ensure the resulting confidence interval (CI) for the treatment effect is the right width to detect an effect of meaningful magnitude with sufficient statistical power without wasting resources. While the relationship between sample size and CI width is well understood, the effect of experiment duration on CI width remains less clear. This paper provides an analytical formula for the width of a CI based on a ratio treatment effect estimator as a function of both sample size (N) and duration (T). The formula is derived from a mixed effects model with two variance components. One component, referred to as the temporal variance, persists over time for experiments where the same users are kept in the same experiment arm across different days. The remaining error variance component, by contrast, decays to zero as T gets large. The formula we derive introduces a key parameter that we call the user-specific temporal correlation (UTC), which quantifies the relative sizes of the two variance components and can be estimated from historical experiments. Higher UTC indicates a slower decay in CI width over time. On the other hand, when the UTC is 0 – as for experiments where users shuffle in and out of the experiment across days – the CI width decays at the standard parametric 1/T rate. We also study how access to pre-period data for the users in the experiment affects the CI width decay. We show our formula closely explains CI widths on real A/B experiments at YouTube.","headline":"Setting the duration of online A/B experiments","dateModified":"2024-08-07T00:00:00+00:00","datePublished":"2024-08-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/07/SettingthedurationofonlineABexperiments.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/07/SettingthedurationofonlineABexperiments.html","author":{"@type":"Person","name":"Harrison H. Li, Chaoyu Yu"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-08-07 00:00:00 +0000">08-07</time>
+  </p>
+  
+  <h1>Setting the duration of online A/B experiments</h1>
+  <br>Harrison H. Li, Chaoyu Yu</h3>
+  <br> [stat.ME]
+
+  <p>In designing an online A/B experiment, it is crucial to select a sample size and duration that ensure the resulting confidence interval (CI) for the treatment effect is the right width to detect an effect of meaningful magnitude with sufficient statistical power without wasting resources. While the relationship between sample size and CI width is well understood, the effect of experiment duration on CI width remains less clear. This paper provides an analytical formula for the width of a CI based on a ratio treatment effect estimator as a function of both sample size (N) and duration (T). The formula is derived from a mixed effects model with two variance components. One component, referred to as the temporal variance, persists over time for experiments where the same users are kept in the same experiment arm across different days. The remaining error variance component, by contrast, decays to zero as T gets large. The formula we derive introduces a key parameter that we call the user-specific temporal correlation (UTC), which quantifies the relative sizes of the two variance components and can be estimated from historical experiments. Higher UTC indicates a slower decay in CI width over time. On the other hand, when the UTC is 0 – as for experiments where users shuffle in and out of the experiment across days – the CI width decays at the standard parametric 1/T rate. We also study how access to pre-period data for the users in the experiment affects the CI width decay. We show our formula closely explains CI widths on real A/B experiments at YouTube.</p>
+
+<p><a href="https://arxiv.org/abs/2408.02830">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

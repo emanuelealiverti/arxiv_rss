@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Hybrid Smoothing for Anomaly Detection in Time Series</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Hybrid Smoothing for Anomaly Detection in Time Series" />
+<meta name="author" content="Matthew Hofkes, Douglas Nychka, Tzahi Cath, Amanda Hering, Craig McGonagill" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many industrial and engineering processes monitored as times series have smooth trends that indicate normal behavior and occasionally anomalous patterns that can indicate a problem. This kind of behavior can be modeled by a smooth trend, such as a spline or Gaussian process, and a disruption based on a sparser representation. Our approach is to expand the process signal into two sets of basis functions: one set uses L2 penalties on the coefficients, and the other set uses L1 penalties to control sparsity. From a frequentist perspective, this results in a hybrid smoother that combines cubic smoothing splines and the LASSO. As a Bayesian hierarchical model (BHM), this is equivalent to priors giving a Gaussian process and a Laplace distribution for anomaly coefficients. For the hybrid smoother, we propose two new ways of determining the penalty parameters that use effective degrees of freedom and contrast this with the BHM that uses loosely informative inverse gamma priors. Several reformulations are used to make sampling the BHM posterior more efficient, including some novel features in orthogonalizing and regularizing the model basis functions. This methodology is motivated by a substantive application, offline monitoring of a water treatment process for municipal water filtration. We also test the robustness of these methods with a Monte Carlo study designed to inspect a range trended time series under an array of conditions and compare this new approach to multiple existing modern methods. Both the hybrid smoother and the full BHM give comparable results with small false positive and false negative rates. Besides being successful in the water treatment application, this work can be easily extended to other Gaussian process models and other features that represent process disruptions in offline data." />
+<meta property="og:description" content="Many industrial and engineering processes monitored as times series have smooth trends that indicate normal behavior and occasionally anomalous patterns that can indicate a problem. This kind of behavior can be modeled by a smooth trend, such as a spline or Gaussian process, and a disruption based on a sparser representation. Our approach is to expand the process signal into two sets of basis functions: one set uses L2 penalties on the coefficients, and the other set uses L1 penalties to control sparsity. From a frequentist perspective, this results in a hybrid smoother that combines cubic smoothing splines and the LASSO. As a Bayesian hierarchical model (BHM), this is equivalent to priors giving a Gaussian process and a Laplace distribution for anomaly coefficients. For the hybrid smoother, we propose two new ways of determining the penalty parameters that use effective degrees of freedom and contrast this with the BHM that uses loosely informative inverse gamma priors. Several reformulations are used to make sampling the BHM posterior more efficient, including some novel features in orthogonalizing and regularizing the model basis functions. This methodology is motivated by a substantive application, offline monitoring of a water treatment process for municipal water filtration. We also test the robustness of these methods with a Monte Carlo study designed to inspect a range trended time series under an array of conditions and compare this new approach to multiple existing modern methods. Both the hybrid smoother and the full BHM give comparable results with small false positive and false negative rates. Besides being successful in the water treatment application, this work can be easily extended to other Gaussian process models and other features that represent process disruptions in offline data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/08/07/HybridSmoothingforAnomalyDetectioninTimeSeries.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/08/07/HybridSmoothingforAnomalyDetectioninTimeSeries.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Hybrid Smoothing for Anomaly Detection in Time Series" />
+<script type="application/ld+json">
+{"description":"Many industrial and engineering processes monitored as times series have smooth trends that indicate normal behavior and occasionally anomalous patterns that can indicate a problem. This kind of behavior can be modeled by a smooth trend, such as a spline or Gaussian process, and a disruption based on a sparser representation. Our approach is to expand the process signal into two sets of basis functions: one set uses L2 penalties on the coefficients, and the other set uses L1 penalties to control sparsity. From a frequentist perspective, this results in a hybrid smoother that combines cubic smoothing splines and the LASSO. As a Bayesian hierarchical model (BHM), this is equivalent to priors giving a Gaussian process and a Laplace distribution for anomaly coefficients. For the hybrid smoother, we propose two new ways of determining the penalty parameters that use effective degrees of freedom and contrast this with the BHM that uses loosely informative inverse gamma priors. Several reformulations are used to make sampling the BHM posterior more efficient, including some novel features in orthogonalizing and regularizing the model basis functions. This methodology is motivated by a substantive application, offline monitoring of a water treatment process for municipal water filtration. We also test the robustness of these methods with a Monte Carlo study designed to inspect a range trended time series under an array of conditions and compare this new approach to multiple existing modern methods. Both the hybrid smoother and the full BHM give comparable results with small false positive and false negative rates. Besides being successful in the water treatment application, this work can be easily extended to other Gaussian process models and other features that represent process disruptions in offline data.","headline":"Hybrid Smoothing for Anomaly Detection in Time Series","dateModified":"2024-08-07T00:00:00+00:00","datePublished":"2024-08-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/07/HybridSmoothingforAnomalyDetectioninTimeSeries.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/07/HybridSmoothingforAnomalyDetectioninTimeSeries.html","author":{"@type":"Person","name":"Matthew Hofkes, Douglas Nychka, Tzahi Cath, Amanda Hering, Craig McGonagill"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-08-07 00:00:00 +0000">08-07</time>
+  </p>
+  
+  <h1>Hybrid Smoothing for Anomaly Detection in Time Series</h1>
+  <br>Matthew Hofkes, Douglas Nychka, Tzahi Cath, Amanda Hering, Craig McGonagill</h3>
+  <br> [stat.ME]
+
+  <p>Many industrial and engineering processes monitored as times series have smooth trends that indicate normal behavior and occasionally anomalous patterns that can indicate a problem. This kind of behavior can be modeled by a smooth trend, such as a spline or Gaussian process, and a disruption based on a sparser representation. Our approach is to expand the process signal into two sets of basis functions: one set uses L2 penalties on the coefficients, and the other set uses L1 penalties to control sparsity. From a frequentist perspective, this results in a hybrid smoother that combines cubic smoothing splines and the LASSO. As a Bayesian hierarchical model (BHM), this is equivalent to priors giving a Gaussian process and a Laplace distribution for anomaly coefficients. For the hybrid smoother, we propose two new ways of determining the penalty parameters that use effective degrees of freedom and contrast this with the BHM that uses loosely informative inverse gamma priors. Several reformulations are used to make sampling the BHM posterior more efficient, including some novel features in orthogonalizing and regularizing the model basis functions. This methodology is motivated by a substantive application, offline monitoring of a water treatment process for municipal water filtration. We also test the robustness of these methods with a Monte Carlo study designed to inspect a range trended time series under an array of conditions and compare this new approach to multiple existing modern methods. Both the hybrid smoother and the full BHM give comparable results with small false positive and false negative rates. Besides being successful in the water treatment application, this work can be easily extended to other Gaussian process models and other features that represent process disruptions in offline data.</p>
+
+<p><a href="https://arxiv.org/abs/2402.03459">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
