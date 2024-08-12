@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Contour Location for Reliability in Airfoil Simulation Experiments using Deep Gaussian Processes</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Contour Location for Reliability in Airfoil Simulation Experiments using Deep Gaussian Processes" />
+<meta name="author" content="Annie S. Booth, S. Ashwin Renganathan, Robert B. Gramacy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian deep Gaussian processes (DGPs) outperform ordinary GPs as surrogate models of complex computer experiments when response surface dynamics are non-stationary, which is especially prevalent in aerospace simulations. Yet DGP surrogates have not been deployed for the canonical downstream task in that setting: reliability analysis through contour location (CL). In that context, we are motivated by a simulation of an RAE-2822 transonic airfoil which demarcates efficient and inefficient flight conditions. Level sets separating passable versus failable operating conditions are best learned through strategic sequential designs. There are two limitations to modern CL methodology which hinder DGP integration in this setting. First, derivative-based optimization underlying acquisition functions is thwarted by sampling-based Bayesian (i.e., MCMC) inference, which is essential for DGP posterior integration. Second, canonical acquisition criteria, such as entropy, are famously myopic to the extent that optimization may even be undesirable. Here we tackle both of these limitations at once, proposing a hybrid criterion that explores along the Pareto front of entropy and (predictive) uncertainty, requiring evaluation only at strategically located “triangulation” candidates. We showcase DGP CL performance in several synthetic benchmark exercises and on the RAE-2822 airfoil." />
+<meta property="og:description" content="Bayesian deep Gaussian processes (DGPs) outperform ordinary GPs as surrogate models of complex computer experiments when response surface dynamics are non-stationary, which is especially prevalent in aerospace simulations. Yet DGP surrogates have not been deployed for the canonical downstream task in that setting: reliability analysis through contour location (CL). In that context, we are motivated by a simulation of an RAE-2822 transonic airfoil which demarcates efficient and inefficient flight conditions. Level sets separating passable versus failable operating conditions are best learned through strategic sequential designs. There are two limitations to modern CL methodology which hinder DGP integration in this setting. First, derivative-based optimization underlying acquisition functions is thwarted by sampling-based Bayesian (i.e., MCMC) inference, which is essential for DGP posterior integration. Second, canonical acquisition criteria, such as entropy, are famously myopic to the extent that optimization may even be undesirable. Here we tackle both of these limitations at once, proposing a hybrid criterion that explores along the Pareto front of entropy and (predictive) uncertainty, requiring evaluation only at strategically located “triangulation” candidates. We showcase DGP CL performance in several synthetic benchmark exercises and on the RAE-2822 airfoil." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/08/12/ContourLocationforReliabilityinAirfoilSimulationExperimentsusingDeepGaussianProcesses.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/08/12/ContourLocationforReliabilityinAirfoilSimulationExperimentsusingDeepGaussianProcesses.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Contour Location for Reliability in Airfoil Simulation Experiments using Deep Gaussian Processes" />
+<script type="application/ld+json">
+{"description":"Bayesian deep Gaussian processes (DGPs) outperform ordinary GPs as surrogate models of complex computer experiments when response surface dynamics are non-stationary, which is especially prevalent in aerospace simulations. Yet DGP surrogates have not been deployed for the canonical downstream task in that setting: reliability analysis through contour location (CL). In that context, we are motivated by a simulation of an RAE-2822 transonic airfoil which demarcates efficient and inefficient flight conditions. Level sets separating passable versus failable operating conditions are best learned through strategic sequential designs. There are two limitations to modern CL methodology which hinder DGP integration in this setting. First, derivative-based optimization underlying acquisition functions is thwarted by sampling-based Bayesian (i.e., MCMC) inference, which is essential for DGP posterior integration. Second, canonical acquisition criteria, such as entropy, are famously myopic to the extent that optimization may even be undesirable. Here we tackle both of these limitations at once, proposing a hybrid criterion that explores along the Pareto front of entropy and (predictive) uncertainty, requiring evaluation only at strategically located “triangulation” candidates. We showcase DGP CL performance in several synthetic benchmark exercises and on the RAE-2822 airfoil.","headline":"Contour Location for Reliability in Airfoil Simulation Experiments using Deep Gaussian Processes","dateModified":"2024-08-12T00:00:00+00:00","datePublished":"2024-08-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/12/ContourLocationforReliabilityinAirfoilSimulationExperimentsusingDeepGaussianProcesses.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/12/ContourLocationforReliabilityinAirfoilSimulationExperimentsusingDeepGaussianProcesses.html","author":{"@type":"Person","name":"Annie S. Booth, S. Ashwin Renganathan, Robert B. Gramacy"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-08-12 00:00:00 +0000">08-12</time>
+  </p>
+  
+  <h1>Contour Location for Reliability in Airfoil Simulation Experiments using Deep Gaussian Processes</h1>
+  <br>Annie S. Booth, S. Ashwin Renganathan, Robert B. Gramacy</h3>
+  <br> [stat.ME]
+
+  <p>Bayesian deep Gaussian processes (DGPs) outperform ordinary GPs as surrogate models of complex computer experiments when response surface dynamics are non-stationary, which is especially prevalent in aerospace simulations. Yet DGP surrogates have not been deployed for the canonical downstream task in that setting: reliability analysis through contour location (CL). In that context, we are motivated by a simulation of an RAE-2822 transonic airfoil which demarcates efficient and inefficient flight conditions. Level sets separating passable versus failable operating conditions are best learned through strategic sequential designs. There are two limitations to modern CL methodology which hinder DGP integration in this setting. First, derivative-based optimization underlying acquisition functions is thwarted by sampling-based Bayesian (i.e., MCMC) inference, which is essential for DGP posterior integration. Second, canonical acquisition criteria, such as entropy, are famously myopic to the extent that optimization may even be undesirable. Here we tackle both of these limitations at once, proposing a hybrid criterion that explores along the Pareto front of entropy and (predictive) uncertainty, requiring evaluation only at strategically located “triangulation” candidates. We showcase DGP CL performance in several synthetic benchmark exercises and on the RAE-2822 airfoil.</p>
+
+<p><a href="https://arxiv.org/abs/2308.04420">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
