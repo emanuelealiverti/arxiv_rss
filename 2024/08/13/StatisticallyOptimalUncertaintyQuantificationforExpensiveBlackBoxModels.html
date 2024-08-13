@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Statistically Optimal Uncertainty Quantification for Expensive Black-Box Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Statistically Optimal Uncertainty Quantification for Expensive Black-Box Models" />
+<meta name="author" content="Shengyi He, Henry Lam" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Uncertainty quantification, by means of confidence interval (CI) construction, has been a fundamental problem in statistics and also important in risk-aware decision-making. In this paper, we revisit the basic problem of CI construction, but in the setting of expensive black-box models. This means we are confined to using a low number of model runs, and without the ability to obtain auxiliary model information such as gradients. In this case, there exist classical methods based on data splitting, and newer methods based on suitable resampling. However, while all these resulting CIs have similarly accurate coverage in large sample, their efficiencies in terms of interval length differ, and a systematic understanding of which method and configuration attains the shortest interval appears open. Motivated by this, we create a theoretical framework to study the statistical optimality on CI tightness under computation constraint. Our theory shows that standard batching, but also carefully constructed new formulas using uneven-size or overlapping batches, batched jackknife, and the so-called cheap bootstrap and its weighted generalizations, are statistically optimal. Our developments build on a new bridge of the classical notion of uniformly most accurate unbiasedness with batching and resampling, by viewing model runs as asymptotically Gaussian “data”, as well as a suitable notion of homogeneity for CIs." />
+<meta property="og:description" content="Uncertainty quantification, by means of confidence interval (CI) construction, has been a fundamental problem in statistics and also important in risk-aware decision-making. In this paper, we revisit the basic problem of CI construction, but in the setting of expensive black-box models. This means we are confined to using a low number of model runs, and without the ability to obtain auxiliary model information such as gradients. In this case, there exist classical methods based on data splitting, and newer methods based on suitable resampling. However, while all these resulting CIs have similarly accurate coverage in large sample, their efficiencies in terms of interval length differ, and a systematic understanding of which method and configuration attains the shortest interval appears open. Motivated by this, we create a theoretical framework to study the statistical optimality on CI tightness under computation constraint. Our theory shows that standard batching, but also carefully constructed new formulas using uneven-size or overlapping batches, batched jackknife, and the so-called cheap bootstrap and its weighted generalizations, are statistically optimal. Our developments build on a new bridge of the classical notion of uniformly most accurate unbiasedness with batching and resampling, by viewing model runs as asymptotically Gaussian “data”, as well as a suitable notion of homogeneity for CIs." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/08/13/StatisticallyOptimalUncertaintyQuantificationforExpensiveBlackBoxModels.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/08/13/StatisticallyOptimalUncertaintyQuantificationforExpensiveBlackBoxModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Statistically Optimal Uncertainty Quantification for Expensive Black-Box Models" />
+<script type="application/ld+json">
+{"description":"Uncertainty quantification, by means of confidence interval (CI) construction, has been a fundamental problem in statistics and also important in risk-aware decision-making. In this paper, we revisit the basic problem of CI construction, but in the setting of expensive black-box models. This means we are confined to using a low number of model runs, and without the ability to obtain auxiliary model information such as gradients. In this case, there exist classical methods based on data splitting, and newer methods based on suitable resampling. However, while all these resulting CIs have similarly accurate coverage in large sample, their efficiencies in terms of interval length differ, and a systematic understanding of which method and configuration attains the shortest interval appears open. Motivated by this, we create a theoretical framework to study the statistical optimality on CI tightness under computation constraint. Our theory shows that standard batching, but also carefully constructed new formulas using uneven-size or overlapping batches, batched jackknife, and the so-called cheap bootstrap and its weighted generalizations, are statistically optimal. Our developments build on a new bridge of the classical notion of uniformly most accurate unbiasedness with batching and resampling, by viewing model runs as asymptotically Gaussian “data”, as well as a suitable notion of homogeneity for CIs.","headline":"Statistically Optimal Uncertainty Quantification for Expensive Black-Box Models","dateModified":"2024-08-13T00:00:00+00:00","datePublished":"2024-08-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/13/StatisticallyOptimalUncertaintyQuantificationforExpensiveBlackBoxModels.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/13/StatisticallyOptimalUncertaintyQuantificationforExpensiveBlackBoxModels.html","author":{"@type":"Person","name":"Shengyi He, Henry Lam"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-08-13 00:00:00 +0000">08-13</time>
+  </p>
+  
+  <h1>Statistically Optimal Uncertainty Quantification for Expensive Black-Box Models</h1>
+  <br>Shengyi He, Henry Lam</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Uncertainty quantification, by means of confidence interval (CI) construction, has been a fundamental problem in statistics and also important in risk-aware decision-making. In this paper, we revisit the basic problem of CI construction, but in the setting of expensive black-box models. This means we are confined to using a low number of model runs, and without the ability to obtain auxiliary model information such as gradients. In this case, there exist classical methods based on data splitting, and newer methods based on suitable resampling. However, while all these resulting CIs have similarly accurate coverage in large sample, their efficiencies in terms of interval length differ, and a systematic understanding of which method and configuration attains the shortest interval appears open. Motivated by this, we create a theoretical framework to study the statistical optimality on CI tightness under computation constraint. Our theory shows that standard batching, but also carefully constructed new formulas using uneven-size or overlapping batches, batched jackknife, and the so-called cheap bootstrap and its weighted generalizations, are statistically optimal. Our developments build on a new bridge of the classical notion of uniformly most accurate unbiasedness with batching and resampling, by viewing model runs as asymptotically Gaussian “data”, as well as a suitable notion of homogeneity for CIs.</p>
+
+<p><a href="https://arxiv.org/abs/2408.05887">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
