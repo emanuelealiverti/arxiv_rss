@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Assessing variable importance in survival analysis using machine learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Assessing variable importance in survival analysis using machine learning" />
+<meta name="author" content="Charles J. Wolock, Peter B. Gilbert, Noah Simon, Marco Carone" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Given a collection of features available for inclusion in a predictive model, it may be of interest to quantify the relative importance of a subset of features for the prediction task at hand. For example, in HIV vaccine trials, participant baseline characteristics are used to predict the probability of HIV acquisition over the intended follow-up period, and investigators may wish to understand how much certain types of predictors, such as behavioral factors, contribute toward overall predictiveness. Time-to-event outcomes such as time to HIV acquisition are often subject to right censoring, and existing methods for assessing variable importance are typically not intended to be used in this setting. We describe a broad class of algorithm-agnostic variable importance measures for prediction in the context of survival data. We propose a nonparametric efficient estimation procedure that incorporates flexible learning of nuisance parameters, yields asymptotically valid inference, and enjoys double-robustness. We assess the performance of our proposed procedure via numerical simulations and analyze data from the HVTN 702 vaccine trial to inform enrollment strategies for future HIV vaccine trials." />
+<meta property="og:description" content="Given a collection of features available for inclusion in a predictive model, it may be of interest to quantify the relative importance of a subset of features for the prediction task at hand. For example, in HIV vaccine trials, participant baseline characteristics are used to predict the probability of HIV acquisition over the intended follow-up period, and investigators may wish to understand how much certain types of predictors, such as behavioral factors, contribute toward overall predictiveness. Time-to-event outcomes such as time to HIV acquisition are often subject to right censoring, and existing methods for assessing variable importance are typically not intended to be used in this setting. We describe a broad class of algorithm-agnostic variable importance measures for prediction in the context of survival data. We propose a nonparametric efficient estimation procedure that incorporates flexible learning of nuisance parameters, yields asymptotically valid inference, and enjoys double-robustness. We assess the performance of our proposed procedure via numerical simulations and analyze data from the HVTN 702 vaccine trial to inform enrollment strategies for future HIV vaccine trials." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/08/14/Assessingvariableimportanceinsurvivalanalysisusingmachinelearning.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/08/14/Assessingvariableimportanceinsurvivalanalysisusingmachinelearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Assessing variable importance in survival analysis using machine learning" />
+<script type="application/ld+json">
+{"description":"Given a collection of features available for inclusion in a predictive model, it may be of interest to quantify the relative importance of a subset of features for the prediction task at hand. For example, in HIV vaccine trials, participant baseline characteristics are used to predict the probability of HIV acquisition over the intended follow-up period, and investigators may wish to understand how much certain types of predictors, such as behavioral factors, contribute toward overall predictiveness. Time-to-event outcomes such as time to HIV acquisition are often subject to right censoring, and existing methods for assessing variable importance are typically not intended to be used in this setting. We describe a broad class of algorithm-agnostic variable importance measures for prediction in the context of survival data. We propose a nonparametric efficient estimation procedure that incorporates flexible learning of nuisance parameters, yields asymptotically valid inference, and enjoys double-robustness. We assess the performance of our proposed procedure via numerical simulations and analyze data from the HVTN 702 vaccine trial to inform enrollment strategies for future HIV vaccine trials.","headline":"Assessing variable importance in survival analysis using machine learning","dateModified":"2024-08-14T00:00:00+00:00","datePublished":"2024-08-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/14/Assessingvariableimportanceinsurvivalanalysisusingmachinelearning.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/14/Assessingvariableimportanceinsurvivalanalysisusingmachinelearning.html","author":{"@type":"Person","name":"Charles J. Wolock, Peter B. Gilbert, Noah Simon, Marco Carone"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-08-14 00:00:00 +0000">08-14</time>
+  </p>
+  
+  <h1>Assessing variable importance in survival analysis using machine learning</h1>
+  <br>Charles J. Wolock, Peter B. Gilbert, Noah Simon, Marco Carone</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Given a collection of features available for inclusion in a predictive model, it may be of interest to quantify the relative importance of a subset of features for the prediction task at hand. For example, in HIV vaccine trials, participant baseline characteristics are used to predict the probability of HIV acquisition over the intended follow-up period, and investigators may wish to understand how much certain types of predictors, such as behavioral factors, contribute toward overall predictiveness. Time-to-event outcomes such as time to HIV acquisition are often subject to right censoring, and existing methods for assessing variable importance are typically not intended to be used in this setting. We describe a broad class of algorithm-agnostic variable importance measures for prediction in the context of survival data. We propose a nonparametric efficient estimation procedure that incorporates flexible learning of nuisance parameters, yields asymptotically valid inference, and enjoys double-robustness. We assess the performance of our proposed procedure via numerical simulations and analyze data from the HVTN 702 vaccine trial to inform enrollment strategies for future HIV vaccine trials.</p>
+
+<p><a href="https://arxiv.org/abs/2311.12726">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
