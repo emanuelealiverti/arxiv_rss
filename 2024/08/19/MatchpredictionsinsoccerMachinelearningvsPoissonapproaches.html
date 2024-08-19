@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Match predictions in soccer: Machine learning vs. Poisson approaches</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Match predictions in soccer: Machine learning vs. Poisson approaches" />
+<meta name="author" content="Mirko Fischer, Andreas Heuer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Predicting the results of soccer matches is of great interest. This is not only due to the popularity of the sport and the joy of private “betting rounds”, but also due to the large sports betting market. Where previously expert knowledge and intuition were used, today there are models that analyze large amounts of data and make predictions based on them. In addition to Poisson models, approaches that belong to the machine learning (ML) category are increasingly being used. These include, for example, neural network or random forest models, which are compared in this article with each other as well as with Poisson models with regard to single-match prediction. In each case, the match results of a season are used as the data basis. The analysis is carried out for 5 European top leagues. A statistical analysis shows that the performance levels of the teams do not change systematically during a season. In order to characterize performance levels as accurately as possible, all match results, except from the match to be predicted, can be used as features with equal weighting. It can be seen that both, the exact choice of features and the choice of model, have only a minor influence on the prediction quality. Possible improvements in match prediction are discussed." />
+<meta property="og:description" content="Predicting the results of soccer matches is of great interest. This is not only due to the popularity of the sport and the joy of private “betting rounds”, but also due to the large sports betting market. Where previously expert knowledge and intuition were used, today there are models that analyze large amounts of data and make predictions based on them. In addition to Poisson models, approaches that belong to the machine learning (ML) category are increasingly being used. These include, for example, neural network or random forest models, which are compared in this article with each other as well as with Poisson models with regard to single-match prediction. In each case, the match results of a season are used as the data basis. The analysis is carried out for 5 European top leagues. A statistical analysis shows that the performance levels of the teams do not change systematically during a season. In order to characterize performance levels as accurately as possible, all match results, except from the match to be predicted, can be used as features with equal weighting. It can be seen that both, the exact choice of features and the choice of model, have only a minor influence on the prediction quality. Possible improvements in match prediction are discussed." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/08/19/MatchpredictionsinsoccerMachinelearningvsPoissonapproaches.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/08/19/MatchpredictionsinsoccerMachinelearningvsPoissonapproaches.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Match predictions in soccer: Machine learning vs. Poisson approaches" />
+<script type="application/ld+json">
+{"description":"Predicting the results of soccer matches is of great interest. This is not only due to the popularity of the sport and the joy of private “betting rounds”, but also due to the large sports betting market. Where previously expert knowledge and intuition were used, today there are models that analyze large amounts of data and make predictions based on them. In addition to Poisson models, approaches that belong to the machine learning (ML) category are increasingly being used. These include, for example, neural network or random forest models, which are compared in this article with each other as well as with Poisson models with regard to single-match prediction. In each case, the match results of a season are used as the data basis. The analysis is carried out for 5 European top leagues. A statistical analysis shows that the performance levels of the teams do not change systematically during a season. In order to characterize performance levels as accurately as possible, all match results, except from the match to be predicted, can be used as features with equal weighting. It can be seen that both, the exact choice of features and the choice of model, have only a minor influence on the prediction quality. Possible improvements in match prediction are discussed.","headline":"Match predictions in soccer: Machine learning vs. Poisson approaches","dateModified":"2024-08-19T00:00:00+00:00","datePublished":"2024-08-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/19/MatchpredictionsinsoccerMachinelearningvsPoissonapproaches.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/19/MatchpredictionsinsoccerMachinelearningvsPoissonapproaches.html","author":{"@type":"Person","name":"Mirko Fischer, Andreas Heuer"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-08-19 00:00:00 +0000">08-19</time>
+  </p>
+  
+  <h1>Match predictions in soccer: Machine learning vs. Poisson approaches</h1>
+  <br>Mirko Fischer, Andreas Heuer</h3>
+  <br> [stat.AP]
+
+  <p>Predicting the results of soccer matches is of great interest. This is not only due to the popularity of the sport and the joy of private “betting rounds”, but also due to the large sports betting market. Where previously expert knowledge and intuition were used, today there are models that analyze large amounts of data and make predictions based on them. In addition to Poisson models, approaches that belong to the machine learning (ML) category are increasingly being used. These include, for example, neural network or random forest models, which are compared in this article with each other as well as with Poisson models with regard to single-match prediction. In each case, the match results of a season are used as the data basis. The analysis is carried out for 5 European top leagues. A statistical analysis shows that the performance levels of the teams do not change systematically during a season. In order to characterize performance levels as accurately as possible, all match results, except from the match to be predicted, can be used as features with equal weighting. It can be seen that both, the exact choice of features and the choice of model, have only a minor influence on the prediction quality. Possible improvements in match prediction are discussed.</p>
+
+<p><a href="https://arxiv.org/abs/2408.08331">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
