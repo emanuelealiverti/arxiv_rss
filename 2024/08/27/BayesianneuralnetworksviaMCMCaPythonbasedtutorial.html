@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian neural networks via MCMC: a Python-based tutorial</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bayesian neural networks via MCMC: a Python-based tutorial" />
+<meta name="author" content="Rohitash Chandra, Joshua Simmons" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian inference provides a methodology for parameter estimation and uncertainty quantification in machine learning and deep learning methods. Variational inference and Markov Chain Monte-Carlo (MCMC) sampling methods are used to implement Bayesian inference. In the past three decades, MCMC sampling methods have faced some challenges in being adapted to larger models (such as in deep learning) and big data problems. Advanced proposal distributions that incorporate gradients, such as a Langevin proposal distribution, provide a means to address some of the limitations of MCMC sampling for Bayesian neural networks. Furthermore, MCMC methods have typically been constrained to statisticians and currently not well-known among deep learning researchers. We present a tutorial for MCMC methods that covers simple Bayesian linear and logistic models, and Bayesian neural networks. The aim of this tutorial is to bridge the gap between theory and implementation via coding, given a general sparsity of libraries and tutorials to this end. This tutorial provides code in Python with data and instructions that enable their use and extension. We provide results for some benchmark problems showing the strengths and weaknesses of implementing the respective Bayesian models via MCMC. We highlight the challenges in sampling multi-modal posterior distributions for the case of Bayesian neural networks and the need for further improvement of convergence diagnosis methods." />
+<meta property="og:description" content="Bayesian inference provides a methodology for parameter estimation and uncertainty quantification in machine learning and deep learning methods. Variational inference and Markov Chain Monte-Carlo (MCMC) sampling methods are used to implement Bayesian inference. In the past three decades, MCMC sampling methods have faced some challenges in being adapted to larger models (such as in deep learning) and big data problems. Advanced proposal distributions that incorporate gradients, such as a Langevin proposal distribution, provide a means to address some of the limitations of MCMC sampling for Bayesian neural networks. Furthermore, MCMC methods have typically been constrained to statisticians and currently not well-known among deep learning researchers. We present a tutorial for MCMC methods that covers simple Bayesian linear and logistic models, and Bayesian neural networks. The aim of this tutorial is to bridge the gap between theory and implementation via coding, given a general sparsity of libraries and tutorials to this end. This tutorial provides code in Python with data and instructions that enable their use and extension. We provide results for some benchmark problems showing the strengths and weaknesses of implementing the respective Bayesian models via MCMC. We highlight the challenges in sampling multi-modal posterior distributions for the case of Bayesian neural networks and the need for further improvement of convergence diagnosis methods." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/08/27/BayesianneuralnetworksviaMCMCaPythonbasedtutorial.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/08/27/BayesianneuralnetworksviaMCMCaPythonbasedtutorial.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bayesian neural networks via MCMC: a Python-based tutorial" />
+<script type="application/ld+json">
+{"description":"Bayesian inference provides a methodology for parameter estimation and uncertainty quantification in machine learning and deep learning methods. Variational inference and Markov Chain Monte-Carlo (MCMC) sampling methods are used to implement Bayesian inference. In the past three decades, MCMC sampling methods have faced some challenges in being adapted to larger models (such as in deep learning) and big data problems. Advanced proposal distributions that incorporate gradients, such as a Langevin proposal distribution, provide a means to address some of the limitations of MCMC sampling for Bayesian neural networks. Furthermore, MCMC methods have typically been constrained to statisticians and currently not well-known among deep learning researchers. We present a tutorial for MCMC methods that covers simple Bayesian linear and logistic models, and Bayesian neural networks. The aim of this tutorial is to bridge the gap between theory and implementation via coding, given a general sparsity of libraries and tutorials to this end. This tutorial provides code in Python with data and instructions that enable their use and extension. We provide results for some benchmark problems showing the strengths and weaknesses of implementing the respective Bayesian models via MCMC. We highlight the challenges in sampling multi-modal posterior distributions for the case of Bayesian neural networks and the need for further improvement of convergence diagnosis methods.","datePublished":"2024-08-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/27/BayesianneuralnetworksviaMCMCaPythonbasedtutorial.html"},"headline":"Bayesian neural networks via MCMC: a Python-based tutorial","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/27/BayesianneuralnetworksviaMCMCaPythonbasedtutorial.html","author":{"@type":"Person","name":"Rohitash Chandra, Joshua Simmons"},"@type":"BlogPosting","dateModified":"2024-08-27T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-08-27 00:00:00 +0000">08-27</time>
+  </p>
+  
+  <h1>Bayesian neural networks via MCMC: a Python-based tutorial</h1>
+  <br>Rohitash Chandra, Joshua Simmons</h3>
+  <br> [stat.ML,stat.CO]
+
+  <p>Bayesian inference provides a methodology for parameter estimation and uncertainty quantification in machine learning and deep learning methods. Variational inference and Markov Chain Monte-Carlo (MCMC) sampling methods are used to implement Bayesian inference. In the past three decades, MCMC sampling methods have faced some challenges in being adapted to larger models (such as in deep learning) and big data problems. Advanced proposal distributions that incorporate gradients, such as a Langevin proposal distribution, provide a means to address some of the limitations of MCMC sampling for Bayesian neural networks. Furthermore, MCMC methods have typically been constrained to statisticians and currently not well-known among deep learning researchers. We present a tutorial for MCMC methods that covers simple Bayesian linear and logistic models, and Bayesian neural networks. The aim of this tutorial is to bridge the gap between theory and implementation via coding, given a general sparsity of libraries and tutorials to this end. This tutorial provides code in Python with data and instructions that enable their use and extension. We provide results for some benchmark problems showing the strengths and weaknesses of implementing the respective Bayesian models via MCMC. We highlight the challenges in sampling multi-modal posterior distributions for the case of Bayesian neural networks and the need for further improvement of convergence diagnosis methods.</p>
+
+<p><a href="https://arxiv.org/abs/2304.02595">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
