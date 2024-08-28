@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Bayesian approach for fitting semi-Markov mixture models of cancer latency to individual-level data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Bayesian approach for fitting semi-Markov mixture models of cancer latency to individual-level data" />
+<meta name="author" content="Raphael Morsomme, Shannon Holloway, Marc Ryser, Jason Xu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Multi-state models of cancer natural history are widely used for designing and evaluating cancer early detection strategies. Calibrating such models against longitudinal data from screened cohorts is challenging, especially when fitting non-Markovian mixture models against individual-level data. Here, we consider a family of semi-Markov mixture models of cancer natural history introduce an efficient data-augmented Markov chain Monte Carlo sampling algorithm for fitting these models to individual-level screening and cancer diagnosis histories. Our fully Bayesian approach supports rigorous uncertainty quantification and model selection through leave-one-out cross-validation, and it enables the estimation of screening-related overdiagnosis rates. We demonstrate the effectiveness of our approach using synthetic data, showing that the sampling algorithm efficiently explores the joint posterior distribution of model parameters and latent variables. Finally, we apply our method to data from the US Breast Cancer Surveillance Consortium and estimate the extent of breast cancer overdiagnosis associated with mammography screening. The sampler and model comparison method are available in the R package baclava." />
+<meta property="og:description" content="Multi-state models of cancer natural history are widely used for designing and evaluating cancer early detection strategies. Calibrating such models against longitudinal data from screened cohorts is challenging, especially when fitting non-Markovian mixture models against individual-level data. Here, we consider a family of semi-Markov mixture models of cancer natural history introduce an efficient data-augmented Markov chain Monte Carlo sampling algorithm for fitting these models to individual-level screening and cancer diagnosis histories. Our fully Bayesian approach supports rigorous uncertainty quantification and model selection through leave-one-out cross-validation, and it enables the estimation of screening-related overdiagnosis rates. We demonstrate the effectiveness of our approach using synthetic data, showing that the sampling algorithm efficiently explores the joint posterior distribution of model parameters and latent variables. Finally, we apply our method to data from the US Breast Cancer Surveillance Consortium and estimate the extent of breast cancer overdiagnosis associated with mammography screening. The sampler and model comparison method are available in the R package baclava." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/08/28/ABayesianapproachforfittingsemiMarkovmixturemodelsofcancerlatencytoindividualleveldata.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/08/28/ABayesianapproachforfittingsemiMarkovmixturemodelsofcancerlatencytoindividualleveldata.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Bayesian approach for fitting semi-Markov mixture models of cancer latency to individual-level data" />
+<script type="application/ld+json">
+{"description":"Multi-state models of cancer natural history are widely used for designing and evaluating cancer early detection strategies. Calibrating such models against longitudinal data from screened cohorts is challenging, especially when fitting non-Markovian mixture models against individual-level data. Here, we consider a family of semi-Markov mixture models of cancer natural history introduce an efficient data-augmented Markov chain Monte Carlo sampling algorithm for fitting these models to individual-level screening and cancer diagnosis histories. Our fully Bayesian approach supports rigorous uncertainty quantification and model selection through leave-one-out cross-validation, and it enables the estimation of screening-related overdiagnosis rates. We demonstrate the effectiveness of our approach using synthetic data, showing that the sampling algorithm efficiently explores the joint posterior distribution of model parameters and latent variables. Finally, we apply our method to data from the US Breast Cancer Surveillance Consortium and estimate the extent of breast cancer overdiagnosis associated with mammography screening. The sampler and model comparison method are available in the R package baclava.","datePublished":"2024-08-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/28/ABayesianapproachforfittingsemiMarkovmixturemodelsofcancerlatencytoindividualleveldata.html"},"headline":"A Bayesian approach for fitting semi-Markov mixture models of cancer latency to individual-level data","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/28/ABayesianapproachforfittingsemiMarkovmixturemodelsofcancerlatencytoindividualleveldata.html","author":{"@type":"Person","name":"Raphael Morsomme, Shannon Holloway, Marc Ryser, Jason Xu"},"@type":"BlogPosting","dateModified":"2024-08-28T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-08-28 00:00:00 +0000">08-28</time>
+  </p>
+  
+  <h1>A Bayesian approach for fitting semi-Markov mixture models of cancer latency to individual-level data</h1>
+  <br>Raphael Morsomme, Shannon Holloway, Marc Ryser, Jason Xu</h3>
+  <br> [stat.CO,stat.AP,stat.ME]
+
+  <p>Multi-state models of cancer natural history are widely used for designing and evaluating cancer early detection strategies. Calibrating such models against longitudinal data from screened cohorts is challenging, especially when fitting non-Markovian mixture models against individual-level data. Here, we consider a family of semi-Markov mixture models of cancer natural history introduce an efficient data-augmented Markov chain Monte Carlo sampling algorithm for fitting these models to individual-level screening and cancer diagnosis histories. Our fully Bayesian approach supports rigorous uncertainty quantification and model selection through leave-one-out cross-validation, and it enables the estimation of screening-related overdiagnosis rates. We demonstrate the effectiveness of our approach using synthetic data, showing that the sampling algorithm efficiently explores the joint posterior distribution of model parameters and latent variables. Finally, we apply our method to data from the US Breast Cancer Surveillance Consortium and estimate the extent of breast cancer overdiagnosis associated with mammography screening. The sampler and model comparison method are available in the R package baclava.</p>
+
+<p><a href="https://arxiv.org/abs/2408.14625">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
