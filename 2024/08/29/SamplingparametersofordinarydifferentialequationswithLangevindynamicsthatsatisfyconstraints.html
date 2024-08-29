@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sampling parameters of ordinary differential equations with Langevin dynamics that satisfy constraints</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sampling parameters of ordinary differential equations with Langevin dynamics that satisfy constraints" />
+<meta name="author" content="Chris Chi, Jonathan Weare, Aaron R. Dinner" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Fitting models to data to obtain distributions of consistent parameter values is important for uncertainty quantification, model comparison, and prediction. Standard Markov Chain Monte Carlo (MCMC) approaches for fitting ordinary differential equations (ODEs) to time-series data involve proposing trial parameter sets, numerically integrating the ODEs forward in time, and accepting or rejecting the trial parameter sets. When the model dynamics depend nonlinearly on the parameters, as is generally the case, trial parameter sets are often rejected, and MCMC approaches become prohibitively computationally costly to converge. Here, we build on methods for numerical continuation and trajectory optimization to introduce an approach in which we use Langevin dynamics in the joint space of variables and parameters to sample models that satisfy constraints on the dynamics. We demonstrate the method by sampling Hopf bifurcations and limit cycles of a model of a biochemical oscillator in a Bayesian framework for parameter estimation, and we obtain more than a hundred fold speedup relative to a leading ensemble MCMC approach that requires numerically integrating the ODEs forward in time. We describe numerical experiments that provide insight into the speedup. The method is general and can be used in any framework for parameter estimation and model selection." />
+<meta property="og:description" content="Fitting models to data to obtain distributions of consistent parameter values is important for uncertainty quantification, model comparison, and prediction. Standard Markov Chain Monte Carlo (MCMC) approaches for fitting ordinary differential equations (ODEs) to time-series data involve proposing trial parameter sets, numerically integrating the ODEs forward in time, and accepting or rejecting the trial parameter sets. When the model dynamics depend nonlinearly on the parameters, as is generally the case, trial parameter sets are often rejected, and MCMC approaches become prohibitively computationally costly to converge. Here, we build on methods for numerical continuation and trajectory optimization to introduce an approach in which we use Langevin dynamics in the joint space of variables and parameters to sample models that satisfy constraints on the dynamics. We demonstrate the method by sampling Hopf bifurcations and limit cycles of a model of a biochemical oscillator in a Bayesian framework for parameter estimation, and we obtain more than a hundred fold speedup relative to a leading ensemble MCMC approach that requires numerically integrating the ODEs forward in time. We describe numerical experiments that provide insight into the speedup. The method is general and can be used in any framework for parameter estimation and model selection." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/08/29/SamplingparametersofordinarydifferentialequationswithLangevindynamicsthatsatisfyconstraints.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/08/29/SamplingparametersofordinarydifferentialequationswithLangevindynamicsthatsatisfyconstraints.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sampling parameters of ordinary differential equations with Langevin dynamics that satisfy constraints" />
+<script type="application/ld+json">
+{"description":"Fitting models to data to obtain distributions of consistent parameter values is important for uncertainty quantification, model comparison, and prediction. Standard Markov Chain Monte Carlo (MCMC) approaches for fitting ordinary differential equations (ODEs) to time-series data involve proposing trial parameter sets, numerically integrating the ODEs forward in time, and accepting or rejecting the trial parameter sets. When the model dynamics depend nonlinearly on the parameters, as is generally the case, trial parameter sets are often rejected, and MCMC approaches become prohibitively computationally costly to converge. Here, we build on methods for numerical continuation and trajectory optimization to introduce an approach in which we use Langevin dynamics in the joint space of variables and parameters to sample models that satisfy constraints on the dynamics. We demonstrate the method by sampling Hopf bifurcations and limit cycles of a model of a biochemical oscillator in a Bayesian framework for parameter estimation, and we obtain more than a hundred fold speedup relative to a leading ensemble MCMC approach that requires numerically integrating the ODEs forward in time. We describe numerical experiments that provide insight into the speedup. The method is general and can be used in any framework for parameter estimation and model selection.","datePublished":"2024-08-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/29/SamplingparametersofordinarydifferentialequationswithLangevindynamicsthatsatisfyconstraints.html"},"headline":"Sampling parameters of ordinary differential equations with Langevin dynamics that satisfy constraints","url":"https://emanuelealiverti.github.io/arxiv_rss/2024/08/29/SamplingparametersofordinarydifferentialequationswithLangevindynamicsthatsatisfyconstraints.html","author":{"@type":"Person","name":"Chris Chi, Jonathan Weare, Aaron R. Dinner"},"@type":"BlogPosting","dateModified":"2024-08-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-08-29 00:00:00 +0000">08-29</time>
+  </p>
+  
+  <h1>Sampling parameters of ordinary differential equations with Langevin dynamics that satisfy constraints</h1>
+  <br>Chris Chi, Jonathan Weare, Aaron R. Dinner</h3>
+  <br> [stat.CO]
+
+  <p>Fitting models to data to obtain distributions of consistent parameter values is important for uncertainty quantification, model comparison, and prediction. Standard Markov Chain Monte Carlo (MCMC) approaches for fitting ordinary differential equations (ODEs) to time-series data involve proposing trial parameter sets, numerically integrating the ODEs forward in time, and accepting or rejecting the trial parameter sets. When the model dynamics depend nonlinearly on the parameters, as is generally the case, trial parameter sets are often rejected, and MCMC approaches become prohibitively computationally costly to converge. Here, we build on methods for numerical continuation and trajectory optimization to introduce an approach in which we use Langevin dynamics in the joint space of variables and parameters to sample models that satisfy constraints on the dynamics. We demonstrate the method by sampling Hopf bifurcations and limit cycles of a model of a biochemical oscillator in a Bayesian framework for parameter estimation, and we obtain more than a hundred fold speedup relative to a leading ensemble MCMC approach that requires numerically integrating the ODEs forward in time. We describe numerical experiments that provide insight into the speedup. The method is general and can be used in any framework for parameter estimation and model selection.</p>
+
+<p><a href="https://arxiv.org/abs/2408.15505">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
