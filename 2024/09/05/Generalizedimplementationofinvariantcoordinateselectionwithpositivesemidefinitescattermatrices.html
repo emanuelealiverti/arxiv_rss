@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Generalized implementation of invariant coordinate selection with positive semi-definite scatter matrices</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Generalized implementation of invariant coordinate selection with positive semi-definite scatter matrices" />
+<meta name="author" content="Aurore Archimbaud" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Invariant coordinate selection (ICS) is an unsupervised multivariate data transformation useful in many contexts such as outlier detection or clustering. It is based on the simultaneous diagonalization of two affine equivariant and positive definite scatter matrices. Its classical implementation relies on a non-symmetric eigenvalue problem (EVP) by diagonalizing one scatter relatively to the other. In case of collinearity, at least one of the scatter matrices is singular and the problem cannot be solved. To address this limitation, three approaches are proposed based on: a Moore-Penrose pseudo inverse (GINV), a dimension reduction (DR), and a generalized singular value decomposition (GSVD). Their properties are investigated theoretically and in different empirical applications. Overall, the extension based on GSVD seems the most promising even if it restricts the choice of scatter matrices that can be expressed as cross-products. In practice, some of the approaches also look suitable in the context of data in high dimension low sample size (HDLSS)." />
+<meta property="og:description" content="Invariant coordinate selection (ICS) is an unsupervised multivariate data transformation useful in many contexts such as outlier detection or clustering. It is based on the simultaneous diagonalization of two affine equivariant and positive definite scatter matrices. Its classical implementation relies on a non-symmetric eigenvalue problem (EVP) by diagonalizing one scatter relatively to the other. In case of collinearity, at least one of the scatter matrices is singular and the problem cannot be solved. To address this limitation, three approaches are proposed based on: a Moore-Penrose pseudo inverse (GINV), a dimension reduction (DR), and a generalized singular value decomposition (GSVD). Their properties are investigated theoretically and in different empirical applications. Overall, the extension based on GSVD seems the most promising even if it restricts the choice of scatter matrices that can be expressed as cross-products. In practice, some of the approaches also look suitable in the context of data in high dimension low sample size (HDLSS)." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/05/Generalizedimplementationofinvariantcoordinateselectionwithpositivesemidefinitescattermatrices.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/05/Generalizedimplementationofinvariantcoordinateselectionwithpositivesemidefinitescattermatrices.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Generalized implementation of invariant coordinate selection with positive semi-definite scatter matrices" />
+<script type="application/ld+json">
+{"description":"Invariant coordinate selection (ICS) is an unsupervised multivariate data transformation useful in many contexts such as outlier detection or clustering. It is based on the simultaneous diagonalization of two affine equivariant and positive definite scatter matrices. Its classical implementation relies on a non-symmetric eigenvalue problem (EVP) by diagonalizing one scatter relatively to the other. In case of collinearity, at least one of the scatter matrices is singular and the problem cannot be solved. To address this limitation, three approaches are proposed based on: a Moore-Penrose pseudo inverse (GINV), a dimension reduction (DR), and a generalized singular value decomposition (GSVD). Their properties are investigated theoretically and in different empirical applications. Overall, the extension based on GSVD seems the most promising even if it restricts the choice of scatter matrices that can be expressed as cross-products. In practice, some of the approaches also look suitable in the context of data in high dimension low sample size (HDLSS).","headline":"Generalized implementation of invariant coordinate selection with positive semi-definite scatter matrices","dateModified":"2024-09-05T00:00:00+00:00","datePublished":"2024-09-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/05/Generalizedimplementationofinvariantcoordinateselectionwithpositivesemidefinitescattermatrices.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/05/Generalizedimplementationofinvariantcoordinateselectionwithpositivesemidefinitescattermatrices.html","author":{"@type":"Person","name":"Aurore Archimbaud"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-05 00:00:00 +0000">09-05</time>
+  </p>
+  
+  <h1>Generalized implementation of invariant coordinate selection with positive semi-definite scatter matrices</h1>
+  <br>Aurore Archimbaud</h3>
+  <br> [stat.ME]
+
+  <p>Invariant coordinate selection (ICS) is an unsupervised multivariate data transformation useful in many contexts such as outlier detection or clustering. It is based on the simultaneous diagonalization of two affine equivariant and positive definite scatter matrices. Its classical implementation relies on a non-symmetric eigenvalue problem (EVP) by diagonalizing one scatter relatively to the other. In case of collinearity, at least one of the scatter matrices is singular and the problem cannot be solved. To address this limitation, three approaches are proposed based on: a Moore-Penrose pseudo inverse (GINV), a dimension reduction (DR), and a generalized singular value decomposition (GSVD). Their properties are investigated theoretically and in different empirical applications. Overall, the extension based on GSVD seems the most promising even if it restricts the choice of scatter matrices that can be expressed as cross-products. In practice, some of the approaches also look suitable in the context of data in high dimension low sample size (HDLSS).</p>
+
+<p><a href="https://arxiv.org/abs/2409.02258">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
