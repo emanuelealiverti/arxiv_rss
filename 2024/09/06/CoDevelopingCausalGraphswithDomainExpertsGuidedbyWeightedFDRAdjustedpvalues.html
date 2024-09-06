@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Co-Developing Causal Graphs with Domain Experts Guided by Weighted FDR-Adjusted p-values</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Co-Developing Causal Graphs with Domain Experts Guided by Weighted FDR-Adjusted p-values" />
+<meta name="author" content="Eli Y. Kling" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper proposes an approach facilitating co-design of causal graphs between subject matter experts and statistical modellers. Modern causal analysis starting with formulation of causal graphs provides benefits for robust analysis and well-grounded decision support. Moreover, this process can enrich the discovery and planning phase of data science projects. The key premise is that plotting relevant statistical information on a causal graph structure can facilitate an intuitive discussion between domain experts and modellers. Furthermore, Hand-crafting causality graphs, integrating human expertise with robust statistical methodology, enables ensuring responsible AI practices. The paper focuses on using multiplicity-adjusted p-values, controlling for the false discovery rate (FDR), as an aid for co-designing the graph. A family of hypotheses relevant to causal graph construction is identified, including assessing correlation strengths, directions of causal effects, and how well an estimated structural causal model induces the observed covariance structure. An iterative flow is described where an initial causal graph is drafted based on expert beliefs about likely causal relationships. The subject matter expert’s beliefs, communicated as ranked scores could be incorporated into the control of the measure proposed by Benjamini and Kling, the FDCR (False Discovery Cost Rate). The FDCR-adjusted p-values then provide feedback on which parts of the graph are supported or contradicted by the data. This co-design process continues, adding, removing, or revising arcs in the graph, until the expert and modeller converge on a satisfactory causal structure grounded in both domain knowledge and data evidence." />
+<meta property="og:description" content="This paper proposes an approach facilitating co-design of causal graphs between subject matter experts and statistical modellers. Modern causal analysis starting with formulation of causal graphs provides benefits for robust analysis and well-grounded decision support. Moreover, this process can enrich the discovery and planning phase of data science projects. The key premise is that plotting relevant statistical information on a causal graph structure can facilitate an intuitive discussion between domain experts and modellers. Furthermore, Hand-crafting causality graphs, integrating human expertise with robust statistical methodology, enables ensuring responsible AI practices. The paper focuses on using multiplicity-adjusted p-values, controlling for the false discovery rate (FDR), as an aid for co-designing the graph. A family of hypotheses relevant to causal graph construction is identified, including assessing correlation strengths, directions of causal effects, and how well an estimated structural causal model induces the observed covariance structure. An iterative flow is described where an initial causal graph is drafted based on expert beliefs about likely causal relationships. The subject matter expert’s beliefs, communicated as ranked scores could be incorporated into the control of the measure proposed by Benjamini and Kling, the FDCR (False Discovery Cost Rate). The FDCR-adjusted p-values then provide feedback on which parts of the graph are supported or contradicted by the data. This co-design process continues, adding, removing, or revising arcs in the graph, until the expert and modeller converge on a satisfactory causal structure grounded in both domain knowledge and data evidence." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/06/CoDevelopingCausalGraphswithDomainExpertsGuidedbyWeightedFDRAdjustedpvalues.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/06/CoDevelopingCausalGraphswithDomainExpertsGuidedbyWeightedFDRAdjustedpvalues.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Co-Developing Causal Graphs with Domain Experts Guided by Weighted FDR-Adjusted p-values" />
+<script type="application/ld+json">
+{"description":"This paper proposes an approach facilitating co-design of causal graphs between subject matter experts and statistical modellers. Modern causal analysis starting with formulation of causal graphs provides benefits for robust analysis and well-grounded decision support. Moreover, this process can enrich the discovery and planning phase of data science projects. The key premise is that plotting relevant statistical information on a causal graph structure can facilitate an intuitive discussion between domain experts and modellers. Furthermore, Hand-crafting causality graphs, integrating human expertise with robust statistical methodology, enables ensuring responsible AI practices. The paper focuses on using multiplicity-adjusted p-values, controlling for the false discovery rate (FDR), as an aid for co-designing the graph. A family of hypotheses relevant to causal graph construction is identified, including assessing correlation strengths, directions of causal effects, and how well an estimated structural causal model induces the observed covariance structure. An iterative flow is described where an initial causal graph is drafted based on expert beliefs about likely causal relationships. The subject matter expert’s beliefs, communicated as ranked scores could be incorporated into the control of the measure proposed by Benjamini and Kling, the FDCR (False Discovery Cost Rate). The FDCR-adjusted p-values then provide feedback on which parts of the graph are supported or contradicted by the data. This co-design process continues, adding, removing, or revising arcs in the graph, until the expert and modeller converge on a satisfactory causal structure grounded in both domain knowledge and data evidence.","headline":"Co-Developing Causal Graphs with Domain Experts Guided by Weighted FDR-Adjusted p-values","dateModified":"2024-09-06T00:00:00+00:00","datePublished":"2024-09-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/06/CoDevelopingCausalGraphswithDomainExpertsGuidedbyWeightedFDRAdjustedpvalues.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/06/CoDevelopingCausalGraphswithDomainExpertsGuidedbyWeightedFDRAdjustedpvalues.html","author":{"@type":"Person","name":"Eli Y. Kling"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-06 00:00:00 +0000">09-06</time>
+  </p>
+  
+  <h1>Co-Developing Causal Graphs with Domain Experts Guided by Weighted FDR-Adjusted p-values</h1>
+  <br>Eli Y. Kling</h3>
+  <br> [stat.ME]
+
+  <p>This paper proposes an approach facilitating co-design of causal graphs between subject matter experts and statistical modellers. Modern causal analysis starting with formulation of causal graphs provides benefits for robust analysis and well-grounded decision support. Moreover, this process can enrich the discovery and planning phase of data science projects.
+  The key premise is that plotting relevant statistical information on a causal graph structure can facilitate an intuitive discussion between domain experts and modellers. Furthermore, Hand-crafting causality graphs, integrating human expertise with robust statistical methodology, enables ensuring responsible AI practices.
+  The paper focuses on using multiplicity-adjusted p-values, controlling for the false discovery rate (FDR), as an aid for co-designing the graph. A family of hypotheses relevant to causal graph construction is identified, including assessing correlation strengths, directions of causal effects, and how well an estimated structural causal model induces the observed covariance structure.
+  An iterative flow is described where an initial causal graph is drafted based on expert beliefs about likely causal relationships. The subject matter expert’s beliefs, communicated as ranked scores could be incorporated into the control of the measure proposed by Benjamini and Kling, the FDCR (False Discovery Cost Rate). The FDCR-adjusted p-values then provide feedback on which parts of the graph are supported or contradicted by the data. This co-design process continues, adding, removing, or revising arcs in the graph, until the expert and modeller converge on a satisfactory causal structure grounded in both domain knowledge and data evidence.</p>
+
+<p><a href="https://arxiv.org/abs/2409.03126">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
