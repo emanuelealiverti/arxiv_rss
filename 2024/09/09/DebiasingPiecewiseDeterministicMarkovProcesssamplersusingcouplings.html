@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Debiasing Piecewise Deterministic Markov Process samplers using couplings</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Debiasing Piecewise Deterministic Markov Process samplers using couplings" />
+<meta name="author" content="Adrien Corenflos, Matthew Sutton, Nicolas Chopin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Monte Carlo methods – such as Markov chain Monte Carlo (MCMC) and piecewise deterministic Markov process (PDMP) samplers – provide asymptotically exact estimators of expectations under a target distribution. There is growing interest in alternatives to this asymptotic regime, in particular in constructing estimators that are exact in the limit of an infinite amount of computing processors, rather than in the limit of an infinite number of Markov iterations. In particular, Jacob et al. (2020) introduced coupled MCMC estimators to remove the non-asymptotic bias, resulting in MCMC estimators that can be embarrassingly parallelised. In this work, we extend the estimators of Jacob et al. (2020) to the continuous-time context and derive couplings for the bouncy, the boomerang and the coordinate samplers. Some preliminary empirical results are included that demonstrate the reasonable scaling of our method with the dimension of the target." />
+<meta property="og:description" content="Monte Carlo methods – such as Markov chain Monte Carlo (MCMC) and piecewise deterministic Markov process (PDMP) samplers – provide asymptotically exact estimators of expectations under a target distribution. There is growing interest in alternatives to this asymptotic regime, in particular in constructing estimators that are exact in the limit of an infinite amount of computing processors, rather than in the limit of an infinite number of Markov iterations. In particular, Jacob et al. (2020) introduced coupled MCMC estimators to remove the non-asymptotic bias, resulting in MCMC estimators that can be embarrassingly parallelised. In this work, we extend the estimators of Jacob et al. (2020) to the continuous-time context and derive couplings for the bouncy, the boomerang and the coordinate samplers. Some preliminary empirical results are included that demonstrate the reasonable scaling of our method with the dimension of the target." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/09/DebiasingPiecewiseDeterministicMarkovProcesssamplersusingcouplings.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/09/DebiasingPiecewiseDeterministicMarkovProcesssamplersusingcouplings.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Debiasing Piecewise Deterministic Markov Process samplers using couplings" />
+<script type="application/ld+json">
+{"description":"Monte Carlo methods – such as Markov chain Monte Carlo (MCMC) and piecewise deterministic Markov process (PDMP) samplers – provide asymptotically exact estimators of expectations under a target distribution. There is growing interest in alternatives to this asymptotic regime, in particular in constructing estimators that are exact in the limit of an infinite amount of computing processors, rather than in the limit of an infinite number of Markov iterations. In particular, Jacob et al. (2020) introduced coupled MCMC estimators to remove the non-asymptotic bias, resulting in MCMC estimators that can be embarrassingly parallelised. In this work, we extend the estimators of Jacob et al. (2020) to the continuous-time context and derive couplings for the bouncy, the boomerang and the coordinate samplers. Some preliminary empirical results are included that demonstrate the reasonable scaling of our method with the dimension of the target.","headline":"Debiasing Piecewise Deterministic Markov Process samplers using couplings","dateModified":"2024-09-09T00:00:00+00:00","datePublished":"2024-09-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/09/DebiasingPiecewiseDeterministicMarkovProcesssamplersusingcouplings.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/09/DebiasingPiecewiseDeterministicMarkovProcesssamplersusingcouplings.html","author":{"@type":"Person","name":"Adrien Corenflos, Matthew Sutton, Nicolas Chopin"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-09 00:00:00 +0000">09-09</time>
+  </p>
+  
+  <h1>Debiasing Piecewise Deterministic Markov Process samplers using couplings</h1>
+  <br>Adrien Corenflos, Matthew Sutton, Nicolas Chopin</h3>
+  <br> [stat.CO,stat.ME]
+
+  <p>Monte Carlo methods – such as Markov chain Monte Carlo (MCMC) and piecewise deterministic Markov process (PDMP) samplers – provide asymptotically exact estimators of expectations under a target distribution. There is growing interest in alternatives to this asymptotic regime, in particular in constructing estimators that are exact in the limit of an infinite amount of computing processors, rather than in the limit of an infinite number of Markov iterations. In particular, Jacob et al. (2020) introduced coupled MCMC estimators to remove the non-asymptotic bias, resulting in MCMC estimators that can be embarrassingly parallelised. In this work, we extend the estimators of Jacob et al. (2020) to the continuous-time context and derive couplings for the bouncy, the boomerang and the coordinate samplers. Some preliminary empirical results are included that demonstrate the reasonable scaling of our method with the dimension of the target.</p>
+
+<p><a href="https://arxiv.org/abs/2306.15422">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
