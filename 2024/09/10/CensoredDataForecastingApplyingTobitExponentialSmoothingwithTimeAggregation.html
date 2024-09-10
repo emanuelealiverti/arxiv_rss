@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Censored Data Forecasting: Applying Tobit Exponential Smoothing with Time Aggregation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Censored Data Forecasting: Applying Tobit Exponential Smoothing with Time Aggregation" />
+<meta name="author" content="Diego J. Pedregal, Juan R. Trapero" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This study introduces a novel approach to forecasting by Tobit Exponential Smoothing with time aggregation constraints. This model, a particular case of the Tobit Innovations State Space system, handles censored observed time series effectively, such as sales data, with known and potentially variable censoring levels over time. The paper provides a comprehensive analysis of the model structure, including its representation in system equations and the optimal recursive estimation of states. It also explores the benefits of time aggregation in state space systems, particularly for inventory management and demand forecasting. Through a series of case studies, the paper demonstrates the effectiveness of the model across various scenarios, including hourly and daily censoring levels. The results highlight the model’s ability to produce accurate forecasts and confidence bands comparable to those from uncensored models, even under severe censoring conditions. The study further discusses the implications for inventory policy, emphasizing the importance of avoiding spiral-down effects in demand estimation. The paper concludes by showcasing the superiority of the proposed model over standard methods, particularly in reducing lost sales and excess stock, thereby optimizing inventory costs. This research contributes to the field of forecasting by offering a robust model that effectively addresses the challenges of censored data and time aggregation." />
+<meta property="og:description" content="This study introduces a novel approach to forecasting by Tobit Exponential Smoothing with time aggregation constraints. This model, a particular case of the Tobit Innovations State Space system, handles censored observed time series effectively, such as sales data, with known and potentially variable censoring levels over time. The paper provides a comprehensive analysis of the model structure, including its representation in system equations and the optimal recursive estimation of states. It also explores the benefits of time aggregation in state space systems, particularly for inventory management and demand forecasting. Through a series of case studies, the paper demonstrates the effectiveness of the model across various scenarios, including hourly and daily censoring levels. The results highlight the model’s ability to produce accurate forecasts and confidence bands comparable to those from uncensored models, even under severe censoring conditions. The study further discusses the implications for inventory policy, emphasizing the importance of avoiding spiral-down effects in demand estimation. The paper concludes by showcasing the superiority of the proposed model over standard methods, particularly in reducing lost sales and excess stock, thereby optimizing inventory costs. This research contributes to the field of forecasting by offering a robust model that effectively addresses the challenges of censored data and time aggregation." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/10/CensoredDataForecastingApplyingTobitExponentialSmoothingwithTimeAggregation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/10/CensoredDataForecastingApplyingTobitExponentialSmoothingwithTimeAggregation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Censored Data Forecasting: Applying Tobit Exponential Smoothing with Time Aggregation" />
+<script type="application/ld+json">
+{"description":"This study introduces a novel approach to forecasting by Tobit Exponential Smoothing with time aggregation constraints. This model, a particular case of the Tobit Innovations State Space system, handles censored observed time series effectively, such as sales data, with known and potentially variable censoring levels over time. The paper provides a comprehensive analysis of the model structure, including its representation in system equations and the optimal recursive estimation of states. It also explores the benefits of time aggregation in state space systems, particularly for inventory management and demand forecasting. Through a series of case studies, the paper demonstrates the effectiveness of the model across various scenarios, including hourly and daily censoring levels. The results highlight the model’s ability to produce accurate forecasts and confidence bands comparable to those from uncensored models, even under severe censoring conditions. The study further discusses the implications for inventory policy, emphasizing the importance of avoiding spiral-down effects in demand estimation. The paper concludes by showcasing the superiority of the proposed model over standard methods, particularly in reducing lost sales and excess stock, thereby optimizing inventory costs. This research contributes to the field of forecasting by offering a robust model that effectively addresses the challenges of censored data and time aggregation.","headline":"Censored Data Forecasting: Applying Tobit Exponential Smoothing with Time Aggregation","dateModified":"2024-09-10T00:00:00+00:00","datePublished":"2024-09-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/10/CensoredDataForecastingApplyingTobitExponentialSmoothingwithTimeAggregation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/10/CensoredDataForecastingApplyingTobitExponentialSmoothingwithTimeAggregation.html","author":{"@type":"Person","name":"Diego J. Pedregal, Juan R. Trapero"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-10 00:00:00 +0000">09-10</time>
+  </p>
+  
+  <h1>Censored Data Forecasting: Applying Tobit Exponential Smoothing with Time Aggregation</h1>
+  <br>Diego J. Pedregal, Juan R. Trapero</h3>
+  <br> [stat.ME,stat.OT]
+
+  <p>This study introduces a novel approach to forecasting by Tobit Exponential Smoothing with time aggregation constraints. This model, a particular case of the Tobit Innovations State Space system, handles censored observed time series effectively, such as sales data, with known and potentially variable censoring levels over time. The paper provides a comprehensive analysis of the model structure, including its representation in system equations and the optimal recursive estimation of states. It also explores the benefits of time aggregation in state space systems, particularly for inventory management and demand forecasting. Through a series of case studies, the paper demonstrates the effectiveness of the model across various scenarios, including hourly and daily censoring levels. The results highlight the model’s ability to produce accurate forecasts and confidence bands comparable to those from uncensored models, even under severe censoring conditions. The study further discusses the implications for inventory policy, emphasizing the importance of avoiding spiral-down effects in demand estimation. The paper concludes by showcasing the superiority of the proposed model over standard methods, particularly in reducing lost sales and excess stock, thereby optimizing inventory costs. This research contributes to the field of forecasting by offering a robust model that effectively addresses the challenges of censored data and time aggregation.</p>
+
+<p><a href="https://arxiv.org/abs/2409.05412">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

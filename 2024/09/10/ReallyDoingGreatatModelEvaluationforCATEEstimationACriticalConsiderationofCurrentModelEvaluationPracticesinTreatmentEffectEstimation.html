@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Really Doing Great at Model Evaluation for CATE Estimation? A Critical Consideration of Current Model Evaluation Practices in Treatment Effect Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Really Doing Great at Model Evaluation for CATE Estimation? A Critical Consideration of Current Model Evaluation Practices in Treatment Effect Estimation" />
+<meta name="author" content="Hugo Gobato Souto, Francisco Louzada Neto" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper critically examines current methodologies for evaluating models in Conditional and Average Treatment Effect (CATE/ATE) estimation, identifying several key pitfalls in existing practices. The current approach of over-reliance on specific metrics and empirical means and lack of statistical tests necessitates a more rigorous evaluation approach. We propose an automated algorithm for selecting appropriate statistical tests, addressing the trade-offs and assumptions inherent in these tests. Additionally, we emphasize the importance of reporting empirical standard deviations alongside performance metrics and advocate for using Squared Error for Coverage (SEC) and Absolute Error for Coverage (AEC) metrics and empirical histograms of the coverage results as supplementary metrics. These enhancements provide a more comprehensive understanding of model performance in heterogeneous data-generating processes (DGPs). The practical implications are demonstrated through two examples, showcasing the benefits of these methodological improvements, which can significantly improve the robustness and accuracy of future research in statistical models for CATE and ATE estimation." />
+<meta property="og:description" content="This paper critically examines current methodologies for evaluating models in Conditional and Average Treatment Effect (CATE/ATE) estimation, identifying several key pitfalls in existing practices. The current approach of over-reliance on specific metrics and empirical means and lack of statistical tests necessitates a more rigorous evaluation approach. We propose an automated algorithm for selecting appropriate statistical tests, addressing the trade-offs and assumptions inherent in these tests. Additionally, we emphasize the importance of reporting empirical standard deviations alongside performance metrics and advocate for using Squared Error for Coverage (SEC) and Absolute Error for Coverage (AEC) metrics and empirical histograms of the coverage results as supplementary metrics. These enhancements provide a more comprehensive understanding of model performance in heterogeneous data-generating processes (DGPs). The practical implications are demonstrated through two examples, showcasing the benefits of these methodological improvements, which can significantly improve the robustness and accuracy of future research in statistical models for CATE and ATE estimation." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/10/ReallyDoingGreatatModelEvaluationforCATEEstimationACriticalConsiderationofCurrentModelEvaluationPracticesinTreatmentEffectEstimation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/10/ReallyDoingGreatatModelEvaluationforCATEEstimationACriticalConsiderationofCurrentModelEvaluationPracticesinTreatmentEffectEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Really Doing Great at Model Evaluation for CATE Estimation? A Critical Consideration of Current Model Evaluation Practices in Treatment Effect Estimation" />
+<script type="application/ld+json">
+{"description":"This paper critically examines current methodologies for evaluating models in Conditional and Average Treatment Effect (CATE/ATE) estimation, identifying several key pitfalls in existing practices. The current approach of over-reliance on specific metrics and empirical means and lack of statistical tests necessitates a more rigorous evaluation approach. We propose an automated algorithm for selecting appropriate statistical tests, addressing the trade-offs and assumptions inherent in these tests. Additionally, we emphasize the importance of reporting empirical standard deviations alongside performance metrics and advocate for using Squared Error for Coverage (SEC) and Absolute Error for Coverage (AEC) metrics and empirical histograms of the coverage results as supplementary metrics. These enhancements provide a more comprehensive understanding of model performance in heterogeneous data-generating processes (DGPs). The practical implications are demonstrated through two examples, showcasing the benefits of these methodological improvements, which can significantly improve the robustness and accuracy of future research in statistical models for CATE and ATE estimation.","headline":"Really Doing Great at Model Evaluation for CATE Estimation? A Critical Consideration of Current Model Evaluation Practices in Treatment Effect Estimation","dateModified":"2024-09-10T00:00:00+00:00","datePublished":"2024-09-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/10/ReallyDoingGreatatModelEvaluationforCATEEstimationACriticalConsiderationofCurrentModelEvaluationPracticesinTreatmentEffectEstimation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/10/ReallyDoingGreatatModelEvaluationforCATEEstimationACriticalConsiderationofCurrentModelEvaluationPracticesinTreatmentEffectEstimation.html","author":{"@type":"Person","name":"Hugo Gobato Souto, Francisco Louzada Neto"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-10 00:00:00 +0000">09-10</time>
+  </p>
+  
+  <h1>Really Doing Great at Model Evaluation for CATE Estimation? A Critical Consideration of Current Model Evaluation Practices in Treatment Effect Estimation</h1>
+  <br>Hugo Gobato Souto, Francisco Louzada Neto</h3>
+  <br> [stat.ME]
+
+  <p>This paper critically examines current methodologies for evaluating models in Conditional and Average Treatment Effect (CATE/ATE) estimation, identifying several key pitfalls in existing practices. The current approach of over-reliance on specific metrics and empirical means and lack of statistical tests necessitates a more rigorous evaluation approach. We propose an automated algorithm for selecting appropriate statistical tests, addressing the trade-offs and assumptions inherent in these tests. Additionally, we emphasize the importance of reporting empirical standard deviations alongside performance metrics and advocate for using Squared Error for Coverage (SEC) and Absolute Error for Coverage (AEC) metrics and empirical histograms of the coverage results as supplementary metrics. These enhancements provide a more comprehensive understanding of model performance in heterogeneous data-generating processes (DGPs). The practical implications are demonstrated through two examples, showcasing the benefits of these methodological improvements, which can significantly improve the robustness and accuracy of future research in statistical models for CATE and ATE estimation.</p>
+
+<p><a href="https://arxiv.org/abs/2409.05161">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
