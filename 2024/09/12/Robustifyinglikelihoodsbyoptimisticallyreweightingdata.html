@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Robustifying likelihoods by optimistically re-weighting data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Robustifying likelihoods by optimistically re-weighting data" />
+<meta name="author" content="Miheer Dewaskar, Christopher Tosh, Jeremias Knoblauch, David B. Dunson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Likelihood-based inferences have been remarkably successful in wide-spanning application areas. However, even after due diligence in selecting a good model for the data at hand, there is inevitably some amount of model misspecification: outliers, data contamination or inappropriate parametric assumptions such as Gaussianity mean that most models are at best rough approximations of reality. A significant practical concern is that for certain inferences, even small amounts of model misspecification may have a substantial impact; a problem we refer to as brittleness. This article attempts to address the brittleness problem in likelihood-based inferences by choosing the most model friendly data generating process in a distance-based neighborhood of the empirical measure. This leads to a new Optimistically Weighted Likelihood (OWL), which robustifies the original likelihood by formally accounting for a small amount of model misspecification. Focusing on total variation (TV) neighborhoods, we study theoretical properties, develop estimation algorithms and illustrate the methodology in applications to mixture models and regression." />
+<meta property="og:description" content="Likelihood-based inferences have been remarkably successful in wide-spanning application areas. However, even after due diligence in selecting a good model for the data at hand, there is inevitably some amount of model misspecification: outliers, data contamination or inappropriate parametric assumptions such as Gaussianity mean that most models are at best rough approximations of reality. A significant practical concern is that for certain inferences, even small amounts of model misspecification may have a substantial impact; a problem we refer to as brittleness. This article attempts to address the brittleness problem in likelihood-based inferences by choosing the most model friendly data generating process in a distance-based neighborhood of the empirical measure. This leads to a new Optimistically Weighted Likelihood (OWL), which robustifies the original likelihood by formally accounting for a small amount of model misspecification. Focusing on total variation (TV) neighborhoods, we study theoretical properties, develop estimation algorithms and illustrate the methodology in applications to mixture models and regression." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/12/Robustifyinglikelihoodsbyoptimisticallyreweightingdata.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/12/Robustifyinglikelihoodsbyoptimisticallyreweightingdata.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Robustifying likelihoods by optimistically re-weighting data" />
+<script type="application/ld+json">
+{"description":"Likelihood-based inferences have been remarkably successful in wide-spanning application areas. However, even after due diligence in selecting a good model for the data at hand, there is inevitably some amount of model misspecification: outliers, data contamination or inappropriate parametric assumptions such as Gaussianity mean that most models are at best rough approximations of reality. A significant practical concern is that for certain inferences, even small amounts of model misspecification may have a substantial impact; a problem we refer to as brittleness. This article attempts to address the brittleness problem in likelihood-based inferences by choosing the most model friendly data generating process in a distance-based neighborhood of the empirical measure. This leads to a new Optimistically Weighted Likelihood (OWL), which robustifies the original likelihood by formally accounting for a small amount of model misspecification. Focusing on total variation (TV) neighborhoods, we study theoretical properties, develop estimation algorithms and illustrate the methodology in applications to mixture models and regression.","headline":"Robustifying likelihoods by optimistically re-weighting data","dateModified":"2024-09-12T00:00:00+00:00","datePublished":"2024-09-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/12/Robustifyinglikelihoodsbyoptimisticallyreweightingdata.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/12/Robustifyinglikelihoodsbyoptimisticallyreweightingdata.html","author":{"@type":"Person","name":"Miheer Dewaskar, Christopher Tosh, Jeremias Knoblauch, David B. Dunson"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-12 00:00:00 +0000">09-12</time>
+  </p>
+  
+  <h1>Robustifying likelihoods by optimistically re-weighting data</h1>
+  <br>Miheer Dewaskar, Christopher Tosh, Jeremias Knoblauch, David B. Dunson</h3>
+  <br> [stat.ME,stat.TH]
+
+  <p>Likelihood-based inferences have been remarkably successful in wide-spanning application areas. However, even after due diligence in selecting a good model for the data at hand, there is inevitably some amount of model misspecification: outliers, data contamination or inappropriate parametric assumptions such as Gaussianity mean that most models are at best rough approximations of reality. A significant practical concern is that for certain inferences, even small amounts of model misspecification may have a substantial impact; a problem we refer to as brittleness. This article attempts to address the brittleness problem in likelihood-based inferences by choosing the most model friendly data generating process in a distance-based neighborhood of the empirical measure. This leads to a new Optimistically Weighted Likelihood (OWL), which robustifies the original likelihood by formally accounting for a small amount of model misspecification. Focusing on total variation (TV) neighborhoods, we study theoretical properties, develop estimation algorithms and illustrate the methodology in applications to mixture models and regression.</p>
+
+<p><a href="https://arxiv.org/abs/2303.10525">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
