@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>AutoIRT: Calibrating Item Response Theory Models with Automated Machine Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="AutoIRT: Calibrating Item Response Theory Models with Automated Machine Learning" />
+<meta name="author" content="James Sharpnack, Phoebe Mulcaire, Klinton Bicknell, Geoff LaFlair, Kevin Yancey" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Item response theory (IRT) is a class of interpretable factor models that are widely used in computerized adaptive tests (CATs), such as language proficiency tests. Traditionally, these are fit using parametric mixed effects models on the probability of a test taker getting the correct answer to a test item (i.e., question). Neural net extensions of these models, such as BertIRT, require specialized architectures and parameter tuning. We propose a multistage fitting procedure that is compatible with out-of-the-box Automated Machine Learning (AutoML) tools. It is based on a Monte Carlo EM (MCEM) outer loop with a two stage inner loop, which trains a non-parametric AutoML grade model using item features followed by an item specific parametric model. This greatly accelerates the modeling workflow for scoring tests. We demonstrate its effectiveness by applying it to the Duolingo English Test, a high stakes, online English proficiency test. We show that the resulting model is typically more well calibrated, gets better predictive performance, and more accurate scores than existing methods (non-explanatory IRT models and explanatory IRT models like BERT-IRT). Along the way, we provide a brief survey of machine learning methods for calibration of item parameters for CATs." />
+<meta property="og:description" content="Item response theory (IRT) is a class of interpretable factor models that are widely used in computerized adaptive tests (CATs), such as language proficiency tests. Traditionally, these are fit using parametric mixed effects models on the probability of a test taker getting the correct answer to a test item (i.e., question). Neural net extensions of these models, such as BertIRT, require specialized architectures and parameter tuning. We propose a multistage fitting procedure that is compatible with out-of-the-box Automated Machine Learning (AutoML) tools. It is based on a Monte Carlo EM (MCEM) outer loop with a two stage inner loop, which trains a non-parametric AutoML grade model using item features followed by an item specific parametric model. This greatly accelerates the modeling workflow for scoring tests. We demonstrate its effectiveness by applying it to the Duolingo English Test, a high stakes, online English proficiency test. We show that the resulting model is typically more well calibrated, gets better predictive performance, and more accurate scores than existing methods (non-explanatory IRT models and explanatory IRT models like BERT-IRT). Along the way, we provide a brief survey of machine learning methods for calibration of item parameters for CATs." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/16/AutoIRTCalibratingItemResponseTheoryModelswithAutomatedMachineLearning.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/16/AutoIRTCalibratingItemResponseTheoryModelswithAutomatedMachineLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="AutoIRT: Calibrating Item Response Theory Models with Automated Machine Learning" />
+<script type="application/ld+json">
+{"description":"Item response theory (IRT) is a class of interpretable factor models that are widely used in computerized adaptive tests (CATs), such as language proficiency tests. Traditionally, these are fit using parametric mixed effects models on the probability of a test taker getting the correct answer to a test item (i.e., question). Neural net extensions of these models, such as BertIRT, require specialized architectures and parameter tuning. We propose a multistage fitting procedure that is compatible with out-of-the-box Automated Machine Learning (AutoML) tools. It is based on a Monte Carlo EM (MCEM) outer loop with a two stage inner loop, which trains a non-parametric AutoML grade model using item features followed by an item specific parametric model. This greatly accelerates the modeling workflow for scoring tests. We demonstrate its effectiveness by applying it to the Duolingo English Test, a high stakes, online English proficiency test. We show that the resulting model is typically more well calibrated, gets better predictive performance, and more accurate scores than existing methods (non-explanatory IRT models and explanatory IRT models like BERT-IRT). Along the way, we provide a brief survey of machine learning methods for calibration of item parameters for CATs.","headline":"AutoIRT: Calibrating Item Response Theory Models with Automated Machine Learning","dateModified":"2024-09-16T00:00:00+00:00","datePublished":"2024-09-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/16/AutoIRTCalibratingItemResponseTheoryModelswithAutomatedMachineLearning.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/16/AutoIRTCalibratingItemResponseTheoryModelswithAutomatedMachineLearning.html","author":{"@type":"Person","name":"James Sharpnack, Phoebe Mulcaire, Klinton Bicknell, Geoff LaFlair, Kevin Yancey"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-16 00:00:00 +0000">09-16</time>
+  </p>
+  
+  <h1>AutoIRT: Calibrating Item Response Theory Models with Automated Machine Learning</h1>
+  <br>James Sharpnack, Phoebe Mulcaire, Klinton Bicknell, Geoff LaFlair, Kevin Yancey</h3>
+  <br> [stat.AP]
+
+  <p>Item response theory (IRT) is a class of interpretable factor models that are widely used in computerized adaptive tests (CATs), such as language proficiency tests. Traditionally, these are fit using parametric mixed effects models on the probability of a test taker getting the correct answer to a test item (i.e., question). Neural net extensions of these models, such as BertIRT, require specialized architectures and parameter tuning. We propose a multistage fitting procedure that is compatible with out-of-the-box Automated Machine Learning (AutoML) tools. It is based on a Monte Carlo EM (MCEM) outer loop with a two stage inner loop, which trains a non-parametric AutoML grade model using item features followed by an item specific parametric model. This greatly accelerates the modeling workflow for scoring tests. We demonstrate its effectiveness by applying it to the Duolingo English Test, a high stakes, online English proficiency test. We show that the resulting model is typically more well calibrated, gets better predictive performance, and more accurate scores than existing methods (non-explanatory IRT models and explanatory IRT models like BERT-IRT). Along the way, we provide a brief survey of machine learning methods for calibration of item parameters for CATs.</p>
+
+<p><a href="https://arxiv.org/abs/2409.08823">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
