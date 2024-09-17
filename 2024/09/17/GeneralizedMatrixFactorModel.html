@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Generalized Matrix Factor Model</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Generalized Matrix Factor Model" />
+<meta name="author" content="Xinbing Kong, Tong Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This article introduces a nonlinear generalized matrix factor model (GMFM) that allows for mixed-type variables, extending the scope of linear matrix factor models (LMFM) that are so far limited to handling continuous variables. We introduce a novel augmented Lagrange multiplier method, equivalent to the constraint maximum likelihood estimation, and carefully tailored to be locally concave around the true factor and loading parameters. This statistically guarantees the local convexity of the negative Hessian matrix around the true parameters of the factors and loadings, which is nontrivial in the matrix factor modeling and leads to feasible central limit theorems of the estimated factors and loadings. We also theoretically establish the convergence rates of the estimated factor and loading matrices for the GMFM under general conditions that allow for correlations across samples, rows, and columns. Moreover, we provide a model selection criterion to determine the numbers of row and column factors consistently. To numerically compute the constraint maximum likelihood estimator, we provide two algorithms: two-stage alternating maximization and minorization maximization. Extensive simulation studies demonstrate GMFM’s superiority in handling discrete and mixed-type variables. An empirical data analysis of the company’s operating performance shows that GMFM does clustering and reconstruction well in the presence of discontinuous entries in the data matrix." />
+<meta property="og:description" content="This article introduces a nonlinear generalized matrix factor model (GMFM) that allows for mixed-type variables, extending the scope of linear matrix factor models (LMFM) that are so far limited to handling continuous variables. We introduce a novel augmented Lagrange multiplier method, equivalent to the constraint maximum likelihood estimation, and carefully tailored to be locally concave around the true factor and loading parameters. This statistically guarantees the local convexity of the negative Hessian matrix around the true parameters of the factors and loadings, which is nontrivial in the matrix factor modeling and leads to feasible central limit theorems of the estimated factors and loadings. We also theoretically establish the convergence rates of the estimated factor and loading matrices for the GMFM under general conditions that allow for correlations across samples, rows, and columns. Moreover, we provide a model selection criterion to determine the numbers of row and column factors consistently. To numerically compute the constraint maximum likelihood estimator, we provide two algorithms: two-stage alternating maximization and minorization maximization. Extensive simulation studies demonstrate GMFM’s superiority in handling discrete and mixed-type variables. An empirical data analysis of the company’s operating performance shows that GMFM does clustering and reconstruction well in the presence of discontinuous entries in the data matrix." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/17/GeneralizedMatrixFactorModel.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/17/GeneralizedMatrixFactorModel.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Generalized Matrix Factor Model" />
+<script type="application/ld+json">
+{"description":"This article introduces a nonlinear generalized matrix factor model (GMFM) that allows for mixed-type variables, extending the scope of linear matrix factor models (LMFM) that are so far limited to handling continuous variables. We introduce a novel augmented Lagrange multiplier method, equivalent to the constraint maximum likelihood estimation, and carefully tailored to be locally concave around the true factor and loading parameters. This statistically guarantees the local convexity of the negative Hessian matrix around the true parameters of the factors and loadings, which is nontrivial in the matrix factor modeling and leads to feasible central limit theorems of the estimated factors and loadings. We also theoretically establish the convergence rates of the estimated factor and loading matrices for the GMFM under general conditions that allow for correlations across samples, rows, and columns. Moreover, we provide a model selection criterion to determine the numbers of row and column factors consistently. To numerically compute the constraint maximum likelihood estimator, we provide two algorithms: two-stage alternating maximization and minorization maximization. Extensive simulation studies demonstrate GMFM’s superiority in handling discrete and mixed-type variables. An empirical data analysis of the company’s operating performance shows that GMFM does clustering and reconstruction well in the presence of discontinuous entries in the data matrix.","headline":"Generalized Matrix Factor Model","dateModified":"2024-09-17T00:00:00+00:00","datePublished":"2024-09-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/17/GeneralizedMatrixFactorModel.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/17/GeneralizedMatrixFactorModel.html","author":{"@type":"Person","name":"Xinbing Kong, Tong Zhang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-17 00:00:00 +0000">09-17</time>
+  </p>
+  
+  <h1>Generalized Matrix Factor Model</h1>
+  <br>Xinbing Kong, Tong Zhang</h3>
+  <br> [stat.ME]
+
+  <p>This article introduces a nonlinear generalized matrix factor model (GMFM) that allows for mixed-type variables, extending the scope of linear matrix factor models (LMFM) that are so far limited to handling continuous variables. We introduce a novel augmented Lagrange multiplier method, equivalent to the constraint maximum likelihood estimation, and carefully tailored to be locally concave around the true factor and loading parameters. This statistically guarantees the local convexity of the negative Hessian matrix around the true parameters of the factors and loadings, which is nontrivial in the matrix factor modeling and leads to feasible central limit theorems of the estimated factors and loadings. We also theoretically establish the convergence rates of the estimated factor and loading matrices for the GMFM under general conditions that allow for correlations across samples, rows, and columns. Moreover, we provide a model selection criterion to determine the numbers of row and column factors consistently. To numerically compute the constraint maximum likelihood estimator, we provide two algorithms: two-stage alternating maximization and minorization maximization. Extensive simulation studies demonstrate GMFM’s superiority in handling discrete and mixed-type variables. An empirical data analysis of the company’s operating performance shows that GMFM does clustering and reconstruction well in the presence of discontinuous entries in the data matrix.</p>
+
+<p><a href="https://arxiv.org/abs/2409.10001">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
