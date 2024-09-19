@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Robust Approach to Gaussian Processes Implementation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Robust Approach to Gaussian Processes Implementation" />
+<meta name="author" content="Juliette Mukangango, Amanda Muyskens, Benjamin W. Priest" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gaussian Process (GP) regression is a flexible modeling technique used to predict outputs and to capture uncertainty in the predictions. However, the GP regression process becomes computationally intensive when the training spatial dataset has a large number of observations. To address this challenge, we introduce a scalable GP algorithm, termed MuyGPs, which incorporates nearest neighbor and leave-one-out cross-validation during training. This approach enables the evaluation of large spatial datasets with state-of-the-art accuracy and speed in certain spatial problems. Despite these advantages, conventional quadratic loss functions used in the MuyGPs optimization such as Root Mean Squared Error(RMSE), are highly influenced by outliers. We explore the behavior of MuyGPs in cases involving outlying observations, and subsequently, develop a robust approach to handle and mitigate their impact. Specifically, we introduce a novel leave-one-out loss function based on the pseudo-Huber function (LOOPH) that effectively accounts for outliers in large spatial datasets within the MuyGPs framework. Our simulation study shows that the “LOOPH” loss method maintains accuracy despite outlying observations, establishing MuyGPs as a powerful tool for mitigating unusual observation impacts in the large data regime. In the analysis of U.S. ozone data, MuyGPs provides accurate predictions and uncertainty quantification, demonstrating its utility in managing data anomalies. Through these efforts, we advance the understanding of GP regression in spatial contexts." />
+<meta property="og:description" content="Gaussian Process (GP) regression is a flexible modeling technique used to predict outputs and to capture uncertainty in the predictions. However, the GP regression process becomes computationally intensive when the training spatial dataset has a large number of observations. To address this challenge, we introduce a scalable GP algorithm, termed MuyGPs, which incorporates nearest neighbor and leave-one-out cross-validation during training. This approach enables the evaluation of large spatial datasets with state-of-the-art accuracy and speed in certain spatial problems. Despite these advantages, conventional quadratic loss functions used in the MuyGPs optimization such as Root Mean Squared Error(RMSE), are highly influenced by outliers. We explore the behavior of MuyGPs in cases involving outlying observations, and subsequently, develop a robust approach to handle and mitigate their impact. Specifically, we introduce a novel leave-one-out loss function based on the pseudo-Huber function (LOOPH) that effectively accounts for outliers in large spatial datasets within the MuyGPs framework. Our simulation study shows that the “LOOPH” loss method maintains accuracy despite outlying observations, establishing MuyGPs as a powerful tool for mitigating unusual observation impacts in the large data regime. In the analysis of U.S. ozone data, MuyGPs provides accurate predictions and uncertainty quantification, demonstrating its utility in managing data anomalies. Through these efforts, we advance the understanding of GP regression in spatial contexts." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/19/ARobustApproachtoGaussianProcessesImplementation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/19/ARobustApproachtoGaussianProcessesImplementation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Robust Approach to Gaussian Processes Implementation" />
+<script type="application/ld+json">
+{"description":"Gaussian Process (GP) regression is a flexible modeling technique used to predict outputs and to capture uncertainty in the predictions. However, the GP regression process becomes computationally intensive when the training spatial dataset has a large number of observations. To address this challenge, we introduce a scalable GP algorithm, termed MuyGPs, which incorporates nearest neighbor and leave-one-out cross-validation during training. This approach enables the evaluation of large spatial datasets with state-of-the-art accuracy and speed in certain spatial problems. Despite these advantages, conventional quadratic loss functions used in the MuyGPs optimization such as Root Mean Squared Error(RMSE), are highly influenced by outliers. We explore the behavior of MuyGPs in cases involving outlying observations, and subsequently, develop a robust approach to handle and mitigate their impact. Specifically, we introduce a novel leave-one-out loss function based on the pseudo-Huber function (LOOPH) that effectively accounts for outliers in large spatial datasets within the MuyGPs framework. Our simulation study shows that the “LOOPH” loss method maintains accuracy despite outlying observations, establishing MuyGPs as a powerful tool for mitigating unusual observation impacts in the large data regime. In the analysis of U.S. ozone data, MuyGPs provides accurate predictions and uncertainty quantification, demonstrating its utility in managing data anomalies. Through these efforts, we advance the understanding of GP regression in spatial contexts.","headline":"A Robust Approach to Gaussian Processes Implementation","dateModified":"2024-09-19T00:00:00+00:00","datePublished":"2024-09-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/19/ARobustApproachtoGaussianProcessesImplementation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/19/ARobustApproachtoGaussianProcessesImplementation.html","author":{"@type":"Person","name":"Juliette Mukangango, Amanda Muyskens, Benjamin W. Priest"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-19 00:00:00 +0000">09-19</time>
+  </p>
+  
+  <h1>A Robust Approach to Gaussian Processes Implementation</h1>
+  <br>Juliette Mukangango, Amanda Muyskens, Benjamin W. Priest</h3>
+  <br> [stat.CO]
+
+  <p>Gaussian Process (GP) regression is a flexible modeling technique used to predict outputs and to capture uncertainty in the predictions. However, the GP regression process becomes computationally intensive when the training spatial dataset has a large number of observations. To address this challenge, we introduce a scalable GP algorithm, termed MuyGPs, which incorporates nearest neighbor and leave-one-out cross-validation during training. This approach enables the evaluation of large spatial datasets with state-of-the-art accuracy and speed in certain spatial problems. Despite these advantages, conventional quadratic loss functions used in the MuyGPs optimization such as Root Mean Squared Error(RMSE), are highly influenced by outliers. We explore the behavior of MuyGPs in cases involving outlying observations, and subsequently, develop a robust approach to handle and mitigate their impact. Specifically, we introduce a novel leave-one-out loss function based on the pseudo-Huber function (LOOPH) that effectively accounts for outliers in large spatial datasets within the MuyGPs framework. Our simulation study shows that the “LOOPH” loss method maintains accuracy despite outlying observations, establishing MuyGPs as a powerful tool for mitigating unusual observation impacts in the large data regime. In the analysis of U.S. ozone data, MuyGPs provides accurate predictions and uncertainty quantification, demonstrating its utility in managing data anomalies. Through these efforts, we advance the understanding of GP regression in spatial contexts.</p>
+
+<p><a href="https://arxiv.org/abs/2409.11577">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
