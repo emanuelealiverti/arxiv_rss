@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Stable and Robust Hyper-Parameter Selection Via Robust Information Sharing Cross-Validation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Stable and Robust Hyper-Parameter Selection Via Robust Information Sharing Cross-Validation" />
+<meta name="author" content="David Kepplinger, Siqi Wei" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Robust estimators for linear regression require non-convex objective functions to shield against adverse affects of outliers. This non-convexity brings challenges, particularly when combined with penalization in high-dimensional settings. Selecting hyper-parameters for the penalty based on a finite sample is a critical task. In practice, cross-validation (CV) is the prevalent strategy with good performance for convex estimators. Applied with robust estimators, however, CV often gives sub-par results due to the interplay between multiple local minima and the penalty. The best local minimum attained on the full training data may not be the minimum with the desired statistical properties. Furthermore, there may be a mismatch between this minimum and the minima attained in the CV folds. This paper introduces a novel adaptive CV strategy that tracks multiple minima for each combination of hyper-parameters and subsets of the data. A matching scheme is presented for correctly evaluating minima computed on the full training data using the best-matching minima from the CV folds. It is shown that the proposed strategy reduces the variability of the estimated performance metric, leads to smoother CV curves, and therefore substantially increases the reliability and utility of robust penalized estimators." />
+<meta property="og:description" content="Robust estimators for linear regression require non-convex objective functions to shield against adverse affects of outliers. This non-convexity brings challenges, particularly when combined with penalization in high-dimensional settings. Selecting hyper-parameters for the penalty based on a finite sample is a critical task. In practice, cross-validation (CV) is the prevalent strategy with good performance for convex estimators. Applied with robust estimators, however, CV often gives sub-par results due to the interplay between multiple local minima and the penalty. The best local minimum attained on the full training data may not be the minimum with the desired statistical properties. Furthermore, there may be a mismatch between this minimum and the minima attained in the CV folds. This paper introduces a novel adaptive CV strategy that tracks multiple minima for each combination of hyper-parameters and subsets of the data. A matching scheme is presented for correctly evaluating minima computed on the full training data using the best-matching minima from the CV folds. It is shown that the proposed strategy reduces the variability of the estimated performance metric, leads to smoother CV curves, and therefore substantially increases the reliability and utility of robust penalized estimators." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/20/StableandRobustHyperParameterSelectionViaRobustInformationSharingCrossValidation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/20/StableandRobustHyperParameterSelectionViaRobustInformationSharingCrossValidation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Stable and Robust Hyper-Parameter Selection Via Robust Information Sharing Cross-Validation" />
+<script type="application/ld+json">
+{"description":"Robust estimators for linear regression require non-convex objective functions to shield against adverse affects of outliers. This non-convexity brings challenges, particularly when combined with penalization in high-dimensional settings. Selecting hyper-parameters for the penalty based on a finite sample is a critical task. In practice, cross-validation (CV) is the prevalent strategy with good performance for convex estimators. Applied with robust estimators, however, CV often gives sub-par results due to the interplay between multiple local minima and the penalty. The best local minimum attained on the full training data may not be the minimum with the desired statistical properties. Furthermore, there may be a mismatch between this minimum and the minima attained in the CV folds. This paper introduces a novel adaptive CV strategy that tracks multiple minima for each combination of hyper-parameters and subsets of the data. A matching scheme is presented for correctly evaluating minima computed on the full training data using the best-matching minima from the CV folds. It is shown that the proposed strategy reduces the variability of the estimated performance metric, leads to smoother CV curves, and therefore substantially increases the reliability and utility of robust penalized estimators.","headline":"Stable and Robust Hyper-Parameter Selection Via Robust Information Sharing Cross-Validation","dateModified":"2024-09-20T00:00:00+00:00","datePublished":"2024-09-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/20/StableandRobustHyperParameterSelectionViaRobustInformationSharingCrossValidation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/20/StableandRobustHyperParameterSelectionViaRobustInformationSharingCrossValidation.html","author":{"@type":"Person","name":"David Kepplinger, Siqi Wei"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-20 00:00:00 +0000">09-20</time>
+  </p>
+  
+  <h1>Stable and Robust Hyper-Parameter Selection Via Robust Information Sharing Cross-Validation</h1>
+  <br>David Kepplinger, Siqi Wei</h3>
+  <br> [stat.CO,stat.ME]
+
+  <p>Robust estimators for linear regression require non-convex objective functions to shield against adverse affects of outliers. This non-convexity brings challenges, particularly when combined with penalization in high-dimensional settings. Selecting hyper-parameters for the penalty based on a finite sample is a critical task. In practice, cross-validation (CV) is the prevalent strategy with good performance for convex estimators. Applied with robust estimators, however, CV often gives sub-par results due to the interplay between multiple local minima and the penalty. The best local minimum attained on the full training data may not be the minimum with the desired statistical properties. Furthermore, there may be a mismatch between this minimum and the minima attained in the CV folds. This paper introduces a novel adaptive CV strategy that tracks multiple minima for each combination of hyper-parameters and subsets of the data. A matching scheme is presented for correctly evaluating minima computed on the full training data using the best-matching minima from the CV folds. It is shown that the proposed strategy reduces the variability of the estimated performance metric, leads to smoother CV curves, and therefore substantially increases the reliability and utility of robust penalized estimators.</p>
+
+<p><a href="https://arxiv.org/abs/2409.12890">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
