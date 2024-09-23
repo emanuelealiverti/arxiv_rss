@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Towards Unbiased Evaluation of Time-series Anomaly Detector</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Towards Unbiased Evaluation of Time-series Anomaly Detector" />
+<meta name="author" content="Debarpan Bhattacharya, Sumanta Mukherjee, Chandramouli Kamanchi, Vijay Ekambaram, Arindam Jati, Pankaj Dayama" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Time series anomaly detection (TSAD) is an evolving area of research motivated by its critical applications, such as detecting seismic activity, sensor failures in industrial plants, predicting crashes in the stock market, and so on. Across domains, anomalies occur significantly less frequently than normal data, making the F1-score the most commonly adopted metric for anomaly detection. However, in the case of time series, it is not straightforward to use standard F1-score because of the dissociation between time points&#39; and time events’. To accommodate this, anomaly predictions are adjusted, called as point adjustment (PA), before the $F_1$-score evaluation. However, these adjustments are heuristics-based, and biased towards true positive detection, resulting in over-estimated detector performance. In this work, we propose an alternative adjustment protocol called ``Balanced point adjustment’’ (BA). It addresses the limitations of existing point adjustment methods and provides guarantees of fairness backed by axiomatic definitions of TSAD evaluation." />
+<meta property="og:description" content="Time series anomaly detection (TSAD) is an evolving area of research motivated by its critical applications, such as detecting seismic activity, sensor failures in industrial plants, predicting crashes in the stock market, and so on. Across domains, anomalies occur significantly less frequently than normal data, making the F1-score the most commonly adopted metric for anomaly detection. However, in the case of time series, it is not straightforward to use standard F1-score because of the dissociation between time points&#39; and time events’. To accommodate this, anomaly predictions are adjusted, called as point adjustment (PA), before the $F_1$-score evaluation. However, these adjustments are heuristics-based, and biased towards true positive detection, resulting in over-estimated detector performance. In this work, we propose an alternative adjustment protocol called ``Balanced point adjustment’’ (BA). It addresses the limitations of existing point adjustment methods and provides guarantees of fairness backed by axiomatic definitions of TSAD evaluation." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/23/TowardsUnbiasedEvaluationofTimeseriesAnomalyDetector.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/23/TowardsUnbiasedEvaluationofTimeseriesAnomalyDetector.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Towards Unbiased Evaluation of Time-series Anomaly Detector" />
+<script type="application/ld+json">
+{"description":"Time series anomaly detection (TSAD) is an evolving area of research motivated by its critical applications, such as detecting seismic activity, sensor failures in industrial plants, predicting crashes in the stock market, and so on. Across domains, anomalies occur significantly less frequently than normal data, making the F1-score the most commonly adopted metric for anomaly detection. However, in the case of time series, it is not straightforward to use standard F1-score because of the dissociation between time points&#39; and time events’. To accommodate this, anomaly predictions are adjusted, called as point adjustment (PA), before the $F_1$-score evaluation. However, these adjustments are heuristics-based, and biased towards true positive detection, resulting in over-estimated detector performance. In this work, we propose an alternative adjustment protocol called ``Balanced point adjustment’’ (BA). It addresses the limitations of existing point adjustment methods and provides guarantees of fairness backed by axiomatic definitions of TSAD evaluation.","headline":"Towards Unbiased Evaluation of Time-series Anomaly Detector","dateModified":"2024-09-23T00:00:00+00:00","datePublished":"2024-09-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/23/TowardsUnbiasedEvaluationofTimeseriesAnomalyDetector.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/23/TowardsUnbiasedEvaluationofTimeseriesAnomalyDetector.html","author":{"@type":"Person","name":"Debarpan Bhattacharya, Sumanta Mukherjee, Chandramouli Kamanchi, Vijay Ekambaram, Arindam Jati, Pankaj Dayama"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-23 00:00:00 +0000">09-23</time>
+  </p>
+  
+  <h1>Towards Unbiased Evaluation of Time-series Anomaly Detector</h1>
+  <br>Debarpan Bhattacharya, Sumanta Mukherjee, Chandramouli Kamanchi, Vijay Ekambaram, Arindam Jati, Pankaj Dayama</h3>
+  <br> [stat.AP,stat.ML]
+
+  <p>Time series anomaly detection (TSAD) is an evolving area of research motivated by its critical applications, such as detecting seismic activity, sensor failures in industrial plants, predicting crashes in the stock market, and so on. Across domains, anomalies occur significantly less frequently than normal data, making the F1-score the most commonly adopted metric for anomaly detection. However, in the case of time series, it is not straightforward to use standard F1-score because of the dissociation between <code class="language-plaintext highlighter-rouge">time points' and </code>time events’. To accommodate this, anomaly predictions are adjusted, called as point adjustment (PA), before the $F_1$-score evaluation. However, these adjustments are heuristics-based, and biased towards true positive detection, resulting in over-estimated detector performance. In this work, we propose an alternative adjustment protocol called ``Balanced point adjustment’’ (BA). It addresses the limitations of existing point adjustment methods and provides guarantees of fairness backed by axiomatic definitions of TSAD evaluation.</p>
+
+<p><a href="https://arxiv.org/abs/2409.13053">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
