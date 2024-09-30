@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Inference with Sequential Monte-Carlo Computation of $p$-values: Fast and Valid Approaches</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Inference with Sequential Monte-Carlo Computation of $p$-values: Fast and Valid Approaches" />
+<meta name="author" content="Ivo V. Stoepker, Rui M. Castro" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hypothesis tests calibrated by (re)sampling methods (such as permutation, rank and bootstrap tests) are useful tools for statistical analysis, at the computational cost of requiring Monte-Carlo sampling for calibration. It is common and almost universal practice to execute such tests with predetermined and large number of Monte-Carlo samples, and disregard any randomness from this sampling at the time of drawing and reporting inference. At best, this approach leads to computational inefficiency, and at worst to invalid inference. That being said, a number of approaches in the literature have been proposed to adaptively guide analysts in choosing the number of Monte-Carlo samples, by sequentially deciding when to stop collecting samples and draw inference. These works introduce varying competing notions of what constitutes “valid” inference, complicating the landscape for analysts seeking suitable methodology. Furthermore, the majority of these approaches solely guarantee a meaningful estimate of the testing outcome, not the $p$-value itself $\unicode{x2014}$ which is insufficient for many practical applications. In this paper, we survey the relevant literature, and build bridges between the scattered validity notions, highlighting some of their complementary roles. We also introduce a new practical methodology that provides an estimate of the $p$-value of the Monte-Carlo test, endowed with practically relevant validity guarantees. Moreover, our methodology is sequential, updating the $p$-value estimate after each new Monte-Carlo sample has been drawn, while retaining important validity guarantees regardless of the selected stopping time. We conclude this paper with a set of recommendations for the practitioner, both in terms of selection of methodology and manner of reporting results." />
+<meta property="og:description" content="Hypothesis tests calibrated by (re)sampling methods (such as permutation, rank and bootstrap tests) are useful tools for statistical analysis, at the computational cost of requiring Monte-Carlo sampling for calibration. It is common and almost universal practice to execute such tests with predetermined and large number of Monte-Carlo samples, and disregard any randomness from this sampling at the time of drawing and reporting inference. At best, this approach leads to computational inefficiency, and at worst to invalid inference. That being said, a number of approaches in the literature have been proposed to adaptively guide analysts in choosing the number of Monte-Carlo samples, by sequentially deciding when to stop collecting samples and draw inference. These works introduce varying competing notions of what constitutes “valid” inference, complicating the landscape for analysts seeking suitable methodology. Furthermore, the majority of these approaches solely guarantee a meaningful estimate of the testing outcome, not the $p$-value itself $\unicode{x2014}$ which is insufficient for many practical applications. In this paper, we survey the relevant literature, and build bridges between the scattered validity notions, highlighting some of their complementary roles. We also introduce a new practical methodology that provides an estimate of the $p$-value of the Monte-Carlo test, endowed with practically relevant validity guarantees. Moreover, our methodology is sequential, updating the $p$-value estimate after each new Monte-Carlo sample has been drawn, while retaining important validity guarantees regardless of the selected stopping time. We conclude this paper with a set of recommendations for the practitioner, both in terms of selection of methodology and manner of reporting results." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/09/30/InferencewithSequentialMonteCarloComputationofpvaluesFastandValidApproaches.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/09/30/InferencewithSequentialMonteCarloComputationofpvaluesFastandValidApproaches.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Inference with Sequential Monte-Carlo Computation of $p$-values: Fast and Valid Approaches" />
+<script type="application/ld+json">
+{"description":"Hypothesis tests calibrated by (re)sampling methods (such as permutation, rank and bootstrap tests) are useful tools for statistical analysis, at the computational cost of requiring Monte-Carlo sampling for calibration. It is common and almost universal practice to execute such tests with predetermined and large number of Monte-Carlo samples, and disregard any randomness from this sampling at the time of drawing and reporting inference. At best, this approach leads to computational inefficiency, and at worst to invalid inference. That being said, a number of approaches in the literature have been proposed to adaptively guide analysts in choosing the number of Monte-Carlo samples, by sequentially deciding when to stop collecting samples and draw inference. These works introduce varying competing notions of what constitutes “valid” inference, complicating the landscape for analysts seeking suitable methodology. Furthermore, the majority of these approaches solely guarantee a meaningful estimate of the testing outcome, not the $p$-value itself $\\unicode{x2014}$ which is insufficient for many practical applications. In this paper, we survey the relevant literature, and build bridges between the scattered validity notions, highlighting some of their complementary roles. We also introduce a new practical methodology that provides an estimate of the $p$-value of the Monte-Carlo test, endowed with practically relevant validity guarantees. Moreover, our methodology is sequential, updating the $p$-value estimate after each new Monte-Carlo sample has been drawn, while retaining important validity guarantees regardless of the selected stopping time. We conclude this paper with a set of recommendations for the practitioner, both in terms of selection of methodology and manner of reporting results.","headline":"Inference with Sequential Monte-Carlo Computation of $p$-values: Fast and Valid Approaches","dateModified":"2024-09-30T00:00:00+00:00","datePublished":"2024-09-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/30/InferencewithSequentialMonteCarloComputationofpvaluesFastandValidApproaches.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/09/30/InferencewithSequentialMonteCarloComputationofpvaluesFastandValidApproaches.html","author":{"@type":"Person","name":"Ivo V. Stoepker, Rui M. Castro"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-30 00:00:00 +0000">09-30</time>
+  </p>
+  
+  <h1>Inference with Sequential Monte-Carlo Computation of $p$-values: Fast and Valid Approaches</h1>
+  <br>Ivo V. Stoepker, Rui M. Castro</h3>
+  <br> [stat.ME,stat.TH]
+
+  <p>Hypothesis tests calibrated by (re)sampling methods (such as permutation, rank and bootstrap tests) are useful tools for statistical analysis, at the computational cost of requiring Monte-Carlo sampling for calibration. It is common and almost universal practice to execute such tests with predetermined and large number of Monte-Carlo samples, and disregard any randomness from this sampling at the time of drawing and reporting inference. At best, this approach leads to computational inefficiency, and at worst to invalid inference. That being said, a number of approaches in the literature have been proposed to adaptively guide analysts in choosing the number of Monte-Carlo samples, by sequentially deciding when to stop collecting samples and draw inference. These works introduce varying competing notions of what constitutes “valid” inference, complicating the landscape for analysts seeking suitable methodology. Furthermore, the majority of these approaches solely guarantee a meaningful estimate of the testing outcome, not the $p$-value itself $\unicode{x2014}$ which is insufficient for many practical applications. In this paper, we survey the relevant literature, and build bridges between the scattered validity notions, highlighting some of their complementary roles. We also introduce a new practical methodology that provides an estimate of the $p$-value of the Monte-Carlo test, endowed with practically relevant validity guarantees. Moreover, our methodology is sequential, updating the $p$-value estimate after each new Monte-Carlo sample has been drawn, while retaining important validity guarantees regardless of the selected stopping time. We conclude this paper with a set of recommendations for the practitioner, both in terms of selection of methodology and manner of reporting results.</p>
+
+<p><a href="https://arxiv.org/abs/2409.18908">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
