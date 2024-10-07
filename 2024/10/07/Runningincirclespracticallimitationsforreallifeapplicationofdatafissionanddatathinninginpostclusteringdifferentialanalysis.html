@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Running in circles: practical limitations for real-life application of data fission and data thinning in post-clustering differential analysis</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Running in circles: practical limitations for real-life application of data fission and data thinning in post-clustering differential analysis" />
+<meta name="author" content="Benjamin Hivert, Denis Agniel, Rodolphe Thiébaut, Boris P. Hejblum" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Post-clustering inference in scRNA-seq analysis presents significant challenges in controlling Type I error during Differential Expression Analysis. Data fission, a promising approach, aims to split the data into two new independent parts, but relies on strong parametric assumptions of non-mixture distributions, which are violated in clustered data. We show that applying data fission to these mixtures requires knowledge of the clustering structure to accurately estimate component-specific scale parameters. These estimates are critical for ensuring decomposition and independence. We theoretically quantify the direct impact of the bias in estimating this scales parameters on the inflation of the Type I error rate, caused by a deviation from the independence. Since component structures are unknown in practice, we propose a heteroscedastic model with non-parametric estimators for individual scale parameters. This model uses proximity between observations to capture the effect of the underlying mixture on data dispersion. While this approach works well when clusters are well-separated, it introduces bias when separation is weak, highlighting the difficulty of applying data fission in real-world scenarios with unknown degrees of separation." />
+<meta property="og:description" content="Post-clustering inference in scRNA-seq analysis presents significant challenges in controlling Type I error during Differential Expression Analysis. Data fission, a promising approach, aims to split the data into two new independent parts, but relies on strong parametric assumptions of non-mixture distributions, which are violated in clustered data. We show that applying data fission to these mixtures requires knowledge of the clustering structure to accurately estimate component-specific scale parameters. These estimates are critical for ensuring decomposition and independence. We theoretically quantify the direct impact of the bias in estimating this scales parameters on the inflation of the Type I error rate, caused by a deviation from the independence. Since component structures are unknown in practice, we propose a heteroscedastic model with non-parametric estimators for individual scale parameters. This model uses proximity between observations to capture the effect of the underlying mixture on data dispersion. While this approach works well when clusters are well-separated, it introduces bias when separation is weak, highlighting the difficulty of applying data fission in real-world scenarios with unknown degrees of separation." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/07/Runningincirclespracticallimitationsforreallifeapplicationofdatafissionanddatathinninginpostclusteringdifferentialanalysis.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/07/Runningincirclespracticallimitationsforreallifeapplicationofdatafissionanddatathinninginpostclusteringdifferentialanalysis.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Running in circles: practical limitations for real-life application of data fission and data thinning in post-clustering differential analysis" />
+<script type="application/ld+json">
+{"description":"Post-clustering inference in scRNA-seq analysis presents significant challenges in controlling Type I error during Differential Expression Analysis. Data fission, a promising approach, aims to split the data into two new independent parts, but relies on strong parametric assumptions of non-mixture distributions, which are violated in clustered data. We show that applying data fission to these mixtures requires knowledge of the clustering structure to accurately estimate component-specific scale parameters. These estimates are critical for ensuring decomposition and independence. We theoretically quantify the direct impact of the bias in estimating this scales parameters on the inflation of the Type I error rate, caused by a deviation from the independence. Since component structures are unknown in practice, we propose a heteroscedastic model with non-parametric estimators for individual scale parameters. This model uses proximity between observations to capture the effect of the underlying mixture on data dispersion. While this approach works well when clusters are well-separated, it introduces bias when separation is weak, highlighting the difficulty of applying data fission in real-world scenarios with unknown degrees of separation.","headline":"Running in circles: practical limitations for real-life application of data fission and data thinning in post-clustering differential analysis","dateModified":"2024-10-07T00:00:00+00:00","datePublished":"2024-10-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/07/Runningincirclespracticallimitationsforreallifeapplicationofdatafissionanddatathinninginpostclusteringdifferentialanalysis.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/07/Runningincirclespracticallimitationsforreallifeapplicationofdatafissionanddatathinninginpostclusteringdifferentialanalysis.html","author":{"@type":"Person","name":"Benjamin Hivert, Denis Agniel, Rodolphe Thiébaut, Boris P. Hejblum"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-07 00:00:00 +0000">10-07</time>
+  </p>
+  
+  <h1>Running in circles: practical limitations for real-life application of data fission and data thinning in post-clustering differential analysis</h1>
+  <br>Benjamin Hivert, Denis Agniel, Rodolphe Thiébaut, Boris P. Hejblum</h3>
+  <br> [stat.ME]
+
+  <p>Post-clustering inference in scRNA-seq analysis presents significant challenges in controlling Type I error during Differential Expression Analysis. Data fission, a promising approach, aims to split the data into two new independent parts, but relies on strong parametric assumptions of non-mixture distributions, which are violated in clustered data. We show that applying data fission to these mixtures requires knowledge of the clustering structure to accurately estimate component-specific scale parameters. These estimates are critical for ensuring decomposition and independence. We theoretically quantify the direct impact of the bias in estimating this scales parameters on the inflation of the Type I error rate, caused by a deviation from the independence. Since component structures are unknown in practice, we propose a heteroscedastic model with non-parametric estimators for individual scale parameters. This model uses proximity between observations to capture the effect of the underlying mixture on data dispersion. While this approach works well when clusters are well-separated, it introduces bias when separation is weak, highlighting the difficulty of applying data fission in real-world scenarios with unknown degrees of separation.</p>
+
+<p><a href="https://arxiv.org/abs/2405.13591">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

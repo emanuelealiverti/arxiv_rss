@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Unadjusted Hamiltonian MCMC with Stratified Monte Carlo Time Integration</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Unadjusted Hamiltonian MCMC with Stratified Monte Carlo Time Integration" />
+<meta name="author" content="Nawaf Bou-Rabee, Milo Marsden" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A randomized time integrator is suggested for unadjusted Hamiltonian Monte Carlo (uHMC) which involves a very minor modification to the usual Verlet time integrator, and hence, is easy to implement. For target distributions of the form $\mu(dx) \propto e^{-U(x)} dx$ where $U: \mathbb{R}^d \to \mathbb{R}_{\ge 0}$ is $K$-strongly convex but only $L$-gradient Lipschitz, and initial distributions $\nu$ with finite second moment, coupling proofs reveal that an $\varepsilon$-accurate approximation of the target distribution in $L^2$-Wasserstein distance $\boldsymbol{\mathcal{W}}^2$ can be achieved by the uHMC algorithm with randomized time integration using $O\left((d/K)^{1/3} (L/K)^{5/3} \varepsilon^{-2/3} \log( \boldsymbol{\mathcal{W}}^2(\mu, \nu) / \varepsilon)^+\right)$ gradient evaluations; whereas for such rough target densities the corresponding complexity of the uHMC algorithm with Verlet time integration is in general $O\left((d/K)^{1/2} (L/K)^2 \varepsilon^{-1} \log( \boldsymbol{\mathcal{W}}^2(\mu, \nu) / \varepsilon)^+ \right)$. Metropolis-adjustable randomized time integrators are also provided." />
+<meta property="og:description" content="A randomized time integrator is suggested for unadjusted Hamiltonian Monte Carlo (uHMC) which involves a very minor modification to the usual Verlet time integrator, and hence, is easy to implement. For target distributions of the form $\mu(dx) \propto e^{-U(x)} dx$ where $U: \mathbb{R}^d \to \mathbb{R}_{\ge 0}$ is $K$-strongly convex but only $L$-gradient Lipschitz, and initial distributions $\nu$ with finite second moment, coupling proofs reveal that an $\varepsilon$-accurate approximation of the target distribution in $L^2$-Wasserstein distance $\boldsymbol{\mathcal{W}}^2$ can be achieved by the uHMC algorithm with randomized time integration using $O\left((d/K)^{1/3} (L/K)^{5/3} \varepsilon^{-2/3} \log( \boldsymbol{\mathcal{W}}^2(\mu, \nu) / \varepsilon)^+\right)$ gradient evaluations; whereas for such rough target densities the corresponding complexity of the uHMC algorithm with Verlet time integration is in general $O\left((d/K)^{1/2} (L/K)^2 \varepsilon^{-1} \log( \boldsymbol{\mathcal{W}}^2(\mu, \nu) / \varepsilon)^+ \right)$. Metropolis-adjustable randomized time integrators are also provided." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/07/UnadjustedHamiltonianMCMCwithStratifiedMonteCarloTimeIntegration.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/07/UnadjustedHamiltonianMCMCwithStratifiedMonteCarloTimeIntegration.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unadjusted Hamiltonian MCMC with Stratified Monte Carlo Time Integration" />
+<script type="application/ld+json">
+{"description":"A randomized time integrator is suggested for unadjusted Hamiltonian Monte Carlo (uHMC) which involves a very minor modification to the usual Verlet time integrator, and hence, is easy to implement. For target distributions of the form $\\mu(dx) \\propto e^{-U(x)} dx$ where $U: \\mathbb{R}^d \\to \\mathbb{R}_{\\ge 0}$ is $K$-strongly convex but only $L$-gradient Lipschitz, and initial distributions $\\nu$ with finite second moment, coupling proofs reveal that an $\\varepsilon$-accurate approximation of the target distribution in $L^2$-Wasserstein distance $\\boldsymbol{\\mathcal{W}}^2$ can be achieved by the uHMC algorithm with randomized time integration using $O\\left((d/K)^{1/3} (L/K)^{5/3} \\varepsilon^{-2/3} \\log( \\boldsymbol{\\mathcal{W}}^2(\\mu, \\nu) / \\varepsilon)^+\\right)$ gradient evaluations; whereas for such rough target densities the corresponding complexity of the uHMC algorithm with Verlet time integration is in general $O\\left((d/K)^{1/2} (L/K)^2 \\varepsilon^{-1} \\log( \\boldsymbol{\\mathcal{W}}^2(\\mu, \\nu) / \\varepsilon)^+ \\right)$. Metropolis-adjustable randomized time integrators are also provided.","headline":"Unadjusted Hamiltonian MCMC with Stratified Monte Carlo Time Integration","dateModified":"2024-10-07T00:00:00+00:00","datePublished":"2024-10-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/07/UnadjustedHamiltonianMCMCwithStratifiedMonteCarloTimeIntegration.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/07/UnadjustedHamiltonianMCMCwithStratifiedMonteCarloTimeIntegration.html","author":{"@type":"Person","name":"Nawaf Bou-Rabee, Milo Marsden"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-07 00:00:00 +0000">10-07</time>
+  </p>
+  
+  <h1>Unadjusted Hamiltonian MCMC with Stratified Monte Carlo Time Integration</h1>
+  <br>Nawaf Bou-Rabee, Milo Marsden</h3>
+  <br> [stat.CO,stat.ML,stat.TH]
+
+  <p>A randomized time integrator is suggested for unadjusted Hamiltonian Monte Carlo (uHMC) which involves a very minor modification to the usual Verlet time integrator, and hence, is easy to implement. For target distributions of the form $\mu(dx) \propto e^{-U(x)} dx$ where $U: \mathbb{R}^d \to \mathbb{R}_{\ge 0}$ is $K$-strongly convex but only $L$-gradient Lipschitz, and initial distributions $\nu$ with finite second moment, coupling proofs reveal that an $\varepsilon$-accurate approximation of the target distribution in $L^2$-Wasserstein distance $\boldsymbol{\mathcal{W}}^2$ can be achieved by the uHMC algorithm with randomized time integration using $O\left((d/K)^{1/3} (L/K)^{5/3} \varepsilon^{-2/3} \log( \boldsymbol{\mathcal{W}}^2(\mu, \nu) / \varepsilon)^+\right)$ gradient evaluations; whereas for such rough target densities the corresponding complexity of the uHMC algorithm with Verlet time integration is in general $O\left((d/K)^{1/2} (L/K)^2 \varepsilon^{-1} \log( \boldsymbol{\mathcal{W}}^2(\mu, \nu) / \varepsilon)^+ \right)$. Metropolis-adjustable randomized time integrators are also provided.</p>
+
+<p><a href="https://arxiv.org/abs/2211.11003">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
