@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Stability-Adjusted Cross-Validation for Sparse Linear Regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Stability-Adjusted Cross-Validation for Sparse Linear Regression" />
+<meta name="author" content="Ryan Cory-Wright, Andrés Gómez" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Given a high-dimensional covariate matrix and a response vector, ridge-regularized sparse linear regression selects a subset of features that explains the relationship between covariates and the response in an interpretable manner. To select the sparsity and robustness of linear regressors, techniques like k-fold cross-validation are commonly used for hyperparameter tuning. However, cross-validation substantially increases the computational cost of sparse regression as it requires solving many mixed-integer optimization problems (MIOs). Additionally, validation metrics often serve as noisy estimators of test set errors, with different hyperparameter combinations leading to models with different noise levels. Therefore, optimizing over these metrics is vulnerable to out-of-sample disappointment, especially in underdetermined settings. To improve upon this state of affairs, we make two key contributions. First, motivated by the generalization theory literature, we propose selecting hyperparameters that minimize a weighted sum of a cross-validation metric and a model’s output stability, thus reducing the risk of poor out-of-sample performance. Second, we leverage ideas from the mixed-integer optimization literature to obtain computationally tractable relaxations of k-fold cross-validation metrics and the output stability of regressors, facilitating hyperparameter selection after solving fewer MIOs. These relaxations result in an efficient cyclic coordinate descent scheme, achieving lower validation errors than via traditional methods such as grid search. On synthetic datasets, our confidence adjustment procedure improves out-of-sample performance by 2%-5% compared to minimizing the k-fold error alone. On 13 real-world datasets, our confidence adjustment procedure reduces test set error by 2%, on average." />
+<meta property="og:description" content="Given a high-dimensional covariate matrix and a response vector, ridge-regularized sparse linear regression selects a subset of features that explains the relationship between covariates and the response in an interpretable manner. To select the sparsity and robustness of linear regressors, techniques like k-fold cross-validation are commonly used for hyperparameter tuning. However, cross-validation substantially increases the computational cost of sparse regression as it requires solving many mixed-integer optimization problems (MIOs). Additionally, validation metrics often serve as noisy estimators of test set errors, with different hyperparameter combinations leading to models with different noise levels. Therefore, optimizing over these metrics is vulnerable to out-of-sample disappointment, especially in underdetermined settings. To improve upon this state of affairs, we make two key contributions. First, motivated by the generalization theory literature, we propose selecting hyperparameters that minimize a weighted sum of a cross-validation metric and a model’s output stability, thus reducing the risk of poor out-of-sample performance. Second, we leverage ideas from the mixed-integer optimization literature to obtain computationally tractable relaxations of k-fold cross-validation metrics and the output stability of regressors, facilitating hyperparameter selection after solving fewer MIOs. These relaxations result in an efficient cyclic coordinate descent scheme, achieving lower validation errors than via traditional methods such as grid search. On synthetic datasets, our confidence adjustment procedure improves out-of-sample performance by 2%-5% compared to minimizing the k-fold error alone. On 13 real-world datasets, our confidence adjustment procedure reduces test set error by 2%, on average." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/08/StabilityAdjustedCrossValidationforSparseLinearRegression.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/08/StabilityAdjustedCrossValidationforSparseLinearRegression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-08T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Stability-Adjusted Cross-Validation for Sparse Linear Regression" />
+<script type="application/ld+json">
+{"description":"Given a high-dimensional covariate matrix and a response vector, ridge-regularized sparse linear regression selects a subset of features that explains the relationship between covariates and the response in an interpretable manner. To select the sparsity and robustness of linear regressors, techniques like k-fold cross-validation are commonly used for hyperparameter tuning. However, cross-validation substantially increases the computational cost of sparse regression as it requires solving many mixed-integer optimization problems (MIOs). Additionally, validation metrics often serve as noisy estimators of test set errors, with different hyperparameter combinations leading to models with different noise levels. Therefore, optimizing over these metrics is vulnerable to out-of-sample disappointment, especially in underdetermined settings. To improve upon this state of affairs, we make two key contributions. First, motivated by the generalization theory literature, we propose selecting hyperparameters that minimize a weighted sum of a cross-validation metric and a model’s output stability, thus reducing the risk of poor out-of-sample performance. Second, we leverage ideas from the mixed-integer optimization literature to obtain computationally tractable relaxations of k-fold cross-validation metrics and the output stability of regressors, facilitating hyperparameter selection after solving fewer MIOs. These relaxations result in an efficient cyclic coordinate descent scheme, achieving lower validation errors than via traditional methods such as grid search. On synthetic datasets, our confidence adjustment procedure improves out-of-sample performance by 2%-5% compared to minimizing the k-fold error alone. On 13 real-world datasets, our confidence adjustment procedure reduces test set error by 2%, on average.","headline":"Stability-Adjusted Cross-Validation for Sparse Linear Regression","dateModified":"2024-10-08T00:00:00+00:00","datePublished":"2024-10-08T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/08/StabilityAdjustedCrossValidationforSparseLinearRegression.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/08/StabilityAdjustedCrossValidationforSparseLinearRegression.html","author":{"@type":"Person","name":"Ryan Cory-Wright, Andrés Gómez"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-08 00:00:00 +0000">10-08</time>
+  </p>
+  
+  <h1>Stability-Adjusted Cross-Validation for Sparse Linear Regression</h1>
+  <br>Ryan Cory-Wright, Andrés Gómez</h3>
+  <br> [stat.ME]
+
+  <p>Given a high-dimensional covariate matrix and a response vector, ridge-regularized sparse linear regression selects a subset of features that explains the relationship between covariates and the response in an interpretable manner. To select the sparsity and robustness of linear regressors, techniques like k-fold cross-validation are commonly used for hyperparameter tuning. However, cross-validation substantially increases the computational cost of sparse regression as it requires solving many mixed-integer optimization problems (MIOs). Additionally, validation metrics often serve as noisy estimators of test set errors, with different hyperparameter combinations leading to models with different noise levels. Therefore, optimizing over these metrics is vulnerable to out-of-sample disappointment, especially in underdetermined settings. To improve upon this state of affairs, we make two key contributions. First, motivated by the generalization theory literature, we propose selecting hyperparameters that minimize a weighted sum of a cross-validation metric and a model’s output stability, thus reducing the risk of poor out-of-sample performance. Second, we leverage ideas from the mixed-integer optimization literature to obtain computationally tractable relaxations of k-fold cross-validation metrics and the output stability of regressors, facilitating hyperparameter selection after solving fewer MIOs. These relaxations result in an efficient cyclic coordinate descent scheme, achieving lower validation errors than via traditional methods such as grid search. On synthetic datasets, our confidence adjustment procedure improves out-of-sample performance by 2%-5% compared to minimizing the k-fold error alone. On 13 real-world datasets, our confidence adjustment procedure reduces test set error by 2%, on average.</p>
+
+<p><a href="https://arxiv.org/abs/2306.14851">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
