@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>lintsampler: Easy random sampling via linear interpolation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="lintsampler: Easy random sampling via linear interpolation" />
+<meta name="author" content="Aneesh P. Naik, Michael S. Petersen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="‘lintsampler’ provides a Python implementation of a technique we term ‘linear interpolant sampling’: an algorithm to efficiently draw pseudo-random samples from an arbitrary probability density function (PDF). First, the PDF is evaluated on a grid-like structure. Then, it is assumed that the PDF can be approximated between grid vertices by the (multidimensional) linear interpolant. With this assumption, random samples can be efficiently drawn via inverse transform sampling. lintsampler is primarily written with ‘numpy’, drawing some additional functionality from ‘scipy’. Under the most basic usage of lintsampler, the user provides a Python function defining the target PDF and some parameters describing a grid-like structure to the ‘LintSampler’ class, and is then able to draw samples via the ‘sample’ method. Additionally, there is functionality for the user to set the random seed, employ quasi-Monte Carlo sampling, or sample within a premade grid (‘DensityGrid’) or tree (‘DensityTree’) structure." />
+<meta property="og:description" content="‘lintsampler’ provides a Python implementation of a technique we term ‘linear interpolant sampling’: an algorithm to efficiently draw pseudo-random samples from an arbitrary probability density function (PDF). First, the PDF is evaluated on a grid-like structure. Then, it is assumed that the PDF can be approximated between grid vertices by the (multidimensional) linear interpolant. With this assumption, random samples can be efficiently drawn via inverse transform sampling. lintsampler is primarily written with ‘numpy’, drawing some additional functionality from ‘scipy’. Under the most basic usage of lintsampler, the user provides a Python function defining the target PDF and some parameters describing a grid-like structure to the ‘LintSampler’ class, and is then able to draw samples via the ‘sample’ method. Additionally, there is functionality for the user to set the random seed, employ quasi-Monte Carlo sampling, or sample within a premade grid (‘DensityGrid’) or tree (‘DensityTree’) structure." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/10/lintsamplerEasyrandomsamplingvialinearinterpolation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/10/lintsamplerEasyrandomsamplingvialinearinterpolation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="lintsampler: Easy random sampling via linear interpolation" />
+<script type="application/ld+json">
+{"description":"‘lintsampler’ provides a Python implementation of a technique we term ‘linear interpolant sampling’: an algorithm to efficiently draw pseudo-random samples from an arbitrary probability density function (PDF). First, the PDF is evaluated on a grid-like structure. Then, it is assumed that the PDF can be approximated between grid vertices by the (multidimensional) linear interpolant. With this assumption, random samples can be efficiently drawn via inverse transform sampling. lintsampler is primarily written with ‘numpy’, drawing some additional functionality from ‘scipy’. Under the most basic usage of lintsampler, the user provides a Python function defining the target PDF and some parameters describing a grid-like structure to the ‘LintSampler’ class, and is then able to draw samples via the ‘sample’ method. Additionally, there is functionality for the user to set the random seed, employ quasi-Monte Carlo sampling, or sample within a premade grid (‘DensityGrid’) or tree (‘DensityTree’) structure.","headline":"lintsampler: Easy random sampling via linear interpolation","dateModified":"2024-10-10T00:00:00+00:00","datePublished":"2024-10-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/10/lintsamplerEasyrandomsamplingvialinearinterpolation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/10/lintsamplerEasyrandomsamplingvialinearinterpolation.html","author":{"@type":"Person","name":"Aneesh P. Naik, Michael S. Petersen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-10 00:00:00 +0000">10-10</time>
+  </p>
+  
+  <h1>lintsampler: Easy random sampling via linear interpolation</h1>
+  <br>Aneesh P. Naik, Michael S. Petersen</h3>
+  <br> [stat.CO]
+
+  <p>‘lintsampler’ provides a Python implementation of a technique we term ‘linear interpolant sampling’: an algorithm to efficiently draw pseudo-random samples from an arbitrary probability density function (PDF). First, the PDF is evaluated on a grid-like structure. Then, it is assumed that the PDF can be approximated between grid vertices by the (multidimensional) linear interpolant. With this assumption, random samples can be efficiently drawn via inverse transform sampling. lintsampler is primarily written with ‘numpy’, drawing some additional functionality from ‘scipy’. Under the most basic usage of lintsampler, the user provides a Python function defining the target PDF and some parameters describing a grid-like structure to the ‘LintSampler’ class, and is then able to draw samples via the ‘sample’ method. Additionally, there is functionality for the user to set the random seed, employ quasi-Monte Carlo sampling, or sample within a premade grid (‘DensityGrid’) or tree (‘DensityTree’) structure.</p>
+
+<p><a href="https://arxiv.org/abs/2410.05811">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

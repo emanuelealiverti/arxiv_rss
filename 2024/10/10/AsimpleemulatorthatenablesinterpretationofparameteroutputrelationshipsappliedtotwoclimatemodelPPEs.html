@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A simple emulator that enables interpretation of parameter-output relationships, applied to two climate model PPEs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A simple emulator that enables interpretation of parameter-output relationships, applied to two climate model PPEs" />
+<meta name="author" content="Qingyuan Yang, Gregory S Elsaesser, Marcus Van Lier-Walqui, Trude Eidhammer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We present a new additive method, nicknamed sage for Simplified Additive Gaussian processes Emulator, to emulate climate model Perturbed Parameter Ensembles (PPEs). It estimates the value of a climate model output as the sum of additive terms. Each additive term is the mean of a Gaussian Process, and corresponds to the impact of a parameter or parameter group on the variable of interest. This design caters to the sparsity of PPEs which are characterized by limited ensemble members and high dimensionality of the parameter space. sage quantifies the variability explained by different parameters and parameter groups, providing additional insights on the parameter-climate model output relationship. We apply the method to two climate model PPEs and compare it to a fully connected Neural Network. The two methods have comparable performance with both PPEs, but sage provides insights on parameter and parameter group importance as well as diagnostics useful for optimizing PPE design. Insights gained are valid regardless of the emulator method used, and have not been previously addressed. Our work highlights that analyzing the PPE used to train an emulator is different from analyzing data generated from an emulator trained on the PPE, as the former provides more insights on the data structure in the PPE which could help inform the emulator design." />
+<meta property="og:description" content="We present a new additive method, nicknamed sage for Simplified Additive Gaussian processes Emulator, to emulate climate model Perturbed Parameter Ensembles (PPEs). It estimates the value of a climate model output as the sum of additive terms. Each additive term is the mean of a Gaussian Process, and corresponds to the impact of a parameter or parameter group on the variable of interest. This design caters to the sparsity of PPEs which are characterized by limited ensemble members and high dimensionality of the parameter space. sage quantifies the variability explained by different parameters and parameter groups, providing additional insights on the parameter-climate model output relationship. We apply the method to two climate model PPEs and compare it to a fully connected Neural Network. The two methods have comparable performance with both PPEs, but sage provides insights on parameter and parameter group importance as well as diagnostics useful for optimizing PPE design. Insights gained are valid regardless of the emulator method used, and have not been previously addressed. Our work highlights that analyzing the PPE used to train an emulator is different from analyzing data generated from an emulator trained on the PPE, as the former provides more insights on the data structure in the PPE which could help inform the emulator design." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/10/AsimpleemulatorthatenablesinterpretationofparameteroutputrelationshipsappliedtotwoclimatemodelPPEs.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/10/AsimpleemulatorthatenablesinterpretationofparameteroutputrelationshipsappliedtotwoclimatemodelPPEs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A simple emulator that enables interpretation of parameter-output relationships, applied to two climate model PPEs" />
+<script type="application/ld+json">
+{"description":"We present a new additive method, nicknamed sage for Simplified Additive Gaussian processes Emulator, to emulate climate model Perturbed Parameter Ensembles (PPEs). It estimates the value of a climate model output as the sum of additive terms. Each additive term is the mean of a Gaussian Process, and corresponds to the impact of a parameter or parameter group on the variable of interest. This design caters to the sparsity of PPEs which are characterized by limited ensemble members and high dimensionality of the parameter space. sage quantifies the variability explained by different parameters and parameter groups, providing additional insights on the parameter-climate model output relationship. We apply the method to two climate model PPEs and compare it to a fully connected Neural Network. The two methods have comparable performance with both PPEs, but sage provides insights on parameter and parameter group importance as well as diagnostics useful for optimizing PPE design. Insights gained are valid regardless of the emulator method used, and have not been previously addressed. Our work highlights that analyzing the PPE used to train an emulator is different from analyzing data generated from an emulator trained on the PPE, as the former provides more insights on the data structure in the PPE which could help inform the emulator design.","headline":"A simple emulator that enables interpretation of parameter-output relationships, applied to two climate model PPEs","dateModified":"2024-10-10T00:00:00+00:00","datePublished":"2024-10-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/10/AsimpleemulatorthatenablesinterpretationofparameteroutputrelationshipsappliedtotwoclimatemodelPPEs.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/10/AsimpleemulatorthatenablesinterpretationofparameteroutputrelationshipsappliedtotwoclimatemodelPPEs.html","author":{"@type":"Person","name":"Qingyuan Yang, Gregory S Elsaesser, Marcus Van Lier-Walqui, Trude Eidhammer"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-10 00:00:00 +0000">10-10</time>
+  </p>
+  
+  <h1>A simple emulator that enables interpretation of parameter-output relationships, applied to two climate model PPEs</h1>
+  <br>Qingyuan Yang, Gregory S Elsaesser, Marcus Van Lier-Walqui, Trude Eidhammer</h3>
+  <br> [stat.ME]
+
+  <p>We present a new additive method, nicknamed sage for Simplified Additive Gaussian processes Emulator, to emulate climate model Perturbed Parameter Ensembles (PPEs). It estimates the value of a climate model output as the sum of additive terms. Each additive term is the mean of a Gaussian Process, and corresponds to the impact of a parameter or parameter group on the variable of interest. This design caters to the sparsity of PPEs which are characterized by limited ensemble members and high dimensionality of the parameter space. sage quantifies the variability explained by different parameters and parameter groups, providing additional insights on the parameter-climate model output relationship. We apply the method to two climate model PPEs and compare it to a fully connected Neural Network. The two methods have comparable performance with both PPEs, but sage provides insights on parameter and parameter group importance as well as diagnostics useful for optimizing PPE design. Insights gained are valid regardless of the emulator method used, and have not been previously addressed. Our work highlights that analyzing the PPE used to train an emulator is different from analyzing data generated from an emulator trained on the PPE, as the former provides more insights on the data structure in the PPE which could help inform the emulator design.</p>
+
+<p><a href="https://arxiv.org/abs/2410.00931">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
