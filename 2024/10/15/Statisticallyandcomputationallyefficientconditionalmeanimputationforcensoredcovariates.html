@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Statistically and computationally efficient conditional mean imputation for censored covariates</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Statistically and computationally efficient conditional mean imputation for censored covariates" />
+<meta name="author" content="Sarah C. Lotspeich, Ethan M. Alt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Censored, missing, and error-prone covariates are all coarsened data types for which the true values are unknown. Many methods to handle the unobserved values, including imputation, are shared between these data types, with nuances based on the mechanism dominating the unobserved values and any other available information. For example, in prospective studies, the time to a specific disease diagnosis will be incompletely observed if only some patients are diagnosed by the end of the follow-up. Specifically, some times will be randomly right-censored, and patients’ disease-free follow-up times must be incorporated into their imputed values. Assuming noninformative censoring, these censored values are replaced with their conditional means, the calculations of which require (i) estimating the conditional distribution of the censored covariate and (ii) integrating over the corresponding survival function. Semiparametric approaches are common, which estimate the distribution with a Cox proportional hazards model and then the integral with the trapezoidal rule. While these approaches offer robustness, they come at the cost of statistical and computational efficiency. We propose a general framework for parametric conditional mean imputation of censored covariates that offers better statistical precision and requires less computational strain by modeling the survival function parametrically, where conditional means often have an analytic solution. The framework is implemented in the open-source R package, speedyCMI." />
+<meta property="og:description" content="Censored, missing, and error-prone covariates are all coarsened data types for which the true values are unknown. Many methods to handle the unobserved values, including imputation, are shared between these data types, with nuances based on the mechanism dominating the unobserved values and any other available information. For example, in prospective studies, the time to a specific disease diagnosis will be incompletely observed if only some patients are diagnosed by the end of the follow-up. Specifically, some times will be randomly right-censored, and patients’ disease-free follow-up times must be incorporated into their imputed values. Assuming noninformative censoring, these censored values are replaced with their conditional means, the calculations of which require (i) estimating the conditional distribution of the censored covariate and (ii) integrating over the corresponding survival function. Semiparametric approaches are common, which estimate the distribution with a Cox proportional hazards model and then the integral with the trapezoidal rule. While these approaches offer robustness, they come at the cost of statistical and computational efficiency. We propose a general framework for parametric conditional mean imputation of censored covariates that offers better statistical precision and requires less computational strain by modeling the survival function parametrically, where conditional means often have an analytic solution. The framework is implemented in the open-source R package, speedyCMI." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/15/Statisticallyandcomputationallyefficientconditionalmeanimputationforcensoredcovariates.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/15/Statisticallyandcomputationallyefficientconditionalmeanimputationforcensoredcovariates.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Statistically and computationally efficient conditional mean imputation for censored covariates" />
+<script type="application/ld+json">
+{"description":"Censored, missing, and error-prone covariates are all coarsened data types for which the true values are unknown. Many methods to handle the unobserved values, including imputation, are shared between these data types, with nuances based on the mechanism dominating the unobserved values and any other available information. For example, in prospective studies, the time to a specific disease diagnosis will be incompletely observed if only some patients are diagnosed by the end of the follow-up. Specifically, some times will be randomly right-censored, and patients’ disease-free follow-up times must be incorporated into their imputed values. Assuming noninformative censoring, these censored values are replaced with their conditional means, the calculations of which require (i) estimating the conditional distribution of the censored covariate and (ii) integrating over the corresponding survival function. Semiparametric approaches are common, which estimate the distribution with a Cox proportional hazards model and then the integral with the trapezoidal rule. While these approaches offer robustness, they come at the cost of statistical and computational efficiency. We propose a general framework for parametric conditional mean imputation of censored covariates that offers better statistical precision and requires less computational strain by modeling the survival function parametrically, where conditional means often have an analytic solution. The framework is implemented in the open-source R package, speedyCMI.","headline":"Statistically and computationally efficient conditional mean imputation for censored covariates","dateModified":"2024-10-15T00:00:00+00:00","datePublished":"2024-10-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/15/Statisticallyandcomputationallyefficientconditionalmeanimputationforcensoredcovariates.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/15/Statisticallyandcomputationallyefficientconditionalmeanimputationforcensoredcovariates.html","author":{"@type":"Person","name":"Sarah C. Lotspeich, Ethan M. Alt"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-15 00:00:00 +0000">10-15</time>
+  </p>
+  
+  <h1>Statistically and computationally efficient conditional mean imputation for censored covariates</h1>
+  <br>Sarah C. Lotspeich, Ethan M. Alt</h3>
+  <br> [stat.ME]
+
+  <p>Censored, missing, and error-prone covariates are all coarsened data types for which the true values are unknown. Many methods to handle the unobserved values, including imputation, are shared between these data types, with nuances based on the mechanism dominating the unobserved values and any other available information. For example, in prospective studies, the time to a specific disease diagnosis will be incompletely observed if only some patients are diagnosed by the end of the follow-up. Specifically, some times will be randomly right-censored, and patients’ disease-free follow-up times must be incorporated into their imputed values. Assuming noninformative censoring, these censored values are replaced with their conditional means, the calculations of which require (i) estimating the conditional distribution of the censored covariate and (ii) integrating over the corresponding survival function. Semiparametric approaches are common, which estimate the distribution with a Cox proportional hazards model and then the integral with the trapezoidal rule. While these approaches offer robustness, they come at the cost of statistical and computational efficiency. We propose a general framework for parametric conditional mean imputation of censored covariates that offers better statistical precision and requires less computational strain by modeling the survival function parametrically, where conditional means often have an analytic solution. The framework is implemented in the open-source R package, speedyCMI.</p>
+
+<p><a href="https://arxiv.org/abs/2410.10723">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
