@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Models for spatiotemporal data with some missing locations and application to emergency calls models calibration</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Models for spatiotemporal data with some missing locations and application to emergency calls models calibration" />
+<meta name="author" content="Vincent Guigues, Anton Kleywegt, Victor Hugo Nascimento, Lucas Lucas Rafael de Andrade" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We consider two classes of models for spatiotemporal data: one without covariates and one with covariates. If $\mathcal{T}$ is a partition of time and $\mathcal{I}$ a partition of the studied area into zones and if $\mathcal{C}$ is the set of arrival types, we assume that the process of arrivals for time interval $t \in \mathcal{T}$, zone $i \in \mathcal{I}$, and arrival type $c \in \mathcal{C}$ is Poisson with some intensity $\lambda_{c,i,t}$. We discussed the calibration and implementation of such models in \cite{laspatedpaper, laspatedmanual} with corresponding software LASPATED (Library for the Analysis of SPAtioTEmporal Discrete data) available on GitHub at https://github.com/vguigues/LASPATED. In this paper, we discuss the extension of these models when some of the locations are missing in the historical data. We propose three models to deal with missing locations and implemented them both in Matlab and C++. The corresponding code is available on GitHub as an extension of LASPATED at https://github.com/vguigues/LASPATED/Missing_Data. We tested our implementation using the process of emergency calls to an Emergency Health Service where many calls come with missing locations and show the importance and benefit of using models that consider missing locations, rather than discarding the calls with missing locations for the calibration of statistical models for such calls." />
+<meta property="og:description" content="We consider two classes of models for spatiotemporal data: one without covariates and one with covariates. If $\mathcal{T}$ is a partition of time and $\mathcal{I}$ a partition of the studied area into zones and if $\mathcal{C}$ is the set of arrival types, we assume that the process of arrivals for time interval $t \in \mathcal{T}$, zone $i \in \mathcal{I}$, and arrival type $c \in \mathcal{C}$ is Poisson with some intensity $\lambda_{c,i,t}$. We discussed the calibration and implementation of such models in \cite{laspatedpaper, laspatedmanual} with corresponding software LASPATED (Library for the Analysis of SPAtioTEmporal Discrete data) available on GitHub at https://github.com/vguigues/LASPATED. In this paper, we discuss the extension of these models when some of the locations are missing in the historical data. We propose three models to deal with missing locations and implemented them both in Matlab and C++. The corresponding code is available on GitHub as an extension of LASPATED at https://github.com/vguigues/LASPATED/Missing_Data. We tested our implementation using the process of emergency calls to an Emergency Health Service where many calls come with missing locations and show the importance and benefit of using models that consider missing locations, rather than discarding the calls with missing locations for the calibration of statistical models for such calls." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/16/Modelsforspatiotemporaldatawithsomemissinglocationsandapplicationtoemergencycallsmodelscalibration.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/16/Modelsforspatiotemporaldatawithsomemissinglocationsandapplicationtoemergencycallsmodelscalibration.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Models for spatiotemporal data with some missing locations and application to emergency calls models calibration" />
+<script type="application/ld+json">
+{"description":"We consider two classes of models for spatiotemporal data: one without covariates and one with covariates. If $\\mathcal{T}$ is a partition of time and $\\mathcal{I}$ a partition of the studied area into zones and if $\\mathcal{C}$ is the set of arrival types, we assume that the process of arrivals for time interval $t \\in \\mathcal{T}$, zone $i \\in \\mathcal{I}$, and arrival type $c \\in \\mathcal{C}$ is Poisson with some intensity $\\lambda_{c,i,t}$. We discussed the calibration and implementation of such models in \\cite{laspatedpaper, laspatedmanual} with corresponding software LASPATED (Library for the Analysis of SPAtioTEmporal Discrete data) available on GitHub at https://github.com/vguigues/LASPATED. In this paper, we discuss the extension of these models when some of the locations are missing in the historical data. We propose three models to deal with missing locations and implemented them both in Matlab and C++. The corresponding code is available on GitHub as an extension of LASPATED at https://github.com/vguigues/LASPATED/Missing_Data. We tested our implementation using the process of emergency calls to an Emergency Health Service where many calls come with missing locations and show the importance and benefit of using models that consider missing locations, rather than discarding the calls with missing locations for the calibration of statistical models for such calls.","headline":"Models for spatiotemporal data with some missing locations and application to emergency calls models calibration","dateModified":"2024-10-16T00:00:00+00:00","datePublished":"2024-10-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/16/Modelsforspatiotemporaldatawithsomemissinglocationsandapplicationtoemergencycallsmodelscalibration.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/16/Modelsforspatiotemporaldatawithsomemissinglocationsandapplicationtoemergencycallsmodelscalibration.html","author":{"@type":"Person","name":"Vincent Guigues, Anton Kleywegt, Victor Hugo Nascimento, Lucas Lucas Rafael de Andrade"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-16 00:00:00 +0000">10-16</time>
+  </p>
+  
+  <h1>Models for spatiotemporal data with some missing locations and application to emergency calls models calibration</h1>
+  <br>Vincent Guigues, Anton Kleywegt, Victor Hugo Nascimento, Lucas Lucas Rafael de Andrade</h3>
+  <br> [stat.ME,stat.CO,stat.TH]
+
+  <p>We consider two classes of models for spatiotemporal data: one without covariates and one with covariates. If $\mathcal{T}$ is a partition of time and $\mathcal{I}$ a partition of the studied area into zones and if $\mathcal{C}$ is the set of arrival types, we assume that the process of arrivals for time interval $t \in \mathcal{T}$, zone $i \in \mathcal{I}$, and arrival type $c \in \mathcal{C}$ is Poisson with some intensity $\lambda_{c,i,t}$. We discussed the calibration and implementation of such models in \cite{laspatedpaper, laspatedmanual} with corresponding software LASPATED (Library for the Analysis of SPAtioTEmporal Discrete data) available on GitHub at https://github.com/vguigues/LASPATED. In this paper, we discuss the extension of these models when some of the locations are missing in the historical data. We propose three models to deal with missing locations and implemented them both in Matlab and C++. The corresponding code is available on GitHub as an extension of LASPATED at https://github.com/vguigues/LASPATED/Missing_Data. We tested our implementation using the process of emergency calls to an Emergency Health Service where many calls come with missing locations and show the importance and benefit of using models that consider missing locations, rather than discarding the calls with missing locations for the calibration of statistical models for such calls.</p>
+
+<p><a href="https://arxiv.org/abs/2410.11103">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

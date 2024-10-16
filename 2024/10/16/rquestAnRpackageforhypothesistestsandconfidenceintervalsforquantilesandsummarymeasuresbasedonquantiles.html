@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>rquest: An R package for hypothesis tests and confidence intervals for quantiles and summary measures based on quantiles</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="rquest: An R package for hypothesis tests and confidence intervals for quantiles and summary measures based on quantiles" />
+<meta name="author" content="Luke A. Prendergast, Shenal Dedduwakumara, Robert G. Staudte" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sample quantiles, such as the median, are often better suited than the sample mean for summarising location characteristics of a data set. Similarly, linear combinations of sample quantiles and ratios of such linear combinations, e.g. the interquartile range and quantile-based skewness measures, are often used to quantify characteristics such as spread and skew. While often reported, it is uncommon to accompany quantile estimates with confidence intervals or standard errors. The rquest package provides a simple way to conduct hypothesis tests and derive confidence intervals for quantiles, linear combinations of quantiles, ratios of dependent linear combinations (e.g., Bowley’s measure of skewness) and differences and ratios of all of the above for comparisons between independent samples. Many commonly used measures based on quantiles are included, although it is also very simple for users to define their own. Additionally, quantile-based measures of inequality are also considered. The methods are based on recent research showing that reliable distribution-free confidence intervals can be obtained, even for moderate sample sizes. Several examples are provided herein." />
+<meta property="og:description" content="Sample quantiles, such as the median, are often better suited than the sample mean for summarising location characteristics of a data set. Similarly, linear combinations of sample quantiles and ratios of such linear combinations, e.g. the interquartile range and quantile-based skewness measures, are often used to quantify characteristics such as spread and skew. While often reported, it is uncommon to accompany quantile estimates with confidence intervals or standard errors. The rquest package provides a simple way to conduct hypothesis tests and derive confidence intervals for quantiles, linear combinations of quantiles, ratios of dependent linear combinations (e.g., Bowley’s measure of skewness) and differences and ratios of all of the above for comparisons between independent samples. Many commonly used measures based on quantiles are included, although it is also very simple for users to define their own. Additionally, quantile-based measures of inequality are also considered. The methods are based on recent research showing that reliable distribution-free confidence intervals can be obtained, even for moderate sample sizes. Several examples are provided herein." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/16/rquestAnRpackageforhypothesistestsandconfidenceintervalsforquantilesandsummarymeasuresbasedonquantiles.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/16/rquestAnRpackageforhypothesistestsandconfidenceintervalsforquantilesandsummarymeasuresbasedonquantiles.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="rquest: An R package for hypothesis tests and confidence intervals for quantiles and summary measures based on quantiles" />
+<script type="application/ld+json">
+{"description":"Sample quantiles, such as the median, are often better suited than the sample mean for summarising location characteristics of a data set. Similarly, linear combinations of sample quantiles and ratios of such linear combinations, e.g. the interquartile range and quantile-based skewness measures, are often used to quantify characteristics such as spread and skew. While often reported, it is uncommon to accompany quantile estimates with confidence intervals or standard errors. The rquest package provides a simple way to conduct hypothesis tests and derive confidence intervals for quantiles, linear combinations of quantiles, ratios of dependent linear combinations (e.g., Bowley’s measure of skewness) and differences and ratios of all of the above for comparisons between independent samples. Many commonly used measures based on quantiles are included, although it is also very simple for users to define their own. Additionally, quantile-based measures of inequality are also considered. The methods are based on recent research showing that reliable distribution-free confidence intervals can be obtained, even for moderate sample sizes. Several examples are provided herein.","headline":"rquest: An R package for hypothesis tests and confidence intervals for quantiles and summary measures based on quantiles","dateModified":"2024-10-16T00:00:00+00:00","datePublished":"2024-10-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/16/rquestAnRpackageforhypothesistestsandconfidenceintervalsforquantilesandsummarymeasuresbasedonquantiles.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/16/rquestAnRpackageforhypothesistestsandconfidenceintervalsforquantilesandsummarymeasuresbasedonquantiles.html","author":{"@type":"Person","name":"Luke A. Prendergast, Shenal Dedduwakumara, Robert G. Staudte"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-16 00:00:00 +0000">10-16</time>
+  </p>
+  
+  <h1>rquest: An R package for hypothesis tests and confidence intervals for quantiles and summary measures based on quantiles</h1>
+  <br>Luke A. Prendergast, Shenal Dedduwakumara, Robert G. Staudte</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Sample quantiles, such as the median, are often better suited than the sample mean for summarising location characteristics of a data set. Similarly, linear combinations of sample quantiles and ratios of such linear combinations, e.g. the interquartile range and quantile-based skewness measures, are often used to quantify characteristics such as spread and skew. While often reported, it is uncommon to accompany quantile estimates with confidence intervals or standard errors. The rquest package provides a simple way to conduct hypothesis tests and derive confidence intervals for quantiles, linear combinations of quantiles, ratios of dependent linear combinations (e.g., Bowley’s measure of skewness) and differences and ratios of all of the above for comparisons between independent samples. Many commonly used measures based on quantiles are included, although it is also very simple for users to define their own. Additionally, quantile-based measures of inequality are also considered. The methods are based on recent research showing that reliable distribution-free confidence intervals can be obtained, even for moderate sample sizes. Several examples are provided herein.</p>
+
+<p><a href="https://arxiv.org/abs/2410.11093">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
