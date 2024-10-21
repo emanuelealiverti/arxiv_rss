@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the convergence of dynamic implementations of Hamiltonian Monte Carlo and No U-Turn Samplers</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On the convergence of dynamic implementations of Hamiltonian Monte Carlo and No U-Turn Samplers" />
+<meta name="author" content="Alain Durmus, Samuel Gruffaz, Miika Kailas, Eero Saksman, Matti Vihola" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There is substantial empirical evidence about the success of dynamic implementations of Hamiltonian Monte Carlo (HMC), such as the No U-Turn Sampler (NUTS), in many challenging inference problems but theoretical results about their behavior are scarce. The aim of this paper is to fill this gap. More precisely, we consider a general class of MCMC algorithms we call dynamic HMC. We show that this general framework encompasses NUTS as a particular case, implying the invariance of the target distribution as a by-product. Second, we establish conditions under which NUTS is irreducible and aperiodic and as a corrolary ergodic. Under conditions similar to the ones existing for HMC, we also show that NUTS is geometrically ergodic. Finally, we improve existing convergence results for HMC showing that this method is ergodic without any boundedness condition on the stepsize and the number of leapfrog steps, in the case where the target is a perturbation of a Gaussian distribution." />
+<meta property="og:description" content="There is substantial empirical evidence about the success of dynamic implementations of Hamiltonian Monte Carlo (HMC), such as the No U-Turn Sampler (NUTS), in many challenging inference problems but theoretical results about their behavior are scarce. The aim of this paper is to fill this gap. More precisely, we consider a general class of MCMC algorithms we call dynamic HMC. We show that this general framework encompasses NUTS as a particular case, implying the invariance of the target distribution as a by-product. Second, we establish conditions under which NUTS is irreducible and aperiodic and as a corrolary ergodic. Under conditions similar to the ones existing for HMC, we also show that NUTS is geometrically ergodic. Finally, we improve existing convergence results for HMC showing that this method is ergodic without any boundedness condition on the stepsize and the number of leapfrog steps, in the case where the target is a perturbation of a Gaussian distribution." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/21/OntheconvergenceofdynamicimplementationsofHamiltonianMonteCarloandNoUTurnSamplers.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/21/OntheconvergenceofdynamicimplementationsofHamiltonianMonteCarloandNoUTurnSamplers.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On the convergence of dynamic implementations of Hamiltonian Monte Carlo and No U-Turn Samplers" />
+<script type="application/ld+json">
+{"description":"There is substantial empirical evidence about the success of dynamic implementations of Hamiltonian Monte Carlo (HMC), such as the No U-Turn Sampler (NUTS), in many challenging inference problems but theoretical results about their behavior are scarce. The aim of this paper is to fill this gap. More precisely, we consider a general class of MCMC algorithms we call dynamic HMC. We show that this general framework encompasses NUTS as a particular case, implying the invariance of the target distribution as a by-product. Second, we establish conditions under which NUTS is irreducible and aperiodic and as a corrolary ergodic. Under conditions similar to the ones existing for HMC, we also show that NUTS is geometrically ergodic. Finally, we improve existing convergence results for HMC showing that this method is ergodic without any boundedness condition on the stepsize and the number of leapfrog steps, in the case where the target is a perturbation of a Gaussian distribution.","headline":"On the convergence of dynamic implementations of Hamiltonian Monte Carlo and No U-Turn Samplers","dateModified":"2024-10-21T00:00:00+00:00","datePublished":"2024-10-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/21/OntheconvergenceofdynamicimplementationsofHamiltonianMonteCarloandNoUTurnSamplers.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/21/OntheconvergenceofdynamicimplementationsofHamiltonianMonteCarloandNoUTurnSamplers.html","author":{"@type":"Person","name":"Alain Durmus, Samuel Gruffaz, Miika Kailas, Eero Saksman, Matti Vihola"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-21 00:00:00 +0000">10-21</time>
+  </p>
+  
+  <h1>On the convergence of dynamic implementations of Hamiltonian Monte Carlo and No U-Turn Samplers</h1>
+  <br>Alain Durmus, Samuel Gruffaz, Miika Kailas, Eero Saksman, Matti Vihola</h3>
+  <br> [stat.CO,stat.ML,stat.TH]
+
+  <p>There is substantial empirical evidence about the success of dynamic implementations of Hamiltonian Monte Carlo (HMC), such as the No U-Turn Sampler (NUTS), in many challenging inference problems but theoretical results about their behavior are scarce. The aim of this paper is to fill this gap. More precisely, we consider a general class of MCMC algorithms we call dynamic HMC. We show that this general framework encompasses NUTS as a particular case, implying the invariance of the target distribution as a by-product. Second, we establish conditions under which NUTS is irreducible and aperiodic and as a corrolary ergodic. Under conditions similar to the ones existing for HMC, we also show that NUTS is geometrically ergodic. Finally, we improve existing convergence results for HMC showing that this method is ergodic without any boundedness condition on the stepsize and the number of leapfrog steps, in the case where the target is a perturbation of a Gaussian distribution.</p>
+
+<p><a href="https://arxiv.org/abs/2307.03460">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
