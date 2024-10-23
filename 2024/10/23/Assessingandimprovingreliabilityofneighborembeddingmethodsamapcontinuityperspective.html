@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Assessing and improving reliability of neighbor embedding methods: a map-continuity perspective</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Assessing and improving reliability of neighbor embedding methods: a map-continuity perspective" />
+<meta name="author" content="Zhexuan Liu, Rong Ma, Yiqiao Zhong" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Visualizing high-dimensional data is an important routine for understanding biomedical data and interpreting deep learning models. Neighbor embedding methods, such as t-SNE, UMAP, and LargeVis, among others, are a family of popular visualization methods which reduce high-dimensional data to two dimensions. However, recent studies suggest that these methods often produce visual artifacts, potentially leading to incorrect scientific conclusions. Recognizing that the current limitation stems from a lack of data-independent notions of embedding maps, we introduce a novel conceptual and computational framework, LOO-map, that learns the embedding maps based on a classical statistical idea known as the leave-one-out. LOO-map extends the embedding over a discrete set of input points to the entire input space, enabling a systematic assessment of map continuity, and thus the reliability of the visualizations. We find for many neighbor embedding methods, their embedding maps can be intrinsically discontinuous. The discontinuity induces two types of observed map distortion: overconfidence-inducing discontinuity,&quot; which exaggerates cluster separation, andfracture-inducing discontinuity,” which creates spurious local structures. Building upon LOO-map, we propose two diagnostic point-wise scores – perturbation score and singularity score – to address these limitations. These scores can help identify unreliable embedding points, detect out-of-distribution data, and guide hyperparameter selection. Our approach is flexible and works as a wrapper around many neighbor embedding algorithms. We test our methods across multiple real-world datasets from computer vision and single-cell omics to demonstrate their effectiveness in enhancing the interpretability and accuracy of visualizations." />
+<meta property="og:description" content="Visualizing high-dimensional data is an important routine for understanding biomedical data and interpreting deep learning models. Neighbor embedding methods, such as t-SNE, UMAP, and LargeVis, among others, are a family of popular visualization methods which reduce high-dimensional data to two dimensions. However, recent studies suggest that these methods often produce visual artifacts, potentially leading to incorrect scientific conclusions. Recognizing that the current limitation stems from a lack of data-independent notions of embedding maps, we introduce a novel conceptual and computational framework, LOO-map, that learns the embedding maps based on a classical statistical idea known as the leave-one-out. LOO-map extends the embedding over a discrete set of input points to the entire input space, enabling a systematic assessment of map continuity, and thus the reliability of the visualizations. We find for many neighbor embedding methods, their embedding maps can be intrinsically discontinuous. The discontinuity induces two types of observed map distortion: overconfidence-inducing discontinuity,&quot; which exaggerates cluster separation, andfracture-inducing discontinuity,” which creates spurious local structures. Building upon LOO-map, we propose two diagnostic point-wise scores – perturbation score and singularity score – to address these limitations. These scores can help identify unreliable embedding points, detect out-of-distribution data, and guide hyperparameter selection. Our approach is flexible and works as a wrapper around many neighbor embedding algorithms. We test our methods across multiple real-world datasets from computer vision and single-cell omics to demonstrate their effectiveness in enhancing the interpretability and accuracy of visualizations." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/23/Assessingandimprovingreliabilityofneighborembeddingmethodsamapcontinuityperspective.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/23/Assessingandimprovingreliabilityofneighborembeddingmethodsamapcontinuityperspective.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Assessing and improving reliability of neighbor embedding methods: a map-continuity perspective" />
+<script type="application/ld+json">
+{"description":"Visualizing high-dimensional data is an important routine for understanding biomedical data and interpreting deep learning models. Neighbor embedding methods, such as t-SNE, UMAP, and LargeVis, among others, are a family of popular visualization methods which reduce high-dimensional data to two dimensions. However, recent studies suggest that these methods often produce visual artifacts, potentially leading to incorrect scientific conclusions. Recognizing that the current limitation stems from a lack of data-independent notions of embedding maps, we introduce a novel conceptual and computational framework, LOO-map, that learns the embedding maps based on a classical statistical idea known as the leave-one-out. LOO-map extends the embedding over a discrete set of input points to the entire input space, enabling a systematic assessment of map continuity, and thus the reliability of the visualizations. We find for many neighbor embedding methods, their embedding maps can be intrinsically discontinuous. The discontinuity induces two types of observed map distortion: overconfidence-inducing discontinuity,&quot; which exaggerates cluster separation, andfracture-inducing discontinuity,” which creates spurious local structures. Building upon LOO-map, we propose two diagnostic point-wise scores – perturbation score and singularity score – to address these limitations. These scores can help identify unreliable embedding points, detect out-of-distribution data, and guide hyperparameter selection. Our approach is flexible and works as a wrapper around many neighbor embedding algorithms. We test our methods across multiple real-world datasets from computer vision and single-cell omics to demonstrate their effectiveness in enhancing the interpretability and accuracy of visualizations.","headline":"Assessing and improving reliability of neighbor embedding methods: a map-continuity perspective","dateModified":"2024-10-23T00:00:00+00:00","datePublished":"2024-10-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/23/Assessingandimprovingreliabilityofneighborembeddingmethodsamapcontinuityperspective.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/23/Assessingandimprovingreliabilityofneighborembeddingmethodsamapcontinuityperspective.html","author":{"@type":"Person","name":"Zhexuan Liu, Rong Ma, Yiqiao Zhong"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-23 00:00:00 +0000">10-23</time>
+  </p>
+  
+  <h1>Assessing and improving reliability of neighbor embedding methods: a map-continuity perspective</h1>
+  <br>Zhexuan Liu, Rong Ma, Yiqiao Zhong</h3>
+  <br> [stat.ME,stat.CO,stat.ML]
+
+  <p>Visualizing high-dimensional data is an important routine for understanding biomedical data and interpreting deep learning models. Neighbor embedding methods, such as t-SNE, UMAP, and LargeVis, among others, are a family of popular visualization methods which reduce high-dimensional data to two dimensions. However, recent studies suggest that these methods often produce visual artifacts, potentially leading to incorrect scientific conclusions. Recognizing that the current limitation stems from a lack of data-independent notions of embedding maps, we introduce a novel conceptual and computational framework, LOO-map, that learns the embedding maps based on a classical statistical idea known as the leave-one-out. LOO-map extends the embedding over a discrete set of input points to the entire input space, enabling a systematic assessment of map continuity, and thus the reliability of the visualizations. We find for many neighbor embedding methods, their embedding maps can be intrinsically discontinuous. The discontinuity induces two types of observed map distortion: <code class="language-plaintext highlighter-rouge">overconfidence-inducing discontinuity," which exaggerates cluster separation, and</code>fracture-inducing discontinuity,” which creates spurious local structures. Building upon LOO-map, we propose two diagnostic point-wise scores – perturbation score and singularity score – to address these limitations. These scores can help identify unreliable embedding points, detect out-of-distribution data, and guide hyperparameter selection. Our approach is flexible and works as a wrapper around many neighbor embedding algorithms. We test our methods across multiple real-world datasets from computer vision and single-cell omics to demonstrate their effectiveness in enhancing the interpretability and accuracy of visualizations.</p>
+
+<p><a href="https://arxiv.org/abs/2410.16608">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
