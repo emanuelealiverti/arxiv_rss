@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Detecting Spatial Outliers: the Role of the Local Influence Function</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Detecting Spatial Outliers: the Role of the Local Influence Function" />
+<meta name="author" content="Giuseppe Arbia, Vincenzo Nardelli" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In the analysis of large spatial datasets, identifying and treating spatial outliers is essential for accurately interpreting geographical phenomena. While spatial correlation measures, particularly Local Indicators of Spatial Association (LISA), are widely used to detect spatial patterns, the presence of abnormal observations frequently distorts the landscape and conceals critical spatial relationships. These outliers can significantly impact analysis due to the inherent spatial dependencies present in the data. Traditional influence function (IF) methodologies, commonly used in statistical analysis to measure the impact of individual observations, are not directly applicable in the spatial context because the influence of an observation is determined not only by its own value but also by its spatial location, its connections with neighboring regions, and the values of those neighboring observations. In this paper, we introduce a local version of the influence function (LIF) that accounts for these spatial dependencies. Through the analysis of both simulated and real-world datasets, we demonstrate how the LIF provides a more nuanced and accurate detection of spatial outliers compared to traditional LISA measures and local impact assessments, improving our understanding of spatial patterns." />
+<meta property="og:description" content="In the analysis of large spatial datasets, identifying and treating spatial outliers is essential for accurately interpreting geographical phenomena. While spatial correlation measures, particularly Local Indicators of Spatial Association (LISA), are widely used to detect spatial patterns, the presence of abnormal observations frequently distorts the landscape and conceals critical spatial relationships. These outliers can significantly impact analysis due to the inherent spatial dependencies present in the data. Traditional influence function (IF) methodologies, commonly used in statistical analysis to measure the impact of individual observations, are not directly applicable in the spatial context because the influence of an observation is determined not only by its own value but also by its spatial location, its connections with neighboring regions, and the values of those neighboring observations. In this paper, we introduce a local version of the influence function (LIF) that accounts for these spatial dependencies. Through the analysis of both simulated and real-world datasets, we demonstrate how the LIF provides a more nuanced and accurate detection of spatial outliers compared to traditional LISA measures and local impact assessments, improving our understanding of spatial patterns." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/25/DetectingSpatialOutlierstheRoleoftheLocalInfluenceFunction.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/25/DetectingSpatialOutlierstheRoleoftheLocalInfluenceFunction.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Detecting Spatial Outliers: the Role of the Local Influence Function" />
+<script type="application/ld+json">
+{"description":"In the analysis of large spatial datasets, identifying and treating spatial outliers is essential for accurately interpreting geographical phenomena. While spatial correlation measures, particularly Local Indicators of Spatial Association (LISA), are widely used to detect spatial patterns, the presence of abnormal observations frequently distorts the landscape and conceals critical spatial relationships. These outliers can significantly impact analysis due to the inherent spatial dependencies present in the data. Traditional influence function (IF) methodologies, commonly used in statistical analysis to measure the impact of individual observations, are not directly applicable in the spatial context because the influence of an observation is determined not only by its own value but also by its spatial location, its connections with neighboring regions, and the values of those neighboring observations. In this paper, we introduce a local version of the influence function (LIF) that accounts for these spatial dependencies. Through the analysis of both simulated and real-world datasets, we demonstrate how the LIF provides a more nuanced and accurate detection of spatial outliers compared to traditional LISA measures and local impact assessments, improving our understanding of spatial patterns.","headline":"Detecting Spatial Outliers: the Role of the Local Influence Function","dateModified":"2024-10-25T00:00:00+00:00","datePublished":"2024-10-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/25/DetectingSpatialOutlierstheRoleoftheLocalInfluenceFunction.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/25/DetectingSpatialOutlierstheRoleoftheLocalInfluenceFunction.html","author":{"@type":"Person","name":"Giuseppe Arbia, Vincenzo Nardelli"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-25 00:00:00 +0000">10-25</time>
+  </p>
+  
+  <h1>Detecting Spatial Outliers: the Role of the Local Influence Function</h1>
+  <br>Giuseppe Arbia, Vincenzo Nardelli</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>In the analysis of large spatial datasets, identifying and treating spatial outliers is essential for accurately interpreting geographical phenomena. While spatial correlation measures, particularly Local Indicators of Spatial Association (LISA), are widely used to detect spatial patterns, the presence of abnormal observations frequently distorts the landscape and conceals critical spatial relationships. These outliers can significantly impact analysis due to the inherent spatial dependencies present in the data. Traditional influence function (IF) methodologies, commonly used in statistical analysis to measure the impact of individual observations, are not directly applicable in the spatial context because the influence of an observation is determined not only by its own value but also by its spatial location, its connections with neighboring regions, and the values of those neighboring observations. In this paper, we introduce a local version of the influence function (LIF) that accounts for these spatial dependencies. Through the analysis of both simulated and real-world datasets, we demonstrate how the LIF provides a more nuanced and accurate detection of spatial outliers compared to traditional LISA measures and local impact assessments, improving our understanding of spatial patterns.</p>
+
+<p><a href="https://arxiv.org/abs/2410.18261">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
