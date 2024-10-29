@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>BanditCAT and AutoIRT: Machine Learning Approaches to Computerized Adaptive Testing and Item Calibration</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="BanditCAT and AutoIRT: Machine Learning Approaches to Computerized Adaptive Testing and Item Calibration" />
+<meta name="author" content="James Sharpnack, Kevin Hao, Phoebe Mulcaire, Klinton Bicknell, Geoff LaFlair, Kevin Yancey, Alina A. von Davier" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this paper, we present a complete framework for quickly calibrating and administering a robust large-scale computerized adaptive test (CAT) with a small number of responses. Calibration - learning item parameters in a test - is done using AutoIRT, a new method that uses automated machine learning (AutoML) in combination with item response theory (IRT), originally proposed in [Sharpnack et al., 2024]. AutoIRT trains a non-parametric AutoML grading model using item features, followed by an item-specific parametric model, which results in an explanatory IRT model. In our work, we use tabular AutoML tools (AutoGluon.tabular, [Erickson et al., 2020]) along with BERT embeddings and linguistically motivated NLP features. In this framework, we use Bayesian updating to obtain test taker ability posterior distributions for administration and scoring. For administration of our adaptive test, we propose the BanditCAT framework, a methodology motivated by casting the problem in the contextual bandit framework and utilizing item response theory (IRT). The key insight lies in defining the bandit reward as the Fisher information for the selected item, given the latent test taker ability from IRT assumptions. We use Thompson sampling to balance between exploring items with different psychometric characteristics and selecting highly discriminative items that give more precise information about ability. To control item exposure, we inject noise through an additional randomization step before computing the Fisher information. This framework was used to initially launch two new item types on the DET practice test using limited training data. We outline some reliability and exposure metrics for the 5 practice test experiments that utilized this framework." />
+<meta property="og:description" content="In this paper, we present a complete framework for quickly calibrating and administering a robust large-scale computerized adaptive test (CAT) with a small number of responses. Calibration - learning item parameters in a test - is done using AutoIRT, a new method that uses automated machine learning (AutoML) in combination with item response theory (IRT), originally proposed in [Sharpnack et al., 2024]. AutoIRT trains a non-parametric AutoML grading model using item features, followed by an item-specific parametric model, which results in an explanatory IRT model. In our work, we use tabular AutoML tools (AutoGluon.tabular, [Erickson et al., 2020]) along with BERT embeddings and linguistically motivated NLP features. In this framework, we use Bayesian updating to obtain test taker ability posterior distributions for administration and scoring. For administration of our adaptive test, we propose the BanditCAT framework, a methodology motivated by casting the problem in the contextual bandit framework and utilizing item response theory (IRT). The key insight lies in defining the bandit reward as the Fisher information for the selected item, given the latent test taker ability from IRT assumptions. We use Thompson sampling to balance between exploring items with different psychometric characteristics and selecting highly discriminative items that give more precise information about ability. To control item exposure, we inject noise through an additional randomization step before computing the Fisher information. This framework was used to initially launch two new item types on the DET practice test using limited training data. We outline some reliability and exposure metrics for the 5 practice test experiments that utilized this framework." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/BanditCATandAutoIRTMachineLearningApproachestoComputerizedAdaptiveTestingandItemCalibration.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/BanditCATandAutoIRTMachineLearningApproachestoComputerizedAdaptiveTestingandItemCalibration.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="BanditCAT and AutoIRT: Machine Learning Approaches to Computerized Adaptive Testing and Item Calibration" />
+<script type="application/ld+json">
+{"description":"In this paper, we present a complete framework for quickly calibrating and administering a robust large-scale computerized adaptive test (CAT) with a small number of responses. Calibration - learning item parameters in a test - is done using AutoIRT, a new method that uses automated machine learning (AutoML) in combination with item response theory (IRT), originally proposed in [Sharpnack et al., 2024]. AutoIRT trains a non-parametric AutoML grading model using item features, followed by an item-specific parametric model, which results in an explanatory IRT model. In our work, we use tabular AutoML tools (AutoGluon.tabular, [Erickson et al., 2020]) along with BERT embeddings and linguistically motivated NLP features. In this framework, we use Bayesian updating to obtain test taker ability posterior distributions for administration and scoring. For administration of our adaptive test, we propose the BanditCAT framework, a methodology motivated by casting the problem in the contextual bandit framework and utilizing item response theory (IRT). The key insight lies in defining the bandit reward as the Fisher information for the selected item, given the latent test taker ability from IRT assumptions. We use Thompson sampling to balance between exploring items with different psychometric characteristics and selecting highly discriminative items that give more precise information about ability. To control item exposure, we inject noise through an additional randomization step before computing the Fisher information. This framework was used to initially launch two new item types on the DET practice test using limited training data. We outline some reliability and exposure metrics for the 5 practice test experiments that utilized this framework.","headline":"BanditCAT and AutoIRT: Machine Learning Approaches to Computerized Adaptive Testing and Item Calibration","dateModified":"2024-10-29T00:00:00+00:00","datePublished":"2024-10-29T00:00:00+00:00","author":{"@type":"Person","name":"James Sharpnack, Kevin Hao, Phoebe Mulcaire, Klinton Bicknell, Geoff LaFlair, Kevin Yancey, Alina A. von Davier"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/BanditCATandAutoIRTMachineLearningApproachestoComputerizedAdaptiveTestingandItemCalibration.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/BanditCATandAutoIRTMachineLearningApproachestoComputerizedAdaptiveTestingandItemCalibration.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-29 00:00:00 +0000">10-29</time>
+  </p>
+  
+  <h1>BanditCAT and AutoIRT: Machine Learning Approaches to Computerized Adaptive Testing and Item Calibration</h1>
+  <br>James Sharpnack, Kevin Hao, Phoebe Mulcaire, Klinton Bicknell, Geoff LaFlair, Kevin Yancey, Alina A. von Davier</h3>
+  <br> [stat.ML,stat.AP]
+
+  <p>In this paper, we present a complete framework for quickly calibrating and administering a robust large-scale computerized adaptive test (CAT) with a small number of responses. Calibration - learning item parameters in a test - is done using AutoIRT, a new method that uses automated machine learning (AutoML) in combination with item response theory (IRT), originally proposed in [Sharpnack et al., 2024]. AutoIRT trains a non-parametric AutoML grading model using item features, followed by an item-specific parametric model, which results in an explanatory IRT model. In our work, we use tabular AutoML tools (AutoGluon.tabular, [Erickson et al., 2020]) along with BERT embeddings and linguistically motivated NLP features. In this framework, we use Bayesian updating to obtain test taker ability posterior distributions for administration and scoring.
+  For administration of our adaptive test, we propose the BanditCAT framework, a methodology motivated by casting the problem in the contextual bandit framework and utilizing item response theory (IRT). The key insight lies in defining the bandit reward as the Fisher information for the selected item, given the latent test taker ability from IRT assumptions. We use Thompson sampling to balance between exploring items with different psychometric characteristics and selecting highly discriminative items that give more precise information about ability. To control item exposure, we inject noise through an additional randomization step before computing the Fisher information. This framework was used to initially launch two new item types on the DET practice test using limited training data. We outline some reliability and exposure metrics for the 5 practice test experiments that utilized this framework.</p>
+
+<p><a href="https://arxiv.org/abs/2410.21033">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Double Debiased Covariate Shift Adaptation Robust to Density-Ratio Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Double Debiased Covariate Shift Adaptation Robust to Density-Ratio Estimation" />
+<meta name="author" content="Masahiro Kato, Kota Matsui, Ryo Inokuchi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Consider a scenario where we have access to train data with both covariates and outcomes while test data only contains covariates. In this scenario, our primary aim is to predict the missing outcomes of the test data. With this objective in mind, we train parametric regression models under a covariate shift, where covariate distributions are different between the train and test data. For this problem, existing studies have proposed covariate shift adaptation via importance weighting using the density ratio. This approach averages the train data losses, each weighted by an estimated ratio of the covariate densities between the train and test data, to approximate the test-data risk. Although it allows us to obtain a test-data risk minimizer, its performance heavily relies on the accuracy of the density ratio estimation. Moreover, even if the density ratio can be consistently estimated, the estimation errors of the density ratio also yield bias in the estimators of the regression model’s parameters of interest. To mitigate these challenges, we introduce a doubly robust estimator for covariate shift adaptation via importance weighting, which incorporates an additional estimator for the regression function. Leveraging double machine learning techniques, our estimator reduces the bias arising from the density ratio estimation errors. We demonstrate the asymptotic distribution of the regression parameter estimator. Notably, our estimator remains consistent if either the density ratio estimator or the regression function is consistent, showcasing its robustness against potential errors in density ratio estimation. Finally, we confirm the soundness of our proposed method via simulation studies." />
+<meta property="og:description" content="Consider a scenario where we have access to train data with both covariates and outcomes while test data only contains covariates. In this scenario, our primary aim is to predict the missing outcomes of the test data. With this objective in mind, we train parametric regression models under a covariate shift, where covariate distributions are different between the train and test data. For this problem, existing studies have proposed covariate shift adaptation via importance weighting using the density ratio. This approach averages the train data losses, each weighted by an estimated ratio of the covariate densities between the train and test data, to approximate the test-data risk. Although it allows us to obtain a test-data risk minimizer, its performance heavily relies on the accuracy of the density ratio estimation. Moreover, even if the density ratio can be consistently estimated, the estimation errors of the density ratio also yield bias in the estimators of the regression model’s parameters of interest. To mitigate these challenges, we introduce a doubly robust estimator for covariate shift adaptation via importance weighting, which incorporates an additional estimator for the regression function. Leveraging double machine learning techniques, our estimator reduces the bias arising from the density ratio estimation errors. We demonstrate the asymptotic distribution of the regression parameter estimator. Notably, our estimator remains consistent if either the density ratio estimator or the regression function is consistent, showcasing its robustness against potential errors in density ratio estimation. Finally, we confirm the soundness of our proposed method via simulation studies." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/DoubleDebiasedCovariateShiftAdaptationRobusttoDensityRatioEstimation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/DoubleDebiasedCovariateShiftAdaptationRobusttoDensityRatioEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Double Debiased Covariate Shift Adaptation Robust to Density-Ratio Estimation" />
+<script type="application/ld+json">
+{"description":"Consider a scenario where we have access to train data with both covariates and outcomes while test data only contains covariates. In this scenario, our primary aim is to predict the missing outcomes of the test data. With this objective in mind, we train parametric regression models under a covariate shift, where covariate distributions are different between the train and test data. For this problem, existing studies have proposed covariate shift adaptation via importance weighting using the density ratio. This approach averages the train data losses, each weighted by an estimated ratio of the covariate densities between the train and test data, to approximate the test-data risk. Although it allows us to obtain a test-data risk minimizer, its performance heavily relies on the accuracy of the density ratio estimation. Moreover, even if the density ratio can be consistently estimated, the estimation errors of the density ratio also yield bias in the estimators of the regression model’s parameters of interest. To mitigate these challenges, we introduce a doubly robust estimator for covariate shift adaptation via importance weighting, which incorporates an additional estimator for the regression function. Leveraging double machine learning techniques, our estimator reduces the bias arising from the density ratio estimation errors. We demonstrate the asymptotic distribution of the regression parameter estimator. Notably, our estimator remains consistent if either the density ratio estimator or the regression function is consistent, showcasing its robustness against potential errors in density ratio estimation. Finally, we confirm the soundness of our proposed method via simulation studies.","headline":"Double Debiased Covariate Shift Adaptation Robust to Density-Ratio Estimation","dateModified":"2024-10-29T00:00:00+00:00","datePublished":"2024-10-29T00:00:00+00:00","author":{"@type":"Person","name":"Masahiro Kato, Kota Matsui, Ryo Inokuchi"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/DoubleDebiasedCovariateShiftAdaptationRobusttoDensityRatioEstimation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/DoubleDebiasedCovariateShiftAdaptationRobusttoDensityRatioEstimation.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-29 00:00:00 +0000">10-29</time>
+  </p>
+  
+  <h1>Double Debiased Covariate Shift Adaptation Robust to Density-Ratio Estimation</h1>
+  <br>Masahiro Kato, Kota Matsui, Ryo Inokuchi</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Consider a scenario where we have access to train data with both covariates and outcomes while test data only contains covariates. In this scenario, our primary aim is to predict the missing outcomes of the test data. With this objective in mind, we train parametric regression models under a covariate shift, where covariate distributions are different between the train and test data. For this problem, existing studies have proposed covariate shift adaptation via importance weighting using the density ratio. This approach averages the train data losses, each weighted by an estimated ratio of the covariate densities between the train and test data, to approximate the test-data risk. Although it allows us to obtain a test-data risk minimizer, its performance heavily relies on the accuracy of the density ratio estimation. Moreover, even if the density ratio can be consistently estimated, the estimation errors of the density ratio also yield bias in the estimators of the regression model’s parameters of interest. To mitigate these challenges, we introduce a doubly robust estimator for covariate shift adaptation via importance weighting, which incorporates an additional estimator for the regression function. Leveraging double machine learning techniques, our estimator reduces the bias arising from the density ratio estimation errors. We demonstrate the asymptotic distribution of the regression parameter estimator. Notably, our estimator remains consistent if either the density ratio estimator or the regression function is consistent, showcasing its robustness against potential errors in density ratio estimation. Finally, we confirm the soundness of our proposed method via simulation studies.</p>
+
+<p><a href="https://arxiv.org/abs/2310.16638">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

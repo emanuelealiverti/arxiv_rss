@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Markovian Flow Matching: Accelerating MCMC with Continuous Normalizing Flows</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Markovian Flow Matching: Accelerating MCMC with Continuous Normalizing Flows" />
+<meta name="author" content="Alberto Cabezas, Louis Sharrock, Christopher Nemeth" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Continuous normalizing flows (CNFs) learn the probability path between a reference distribution and a target distribution by modeling the vector field generating said path using neural networks. Recently, Lipman et al. (2022) introduced a simple and inexpensive method for training CNFs in generative modeling, termed flow matching (FM). In this paper, we repurpose this method for probabilistic inference by incorporating Markovian sampling methods in evaluating the FM objective, and using the learned CNF to improve Monte Carlo sampling. Specifically, we propose an adaptive Markov chain Monte Carlo (MCMC) algorithm, which combines a local Markov transition kernel with a non-local, flow-informed transition kernel, defined using a CNF. This CNF is adapted on-the-fly using samples from the Markov chain, which are used to specify the probability path for the FM objective. Our method also includes an adaptive tempering mechanism that allows the discovery of multiple modes in the target distribution. Under mild assumptions, we establish convergence of our method to a local optimum of the FM objective. We then benchmark our approach on several synthetic and real-world examples, achieving similar performance to other state-of-the-art methods, but often at a significantly lower computational cost." />
+<meta property="og:description" content="Continuous normalizing flows (CNFs) learn the probability path between a reference distribution and a target distribution by modeling the vector field generating said path using neural networks. Recently, Lipman et al. (2022) introduced a simple and inexpensive method for training CNFs in generative modeling, termed flow matching (FM). In this paper, we repurpose this method for probabilistic inference by incorporating Markovian sampling methods in evaluating the FM objective, and using the learned CNF to improve Monte Carlo sampling. Specifically, we propose an adaptive Markov chain Monte Carlo (MCMC) algorithm, which combines a local Markov transition kernel with a non-local, flow-informed transition kernel, defined using a CNF. This CNF is adapted on-the-fly using samples from the Markov chain, which are used to specify the probability path for the FM objective. Our method also includes an adaptive tempering mechanism that allows the discovery of multiple modes in the target distribution. Under mild assumptions, we establish convergence of our method to a local optimum of the FM objective. We then benchmark our approach on several synthetic and real-world examples, achieving similar performance to other state-of-the-art methods, but often at a significantly lower computational cost." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/MarkovianFlowMatchingAcceleratingMCMCwithContinuousNormalizingFlows.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/MarkovianFlowMatchingAcceleratingMCMCwithContinuousNormalizingFlows.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Markovian Flow Matching: Accelerating MCMC with Continuous Normalizing Flows" />
+<script type="application/ld+json">
+{"description":"Continuous normalizing flows (CNFs) learn the probability path between a reference distribution and a target distribution by modeling the vector field generating said path using neural networks. Recently, Lipman et al. (2022) introduced a simple and inexpensive method for training CNFs in generative modeling, termed flow matching (FM). In this paper, we repurpose this method for probabilistic inference by incorporating Markovian sampling methods in evaluating the FM objective, and using the learned CNF to improve Monte Carlo sampling. Specifically, we propose an adaptive Markov chain Monte Carlo (MCMC) algorithm, which combines a local Markov transition kernel with a non-local, flow-informed transition kernel, defined using a CNF. This CNF is adapted on-the-fly using samples from the Markov chain, which are used to specify the probability path for the FM objective. Our method also includes an adaptive tempering mechanism that allows the discovery of multiple modes in the target distribution. Under mild assumptions, we establish convergence of our method to a local optimum of the FM objective. We then benchmark our approach on several synthetic and real-world examples, achieving similar performance to other state-of-the-art methods, but often at a significantly lower computational cost.","headline":"Markovian Flow Matching: Accelerating MCMC with Continuous Normalizing Flows","dateModified":"2024-10-29T00:00:00+00:00","datePublished":"2024-10-29T00:00:00+00:00","author":{"@type":"Person","name":"Alberto Cabezas, Louis Sharrock, Christopher Nemeth"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/MarkovianFlowMatchingAcceleratingMCMCwithContinuousNormalizingFlows.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/MarkovianFlowMatchingAcceleratingMCMCwithContinuousNormalizingFlows.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-29 00:00:00 +0000">10-29</time>
+  </p>
+  
+  <h1>Markovian Flow Matching: Accelerating MCMC with Continuous Normalizing Flows</h1>
+  <br>Alberto Cabezas, Louis Sharrock, Christopher Nemeth</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Continuous normalizing flows (CNFs) learn the probability path between a reference distribution and a target distribution by modeling the vector field generating said path using neural networks. Recently, Lipman et al. (2022) introduced a simple and inexpensive method for training CNFs in generative modeling, termed flow matching (FM). In this paper, we repurpose this method for probabilistic inference by incorporating Markovian sampling methods in evaluating the FM objective, and using the learned CNF to improve Monte Carlo sampling. Specifically, we propose an adaptive Markov chain Monte Carlo (MCMC) algorithm, which combines a local Markov transition kernel with a non-local, flow-informed transition kernel, defined using a CNF. This CNF is adapted on-the-fly using samples from the Markov chain, which are used to specify the probability path for the FM objective. Our method also includes an adaptive tempering mechanism that allows the discovery of multiple modes in the target distribution. Under mild assumptions, we establish convergence of our method to a local optimum of the FM objective. We then benchmark our approach on several synthetic and real-world examples, achieving similar performance to other state-of-the-art methods, but often at a significantly lower computational cost.</p>
+
+<p><a href="https://arxiv.org/abs/2405.14392">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
