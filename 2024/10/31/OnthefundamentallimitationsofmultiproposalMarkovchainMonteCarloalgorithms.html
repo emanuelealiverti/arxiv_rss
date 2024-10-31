@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the fundamental limitations of multiproposal Markov chain Monte Carlo algorithms</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On the fundamental limitations of multiproposal Markov chain Monte Carlo algorithms" />
+<meta name="author" content="Francesco Pozza, Giacomo Zanella" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study multiproposal Markov chain Monte Carlo algorithms, such as Multiple-try or generalised Metropolis-Hastings schemes, which have recently received renewed attention due to their amenability to parallel computing. First, we prove that no multiproposal scheme can speed-up convergence relative to the corresponding single proposal scheme by more than a factor of $K$, where $K$ denotes the number of proposals at each iteration. This result applies to arbitrary target distributions and it implies that serial multiproposal implementations are always less efficient than single proposal ones. Secondly, we consider log-concave distributions over Euclidean spaces, proving that, in this case, the speed-up is at most logarithmic in $K$, which implies that even parallel multiproposal implementations are fundamentally limited in the computational gain they can offer. Crucially, our results apply to arbitrary multiproposal schemes and purely rely on the two-step structure of the associated kernels (i.e. first generate $K$ candidate points, then select one among those). Our theoretical findings are validated through numerical simulations." />
+<meta property="og:description" content="We study multiproposal Markov chain Monte Carlo algorithms, such as Multiple-try or generalised Metropolis-Hastings schemes, which have recently received renewed attention due to their amenability to parallel computing. First, we prove that no multiproposal scheme can speed-up convergence relative to the corresponding single proposal scheme by more than a factor of $K$, where $K$ denotes the number of proposals at each iteration. This result applies to arbitrary target distributions and it implies that serial multiproposal implementations are always less efficient than single proposal ones. Secondly, we consider log-concave distributions over Euclidean spaces, proving that, in this case, the speed-up is at most logarithmic in $K$, which implies that even parallel multiproposal implementations are fundamentally limited in the computational gain they can offer. Crucially, our results apply to arbitrary multiproposal schemes and purely rely on the two-step structure of the associated kernels (i.e. first generate $K$ candidate points, then select one among those). Our theoretical findings are validated through numerical simulations." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/31/OnthefundamentallimitationsofmultiproposalMarkovchainMonteCarloalgorithms.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/31/OnthefundamentallimitationsofmultiproposalMarkovchainMonteCarloalgorithms.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-31T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On the fundamental limitations of multiproposal Markov chain Monte Carlo algorithms" />
+<script type="application/ld+json">
+{"description":"We study multiproposal Markov chain Monte Carlo algorithms, such as Multiple-try or generalised Metropolis-Hastings schemes, which have recently received renewed attention due to their amenability to parallel computing. First, we prove that no multiproposal scheme can speed-up convergence relative to the corresponding single proposal scheme by more than a factor of $K$, where $K$ denotes the number of proposals at each iteration. This result applies to arbitrary target distributions and it implies that serial multiproposal implementations are always less efficient than single proposal ones. Secondly, we consider log-concave distributions over Euclidean spaces, proving that, in this case, the speed-up is at most logarithmic in $K$, which implies that even parallel multiproposal implementations are fundamentally limited in the computational gain they can offer. Crucially, our results apply to arbitrary multiproposal schemes and purely rely on the two-step structure of the associated kernels (i.e. first generate $K$ candidate points, then select one among those). Our theoretical findings are validated through numerical simulations.","headline":"On the fundamental limitations of multiproposal Markov chain Monte Carlo algorithms","dateModified":"2024-10-31T00:00:00+00:00","datePublished":"2024-10-31T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/31/OnthefundamentallimitationsofmultiproposalMarkovchainMonteCarloalgorithms.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/31/OnthefundamentallimitationsofmultiproposalMarkovchainMonteCarloalgorithms.html","author":{"@type":"Person","name":"Francesco Pozza, Giacomo Zanella"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-31 00:00:00 +0000">10-31</time>
+  </p>
+  
+  <h1>On the fundamental limitations of multiproposal Markov chain Monte Carlo algorithms</h1>
+  <br>Francesco Pozza, Giacomo Zanella</h3>
+  <br> [stat.CO,stat.ME,stat.TH]
+
+  <p>We study multiproposal Markov chain Monte Carlo algorithms, such as Multiple-try or generalised Metropolis-Hastings schemes, which have recently received renewed attention due to their amenability to parallel computing. First, we prove that no multiproposal scheme can speed-up convergence relative to the corresponding single proposal scheme by more than a factor of $K$, where $K$ denotes the number of proposals at each iteration. This result applies to arbitrary target distributions and it implies that serial multiproposal implementations are always less efficient than single proposal ones. Secondly, we consider log-concave distributions over Euclidean spaces, proving that, in this case, the speed-up is at most logarithmic in $K$, which implies that even parallel multiproposal implementations are fundamentally limited in the computational gain they can offer. Crucially, our results apply to arbitrary multiproposal schemes and purely rely on the two-step structure of the associated kernels (i.e. first generate $K$ candidate points, then select one among those). Our theoretical findings are validated through numerical simulations.</p>
+
+<p><a href="https://arxiv.org/abs/2410.23174">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

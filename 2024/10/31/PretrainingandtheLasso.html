@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Pretraining and the Lasso</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Pretraining and the Lasso" />
+<meta name="author" content="Erin Craig, Mert Pilanci, Thomas Le Menestrel, Balasubramanian Narasimhan, Manuel Rivas, Stein-Erik Gullaksen, Roozbeh Dehghannasiri, Julia Salzman, Jonathan Taylor, Robert Tibshirani" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Pretraining is a popular and powerful paradigm in machine learning to pass information from one model to another. As an example, suppose one has a modest-sized dataset of images of cats and dogs, and plans to fit a deep neural network to classify them from the pixel features. With pretraining, we start with a neural network trained on a large corpus of images, consisting of not just cats and dogs but hundreds of other image types. Then we fix all of the network weights except for the top layer(s) (which makes the final classification) and train (or “fine tune”) those weights on our dataset. This often results in dramatically better performance than the network trained solely on our smaller dataset. In this paper, we ask the question “Can pretraining help the lasso?”. We develop a framework for the lasso in which a model is fit to a large dataset, and then fine-tuned using a smaller dataset. This latter dataset can be a subset of the original dataset, or it can be a dataset with a different but related outcome. This framework has a wide variety of applications, including stratified models, multinomial responses, multi-response models, conditional average treatment estimation and even gradient boosting. In the stratified model setting, the pretrained lasso pipeline estimates the coefficients common to all groups at the first stage, and then estimates the group-specific coefficients at the second “fine-tuning” stage. We show that under appropriate assumptions, the support recovery rate of the common coefficients is superior to that of the usual lasso trained only on individual groups. This separate identification of common and individual coefficients can also be useful for scientific understanding." />
+<meta property="og:description" content="Pretraining is a popular and powerful paradigm in machine learning to pass information from one model to another. As an example, suppose one has a modest-sized dataset of images of cats and dogs, and plans to fit a deep neural network to classify them from the pixel features. With pretraining, we start with a neural network trained on a large corpus of images, consisting of not just cats and dogs but hundreds of other image types. Then we fix all of the network weights except for the top layer(s) (which makes the final classification) and train (or “fine tune”) those weights on our dataset. This often results in dramatically better performance than the network trained solely on our smaller dataset. In this paper, we ask the question “Can pretraining help the lasso?”. We develop a framework for the lasso in which a model is fit to a large dataset, and then fine-tuned using a smaller dataset. This latter dataset can be a subset of the original dataset, or it can be a dataset with a different but related outcome. This framework has a wide variety of applications, including stratified models, multinomial responses, multi-response models, conditional average treatment estimation and even gradient boosting. In the stratified model setting, the pretrained lasso pipeline estimates the coefficients common to all groups at the first stage, and then estimates the group-specific coefficients at the second “fine-tuning” stage. We show that under appropriate assumptions, the support recovery rate of the common coefficients is superior to that of the usual lasso trained only on individual groups. This separate identification of common and individual coefficients can also be useful for scientific understanding." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/31/PretrainingandtheLasso.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/31/PretrainingandtheLasso.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-31T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Pretraining and the Lasso" />
+<script type="application/ld+json">
+{"description":"Pretraining is a popular and powerful paradigm in machine learning to pass information from one model to another. As an example, suppose one has a modest-sized dataset of images of cats and dogs, and plans to fit a deep neural network to classify them from the pixel features. With pretraining, we start with a neural network trained on a large corpus of images, consisting of not just cats and dogs but hundreds of other image types. Then we fix all of the network weights except for the top layer(s) (which makes the final classification) and train (or “fine tune”) those weights on our dataset. This often results in dramatically better performance than the network trained solely on our smaller dataset. In this paper, we ask the question “Can pretraining help the lasso?”. We develop a framework for the lasso in which a model is fit to a large dataset, and then fine-tuned using a smaller dataset. This latter dataset can be a subset of the original dataset, or it can be a dataset with a different but related outcome. This framework has a wide variety of applications, including stratified models, multinomial responses, multi-response models, conditional average treatment estimation and even gradient boosting. In the stratified model setting, the pretrained lasso pipeline estimates the coefficients common to all groups at the first stage, and then estimates the group-specific coefficients at the second “fine-tuning” stage. We show that under appropriate assumptions, the support recovery rate of the common coefficients is superior to that of the usual lasso trained only on individual groups. This separate identification of common and individual coefficients can also be useful for scientific understanding.","headline":"Pretraining and the Lasso","dateModified":"2024-10-31T00:00:00+00:00","datePublished":"2024-10-31T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/31/PretrainingandtheLasso.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/31/PretrainingandtheLasso.html","author":{"@type":"Person","name":"Erin Craig, Mert Pilanci, Thomas Le Menestrel, Balasubramanian Narasimhan, Manuel Rivas, Stein-Erik Gullaksen, Roozbeh Dehghannasiri, Julia Salzman, Jonathan Taylor, Robert Tibshirani"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-31 00:00:00 +0000">10-31</time>
+  </p>
+  
+  <h1>Pretraining and the Lasso</h1>
+  <br>Erin Craig, Mert Pilanci, Thomas Le Menestrel, Balasubramanian Narasimhan, Manuel Rivas, Stein-Erik Gullaksen, Roozbeh Dehghannasiri, Julia Salzman, Jonathan Taylor, Robert Tibshirani</h3>
+  <br> [stat.ME]
+
+  <p>Pretraining is a popular and powerful paradigm in machine learning to pass information from one model to another. As an example, suppose one has a modest-sized dataset of images of cats and dogs, and plans to fit a deep neural network to classify them from the pixel features. With pretraining, we start with a neural network trained on a large corpus of images, consisting of not just cats and dogs but hundreds of other image types. Then we fix all of the network weights except for the top layer(s) (which makes the final classification) and train (or “fine tune”) those weights on our dataset. This often results in dramatically better performance than the network trained solely on our smaller dataset. In this paper, we ask the question “Can pretraining help the lasso?”.
+  We develop a framework for the lasso in which a model is fit to a large dataset, and then fine-tuned using a smaller dataset. This latter dataset can be a subset of the original dataset, or it can be a dataset with a different but related outcome. This framework has a wide variety of applications, including stratified models, multinomial responses, multi-response models, conditional average treatment estimation and even gradient boosting.
+  In the stratified model setting, the pretrained lasso pipeline estimates the coefficients common to all groups at the first stage, and then estimates the group-specific coefficients at the second “fine-tuning” stage. We show that under appropriate assumptions, the support recovery rate of the common coefficients is superior to that of the usual lasso trained only on individual groups. This separate identification of common and individual coefficients can also be useful for scientific understanding.</p>
+
+<p><a href="https://arxiv.org/abs/2401.12911">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
