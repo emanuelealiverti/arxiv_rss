@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Target Study: A Conceptual Model and Framework for Measuring Disparity</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Target Study: A Conceptual Model and Framework for Measuring Disparity" />
+<meta name="author" content="John W. Jackson, Yea-Jen Hsu, Raquel C. Greer, Romsai T. Boonyasai, Chanelle J. Howe" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We present a conceptual model to measure disparity–the target study–where social groups may be similarly situated (i.e., balanced) on allowable covariates. Our model, based on a sampling design, does not intervene to assign social group membership or alter allowable covariates. To address non-random sample selection, we extend our model to generalize or transport disparity or to assess disparity after an intervention on eligibility-related variables that eliminates forms of collider-stratification. To avoid bias from differential timing of enrollment, we aggregate time-specific study results by balancing calendar time of enrollment across social groups. To provide a framework for emulating our model, we discuss study designs, data structures, and G-computation and weighting estimators. We compare our sampling-based model to prominent decomposition-based models used in healthcare and algorithmic fairness. We provide R code for all estimators and apply our methods to measure health system disparities in hypertension control using electronic medical records." />
+<meta property="og:description" content="We present a conceptual model to measure disparity–the target study–where social groups may be similarly situated (i.e., balanced) on allowable covariates. Our model, based on a sampling design, does not intervene to assign social group membership or alter allowable covariates. To address non-random sample selection, we extend our model to generalize or transport disparity or to assess disparity after an intervention on eligibility-related variables that eliminates forms of collider-stratification. To avoid bias from differential timing of enrollment, we aggregate time-specific study results by balancing calendar time of enrollment across social groups. To provide a framework for emulating our model, we discuss study designs, data structures, and G-computation and weighting estimators. We compare our sampling-based model to prominent decomposition-based models used in healthcare and algorithmic fairness. We provide R code for all estimators and apply our methods to measure health system disparities in hypertension control using electronic medical records." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/04/TheTargetStudyAConceptualModelandFrameworkforMeasuringDisparity.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/04/TheTargetStudyAConceptualModelandFrameworkforMeasuringDisparity.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Target Study: A Conceptual Model and Framework for Measuring Disparity" />
+<script type="application/ld+json">
+{"description":"We present a conceptual model to measure disparity–the target study–where social groups may be similarly situated (i.e., balanced) on allowable covariates. Our model, based on a sampling design, does not intervene to assign social group membership or alter allowable covariates. To address non-random sample selection, we extend our model to generalize or transport disparity or to assess disparity after an intervention on eligibility-related variables that eliminates forms of collider-stratification. To avoid bias from differential timing of enrollment, we aggregate time-specific study results by balancing calendar time of enrollment across social groups. To provide a framework for emulating our model, we discuss study designs, data structures, and G-computation and weighting estimators. We compare our sampling-based model to prominent decomposition-based models used in healthcare and algorithmic fairness. We provide R code for all estimators and apply our methods to measure health system disparities in hypertension control using electronic medical records.","headline":"The Target Study: A Conceptual Model and Framework for Measuring Disparity","dateModified":"2024-11-04T00:00:00+00:00","datePublished":"2024-11-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/04/TheTargetStudyAConceptualModelandFrameworkforMeasuringDisparity.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/04/TheTargetStudyAConceptualModelandFrameworkforMeasuringDisparity.html","author":{"@type":"Person","name":"John W. Jackson, Yea-Jen Hsu, Raquel C. Greer, Romsai T. Boonyasai, Chanelle J. Howe"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-04 00:00:00 +0000">11-04</time>
+  </p>
+  
+  <h1>The Target Study: A Conceptual Model and Framework for Measuring Disparity</h1>
+  <br>John W. Jackson, Yea-Jen Hsu, Raquel C. Greer, Romsai T. Boonyasai, Chanelle J. Howe</h3>
+  <br> [stat.ME]
+
+  <p>We present a conceptual model to measure disparity–the target study–where social groups may be similarly situated (i.e., balanced) on allowable covariates. Our model, based on a sampling design, does not intervene to assign social group membership or alter allowable covariates. To address non-random sample selection, we extend our model to generalize or transport disparity or to assess disparity after an intervention on eligibility-related variables that eliminates forms of collider-stratification. To avoid bias from differential timing of enrollment, we aggregate time-specific study results by balancing calendar time of enrollment across social groups. To provide a framework for emulating our model, we discuss study designs, data structures, and G-computation and weighting estimators. We compare our sampling-based model to prominent decomposition-based models used in healthcare and algorithmic fairness. We provide R code for all estimators and apply our methods to measure health system disparities in hypertension control using electronic medical records.</p>
+
+<p><a href="https://arxiv.org/abs/2207.00530">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
