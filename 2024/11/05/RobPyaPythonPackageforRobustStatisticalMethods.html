@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>RobPy: a Python Package for Robust Statistical Methods</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="RobPy: a Python Package for Robust Statistical Methods" />
+<meta name="author" content="Sarah Leyder, Jakob Raymaekers, Peter J. Rousseeuw, Thomas Servotte, Tim Verdonck" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Robust estimation provides essential tools for analyzing data that contain outliers, ensuring that statistical models remain reliable even in the presence of some anomalous data. While robust methods have long been available in R, users of Python have lacked a comprehensive package that offers these methods in a cohesive framework. RobPy addresses this gap by offering a wide range of robust methods in Python, built upon established libraries including NumPy, SciPy, and scikit-learn. This package includes tools for robust preprocessing, univariate estimation, covariance matrices, regression, and principal component analysis, which are able to detect outliers and to mitigate their effect. In addition, RobPy provides specialized diagnostic plots for visualizing casewise and cellwise outliers. This paper presents the structure of the RobPy package, demonstrates its functionality through examples, and compares its features to existing implementations in other statistical software. By bringing robust methods to Python, RobPy enables more users to perform robust data analysis in a modern and versatile programming language." />
+<meta property="og:description" content="Robust estimation provides essential tools for analyzing data that contain outliers, ensuring that statistical models remain reliable even in the presence of some anomalous data. While robust methods have long been available in R, users of Python have lacked a comprehensive package that offers these methods in a cohesive framework. RobPy addresses this gap by offering a wide range of robust methods in Python, built upon established libraries including NumPy, SciPy, and scikit-learn. This package includes tools for robust preprocessing, univariate estimation, covariance matrices, regression, and principal component analysis, which are able to detect outliers and to mitigate their effect. In addition, RobPy provides specialized diagnostic plots for visualizing casewise and cellwise outliers. This paper presents the structure of the RobPy package, demonstrates its functionality through examples, and compares its features to existing implementations in other statistical software. By bringing robust methods to Python, RobPy enables more users to perform robust data analysis in a modern and versatile programming language." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/RobPyaPythonPackageforRobustStatisticalMethods.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/RobPyaPythonPackageforRobustStatisticalMethods.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="RobPy: a Python Package for Robust Statistical Methods" />
+<script type="application/ld+json">
+{"description":"Robust estimation provides essential tools for analyzing data that contain outliers, ensuring that statistical models remain reliable even in the presence of some anomalous data. While robust methods have long been available in R, users of Python have lacked a comprehensive package that offers these methods in a cohesive framework. RobPy addresses this gap by offering a wide range of robust methods in Python, built upon established libraries including NumPy, SciPy, and scikit-learn. This package includes tools for robust preprocessing, univariate estimation, covariance matrices, regression, and principal component analysis, which are able to detect outliers and to mitigate their effect. In addition, RobPy provides specialized diagnostic plots for visualizing casewise and cellwise outliers. This paper presents the structure of the RobPy package, demonstrates its functionality through examples, and compares its features to existing implementations in other statistical software. By bringing robust methods to Python, RobPy enables more users to perform robust data analysis in a modern and versatile programming language.","headline":"RobPy: a Python Package for Robust Statistical Methods","dateModified":"2024-11-05T00:00:00+00:00","datePublished":"2024-11-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/RobPyaPythonPackageforRobustStatisticalMethods.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/RobPyaPythonPackageforRobustStatisticalMethods.html","author":{"@type":"Person","name":"Sarah Leyder, Jakob Raymaekers, Peter J. Rousseeuw, Thomas Servotte, Tim Verdonck"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-05 00:00:00 +0000">11-05</time>
+  </p>
+  
+  <h1>RobPy: a Python Package for Robust Statistical Methods</h1>
+  <br>Sarah Leyder, Jakob Raymaekers, Peter J. Rousseeuw, Thomas Servotte, Tim Verdonck</h3>
+  <br> [stat.CO,stat.ML]
+
+  <p>Robust estimation provides essential tools for analyzing data that contain outliers, ensuring that statistical models remain reliable even in the presence of some anomalous data. While robust methods have long been available in R, users of Python have lacked a comprehensive package that offers these methods in a cohesive framework. RobPy addresses this gap by offering a wide range of robust methods in Python, built upon established libraries including NumPy, SciPy, and scikit-learn. This package includes tools for robust preprocessing, univariate estimation, covariance matrices, regression, and principal component analysis, which are able to detect outliers and to mitigate their effect. In addition, RobPy provides specialized diagnostic plots for visualizing casewise and cellwise outliers. This paper presents the structure of the RobPy package, demonstrates its functionality through examples, and compares its features to existing implementations in other statistical software. By bringing robust methods to Python, RobPy enables more users to perform robust data analysis in a modern and versatile programming language.</p>
+
+<p><a href="https://arxiv.org/abs/2411.01954">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

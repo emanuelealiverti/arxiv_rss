@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A probabilistic diagnostic for Laplace approximations: Introduction and experimentation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A probabilistic diagnostic for Laplace approximations: Introduction and experimentation" />
+<meta name="author" content="Shaun McDonald, David Campbell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many models require integrals of high-dimensional functions: for instance, to obtain marginal likelihoods. Such integrals may be intractable, or too expensive to compute numerically. Instead, we can use the Laplace approximation (LA). The LA is exact if the function is proportional to a normal density; its effectiveness therefore depends on the function’s true shape. Here, we propose the use of the probabilistic numerical framework to develop a diagnostic for the LA and its underlying shape assumptions, modelling the function and its integral as a Gaussian process and devising a “test” by conditioning on a finite number of function values. The test is decidedly non-asymptotic and is not intended as a full substitute for numerical integration - rather, it is simply intended to test the feasibility of the assumptions underpinning the LA with as minimal computation. We discuss approaches to optimize and design the test, apply it to known sample functions, and highlight the challenges of high dimensions." />
+<meta property="og:description" content="Many models require integrals of high-dimensional functions: for instance, to obtain marginal likelihoods. Such integrals may be intractable, or too expensive to compute numerically. Instead, we can use the Laplace approximation (LA). The LA is exact if the function is proportional to a normal density; its effectiveness therefore depends on the function’s true shape. Here, we propose the use of the probabilistic numerical framework to develop a diagnostic for the LA and its underlying shape assumptions, modelling the function and its integral as a Gaussian process and devising a “test” by conditioning on a finite number of function values. The test is decidedly non-asymptotic and is not intended as a full substitute for numerical integration - rather, it is simply intended to test the feasibility of the assumptions underpinning the LA with as minimal computation. We discuss approaches to optimize and design the test, apply it to known sample functions, and highlight the challenges of high dimensions." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/AprobabilisticdiagnosticforLaplaceapproximationsIntroductionandexperimentation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/AprobabilisticdiagnosticforLaplaceapproximationsIntroductionandexperimentation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A probabilistic diagnostic for Laplace approximations: Introduction and experimentation" />
+<script type="application/ld+json">
+{"description":"Many models require integrals of high-dimensional functions: for instance, to obtain marginal likelihoods. Such integrals may be intractable, or too expensive to compute numerically. Instead, we can use the Laplace approximation (LA). The LA is exact if the function is proportional to a normal density; its effectiveness therefore depends on the function’s true shape. Here, we propose the use of the probabilistic numerical framework to develop a diagnostic for the LA and its underlying shape assumptions, modelling the function and its integral as a Gaussian process and devising a “test” by conditioning on a finite number of function values. The test is decidedly non-asymptotic and is not intended as a full substitute for numerical integration - rather, it is simply intended to test the feasibility of the assumptions underpinning the LA with as minimal computation. We discuss approaches to optimize and design the test, apply it to known sample functions, and highlight the challenges of high dimensions.","headline":"A probabilistic diagnostic for Laplace approximations: Introduction and experimentation","dateModified":"2024-11-05T00:00:00+00:00","datePublished":"2024-11-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/AprobabilisticdiagnosticforLaplaceapproximationsIntroductionandexperimentation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/AprobabilisticdiagnosticforLaplaceapproximationsIntroductionandexperimentation.html","author":{"@type":"Person","name":"Shaun McDonald, David Campbell"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-05 00:00:00 +0000">11-05</time>
+  </p>
+  
+  <h1>A probabilistic diagnostic for Laplace approximations: Introduction and experimentation</h1>
+  <br>Shaun McDonald, David Campbell</h3>
+  <br> [stat.ME]
+
+  <p>Many models require integrals of high-dimensional functions: for instance, to obtain marginal likelihoods. Such integrals may be intractable, or too expensive to compute numerically. Instead, we can use the Laplace approximation (LA). The LA is exact if the function is proportional to a normal density; its effectiveness therefore depends on the function’s true shape. Here, we propose the use of the probabilistic numerical framework to develop a diagnostic for the LA and its underlying shape assumptions, modelling the function and its integral as a Gaussian process and devising a “test” by conditioning on a finite number of function values. The test is decidedly non-asymptotic and is not intended as a full substitute for numerical integration - rather, it is simply intended to test the feasibility of the assumptions underpinning the LA with as minimal computation. We discuss approaches to optimize and design the test, apply it to known sample functions, and highlight the challenges of high dimensions.</p>
+
+<p><a href="https://arxiv.org/abs/2411.01697">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

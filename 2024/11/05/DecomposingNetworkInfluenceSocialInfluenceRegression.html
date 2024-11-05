@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Decomposing Network Influence: Social Influence Regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Decomposing Network Influence: Social Influence Regression" />
+<meta name="author" content="Shahryar Minhas, Peter D. Hoff" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understanding network influence and its determinants are key challenges in political science and network analysis. Traditional latent variable models position actors within a social space based on network dependencies but often do not elucidate the underlying factors driving these interactions. To overcome this limitation, we propose the Social Influence Regression (SIR) model, an extension of vector autoregression tailored for relational data that incorporates exogenous covariates into the estimation of influence patterns. The SIR model captures influence dynamics via a pair of $n \times n$ matrices that quantify how the actions of one actor affect the future actions of another. This framework not only provides a statistical mechanism for explaining actor influence based on observable traits but also improves computational efficiency through an iterative block coordinate descent method. We showcase the SIR model’s capabilities by applying it to monthly conflict events between countries, using data from the Integrated Crisis Early Warning System (ICEWS). Our findings demonstrate the SIR model’s ability to elucidate complex influence patterns within networks by linking them to specific covariates. This paper’s main contributions are: (1) introducing a model that explains third-order dependencies through exogenous covariates and (2) offering an efficient estimation approach that scales effectively with large, complex networks." />
+<meta property="og:description" content="Understanding network influence and its determinants are key challenges in political science and network analysis. Traditional latent variable models position actors within a social space based on network dependencies but often do not elucidate the underlying factors driving these interactions. To overcome this limitation, we propose the Social Influence Regression (SIR) model, an extension of vector autoregression tailored for relational data that incorporates exogenous covariates into the estimation of influence patterns. The SIR model captures influence dynamics via a pair of $n \times n$ matrices that quantify how the actions of one actor affect the future actions of another. This framework not only provides a statistical mechanism for explaining actor influence based on observable traits but also improves computational efficiency through an iterative block coordinate descent method. We showcase the SIR model’s capabilities by applying it to monthly conflict events between countries, using data from the Integrated Crisis Early Warning System (ICEWS). Our findings demonstrate the SIR model’s ability to elucidate complex influence patterns within networks by linking them to specific covariates. This paper’s main contributions are: (1) introducing a model that explains third-order dependencies through exogenous covariates and (2) offering an efficient estimation approach that scales effectively with large, complex networks." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/DecomposingNetworkInfluenceSocialInfluenceRegression.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/DecomposingNetworkInfluenceSocialInfluenceRegression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Decomposing Network Influence: Social Influence Regression" />
+<script type="application/ld+json">
+{"description":"Understanding network influence and its determinants are key challenges in political science and network analysis. Traditional latent variable models position actors within a social space based on network dependencies but often do not elucidate the underlying factors driving these interactions. To overcome this limitation, we propose the Social Influence Regression (SIR) model, an extension of vector autoregression tailored for relational data that incorporates exogenous covariates into the estimation of influence patterns. The SIR model captures influence dynamics via a pair of $n \\times n$ matrices that quantify how the actions of one actor affect the future actions of another. This framework not only provides a statistical mechanism for explaining actor influence based on observable traits but also improves computational efficiency through an iterative block coordinate descent method. We showcase the SIR model’s capabilities by applying it to monthly conflict events between countries, using data from the Integrated Crisis Early Warning System (ICEWS). Our findings demonstrate the SIR model’s ability to elucidate complex influence patterns within networks by linking them to specific covariates. This paper’s main contributions are: (1) introducing a model that explains third-order dependencies through exogenous covariates and (2) offering an efficient estimation approach that scales effectively with large, complex networks.","headline":"Decomposing Network Influence: Social Influence Regression","dateModified":"2024-11-05T00:00:00+00:00","datePublished":"2024-11-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/DecomposingNetworkInfluenceSocialInfluenceRegression.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/05/DecomposingNetworkInfluenceSocialInfluenceRegression.html","author":{"@type":"Person","name":"Shahryar Minhas, Peter D. Hoff"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-05 00:00:00 +0000">11-05</time>
+  </p>
+  
+  <h1>Decomposing Network Influence: Social Influence Regression</h1>
+  <br>Shahryar Minhas, Peter D. Hoff</h3>
+  <br> [stat.AP,stat.ME]
+
+  <p>Understanding network influence and its determinants are key challenges in political science and network analysis. Traditional latent variable models position actors within a social space based on network dependencies but often do not elucidate the underlying factors driving these interactions. To overcome this limitation, we propose the Social Influence Regression (SIR) model, an extension of vector autoregression tailored for relational data that incorporates exogenous covariates into the estimation of influence patterns. The SIR model captures influence dynamics via a pair of $n \times n$ matrices that quantify how the actions of one actor affect the future actions of another. This framework not only provides a statistical mechanism for explaining actor influence based on observable traits but also improves computational efficiency through an iterative block coordinate descent method. We showcase the SIR model’s capabilities by applying it to monthly conflict events between countries, using data from the Integrated Crisis Early Warning System (ICEWS). Our findings demonstrate the SIR model’s ability to elucidate complex influence patterns within networks by linking them to specific covariates. This paper’s main contributions are: (1) introducing a model that explains third-order dependencies through exogenous covariates and (2) offering an efficient estimation approach that scales effectively with large, complex networks.</p>
+
+<p><a href="https://arxiv.org/abs/1706.09072">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
