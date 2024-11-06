@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Scale Reliant Inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Scale Reliant Inference" />
+<meta name="author" content="Michelle Pistner Nixon, Kyle C. McGovern, Jeffrey Letourneau, Lawrence A. David, Nicole A. Lazar, Sayan Mukherjee, Justin D. Silverman" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many scientific fields, including human gut microbiome science, collect multivariate count data where the sum of the counts is unrelated to the scale of the underlying system being measured (e.g., total microbial load in a subject’s colon). This disconnect complicates downstream analyses such as differential analysis in case-control studies. This article is motivated by a novel study of in vitro human gut microbiome models. Popular tools for analyzing these data led to dramatically elevated rates of both false positives and false negatives. To understand those failures, we provide a formal problem statement that frames these challenges of scale in terms of the classical theory of identifiability. We call this the problem of Scale Reliant Inference (SRI). We use this formulation to prove fundamental limits on SRI in terms of criteria such as consistency and type-I error control. We show that the failures of existing methods stem from a fundamental failure to properly quantify uncertainty in the system scale. We demonstrate that a particular type of Bayesian model called a Bayesian Partially Identified Model (PIMs) can correctly quantify uncertainty in SRI. We introduce Scale Simulation Random Variables (SSRVs) as a flexible and efficient approach to specifying and inferring Bayesian PIMs. In the context of both real and simulated data, we find SSRVs drastically decrease type-I and type-II error rates." />
+<meta property="og:description" content="Many scientific fields, including human gut microbiome science, collect multivariate count data where the sum of the counts is unrelated to the scale of the underlying system being measured (e.g., total microbial load in a subject’s colon). This disconnect complicates downstream analyses such as differential analysis in case-control studies. This article is motivated by a novel study of in vitro human gut microbiome models. Popular tools for analyzing these data led to dramatically elevated rates of both false positives and false negatives. To understand those failures, we provide a formal problem statement that frames these challenges of scale in terms of the classical theory of identifiability. We call this the problem of Scale Reliant Inference (SRI). We use this formulation to prove fundamental limits on SRI in terms of criteria such as consistency and type-I error control. We show that the failures of existing methods stem from a fundamental failure to properly quantify uncertainty in the system scale. We demonstrate that a particular type of Bayesian model called a Bayesian Partially Identified Model (PIMs) can correctly quantify uncertainty in SRI. We introduce Scale Simulation Random Variables (SSRVs) as a flexible and efficient approach to specifying and inferring Bayesian PIMs. In the context of both real and simulated data, we find SSRVs drastically decrease type-I and type-II error rates." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/06/ScaleReliantInference.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/06/ScaleReliantInference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Scale Reliant Inference" />
+<script type="application/ld+json">
+{"description":"Many scientific fields, including human gut microbiome science, collect multivariate count data where the sum of the counts is unrelated to the scale of the underlying system being measured (e.g., total microbial load in a subject’s colon). This disconnect complicates downstream analyses such as differential analysis in case-control studies. This article is motivated by a novel study of in vitro human gut microbiome models. Popular tools for analyzing these data led to dramatically elevated rates of both false positives and false negatives. To understand those failures, we provide a formal problem statement that frames these challenges of scale in terms of the classical theory of identifiability. We call this the problem of Scale Reliant Inference (SRI). We use this formulation to prove fundamental limits on SRI in terms of criteria such as consistency and type-I error control. We show that the failures of existing methods stem from a fundamental failure to properly quantify uncertainty in the system scale. We demonstrate that a particular type of Bayesian model called a Bayesian Partially Identified Model (PIMs) can correctly quantify uncertainty in SRI. We introduce Scale Simulation Random Variables (SSRVs) as a flexible and efficient approach to specifying and inferring Bayesian PIMs. In the context of both real and simulated data, we find SSRVs drastically decrease type-I and type-II error rates.","headline":"Scale Reliant Inference","dateModified":"2024-11-06T00:00:00+00:00","datePublished":"2024-11-06T00:00:00+00:00","author":{"@type":"Person","name":"Michelle Pistner Nixon, Kyle C. McGovern, Jeffrey Letourneau, Lawrence A. David, Nicole A. Lazar, Sayan Mukherjee, Justin D. Silverman"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/06/ScaleReliantInference.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/06/ScaleReliantInference.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-06 00:00:00 +0000">11-06</time>
+  </p>
+  
+  <h1>Scale Reliant Inference</h1>
+  <br>Michelle Pistner Nixon, Kyle C. McGovern, Jeffrey Letourneau, Lawrence A. David, Nicole A. Lazar, Sayan Mukherjee, Justin D. Silverman</h3>
+  <br> [stat.ME]
+
+  <p>Many scientific fields, including human gut microbiome science, collect multivariate count data where the sum of the counts is unrelated to the scale of the underlying system being measured (e.g., total microbial load in a subject’s colon). This disconnect complicates downstream analyses such as differential analysis in case-control studies. This article is motivated by a novel study of in vitro human gut microbiome models. Popular tools for analyzing these data led to dramatically elevated rates of both false positives and false negatives. To understand those failures, we provide a formal problem statement that frames these challenges of scale in terms of the classical theory of identifiability. We call this the problem of Scale Reliant Inference (SRI). We use this formulation to prove fundamental limits on SRI in terms of criteria such as consistency and type-I error control. We show that the failures of existing methods stem from a fundamental failure to properly quantify uncertainty in the system scale. We demonstrate that a particular type of Bayesian model called a Bayesian Partially Identified Model (PIMs) can correctly quantify uncertainty in SRI. We introduce Scale Simulation Random Variables (SSRVs) as a flexible and efficient approach to specifying and inferring Bayesian PIMs. In the context of both real and simulated data, we find SSRVs drastically decrease type-I and type-II error rates.</p>
+
+<p><a href="https://arxiv.org/abs/2201.03616">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
