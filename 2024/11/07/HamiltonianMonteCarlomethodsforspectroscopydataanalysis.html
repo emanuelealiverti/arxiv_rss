@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Hamiltonian Monte Carlo methods for spectroscopy data analysis</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Hamiltonian Monte Carlo methods for spectroscopy data analysis" />
+<meta name="author" content="Daniel McBride, Ioannis Sgouralis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We present a scalable Bayesian framework for the analysis of confocal fluorescence spectroscopy data, addressing key limitations in traditional fluorescence correlation spectroscopy methods. Our framework captures molecular motion, microscope optics, and photon detection with high fidelity, enabling statistical inference of molecule trajectories from raw photon count data, introducing a superresolution parameter which further enhances trajectory estimation beyond the native time resolution of data acquisition. To handle the high dimensionality of the arising posterior distribution, we develop a family of Hamiltonian Monte Carlo (HMC) algorithms that leverages the unique characteristics inherent to spectroscopy data analysis. Here, due to the highly-coupled correlation structure of the target posterior distribution, HMC requires the numerical solution of a stiff ordinary differential equation containing a two-scale discrete Laplacian. By considering the spectral properties of this operator, we produce a CFL-type integrator stability condition for the standard St&quot;ormer-Verlet integrator used in HMC. To circumvent this instability we introduce a semi-implicit (IMEX) method which treats the stiff and non-stiff parts differently, while leveraging the sparse structure of the discrete Laplacian for computational efficiency. Detailed numerical experiments demonstrate that this method improves upon fully explicit approaches, allowing larger HMC step sizes and maintaining second-order accuracy in position and energy. Our framework provides a foundation for extensions to more complex models such as surface constrained molecular motion or motion with multiple diffusion modes." />
+<meta property="og:description" content="We present a scalable Bayesian framework for the analysis of confocal fluorescence spectroscopy data, addressing key limitations in traditional fluorescence correlation spectroscopy methods. Our framework captures molecular motion, microscope optics, and photon detection with high fidelity, enabling statistical inference of molecule trajectories from raw photon count data, introducing a superresolution parameter which further enhances trajectory estimation beyond the native time resolution of data acquisition. To handle the high dimensionality of the arising posterior distribution, we develop a family of Hamiltonian Monte Carlo (HMC) algorithms that leverages the unique characteristics inherent to spectroscopy data analysis. Here, due to the highly-coupled correlation structure of the target posterior distribution, HMC requires the numerical solution of a stiff ordinary differential equation containing a two-scale discrete Laplacian. By considering the spectral properties of this operator, we produce a CFL-type integrator stability condition for the standard St&quot;ormer-Verlet integrator used in HMC. To circumvent this instability we introduce a semi-implicit (IMEX) method which treats the stiff and non-stiff parts differently, while leveraging the sparse structure of the discrete Laplacian for computational efficiency. Detailed numerical experiments demonstrate that this method improves upon fully explicit approaches, allowing larger HMC step sizes and maintaining second-order accuracy in position and energy. Our framework provides a foundation for extensions to more complex models such as surface constrained molecular motion or motion with multiple diffusion modes." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/07/HamiltonianMonteCarlomethodsforspectroscopydataanalysis.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/07/HamiltonianMonteCarlomethodsforspectroscopydataanalysis.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Hamiltonian Monte Carlo methods for spectroscopy data analysis" />
+<script type="application/ld+json">
+{"description":"We present a scalable Bayesian framework for the analysis of confocal fluorescence spectroscopy data, addressing key limitations in traditional fluorescence correlation spectroscopy methods. Our framework captures molecular motion, microscope optics, and photon detection with high fidelity, enabling statistical inference of molecule trajectories from raw photon count data, introducing a superresolution parameter which further enhances trajectory estimation beyond the native time resolution of data acquisition. To handle the high dimensionality of the arising posterior distribution, we develop a family of Hamiltonian Monte Carlo (HMC) algorithms that leverages the unique characteristics inherent to spectroscopy data analysis. Here, due to the highly-coupled correlation structure of the target posterior distribution, HMC requires the numerical solution of a stiff ordinary differential equation containing a two-scale discrete Laplacian. By considering the spectral properties of this operator, we produce a CFL-type integrator stability condition for the standard St&quot;ormer-Verlet integrator used in HMC. To circumvent this instability we introduce a semi-implicit (IMEX) method which treats the stiff and non-stiff parts differently, while leveraging the sparse structure of the discrete Laplacian for computational efficiency. Detailed numerical experiments demonstrate that this method improves upon fully explicit approaches, allowing larger HMC step sizes and maintaining second-order accuracy in position and energy. Our framework provides a foundation for extensions to more complex models such as surface constrained molecular motion or motion with multiple diffusion modes.","headline":"Hamiltonian Monte Carlo methods for spectroscopy data analysis","dateModified":"2024-11-07T00:00:00+00:00","datePublished":"2024-11-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/07/HamiltonianMonteCarlomethodsforspectroscopydataanalysis.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/07/HamiltonianMonteCarlomethodsforspectroscopydataanalysis.html","author":{"@type":"Person","name":"Daniel McBride, Ioannis Sgouralis"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-07 00:00:00 +0000">11-07</time>
+  </p>
+  
+  <h1>Hamiltonian Monte Carlo methods for spectroscopy data analysis</h1>
+  <br>Daniel McBride, Ioannis Sgouralis</h3>
+  <br> [stat.AP]
+
+  <p>We present a scalable Bayesian framework for the analysis of confocal fluorescence spectroscopy data, addressing key limitations in traditional fluorescence correlation spectroscopy methods. Our framework captures molecular motion, microscope optics, and photon detection with high fidelity, enabling statistical inference of molecule trajectories from raw photon count data, introducing a superresolution parameter which further enhances trajectory estimation beyond the native time resolution of data acquisition. To handle the high dimensionality of the arising posterior distribution, we develop a family of Hamiltonian Monte Carlo (HMC) algorithms that leverages the unique characteristics inherent to spectroscopy data analysis. Here, due to the highly-coupled correlation structure of the target posterior distribution, HMC requires the numerical solution of a stiff ordinary differential equation containing a two-scale discrete Laplacian. By considering the spectral properties of this operator, we produce a CFL-type integrator stability condition for the standard St"ormer-Verlet integrator used in HMC. To circumvent this instability we introduce a semi-implicit (IMEX) method which treats the stiff and non-stiff parts differently, while leveraging the sparse structure of the discrete Laplacian for computational efficiency. Detailed numerical experiments demonstrate that this method improves upon fully explicit approaches, allowing larger HMC step sizes and maintaining second-order accuracy in position and energy. Our framework provides a foundation for extensions to more complex models such as surface constrained molecular motion or motion with multiple diffusion modes.</p>
+
+<p><a href="https://arxiv.org/abs/2411.03523">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
