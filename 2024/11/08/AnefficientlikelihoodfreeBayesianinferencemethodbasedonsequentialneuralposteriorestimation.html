@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An efficient likelihood-free Bayesian inference method based on sequential neural posterior estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="An efficient likelihood-free Bayesian inference method based on sequential neural posterior estimation" />
+<meta name="author" content="Yifei Xiong, Xiliang Yang, Sanguo Zhang, Zhijian He" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sequential neural posterior estimation (SNPE) techniques have been recently proposed for dealing with simulation-based models with intractable likelihoods. Unlike approximate Bayesian computation, SNPE techniques learn the posterior from sequential simulation using neural network-based conditional density estimators by minimizing a specific loss function. The SNPE method proposed by Lueckmann et al. (2017) used a calibration kernel to boost the sample weights around the observed data, resulting in a concentrated loss function. However, the use of calibration kernels may increase the variances of both the empirical loss and its gradient, making the training inefficient. To improve the stability of SNPE, this paper proposes to use an adaptive calibration kernel and several variance reduction techniques. The proposed method greatly speeds up the process of training and provides a better approximation of the posterior than the original SNPE method and some existing competitors as confirmed by numerical experiments. We also manage to demonstrate the superiority of the proposed method for a high-dimensional model with real-world dataset." />
+<meta property="og:description" content="Sequential neural posterior estimation (SNPE) techniques have been recently proposed for dealing with simulation-based models with intractable likelihoods. Unlike approximate Bayesian computation, SNPE techniques learn the posterior from sequential simulation using neural network-based conditional density estimators by minimizing a specific loss function. The SNPE method proposed by Lueckmann et al. (2017) used a calibration kernel to boost the sample weights around the observed data, resulting in a concentrated loss function. However, the use of calibration kernels may increase the variances of both the empirical loss and its gradient, making the training inefficient. To improve the stability of SNPE, this paper proposes to use an adaptive calibration kernel and several variance reduction techniques. The proposed method greatly speeds up the process of training and provides a better approximation of the posterior than the original SNPE method and some existing competitors as confirmed by numerical experiments. We also manage to demonstrate the superiority of the proposed method for a high-dimensional model with real-world dataset." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/08/AnefficientlikelihoodfreeBayesianinferencemethodbasedonsequentialneuralposteriorestimation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/08/AnefficientlikelihoodfreeBayesianinferencemethodbasedonsequentialneuralposteriorestimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-08T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="An efficient likelihood-free Bayesian inference method based on sequential neural posterior estimation" />
+<script type="application/ld+json">
+{"description":"Sequential neural posterior estimation (SNPE) techniques have been recently proposed for dealing with simulation-based models with intractable likelihoods. Unlike approximate Bayesian computation, SNPE techniques learn the posterior from sequential simulation using neural network-based conditional density estimators by minimizing a specific loss function. The SNPE method proposed by Lueckmann et al. (2017) used a calibration kernel to boost the sample weights around the observed data, resulting in a concentrated loss function. However, the use of calibration kernels may increase the variances of both the empirical loss and its gradient, making the training inefficient. To improve the stability of SNPE, this paper proposes to use an adaptive calibration kernel and several variance reduction techniques. The proposed method greatly speeds up the process of training and provides a better approximation of the posterior than the original SNPE method and some existing competitors as confirmed by numerical experiments. We also manage to demonstrate the superiority of the proposed method for a high-dimensional model with real-world dataset.","headline":"An efficient likelihood-free Bayesian inference method based on sequential neural posterior estimation","dateModified":"2024-11-08T00:00:00+00:00","datePublished":"2024-11-08T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/08/AnefficientlikelihoodfreeBayesianinferencemethodbasedonsequentialneuralposteriorestimation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/08/AnefficientlikelihoodfreeBayesianinferencemethodbasedonsequentialneuralposteriorestimation.html","author":{"@type":"Person","name":"Yifei Xiong, Xiliang Yang, Sanguo Zhang, Zhijian He"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-08 00:00:00 +0000">11-08</time>
+  </p>
+  
+  <h1>An efficient likelihood-free Bayesian inference method based on sequential neural posterior estimation</h1>
+  <br>Yifei Xiong, Xiliang Yang, Sanguo Zhang, Zhijian He</h3>
+  <br> [stat.ML,stat.CO]
+
+  <p>Sequential neural posterior estimation (SNPE) techniques have been recently proposed for dealing with simulation-based models with intractable likelihoods. Unlike approximate Bayesian computation, SNPE techniques learn the posterior from sequential simulation using neural network-based conditional density estimators by minimizing a specific loss function. The SNPE method proposed by Lueckmann et al. (2017) used a calibration kernel to boost the sample weights around the observed data, resulting in a concentrated loss function. However, the use of calibration kernels may increase the variances of both the empirical loss and its gradient, making the training inefficient. To improve the stability of SNPE, this paper proposes to use an adaptive calibration kernel and several variance reduction techniques. The proposed method greatly speeds up the process of training and provides a better approximation of the posterior than the original SNPE method and some existing competitors as confirmed by numerical experiments. We also manage to demonstrate the superiority of the proposed method for a high-dimensional model with real-world dataset.</p>
+
+<p><a href="https://arxiv.org/abs/2311.12530">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
