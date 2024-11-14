@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Evaluating Parameter Uncertainty in the Poisson Lognormal Model with Corrected Variational Estimators</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Evaluating Parameter Uncertainty in the Poisson Lognormal Model with Corrected Variational Estimators" />
+<meta name="author" content="Bastien Batardière, Julien Chiquet, Mahendra Mariadassou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Count data analysis is essential across diverse fields, from ecology and accident analysis to single-cell RNA sequencing (scRNA-seq) and metagenomics. While log transformations are computationally efficient, model-based approaches such as the Poisson-Log-Normal (PLN) model provide robust statistical foundations and are more amenable to extensions. The PLN model, with its latent Gaussian structure, not only captures overdispersion but also enables correlation between variables and inclusion of covariates, making it suitable for multivariate count data analysis. Variational approximations are a golden standard to estimate parameters of complex latent variable models such as PLN, maximizing a surrogate likelihood. However, variational estimators lack theoretical statistical properties such as consistency and asymptotic normality. In this paper, we investigate the consistency and variance estimation of PLN parameters using M-estimation theory. We derive the Sandwich estimator, previously studied in Westling and McCormick (2019), specifically for the PLN model. We compare this approach to the variational Fisher Information method, demonstrating the Sandwich estimator’s effectiveness in terms of coverage through simulation studies. Finally, we validate our method on a scRNA-seq dataset." />
+<meta property="og:description" content="Count data analysis is essential across diverse fields, from ecology and accident analysis to single-cell RNA sequencing (scRNA-seq) and metagenomics. While log transformations are computationally efficient, model-based approaches such as the Poisson-Log-Normal (PLN) model provide robust statistical foundations and are more amenable to extensions. The PLN model, with its latent Gaussian structure, not only captures overdispersion but also enables correlation between variables and inclusion of covariates, making it suitable for multivariate count data analysis. Variational approximations are a golden standard to estimate parameters of complex latent variable models such as PLN, maximizing a surrogate likelihood. However, variational estimators lack theoretical statistical properties such as consistency and asymptotic normality. In this paper, we investigate the consistency and variance estimation of PLN parameters using M-estimation theory. We derive the Sandwich estimator, previously studied in Westling and McCormick (2019), specifically for the PLN model. We compare this approach to the variational Fisher Information method, demonstrating the Sandwich estimator’s effectiveness in terms of coverage through simulation studies. Finally, we validate our method on a scRNA-seq dataset." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/EvaluatingParameterUncertaintyinthePoissonLognormalModelwithCorrectedVariationalEstimators.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/EvaluatingParameterUncertaintyinthePoissonLognormalModelwithCorrectedVariationalEstimators.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Evaluating Parameter Uncertainty in the Poisson Lognormal Model with Corrected Variational Estimators" />
+<script type="application/ld+json">
+{"description":"Count data analysis is essential across diverse fields, from ecology and accident analysis to single-cell RNA sequencing (scRNA-seq) and metagenomics. While log transformations are computationally efficient, model-based approaches such as the Poisson-Log-Normal (PLN) model provide robust statistical foundations and are more amenable to extensions. The PLN model, with its latent Gaussian structure, not only captures overdispersion but also enables correlation between variables and inclusion of covariates, making it suitable for multivariate count data analysis. Variational approximations are a golden standard to estimate parameters of complex latent variable models such as PLN, maximizing a surrogate likelihood. However, variational estimators lack theoretical statistical properties such as consistency and asymptotic normality. In this paper, we investigate the consistency and variance estimation of PLN parameters using M-estimation theory. We derive the Sandwich estimator, previously studied in Westling and McCormick (2019), specifically for the PLN model. We compare this approach to the variational Fisher Information method, demonstrating the Sandwich estimator’s effectiveness in terms of coverage through simulation studies. Finally, we validate our method on a scRNA-seq dataset.","headline":"Evaluating Parameter Uncertainty in the Poisson Lognormal Model with Corrected Variational Estimators","dateModified":"2024-11-14T00:00:00+00:00","datePublished":"2024-11-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/EvaluatingParameterUncertaintyinthePoissonLognormalModelwithCorrectedVariationalEstimators.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/EvaluatingParameterUncertaintyinthePoissonLognormalModelwithCorrectedVariationalEstimators.html","author":{"@type":"Person","name":"Bastien Batardière, Julien Chiquet, Mahendra Mariadassou"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-14 00:00:00 +0000">11-14</time>
+  </p>
+  
+  <h1>Evaluating Parameter Uncertainty in the Poisson Lognormal Model with Corrected Variational Estimators</h1>
+  <br>Bastien Batardière, Julien Chiquet, Mahendra Mariadassou</h3>
+  <br> [stat.ME]
+
+  <p>Count data analysis is essential across diverse fields, from ecology and accident analysis to single-cell RNA sequencing (scRNA-seq) and metagenomics. While log transformations are computationally efficient, model-based approaches such as the Poisson-Log-Normal (PLN) model provide robust statistical foundations and are more amenable to extensions. The PLN model, with its latent Gaussian structure, not only captures overdispersion but also enables correlation between variables and inclusion of covariates, making it suitable for multivariate count data analysis. Variational approximations are a golden standard to estimate parameters of complex latent variable models such as PLN, maximizing a surrogate likelihood. However, variational estimators lack theoretical statistical properties such as consistency and asymptotic normality. In this paper, we investigate the consistency and variance estimation of PLN parameters using M-estimation theory. We derive the Sandwich estimator, previously studied in Westling and McCormick (2019), specifically for the PLN model. We compare this approach to the variational Fisher Information method, demonstrating the Sandwich estimator’s effectiveness in terms of coverage through simulation studies. Finally, we validate our method on a scRNA-seq dataset.</p>
+
+<p><a href="https://arxiv.org/abs/2411.08524">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

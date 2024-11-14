@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Improving the convergence of Markov chains via permutations and projections</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Improving the convergence of Markov chains via permutations and projections" />
+<meta name="author" content="Michael C. H. Choi, Max Hird, Youjia Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper aims at improving the convergence to equilibrium of finite ergodic Markov chains via permutations and projections. First, we prove that a specific mixture of permuted Markov chains arises naturally as a projection under the KL divergence or the squared-Frobenius norm. We then compare various mixing properties of the mixture with other competing Markov chain samplers and demonstrate that it enjoys improved convergence. This geometric perspective motivates us to propose samplers based on alternating projections to combine different permutations and to analyze their rate of convergence. We give necessary, and under some additional assumptions also sufficient, conditions for the projection to achieve stationarity in the limit in terms of the trace of the transition matrix. We proceed to discuss tuning strategies of the projection samplers when these permutations are viewed as parameters. Along the way, we reveal connections between the mixture and a Markov chain Sylvester’s equation as well as assignment problems, and highlight how these can be used to understand and improve Markov chain mixing. We provide two examples as illustrations. In the first example, the projection sampler (with a suitable choice of the permutation) improves upon Metropolis-Hastings in a discrete bimodal distribution with a reduced relaxation time from exponential to polynomial in the system size, while in the second example, the mixture of permuted Markov chain yields a mixing time that is logarithmic in system size (with high probability under random permutation), compared to a linear mixing time in the Diaconis-Holmes-Neal sampler." />
+<meta property="og:description" content="This paper aims at improving the convergence to equilibrium of finite ergodic Markov chains via permutations and projections. First, we prove that a specific mixture of permuted Markov chains arises naturally as a projection under the KL divergence or the squared-Frobenius norm. We then compare various mixing properties of the mixture with other competing Markov chain samplers and demonstrate that it enjoys improved convergence. This geometric perspective motivates us to propose samplers based on alternating projections to combine different permutations and to analyze their rate of convergence. We give necessary, and under some additional assumptions also sufficient, conditions for the projection to achieve stationarity in the limit in terms of the trace of the transition matrix. We proceed to discuss tuning strategies of the projection samplers when these permutations are viewed as parameters. Along the way, we reveal connections between the mixture and a Markov chain Sylvester’s equation as well as assignment problems, and highlight how these can be used to understand and improve Markov chain mixing. We provide two examples as illustrations. In the first example, the projection sampler (with a suitable choice of the permutation) improves upon Metropolis-Hastings in a discrete bimodal distribution with a reduced relaxation time from exponential to polynomial in the system size, while in the second example, the mixture of permuted Markov chain yields a mixing time that is logarithmic in system size (with high probability under random permutation), compared to a linear mixing time in the Diaconis-Holmes-Neal sampler." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/ImprovingtheconvergenceofMarkovchainsviapermutationsandprojections.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/ImprovingtheconvergenceofMarkovchainsviapermutationsandprojections.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Improving the convergence of Markov chains via permutations and projections" />
+<script type="application/ld+json">
+{"description":"This paper aims at improving the convergence to equilibrium of finite ergodic Markov chains via permutations and projections. First, we prove that a specific mixture of permuted Markov chains arises naturally as a projection under the KL divergence or the squared-Frobenius norm. We then compare various mixing properties of the mixture with other competing Markov chain samplers and demonstrate that it enjoys improved convergence. This geometric perspective motivates us to propose samplers based on alternating projections to combine different permutations and to analyze their rate of convergence. We give necessary, and under some additional assumptions also sufficient, conditions for the projection to achieve stationarity in the limit in terms of the trace of the transition matrix. We proceed to discuss tuning strategies of the projection samplers when these permutations are viewed as parameters. Along the way, we reveal connections between the mixture and a Markov chain Sylvester’s equation as well as assignment problems, and highlight how these can be used to understand and improve Markov chain mixing. We provide two examples as illustrations. In the first example, the projection sampler (with a suitable choice of the permutation) improves upon Metropolis-Hastings in a discrete bimodal distribution with a reduced relaxation time from exponential to polynomial in the system size, while in the second example, the mixture of permuted Markov chain yields a mixing time that is logarithmic in system size (with high probability under random permutation), compared to a linear mixing time in the Diaconis-Holmes-Neal sampler.","headline":"Improving the convergence of Markov chains via permutations and projections","dateModified":"2024-11-14T00:00:00+00:00","datePublished":"2024-11-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/ImprovingtheconvergenceofMarkovchainsviapermutationsandprojections.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/ImprovingtheconvergenceofMarkovchainsviapermutationsandprojections.html","author":{"@type":"Person","name":"Michael C. H. Choi, Max Hird, Youjia Wang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-14 00:00:00 +0000">11-14</time>
+  </p>
+  
+  <h1>Improving the convergence of Markov chains via permutations and projections</h1>
+  <br>Michael C. H. Choi, Max Hird, Youjia Wang</h3>
+  <br> [stat.CO]
+
+  <p>This paper aims at improving the convergence to equilibrium of finite ergodic Markov chains via permutations and projections. First, we prove that a specific mixture of permuted Markov chains arises naturally as a projection under the KL divergence or the squared-Frobenius norm. We then compare various mixing properties of the mixture with other competing Markov chain samplers and demonstrate that it enjoys improved convergence. This geometric perspective motivates us to propose samplers based on alternating projections to combine different permutations and to analyze their rate of convergence. We give necessary, and under some additional assumptions also sufficient, conditions for the projection to achieve stationarity in the limit in terms of the trace of the transition matrix. We proceed to discuss tuning strategies of the projection samplers when these permutations are viewed as parameters. Along the way, we reveal connections between the mixture and a Markov chain Sylvester’s equation as well as assignment problems, and highlight how these can be used to understand and improve Markov chain mixing. We provide two examples as illustrations. In the first example, the projection sampler (with a suitable choice of the permutation) improves upon Metropolis-Hastings in a discrete bimodal distribution with a reduced relaxation time from exponential to polynomial in the system size, while in the second example, the mixture of permuted Markov chain yields a mixing time that is logarithmic in system size (with high probability under random permutation), compared to a linear mixing time in the Diaconis-Holmes-Neal sampler.</p>
+
+<p><a href="https://arxiv.org/abs/2411.08295">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

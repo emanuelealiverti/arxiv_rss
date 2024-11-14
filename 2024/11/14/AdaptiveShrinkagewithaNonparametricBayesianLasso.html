@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adaptive Shrinkage with a Nonparametric Bayesian Lasso</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Adaptive Shrinkage with a Nonparametric Bayesian Lasso" />
+<meta name="author" content="Santiago Marin, Bronwyn Loong, Anton H. Westveld" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern approaches to perform Bayesian variable selection rely mostly on the use of shrinkage priors. That said, an ideal shrinkage prior should be adaptive to different signal levels, ensuring that small effects are ruled out, while keeping relatively intact the important ones. With this task in mind, we develop the nonparametric Bayesian Lasso, an adaptive and flexible shrinkage prior for Bayesian regression and variable selection, particularly useful when the number of predictors is comparable or larger than the number of available data points. We build on spike-and-slab Lasso ideas and extend them by placing a Dirichlet Process prior on the shrinkage parameters. The result is a prior on the regression coefficients that can be seen as an infinite mixture of Double Exponential densities, all offering different amounts of regularization, ensuring a more adaptive and flexible shrinkage. We also develop an efficient Markov chain Monte Carlo algorithm for posterior inference. Through various simulation exercises and real-world data analyses, we demonstrate that our proposed method leads to a better recovery of the true regression coefficients, a better variable selection, and better out-of-sample predictions, highlighting the benefits of the nonparametric Bayesian Lasso over existing shrinkage priors." />
+<meta property="og:description" content="Modern approaches to perform Bayesian variable selection rely mostly on the use of shrinkage priors. That said, an ideal shrinkage prior should be adaptive to different signal levels, ensuring that small effects are ruled out, while keeping relatively intact the important ones. With this task in mind, we develop the nonparametric Bayesian Lasso, an adaptive and flexible shrinkage prior for Bayesian regression and variable selection, particularly useful when the number of predictors is comparable or larger than the number of available data points. We build on spike-and-slab Lasso ideas and extend them by placing a Dirichlet Process prior on the shrinkage parameters. The result is a prior on the regression coefficients that can be seen as an infinite mixture of Double Exponential densities, all offering different amounts of regularization, ensuring a more adaptive and flexible shrinkage. We also develop an efficient Markov chain Monte Carlo algorithm for posterior inference. Through various simulation exercises and real-world data analyses, we demonstrate that our proposed method leads to a better recovery of the true regression coefficients, a better variable selection, and better out-of-sample predictions, highlighting the benefits of the nonparametric Bayesian Lasso over existing shrinkage priors." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/AdaptiveShrinkagewithaNonparametricBayesianLasso.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/AdaptiveShrinkagewithaNonparametricBayesianLasso.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adaptive Shrinkage with a Nonparametric Bayesian Lasso" />
+<script type="application/ld+json">
+{"description":"Modern approaches to perform Bayesian variable selection rely mostly on the use of shrinkage priors. That said, an ideal shrinkage prior should be adaptive to different signal levels, ensuring that small effects are ruled out, while keeping relatively intact the important ones. With this task in mind, we develop the nonparametric Bayesian Lasso, an adaptive and flexible shrinkage prior for Bayesian regression and variable selection, particularly useful when the number of predictors is comparable or larger than the number of available data points. We build on spike-and-slab Lasso ideas and extend them by placing a Dirichlet Process prior on the shrinkage parameters. The result is a prior on the regression coefficients that can be seen as an infinite mixture of Double Exponential densities, all offering different amounts of regularization, ensuring a more adaptive and flexible shrinkage. We also develop an efficient Markov chain Monte Carlo algorithm for posterior inference. Through various simulation exercises and real-world data analyses, we demonstrate that our proposed method leads to a better recovery of the true regression coefficients, a better variable selection, and better out-of-sample predictions, highlighting the benefits of the nonparametric Bayesian Lasso over existing shrinkage priors.","headline":"Adaptive Shrinkage with a Nonparametric Bayesian Lasso","dateModified":"2024-11-14T00:00:00+00:00","datePublished":"2024-11-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/AdaptiveShrinkagewithaNonparametricBayesianLasso.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/14/AdaptiveShrinkagewithaNonparametricBayesianLasso.html","author":{"@type":"Person","name":"Santiago Marin, Bronwyn Loong, Anton H. Westveld"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-14 00:00:00 +0000">11-14</time>
+  </p>
+  
+  <h1>Adaptive Shrinkage with a Nonparametric Bayesian Lasso</h1>
+  <br>Santiago Marin, Bronwyn Loong, Anton H. Westveld</h3>
+  <br> [stat.ME]
+
+  <p>Modern approaches to perform Bayesian variable selection rely mostly on the use of shrinkage priors. That said, an ideal shrinkage prior should be adaptive to different signal levels, ensuring that small effects are ruled out, while keeping relatively intact the important ones. With this task in mind, we develop the nonparametric Bayesian Lasso, an adaptive and flexible shrinkage prior for Bayesian regression and variable selection, particularly useful when the number of predictors is comparable or larger than the number of available data points. We build on spike-and-slab Lasso ideas and extend them by placing a Dirichlet Process prior on the shrinkage parameters. The result is a prior on the regression coefficients that can be seen as an infinite mixture of Double Exponential densities, all offering different amounts of regularization, ensuring a more adaptive and flexible shrinkage. We also develop an efficient Markov chain Monte Carlo algorithm for posterior inference. Through various simulation exercises and real-world data analyses, we demonstrate that our proposed method leads to a better recovery of the true regression coefficients, a better variable selection, and better out-of-sample predictions, highlighting the benefits of the nonparametric Bayesian Lasso over existing shrinkage priors.</p>
+
+<p><a href="https://arxiv.org/abs/2411.08262">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
