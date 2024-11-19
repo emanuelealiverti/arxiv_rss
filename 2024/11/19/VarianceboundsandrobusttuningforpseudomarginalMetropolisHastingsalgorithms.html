@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Variance bounds and robust tuning for pseudo-marginal Metropolis--Hastings algorithms</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Variance bounds and robust tuning for pseudo-marginal Metropolis–Hastings algorithms" />
+<meta name="author" content="Chris Sherlock" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The general applicability and ease of use of the pseudo-marginal Metropolis–Hastings (PMMH) algorithm, and particle Metropolis–Hastings in particular, makes it a popular method for inference on discretely observed Markovian stochastic processes. The performance of these algorithms and, in the case of particle Metropolis–Hastings, the trade off between improved mixing through increased accuracy of the estimator and the computational cost were investigated independently in two papers, both published in 2015. Each suggested choosing the number of particles so that the variance of the logarithm of the estimator of the posterior at a fixed sensible parameter value is approximately 1. This advice has been widely and successfully adopted. We provide new, remarkably simple upper and lower bounds on the asymptotic variance of PMMH algorithms. The bounds explain how blindly following the 2015 advice can hide serious issues with the algorithm and they strongly suggest an alternative criterion. In most situations our guidelines and those from 2015 closely coincide; however, when the two differ it is safer to follow the new guidance. An extension of one of our bounds shows how the use of correlated proposals can fundamentally shift the properties of pseudo-marginal algorithms, so that asymptotic variances that were infinite under the PMMH kernel become finite." />
+<meta property="og:description" content="The general applicability and ease of use of the pseudo-marginal Metropolis–Hastings (PMMH) algorithm, and particle Metropolis–Hastings in particular, makes it a popular method for inference on discretely observed Markovian stochastic processes. The performance of these algorithms and, in the case of particle Metropolis–Hastings, the trade off between improved mixing through increased accuracy of the estimator and the computational cost were investigated independently in two papers, both published in 2015. Each suggested choosing the number of particles so that the variance of the logarithm of the estimator of the posterior at a fixed sensible parameter value is approximately 1. This advice has been widely and successfully adopted. We provide new, remarkably simple upper and lower bounds on the asymptotic variance of PMMH algorithms. The bounds explain how blindly following the 2015 advice can hide serious issues with the algorithm and they strongly suggest an alternative criterion. In most situations our guidelines and those from 2015 closely coincide; however, when the two differ it is safer to follow the new guidance. An extension of one of our bounds shows how the use of correlated proposals can fundamentally shift the properties of pseudo-marginal algorithms, so that asymptotic variances that were infinite under the PMMH kernel become finite." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/19/VarianceboundsandrobusttuningforpseudomarginalMetropolisHastingsalgorithms.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/19/VarianceboundsandrobusttuningforpseudomarginalMetropolisHastingsalgorithms.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Variance bounds and robust tuning for pseudo-marginal Metropolis–Hastings algorithms" />
+<script type="application/ld+json">
+{"description":"The general applicability and ease of use of the pseudo-marginal Metropolis–Hastings (PMMH) algorithm, and particle Metropolis–Hastings in particular, makes it a popular method for inference on discretely observed Markovian stochastic processes. The performance of these algorithms and, in the case of particle Metropolis–Hastings, the trade off between improved mixing through increased accuracy of the estimator and the computational cost were investigated independently in two papers, both published in 2015. Each suggested choosing the number of particles so that the variance of the logarithm of the estimator of the posterior at a fixed sensible parameter value is approximately 1. This advice has been widely and successfully adopted. We provide new, remarkably simple upper and lower bounds on the asymptotic variance of PMMH algorithms. The bounds explain how blindly following the 2015 advice can hide serious issues with the algorithm and they strongly suggest an alternative criterion. In most situations our guidelines and those from 2015 closely coincide; however, when the two differ it is safer to follow the new guidance. An extension of one of our bounds shows how the use of correlated proposals can fundamentally shift the properties of pseudo-marginal algorithms, so that asymptotic variances that were infinite under the PMMH kernel become finite.","headline":"Variance bounds and robust tuning for pseudo-marginal Metropolis–Hastings algorithms","dateModified":"2024-11-19T00:00:00+00:00","datePublished":"2024-11-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/19/VarianceboundsandrobusttuningforpseudomarginalMetropolisHastingsalgorithms.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/19/VarianceboundsandrobusttuningforpseudomarginalMetropolisHastingsalgorithms.html","author":{"@type":"Person","name":"Chris Sherlock"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-19 00:00:00 +0000">11-19</time>
+  </p>
+  
+  <h1>Variance bounds and robust tuning for pseudo-marginal Metropolis--Hastings algorithms</h1>
+  <br>Chris Sherlock</h3>
+  <br> [stat.CO,stat.TH]
+
+  <p>The general applicability and ease of use of the pseudo-marginal Metropolis–Hastings (PMMH) algorithm, and particle Metropolis–Hastings in particular, makes it a popular method for inference on discretely observed Markovian stochastic processes. The performance of these algorithms and, in the case of particle Metropolis–Hastings, the trade off between improved mixing through increased accuracy of the estimator and the computational cost were investigated independently in two papers, both published in 2015. Each suggested choosing the number of particles so that the variance of the logarithm of the estimator of the posterior at a fixed sensible parameter value is approximately 1. This advice has been widely and successfully adopted. We provide new, remarkably simple upper and lower bounds on the asymptotic variance of PMMH algorithms. The bounds explain how blindly following the 2015 advice can hide serious issues with the algorithm and they strongly suggest an alternative criterion. In most situations our guidelines and those from 2015 closely coincide; however, when the two differ it is safer to follow the new guidance. An extension of one of our bounds shows how the use of correlated proposals can fundamentally shift the properties of pseudo-marginal algorithms, so that asymptotic variances that were infinite under the PMMH kernel become finite.</p>
+
+<p><a href="https://arxiv.org/abs/2411.10785">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
