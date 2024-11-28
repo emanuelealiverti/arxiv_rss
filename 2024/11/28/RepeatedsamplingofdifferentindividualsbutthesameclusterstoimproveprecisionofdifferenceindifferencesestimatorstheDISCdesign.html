@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Repeated sampling of different individuals but the same clusters to improve precision of difference-in-differences estimators: the DISC design</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Repeated sampling of different individuals but the same clusters to improve precision of difference-in-differences estimators: the DISC design" />
+<meta name="author" content="Jordan Downey, Avi Kenny" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We describe the DISC (Different Individuals, Same Clusters) design, a sampling scheme that can improve the precision of difference-in-differences (DID) estimators in settings involving repeated sampling of a population at multiple time points. Although cohort designs typically lead to more efficient DID estimators relative to repeated cross-sectional (RCS) designs, they are often impractical in practice due to high rates of loss-to-follow-up, individuals leaving the risk set, or other reasons. The DISC design represents a hybrid between a cohort sampling design and a RCS sampling design, an alternative strategy in which the researcher takes a single sample of clusters, but then takes different cross-sectional samples of individuals within each cluster at two or more time points. We show that the DISC design can yield DID estimators with much higher precision relative to a RCS design, particularly if random cluster effects are present in the data-generating mechanism. For example, for a design in which 40 clusters and 25 individuals per cluster are sampled (for a total sample size of n=1,000), the variance of a commonly-used DID treatment effect estimator is 2.3 times higher in the RCS design for an intraclass correlation coefficient (ICC) of 0.05, 3.8 times higher for an ICC of 0.1, and 7.3 times higher for an ICC of 0.2." />
+<meta property="og:description" content="We describe the DISC (Different Individuals, Same Clusters) design, a sampling scheme that can improve the precision of difference-in-differences (DID) estimators in settings involving repeated sampling of a population at multiple time points. Although cohort designs typically lead to more efficient DID estimators relative to repeated cross-sectional (RCS) designs, they are often impractical in practice due to high rates of loss-to-follow-up, individuals leaving the risk set, or other reasons. The DISC design represents a hybrid between a cohort sampling design and a RCS sampling design, an alternative strategy in which the researcher takes a single sample of clusters, but then takes different cross-sectional samples of individuals within each cluster at two or more time points. We show that the DISC design can yield DID estimators with much higher precision relative to a RCS design, particularly if random cluster effects are present in the data-generating mechanism. For example, for a design in which 40 clusters and 25 individuals per cluster are sampled (for a total sample size of n=1,000), the variance of a commonly-used DID treatment effect estimator is 2.3 times higher in the RCS design for an intraclass correlation coefficient (ICC) of 0.05, 3.8 times higher for an ICC of 0.1, and 7.3 times higher for an ICC of 0.2." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/28/RepeatedsamplingofdifferentindividualsbutthesameclusterstoimproveprecisionofdifferenceindifferencesestimatorstheDISCdesign.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/28/RepeatedsamplingofdifferentindividualsbutthesameclusterstoimproveprecisionofdifferenceindifferencesestimatorstheDISCdesign.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Repeated sampling of different individuals but the same clusters to improve precision of difference-in-differences estimators: the DISC design" />
+<script type="application/ld+json">
+{"description":"We describe the DISC (Different Individuals, Same Clusters) design, a sampling scheme that can improve the precision of difference-in-differences (DID) estimators in settings involving repeated sampling of a population at multiple time points. Although cohort designs typically lead to more efficient DID estimators relative to repeated cross-sectional (RCS) designs, they are often impractical in practice due to high rates of loss-to-follow-up, individuals leaving the risk set, or other reasons. The DISC design represents a hybrid between a cohort sampling design and a RCS sampling design, an alternative strategy in which the researcher takes a single sample of clusters, but then takes different cross-sectional samples of individuals within each cluster at two or more time points. We show that the DISC design can yield DID estimators with much higher precision relative to a RCS design, particularly if random cluster effects are present in the data-generating mechanism. For example, for a design in which 40 clusters and 25 individuals per cluster are sampled (for a total sample size of n=1,000), the variance of a commonly-used DID treatment effect estimator is 2.3 times higher in the RCS design for an intraclass correlation coefficient (ICC) of 0.05, 3.8 times higher for an ICC of 0.1, and 7.3 times higher for an ICC of 0.2.","headline":"Repeated sampling of different individuals but the same clusters to improve precision of difference-in-differences estimators: the DISC design","dateModified":"2024-11-28T00:00:00+00:00","datePublished":"2024-11-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/28/RepeatedsamplingofdifferentindividualsbutthesameclusterstoimproveprecisionofdifferenceindifferencesestimatorstheDISCdesign.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/28/RepeatedsamplingofdifferentindividualsbutthesameclusterstoimproveprecisionofdifferenceindifferencesestimatorstheDISCdesign.html","author":{"@type":"Person","name":"Jordan Downey, Avi Kenny"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-28 00:00:00 +0000">11-28</time>
+  </p>
+  
+  <h1>Repeated sampling of different individuals but the same clusters to improve precision of difference-in-differences estimators: the DISC design</h1>
+  <br>Jordan Downey, Avi Kenny</h3>
+  <br> [stat.ME]
+
+  <p>We describe the DISC (Different Individuals, Same Clusters) design, a sampling scheme that can improve the precision of difference-in-differences (DID) estimators in settings involving repeated sampling of a population at multiple time points. Although cohort designs typically lead to more efficient DID estimators relative to repeated cross-sectional (RCS) designs, they are often impractical in practice due to high rates of loss-to-follow-up, individuals leaving the risk set, or other reasons. The DISC design represents a hybrid between a cohort sampling design and a RCS sampling design, an alternative strategy in which the researcher takes a single sample of clusters, but then takes different cross-sectional samples of individuals within each cluster at two or more time points. We show that the DISC design can yield DID estimators with much higher precision relative to a RCS design, particularly if random cluster effects are present in the data-generating mechanism. For example, for a design in which 40 clusters and 25 individuals per cluster are sampled (for a total sample size of n=1,000), the variance of a commonly-used DID treatment effect estimator is 2.3 times higher in the RCS design for an intraclass correlation coefficient (ICC) of 0.05, 3.8 times higher for an ICC of 0.1, and 7.3 times higher for an ICC of 0.2.</p>
+
+<p><a href="https://arxiv.org/abs/2411.17905">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

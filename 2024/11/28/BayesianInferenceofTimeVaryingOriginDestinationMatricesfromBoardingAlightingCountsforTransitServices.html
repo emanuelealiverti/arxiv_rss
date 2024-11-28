@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Inference of Time-Varying Origin-Destination Matrices from Boarding/Alighting Counts for Transit Services</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bayesian Inference of Time-Varying Origin-Destination Matrices from Boarding/Alighting Counts for Transit Services" />
+<meta name="author" content="Xiaoxu Chen, Zhanhong Cheng, Lijun Sun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Origin-destination (OD) demand matrices are crucial for transit agencies to design and operate transit systems. This paper presents a novel temporal Bayesian model designed to estimate transit OD matrices at the individual bus-journey level from boarding/alighting counts at bus stops. Our approach begins by modeling the number of alighting passengers at subsequent bus stops, given a boarding stop, through a multinomial distribution parameterized by alighting probabilities. Given the large scale of the problem, we generate alighting probabilities with a latent variable matrix and factorize it into a mapping matrix and a temporal matrix, thereby substantially reducing the number of parameters. To further encode a temporally-smooth structure in the parameters, we impose a Gaussian process prior on the columns of the temporal factor matrix. For model inference, we develop a two-stage algorithm with the Markov chain Monte Carlo (MCMC) method. In the first stage, latent OD matrices are sampled conditional on model parameters using a Metropolis-Hastings sampling algorithm with a Markov model-based proposal distribution. In the second stage, we sample model parameters conditional on latent OD matrices using slice and elliptical slice sampling algorithms. We assess the proposed model using real-world data collected from three bus routes with varying numbers of stops, and the results demonstrate that our model achieves accurate posterior mean estimation and outperforms the widely used iterative proportional fitting (IPF) method. Additionally, our model can provide uncertainty quantification for the OD demand matrices, thus benefiting many downstream planning/operational tasks that require robust decisions." />
+<meta property="og:description" content="Origin-destination (OD) demand matrices are crucial for transit agencies to design and operate transit systems. This paper presents a novel temporal Bayesian model designed to estimate transit OD matrices at the individual bus-journey level from boarding/alighting counts at bus stops. Our approach begins by modeling the number of alighting passengers at subsequent bus stops, given a boarding stop, through a multinomial distribution parameterized by alighting probabilities. Given the large scale of the problem, we generate alighting probabilities with a latent variable matrix and factorize it into a mapping matrix and a temporal matrix, thereby substantially reducing the number of parameters. To further encode a temporally-smooth structure in the parameters, we impose a Gaussian process prior on the columns of the temporal factor matrix. For model inference, we develop a two-stage algorithm with the Markov chain Monte Carlo (MCMC) method. In the first stage, latent OD matrices are sampled conditional on model parameters using a Metropolis-Hastings sampling algorithm with a Markov model-based proposal distribution. In the second stage, we sample model parameters conditional on latent OD matrices using slice and elliptical slice sampling algorithms. We assess the proposed model using real-world data collected from three bus routes with varying numbers of stops, and the results demonstrate that our model achieves accurate posterior mean estimation and outperforms the widely used iterative proportional fitting (IPF) method. Additionally, our model can provide uncertainty quantification for the OD demand matrices, thus benefiting many downstream planning/operational tasks that require robust decisions." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/11/28/BayesianInferenceofTimeVaryingOriginDestinationMatricesfromBoardingAlightingCountsforTransitServices.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/11/28/BayesianInferenceofTimeVaryingOriginDestinationMatricesfromBoardingAlightingCountsforTransitServices.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bayesian Inference of Time-Varying Origin-Destination Matrices from Boarding/Alighting Counts for Transit Services" />
+<script type="application/ld+json">
+{"description":"Origin-destination (OD) demand matrices are crucial for transit agencies to design and operate transit systems. This paper presents a novel temporal Bayesian model designed to estimate transit OD matrices at the individual bus-journey level from boarding/alighting counts at bus stops. Our approach begins by modeling the number of alighting passengers at subsequent bus stops, given a boarding stop, through a multinomial distribution parameterized by alighting probabilities. Given the large scale of the problem, we generate alighting probabilities with a latent variable matrix and factorize it into a mapping matrix and a temporal matrix, thereby substantially reducing the number of parameters. To further encode a temporally-smooth structure in the parameters, we impose a Gaussian process prior on the columns of the temporal factor matrix. For model inference, we develop a two-stage algorithm with the Markov chain Monte Carlo (MCMC) method. In the first stage, latent OD matrices are sampled conditional on model parameters using a Metropolis-Hastings sampling algorithm with a Markov model-based proposal distribution. In the second stage, we sample model parameters conditional on latent OD matrices using slice and elliptical slice sampling algorithms. We assess the proposed model using real-world data collected from three bus routes with varying numbers of stops, and the results demonstrate that our model achieves accurate posterior mean estimation and outperforms the widely used iterative proportional fitting (IPF) method. Additionally, our model can provide uncertainty quantification for the OD demand matrices, thus benefiting many downstream planning/operational tasks that require robust decisions.","headline":"Bayesian Inference of Time-Varying Origin-Destination Matrices from Boarding/Alighting Counts for Transit Services","dateModified":"2024-11-28T00:00:00+00:00","datePublished":"2024-11-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/28/BayesianInferenceofTimeVaryingOriginDestinationMatricesfromBoardingAlightingCountsforTransitServices.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/11/28/BayesianInferenceofTimeVaryingOriginDestinationMatricesfromBoardingAlightingCountsforTransitServices.html","author":{"@type":"Person","name":"Xiaoxu Chen, Zhanhong Cheng, Lijun Sun"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-28 00:00:00 +0000">11-28</time>
+  </p>
+  
+  <h1>Bayesian Inference of Time-Varying Origin-Destination Matrices from Boarding/Alighting Counts for Transit Services</h1>
+  <br>Xiaoxu Chen, Zhanhong Cheng, Lijun Sun</h3>
+  <br> [stat.AP]
+
+  <p>Origin-destination (OD) demand matrices are crucial for transit agencies to design and operate transit systems. This paper presents a novel temporal Bayesian model designed to estimate transit OD matrices at the individual bus-journey level from boarding/alighting counts at bus stops. Our approach begins by modeling the number of alighting passengers at subsequent bus stops, given a boarding stop, through a multinomial distribution parameterized by alighting probabilities. Given the large scale of the problem, we generate alighting probabilities with a latent variable matrix and factorize it into a mapping matrix and a temporal matrix, thereby substantially reducing the number of parameters. To further encode a temporally-smooth structure in the parameters, we impose a Gaussian process prior on the columns of the temporal factor matrix. For model inference, we develop a two-stage algorithm with the Markov chain Monte Carlo (MCMC) method. In the first stage, latent OD matrices are sampled conditional on model parameters using a Metropolis-Hastings sampling algorithm with a Markov model-based proposal distribution. In the second stage, we sample model parameters conditional on latent OD matrices using slice and elliptical slice sampling algorithms. We assess the proposed model using real-world data collected from three bus routes with varying numbers of stops, and the results demonstrate that our model achieves accurate posterior mean estimation and outperforms the widely used iterative proportional fitting (IPF) method. Additionally, our model can provide uncertainty quantification for the OD demand matrices, thus benefiting many downstream planning/operational tasks that require robust decisions.</p>
+
+<p><a href="https://arxiv.org/abs/2403.04742">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
