@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Scalable computation of the maximum flow in large brain connectivity networks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Scalable computation of the maximum flow in large brain connectivity networks" />
+<meta name="author" content="Jingyun Qian, Georg Hahn" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We are interested in computing an approximation of the maximum flow in large (brain) connectivity networks. The maximum flow in such networks is of interest in order to better understand the routing of information in the human brain. However, the runtime of $O( V   E ^2)$ for the classic Edmonds-Karp algorithm renders computations of the maximum flow on networks with millions of vertices infeasible, where $V$ is the set of vertices and $E$ is the set of edges. In this contribution, we propose a new Monte Carlo algorithm which is capable of computing an approximation of the maximum flow in networks with millions of vertices via subsampling. Apart from giving a point estimate of the maximum flow, our algorithm also returns valid confidence bounds for the true maximum flow. Importantly, its runtime only scales as $O(B \cdot \tilde{V}   \tilde{E} ^2)$, where $B$ is the number of Monte Carlo samples, $\tilde{V}$ is the set of subsampled vertices, and $\tilde{E}$ is the edge set induced by $\tilde{V}$. Choosing $B \in O( V )$ and $ \tilde{V} \in O(\sqrt{ V })$ (implying $ \tilde{E} \in O( V )$) yields an algorithm with runtime $O( V ^{3.5})$ while still guaranteeing the usual “root-n” convergence of the confidence interval of the maximum flow estimate. We evaluate our proposed algorithm with respect to both accuracy and runtime on simulated graphs as well as graphs downloaded from the Brain Networks Data Repository (https://networkrepository.com)." />
+<meta property="og:description" content="We are interested in computing an approximation of the maximum flow in large (brain) connectivity networks. The maximum flow in such networks is of interest in order to better understand the routing of information in the human brain. However, the runtime of $O( V   E ^2)$ for the classic Edmonds-Karp algorithm renders computations of the maximum flow on networks with millions of vertices infeasible, where $V$ is the set of vertices and $E$ is the set of edges. In this contribution, we propose a new Monte Carlo algorithm which is capable of computing an approximation of the maximum flow in networks with millions of vertices via subsampling. Apart from giving a point estimate of the maximum flow, our algorithm also returns valid confidence bounds for the true maximum flow. Importantly, its runtime only scales as $O(B \cdot \tilde{V}   \tilde{E} ^2)$, where $B$ is the number of Monte Carlo samples, $\tilde{V}$ is the set of subsampled vertices, and $\tilde{E}$ is the edge set induced by $\tilde{V}$. Choosing $B \in O( V )$ and $ \tilde{V} \in O(\sqrt{ V })$ (implying $ \tilde{E} \in O( V )$) yields an algorithm with runtime $O( V ^{3.5})$ while still guaranteeing the usual “root-n” convergence of the confidence interval of the maximum flow estimate. We evaluate our proposed algorithm with respect to both accuracy and runtime on simulated graphs as well as graphs downloaded from the Brain Networks Data Repository (https://networkrepository.com)." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/12/03/Scalablecomputationofthemaximumflowinlargebrainconnectivitynetworks.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/12/03/Scalablecomputationofthemaximumflowinlargebrainconnectivitynetworks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Scalable computation of the maximum flow in large brain connectivity networks" />
+<script type="application/ld+json">
+{"description":"We are interested in computing an approximation of the maximum flow in large (brain) connectivity networks. The maximum flow in such networks is of interest in order to better understand the routing of information in the human brain. However, the runtime of $O( V   E ^2)$ for the classic Edmonds-Karp algorithm renders computations of the maximum flow on networks with millions of vertices infeasible, where $V$ is the set of vertices and $E$ is the set of edges. In this contribution, we propose a new Monte Carlo algorithm which is capable of computing an approximation of the maximum flow in networks with millions of vertices via subsampling. Apart from giving a point estimate of the maximum flow, our algorithm also returns valid confidence bounds for the true maximum flow. Importantly, its runtime only scales as $O(B \\cdot \\tilde{V}   \\tilde{E} ^2)$, where $B$ is the number of Monte Carlo samples, $\\tilde{V}$ is the set of subsampled vertices, and $\\tilde{E}$ is the edge set induced by $\\tilde{V}$. Choosing $B \\in O( V )$ and $ \\tilde{V} \\in O(\\sqrt{ V })$ (implying $ \\tilde{E} \\in O( V )$) yields an algorithm with runtime $O( V ^{3.5})$ while still guaranteeing the usual “root-n” convergence of the confidence interval of the maximum flow estimate. We evaluate our proposed algorithm with respect to both accuracy and runtime on simulated graphs as well as graphs downloaded from the Brain Networks Data Repository (https://networkrepository.com).","headline":"Scalable computation of the maximum flow in large brain connectivity networks","dateModified":"2024-12-03T00:00:00+00:00","datePublished":"2024-12-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/03/Scalablecomputationofthemaximumflowinlargebrainconnectivitynetworks.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/03/Scalablecomputationofthemaximumflowinlargebrainconnectivitynetworks.html","author":{"@type":"Person","name":"Jingyun Qian, Georg Hahn"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-03 00:00:00 +0000">12-03</time>
+  </p>
+  
+  <h1>Scalable computation of the maximum flow in large brain connectivity networks</h1>
+  <br>Jingyun Qian, Georg Hahn</h3>
+  <br> [stat.ME]
+
+  <table>
+  <tbody>
+    <tr>
+      <td>We are interested in computing an approximation of the maximum flow in large (brain) connectivity networks. The maximum flow in such networks is of interest in order to better understand the routing of information in the human brain. However, the runtime of $O(</td>
+      <td>V</td>
+      <td> </td>
+      <td>E</td>
+      <td>^2)$ for the classic Edmonds-Karp algorithm renders computations of the maximum flow on networks with millions of vertices infeasible, where $V$ is the set of vertices and $E$ is the set of edges. In this contribution, we propose a new Monte Carlo algorithm which is capable of computing an approximation of the maximum flow in networks with millions of vertices via subsampling. Apart from giving a point estimate of the maximum flow, our algorithm also returns valid confidence bounds for the true maximum flow. Importantly, its runtime only scales as $O(B \cdot</td>
+      <td>\tilde{V}</td>
+      <td> </td>
+      <td>\tilde{E}</td>
+      <td>^2)$, where $B$ is the number of Monte Carlo samples, $\tilde{V}$ is the set of subsampled vertices, and $\tilde{E}$ is the edge set induced by $\tilde{V}$. Choosing $B \in O(</td>
+      <td>V</td>
+      <td>)$ and $</td>
+      <td>\tilde{V}</td>
+      <td>\in O(\sqrt{</td>
+      <td>V</td>
+      <td>})$ (implying $</td>
+      <td>\tilde{E}</td>
+      <td>\in O(</td>
+      <td>V</td>
+      <td>)$) yields an algorithm with runtime $O(</td>
+      <td>V</td>
+      <td>^{3.5})$ while still guaranteeing the usual “root-n” convergence of the confidence interval of the maximum flow estimate. We evaluate our proposed algorithm with respect to both accuracy and runtime on simulated graphs as well as graphs downloaded from the Brain Networks Data Repository (https://networkrepository.com).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://arxiv.org/abs/2412.00106">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
