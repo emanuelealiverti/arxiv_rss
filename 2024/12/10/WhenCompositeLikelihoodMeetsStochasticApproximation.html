@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When Composite Likelihood Meets Stochastic Approximation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="When Composite Likelihood Meets Stochastic Approximation" />
+<meta name="author" content="Giuseppe Alfonzetti, Ruggero Bellio, Yunxiao Chen, Irini Moustaki" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A composite likelihood is an inference function derived by multiplying a set of likelihood components. This approach provides a flexible framework for drawing inference when the likelihood function of a statistical model is computationally intractable. While composite likelihood has computational advantages, it can still be demanding when dealing with numerous likelihood components and a large sample size. This paper tackles this challenge by employing an approximation of the conventional composite likelihood estimator, which is derived from an optimization procedure relying on stochastic gradients. This novel estimator is shown to be asymptotically normally distributed around the true parameter. In particular, based on the relative divergent rate of the sample size and the number of iterations of the optimization, the variance of the limiting distribution is shown to compound for two sources of uncertainty: the sampling variability of the data and the optimization noise, with the latter depending on the sampling distribution used to construct the stochastic gradients. The advantages of the proposed framework are illustrated through simulation studies on two working examples: an Ising model for binary data and a gamma frailty model for count data. Finally, a real-data application is presented, showing its effectiveness in a large-scale mental health survey." />
+<meta property="og:description" content="A composite likelihood is an inference function derived by multiplying a set of likelihood components. This approach provides a flexible framework for drawing inference when the likelihood function of a statistical model is computationally intractable. While composite likelihood has computational advantages, it can still be demanding when dealing with numerous likelihood components and a large sample size. This paper tackles this challenge by employing an approximation of the conventional composite likelihood estimator, which is derived from an optimization procedure relying on stochastic gradients. This novel estimator is shown to be asymptotically normally distributed around the true parameter. In particular, based on the relative divergent rate of the sample size and the number of iterations of the optimization, the variance of the limiting distribution is shown to compound for two sources of uncertainty: the sampling variability of the data and the optimization noise, with the latter depending on the sampling distribution used to construct the stochastic gradients. The advantages of the proposed framework are illustrated through simulation studies on two working examples: an Ising model for binary data and a gamma frailty model for count data. Finally, a real-data application is presented, showing its effectiveness in a large-scale mental health survey." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/12/10/WhenCompositeLikelihoodMeetsStochasticApproximation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/12/10/WhenCompositeLikelihoodMeetsStochasticApproximation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="When Composite Likelihood Meets Stochastic Approximation" />
+<script type="application/ld+json">
+{"description":"A composite likelihood is an inference function derived by multiplying a set of likelihood components. This approach provides a flexible framework for drawing inference when the likelihood function of a statistical model is computationally intractable. While composite likelihood has computational advantages, it can still be demanding when dealing with numerous likelihood components and a large sample size. This paper tackles this challenge by employing an approximation of the conventional composite likelihood estimator, which is derived from an optimization procedure relying on stochastic gradients. This novel estimator is shown to be asymptotically normally distributed around the true parameter. In particular, based on the relative divergent rate of the sample size and the number of iterations of the optimization, the variance of the limiting distribution is shown to compound for two sources of uncertainty: the sampling variability of the data and the optimization noise, with the latter depending on the sampling distribution used to construct the stochastic gradients. The advantages of the proposed framework are illustrated through simulation studies on two working examples: an Ising model for binary data and a gamma frailty model for count data. Finally, a real-data application is presented, showing its effectiveness in a large-scale mental health survey.","headline":"When Composite Likelihood Meets Stochastic Approximation","dateModified":"2024-12-10T00:00:00+00:00","datePublished":"2024-12-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/10/WhenCompositeLikelihoodMeetsStochasticApproximation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/10/WhenCompositeLikelihoodMeetsStochasticApproximation.html","author":{"@type":"Person","name":"Giuseppe Alfonzetti, Ruggero Bellio, Yunxiao Chen, Irini Moustaki"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-10 00:00:00 +0000">12-10</time>
+  </p>
+  
+  <h1>When Composite Likelihood Meets Stochastic Approximation</h1>
+  <br>Giuseppe Alfonzetti, Ruggero Bellio, Yunxiao Chen, Irini Moustaki</h3>
+  <br> [stat.ME]
+
+  <p>A composite likelihood is an inference function derived by multiplying a set of likelihood components. This approach provides a flexible framework for drawing inference when the likelihood function of a statistical model is computationally intractable. While composite likelihood has computational advantages, it can still be demanding when dealing with numerous likelihood components and a large sample size. This paper tackles this challenge by employing an approximation of the conventional composite likelihood estimator, which is derived from an optimization procedure relying on stochastic gradients. This novel estimator is shown to be asymptotically normally distributed around the true parameter. In particular, based on the relative divergent rate of the sample size and the number of iterations of the optimization, the variance of the limiting distribution is shown to compound for two sources of uncertainty: the sampling variability of the data and the optimization noise, with the latter depending on the sampling distribution used to construct the stochastic gradients. The advantages of the proposed framework are illustrated through simulation studies on two working examples: an Ising model for binary data and a gamma frailty model for count data. Finally, a real-data application is presented, showing its effectiveness in a large-scale mental health survey.</p>
+
+<p><a href="https://arxiv.org/abs/2310.04165">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
