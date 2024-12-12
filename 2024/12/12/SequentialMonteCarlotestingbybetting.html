@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sequential Monte-Carlo testing by betting</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sequential Monte-Carlo testing by betting" />
+<meta name="author" content="Lasse Fischer, Aaditya Ramdas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In a Monte-Carlo test, the observed dataset is fixed, and several resampled or permuted versions of the dataset are generated in order to test a null hypothesis that the original dataset is exchangeable with the resampled/permuted ones. Sequential Monte-Carlo tests aim to save computational resources by generating these additional datasets sequentially one by one, and potentially stopping early. While earlier tests yield valid inference at a particular prespecified stopping rule, our work develops a new anytime-valid Monte-Carlo test that can be continuously monitored, yielding a p-value or e-value at any stopping time possibly not specified in advance. It generalizes the well-known method by Besag and Clifford, allowing it to stop at any time, but also encompasses new sequential Monte-Carlo tests that tend to stop sooner under the null and alternative without compromising power. The core technical advance is the development of new test martingales (nonnegative martingales with initial value one) for testing exchangeability against a very particular alternative. These test martingales are constructed using new and simple betting strategies that smartly bet on whether a generated test statistic is greater or smaller than the observed one. The betting strategies are guided by the derivation of a simple log-optimal betting strategy, have closed form expressions for the wealth process, provable guarantees on resampling risk, and display excellent power in practice." />
+<meta property="og:description" content="In a Monte-Carlo test, the observed dataset is fixed, and several resampled or permuted versions of the dataset are generated in order to test a null hypothesis that the original dataset is exchangeable with the resampled/permuted ones. Sequential Monte-Carlo tests aim to save computational resources by generating these additional datasets sequentially one by one, and potentially stopping early. While earlier tests yield valid inference at a particular prespecified stopping rule, our work develops a new anytime-valid Monte-Carlo test that can be continuously monitored, yielding a p-value or e-value at any stopping time possibly not specified in advance. It generalizes the well-known method by Besag and Clifford, allowing it to stop at any time, but also encompasses new sequential Monte-Carlo tests that tend to stop sooner under the null and alternative without compromising power. The core technical advance is the development of new test martingales (nonnegative martingales with initial value one) for testing exchangeability against a very particular alternative. These test martingales are constructed using new and simple betting strategies that smartly bet on whether a generated test statistic is greater or smaller than the observed one. The betting strategies are guided by the derivation of a simple log-optimal betting strategy, have closed form expressions for the wealth process, provable guarantees on resampling risk, and display excellent power in practice." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/12/12/SequentialMonteCarlotestingbybetting.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/12/12/SequentialMonteCarlotestingbybetting.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sequential Monte-Carlo testing by betting" />
+<script type="application/ld+json">
+{"description":"In a Monte-Carlo test, the observed dataset is fixed, and several resampled or permuted versions of the dataset are generated in order to test a null hypothesis that the original dataset is exchangeable with the resampled/permuted ones. Sequential Monte-Carlo tests aim to save computational resources by generating these additional datasets sequentially one by one, and potentially stopping early. While earlier tests yield valid inference at a particular prespecified stopping rule, our work develops a new anytime-valid Monte-Carlo test that can be continuously monitored, yielding a p-value or e-value at any stopping time possibly not specified in advance. It generalizes the well-known method by Besag and Clifford, allowing it to stop at any time, but also encompasses new sequential Monte-Carlo tests that tend to stop sooner under the null and alternative without compromising power. The core technical advance is the development of new test martingales (nonnegative martingales with initial value one) for testing exchangeability against a very particular alternative. These test martingales are constructed using new and simple betting strategies that smartly bet on whether a generated test statistic is greater or smaller than the observed one. The betting strategies are guided by the derivation of a simple log-optimal betting strategy, have closed form expressions for the wealth process, provable guarantees on resampling risk, and display excellent power in practice.","headline":"Sequential Monte-Carlo testing by betting","dateModified":"2024-12-12T00:00:00+00:00","datePublished":"2024-12-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/12/SequentialMonteCarlotestingbybetting.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/12/SequentialMonteCarlotestingbybetting.html","author":{"@type":"Person","name":"Lasse Fischer, Aaditya Ramdas"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-12 00:00:00 +0000">12-12</time>
+  </p>
+  
+  <h1>Sequential Monte-Carlo testing by betting</h1>
+  <br>Lasse Fischer, Aaditya Ramdas</h3>
+  <br> [stat.ME]
+
+  <p>In a Monte-Carlo test, the observed dataset is fixed, and several resampled or permuted versions of the dataset are generated in order to test a null hypothesis that the original dataset is exchangeable with the resampled/permuted ones. Sequential Monte-Carlo tests aim to save computational resources by generating these additional datasets sequentially one by one, and potentially stopping early. While earlier tests yield valid inference at a particular prespecified stopping rule, our work develops a new anytime-valid Monte-Carlo test that can be continuously monitored, yielding a p-value or e-value at any stopping time possibly not specified in advance. It generalizes the well-known method by Besag and Clifford, allowing it to stop at any time, but also encompasses new sequential Monte-Carlo tests that tend to stop sooner under the null and alternative without compromising power. The core technical advance is the development of new test martingales (nonnegative martingales with initial value one) for testing exchangeability against a very particular alternative. These test martingales are constructed using new and simple betting strategies that smartly bet on whether a generated test statistic is greater or smaller than the observed one. The betting strategies are guided by the derivation of a simple log-optimal betting strategy, have closed form expressions for the wealth process, provable guarantees on resampling risk, and display excellent power in practice.</p>
+
+<p><a href="https://arxiv.org/abs/2401.07365">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
