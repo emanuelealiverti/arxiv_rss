@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Beyond forecast leaderboards: Measuring individual model importance based on contribution to ensemble accuracy</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Beyond forecast leaderboards: Measuring individual model importance based on contribution to ensemble accuracy" />
+<meta name="author" content="Minsu Kim, Evan L. Ray, Nicholas G. Reich" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ensemble forecasts often outperform forecasts from individual standalone models, and have been used to support decision-making and policy planning in various fields. As collaborative forecasting efforts to create effective ensembles grow, so does interest in understanding individual models’ relative importance in the ensemble. To this end, we propose two practical methods that measure the difference between ensemble performance when a given model is or is not included in the ensemble: a leave-one-model-out algorithm and a leave-all-subsets-of-models-out algorithm, which is based on the Shapley value. We explore the relationship between these metrics, forecast accuracy, and the similarity of errors, both analytically and through simulations. We illustrate this measure of the value a component model adds to an ensemble in the presence of other models using US COVID-19 death forecasts. This study offers valuable insight into individual models’ unique features within an ensemble, which standard accuracy metrics alone cannot reveal." />
+<meta property="og:description" content="Ensemble forecasts often outperform forecasts from individual standalone models, and have been used to support decision-making and policy planning in various fields. As collaborative forecasting efforts to create effective ensembles grow, so does interest in understanding individual models’ relative importance in the ensemble. To this end, we propose two practical methods that measure the difference between ensemble performance when a given model is or is not included in the ensemble: a leave-one-model-out algorithm and a leave-all-subsets-of-models-out algorithm, which is based on the Shapley value. We explore the relationship between these metrics, forecast accuracy, and the similarity of errors, both analytically and through simulations. We illustrate this measure of the value a component model adds to an ensemble in the presence of other models using US COVID-19 death forecasts. This study offers valuable insight into individual models’ unique features within an ensemble, which standard accuracy metrics alone cannot reveal." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/BeyondforecastleaderboardsMeasuringindividualmodelimportancebasedoncontributiontoensembleaccuracy.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/BeyondforecastleaderboardsMeasuringindividualmodelimportancebasedoncontributiontoensembleaccuracy.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Beyond forecast leaderboards: Measuring individual model importance based on contribution to ensemble accuracy" />
+<script type="application/ld+json">
+{"description":"Ensemble forecasts often outperform forecasts from individual standalone models, and have been used to support decision-making and policy planning in various fields. As collaborative forecasting efforts to create effective ensembles grow, so does interest in understanding individual models’ relative importance in the ensemble. To this end, we propose two practical methods that measure the difference between ensemble performance when a given model is or is not included in the ensemble: a leave-one-model-out algorithm and a leave-all-subsets-of-models-out algorithm, which is based on the Shapley value. We explore the relationship between these metrics, forecast accuracy, and the similarity of errors, both analytically and through simulations. We illustrate this measure of the value a component model adds to an ensemble in the presence of other models using US COVID-19 death forecasts. This study offers valuable insight into individual models’ unique features within an ensemble, which standard accuracy metrics alone cannot reveal.","headline":"Beyond forecast leaderboards: Measuring individual model importance based on contribution to ensemble accuracy","dateModified":"2024-12-13T00:00:00+00:00","datePublished":"2024-12-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/BeyondforecastleaderboardsMeasuringindividualmodelimportancebasedoncontributiontoensembleaccuracy.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/BeyondforecastleaderboardsMeasuringindividualmodelimportancebasedoncontributiontoensembleaccuracy.html","author":{"@type":"Person","name":"Minsu Kim, Evan L. Ray, Nicholas G. Reich"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-13 00:00:00 +0000">12-13</time>
+  </p>
+  
+  <h1>Beyond forecast leaderboards: Measuring individual model importance based on contribution to ensemble accuracy</h1>
+  <br>Minsu Kim, Evan L. Ray, Nicholas G. Reich</h3>
+  <br> [stat.ME]
+
+  <p>Ensemble forecasts often outperform forecasts from individual standalone models, and have been used to support decision-making and policy planning in various fields. As collaborative forecasting efforts to create effective ensembles grow, so does interest in understanding individual models’ relative importance in the ensemble. To this end, we propose two practical methods that measure the difference between ensemble performance when a given model is or is not included in the ensemble: a leave-one-model-out algorithm and a leave-all-subsets-of-models-out algorithm, which is based on the Shapley value. We explore the relationship between these metrics, forecast accuracy, and the similarity of errors, both analytically and through simulations. We illustrate this measure of the value a component model adds to an ensemble in the presence of other models using US COVID-19 death forecasts. This study offers valuable insight into individual models’ unique features within an ensemble, which standard accuracy metrics alone cannot reveal.</p>
+
+<p><a href="https://arxiv.org/abs/2412.08916">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

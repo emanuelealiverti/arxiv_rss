@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Delta Vectors Unify the Computation for Linear Model Treatment Effects</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Delta Vectors Unify the Computation for Linear Model Treatment Effects" />
+<meta name="author" content="Jeffrey Wong" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The science of cause and effect is extremely sophisticated and extremely hard to scale. Using a controlled experiment, scientists get rich insights by analyzing global effects, effects in different segments, and trends in effects over time. They use propensity scores to project external validity. To support the analysis of relative effects, scientists derive challenging ratio distributions. While the analytical capabilities in experimentation are advancing, we require new innovation within engineering and computational causal inference to enable an experimentation platform to make analyses performant and scalable. Of significant importance: we must unify the computing strategy for these models so that they can be consistently applied across experiments. In doing so, the industry can make significant progress towards developing a flywheel that unifies and accelerates the evaluation and roll out of experiments. In order to support unified computation, this paper introduces baseline vectors and delta vectors as common structure for estimating treatment effects. This common structure allows many statistics to be subsumed into a single API. The nature of its algebraic formulation allows linear algebra libraries to vectorize and optimize its performance, creating a single and efficient tool to support the many innovations in experimentation." />
+<meta property="og:description" content="The science of cause and effect is extremely sophisticated and extremely hard to scale. Using a controlled experiment, scientists get rich insights by analyzing global effects, effects in different segments, and trends in effects over time. They use propensity scores to project external validity. To support the analysis of relative effects, scientists derive challenging ratio distributions. While the analytical capabilities in experimentation are advancing, we require new innovation within engineering and computational causal inference to enable an experimentation platform to make analyses performant and scalable. Of significant importance: we must unify the computing strategy for these models so that they can be consistently applied across experiments. In doing so, the industry can make significant progress towards developing a flywheel that unifies and accelerates the evaluation and roll out of experiments. In order to support unified computation, this paper introduces baseline vectors and delta vectors as common structure for estimating treatment effects. This common structure allows many statistics to be subsumed into a single API. The nature of its algebraic formulation allows linear algebra libraries to vectorize and optimize its performance, creating a single and efficient tool to support the many innovations in experimentation." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/DeltaVectorsUnifytheComputationforLinearModelTreatmentEffects.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/DeltaVectorsUnifytheComputationforLinearModelTreatmentEffects.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Delta Vectors Unify the Computation for Linear Model Treatment Effects" />
+<script type="application/ld+json">
+{"description":"The science of cause and effect is extremely sophisticated and extremely hard to scale. Using a controlled experiment, scientists get rich insights by analyzing global effects, effects in different segments, and trends in effects over time. They use propensity scores to project external validity. To support the analysis of relative effects, scientists derive challenging ratio distributions. While the analytical capabilities in experimentation are advancing, we require new innovation within engineering and computational causal inference to enable an experimentation platform to make analyses performant and scalable. Of significant importance: we must unify the computing strategy for these models so that they can be consistently applied across experiments. In doing so, the industry can make significant progress towards developing a flywheel that unifies and accelerates the evaluation and roll out of experiments. In order to support unified computation, this paper introduces baseline vectors and delta vectors as common structure for estimating treatment effects. This common structure allows many statistics to be subsumed into a single API. The nature of its algebraic formulation allows linear algebra libraries to vectorize and optimize its performance, creating a single and efficient tool to support the many innovations in experimentation.","headline":"Delta Vectors Unify the Computation for Linear Model Treatment Effects","dateModified":"2024-12-13T00:00:00+00:00","datePublished":"2024-12-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/DeltaVectorsUnifytheComputationforLinearModelTreatmentEffects.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/DeltaVectorsUnifytheComputationforLinearModelTreatmentEffects.html","author":{"@type":"Person","name":"Jeffrey Wong"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-13 00:00:00 +0000">12-13</time>
+  </p>
+  
+  <h1>Delta Vectors Unify the Computation for Linear Model Treatment Effects</h1>
+  <br>Jeffrey Wong</h3>
+  <br> [stat.CO]
+
+  <p>The science of cause and effect is extremely sophisticated and extremely hard to scale. Using a controlled experiment, scientists get rich insights by analyzing global effects, effects in different segments, and trends in effects over time. They use propensity scores to project external validity. To support the analysis of relative effects, scientists derive challenging ratio distributions. While the analytical capabilities in experimentation are advancing, we require new innovation within engineering and computational causal inference to enable an experimentation platform to make analyses performant and scalable. Of significant importance: we must unify the computing strategy for these models so that they can be consistently applied across experiments. In doing so, the industry can make significant progress towards developing a flywheel that unifies and accelerates the evaluation and roll out of experiments. In order to support unified computation, this paper introduces baseline vectors and delta vectors as common structure for estimating treatment effects. This common structure allows many statistics to be subsumed into a single API. The nature of its algebraic formulation allows linear algebra libraries to vectorize and optimize its performance, creating a single and efficient tool to support the many innovations in experimentation.</p>
+
+<p><a href="https://arxiv.org/abs/2412.08788">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

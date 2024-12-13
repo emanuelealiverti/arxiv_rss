@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fully Bayesian Wideband Direction-of-Arrival Estimation and Detection via RJMCMC</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Fully Bayesian Wideband Direction-of-Arrival Estimation and Detection via RJMCMC" />
+<meta name="author" content="Kyurae Kim, Philip T. Clemson, James P. Reilly, Jason F. Ralph, Simon Maskell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose a fully Bayesian approach to wideband, or broadband, direction-of-arrival (DoA) estimation and signal detection. Unlike previous works in wideband DoA estimation and detection, where the signals were modeled in the time-frequency domain, we directly model the time-domain representation and treat the non-causal part of the source signal as latent variables. Furthermore, our Bayesian model allows for closed-form marginalization of the latent source signals by leveraging conjugacy. To further speed up computation, we exploit the sparse ``stripe matrix structure’’ of the considered system, which stems from the circulant matrix representation of linear time-invariant (LTI) systems. This drastically reduces the time complexity of computing the likelihood from $\mathcal{O}(N^3 k^3)$ to $\mathcal{O}(N k^3)$, where $N$ is the number of samples received by the array and $k$ is the number of sources. These computational improvements allow for efficient posterior inference through reversible jump Markov chain Monte Carlo (RJMCMC). We use the non-reversible extension of RJMCMC (NRJMCMC), which often achieves lower autocorrelation and faster convergence than the conventional reversible variant. Detection, estimation, and reconstruction of the latent source signals can then all be performed in a fully Bayesian manner through the samples drawn using NRJMCMC. We evaluate the detection performance of the procedure by comparing against generalized likelihood ratio testing (GLRT) and information criteria." />
+<meta property="og:description" content="We propose a fully Bayesian approach to wideband, or broadband, direction-of-arrival (DoA) estimation and signal detection. Unlike previous works in wideband DoA estimation and detection, where the signals were modeled in the time-frequency domain, we directly model the time-domain representation and treat the non-causal part of the source signal as latent variables. Furthermore, our Bayesian model allows for closed-form marginalization of the latent source signals by leveraging conjugacy. To further speed up computation, we exploit the sparse ``stripe matrix structure’’ of the considered system, which stems from the circulant matrix representation of linear time-invariant (LTI) systems. This drastically reduces the time complexity of computing the likelihood from $\mathcal{O}(N^3 k^3)$ to $\mathcal{O}(N k^3)$, where $N$ is the number of samples received by the array and $k$ is the number of sources. These computational improvements allow for efficient posterior inference through reversible jump Markov chain Monte Carlo (RJMCMC). We use the non-reversible extension of RJMCMC (NRJMCMC), which often achieves lower autocorrelation and faster convergence than the conventional reversible variant. Detection, estimation, and reconstruction of the latent source signals can then all be performed in a fully Bayesian manner through the samples drawn using NRJMCMC. We evaluate the detection performance of the procedure by comparing against generalized likelihood ratio testing (GLRT) and information criteria." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/FullyBayesianWidebandDirectionofArrivalEstimationandDetectionviaRJMCMC.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/FullyBayesianWidebandDirectionofArrivalEstimationandDetectionviaRJMCMC.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fully Bayesian Wideband Direction-of-Arrival Estimation and Detection via RJMCMC" />
+<script type="application/ld+json">
+{"description":"We propose a fully Bayesian approach to wideband, or broadband, direction-of-arrival (DoA) estimation and signal detection. Unlike previous works in wideband DoA estimation and detection, where the signals were modeled in the time-frequency domain, we directly model the time-domain representation and treat the non-causal part of the source signal as latent variables. Furthermore, our Bayesian model allows for closed-form marginalization of the latent source signals by leveraging conjugacy. To further speed up computation, we exploit the sparse ``stripe matrix structure’’ of the considered system, which stems from the circulant matrix representation of linear time-invariant (LTI) systems. This drastically reduces the time complexity of computing the likelihood from $\\mathcal{O}(N^3 k^3)$ to $\\mathcal{O}(N k^3)$, where $N$ is the number of samples received by the array and $k$ is the number of sources. These computational improvements allow for efficient posterior inference through reversible jump Markov chain Monte Carlo (RJMCMC). We use the non-reversible extension of RJMCMC (NRJMCMC), which often achieves lower autocorrelation and faster convergence than the conventional reversible variant. Detection, estimation, and reconstruction of the latent source signals can then all be performed in a fully Bayesian manner through the samples drawn using NRJMCMC. We evaluate the detection performance of the procedure by comparing against generalized likelihood ratio testing (GLRT) and information criteria.","headline":"Fully Bayesian Wideband Direction-of-Arrival Estimation and Detection via RJMCMC","dateModified":"2024-12-13T00:00:00+00:00","datePublished":"2024-12-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/FullyBayesianWidebandDirectionofArrivalEstimationandDetectionviaRJMCMC.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/13/FullyBayesianWidebandDirectionofArrivalEstimationandDetectionviaRJMCMC.html","author":{"@type":"Person","name":"Kyurae Kim, Philip T. Clemson, James P. Reilly, Jason F. Ralph, Simon Maskell"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-13 00:00:00 +0000">12-13</time>
+  </p>
+  
+  <h1>Fully Bayesian Wideband Direction-of-Arrival Estimation and Detection via RJMCMC</h1>
+  <br>Kyurae Kim, Philip T. Clemson, James P. Reilly, Jason F. Ralph, Simon Maskell</h3>
+  <br> [stat.AP,stat.CO]
+
+  <p>We propose a fully Bayesian approach to wideband, or broadband, direction-of-arrival (DoA) estimation and signal detection. Unlike previous works in wideband DoA estimation and detection, where the signals were modeled in the time-frequency domain, we directly model the time-domain representation and treat the non-causal part of the source signal as latent variables. Furthermore, our Bayesian model allows for closed-form marginalization of the latent source signals by leveraging conjugacy. To further speed up computation, we exploit the sparse ``stripe matrix structure’’ of the considered system, which stems from the circulant matrix representation of linear time-invariant (LTI) systems. This drastically reduces the time complexity of computing the likelihood from $\mathcal{O}(N^3 k^3)$ to $\mathcal{O}(N k^3)$, where $N$ is the number of samples received by the array and $k$ is the number of sources. These computational improvements allow for efficient posterior inference through reversible jump Markov chain Monte Carlo (RJMCMC). We use the non-reversible extension of RJMCMC (NRJMCMC), which often achieves lower autocorrelation and faster convergence than the conventional reversible variant. Detection, estimation, and reconstruction of the latent source signals can then all be performed in a fully Bayesian manner through the samples drawn using NRJMCMC. We evaluate the detection performance of the procedure by comparing against generalized likelihood ratio testing (GLRT) and information criteria.</p>
+
+<p><a href="https://arxiv.org/abs/2412.08895">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
