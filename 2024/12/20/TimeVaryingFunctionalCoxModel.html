@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Time-Varying Functional Cox Model</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Time-Varying Functional Cox Model" />
+<meta name="author" content="Hongyu Du, Andrew Leroux" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose two novel approaches for estimating time-varying effects of functional predictors within a linear functional Cox model framework. This model allows for time-varying associations of a functional predictor observed at baseline, estimated using penalized regression splines for smoothness across the functional domain and event time. The first approach, suitable for small-to-medium datasets, uses the Cox-Poisson likelihood connection for valid estimation and inference. The second, a landmark approach, significantly reduces computational burden for large datasets and high-dimensional functional predictors. Both methods address proportional hazards violations for functional predictors and model associations as a bivariate smooth coefficient. Motivated by analyzing diurnal motor activity patterns and all-cause mortality in NHANES (N=4445, functional predictor dimension=1440), we demonstrate the first method’s computational limitations and the landmark approach’s efficiency. These methods are implemented in stable, high-quality software using the mgcv package for penalized spline regression with automated smoothing parameter selection. Simulations show both methods achieve high accuracy in estimating functional coefficients, with the landmark approach being computationally faster but slightly less accurate. The Cox-Poisson method provides nominal coverage probabilities, while landmark inference was not assessed due to inherent bias. Sensitivity to landmark modeling choices was evaluated. Application to NHANES reveals an attenuation of diurnal effects on mortality over an 8-year follow-up." />
+<meta property="og:description" content="We propose two novel approaches for estimating time-varying effects of functional predictors within a linear functional Cox model framework. This model allows for time-varying associations of a functional predictor observed at baseline, estimated using penalized regression splines for smoothness across the functional domain and event time. The first approach, suitable for small-to-medium datasets, uses the Cox-Poisson likelihood connection for valid estimation and inference. The second, a landmark approach, significantly reduces computational burden for large datasets and high-dimensional functional predictors. Both methods address proportional hazards violations for functional predictors and model associations as a bivariate smooth coefficient. Motivated by analyzing diurnal motor activity patterns and all-cause mortality in NHANES (N=4445, functional predictor dimension=1440), we demonstrate the first method’s computational limitations and the landmark approach’s efficiency. These methods are implemented in stable, high-quality software using the mgcv package for penalized spline regression with automated smoothing parameter selection. Simulations show both methods achieve high accuracy in estimating functional coefficients, with the landmark approach being computationally faster but slightly less accurate. The Cox-Poisson method provides nominal coverage probabilities, while landmark inference was not assessed due to inherent bias. Sensitivity to landmark modeling choices was evaluated. Application to NHANES reveals an attenuation of diurnal effects on mortality over an 8-year follow-up." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/12/20/TimeVaryingFunctionalCoxModel.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/12/20/TimeVaryingFunctionalCoxModel.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Time-Varying Functional Cox Model" />
+<script type="application/ld+json">
+{"description":"We propose two novel approaches for estimating time-varying effects of functional predictors within a linear functional Cox model framework. This model allows for time-varying associations of a functional predictor observed at baseline, estimated using penalized regression splines for smoothness across the functional domain and event time. The first approach, suitable for small-to-medium datasets, uses the Cox-Poisson likelihood connection for valid estimation and inference. The second, a landmark approach, significantly reduces computational burden for large datasets and high-dimensional functional predictors. Both methods address proportional hazards violations for functional predictors and model associations as a bivariate smooth coefficient. Motivated by analyzing diurnal motor activity patterns and all-cause mortality in NHANES (N=4445, functional predictor dimension=1440), we demonstrate the first method’s computational limitations and the landmark approach’s efficiency. These methods are implemented in stable, high-quality software using the mgcv package for penalized spline regression with automated smoothing parameter selection. Simulations show both methods achieve high accuracy in estimating functional coefficients, with the landmark approach being computationally faster but slightly less accurate. The Cox-Poisson method provides nominal coverage probabilities, while landmark inference was not assessed due to inherent bias. Sensitivity to landmark modeling choices was evaluated. Application to NHANES reveals an attenuation of diurnal effects on mortality over an 8-year follow-up.","headline":"Time-Varying Functional Cox Model","dateModified":"2024-12-20T00:00:00+00:00","datePublished":"2024-12-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/20/TimeVaryingFunctionalCoxModel.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/20/TimeVaryingFunctionalCoxModel.html","author":{"@type":"Person","name":"Hongyu Du, Andrew Leroux"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-20 00:00:00 +0000">12-20</time>
+  </p>
+  
+  <h1>Time-Varying Functional Cox Model</h1>
+  <br>Hongyu Du, Andrew Leroux</h3>
+  <br> [stat.ME]
+
+  <p>We propose two novel approaches for estimating time-varying effects of functional predictors within a linear functional Cox model framework. This model allows for time-varying associations of a functional predictor observed at baseline, estimated using penalized regression splines for smoothness across the functional domain and event time. The first approach, suitable for small-to-medium datasets, uses the Cox-Poisson likelihood connection for valid estimation and inference. The second, a landmark approach, significantly reduces computational burden for large datasets and high-dimensional functional predictors. Both methods address proportional hazards violations for functional predictors and model associations as a bivariate smooth coefficient. Motivated by analyzing diurnal motor activity patterns and all-cause mortality in NHANES (N=4445, functional predictor dimension=1440), we demonstrate the first method’s computational limitations and the landmark approach’s efficiency. These methods are implemented in stable, high-quality software using the mgcv package for penalized spline regression with automated smoothing parameter selection. Simulations show both methods achieve high accuracy in estimating functional coefficients, with the landmark approach being computationally faster but slightly less accurate. The Cox-Poisson method provides nominal coverage probabilities, while landmark inference was not assessed due to inherent bias. Sensitivity to landmark modeling choices was evaluated. Application to NHANES reveals an attenuation of diurnal effects on mortality over an 8-year follow-up.</p>
+
+<p><a href="https://arxiv.org/abs/2412.14478">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
