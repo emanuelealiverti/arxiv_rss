@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Prior-Posterior Derived-Predictive Consistency Checks for Post-Estimation Calculated Quantities of Interest (QOI-Check)</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Prior-Posterior Derived-Predictive Consistency Checks for Post-Estimation Calculated Quantities of Interest (QOI-Check)" />
+<meta name="author" content="Holger Sennhenn-Reulen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="With flexible modeling software - such as the probabilistic programming language Stan - growing in popularity, quantities of interest (QOIs) calculated post-estimation are increasingly desired and customly implemented, both by statistical software developers and applied scientists. Examples of QOI include the marginal expectation of a multilevel model with a non-linear link function, or an ANOVA decomposition of a bivariate regression spline. For this, the QOI-Check is introduced, a systematic approach to ensure proper calibration and correct interpretation of QOIs. It contributes to Bayesian Workflow, and aims to improve the interpretability and trust in post-estimation conclusions based on QOIs. The QOI-Check builds upon Simulation Based Calibration (SBC), and the Holdout Predictive Check (HPC). SBC verifies computational reliability of Bayesian inference algorithms by consistency check of posterior with prior when the posterior is estimated on prior-predicted data, while HPC ensures robust inference by assessing consistency of model predictions with holdout data. SBC and HPC are combined in QOI-Checking for validating post-estimation QOI calculation and interpretation in the context of a (hypothetical) population definition underlying the QOI." />
+<meta property="og:description" content="With flexible modeling software - such as the probabilistic programming language Stan - growing in popularity, quantities of interest (QOIs) calculated post-estimation are increasingly desired and customly implemented, both by statistical software developers and applied scientists. Examples of QOI include the marginal expectation of a multilevel model with a non-linear link function, or an ANOVA decomposition of a bivariate regression spline. For this, the QOI-Check is introduced, a systematic approach to ensure proper calibration and correct interpretation of QOIs. It contributes to Bayesian Workflow, and aims to improve the interpretability and trust in post-estimation conclusions based on QOIs. The QOI-Check builds upon Simulation Based Calibration (SBC), and the Holdout Predictive Check (HPC). SBC verifies computational reliability of Bayesian inference algorithms by consistency check of posterior with prior when the posterior is estimated on prior-predicted data, while HPC ensures robust inference by assessing consistency of model predictions with holdout data. SBC and HPC are combined in QOI-Checking for validating post-estimation QOI calculation and interpretation in the context of a (hypothetical) population definition underlying the QOI." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/12/23/PriorPosteriorDerivedPredictiveConsistencyChecksforPostEstimationCalculatedQuantitiesofInterestQOICheck.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/12/23/PriorPosteriorDerivedPredictiveConsistencyChecksforPostEstimationCalculatedQuantitiesofInterestQOICheck.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Prior-Posterior Derived-Predictive Consistency Checks for Post-Estimation Calculated Quantities of Interest (QOI-Check)" />
+<script type="application/ld+json">
+{"description":"With flexible modeling software - such as the probabilistic programming language Stan - growing in popularity, quantities of interest (QOIs) calculated post-estimation are increasingly desired and customly implemented, both by statistical software developers and applied scientists. Examples of QOI include the marginal expectation of a multilevel model with a non-linear link function, or an ANOVA decomposition of a bivariate regression spline. For this, the QOI-Check is introduced, a systematic approach to ensure proper calibration and correct interpretation of QOIs. It contributes to Bayesian Workflow, and aims to improve the interpretability and trust in post-estimation conclusions based on QOIs. The QOI-Check builds upon Simulation Based Calibration (SBC), and the Holdout Predictive Check (HPC). SBC verifies computational reliability of Bayesian inference algorithms by consistency check of posterior with prior when the posterior is estimated on prior-predicted data, while HPC ensures robust inference by assessing consistency of model predictions with holdout data. SBC and HPC are combined in QOI-Checking for validating post-estimation QOI calculation and interpretation in the context of a (hypothetical) population definition underlying the QOI.","headline":"Prior-Posterior Derived-Predictive Consistency Checks for Post-Estimation Calculated Quantities of Interest (QOI-Check)","dateModified":"2024-12-23T00:00:00+00:00","datePublished":"2024-12-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/23/PriorPosteriorDerivedPredictiveConsistencyChecksforPostEstimationCalculatedQuantitiesofInterestQOICheck.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/23/PriorPosteriorDerivedPredictiveConsistencyChecksforPostEstimationCalculatedQuantitiesofInterestQOICheck.html","author":{"@type":"Person","name":"Holger Sennhenn-Reulen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-23 00:00:00 +0000">12-23</time>
+  </p>
+  
+  <h1>Prior-Posterior Derived-Predictive Consistency Checks for Post-Estimation Calculated Quantities of Interest (QOI-Check)</h1>
+  <br>Holger Sennhenn-Reulen</h3>
+  <br> [stat.ME]
+
+  <p>With flexible modeling software - such as the probabilistic programming language Stan - growing in popularity, quantities of interest (QOIs) calculated post-estimation are increasingly desired and customly implemented, both by statistical software developers and applied scientists. Examples of QOI include the marginal expectation of a multilevel model with a non-linear link function, or an ANOVA decomposition of a bivariate regression spline. For this, the QOI-Check is introduced, a systematic approach to ensure proper calibration and correct interpretation of QOIs. It contributes to Bayesian Workflow, and aims to improve the interpretability and trust in post-estimation conclusions based on QOIs. The QOI-Check builds upon Simulation Based Calibration (SBC), and the Holdout Predictive Check (HPC). SBC verifies computational reliability of Bayesian inference algorithms by consistency check of posterior with prior when the posterior is estimated on prior-predicted data, while HPC ensures robust inference by assessing consistency of model predictions with holdout data. SBC and HPC are combined in QOI-Checking for validating post-estimation QOI calculation and interpretation in the context of a (hypothetical) population definition underlying the QOI.</p>
+
+<p><a href="https://arxiv.org/abs/2412.15809">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
