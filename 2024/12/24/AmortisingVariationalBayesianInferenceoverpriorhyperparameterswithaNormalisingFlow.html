@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Amortising Variational Bayesian Inference over prior hyperparameters with a Normalising Flow</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Amortising Variational Bayesian Inference over prior hyperparameters with a Normalising Flow" />
+<meta name="author" content="Laura Battaglia, Geoff Nicholls" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In Bayesian inference prior hyperparameters are chosen subjectively or estimated using empirical Bayes methods. Generalised Bayesian Inference also has hyperparameters (the learning rate, and parameters of the loss). As part of the Generalised-Bayes workflow it is necessary to check sensitivity to the choice of hyperparameters, but running MCMC or fitting a variational approximation at each hyperparameter setting is impractical when there are more than a few hyperparameters. Simulation Based Inference has been used to amortise over data and hyperparameters and can be useful for Bayesian problems. However, there is no Simulation Based Inference for Generalised Bayes posteriors, as there is no generative model for the data. Working with a variational family parameterised by a normalising flow, we show how to fit a variational Generalised Bayes posterior, amortised over all hyperparameters. This may be sampled very efficiently at different hyperparameter values without refitting, and supports efficient robustness checks and hyperparameter selection. We show that there exist amortised normalising-flow architectures which are universal approximators. We test our approach on a relatively large-scale application of Generalised Bayesian Inference. The code is available online." />
+<meta property="og:description" content="In Bayesian inference prior hyperparameters are chosen subjectively or estimated using empirical Bayes methods. Generalised Bayesian Inference also has hyperparameters (the learning rate, and parameters of the loss). As part of the Generalised-Bayes workflow it is necessary to check sensitivity to the choice of hyperparameters, but running MCMC or fitting a variational approximation at each hyperparameter setting is impractical when there are more than a few hyperparameters. Simulation Based Inference has been used to amortise over data and hyperparameters and can be useful for Bayesian problems. However, there is no Simulation Based Inference for Generalised Bayes posteriors, as there is no generative model for the data. Working with a variational family parameterised by a normalising flow, we show how to fit a variational Generalised Bayes posterior, amortised over all hyperparameters. This may be sampled very efficiently at different hyperparameter values without refitting, and supports efficient robustness checks and hyperparameter selection. We show that there exist amortised normalising-flow architectures which are universal approximators. We test our approach on a relatively large-scale application of Generalised Bayesian Inference. The code is available online." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/12/24/AmortisingVariationalBayesianInferenceoverpriorhyperparameterswithaNormalisingFlow.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/12/24/AmortisingVariationalBayesianInferenceoverpriorhyperparameterswithaNormalisingFlow.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Amortising Variational Bayesian Inference over prior hyperparameters with a Normalising Flow" />
+<script type="application/ld+json">
+{"description":"In Bayesian inference prior hyperparameters are chosen subjectively or estimated using empirical Bayes methods. Generalised Bayesian Inference also has hyperparameters (the learning rate, and parameters of the loss). As part of the Generalised-Bayes workflow it is necessary to check sensitivity to the choice of hyperparameters, but running MCMC or fitting a variational approximation at each hyperparameter setting is impractical when there are more than a few hyperparameters. Simulation Based Inference has been used to amortise over data and hyperparameters and can be useful for Bayesian problems. However, there is no Simulation Based Inference for Generalised Bayes posteriors, as there is no generative model for the data. Working with a variational family parameterised by a normalising flow, we show how to fit a variational Generalised Bayes posterior, amortised over all hyperparameters. This may be sampled very efficiently at different hyperparameter values without refitting, and supports efficient robustness checks and hyperparameter selection. We show that there exist amortised normalising-flow architectures which are universal approximators. We test our approach on a relatively large-scale application of Generalised Bayesian Inference. The code is available online.","headline":"Amortising Variational Bayesian Inference over prior hyperparameters with a Normalising Flow","dateModified":"2024-12-24T00:00:00+00:00","datePublished":"2024-12-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/24/AmortisingVariationalBayesianInferenceoverpriorhyperparameterswithaNormalisingFlow.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/12/24/AmortisingVariationalBayesianInferenceoverpriorhyperparameterswithaNormalisingFlow.html","author":{"@type":"Person","name":"Laura Battaglia, Geoff Nicholls"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-24 00:00:00 +0000">12-24</time>
+  </p>
+  
+  <h1>Amortising Variational Bayesian Inference over prior hyperparameters with a Normalising Flow</h1>
+  <br>Laura Battaglia, Geoff Nicholls</h3>
+  <br> [stat.CO]
+
+  <p>In Bayesian inference prior hyperparameters are chosen subjectively or estimated using empirical Bayes methods. Generalised Bayesian Inference also has hyperparameters (the learning rate, and parameters of the loss). As part of the Generalised-Bayes workflow it is necessary to check sensitivity to the choice of hyperparameters, but running MCMC or fitting a variational approximation at each hyperparameter setting is impractical when there are more than a few hyperparameters. Simulation Based Inference has been used to amortise over data and hyperparameters and can be useful for Bayesian problems. However, there is no Simulation Based Inference for Generalised Bayes posteriors, as there is no generative model for the data. Working with a variational family parameterised by a normalising flow, we show how to fit a variational Generalised Bayes posterior, amortised over all hyperparameters. This may be sampled very efficiently at different hyperparameter values without refitting, and supports efficient robustness checks and hyperparameter selection. We show that there exist amortised normalising-flow architectures which are universal approximators. We test our approach on a relatively large-scale application of Generalised Bayesian Inference. The code is available online.</p>
+
+<p><a href="https://arxiv.org/abs/2412.16419">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
