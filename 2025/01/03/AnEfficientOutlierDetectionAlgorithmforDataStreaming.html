@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An Efficient Outlier Detection Algorithm for Data Streaming</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="An Efficient Outlier Detection Algorithm for Data Streaming" />
+<meta name="author" content="Rui Hu ,  Luc ,  Chen, Yiwei Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The nature of modern data is increasingly real-time, making outlier detection crucial in any data-related field, such as finance for fraud detection and healthcare for monitoring patient vitals. Traditional outlier detection methods, such as the Local Outlier Factor (LOF) algorithm, struggle with real-time data due to the need for extensive recalculations with each new data point, limiting their application in real-time environments. While the Incremental LOF (ILOF) algorithm has been developed to tackle the challenges of online anomaly detection, it remains computationally expensive when processing large streams of data points, and its detection performance may degrade after a certain threshold of points have streamed in. In this paper, we propose a novel approach to enhance the efficiency of LOF algorithms for online anomaly detection, named the Efficient Incremental LOF (EILOF) algorithm. The EILOF algorithm only computes the LOF scores of new points without altering the LOF scores of existing data points. Although exact LOF scores have not yet been computed for the existing points in the new algorithm, datasets often contain noise, and minor deviations in LOF score calculations do not necessarily degrade detection performance. In fact, such deviations can sometimes enhance outlier detection. We systematically tested this approach on both simulated and real-world datasets, demonstrating that EILOF outperforms ILOF as the volume of streaming data increases across various scenarios. The EILOF algorithm not only significantly reduces computational costs, but also systematically improves detection accuracy when the number of additional points increases compared to the ILOF algorithm." />
+<meta property="og:description" content="The nature of modern data is increasingly real-time, making outlier detection crucial in any data-related field, such as finance for fraud detection and healthcare for monitoring patient vitals. Traditional outlier detection methods, such as the Local Outlier Factor (LOF) algorithm, struggle with real-time data due to the need for extensive recalculations with each new data point, limiting their application in real-time environments. While the Incremental LOF (ILOF) algorithm has been developed to tackle the challenges of online anomaly detection, it remains computationally expensive when processing large streams of data points, and its detection performance may degrade after a certain threshold of points have streamed in. In this paper, we propose a novel approach to enhance the efficiency of LOF algorithms for online anomaly detection, named the Efficient Incremental LOF (EILOF) algorithm. The EILOF algorithm only computes the LOF scores of new points without altering the LOF scores of existing data points. Although exact LOF scores have not yet been computed for the existing points in the new algorithm, datasets often contain noise, and minor deviations in LOF score calculations do not necessarily degrade detection performance. In fact, such deviations can sometimes enhance outlier detection. We systematically tested this approach on both simulated and real-world datasets, demonstrating that EILOF outperforms ILOF as the volume of streaming data increases across various scenarios. The EILOF algorithm not only significantly reduces computational costs, but also systematically improves detection accuracy when the number of additional points increases compared to the ILOF algorithm." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/01/03/AnEfficientOutlierDetectionAlgorithmforDataStreaming.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/01/03/AnEfficientOutlierDetectionAlgorithmforDataStreaming.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="An Efficient Outlier Detection Algorithm for Data Streaming" />
+<script type="application/ld+json">
+{"description":"The nature of modern data is increasingly real-time, making outlier detection crucial in any data-related field, such as finance for fraud detection and healthcare for monitoring patient vitals. Traditional outlier detection methods, such as the Local Outlier Factor (LOF) algorithm, struggle with real-time data due to the need for extensive recalculations with each new data point, limiting their application in real-time environments. While the Incremental LOF (ILOF) algorithm has been developed to tackle the challenges of online anomaly detection, it remains computationally expensive when processing large streams of data points, and its detection performance may degrade after a certain threshold of points have streamed in. In this paper, we propose a novel approach to enhance the efficiency of LOF algorithms for online anomaly detection, named the Efficient Incremental LOF (EILOF) algorithm. The EILOF algorithm only computes the LOF scores of new points without altering the LOF scores of existing data points. Although exact LOF scores have not yet been computed for the existing points in the new algorithm, datasets often contain noise, and minor deviations in LOF score calculations do not necessarily degrade detection performance. In fact, such deviations can sometimes enhance outlier detection. We systematically tested this approach on both simulated and real-world datasets, demonstrating that EILOF outperforms ILOF as the volume of streaming data increases across various scenarios. The EILOF algorithm not only significantly reduces computational costs, but also systematically improves detection accuracy when the number of additional points increases compared to the ILOF algorithm.","headline":"An Efficient Outlier Detection Algorithm for Data Streaming","dateModified":"2025-01-03T00:00:00+00:00","datePublished":"2025-01-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/03/AnEfficientOutlierDetectionAlgorithmforDataStreaming.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/03/AnEfficientOutlierDetectionAlgorithmforDataStreaming.html","author":{"@type":"Person","name":"Rui Hu ,  Luc ,  Chen, Yiwei Wang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-03 00:00:00 +0000">01-03</time>
+  </p>
+  
+  <h1>An Efficient Outlier Detection Algorithm for Data Streaming</h1>
+  <br>Rui Hu ,  Luc ,  Chen, Yiwei Wang</h3>
+  <br> [stat.CO,stat.AP]
+
+  <p>The nature of modern data is increasingly real-time, making outlier detection crucial in any data-related field, such as finance for fraud detection and healthcare for monitoring patient vitals. Traditional outlier detection methods, such as the Local Outlier Factor (LOF) algorithm, struggle with real-time data due to the need for extensive recalculations with each new data point, limiting their application in real-time environments. While the Incremental LOF (ILOF) algorithm has been developed to tackle the challenges of online anomaly detection, it remains computationally expensive when processing large streams of data points, and its detection performance may degrade after a certain threshold of points have streamed in. In this paper, we propose a novel approach to enhance the efficiency of LOF algorithms for online anomaly detection, named the Efficient Incremental LOF (EILOF) algorithm. The EILOF algorithm only computes the LOF scores of new points without altering the LOF scores of existing data points. Although exact LOF scores have not yet been computed for the existing points in the new algorithm, datasets often contain noise, and minor deviations in LOF score calculations do not necessarily degrade detection performance. In fact, such deviations can sometimes enhance outlier detection. We systematically tested this approach on both simulated and real-world datasets, demonstrating that EILOF outperforms ILOF as the volume of streaming data increases across various scenarios. The EILOF algorithm not only significantly reduces computational costs, but also systematically improves detection accuracy when the number of additional points increases compared to the ILOF algorithm.</p>
+
+<p><a href="https://arxiv.org/abs/2501.01061">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
