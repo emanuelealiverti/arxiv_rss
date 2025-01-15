@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Closer Look at AUROC and AUPRC under Class Imbalance</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Closer Look at AUROC and AUPRC under Class Imbalance" />
+<meta name="author" content="Matthew B. A. McDermott , Haoran Zhang , Lasse Hyldig Hansen , Giovanni Angelotti , Jack Gallifant" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In machine learning (ML), a widespread claim is that the area under the precision-recall curve (AUPRC) is a superior metric for model comparison to the area under the receiver operating characteristic (AUROC) for tasks with class imbalance. This paper refutes this notion on two fronts. First, we theoretically characterize the behavior of AUROC and AUPRC in the presence of model mistakes, establishing clearly that AUPRC is not generally superior in cases of class imbalance. We further show that AUPRC can be a harmful metric as it can unduly favor model improvements in subpopulations with more frequent positive labels, heightening algorithmic disparities. Next, we empirically support our theory using experiments on both semi-synthetic and real-world fairness datasets. Prompted by these insights, we conduct a review of over 1.5 million scientific papers to understand the origin of this invalid claim, finding that it is often made without citation, misattributed to papers that do not argue this point, and aggressively over-generalized from source arguments. Our findings represent a dual contribution: a significant technical advancement in understanding the relationship between AUROC and AUPRC and a stark warning about unchecked assumptions in the ML community." />
+<meta property="og:description" content="In machine learning (ML), a widespread claim is that the area under the precision-recall curve (AUPRC) is a superior metric for model comparison to the area under the receiver operating characteristic (AUROC) for tasks with class imbalance. This paper refutes this notion on two fronts. First, we theoretically characterize the behavior of AUROC and AUPRC in the presence of model mistakes, establishing clearly that AUPRC is not generally superior in cases of class imbalance. We further show that AUPRC can be a harmful metric as it can unduly favor model improvements in subpopulations with more frequent positive labels, heightening algorithmic disparities. Next, we empirically support our theory using experiments on both semi-synthetic and real-world fairness datasets. Prompted by these insights, we conduct a review of over 1.5 million scientific papers to understand the origin of this invalid claim, finding that it is often made without citation, misattributed to papers that do not argue this point, and aggressively over-generalized from source arguments. Our findings represent a dual contribution: a significant technical advancement in understanding the relationship between AUROC and AUPRC and a stark warning about unchecked assumptions in the ML community." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/01/15/ACloserLookatAUROCandAUPRCunderClassImbalance.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/01/15/ACloserLookatAUROCandAUPRCunderClassImbalance.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Closer Look at AUROC and AUPRC under Class Imbalance" />
+<script type="application/ld+json">
+{"description":"In machine learning (ML), a widespread claim is that the area under the precision-recall curve (AUPRC) is a superior metric for model comparison to the area under the receiver operating characteristic (AUROC) for tasks with class imbalance. This paper refutes this notion on two fronts. First, we theoretically characterize the behavior of AUROC and AUPRC in the presence of model mistakes, establishing clearly that AUPRC is not generally superior in cases of class imbalance. We further show that AUPRC can be a harmful metric as it can unduly favor model improvements in subpopulations with more frequent positive labels, heightening algorithmic disparities. Next, we empirically support our theory using experiments on both semi-synthetic and real-world fairness datasets. Prompted by these insights, we conduct a review of over 1.5 million scientific papers to understand the origin of this invalid claim, finding that it is often made without citation, misattributed to papers that do not argue this point, and aggressively over-generalized from source arguments. Our findings represent a dual contribution: a significant technical advancement in understanding the relationship between AUROC and AUPRC and a stark warning about unchecked assumptions in the ML community.","headline":"A Closer Look at AUROC and AUPRC under Class Imbalance","dateModified":"2025-01-15T00:00:00+00:00","datePublished":"2025-01-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/15/ACloserLookatAUROCandAUPRCunderClassImbalance.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/15/ACloserLookatAUROCandAUPRCunderClassImbalance.html","author":{"@type":"Person","name":"Matthew B. A. McDermott , Haoran Zhang , Lasse Hyldig Hansen , Giovanni Angelotti , Jack Gallifant"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-15 00:00:00 +0000">01-15</time>
+  </p>
+  
+  <h1>A Closer Look at AUROC and AUPRC under Class Imbalance</h1>
+  <br>Matthew B. A. McDermott , Haoran Zhang , Lasse Hyldig Hansen , Giovanni Angelotti , Jack Gallifant</h3>
+  <br> [stat.ME]
+
+  <p>In machine learning (ML), a widespread claim is that the area under the precision-recall curve (AUPRC) is a superior metric for model comparison to the area under the receiver operating characteristic (AUROC) for tasks with class imbalance. This paper refutes this notion on two fronts. First, we theoretically characterize the behavior of AUROC and AUPRC in the presence of model mistakes, establishing clearly that AUPRC is not generally superior in cases of class imbalance. We further show that AUPRC can be a harmful metric as it can unduly favor model improvements in subpopulations with more frequent positive labels, heightening algorithmic disparities. Next, we empirically support our theory using experiments on both semi-synthetic and real-world fairness datasets. Prompted by these insights, we conduct a review of over 1.5 million scientific papers to understand the origin of this invalid claim, finding that it is often made without citation, misattributed to papers that do not argue this point, and aggressively over-generalized from source arguments. Our findings represent a dual contribution: a significant technical advancement in understanding the relationship between AUROC and AUPRC and a stark warning about unchecked assumptions in the ML community.</p>
+
+<p><a href="https://arxiv.org/abs/2401.06091">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
