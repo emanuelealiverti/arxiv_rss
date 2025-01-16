@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Modeling Neural Switching via Drift-Diffusion Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Modeling Neural Switching via Drift-Diffusion Models" />
+<meta name="author" content="Nicholas Marco, Jennifer M. Groh, Surya T. Tokdar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Neural encoding, or neural representation, is a field in neuroscience that focuses on characterizing how information from stimuli is encoded in the spiking activity of neurons. When more than one stimulus is present, a theory known as multiplexing posits that neurons temporally switch between encoding various stimuli, creating a fluctuating firing pattern. Here, we propose a new statistical framework to analyze rate fluctuations and discern whether neurons employ multiplexing as a means of encoding multiple stimuli. We propose a mechanistic approach to modeling multiplexing by constructing a non-Markovian endogenous state-space model. Specifically, we propose that multiplexing arises from competition between the stimuli, which are modeled as latent drift-diffusion processes. We propose a new MCMC algorithm for conducting posterior inference on similar types of state-space models, where typical state-space MCMC methods fail due to strong dependence between the parameters. In addition to a multiplexing-specific model, we develop alternative models that represent a wide class of alternative encoding theories and perform model comparison using WAIC to determine whether the data suggest the occurrence multiplexing over alternative theories of neural encoding. We show that WAIC is highly informative in model selection and discuss different considerations when using WAIC for general point process data and state-space models. Using the proposed framework, we provide evidence of multiplexing within the inferior colliculus and novel insight into the switching dynamics." />
+<meta property="og:description" content="Neural encoding, or neural representation, is a field in neuroscience that focuses on characterizing how information from stimuli is encoded in the spiking activity of neurons. When more than one stimulus is present, a theory known as multiplexing posits that neurons temporally switch between encoding various stimuli, creating a fluctuating firing pattern. Here, we propose a new statistical framework to analyze rate fluctuations and discern whether neurons employ multiplexing as a means of encoding multiple stimuli. We propose a mechanistic approach to modeling multiplexing by constructing a non-Markovian endogenous state-space model. Specifically, we propose that multiplexing arises from competition between the stimuli, which are modeled as latent drift-diffusion processes. We propose a new MCMC algorithm for conducting posterior inference on similar types of state-space models, where typical state-space MCMC methods fail due to strong dependence between the parameters. In addition to a multiplexing-specific model, we develop alternative models that represent a wide class of alternative encoding theories and perform model comparison using WAIC to determine whether the data suggest the occurrence multiplexing over alternative theories of neural encoding. We show that WAIC is highly informative in model selection and discuss different considerations when using WAIC for general point process data and state-space models. Using the proposed framework, we provide evidence of multiplexing within the inferior colliculus and novel insight into the switching dynamics." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/01/16/ModelingNeuralSwitchingviaDriftDiffusionModels.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/01/16/ModelingNeuralSwitchingviaDriftDiffusionModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Modeling Neural Switching via Drift-Diffusion Models" />
+<script type="application/ld+json">
+{"description":"Neural encoding, or neural representation, is a field in neuroscience that focuses on characterizing how information from stimuli is encoded in the spiking activity of neurons. When more than one stimulus is present, a theory known as multiplexing posits that neurons temporally switch between encoding various stimuli, creating a fluctuating firing pattern. Here, we propose a new statistical framework to analyze rate fluctuations and discern whether neurons employ multiplexing as a means of encoding multiple stimuli. We propose a mechanistic approach to modeling multiplexing by constructing a non-Markovian endogenous state-space model. Specifically, we propose that multiplexing arises from competition between the stimuli, which are modeled as latent drift-diffusion processes. We propose a new MCMC algorithm for conducting posterior inference on similar types of state-space models, where typical state-space MCMC methods fail due to strong dependence between the parameters. In addition to a multiplexing-specific model, we develop alternative models that represent a wide class of alternative encoding theories and perform model comparison using WAIC to determine whether the data suggest the occurrence multiplexing over alternative theories of neural encoding. We show that WAIC is highly informative in model selection and discuss different considerations when using WAIC for general point process data and state-space models. Using the proposed framework, we provide evidence of multiplexing within the inferior colliculus and novel insight into the switching dynamics.","headline":"Modeling Neural Switching via Drift-Diffusion Models","dateModified":"2025-01-16T00:00:00+00:00","datePublished":"2025-01-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/16/ModelingNeuralSwitchingviaDriftDiffusionModels.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/16/ModelingNeuralSwitchingviaDriftDiffusionModels.html","author":{"@type":"Person","name":"Nicholas Marco, Jennifer M. Groh, Surya T. Tokdar"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-16 00:00:00 +0000">01-16</time>
+  </p>
+  
+  <h1>Modeling Neural Switching via Drift-Diffusion Models</h1>
+  <br>Nicholas Marco, Jennifer M. Groh, Surya T. Tokdar</h3>
+  <br> [stat.ME]
+
+  <p>Neural encoding, or neural representation, is a field in neuroscience that focuses on characterizing how information from stimuli is encoded in the spiking activity of neurons. When more than one stimulus is present, a theory known as multiplexing posits that neurons temporally switch between encoding various stimuli, creating a fluctuating firing pattern. Here, we propose a new statistical framework to analyze rate fluctuations and discern whether neurons employ multiplexing as a means of encoding multiple stimuli. We propose a mechanistic approach to modeling multiplexing by constructing a non-Markovian endogenous state-space model. Specifically, we propose that multiplexing arises from competition between the stimuli, which are modeled as latent drift-diffusion processes. We propose a new MCMC algorithm for conducting posterior inference on similar types of state-space models, where typical state-space MCMC methods fail due to strong dependence between the parameters. In addition to a multiplexing-specific model, we develop alternative models that represent a wide class of alternative encoding theories and perform model comparison using WAIC to determine whether the data suggest the occurrence multiplexing over alternative theories of neural encoding. We show that WAIC is highly informative in model selection and discuss different considerations when using WAIC for general point process data and state-space models. Using the proposed framework, we provide evidence of multiplexing within the inferior colliculus and novel insight into the switching dynamics.</p>
+
+<p><a href="https://arxiv.org/abs/2410.00781">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
