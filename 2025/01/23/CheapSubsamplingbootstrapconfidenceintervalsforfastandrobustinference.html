@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Cheap Subsampling bootstrap confidence intervals for fast and robust inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Cheap Subsampling bootstrap confidence intervals for fast and robust inference" />
+<meta name="author" content="Johan Sebastian Ohlendorff, Anders Munch, Kathrine Kold S{\o}rensen, Thomas Alexander Gerds" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bootstrapping is often applied to get confidence limits for semiparametric inference of a target parameter in the presence of nuisance parameters. Bootstrapping with replacement can be computationally expensive and problematic when cross-validation is used in the estimation algorithm due to duplicate observations in the bootstrap samples. We provide a valid, fast, easy-to-implement subsampling bootstrap method for constructing confidence intervals for asymptotically linear estimators and discuss its application to semiparametric causal inference. Our method, inspired by the Cheap Bootstrap (Lam, 2022), leverages the quantiles of a t-distribution and has the desired coverage with few bootstrap replications. We show that the method is asymptotically valid if the subsample size is chosen appropriately as a function of the sample size. We illustrate our method with data from the LEADER trial (Marso et al., 2016), obtaining confidence intervals for a longitudinal targeted minimum loss-based estimator (van der Laan and Gruber, 2012). Through a series of empirical experiments, we also explore the impact of subsample size, sample size, and the number of bootstrap repetitions on the performance of the confidence interval." />
+<meta property="og:description" content="Bootstrapping is often applied to get confidence limits for semiparametric inference of a target parameter in the presence of nuisance parameters. Bootstrapping with replacement can be computationally expensive and problematic when cross-validation is used in the estimation algorithm due to duplicate observations in the bootstrap samples. We provide a valid, fast, easy-to-implement subsampling bootstrap method for constructing confidence intervals for asymptotically linear estimators and discuss its application to semiparametric causal inference. Our method, inspired by the Cheap Bootstrap (Lam, 2022), leverages the quantiles of a t-distribution and has the desired coverage with few bootstrap replications. We show that the method is asymptotically valid if the subsample size is chosen appropriately as a function of the sample size. We illustrate our method with data from the LEADER trial (Marso et al., 2016), obtaining confidence intervals for a longitudinal targeted minimum loss-based estimator (van der Laan and Gruber, 2012). Through a series of empirical experiments, we also explore the impact of subsample size, sample size, and the number of bootstrap repetitions on the performance of the confidence interval." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/01/23/CheapSubsamplingbootstrapconfidenceintervalsforfastandrobustinference.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/01/23/CheapSubsamplingbootstrapconfidenceintervalsforfastandrobustinference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Cheap Subsampling bootstrap confidence intervals for fast and robust inference" />
+<script type="application/ld+json">
+{"description":"Bootstrapping is often applied to get confidence limits for semiparametric inference of a target parameter in the presence of nuisance parameters. Bootstrapping with replacement can be computationally expensive and problematic when cross-validation is used in the estimation algorithm due to duplicate observations in the bootstrap samples. We provide a valid, fast, easy-to-implement subsampling bootstrap method for constructing confidence intervals for asymptotically linear estimators and discuss its application to semiparametric causal inference. Our method, inspired by the Cheap Bootstrap (Lam, 2022), leverages the quantiles of a t-distribution and has the desired coverage with few bootstrap replications. We show that the method is asymptotically valid if the subsample size is chosen appropriately as a function of the sample size. We illustrate our method with data from the LEADER trial (Marso et al., 2016), obtaining confidence intervals for a longitudinal targeted minimum loss-based estimator (van der Laan and Gruber, 2012). Through a series of empirical experiments, we also explore the impact of subsample size, sample size, and the number of bootstrap repetitions on the performance of the confidence interval.","headline":"Cheap Subsampling bootstrap confidence intervals for fast and robust inference","dateModified":"2025-01-23T00:00:00+00:00","datePublished":"2025-01-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/23/CheapSubsamplingbootstrapconfidenceintervalsforfastandrobustinference.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/23/CheapSubsamplingbootstrapconfidenceintervalsforfastandrobustinference.html","author":{"@type":"Person","name":"Johan Sebastian Ohlendorff, Anders Munch, Kathrine Kold S{\\o}rensen, Thomas Alexander Gerds"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-23 00:00:00 +0000">01-23</time>
+  </p>
+  
+  <h1>Cheap Subsampling bootstrap confidence intervals for fast and robust inference</h1>
+  <br>Johan Sebastian Ohlendorff, Anders Munch, Kathrine Kold S{\o}rensen, Thomas Alexander Gerds</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Bootstrapping is often applied to get confidence limits for semiparametric inference of a target parameter in the presence of nuisance parameters. Bootstrapping with replacement can be computationally expensive and problematic when cross-validation is used in the estimation algorithm due to duplicate observations in the bootstrap samples. We provide a valid, fast, easy-to-implement subsampling bootstrap method for constructing confidence intervals for asymptotically linear estimators and discuss its application to semiparametric causal inference. Our method, inspired by the Cheap Bootstrap (Lam, 2022), leverages the quantiles of a t-distribution and has the desired coverage with few bootstrap replications. We show that the method is asymptotically valid if the subsample size is chosen appropriately as a function of the sample size. We illustrate our method with data from the LEADER trial (Marso et al., 2016), obtaining confidence intervals for a longitudinal targeted minimum loss-based estimator (van der Laan and Gruber, 2012). Through a series of empirical experiments, we also explore the impact of subsample size, sample size, and the number of bootstrap repetitions on the performance of the confidence interval.</p>
+
+<p><a href="https://arxiv.org/abs/2501.10289">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
