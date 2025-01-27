@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A decomposition of Fisher's information to inform sample size for developing fair and precise clinical prediction models -- part 1: binary outcomes</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A decomposition of Fisher’s information to inform sample size for developing fair and precise clinical prediction models – part 1: binary outcomes" />
+<meta name="author" content="Richard D Riley, Gary S Collins, Rebecca Whittle, Lucinda Archer, Kym IE Snell, Paula Dhiman, Laura Kirton, Amardeep Legha, Xiaoxuan Liu, Alastair Denniston, Frank E Harrell Jr, Laure Wynants, Glen P Martin, Joie Ensor" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When developing a clinical prediction model, the sample size of the development dataset is a key consideration. Small sample sizes lead to greater concerns of overfitting, instability, poor performance and lack of fairness. Previous research has outlined minimum sample size calculations to minimise overfitting and precisely estimate the overall risk. However even when meeting these criteria, the uncertainty (instability) in individual-level risk estimates may be considerable. In this article we propose how to examine and calculate the sample size required for developing a model with acceptably precise individual-level risk estimates to inform decisions and improve fairness. We outline a five-step process to be used before data collection or when an existing dataset is available. It requires researchers to specify the overall risk in the target population, the (anticipated) distribution of key predictors in the model, and an assumed ‘core model’ either specified directly (i.e., a logistic regression equation is provided) or based on specified C-statistic and relative effects of (standardised) predictors. We produce closed-form solutions that decompose the variance of an individual’s risk estimate into Fisher’s unit information matrix, predictor values and total sample size; this allows researchers to quickly calculate and examine individual-level uncertainty interval widths and classification instability for specified sample sizes. Such information can be presented to key stakeholders (e.g., health professionals, patients, funders) using prediction and classification instability plots to help identify the (target) sample size required to improve trust, reliability and fairness in individual predictions. Our proposal is implemented in software module pmstabilityss. We provide real examples and emphasise the importance of clinical context including any risk thresholds for decision making." />
+<meta property="og:description" content="When developing a clinical prediction model, the sample size of the development dataset is a key consideration. Small sample sizes lead to greater concerns of overfitting, instability, poor performance and lack of fairness. Previous research has outlined minimum sample size calculations to minimise overfitting and precisely estimate the overall risk. However even when meeting these criteria, the uncertainty (instability) in individual-level risk estimates may be considerable. In this article we propose how to examine and calculate the sample size required for developing a model with acceptably precise individual-level risk estimates to inform decisions and improve fairness. We outline a five-step process to be used before data collection or when an existing dataset is available. It requires researchers to specify the overall risk in the target population, the (anticipated) distribution of key predictors in the model, and an assumed ‘core model’ either specified directly (i.e., a logistic regression equation is provided) or based on specified C-statistic and relative effects of (standardised) predictors. We produce closed-form solutions that decompose the variance of an individual’s risk estimate into Fisher’s unit information matrix, predictor values and total sample size; this allows researchers to quickly calculate and examine individual-level uncertainty interval widths and classification instability for specified sample sizes. Such information can be presented to key stakeholders (e.g., health professionals, patients, funders) using prediction and classification instability plots to help identify the (target) sample size required to improve trust, reliability and fairness in individual predictions. Our proposal is implemented in software module pmstabilityss. We provide real examples and emphasise the importance of clinical context including any risk thresholds for decision making." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/01/27/AdecompositionofFishersinformationtoinformsamplesizefordevelopingfairandpreciseclinicalpredictionmodelspart1binaryoutcomes.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/01/27/AdecompositionofFishersinformationtoinformsamplesizefordevelopingfairandpreciseclinicalpredictionmodelspart1binaryoutcomes.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A decomposition of Fisher’s information to inform sample size for developing fair and precise clinical prediction models – part 1: binary outcomes" />
+<script type="application/ld+json">
+{"description":"When developing a clinical prediction model, the sample size of the development dataset is a key consideration. Small sample sizes lead to greater concerns of overfitting, instability, poor performance and lack of fairness. Previous research has outlined minimum sample size calculations to minimise overfitting and precisely estimate the overall risk. However even when meeting these criteria, the uncertainty (instability) in individual-level risk estimates may be considerable. In this article we propose how to examine and calculate the sample size required for developing a model with acceptably precise individual-level risk estimates to inform decisions and improve fairness. We outline a five-step process to be used before data collection or when an existing dataset is available. It requires researchers to specify the overall risk in the target population, the (anticipated) distribution of key predictors in the model, and an assumed ‘core model’ either specified directly (i.e., a logistic regression equation is provided) or based on specified C-statistic and relative effects of (standardised) predictors. We produce closed-form solutions that decompose the variance of an individual’s risk estimate into Fisher’s unit information matrix, predictor values and total sample size; this allows researchers to quickly calculate and examine individual-level uncertainty interval widths and classification instability for specified sample sizes. Such information can be presented to key stakeholders (e.g., health professionals, patients, funders) using prediction and classification instability plots to help identify the (target) sample size required to improve trust, reliability and fairness in individual predictions. Our proposal is implemented in software module pmstabilityss. We provide real examples and emphasise the importance of clinical context including any risk thresholds for decision making.","headline":"A decomposition of Fisher’s information to inform sample size for developing fair and precise clinical prediction models – part 1: binary outcomes","dateModified":"2025-01-27T00:00:00+00:00","datePublished":"2025-01-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/27/AdecompositionofFishersinformationtoinformsamplesizefordevelopingfairandpreciseclinicalpredictionmodelspart1binaryoutcomes.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/27/AdecompositionofFishersinformationtoinformsamplesizefordevelopingfairandpreciseclinicalpredictionmodelspart1binaryoutcomes.html","author":{"@type":"Person","name":"Richard D Riley, Gary S Collins, Rebecca Whittle, Lucinda Archer, Kym IE Snell, Paula Dhiman, Laura Kirton, Amardeep Legha, Xiaoxuan Liu, Alastair Denniston, Frank E Harrell Jr, Laure Wynants, Glen P Martin, Joie Ensor"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-27 00:00:00 +0000">01-27</time>
+  </p>
+  
+  <h1>A decomposition of Fisher's information to inform sample size for developing fair and precise clinical prediction models -- part 1: binary outcomes</h1>
+  <br>Richard D Riley, Gary S Collins, Rebecca Whittle, Lucinda Archer, Kym IE Snell, Paula Dhiman, Laura Kirton, Amardeep Legha, Xiaoxuan Liu, Alastair Denniston, Frank E Harrell Jr, Laure Wynants, Glen P Martin, Joie Ensor</h3>
+  <br> [stat.ME]
+
+  <p>When developing a clinical prediction model, the sample size of the development dataset is a key consideration. Small sample sizes lead to greater concerns of overfitting, instability, poor performance and lack of fairness. Previous research has outlined minimum sample size calculations to minimise overfitting and precisely estimate the overall risk. However even when meeting these criteria, the uncertainty (instability) in individual-level risk estimates may be considerable. In this article we propose how to examine and calculate the sample size required for developing a model with acceptably precise individual-level risk estimates to inform decisions and improve fairness. We outline a five-step process to be used before data collection or when an existing dataset is available. It requires researchers to specify the overall risk in the target population, the (anticipated) distribution of key predictors in the model, and an assumed ‘core model’ either specified directly (i.e., a logistic regression equation is provided) or based on specified C-statistic and relative effects of (standardised) predictors. We produce closed-form solutions that decompose the variance of an individual’s risk estimate into Fisher’s unit information matrix, predictor values and total sample size; this allows researchers to quickly calculate and examine individual-level uncertainty interval widths and classification instability for specified sample sizes. Such information can be presented to key stakeholders (e.g., health professionals, patients, funders) using prediction and classification instability plots to help identify the (target) sample size required to improve trust, reliability and fairness in individual predictions. Our proposal is implemented in software module pmstabilityss. We provide real examples and emphasise the importance of clinical context including any risk thresholds for decision making.</p>
+
+<p><a href="https://arxiv.org/abs/2407.09293">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
