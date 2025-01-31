@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fast fitting of phylogenetic mixed-effects models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Fast fitting of phylogenetic mixed-effects models" />
+<meta name="author" content="Bert van der Veen, Robert Brian O'Hara" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Mixed-effects models are among the most commonly used statistical methods for the exploration of multispecies data. In recent years, also Joint Species Distribution Models and Generalized Linear Latent Variale Models have gained in popularity when the goal is to incorporate residual covariation between species that cannot be explained due to measured environmental covariates. Few software implementations of such models exist that can additionally incorporate phylogenetic information, and those that exist tend to utilize Markov chain Monte Carlo methods for estimation, so that model fitting takes a long time. In this article we develop new methods for quickly and flexibly fitting phylogenetic mixed-effects models, potentially incorporating residual covariation between species using latent variables, with the possibility to estimate the strength of phylogenetic structuring in species responses per environmental covariate, and while incorporating correlation between different covariate effects. By combining Variational approximations, a sparse approximation to the phylogenetic precision matrix, and parallel computation, phylogenetic mixed-effects models can be fitted much more quickly than the current state-of-the-art. Two simulation studies demonstrate that the proposed combination of approximations is fast and enjoys high accuracy. We explore sensitivity of the approximation to the ordering of species with a real world dataset of wood-decaying fungi." />
+<meta property="og:description" content="Mixed-effects models are among the most commonly used statistical methods for the exploration of multispecies data. In recent years, also Joint Species Distribution Models and Generalized Linear Latent Variale Models have gained in popularity when the goal is to incorporate residual covariation between species that cannot be explained due to measured environmental covariates. Few software implementations of such models exist that can additionally incorporate phylogenetic information, and those that exist tend to utilize Markov chain Monte Carlo methods for estimation, so that model fitting takes a long time. In this article we develop new methods for quickly and flexibly fitting phylogenetic mixed-effects models, potentially incorporating residual covariation between species using latent variables, with the possibility to estimate the strength of phylogenetic structuring in species responses per environmental covariate, and while incorporating correlation between different covariate effects. By combining Variational approximations, a sparse approximation to the phylogenetic precision matrix, and parallel computation, phylogenetic mixed-effects models can be fitted much more quickly than the current state-of-the-art. Two simulation studies demonstrate that the proposed combination of approximations is fast and enjoys high accuracy. We explore sensitivity of the approximation to the ordering of species with a real world dataset of wood-decaying fungi." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/01/31/Fastfittingofphylogeneticmixedeffectsmodels.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/01/31/Fastfittingofphylogeneticmixedeffectsmodels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-31T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fast fitting of phylogenetic mixed-effects models" />
+<script type="application/ld+json">
+{"description":"Mixed-effects models are among the most commonly used statistical methods for the exploration of multispecies data. In recent years, also Joint Species Distribution Models and Generalized Linear Latent Variale Models have gained in popularity when the goal is to incorporate residual covariation between species that cannot be explained due to measured environmental covariates. Few software implementations of such models exist that can additionally incorporate phylogenetic information, and those that exist tend to utilize Markov chain Monte Carlo methods for estimation, so that model fitting takes a long time. In this article we develop new methods for quickly and flexibly fitting phylogenetic mixed-effects models, potentially incorporating residual covariation between species using latent variables, with the possibility to estimate the strength of phylogenetic structuring in species responses per environmental covariate, and while incorporating correlation between different covariate effects. By combining Variational approximations, a sparse approximation to the phylogenetic precision matrix, and parallel computation, phylogenetic mixed-effects models can be fitted much more quickly than the current state-of-the-art. Two simulation studies demonstrate that the proposed combination of approximations is fast and enjoys high accuracy. We explore sensitivity of the approximation to the ordering of species with a real world dataset of wood-decaying fungi.","headline":"Fast fitting of phylogenetic mixed-effects models","dateModified":"2025-01-31T00:00:00+00:00","datePublished":"2025-01-31T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/31/Fastfittingofphylogeneticmixedeffectsmodels.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/01/31/Fastfittingofphylogeneticmixedeffectsmodels.html","author":{"@type":"Person","name":"Bert van der Veen, Robert Brian O'Hara"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-31 00:00:00 +0000">01-31</time>
+  </p>
+  
+  <h1>Fast fitting of phylogenetic mixed-effects models</h1>
+  <br>Bert van der Veen, Robert Brian O'Hara</h3>
+  <br> [stat.CO]
+
+  <p>Mixed-effects models are among the most commonly used statistical methods for the exploration of multispecies data. In recent years, also Joint Species Distribution Models and Generalized Linear Latent Variale Models have gained in popularity when the goal is to incorporate residual covariation between species that cannot be explained due to measured environmental covariates. Few software implementations of such models exist that can additionally incorporate phylogenetic information, and those that exist tend to utilize Markov chain Monte Carlo methods for estimation, so that model fitting takes a long time. In this article we develop new methods for quickly and flexibly fitting phylogenetic mixed-effects models, potentially incorporating residual covariation between species using latent variables, with the possibility to estimate the strength of phylogenetic structuring in species responses per environmental covariate, and while incorporating correlation between different covariate effects. By combining Variational approximations, a sparse approximation to the phylogenetic precision matrix, and parallel computation, phylogenetic mixed-effects models can be fitted much more quickly than the current state-of-the-art. Two simulation studies demonstrate that the proposed combination of approximations is fast and enjoys high accuracy. We explore sensitivity of the approximation to the ordering of species with a real world dataset of wood-decaying fungi.</p>
+
+<p><a href="https://arxiv.org/abs/2408.05333">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
