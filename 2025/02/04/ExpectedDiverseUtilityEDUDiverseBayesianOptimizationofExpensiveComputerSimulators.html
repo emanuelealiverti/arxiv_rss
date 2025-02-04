@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Expected Diverse Utility (EDU): Diverse Bayesian Optimization of Expensive Computer Simulators</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Expected Diverse Utility (EDU): Diverse Bayesian Optimization of Expensive Computer Simulators" />
+<meta name="author" content="John Joshua Miller, Simon Mak, Benny Sun, Sai Ranjeet Narayanan, Suo Yang, Zongxuan Sun, Kenneth S. Kim, Chol-Bum Mike Kweon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The optimization of expensive black-box simulators arises in a myriad of modern scientific and engineering applications. Bayesian optimization provides an appealing solution, by leveraging a fitted surrogate model to guide the selection of subsequent simulator evaluations. In practice, however, the objective is often not to obtain a single good solution, but rather a basket&#39;&#39; of good solutions from which users can choose for downstream decision-making. This need arises in our motivating application for real-time control of internal combustion engines for flight propulsion, where a diverse set of control strategies is essential for stable flight control. There has been little work on this front for Bayesian optimization. We thus propose a new Expected Diverse Utility (EDU) method that searches for diverse$\epsilon$-optimal’’ solutions: locally-optimal solutions within a tolerance level $\epsilon &gt; 0$ from a global optimum. We show that EDU yields a closed-form acquisition function under a Gaussian process surrogate model, which facilitates efficient sequential queries via automatic differentiation. This closed form further reveals a novel exploration-exploitation-diversity trade-off, which incorporates the desired diversity property within the well-known exploration-exploitation trade-off. We demonstrate the improvement of EDU over existing methods in a suite of numerical experiments, then explore the EDU in two applications on rover trajectory optimization and engine control for flight propulsion." />
+<meta property="og:description" content="The optimization of expensive black-box simulators arises in a myriad of modern scientific and engineering applications. Bayesian optimization provides an appealing solution, by leveraging a fitted surrogate model to guide the selection of subsequent simulator evaluations. In practice, however, the objective is often not to obtain a single good solution, but rather a basket&#39;&#39; of good solutions from which users can choose for downstream decision-making. This need arises in our motivating application for real-time control of internal combustion engines for flight propulsion, where a diverse set of control strategies is essential for stable flight control. There has been little work on this front for Bayesian optimization. We thus propose a new Expected Diverse Utility (EDU) method that searches for diverse$\epsilon$-optimal’’ solutions: locally-optimal solutions within a tolerance level $\epsilon &gt; 0$ from a global optimum. We show that EDU yields a closed-form acquisition function under a Gaussian process surrogate model, which facilitates efficient sequential queries via automatic differentiation. This closed form further reveals a novel exploration-exploitation-diversity trade-off, which incorporates the desired diversity property within the well-known exploration-exploitation trade-off. We demonstrate the improvement of EDU over existing methods in a suite of numerical experiments, then explore the EDU in two applications on rover trajectory optimization and engine control for flight propulsion." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/02/04/ExpectedDiverseUtilityEDUDiverseBayesianOptimizationofExpensiveComputerSimulators.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/02/04/ExpectedDiverseUtilityEDUDiverseBayesianOptimizationofExpensiveComputerSimulators.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Expected Diverse Utility (EDU): Diverse Bayesian Optimization of Expensive Computer Simulators" />
+<script type="application/ld+json">
+{"description":"The optimization of expensive black-box simulators arises in a myriad of modern scientific and engineering applications. Bayesian optimization provides an appealing solution, by leveraging a fitted surrogate model to guide the selection of subsequent simulator evaluations. In practice, however, the objective is often not to obtain a single good solution, but rather a basket&#39;&#39; of good solutions from which users can choose for downstream decision-making. This need arises in our motivating application for real-time control of internal combustion engines for flight propulsion, where a diverse set of control strategies is essential for stable flight control. There has been little work on this front for Bayesian optimization. We thus propose a new Expected Diverse Utility (EDU) method that searches for diverse$\\epsilon$-optimal’’ solutions: locally-optimal solutions within a tolerance level $\\epsilon &gt; 0$ from a global optimum. We show that EDU yields a closed-form acquisition function under a Gaussian process surrogate model, which facilitates efficient sequential queries via automatic differentiation. This closed form further reveals a novel exploration-exploitation-diversity trade-off, which incorporates the desired diversity property within the well-known exploration-exploitation trade-off. We demonstrate the improvement of EDU over existing methods in a suite of numerical experiments, then explore the EDU in two applications on rover trajectory optimization and engine control for flight propulsion.","headline":"Expected Diverse Utility (EDU): Diverse Bayesian Optimization of Expensive Computer Simulators","dateModified":"2025-02-04T00:00:00+00:00","datePublished":"2025-02-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/04/ExpectedDiverseUtilityEDUDiverseBayesianOptimizationofExpensiveComputerSimulators.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/04/ExpectedDiverseUtilityEDUDiverseBayesianOptimizationofExpensiveComputerSimulators.html","author":{"@type":"Person","name":"John Joshua Miller, Simon Mak, Benny Sun, Sai Ranjeet Narayanan, Suo Yang, Zongxuan Sun, Kenneth S. Kim, Chol-Bum Mike Kweon"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-04 00:00:00 +0000">02-04</time>
+  </p>
+  
+  <h1>Expected Diverse Utility (EDU): Diverse Bayesian Optimization of Expensive Computer Simulators</h1>
+  <br>John Joshua Miller, Simon Mak, Benny Sun, Sai Ranjeet Narayanan, Suo Yang, Zongxuan Sun, Kenneth S. Kim, Chol-Bum Mike Kweon</h3>
+  <br> [stat.AP,stat.ML]
+
+  <p>The optimization of expensive black-box simulators arises in a myriad of modern scientific and engineering applications. Bayesian optimization provides an appealing solution, by leveraging a fitted surrogate model to guide the selection of subsequent simulator evaluations. In practice, however, the objective is often not to obtain a single good solution, but rather a <code class="language-plaintext highlighter-rouge">basket'' of good solutions from which users can choose for downstream decision-making. This need arises in our motivating application for real-time control of internal combustion engines for flight propulsion, where a diverse set of control strategies is essential for stable flight control. There has been little work on this front for Bayesian optimization. We thus propose a new Expected Diverse Utility (EDU) method that searches for diverse</code>$\epsilon$-optimal’’ solutions: locally-optimal solutions within a tolerance level $\epsilon &gt; 0$ from a global optimum. We show that EDU yields a closed-form acquisition function under a Gaussian process surrogate model, which facilitates efficient sequential queries via automatic differentiation. This closed form further reveals a novel exploration-exploitation-diversity trade-off, which incorporates the desired diversity property within the well-known exploration-exploitation trade-off. We demonstrate the improvement of EDU over existing methods in a suite of numerical experiments, then explore the EDU in two applications on rover trajectory optimization and engine control for flight propulsion.</p>
+
+<p><a href="https://arxiv.org/abs/2410.01196">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

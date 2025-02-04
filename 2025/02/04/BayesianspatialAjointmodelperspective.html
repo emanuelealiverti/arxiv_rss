@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian spatial+: A joint model perspective</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bayesian spatial+: A joint model perspective" />
+<meta name="author" content="Isa Marques, Paul F. V. Wiemann" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Spatial confounding is a common issue in spatial regression models, occurring when spatially indexed covariates that model the mean of the response are correlated with a spatial effect included in the model. This dependence, particularly at high spatial frequencies combined with smoothing, can introduce bias in the regression coefficient estimates. The spatial+ framework is a widely used two-stage frequentist approach to mitigate spatial confounding by explicitly modeling and removing the spatial structure in the confounding covariate, replacing it with residuals in the second-stage model for the response. However, frequentist spatial+ does not propagate uncertainty from the first-stage estimation to the second stage, and inference can be cumbersome in a frequentist setting. In contrast, a Bayesian joint modeling framework inherently propagates uncertainty between stages and allows for direct inference on the model parameters. Despite its advantages, the original spatial+ method does not ensure the residuals and spatial effects in the second-stage model are free of shared high spatial frequencies without additional assumptions. To address this, we propose a novel joint prior for the smoothness parameters of the spatial effects that mitigates this issue while preserving the predictive power of the model. We demonstrate the efficacy of our approach through simulation studies and real-world applications." />
+<meta property="og:description" content="Spatial confounding is a common issue in spatial regression models, occurring when spatially indexed covariates that model the mean of the response are correlated with a spatial effect included in the model. This dependence, particularly at high spatial frequencies combined with smoothing, can introduce bias in the regression coefficient estimates. The spatial+ framework is a widely used two-stage frequentist approach to mitigate spatial confounding by explicitly modeling and removing the spatial structure in the confounding covariate, replacing it with residuals in the second-stage model for the response. However, frequentist spatial+ does not propagate uncertainty from the first-stage estimation to the second stage, and inference can be cumbersome in a frequentist setting. In contrast, a Bayesian joint modeling framework inherently propagates uncertainty between stages and allows for direct inference on the model parameters. Despite its advantages, the original spatial+ method does not ensure the residuals and spatial effects in the second-stage model are free of shared high spatial frequencies without additional assumptions. To address this, we propose a novel joint prior for the smoothness parameters of the spatial effects that mitigates this issue while preserving the predictive power of the model. We demonstrate the efficacy of our approach through simulation studies and real-world applications." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/02/04/BayesianspatialAjointmodelperspective.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/02/04/BayesianspatialAjointmodelperspective.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bayesian spatial+: A joint model perspective" />
+<script type="application/ld+json">
+{"description":"Spatial confounding is a common issue in spatial regression models, occurring when spatially indexed covariates that model the mean of the response are correlated with a spatial effect included in the model. This dependence, particularly at high spatial frequencies combined with smoothing, can introduce bias in the regression coefficient estimates. The spatial+ framework is a widely used two-stage frequentist approach to mitigate spatial confounding by explicitly modeling and removing the spatial structure in the confounding covariate, replacing it with residuals in the second-stage model for the response. However, frequentist spatial+ does not propagate uncertainty from the first-stage estimation to the second stage, and inference can be cumbersome in a frequentist setting. In contrast, a Bayesian joint modeling framework inherently propagates uncertainty between stages and allows for direct inference on the model parameters. Despite its advantages, the original spatial+ method does not ensure the residuals and spatial effects in the second-stage model are free of shared high spatial frequencies without additional assumptions. To address this, we propose a novel joint prior for the smoothness parameters of the spatial effects that mitigates this issue while preserving the predictive power of the model. We demonstrate the efficacy of our approach through simulation studies and real-world applications.","headline":"Bayesian spatial+: A joint model perspective","dateModified":"2025-02-04T00:00:00+00:00","datePublished":"2025-02-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/04/BayesianspatialAjointmodelperspective.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/04/BayesianspatialAjointmodelperspective.html","author":{"@type":"Person","name":"Isa Marques, Paul F. V. Wiemann"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-04 00:00:00 +0000">02-04</time>
+  </p>
+  
+  <h1>Bayesian spatial+: A joint model perspective</h1>
+  <br>Isa Marques, Paul F. V. Wiemann</h3>
+  <br> [stat.ME]
+
+  <p>Spatial confounding is a common issue in spatial regression models, occurring when spatially indexed covariates that model the mean of the response are correlated with a spatial effect included in the model. This dependence, particularly at high spatial frequencies combined with smoothing, can introduce bias in the regression coefficient estimates. The spatial+ framework is a widely used two-stage frequentist approach to mitigate spatial confounding by explicitly modeling and removing the spatial structure in the confounding covariate, replacing it with residuals in the second-stage model for the response. However, frequentist spatial+ does not propagate uncertainty from the first-stage estimation to the second stage, and inference can be cumbersome in a frequentist setting. In contrast, a Bayesian joint modeling framework inherently propagates uncertainty between stages and allows for direct inference on the model parameters. Despite its advantages, the original spatial+ method does not ensure the residuals and spatial effects in the second-stage model are free of shared high spatial frequencies without additional assumptions. To address this, we propose a novel joint prior for the smoothness parameters of the spatial effects that mitigates this issue while preserving the predictive power of the model. We demonstrate the efficacy of our approach through simulation studies and real-world applications.</p>
+
+<p><a href="https://arxiv.org/abs/2309.05496">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
