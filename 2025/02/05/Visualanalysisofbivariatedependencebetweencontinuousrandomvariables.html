@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Visual analysis of bivariate dependence between continuous random variables</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Visual analysis of bivariate dependence between continuous random variables" />
+<meta name="author" content="Arturo Erdely, Manuel Rubio-Sanchez" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Scatter plots are widely recognized as fundamental tools for illustrating the relationship between two numerical variables. Despite this, based on solid theoretical foundations, scatter plots generated from pairs of continuous random variables may not serve as reliable tools for assessing dependence. Sklar’s Theorem implies that scatter plots created from ranked data are preferable for such analysis as they exclusively convey information pertinent to dependence. This is in stark contrast to conventional scatter plots, which also encapsulate information about the variables’ marginal distributions. Such additional information is extraneous to dependence analysis and can obscure the visual interpretation of the variables’ relationship. In this article, we delve into the theoretical underpinnings of these ranked data scatter plots, hereafter referred to as rank plots. We offer insights into interpreting the information they reveal and examine their connections with various association measures, including Pearson’s and Spearman’s correlation coefficients, as well as Schweizer-Wolff’s measure of dependence. Furthermore, we introduce a novel graphical combination for dependence analysis, termed a dplot, and demonstrate its efficacy through real data examples." />
+<meta property="og:description" content="Scatter plots are widely recognized as fundamental tools for illustrating the relationship between two numerical variables. Despite this, based on solid theoretical foundations, scatter plots generated from pairs of continuous random variables may not serve as reliable tools for assessing dependence. Sklar’s Theorem implies that scatter plots created from ranked data are preferable for such analysis as they exclusively convey information pertinent to dependence. This is in stark contrast to conventional scatter plots, which also encapsulate information about the variables’ marginal distributions. Such additional information is extraneous to dependence analysis and can obscure the visual interpretation of the variables’ relationship. In this article, we delve into the theoretical underpinnings of these ranked data scatter plots, hereafter referred to as rank plots. We offer insights into interpreting the information they reveal and examine their connections with various association measures, including Pearson’s and Spearman’s correlation coefficients, as well as Schweizer-Wolff’s measure of dependence. Furthermore, we introduce a novel graphical combination for dependence analysis, termed a dplot, and demonstrate its efficacy through real data examples." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/02/05/Visualanalysisofbivariatedependencebetweencontinuousrandomvariables.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/02/05/Visualanalysisofbivariatedependencebetweencontinuousrandomvariables.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Visual analysis of bivariate dependence between continuous random variables" />
+<script type="application/ld+json">
+{"description":"Scatter plots are widely recognized as fundamental tools for illustrating the relationship between two numerical variables. Despite this, based on solid theoretical foundations, scatter plots generated from pairs of continuous random variables may not serve as reliable tools for assessing dependence. Sklar’s Theorem implies that scatter plots created from ranked data are preferable for such analysis as they exclusively convey information pertinent to dependence. This is in stark contrast to conventional scatter plots, which also encapsulate information about the variables’ marginal distributions. Such additional information is extraneous to dependence analysis and can obscure the visual interpretation of the variables’ relationship. In this article, we delve into the theoretical underpinnings of these ranked data scatter plots, hereafter referred to as rank plots. We offer insights into interpreting the information they reveal and examine their connections with various association measures, including Pearson’s and Spearman’s correlation coefficients, as well as Schweizer-Wolff’s measure of dependence. Furthermore, we introduce a novel graphical combination for dependence analysis, termed a dplot, and demonstrate its efficacy through real data examples.","headline":"Visual analysis of bivariate dependence between continuous random variables","dateModified":"2025-02-05T00:00:00+00:00","datePublished":"2025-02-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/05/Visualanalysisofbivariatedependencebetweencontinuousrandomvariables.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/05/Visualanalysisofbivariatedependencebetweencontinuousrandomvariables.html","author":{"@type":"Person","name":"Arturo Erdely, Manuel Rubio-Sanchez"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-05 00:00:00 +0000">02-05</time>
+  </p>
+  
+  <h1>Visual analysis of bivariate dependence between continuous random variables</h1>
+  <br>Arturo Erdely, Manuel Rubio-Sanchez</h3>
+  <br> [stat.ME]
+
+  <p>Scatter plots are widely recognized as fundamental tools for illustrating the relationship between two numerical variables. Despite this, based on solid theoretical foundations, scatter plots generated from pairs of continuous random variables may not serve as reliable tools for assessing dependence. Sklar’s Theorem implies that scatter plots created from ranked data are preferable for such analysis as they exclusively convey information pertinent to dependence. This is in stark contrast to conventional scatter plots, which also encapsulate information about the variables’ marginal distributions. Such additional information is extraneous to dependence analysis and can obscure the visual interpretation of the variables’ relationship. In this article, we delve into the theoretical underpinnings of these ranked data scatter plots, hereafter referred to as rank plots. We offer insights into interpreting the information they reveal and examine their connections with various association measures, including Pearson’s and Spearman’s correlation coefficients, as well as Schweizer-Wolff’s measure of dependence. Furthermore, we introduce a novel graphical combination for dependence analysis, termed a dplot, and demonstrate its efficacy through real data examples.</p>
+
+<p><a href="https://arxiv.org/abs/2404.00820">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
