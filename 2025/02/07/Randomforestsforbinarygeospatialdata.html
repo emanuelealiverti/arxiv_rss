@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Random forests for binary geospatial data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Random forests for binary geospatial data" />
+<meta name="author" content="Arkajyoti Saha, Abhirup Datta" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The manuscript develops new method and theory for non-linear regression for binary dependent data using random forests. Existing implementations of random forests for binary data cannot explicitly account for data correlation common in geospatial and time-series settings. For continuous outcomes, recent work has extended random forests (RF) to RF-GLS that incorporate spatial covariance using the generalized least squares (GLS) loss. However, adoption of this idea for binary data is challenging due to the use of the Gini impurity measure in classification trees, which has no known extension to model dependence. We show that for binary data, the GLS loss is also an extension of the Gini impurity measure, as the latter is exactly equivalent to the ordinary least squares (OLS) loss. This justifies using RF-GLS for non-parametric mean function estimation for binary dependent data. We then consider the special case of generalized mixed effects models, the traditional statistical model for binary geospatial data, which models the spatial random effects as a Gaussian process (GP). We propose a novel link-inversion technique that embeds the RF-GLS estimate of the mean function from the first step within the generalized mixed effects model framework, enabling estimation of non-linear covariate effects and offering spatial predictions. We establish consistency of our method, RF-GP, for both mean function and covariate effect estimation. The theory holds for a general class of stationary absolutely regular dependent processes that includes common choices like Gaussian processes with Mat&#39;ern or compactly supported covariances and autoregressive processes. The theory relaxes the common assumption of additive mean functions and accounts for the non-linear link. We demonstrate that RF-GP outperforms competing methods for estimation and prediction in both simulated and real-world data." />
+<meta property="og:description" content="The manuscript develops new method and theory for non-linear regression for binary dependent data using random forests. Existing implementations of random forests for binary data cannot explicitly account for data correlation common in geospatial and time-series settings. For continuous outcomes, recent work has extended random forests (RF) to RF-GLS that incorporate spatial covariance using the generalized least squares (GLS) loss. However, adoption of this idea for binary data is challenging due to the use of the Gini impurity measure in classification trees, which has no known extension to model dependence. We show that for binary data, the GLS loss is also an extension of the Gini impurity measure, as the latter is exactly equivalent to the ordinary least squares (OLS) loss. This justifies using RF-GLS for non-parametric mean function estimation for binary dependent data. We then consider the special case of generalized mixed effects models, the traditional statistical model for binary geospatial data, which models the spatial random effects as a Gaussian process (GP). We propose a novel link-inversion technique that embeds the RF-GLS estimate of the mean function from the first step within the generalized mixed effects model framework, enabling estimation of non-linear covariate effects and offering spatial predictions. We establish consistency of our method, RF-GP, for both mean function and covariate effect estimation. The theory holds for a general class of stationary absolutely regular dependent processes that includes common choices like Gaussian processes with Mat&#39;ern or compactly supported covariances and autoregressive processes. The theory relaxes the common assumption of additive mean functions and accounts for the non-linear link. We demonstrate that RF-GP outperforms competing methods for estimation and prediction in both simulated and real-world data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/02/07/Randomforestsforbinarygeospatialdata.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/02/07/Randomforestsforbinarygeospatialdata.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Random forests for binary geospatial data" />
+<script type="application/ld+json">
+{"description":"The manuscript develops new method and theory for non-linear regression for binary dependent data using random forests. Existing implementations of random forests for binary data cannot explicitly account for data correlation common in geospatial and time-series settings. For continuous outcomes, recent work has extended random forests (RF) to RF-GLS that incorporate spatial covariance using the generalized least squares (GLS) loss. However, adoption of this idea for binary data is challenging due to the use of the Gini impurity measure in classification trees, which has no known extension to model dependence. We show that for binary data, the GLS loss is also an extension of the Gini impurity measure, as the latter is exactly equivalent to the ordinary least squares (OLS) loss. This justifies using RF-GLS for non-parametric mean function estimation for binary dependent data. We then consider the special case of generalized mixed effects models, the traditional statistical model for binary geospatial data, which models the spatial random effects as a Gaussian process (GP). We propose a novel link-inversion technique that embeds the RF-GLS estimate of the mean function from the first step within the generalized mixed effects model framework, enabling estimation of non-linear covariate effects and offering spatial predictions. We establish consistency of our method, RF-GP, for both mean function and covariate effect estimation. The theory holds for a general class of stationary absolutely regular dependent processes that includes common choices like Gaussian processes with Mat&#39;ern or compactly supported covariances and autoregressive processes. The theory relaxes the common assumption of additive mean functions and accounts for the non-linear link. We demonstrate that RF-GP outperforms competing methods for estimation and prediction in both simulated and real-world data.","headline":"Random forests for binary geospatial data","dateModified":"2025-02-07T00:00:00+00:00","datePublished":"2025-02-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/07/Randomforestsforbinarygeospatialdata.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/07/Randomforestsforbinarygeospatialdata.html","author":{"@type":"Person","name":"Arkajyoti Saha, Abhirup Datta"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-07 00:00:00 +0000">02-07</time>
+  </p>
+  
+  <h1>Random forests for binary geospatial data</h1>
+  <br>Arkajyoti Saha, Abhirup Datta</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>The manuscript develops new method and theory for non-linear regression for binary dependent data using random forests. Existing implementations of random forests for binary data cannot explicitly account for data correlation common in geospatial and time-series settings. For continuous outcomes, recent work has extended random forests (RF) to RF-GLS that incorporate spatial covariance using the generalized least squares (GLS) loss. However, adoption of this idea for binary data is challenging due to the use of the Gini impurity measure in classification trees, which has no known extension to model dependence. We show that for binary data, the GLS loss is also an extension of the Gini impurity measure, as the latter is exactly equivalent to the ordinary least squares (OLS) loss. This justifies using RF-GLS for non-parametric mean function estimation for binary dependent data. We then consider the special case of generalized mixed effects models, the traditional statistical model for binary geospatial data, which models the spatial random effects as a Gaussian process (GP). We propose a novel link-inversion technique that embeds the RF-GLS estimate of the mean function from the first step within the generalized mixed effects model framework, enabling estimation of non-linear covariate effects and offering spatial predictions. We establish consistency of our method, RF-GP, for both mean function and covariate effect estimation. The theory holds for a general class of stationary absolutely regular dependent processes that includes common choices like Gaussian processes with Mat'ern or compactly supported covariances and autoregressive processes. The theory relaxes the common assumption of additive mean functions and accounts for the non-linear link. We demonstrate that RF-GP outperforms competing methods for estimation and prediction in both simulated and real-world data.</p>
+
+<p><a href="https://arxiv.org/abs/2302.13828">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
