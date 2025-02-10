@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>System Architecture Optimization Strategies: Dealing with Expensive Hierarchical Problems</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="System Architecture Optimization Strategies: Dealing with Expensive Hierarchical Problems" />
+<meta name="author" content="Jasper H. Bussemaker, Paul Saves, Nathalie Bartoli, Thierry Lefebvre, Rémi Lafage" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Choosing the right system architecture for the problem at hand is challenging due to the large design space and high uncertainty in the early stage of the design process. Formulating the architecting process as an optimization problem may mitigate some of these challenges. This work investigates strategies for solving System Architecture Optimization (SAO) problems: expensive, black-box, hierarchical, mixed-discrete, constrained, multi-objective problems that may be subject to hidden constraints. Imputation ratio, correction ratio, correction fraction, and max rate diversity metrics are defined for characterizing hierar chical design spaces. This work considers two classes of optimization algorithms for SAO: Multi-Objective Evolutionary Algorithms (MOEA) such as NSGA-II, and Bayesian Optimization (BO) algorithms. A new Gaussian process kernel is presented that enables modeling hierarchical categorical variables, extending previous work on modeling continuous and integer hierarchical variables. Next, a hierarchical sampling algorithm that uses design space hierarchy to group design vectors by active design variables is developed. Then, it is demonstrated that integrating more hierarchy information in the optimization algorithms yields better optimization results for BO algorithms. Several realistic single-objective and multi-objective test problems are used for investigations. Finally, the BO algorithm is applied to a jet engine architecture optimization problem. This work shows that the developed BO algorithm can effectively solve the problem with one order of magnitude less function evaluations than NSGA-II. The algorithms and problems used in this work are implemented in the open-source Python library SBArchOpt." />
+<meta property="og:description" content="Choosing the right system architecture for the problem at hand is challenging due to the large design space and high uncertainty in the early stage of the design process. Formulating the architecting process as an optimization problem may mitigate some of these challenges. This work investigates strategies for solving System Architecture Optimization (SAO) problems: expensive, black-box, hierarchical, mixed-discrete, constrained, multi-objective problems that may be subject to hidden constraints. Imputation ratio, correction ratio, correction fraction, and max rate diversity metrics are defined for characterizing hierar chical design spaces. This work considers two classes of optimization algorithms for SAO: Multi-Objective Evolutionary Algorithms (MOEA) such as NSGA-II, and Bayesian Optimization (BO) algorithms. A new Gaussian process kernel is presented that enables modeling hierarchical categorical variables, extending previous work on modeling continuous and integer hierarchical variables. Next, a hierarchical sampling algorithm that uses design space hierarchy to group design vectors by active design variables is developed. Then, it is demonstrated that integrating more hierarchy information in the optimization algorithms yields better optimization results for BO algorithms. Several realistic single-objective and multi-objective test problems are used for investigations. Finally, the BO algorithm is applied to a jet engine architecture optimization problem. This work shows that the developed BO algorithm can effectively solve the problem with one order of magnitude less function evaluations than NSGA-II. The algorithms and problems used in this work are implemented in the open-source Python library SBArchOpt." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/02/10/SystemArchitectureOptimizationStrategiesDealingwithExpensiveHierarchicalProblems.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/02/10/SystemArchitectureOptimizationStrategiesDealingwithExpensiveHierarchicalProblems.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="System Architecture Optimization Strategies: Dealing with Expensive Hierarchical Problems" />
+<script type="application/ld+json">
+{"description":"Choosing the right system architecture for the problem at hand is challenging due to the large design space and high uncertainty in the early stage of the design process. Formulating the architecting process as an optimization problem may mitigate some of these challenges. This work investigates strategies for solving System Architecture Optimization (SAO) problems: expensive, black-box, hierarchical, mixed-discrete, constrained, multi-objective problems that may be subject to hidden constraints. Imputation ratio, correction ratio, correction fraction, and max rate diversity metrics are defined for characterizing hierar chical design spaces. This work considers two classes of optimization algorithms for SAO: Multi-Objective Evolutionary Algorithms (MOEA) such as NSGA-II, and Bayesian Optimization (BO) algorithms. A new Gaussian process kernel is presented that enables modeling hierarchical categorical variables, extending previous work on modeling continuous and integer hierarchical variables. Next, a hierarchical sampling algorithm that uses design space hierarchy to group design vectors by active design variables is developed. Then, it is demonstrated that integrating more hierarchy information in the optimization algorithms yields better optimization results for BO algorithms. Several realistic single-objective and multi-objective test problems are used for investigations. Finally, the BO algorithm is applied to a jet engine architecture optimization problem. This work shows that the developed BO algorithm can effectively solve the problem with one order of magnitude less function evaluations than NSGA-II. The algorithms and problems used in this work are implemented in the open-source Python library SBArchOpt.","headline":"System Architecture Optimization Strategies: Dealing with Expensive Hierarchical Problems","dateModified":"2025-02-10T00:00:00+00:00","datePublished":"2025-02-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/10/SystemArchitectureOptimizationStrategiesDealingwithExpensiveHierarchicalProblems.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/10/SystemArchitectureOptimizationStrategiesDealingwithExpensiveHierarchicalProblems.html","author":{"@type":"Person","name":"Jasper H. Bussemaker, Paul Saves, Nathalie Bartoli, Thierry Lefebvre, Rémi Lafage"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-10 00:00:00 +0000">02-10</time>
+  </p>
+  
+  <h1>System Architecture Optimization Strategies: Dealing with Expensive Hierarchical Problems</h1>
+  <br>Jasper H. Bussemaker, Paul Saves, Nathalie Bartoli, Thierry Lefebvre, Rémi Lafage</h3>
+  <br> [stat.AP]
+
+  <p>Choosing the right system architecture for the problem at hand is challenging due to the large design space and high uncertainty in the early stage of the design process. Formulating the architecting process as an optimization problem may mitigate some of these challenges. This work investigates strategies for solving System Architecture Optimization (SAO) problems: expensive, black-box, hierarchical, mixed-discrete, constrained, multi-objective problems that may be subject to hidden constraints. Imputation ratio, correction ratio, correction fraction, and max rate diversity metrics are defined for characterizing hierar chical design spaces. This work considers two classes of optimization algorithms for SAO: Multi-Objective Evolutionary Algorithms (MOEA) such as NSGA-II, and Bayesian Optimization (BO) algorithms. A new Gaussian process kernel is presented that enables modeling hierarchical categorical variables, extending previous work on modeling continuous and integer hierarchical variables. Next, a hierarchical sampling algorithm that uses design space hierarchy to group design vectors by active design variables is developed. Then, it is demonstrated that integrating more hierarchy information in the optimization algorithms yields better optimization results for BO algorithms. Several realistic single-objective and multi-objective test problems are used for investigations. Finally, the BO algorithm is applied to a jet engine architecture optimization problem. This work shows that the developed BO algorithm can effectively solve the problem with one order of magnitude less function evaluations than NSGA-II. The algorithms and problems used in this work are implemented in the open-source Python library SBArchOpt.</p>
+
+<p><a href="https://arxiv.org/abs/2502.00838">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
