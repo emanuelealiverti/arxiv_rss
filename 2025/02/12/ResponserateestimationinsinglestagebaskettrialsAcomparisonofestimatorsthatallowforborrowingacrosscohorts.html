@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Response rate estimation in single-stage basket trials: A comparison of estimators that allow for borrowing across cohorts</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Response rate estimation in single-stage basket trials: A comparison of estimators that allow for borrowing across cohorts" />
+<meta name="author" content="Antonios Daletzakis, Rutger van den Bor, Vincent van der Noort, Kit CB Roes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Therapeutic advancements in oncology have shifted towards targeted therapy based on genomic aberrations. This necessitates innovative statistical approaches in clinical trials, particularly in master protocol studies. Basket trials, a type of master protocol, evaluate a single treatment across cohorts sharing a genomic aberration but differing in tumor histology. While offering operational advantages, basket trial analysis presents statistical inference challenges. These trials help determine for which tumor histology the treatment is promising enough to advance to confirmatory evaluation and often use Bayesian designs to support decisions. Beyond decision-making, estimating cohort-specific response rates is crucial for designing subsequent trials. This study compares seven Bayesian estimation methods for basket trials with binary outcomes against the (frequentist) sample proportion estimate through simulations. The goal is to estimate cohort-specific response rates, focusing on bias, mean squared error, and information borrowing. Various scenarios are examined, including homogeneous, heterogeneous, and clustered response rates across cohorts. Results show trade-offs in bias and precision, highlighting the importance of method selection. Berry’s method performs best with limited heterogeneity. No clear winner emerges in general cases, with performance affected by shrinkage, bias, and the choice of priors and tuning parameters. Challenges include computational complexity, parameter tuning, and the lack of clear guidance on selection. Researchers should consider these factors when designing and analyzing basket trials." />
+<meta property="og:description" content="Therapeutic advancements in oncology have shifted towards targeted therapy based on genomic aberrations. This necessitates innovative statistical approaches in clinical trials, particularly in master protocol studies. Basket trials, a type of master protocol, evaluate a single treatment across cohorts sharing a genomic aberration but differing in tumor histology. While offering operational advantages, basket trial analysis presents statistical inference challenges. These trials help determine for which tumor histology the treatment is promising enough to advance to confirmatory evaluation and often use Bayesian designs to support decisions. Beyond decision-making, estimating cohort-specific response rates is crucial for designing subsequent trials. This study compares seven Bayesian estimation methods for basket trials with binary outcomes against the (frequentist) sample proportion estimate through simulations. The goal is to estimate cohort-specific response rates, focusing on bias, mean squared error, and information borrowing. Various scenarios are examined, including homogeneous, heterogeneous, and clustered response rates across cohorts. Results show trade-offs in bias and precision, highlighting the importance of method selection. Berry’s method performs best with limited heterogeneity. No clear winner emerges in general cases, with performance affected by shrinkage, bias, and the choice of priors and tuning parameters. Challenges include computational complexity, parameter tuning, and the lack of clear guidance on selection. Researchers should consider these factors when designing and analyzing basket trials." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/02/12/ResponserateestimationinsinglestagebaskettrialsAcomparisonofestimatorsthatallowforborrowingacrosscohorts.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/02/12/ResponserateestimationinsinglestagebaskettrialsAcomparisonofestimatorsthatallowforborrowingacrosscohorts.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Response rate estimation in single-stage basket trials: A comparison of estimators that allow for borrowing across cohorts" />
+<script type="application/ld+json">
+{"description":"Therapeutic advancements in oncology have shifted towards targeted therapy based on genomic aberrations. This necessitates innovative statistical approaches in clinical trials, particularly in master protocol studies. Basket trials, a type of master protocol, evaluate a single treatment across cohorts sharing a genomic aberration but differing in tumor histology. While offering operational advantages, basket trial analysis presents statistical inference challenges. These trials help determine for which tumor histology the treatment is promising enough to advance to confirmatory evaluation and often use Bayesian designs to support decisions. Beyond decision-making, estimating cohort-specific response rates is crucial for designing subsequent trials. This study compares seven Bayesian estimation methods for basket trials with binary outcomes against the (frequentist) sample proportion estimate through simulations. The goal is to estimate cohort-specific response rates, focusing on bias, mean squared error, and information borrowing. Various scenarios are examined, including homogeneous, heterogeneous, and clustered response rates across cohorts. Results show trade-offs in bias and precision, highlighting the importance of method selection. Berry’s method performs best with limited heterogeneity. No clear winner emerges in general cases, with performance affected by shrinkage, bias, and the choice of priors and tuning parameters. Challenges include computational complexity, parameter tuning, and the lack of clear guidance on selection. Researchers should consider these factors when designing and analyzing basket trials.","headline":"Response rate estimation in single-stage basket trials: A comparison of estimators that allow for borrowing across cohorts","dateModified":"2025-02-12T00:00:00+00:00","datePublished":"2025-02-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/12/ResponserateestimationinsinglestagebaskettrialsAcomparisonofestimatorsthatallowforborrowingacrosscohorts.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/12/ResponserateestimationinsinglestagebaskettrialsAcomparisonofestimatorsthatallowforborrowingacrosscohorts.html","author":{"@type":"Person","name":"Antonios Daletzakis, Rutger van den Bor, Vincent van der Noort, Kit CB Roes"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-12 00:00:00 +0000">02-12</time>
+  </p>
+  
+  <h1>Response rate estimation in single-stage basket trials: A comparison of estimators that allow for borrowing across cohorts</h1>
+  <br>Antonios Daletzakis, Rutger van den Bor, Vincent van der Noort, Kit CB Roes</h3>
+  <br> [stat.AP]
+
+  <p>Therapeutic advancements in oncology have shifted towards targeted therapy based on genomic aberrations. This necessitates innovative statistical approaches in clinical trials, particularly in master protocol studies. Basket trials, a type of master protocol, evaluate a single treatment across cohorts sharing a genomic aberration but differing in tumor histology. While offering operational advantages, basket trial analysis presents statistical inference challenges. These trials help determine for which tumor histology the treatment is promising enough to advance to confirmatory evaluation and often use Bayesian designs to support decisions. Beyond decision-making, estimating cohort-specific response rates is crucial for designing subsequent trials. This study compares seven Bayesian estimation methods for basket trials with binary outcomes against the (frequentist) sample proportion estimate through simulations. The goal is to estimate cohort-specific response rates, focusing on bias, mean squared error, and information borrowing. Various scenarios are examined, including homogeneous, heterogeneous, and clustered response rates across cohorts. Results show trade-offs in bias and precision, highlighting the importance of method selection. Berry’s method performs best with limited heterogeneity. No clear winner emerges in general cases, with performance affected by shrinkage, bias, and the choice of priors and tuning parameters. Challenges include computational complexity, parameter tuning, and the lack of clear guidance on selection. Researchers should consider these factors when designing and analyzing basket trials.</p>
+
+<p><a href="https://arxiv.org/abs/2502.07639">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
