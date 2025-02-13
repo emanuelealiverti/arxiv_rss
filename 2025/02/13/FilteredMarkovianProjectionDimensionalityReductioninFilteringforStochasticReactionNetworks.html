@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Filtered Markovian Projection: Dimensionality Reduction in Filtering for Stochastic Reaction Networks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Filtered Markovian Projection: Dimensionality Reduction in Filtering for Stochastic Reaction Networks" />
+<meta name="author" content="Chiheb Ben Hammouda, Maksim Chupin, Sophia Münker, Raúl Tempone" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Stochastic reaction networks (SRNs) model stochastic effects for various applications, including intracellular chemical or biological processes and epidemiology. A typical challenge in practical problems modeled by SRNs is that only a few state variables can be dynamically observed. Given the measurement trajectories, one can estimate the conditional probability distribution of unobserved (hidden) state variables by solving a stochastic filtering problem. In this setting, the conditional distribution evolves over time according to an extensive or potentially infinite-dimensional system of coupled ordinary differential equations with jumps, known as the filtering equation. The current numerical filtering techniques, such as the Filtered Finite State Projection (DAmbrosio et al., 2022), are hindered by the curse of dimensionality, significantly affecting their computational performance. To address these limitations, we propose to use a dimensionality reduction technique based on the Markovian projection (MP), initially introduced for forward problems (Ben Hammouda et al., 2024). In this work, we explore how to adapt the existing MP approach to the filtering problem and introduce a novel version of the MP, the Filtered MP, that guarantees the consistency of the resulting estimator. The novel method combines a particle filter with reduced variance and solving the filtering equations in a low-dimensional space, exploiting the advantages of both approaches. The analysis and empirical results highlight the superior computational efficiency of projection methods compared to the existing filtered finite state projection in the large dimensional setting." />
+<meta property="og:description" content="Stochastic reaction networks (SRNs) model stochastic effects for various applications, including intracellular chemical or biological processes and epidemiology. A typical challenge in practical problems modeled by SRNs is that only a few state variables can be dynamically observed. Given the measurement trajectories, one can estimate the conditional probability distribution of unobserved (hidden) state variables by solving a stochastic filtering problem. In this setting, the conditional distribution evolves over time according to an extensive or potentially infinite-dimensional system of coupled ordinary differential equations with jumps, known as the filtering equation. The current numerical filtering techniques, such as the Filtered Finite State Projection (DAmbrosio et al., 2022), are hindered by the curse of dimensionality, significantly affecting their computational performance. To address these limitations, we propose to use a dimensionality reduction technique based on the Markovian projection (MP), initially introduced for forward problems (Ben Hammouda et al., 2024). In this work, we explore how to adapt the existing MP approach to the filtering problem and introduce a novel version of the MP, the Filtered MP, that guarantees the consistency of the resulting estimator. The novel method combines a particle filter with reduced variance and solving the filtering equations in a low-dimensional space, exploiting the advantages of both approaches. The analysis and empirical results highlight the superior computational efficiency of projection methods compared to the existing filtered finite state projection in the large dimensional setting." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/02/13/FilteredMarkovianProjectionDimensionalityReductioninFilteringforStochasticReactionNetworks.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/02/13/FilteredMarkovianProjectionDimensionalityReductioninFilteringforStochasticReactionNetworks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Filtered Markovian Projection: Dimensionality Reduction in Filtering for Stochastic Reaction Networks" />
+<script type="application/ld+json">
+{"description":"Stochastic reaction networks (SRNs) model stochastic effects for various applications, including intracellular chemical or biological processes and epidemiology. A typical challenge in practical problems modeled by SRNs is that only a few state variables can be dynamically observed. Given the measurement trajectories, one can estimate the conditional probability distribution of unobserved (hidden) state variables by solving a stochastic filtering problem. In this setting, the conditional distribution evolves over time according to an extensive or potentially infinite-dimensional system of coupled ordinary differential equations with jumps, known as the filtering equation. The current numerical filtering techniques, such as the Filtered Finite State Projection (DAmbrosio et al., 2022), are hindered by the curse of dimensionality, significantly affecting their computational performance. To address these limitations, we propose to use a dimensionality reduction technique based on the Markovian projection (MP), initially introduced for forward problems (Ben Hammouda et al., 2024). In this work, we explore how to adapt the existing MP approach to the filtering problem and introduce a novel version of the MP, the Filtered MP, that guarantees the consistency of the resulting estimator. The novel method combines a particle filter with reduced variance and solving the filtering equations in a low-dimensional space, exploiting the advantages of both approaches. The analysis and empirical results highlight the superior computational efficiency of projection methods compared to the existing filtered finite state projection in the large dimensional setting.","headline":"Filtered Markovian Projection: Dimensionality Reduction in Filtering for Stochastic Reaction Networks","dateModified":"2025-02-13T00:00:00+00:00","datePublished":"2025-02-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/13/FilteredMarkovianProjectionDimensionalityReductioninFilteringforStochasticReactionNetworks.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/13/FilteredMarkovianProjectionDimensionalityReductioninFilteringforStochasticReactionNetworks.html","author":{"@type":"Person","name":"Chiheb Ben Hammouda, Maksim Chupin, Sophia Münker, Raúl Tempone"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-13 00:00:00 +0000">02-13</time>
+  </p>
+  
+  <h1>Filtered Markovian Projection: Dimensionality Reduction in Filtering for Stochastic Reaction Networks</h1>
+  <br>Chiheb Ben Hammouda, Maksim Chupin, Sophia Münker, Raúl Tempone</h3>
+  <br> [stat.AP,stat.CO,stat.ML]
+
+  <p>Stochastic reaction networks (SRNs) model stochastic effects for various applications, including intracellular chemical or biological processes and epidemiology. A typical challenge in practical problems modeled by SRNs is that only a few state variables can be dynamically observed. Given the measurement trajectories, one can estimate the conditional probability distribution of unobserved (hidden) state variables by solving a stochastic filtering problem. In this setting, the conditional distribution evolves over time according to an extensive or potentially infinite-dimensional system of coupled ordinary differential equations with jumps, known as the filtering equation. The current numerical filtering techniques, such as the Filtered Finite State Projection (DAmbrosio et al., 2022), are hindered by the curse of dimensionality, significantly affecting their computational performance. To address these limitations, we propose to use a dimensionality reduction technique based on the Markovian projection (MP), initially introduced for forward problems (Ben Hammouda et al., 2024). In this work, we explore how to adapt the existing MP approach to the filtering problem and introduce a novel version of the MP, the Filtered MP, that guarantees the consistency of the resulting estimator. The novel method combines a particle filter with reduced variance and solving the filtering equations in a low-dimensional space, exploiting the advantages of both approaches. The analysis and empirical results highlight the superior computational efficiency of projection methods compared to the existing filtered finite state projection in the large dimensional setting.</p>
+
+<p><a href="https://arxiv.org/abs/2502.07918">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
