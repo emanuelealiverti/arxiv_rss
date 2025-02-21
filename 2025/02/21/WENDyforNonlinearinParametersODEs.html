@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>WENDy for Nonlinear-in-Parameters ODEs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="WENDy for Nonlinear-in-Parameters ODEs" />
+<meta name="author" content="Nic Rummel, Daniel A. Messenger, Stephen Becker, Vanja Dukic, David M. Bortz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Weak-form Estimation of Non-linear Dynamics (WENDy) algorithm is extended to accommodate systems of ordinary differential equations that are nonlinear-in-parameters. The extension rests on derived analytic expressions for a likelihood function, its gradient and its Hessian matrix. WENDy makes use of these to approximate a maximum likelihood estimator based on optimization routines suited for non-convex optimization problems. The resulting parameter estimation algorithm has better accuracy, a substantially larger domain of convergence, and is often orders of magnitude faster than the conventional output error least squares method (based on forward solvers). The algorithm is efficiently implemented in Julia. We demonstrate the algorithm’s ability to accommodate the weak form optimization for both additive normal and multiplicative log-normal noise, and present results on a suite of benchmark systems of ordinary differential equations. In order to demonstrate the practical benefits of our approach, we present extensive comparisons between our method and output error methods in terms of accuracy, precision, bias, and coverage." />
+<meta property="og:description" content="The Weak-form Estimation of Non-linear Dynamics (WENDy) algorithm is extended to accommodate systems of ordinary differential equations that are nonlinear-in-parameters. The extension rests on derived analytic expressions for a likelihood function, its gradient and its Hessian matrix. WENDy makes use of these to approximate a maximum likelihood estimator based on optimization routines suited for non-convex optimization problems. The resulting parameter estimation algorithm has better accuracy, a substantially larger domain of convergence, and is often orders of magnitude faster than the conventional output error least squares method (based on forward solvers). The algorithm is efficiently implemented in Julia. We demonstrate the algorithm’s ability to accommodate the weak form optimization for both additive normal and multiplicative log-normal noise, and present results on a suite of benchmark systems of ordinary differential equations. In order to demonstrate the practical benefits of our approach, we present extensive comparisons between our method and output error methods in terms of accuracy, precision, bias, and coverage." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/02/21/WENDyforNonlinearinParametersODEs.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/02/21/WENDyforNonlinearinParametersODEs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="WENDy for Nonlinear-in-Parameters ODEs" />
+<script type="application/ld+json">
+{"description":"The Weak-form Estimation of Non-linear Dynamics (WENDy) algorithm is extended to accommodate systems of ordinary differential equations that are nonlinear-in-parameters. The extension rests on derived analytic expressions for a likelihood function, its gradient and its Hessian matrix. WENDy makes use of these to approximate a maximum likelihood estimator based on optimization routines suited for non-convex optimization problems. The resulting parameter estimation algorithm has better accuracy, a substantially larger domain of convergence, and is often orders of magnitude faster than the conventional output error least squares method (based on forward solvers). The algorithm is efficiently implemented in Julia. We demonstrate the algorithm’s ability to accommodate the weak form optimization for both additive normal and multiplicative log-normal noise, and present results on a suite of benchmark systems of ordinary differential equations. In order to demonstrate the practical benefits of our approach, we present extensive comparisons between our method and output error methods in terms of accuracy, precision, bias, and coverage.","headline":"WENDy for Nonlinear-in-Parameters ODEs","dateModified":"2025-02-21T00:00:00+00:00","datePublished":"2025-02-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/21/WENDyforNonlinearinParametersODEs.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/21/WENDyforNonlinearinParametersODEs.html","author":{"@type":"Person","name":"Nic Rummel, Daniel A. Messenger, Stephen Becker, Vanja Dukic, David M. Bortz"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-21 00:00:00 +0000">02-21</time>
+  </p>
+  
+  <h1>WENDy for Nonlinear-in-Parameters ODEs</h1>
+  <br>Nic Rummel, Daniel A. Messenger, Stephen Becker, Vanja Dukic, David M. Bortz</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>The Weak-form Estimation of Non-linear Dynamics (WENDy) algorithm is extended to accommodate systems of ordinary differential equations that are nonlinear-in-parameters. The extension rests on derived analytic expressions for a likelihood function, its gradient and its Hessian matrix. WENDy makes use of these to approximate a maximum likelihood estimator based on optimization routines suited for non-convex optimization problems. The resulting parameter estimation algorithm has better accuracy, a substantially larger domain of convergence, and is often orders of magnitude faster than the conventional output error least squares method (based on forward solvers).
+  The algorithm is efficiently implemented in Julia. We demonstrate the algorithm’s ability to accommodate the weak form optimization for both additive normal and multiplicative log-normal noise, and present results on a suite of benchmark systems of ordinary differential equations. In order to demonstrate the practical benefits of our approach, we present extensive comparisons between our method and output error methods in terms of accuracy, precision, bias, and coverage.</p>
+
+<p><a href="https://arxiv.org/abs/2502.08881">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
