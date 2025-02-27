@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On Robust Aggregation for Distributed Data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On Robust Aggregation for Distributed Data" />
+<meta name="author" content="Xian Li, Xuan Liang, A. H. Welsh, Tao Zou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When data are stored across multiple locations, directly pooling all the data together for statistical analysis may be impossible due to communication costs and privacy concerns. Distributed computing systems allow the analysis of such data, by getting local servers to separately process their own statistical analyses and using a central processor to aggregate the local statistical results. Naive aggregation of local statistics using simple or weighted averages, is vulnerable to contamination within a distributed computing system. This paper develops and investigates a Huber-type aggregation method for locally computed M-estimators to handle contamination in the local estimates. Our implementation of this aggregation method requires estimating the asymptotic variance-covariance matrix of the M-estimator, which we accomplish using a robust spatial median approach. Theoretically, the Huber-type aggregation achieves the same convergence rate as if all the data were pooled. We establish its asymptotic normality for making inferences, including justifying a two-step approach for detecting contamination in the distributed computing system. Extensive simulation studies are conducted to validate the theoretical results and the usefulness of our proposed approach is demonstrated on U.S. airline data." />
+<meta property="og:description" content="When data are stored across multiple locations, directly pooling all the data together for statistical analysis may be impossible due to communication costs and privacy concerns. Distributed computing systems allow the analysis of such data, by getting local servers to separately process their own statistical analyses and using a central processor to aggregate the local statistical results. Naive aggregation of local statistics using simple or weighted averages, is vulnerable to contamination within a distributed computing system. This paper develops and investigates a Huber-type aggregation method for locally computed M-estimators to handle contamination in the local estimates. Our implementation of this aggregation method requires estimating the asymptotic variance-covariance matrix of the M-estimator, which we accomplish using a robust spatial median approach. Theoretically, the Huber-type aggregation achieves the same convergence rate as if all the data were pooled. We establish its asymptotic normality for making inferences, including justifying a two-step approach for detecting contamination in the distributed computing system. Extensive simulation studies are conducted to validate the theoretical results and the usefulness of our proposed approach is demonstrated on U.S. airline data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/02/27/OnRobustAggregationforDistributedData.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/02/27/OnRobustAggregationforDistributedData.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On Robust Aggregation for Distributed Data" />
+<script type="application/ld+json">
+{"description":"When data are stored across multiple locations, directly pooling all the data together for statistical analysis may be impossible due to communication costs and privacy concerns. Distributed computing systems allow the analysis of such data, by getting local servers to separately process their own statistical analyses and using a central processor to aggregate the local statistical results. Naive aggregation of local statistics using simple or weighted averages, is vulnerable to contamination within a distributed computing system. This paper develops and investigates a Huber-type aggregation method for locally computed M-estimators to handle contamination in the local estimates. Our implementation of this aggregation method requires estimating the asymptotic variance-covariance matrix of the M-estimator, which we accomplish using a robust spatial median approach. Theoretically, the Huber-type aggregation achieves the same convergence rate as if all the data were pooled. We establish its asymptotic normality for making inferences, including justifying a two-step approach for detecting contamination in the distributed computing system. Extensive simulation studies are conducted to validate the theoretical results and the usefulness of our proposed approach is demonstrated on U.S. airline data.","headline":"On Robust Aggregation for Distributed Data","dateModified":"2025-02-27T00:00:00+00:00","datePublished":"2025-02-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/27/OnRobustAggregationforDistributedData.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/27/OnRobustAggregationforDistributedData.html","author":{"@type":"Person","name":"Xian Li, Xuan Liang, A. H. Welsh, Tao Zou"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-27 00:00:00 +0000">02-27</time>
+  </p>
+  
+  <h1>On Robust Aggregation for Distributed Data</h1>
+  <br>Xian Li, Xuan Liang, A. H. Welsh, Tao Zou</h3>
+  <br> [stat.ME]
+
+  <p>When data are stored across multiple locations, directly pooling all the data together for statistical analysis may be impossible due to communication costs and privacy concerns. Distributed computing systems allow the analysis of such data, by getting local servers to separately process their own statistical analyses and using a central processor to aggregate the local statistical results. Naive aggregation of local statistics using simple or weighted averages, is vulnerable to contamination within a distributed computing system. This paper develops and investigates a Huber-type aggregation method for locally computed M-estimators to handle contamination in the local estimates. Our implementation of this aggregation method requires estimating the asymptotic variance-covariance matrix of the M-estimator, which we accomplish using a robust spatial median approach. Theoretically, the Huber-type aggregation achieves the same convergence rate as if all the data were pooled. We establish its asymptotic normality for making inferences, including justifying a two-step approach for detecting contamination in the distributed computing system. Extensive simulation studies are conducted to validate the theoretical results and the usefulness of our proposed approach is demonstrated on U.S. airline data.</p>
+
+<p><a href="https://arxiv.org/abs/2502.18740">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

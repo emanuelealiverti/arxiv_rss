@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Enhancing Gradient-based Discrete Sampling via Parallel Tempering</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Enhancing Gradient-based Discrete Sampling via Parallel Tempering" />
+<meta name="author" content="Luxu Liang, Yuhang Jia, Feng Zhou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="While gradient-based discrete samplers are effective in sampling from complex distributions, they are susceptible to getting trapped in local minima, particularly in high-dimensional, multimodal discrete distributions, owing to the discontinuities inherent in these landscapes. To circumvent this issue, we combine parallel tempering, also known as replica exchange, with the discrete Langevin proposal and develop the Parallel Tempering enhanced Discrete Langevin Proposal (PTDLP), which are simulated at a series of temperatures. Significant energy differences prompt sample swaps, which are governed by a Metropolis criterion specifically designed for discrete sampling to ensure detailed balance is maintained. Additionally, we introduce an automatic scheme to determine the optimal temperature schedule and the number of chains, ensuring adaptability across diverse tasks with minimal tuning. Theoretically, we establish that our algorithm converges non-asymptotically to the target energy and exhibits faster mixing compared to a single chain. Empirical results further emphasize the superiority of our method in sampling from complex, multimodal discrete distributions, including synthetic problems, restricted Boltzmann machines, and deep energy-based models." />
+<meta property="og:description" content="While gradient-based discrete samplers are effective in sampling from complex distributions, they are susceptible to getting trapped in local minima, particularly in high-dimensional, multimodal discrete distributions, owing to the discontinuities inherent in these landscapes. To circumvent this issue, we combine parallel tempering, also known as replica exchange, with the discrete Langevin proposal and develop the Parallel Tempering enhanced Discrete Langevin Proposal (PTDLP), which are simulated at a series of temperatures. Significant energy differences prompt sample swaps, which are governed by a Metropolis criterion specifically designed for discrete sampling to ensure detailed balance is maintained. Additionally, we introduce an automatic scheme to determine the optimal temperature schedule and the number of chains, ensuring adaptability across diverse tasks with minimal tuning. Theoretically, we establish that our algorithm converges non-asymptotically to the target energy and exhibits faster mixing compared to a single chain. Empirical results further emphasize the superiority of our method in sampling from complex, multimodal discrete distributions, including synthetic problems, restricted Boltzmann machines, and deep energy-based models." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/02/27/EnhancingGradientbasedDiscreteSamplingviaParallelTempering.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/02/27/EnhancingGradientbasedDiscreteSamplingviaParallelTempering.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Enhancing Gradient-based Discrete Sampling via Parallel Tempering" />
+<script type="application/ld+json">
+{"description":"While gradient-based discrete samplers are effective in sampling from complex distributions, they are susceptible to getting trapped in local minima, particularly in high-dimensional, multimodal discrete distributions, owing to the discontinuities inherent in these landscapes. To circumvent this issue, we combine parallel tempering, also known as replica exchange, with the discrete Langevin proposal and develop the Parallel Tempering enhanced Discrete Langevin Proposal (PTDLP), which are simulated at a series of temperatures. Significant energy differences prompt sample swaps, which are governed by a Metropolis criterion specifically designed for discrete sampling to ensure detailed balance is maintained. Additionally, we introduce an automatic scheme to determine the optimal temperature schedule and the number of chains, ensuring adaptability across diverse tasks with minimal tuning. Theoretically, we establish that our algorithm converges non-asymptotically to the target energy and exhibits faster mixing compared to a single chain. Empirical results further emphasize the superiority of our method in sampling from complex, multimodal discrete distributions, including synthetic problems, restricted Boltzmann machines, and deep energy-based models.","headline":"Enhancing Gradient-based Discrete Sampling via Parallel Tempering","dateModified":"2025-02-27T00:00:00+00:00","datePublished":"2025-02-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/27/EnhancingGradientbasedDiscreteSamplingviaParallelTempering.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/27/EnhancingGradientbasedDiscreteSamplingviaParallelTempering.html","author":{"@type":"Person","name":"Luxu Liang, Yuhang Jia, Feng Zhou"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-27 00:00:00 +0000">02-27</time>
+  </p>
+  
+  <h1>Enhancing Gradient-based Discrete Sampling via Parallel Tempering</h1>
+  <br>Luxu Liang, Yuhang Jia, Feng Zhou</h3>
+  <br> [stat.ML,stat.AP]
+
+  <p>While gradient-based discrete samplers are effective in sampling from complex distributions, they are susceptible to getting trapped in local minima, particularly in high-dimensional, multimodal discrete distributions, owing to the discontinuities inherent in these landscapes. To circumvent this issue, we combine parallel tempering, also known as replica exchange, with the discrete Langevin proposal and develop the Parallel Tempering enhanced Discrete Langevin Proposal (PTDLP), which are simulated at a series of temperatures. Significant energy differences prompt sample swaps, which are governed by a Metropolis criterion specifically designed for discrete sampling to ensure detailed balance is maintained. Additionally, we introduce an automatic scheme to determine the optimal temperature schedule and the number of chains, ensuring adaptability across diverse tasks with minimal tuning. Theoretically, we establish that our algorithm converges non-asymptotically to the target energy and exhibits faster mixing compared to a single chain. Empirical results further emphasize the superiority of our method in sampling from complex, multimodal discrete distributions, including synthetic problems, restricted Boltzmann machines, and deep energy-based models.</p>
+
+<p><a href="https://arxiv.org/abs/2502.19240">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
