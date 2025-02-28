@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Persistent Sampling: Enhancing the Efficiency of Sequential Monte Carlo</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Persistent Sampling: Enhancing the Efficiency of Sequential Monte Carlo" />
+<meta name="author" content="Minas Karamanis, Uroš Seljak" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sequential Monte Carlo (SMC) samplers are powerful tools for Bayesian inference but suffer from high computational costs due to their reliance on large particle ensembles for accurate estimates. We introduce persistent sampling (PS), an extension of SMC that systematically retains and reuses particles from all prior iterations to construct a growing, weighted ensemble. By leveraging multiple importance sampling and resampling from a mixture of historical distributions, PS mitigates the need for excessively large particle counts, directly addressing key limitations of SMC such as particle impoverishment and mode collapse. Crucially, PS achieves this without additional likelihood evaluations-weights for persistent particles are computed using cached likelihood values. This framework not only yields more accurate posterior approximations but also produces marginal likelihood estimates with significantly lower variance, enhancing reliability in model comparison. Furthermore, the persistent ensemble enables efficient adaptation of transition kernels by leveraging a larger, decorrelated particle pool. Experiments on high-dimensional Gaussian mixtures, hierarchical models, and non-convex targets demonstrate that PS consistently outperforms standard SMC and related variants, including recycled and waste-free SMC, achieving substantial reductions in mean squared error for posterior expectations and evidence estimates, all at reduced computational cost. PS thus establishes itself as a robust, scalable, and efficient alternative for complex Bayesian inference tasks." />
+<meta property="og:description" content="Sequential Monte Carlo (SMC) samplers are powerful tools for Bayesian inference but suffer from high computational costs due to their reliance on large particle ensembles for accurate estimates. We introduce persistent sampling (PS), an extension of SMC that systematically retains and reuses particles from all prior iterations to construct a growing, weighted ensemble. By leveraging multiple importance sampling and resampling from a mixture of historical distributions, PS mitigates the need for excessively large particle counts, directly addressing key limitations of SMC such as particle impoverishment and mode collapse. Crucially, PS achieves this without additional likelihood evaluations-weights for persistent particles are computed using cached likelihood values. This framework not only yields more accurate posterior approximations but also produces marginal likelihood estimates with significantly lower variance, enhancing reliability in model comparison. Furthermore, the persistent ensemble enables efficient adaptation of transition kernels by leveraging a larger, decorrelated particle pool. Experiments on high-dimensional Gaussian mixtures, hierarchical models, and non-convex targets demonstrate that PS consistently outperforms standard SMC and related variants, including recycled and waste-free SMC, achieving substantial reductions in mean squared error for posterior expectations and evidence estimates, all at reduced computational cost. PS thus establishes itself as a robust, scalable, and efficient alternative for complex Bayesian inference tasks." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/02/28/PersistentSamplingEnhancingtheEfficiencyofSequentialMonteCarlo.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/02/28/PersistentSamplingEnhancingtheEfficiencyofSequentialMonteCarlo.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Persistent Sampling: Enhancing the Efficiency of Sequential Monte Carlo" />
+<script type="application/ld+json">
+{"description":"Sequential Monte Carlo (SMC) samplers are powerful tools for Bayesian inference but suffer from high computational costs due to their reliance on large particle ensembles for accurate estimates. We introduce persistent sampling (PS), an extension of SMC that systematically retains and reuses particles from all prior iterations to construct a growing, weighted ensemble. By leveraging multiple importance sampling and resampling from a mixture of historical distributions, PS mitigates the need for excessively large particle counts, directly addressing key limitations of SMC such as particle impoverishment and mode collapse. Crucially, PS achieves this without additional likelihood evaluations-weights for persistent particles are computed using cached likelihood values. This framework not only yields more accurate posterior approximations but also produces marginal likelihood estimates with significantly lower variance, enhancing reliability in model comparison. Furthermore, the persistent ensemble enables efficient adaptation of transition kernels by leveraging a larger, decorrelated particle pool. Experiments on high-dimensional Gaussian mixtures, hierarchical models, and non-convex targets demonstrate that PS consistently outperforms standard SMC and related variants, including recycled and waste-free SMC, achieving substantial reductions in mean squared error for posterior expectations and evidence estimates, all at reduced computational cost. PS thus establishes itself as a robust, scalable, and efficient alternative for complex Bayesian inference tasks.","headline":"Persistent Sampling: Enhancing the Efficiency of Sequential Monte Carlo","dateModified":"2025-02-28T00:00:00+00:00","datePublished":"2025-02-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/28/PersistentSamplingEnhancingtheEfficiencyofSequentialMonteCarlo.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/02/28/PersistentSamplingEnhancingtheEfficiencyofSequentialMonteCarlo.html","author":{"@type":"Person","name":"Minas Karamanis, Uroš Seljak"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-28 00:00:00 +0000">02-28</time>
+  </p>
+  
+  <h1>Persistent Sampling: Enhancing the Efficiency of Sequential Monte Carlo</h1>
+  <br>Minas Karamanis, Uroš Seljak</h3>
+  <br> [stat.ML,stat.CO]
+
+  <p>Sequential Monte Carlo (SMC) samplers are powerful tools for Bayesian inference but suffer from high computational costs due to their reliance on large particle ensembles for accurate estimates. We introduce persistent sampling (PS), an extension of SMC that systematically retains and reuses particles from all prior iterations to construct a growing, weighted ensemble. By leveraging multiple importance sampling and resampling from a mixture of historical distributions, PS mitigates the need for excessively large particle counts, directly addressing key limitations of SMC such as particle impoverishment and mode collapse. Crucially, PS achieves this without additional likelihood evaluations-weights for persistent particles are computed using cached likelihood values. This framework not only yields more accurate posterior approximations but also produces marginal likelihood estimates with significantly lower variance, enhancing reliability in model comparison. Furthermore, the persistent ensemble enables efficient adaptation of transition kernels by leveraging a larger, decorrelated particle pool. Experiments on high-dimensional Gaussian mixtures, hierarchical models, and non-convex targets demonstrate that PS consistently outperforms standard SMC and related variants, including recycled and waste-free SMC, achieving substantial reductions in mean squared error for posterior expectations and evidence estimates, all at reduced computational cost. PS thus establishes itself as a robust, scalable, and efficient alternative for complex Bayesian inference tasks.</p>
+
+<p><a href="https://arxiv.org/abs/2407.20722">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
