@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Improving Wald's (approximate) sequential probability ratio test by avoiding overshoot</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Improving Wald’s (approximate) sequential probability ratio test by avoiding overshoot" />
+<meta name="author" content="Lasse Fischer, Aaditya Ramdas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Wald’s sequential probability ratio test (SPRT) is a cornerstone of sequential analysis. Based on desired type-I, II error levels $\alpha, \beta$, it stops when the likelihood ratio crosses certain thresholds, guaranteeing optimality of the expected sample size. However, these thresholds are not closed form and the test is often applied with approximate thresholds $(1-\beta)/\alpha$ and $\beta/(1-\alpha)$ (approximate SPRT). When $\beta &gt; 0$, this neither guarantees error control at $\alpha,\beta$ nor optimality. When $\beta=0$ (power-one SPRT), this method is conservative and not optimal. The looseness in both cases is caused by overshoot: the test statistic overshoots the thresholds at the stopping time. Numerically calculating thresholds may be infeasible, and most software packages do not do this. We improve the approximate SPRT by modifying the test statistic to avoid overshoot. Our `sequential boosting’ technique uniformly improves power-one SPRTs $(\beta=0)$ for simple nulls and alternatives, or for one-sided nulls and alternatives in exponential families. When $\beta &gt; 0$, our techniques provide guaranteed error control at $\alpha,\beta$, while needing less samples than the approximate SPRT in our simulations. We also provide several nontrivial extensions: confidence sequences, sampling without replacement and conformal martingales." />
+<meta property="og:description" content="Wald’s sequential probability ratio test (SPRT) is a cornerstone of sequential analysis. Based on desired type-I, II error levels $\alpha, \beta$, it stops when the likelihood ratio crosses certain thresholds, guaranteeing optimality of the expected sample size. However, these thresholds are not closed form and the test is often applied with approximate thresholds $(1-\beta)/\alpha$ and $\beta/(1-\alpha)$ (approximate SPRT). When $\beta &gt; 0$, this neither guarantees error control at $\alpha,\beta$ nor optimality. When $\beta=0$ (power-one SPRT), this method is conservative and not optimal. The looseness in both cases is caused by overshoot: the test statistic overshoots the thresholds at the stopping time. Numerically calculating thresholds may be infeasible, and most software packages do not do this. We improve the approximate SPRT by modifying the test statistic to avoid overshoot. Our `sequential boosting’ technique uniformly improves power-one SPRTs $(\beta=0)$ for simple nulls and alternatives, or for one-sided nulls and alternatives in exponential families. When $\beta &gt; 0$, our techniques provide guaranteed error control at $\alpha,\beta$, while needing less samples than the approximate SPRT in our simulations. We also provide several nontrivial extensions: confidence sequences, sampling without replacement and conformal martingales." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/03/06/ImprovingWaldsapproximatesequentialprobabilityratiotestbyavoidingovershoot.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/03/06/ImprovingWaldsapproximatesequentialprobabilityratiotestbyavoidingovershoot.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Improving Wald’s (approximate) sequential probability ratio test by avoiding overshoot" />
+<script type="application/ld+json">
+{"description":"Wald’s sequential probability ratio test (SPRT) is a cornerstone of sequential analysis. Based on desired type-I, II error levels $\\alpha, \\beta$, it stops when the likelihood ratio crosses certain thresholds, guaranteeing optimality of the expected sample size. However, these thresholds are not closed form and the test is often applied with approximate thresholds $(1-\\beta)/\\alpha$ and $\\beta/(1-\\alpha)$ (approximate SPRT). When $\\beta &gt; 0$, this neither guarantees error control at $\\alpha,\\beta$ nor optimality. When $\\beta=0$ (power-one SPRT), this method is conservative and not optimal. The looseness in both cases is caused by overshoot: the test statistic overshoots the thresholds at the stopping time. Numerically calculating thresholds may be infeasible, and most software packages do not do this. We improve the approximate SPRT by modifying the test statistic to avoid overshoot. Our `sequential boosting’ technique uniformly improves power-one SPRTs $(\\beta=0)$ for simple nulls and alternatives, or for one-sided nulls and alternatives in exponential families. When $\\beta &gt; 0$, our techniques provide guaranteed error control at $\\alpha,\\beta$, while needing less samples than the approximate SPRT in our simulations. We also provide several nontrivial extensions: confidence sequences, sampling without replacement and conformal martingales.","headline":"Improving Wald’s (approximate) sequential probability ratio test by avoiding overshoot","dateModified":"2025-03-06T00:00:00+00:00","datePublished":"2025-03-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/06/ImprovingWaldsapproximatesequentialprobabilityratiotestbyavoidingovershoot.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/06/ImprovingWaldsapproximatesequentialprobabilityratiotestbyavoidingovershoot.html","author":{"@type":"Person","name":"Lasse Fischer, Aaditya Ramdas"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-06 00:00:00 +0000">03-06</time>
+  </p>
+  
+  <h1>Improving Wald's (approximate) sequential probability ratio test by avoiding overshoot</h1>
+  <br>Lasse Fischer, Aaditya Ramdas</h3>
+  <br> [stat.ME]
+
+  <p>Wald’s sequential probability ratio test (SPRT) is a cornerstone of sequential analysis. Based on desired type-I, II error levels $\alpha, \beta$, it stops when the likelihood ratio crosses certain thresholds, guaranteeing optimality of the expected sample size. However, these thresholds are not closed form and the test is often applied with approximate thresholds $(1-\beta)/\alpha$ and $\beta/(1-\alpha)$ (approximate SPRT). When $\beta &gt; 0$, this neither guarantees error control at $\alpha,\beta$ nor optimality. When $\beta=0$ (power-one SPRT), this method is conservative and not optimal. The looseness in both cases is caused by overshoot: the test statistic overshoots the thresholds at the stopping time. Numerically calculating thresholds may be infeasible, and most software packages do not do this. We improve the approximate SPRT by modifying the test statistic to avoid overshoot. Our `sequential boosting’ technique uniformly improves power-one SPRTs $(\beta=0)$ for simple nulls and alternatives, or for one-sided nulls and alternatives in exponential families. When $\beta &gt; 0$, our techniques provide guaranteed error control at $\alpha,\beta$, while needing less samples than the approximate SPRT in our simulations. We also provide several nontrivial extensions: confidence sequences, sampling without replacement and conformal martingales.</p>
+
+<p><a href="https://arxiv.org/abs/2410.16076">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
