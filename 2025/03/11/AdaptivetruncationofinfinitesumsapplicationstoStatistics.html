@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adaptive truncation of infinite sums: applications to Statistics</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Adaptive truncation of infinite sums: applications to Statistics" />
+<meta name="author" content="Luiz Max Carvalho, Wellington J. Silva, Guido A. Moreira" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It is often the case in Statistics that one needs to compute sums of infinite series, especially in marginalising over discrete latent variables. This has become more relevant with the popularization of gradient-based techniques (e.g. Hamiltonian Monte Carlo) in the Bayesian inference context, for which discrete latent variables are hard or impossible to deal with. For many commonly used infinite series, custom algorithms have been developed which exploit specific features of each problem. General techniques, suitable for a large class of problems with limited input from the user are less established. We employ basic results from the theory of infinite series to investigate general, problem-agnostic algorithms to truncate infinite sums within an arbitrary tolerance $\varepsilon &gt; 0$ and provide robust computational implementations with provable guarantees. We compare three tentative solutions to estimating the infinite sum of interest: (i) a “naive” approach that sums terms until the terms are below the threshold $\varepsilon$; (ii) a bounding pair&#39; strategy based on trapping the true value between two partial sums; and (iii) a batch’ strategy that computes the partial sums in regular intervals and stops when their difference is less than $\varepsilon$. We show under which conditions each strategy guarantees the truncated sum is within the required tolerance and compare the error achieved by each approach, as well as the number of function evaluations necessary for each one. A detailed discussion of numerical issues in practical implementations is also provided. The paper provides some theoretical discussion of a variety of statistical applications, including raw and factorial moments and count models with observation error. Finally, detailed illustrations in the form noisy MCMC for Bayesian inference and maximum marginal likelihood estimation are presented." />
+<meta property="og:description" content="It is often the case in Statistics that one needs to compute sums of infinite series, especially in marginalising over discrete latent variables. This has become more relevant with the popularization of gradient-based techniques (e.g. Hamiltonian Monte Carlo) in the Bayesian inference context, for which discrete latent variables are hard or impossible to deal with. For many commonly used infinite series, custom algorithms have been developed which exploit specific features of each problem. General techniques, suitable for a large class of problems with limited input from the user are less established. We employ basic results from the theory of infinite series to investigate general, problem-agnostic algorithms to truncate infinite sums within an arbitrary tolerance $\varepsilon &gt; 0$ and provide robust computational implementations with provable guarantees. We compare three tentative solutions to estimating the infinite sum of interest: (i) a “naive” approach that sums terms until the terms are below the threshold $\varepsilon$; (ii) a bounding pair&#39; strategy based on trapping the true value between two partial sums; and (iii) a batch’ strategy that computes the partial sums in regular intervals and stops when their difference is less than $\varepsilon$. We show under which conditions each strategy guarantees the truncated sum is within the required tolerance and compare the error achieved by each approach, as well as the number of function evaluations necessary for each one. A detailed discussion of numerical issues in practical implementations is also provided. The paper provides some theoretical discussion of a variety of statistical applications, including raw and factorial moments and count models with observation error. Finally, detailed illustrations in the form noisy MCMC for Bayesian inference and maximum marginal likelihood estimation are presented." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/AdaptivetruncationofinfinitesumsapplicationstoStatistics.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/AdaptivetruncationofinfinitesumsapplicationstoStatistics.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adaptive truncation of infinite sums: applications to Statistics" />
+<script type="application/ld+json">
+{"description":"It is often the case in Statistics that one needs to compute sums of infinite series, especially in marginalising over discrete latent variables. This has become more relevant with the popularization of gradient-based techniques (e.g. Hamiltonian Monte Carlo) in the Bayesian inference context, for which discrete latent variables are hard or impossible to deal with. For many commonly used infinite series, custom algorithms have been developed which exploit specific features of each problem. General techniques, suitable for a large class of problems with limited input from the user are less established. We employ basic results from the theory of infinite series to investigate general, problem-agnostic algorithms to truncate infinite sums within an arbitrary tolerance $\\varepsilon &gt; 0$ and provide robust computational implementations with provable guarantees. We compare three tentative solutions to estimating the infinite sum of interest: (i) a “naive” approach that sums terms until the terms are below the threshold $\\varepsilon$; (ii) a bounding pair&#39; strategy based on trapping the true value between two partial sums; and (iii) a batch’ strategy that computes the partial sums in regular intervals and stops when their difference is less than $\\varepsilon$. We show under which conditions each strategy guarantees the truncated sum is within the required tolerance and compare the error achieved by each approach, as well as the number of function evaluations necessary for each one. A detailed discussion of numerical issues in practical implementations is also provided. The paper provides some theoretical discussion of a variety of statistical applications, including raw and factorial moments and count models with observation error. Finally, detailed illustrations in the form noisy MCMC for Bayesian inference and maximum marginal likelihood estimation are presented.","headline":"Adaptive truncation of infinite sums: applications to Statistics","dateModified":"2025-03-11T00:00:00+00:00","datePublished":"2025-03-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/AdaptivetruncationofinfinitesumsapplicationstoStatistics.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/AdaptivetruncationofinfinitesumsapplicationstoStatistics.html","author":{"@type":"Person","name":"Luiz Max Carvalho, Wellington J. Silva, Guido A. Moreira"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-11 00:00:00 +0000">03-11</time>
+  </p>
+  
+  <h1>Adaptive truncation of infinite sums: applications to Statistics</h1>
+  <br>Luiz Max Carvalho, Wellington J. Silva, Guido A. Moreira</h3>
+  <br> [stat.ME,stat.AP,stat.CO]
+
+  <p>It is often the case in Statistics that one needs to compute sums of infinite series, especially in marginalising over discrete latent variables. This has become more relevant with the popularization of gradient-based techniques (e.g. Hamiltonian Monte Carlo) in the Bayesian inference context, for which discrete latent variables are hard or impossible to deal with. For many commonly used infinite series, custom algorithms have been developed which exploit specific features of each problem. General techniques, suitable for a large class of problems with limited input from the user are less established. We employ basic results from the theory of infinite series to investigate general, problem-agnostic algorithms to truncate infinite sums within an arbitrary tolerance $\varepsilon &gt; 0$ and provide robust computational implementations with provable guarantees. We compare three tentative solutions to estimating the infinite sum of interest: (i) a “naive” approach that sums terms until the terms are below the threshold $\varepsilon$; (ii) a <code class="language-plaintext highlighter-rouge">bounding pair' strategy based on trapping the true value between two partial sums; and (iii) a </code>batch’ strategy that computes the partial sums in regular intervals and stops when their difference is less than $\varepsilon$. We show under which conditions each strategy guarantees the truncated sum is within the required tolerance and compare the error achieved by each approach, as well as the number of function evaluations necessary for each one. A detailed discussion of numerical issues in practical implementations is also provided. The paper provides some theoretical discussion of a variety of statistical applications, including raw and factorial moments and count models with observation error. Finally, detailed illustrations in the form noisy MCMC for Bayesian inference and maximum marginal likelihood estimation are presented.</p>
+
+<p><a href="https://arxiv.org/abs/2202.06121">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

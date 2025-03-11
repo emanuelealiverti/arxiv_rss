@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Posterior SBC: Simulation-Based Calibration Checking Conditional on Data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Posterior SBC: Simulation-Based Calibration Checking Conditional on Data" />
+<meta name="author" content="Teemu Säilynoja, Marvin Schmitt, Paul-Christian Bürkner, Aki Vehtari" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Simulation-based calibration checking (SBC) refers to the validation of an inference algorithm and model implementation through repeated inference on data simulated from a generative model. In the original and commonly used approach, the generative model uses parameters drawn from the prior, and thus the approach is testing whether the inference works for simulated data generated with parameter values plausible under that prior. This approach is natural and desirable when we want to test whether the inference works for a wide range of datasets we might observe. However, after observing data, we are interested in answering whether the inference works conditional on that particular data. In this paper, we propose posterior SBC and demonstrate how it can be used to validate the inference conditionally on observed data. We illustrate the utility of posterior SBC in three case studies: (1) A simple multilevel model; (2) a model that is governed by differential equations; and (3) a joint integrative neuroscience model which is approximated via amortized Bayesian inference with neural networks." />
+<meta property="og:description" content="Simulation-based calibration checking (SBC) refers to the validation of an inference algorithm and model implementation through repeated inference on data simulated from a generative model. In the original and commonly used approach, the generative model uses parameters drawn from the prior, and thus the approach is testing whether the inference works for simulated data generated with parameter values plausible under that prior. This approach is natural and desirable when we want to test whether the inference works for a wide range of datasets we might observe. However, after observing data, we are interested in answering whether the inference works conditional on that particular data. In this paper, we propose posterior SBC and demonstrate how it can be used to validate the inference conditionally on observed data. We illustrate the utility of posterior SBC in three case studies: (1) A simple multilevel model; (2) a model that is governed by differential equations; and (3) a joint integrative neuroscience model which is approximated via amortized Bayesian inference with neural networks." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/PosteriorSBCSimulationBasedCalibrationCheckingConditionalonData.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/PosteriorSBCSimulationBasedCalibrationCheckingConditionalonData.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Posterior SBC: Simulation-Based Calibration Checking Conditional on Data" />
+<script type="application/ld+json">
+{"description":"Simulation-based calibration checking (SBC) refers to the validation of an inference algorithm and model implementation through repeated inference on data simulated from a generative model. In the original and commonly used approach, the generative model uses parameters drawn from the prior, and thus the approach is testing whether the inference works for simulated data generated with parameter values plausible under that prior. This approach is natural and desirable when we want to test whether the inference works for a wide range of datasets we might observe. However, after observing data, we are interested in answering whether the inference works conditional on that particular data. In this paper, we propose posterior SBC and demonstrate how it can be used to validate the inference conditionally on observed data. We illustrate the utility of posterior SBC in three case studies: (1) A simple multilevel model; (2) a model that is governed by differential equations; and (3) a joint integrative neuroscience model which is approximated via amortized Bayesian inference with neural networks.","headline":"Posterior SBC: Simulation-Based Calibration Checking Conditional on Data","dateModified":"2025-03-11T00:00:00+00:00","datePublished":"2025-03-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/PosteriorSBCSimulationBasedCalibrationCheckingConditionalonData.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/PosteriorSBCSimulationBasedCalibrationCheckingConditionalonData.html","author":{"@type":"Person","name":"Teemu Säilynoja, Marvin Schmitt, Paul-Christian Bürkner, Aki Vehtari"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-11 00:00:00 +0000">03-11</time>
+  </p>
+  
+  <h1>Posterior SBC: Simulation-Based Calibration Checking Conditional on Data</h1>
+  <br>Teemu Säilynoja, Marvin Schmitt, Paul-Christian Bürkner, Aki Vehtari</h3>
+  <br> [stat.ME,stat.CO,stat.ML]
+
+  <p>Simulation-based calibration checking (SBC) refers to the validation of an inference algorithm and model implementation through repeated inference on data simulated from a generative model. In the original and commonly used approach, the generative model uses parameters drawn from the prior, and thus the approach is testing whether the inference works for simulated data generated with parameter values plausible under that prior. This approach is natural and desirable when we want to test whether the inference works for a wide range of datasets we might observe. However, after observing data, we are interested in answering whether the inference works conditional on that particular data. In this paper, we propose posterior SBC and demonstrate how it can be used to validate the inference conditionally on observed data. We illustrate the utility of posterior SBC in three case studies: (1) A simple multilevel model; (2) a model that is governed by differential equations; and (3) a joint integrative neuroscience model which is approximated via amortized Bayesian inference with neural networks.</p>
+
+<p><a href="https://arxiv.org/abs/2502.03279">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

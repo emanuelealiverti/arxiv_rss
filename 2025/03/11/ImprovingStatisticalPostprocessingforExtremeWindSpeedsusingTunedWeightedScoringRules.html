@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Improving Statistical Postprocessing for Extreme Wind Speeds using Tuned Weighted Scoring Rules</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Improving Statistical Postprocessing for Extreme Wind Speeds using Tuned Weighted Scoring Rules" />
+<meta name="author" content="Simon Hakvoort, Bastien Francois, Kirien Whan, Sjoerd Dirksen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recent statistical postprocessing methods for wind speed forecasts have incorporated linear models and neural networks to produce more skillful probabilistic forecasts in the low-to-medium wind speed range. At the same time, these methods struggle in the high-to-extreme wind speed range. In this work, we aim to increase the performance in this range by training using a weighted version of the continuous ranked probability score (wCRPS). We develop an approach using shifted Gaussian cdf weight functions, whose parameters are tuned using a multi-objective hyperparameter tuning algorithm that balances performance on low and high wind speed ranges. We explore this approach for both linear models and convolutional neural network models combined with various parametric distributions, namely the truncated normal, log-normal, and generalized extreme value distributions, as well as adaptive mixtures. We apply these methods to forecasts from KNMI’s deterministic Harmonie-Arome numerical weather prediction model to obtain probabilistic wind speed forecasts in the Netherlands for 48 hours ahead. For linear models we observe that even with a tuned weight function, training using the wCRPS produces a strong body-tail trade-off, where increased performance on extremes comes at the price of lower performance for the bulk of the distribution. For the best models using convolutional neural networks, we find that using a tuned weight function the performance on extremes can be increased without a significant deterioration in performance on the bulk. The best-performing weight function is shown to be model-specific. Finally, the choice of distribution has no significant impact on the performance of our models." />
+<meta property="og:description" content="Recent statistical postprocessing methods for wind speed forecasts have incorporated linear models and neural networks to produce more skillful probabilistic forecasts in the low-to-medium wind speed range. At the same time, these methods struggle in the high-to-extreme wind speed range. In this work, we aim to increase the performance in this range by training using a weighted version of the continuous ranked probability score (wCRPS). We develop an approach using shifted Gaussian cdf weight functions, whose parameters are tuned using a multi-objective hyperparameter tuning algorithm that balances performance on low and high wind speed ranges. We explore this approach for both linear models and convolutional neural network models combined with various parametric distributions, namely the truncated normal, log-normal, and generalized extreme value distributions, as well as adaptive mixtures. We apply these methods to forecasts from KNMI’s deterministic Harmonie-Arome numerical weather prediction model to obtain probabilistic wind speed forecasts in the Netherlands for 48 hours ahead. For linear models we observe that even with a tuned weight function, training using the wCRPS produces a strong body-tail trade-off, where increased performance on extremes comes at the price of lower performance for the bulk of the distribution. For the best models using convolutional neural networks, we find that using a tuned weight function the performance on extremes can be increased without a significant deterioration in performance on the bulk. The best-performing weight function is shown to be model-specific. Finally, the choice of distribution has no significant impact on the performance of our models." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/ImprovingStatisticalPostprocessingforExtremeWindSpeedsusingTunedWeightedScoringRules.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/ImprovingStatisticalPostprocessingforExtremeWindSpeedsusingTunedWeightedScoringRules.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Improving Statistical Postprocessing for Extreme Wind Speeds using Tuned Weighted Scoring Rules" />
+<script type="application/ld+json">
+{"description":"Recent statistical postprocessing methods for wind speed forecasts have incorporated linear models and neural networks to produce more skillful probabilistic forecasts in the low-to-medium wind speed range. At the same time, these methods struggle in the high-to-extreme wind speed range. In this work, we aim to increase the performance in this range by training using a weighted version of the continuous ranked probability score (wCRPS). We develop an approach using shifted Gaussian cdf weight functions, whose parameters are tuned using a multi-objective hyperparameter tuning algorithm that balances performance on low and high wind speed ranges. We explore this approach for both linear models and convolutional neural network models combined with various parametric distributions, namely the truncated normal, log-normal, and generalized extreme value distributions, as well as adaptive mixtures. We apply these methods to forecasts from KNMI’s deterministic Harmonie-Arome numerical weather prediction model to obtain probabilistic wind speed forecasts in the Netherlands for 48 hours ahead. For linear models we observe that even with a tuned weight function, training using the wCRPS produces a strong body-tail trade-off, where increased performance on extremes comes at the price of lower performance for the bulk of the distribution. For the best models using convolutional neural networks, we find that using a tuned weight function the performance on extremes can be increased without a significant deterioration in performance on the bulk. The best-performing weight function is shown to be model-specific. Finally, the choice of distribution has no significant impact on the performance of our models.","headline":"Improving Statistical Postprocessing for Extreme Wind Speeds using Tuned Weighted Scoring Rules","dateModified":"2025-03-11T00:00:00+00:00","datePublished":"2025-03-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/ImprovingStatisticalPostprocessingforExtremeWindSpeedsusingTunedWeightedScoringRules.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/11/ImprovingStatisticalPostprocessingforExtremeWindSpeedsusingTunedWeightedScoringRules.html","author":{"@type":"Person","name":"Simon Hakvoort, Bastien Francois, Kirien Whan, Sjoerd Dirksen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-11 00:00:00 +0000">03-11</time>
+  </p>
+  
+  <h1>Improving Statistical Postprocessing for Extreme Wind Speeds using Tuned Weighted Scoring Rules</h1>
+  <br>Simon Hakvoort, Bastien Francois, Kirien Whan, Sjoerd Dirksen</h3>
+  <br> [stat.AP]
+
+  <p>Recent statistical postprocessing methods for wind speed forecasts have incorporated linear models and neural networks to produce more skillful probabilistic forecasts in the low-to-medium wind speed range. At the same time, these methods struggle in the high-to-extreme wind speed range. In this work, we aim to increase the performance in this range by training using a weighted version of the continuous ranked probability score (wCRPS). We develop an approach using shifted Gaussian cdf weight functions, whose parameters are tuned using a multi-objective hyperparameter tuning algorithm that balances performance on low and high wind speed ranges. We explore this approach for both linear models and convolutional neural network models combined with various parametric distributions, namely the truncated normal, log-normal, and generalized extreme value distributions, as well as adaptive mixtures. We apply these methods to forecasts from KNMI’s deterministic Harmonie-Arome numerical weather prediction model to obtain probabilistic wind speed forecasts in the Netherlands for 48 hours ahead. For linear models we observe that even with a tuned weight function, training using the wCRPS produces a strong body-tail trade-off, where increased performance on extremes comes at the price of lower performance for the bulk of the distribution. For the best models using convolutional neural networks, we find that using a tuned weight function the performance on extremes can be increased without a significant deterioration in performance on the bulk. The best-performing weight function is shown to be model-specific. Finally, the choice of distribution has no significant impact on the performance of our models.</p>
+
+<p><a href="https://arxiv.org/abs/2503.07374">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
