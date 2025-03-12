@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Two-stage Design for Failure Probability Estimation with Gaussian Process Surrogates</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Two-stage Design for Failure Probability Estimation with Gaussian Process Surrogates" />
+<meta name="author" content="Annie S. Booth, S. Ashwin Renganathan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We tackle the problem of quantifying failure probabilities for expensive deterministic computer experiments with stochastic inputs. The computational cost of the computer simulation prohibits direct Monte Carlo (MC) and necessitates a surrogate model, turning the problem into a two-stage enterprise (surrogate training followed by probability estimation). Limited budgets create a design problem: how should expensive evaluations be allocated between and within the training and estimation stages? One may use the entire evaluation budget to sequentially train the surrogate through contour location (CL), with failure probabilities then estimated solely from the surrogate (we call it “surrogate MC”). But extended CL offers diminishing returns, and surrogate MC relies too stringently on surrogate accuracy. Alternatively, a partially trained surrogate may inform importance sampling, but this can provide erroneous results when budgets are limited. Instead we propose a two-stage design: starting with sequential CL, halting CL once learning has plateaued, then greedily allocating the remaining budget to MC samples with high classification entropy. Ultimately, we employ a “hybrid MC” estimator which leverages the trained surrogate in conjunction with the true responses observed in this second stage. Our unique two-stage design strikes an appropriate balance between exploring and exploiting, and outperforms alternatives, including both of the aforementioned approaches, on a variety of benchmark exercises. With these tools, we are able to effectively estimate small failure probabilities with only hundreds of simulator evaluations, showcasing functionality with both shallow and deep Gaussian process surrogates, and deploying our method on a simulation of fluid flow around an airfoil." />
+<meta property="og:description" content="We tackle the problem of quantifying failure probabilities for expensive deterministic computer experiments with stochastic inputs. The computational cost of the computer simulation prohibits direct Monte Carlo (MC) and necessitates a surrogate model, turning the problem into a two-stage enterprise (surrogate training followed by probability estimation). Limited budgets create a design problem: how should expensive evaluations be allocated between and within the training and estimation stages? One may use the entire evaluation budget to sequentially train the surrogate through contour location (CL), with failure probabilities then estimated solely from the surrogate (we call it “surrogate MC”). But extended CL offers diminishing returns, and surrogate MC relies too stringently on surrogate accuracy. Alternatively, a partially trained surrogate may inform importance sampling, but this can provide erroneous results when budgets are limited. Instead we propose a two-stage design: starting with sequential CL, halting CL once learning has plateaued, then greedily allocating the remaining budget to MC samples with high classification entropy. Ultimately, we employ a “hybrid MC” estimator which leverages the trained surrogate in conjunction with the true responses observed in this second stage. Our unique two-stage design strikes an appropriate balance between exploring and exploiting, and outperforms alternatives, including both of the aforementioned approaches, on a variety of benchmark exercises. With these tools, we are able to effectively estimate small failure probabilities with only hundreds of simulator evaluations, showcasing functionality with both shallow and deep Gaussian process surrogates, and deploying our method on a simulation of fluid flow around an airfoil." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/TwostageDesignforFailureProbabilityEstimationwithGaussianProcessSurrogates.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/TwostageDesignforFailureProbabilityEstimationwithGaussianProcessSurrogates.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Two-stage Design for Failure Probability Estimation with Gaussian Process Surrogates" />
+<script type="application/ld+json">
+{"description":"We tackle the problem of quantifying failure probabilities for expensive deterministic computer experiments with stochastic inputs. The computational cost of the computer simulation prohibits direct Monte Carlo (MC) and necessitates a surrogate model, turning the problem into a two-stage enterprise (surrogate training followed by probability estimation). Limited budgets create a design problem: how should expensive evaluations be allocated between and within the training and estimation stages? One may use the entire evaluation budget to sequentially train the surrogate through contour location (CL), with failure probabilities then estimated solely from the surrogate (we call it “surrogate MC”). But extended CL offers diminishing returns, and surrogate MC relies too stringently on surrogate accuracy. Alternatively, a partially trained surrogate may inform importance sampling, but this can provide erroneous results when budgets are limited. Instead we propose a two-stage design: starting with sequential CL, halting CL once learning has plateaued, then greedily allocating the remaining budget to MC samples with high classification entropy. Ultimately, we employ a “hybrid MC” estimator which leverages the trained surrogate in conjunction with the true responses observed in this second stage. Our unique two-stage design strikes an appropriate balance between exploring and exploiting, and outperforms alternatives, including both of the aforementioned approaches, on a variety of benchmark exercises. With these tools, we are able to effectively estimate small failure probabilities with only hundreds of simulator evaluations, showcasing functionality with both shallow and deep Gaussian process surrogates, and deploying our method on a simulation of fluid flow around an airfoil.","headline":"Two-stage Design for Failure Probability Estimation with Gaussian Process Surrogates","dateModified":"2025-03-12T00:00:00+00:00","datePublished":"2025-03-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/TwostageDesignforFailureProbabilityEstimationwithGaussianProcessSurrogates.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/TwostageDesignforFailureProbabilityEstimationwithGaussianProcessSurrogates.html","author":{"@type":"Person","name":"Annie S. Booth, S. Ashwin Renganathan"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-12 00:00:00 +0000">03-12</time>
+  </p>
+  
+  <h1>Two-stage Design for Failure Probability Estimation with Gaussian Process Surrogates</h1>
+  <br>Annie S. Booth, S. Ashwin Renganathan</h3>
+  <br> [stat.ME]
+
+  <p>We tackle the problem of quantifying failure probabilities for expensive deterministic computer experiments with stochastic inputs. The computational cost of the computer simulation prohibits direct Monte Carlo (MC) and necessitates a surrogate model, turning the problem into a two-stage enterprise (surrogate training followed by probability estimation). Limited budgets create a design problem: how should expensive evaluations be allocated between and within the training and estimation stages? One may use the entire evaluation budget to sequentially train the surrogate through contour location (CL), with failure probabilities then estimated solely from the surrogate (we call it “surrogate MC”). But extended CL offers diminishing returns, and surrogate MC relies too stringently on surrogate accuracy. Alternatively, a partially trained surrogate may inform importance sampling, but this can provide erroneous results when budgets are limited. Instead we propose a two-stage design: starting with sequential CL, halting CL once learning has plateaued, then greedily allocating the remaining budget to MC samples with high classification entropy. Ultimately, we employ a “hybrid MC” estimator which leverages the trained surrogate in conjunction with the true responses observed in this second stage. Our unique two-stage design strikes an appropriate balance between exploring and exploiting, and outperforms alternatives, including both of the aforementioned approaches, on a variety of benchmark exercises. With these tools, we are able to effectively estimate small failure probabilities with only hundreds of simulator evaluations, showcasing functionality with both shallow and deep Gaussian process surrogates, and deploying our method on a simulation of fluid flow around an airfoil.</p>
+
+<p><a href="https://arxiv.org/abs/2410.04496">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

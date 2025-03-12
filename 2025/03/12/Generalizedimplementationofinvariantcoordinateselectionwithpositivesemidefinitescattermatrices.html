@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Generalized implementation of invariant coordinate selection with positive semi-definite scatter matrices</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Generalized implementation of invariant coordinate selection with positive semi-definite scatter matrices" />
+<meta name="author" content="Aurore Archimbaud" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Invariant coordinate selection is an unsupervised multivariate data transformation useful in many contexts such as outlier detection or clustering. It is based on the simultaneous diagonalization of two affine equivariant and positive definite scatter matrices. Its classical implementation relies on a non-symmetric eigenvalue problem by diagonalizing one scatter relatively to the other. In case of collinearity, at least one of the scatter matrices is singular, making the problem unsolvable. To address this limitation, three approaches are proposed using: a Moore-Penrose pseudo inverse, a dimension reduction, and a generalized singular value decomposition. Their properties are investigated both theoretically and through various empirical applications. Overall, the extension based on the generalized singular value decomposition seems the most promising, even though it restricts the choice of scatter matrices to those that can be expressed as cross-products. In practice, some of the approaches also appear suitable in the context of data in high-dimension low-sample-size data." />
+<meta property="og:description" content="Invariant coordinate selection is an unsupervised multivariate data transformation useful in many contexts such as outlier detection or clustering. It is based on the simultaneous diagonalization of two affine equivariant and positive definite scatter matrices. Its classical implementation relies on a non-symmetric eigenvalue problem by diagonalizing one scatter relatively to the other. In case of collinearity, at least one of the scatter matrices is singular, making the problem unsolvable. To address this limitation, three approaches are proposed using: a Moore-Penrose pseudo inverse, a dimension reduction, and a generalized singular value decomposition. Their properties are investigated both theoretically and through various empirical applications. Overall, the extension based on the generalized singular value decomposition seems the most promising, even though it restricts the choice of scatter matrices to those that can be expressed as cross-products. In practice, some of the approaches also appear suitable in the context of data in high-dimension low-sample-size data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/Generalizedimplementationofinvariantcoordinateselectionwithpositivesemidefinitescattermatrices.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/Generalizedimplementationofinvariantcoordinateselectionwithpositivesemidefinitescattermatrices.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Generalized implementation of invariant coordinate selection with positive semi-definite scatter matrices" />
+<script type="application/ld+json">
+{"description":"Invariant coordinate selection is an unsupervised multivariate data transformation useful in many contexts such as outlier detection or clustering. It is based on the simultaneous diagonalization of two affine equivariant and positive definite scatter matrices. Its classical implementation relies on a non-symmetric eigenvalue problem by diagonalizing one scatter relatively to the other. In case of collinearity, at least one of the scatter matrices is singular, making the problem unsolvable. To address this limitation, three approaches are proposed using: a Moore-Penrose pseudo inverse, a dimension reduction, and a generalized singular value decomposition. Their properties are investigated both theoretically and through various empirical applications. Overall, the extension based on the generalized singular value decomposition seems the most promising, even though it restricts the choice of scatter matrices to those that can be expressed as cross-products. In practice, some of the approaches also appear suitable in the context of data in high-dimension low-sample-size data.","headline":"Generalized implementation of invariant coordinate selection with positive semi-definite scatter matrices","dateModified":"2025-03-12T00:00:00+00:00","datePublished":"2025-03-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/Generalizedimplementationofinvariantcoordinateselectionwithpositivesemidefinitescattermatrices.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/Generalizedimplementationofinvariantcoordinateselectionwithpositivesemidefinitescattermatrices.html","author":{"@type":"Person","name":"Aurore Archimbaud"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-12 00:00:00 +0000">03-12</time>
+  </p>
+  
+  <h1>Generalized implementation of invariant coordinate selection with positive semi-definite scatter matrices</h1>
+  <br>Aurore Archimbaud</h3>
+  <br> [stat.ME]
+
+  <p>Invariant coordinate selection is an unsupervised multivariate data transformation useful in many contexts such as outlier detection or clustering. It is based on the simultaneous diagonalization of two affine equivariant and positive definite scatter matrices. Its classical implementation relies on a non-symmetric eigenvalue problem by diagonalizing one scatter relatively to the other. In case of collinearity, at least one of the scatter matrices is singular, making the problem unsolvable. To address this limitation, three approaches are proposed using: a Moore-Penrose pseudo inverse, a dimension reduction, and a generalized singular value decomposition. Their properties are investigated both theoretically and through various empirical applications. Overall, the extension based on the generalized singular value decomposition seems the most promising, even though it restricts the choice of scatter matrices to those that can be expressed as cross-products. In practice, some of the approaches also appear suitable in the context of data in high-dimension low-sample-size data.</p>
+
+<p><a href="https://arxiv.org/abs/2409.02258">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

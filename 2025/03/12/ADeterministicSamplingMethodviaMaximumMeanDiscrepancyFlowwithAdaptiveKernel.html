@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Deterministic Sampling Method via Maximum Mean Discrepancy Flow with Adaptive Kernel</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Deterministic Sampling Method via Maximum Mean Discrepancy Flow with Adaptive Kernel" />
+<meta name="author" content="Yindong Chen, Yiwei Wang, Lulu Kang, Chun Liu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose a novel deterministic sampling method to approximate a target distribution $\rho^*$ by minimizing the kernel discrepancy, also known as the Maximum Mean Discrepancy (MMD). By employing the general \emph{energetic variational inference} framework (Wang et al., 2021), we convert the problem of minimizing MMD to solving a dynamic ODE system of the particles. We adopt the implicit Euler numerical scheme to solve the ODE systems. This leads to a proximal minimization problem in each iteration of updating the particles, which can be solved by optimization algorithms such as L-BFGS. The proposed method is named EVI-MMD. To overcome the long-existing issue of bandwidth selection of the Gaussian kernel, we propose a novel way to specify the bandwidth dynamically. Through comprehensive numerical studies, we have shown the proposed adaptive bandwidth significantly improves the EVI-MMD. We use the EVI-MMD algorithm to solve two types of sampling problems. In the first type, the target distribution is given by a fully specified density function. The second type is a “two-sample problem”, where only training data are available. The EVI-MMD method is used as a generative learning model to generate new samples that follow the same distribution as the training data. With the recommended settings of the tuning parameters, we show that the proposed EVI-MMD method outperforms some existing methods for both types of problems." />
+<meta property="og:description" content="We propose a novel deterministic sampling method to approximate a target distribution $\rho^*$ by minimizing the kernel discrepancy, also known as the Maximum Mean Discrepancy (MMD). By employing the general \emph{energetic variational inference} framework (Wang et al., 2021), we convert the problem of minimizing MMD to solving a dynamic ODE system of the particles. We adopt the implicit Euler numerical scheme to solve the ODE systems. This leads to a proximal minimization problem in each iteration of updating the particles, which can be solved by optimization algorithms such as L-BFGS. The proposed method is named EVI-MMD. To overcome the long-existing issue of bandwidth selection of the Gaussian kernel, we propose a novel way to specify the bandwidth dynamically. Through comprehensive numerical studies, we have shown the proposed adaptive bandwidth significantly improves the EVI-MMD. We use the EVI-MMD algorithm to solve two types of sampling problems. In the first type, the target distribution is given by a fully specified density function. The second type is a “two-sample problem”, where only training data are available. The EVI-MMD method is used as a generative learning model to generate new samples that follow the same distribution as the training data. With the recommended settings of the tuning parameters, we show that the proposed EVI-MMD method outperforms some existing methods for both types of problems." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/ADeterministicSamplingMethodviaMaximumMeanDiscrepancyFlowwithAdaptiveKernel.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/ADeterministicSamplingMethodviaMaximumMeanDiscrepancyFlowwithAdaptiveKernel.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Deterministic Sampling Method via Maximum Mean Discrepancy Flow with Adaptive Kernel" />
+<script type="application/ld+json">
+{"description":"We propose a novel deterministic sampling method to approximate a target distribution $\\rho^*$ by minimizing the kernel discrepancy, also known as the Maximum Mean Discrepancy (MMD). By employing the general \\emph{energetic variational inference} framework (Wang et al., 2021), we convert the problem of minimizing MMD to solving a dynamic ODE system of the particles. We adopt the implicit Euler numerical scheme to solve the ODE systems. This leads to a proximal minimization problem in each iteration of updating the particles, which can be solved by optimization algorithms such as L-BFGS. The proposed method is named EVI-MMD. To overcome the long-existing issue of bandwidth selection of the Gaussian kernel, we propose a novel way to specify the bandwidth dynamically. Through comprehensive numerical studies, we have shown the proposed adaptive bandwidth significantly improves the EVI-MMD. We use the EVI-MMD algorithm to solve two types of sampling problems. In the first type, the target distribution is given by a fully specified density function. The second type is a “two-sample problem”, where only training data are available. The EVI-MMD method is used as a generative learning model to generate new samples that follow the same distribution as the training data. With the recommended settings of the tuning parameters, we show that the proposed EVI-MMD method outperforms some existing methods for both types of problems.","headline":"A Deterministic Sampling Method via Maximum Mean Discrepancy Flow with Adaptive Kernel","dateModified":"2025-03-12T00:00:00+00:00","datePublished":"2025-03-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/ADeterministicSamplingMethodviaMaximumMeanDiscrepancyFlowwithAdaptiveKernel.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/12/ADeterministicSamplingMethodviaMaximumMeanDiscrepancyFlowwithAdaptiveKernel.html","author":{"@type":"Person","name":"Yindong Chen, Yiwei Wang, Lulu Kang, Chun Liu"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-12 00:00:00 +0000">03-12</time>
+  </p>
+  
+  <h1>A Deterministic Sampling Method via Maximum Mean Discrepancy Flow with Adaptive Kernel</h1>
+  <br>Yindong Chen, Yiwei Wang, Lulu Kang, Chun Liu</h3>
+  <br> [stat.ML,stat.CO]
+
+  <p>We propose a novel deterministic sampling method to approximate a target distribution $\rho^*$ by minimizing the kernel discrepancy, also known as the Maximum Mean Discrepancy (MMD). By employing the general \emph{energetic variational inference} framework (Wang et al., 2021), we convert the problem of minimizing MMD to solving a dynamic ODE system of the particles. We adopt the implicit Euler numerical scheme to solve the ODE systems. This leads to a proximal minimization problem in each iteration of updating the particles, which can be solved by optimization algorithms such as L-BFGS. The proposed method is named EVI-MMD. To overcome the long-existing issue of bandwidth selection of the Gaussian kernel, we propose a novel way to specify the bandwidth dynamically. Through comprehensive numerical studies, we have shown the proposed adaptive bandwidth significantly improves the EVI-MMD. We use the EVI-MMD algorithm to solve two types of sampling problems. In the first type, the target distribution is given by a fully specified density function. The second type is a “two-sample problem”, where only training data are available. The EVI-MMD method is used as a generative learning model to generate new samples that follow the same distribution as the training data. With the recommended settings of the tuning parameters, we show that the proposed EVI-MMD method outperforms some existing methods for both types of problems.</p>
+
+<p><a href="https://arxiv.org/abs/2111.10722">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
