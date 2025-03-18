@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Rejection Sampling with Vertical Weighted Strips</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Rejection Sampling with Vertical Weighted Strips" />
+<meta name="author" content="Andrew M. Raim, James A. Livsey, Kyle M. Irimata" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A number of distributions that arise in statistical applications can be expressed in the form of a weighted density: the product of a base density and a nonnegative weight function. Generating variates from such a distribution may be nontrivial and can involve an intractable normalizing constant. Rejection sampling may be used to generate exact draws, but requires formulation of a suitable proposal distribution. To be practically useful, the proposal must both be convenient to sample from and not reject candidate draws too frequently. A well-known approach to design a proposal involves decomposing the target density into a finite mixture, whose components may correspond to a partition of the support. This work considers such a construction that focuses on majorization of the weight function. This approach may be applicable when assumptions for adaptive rejection sampling and related algorithms are not met. An upper bound for the rejection probability based on this construction can be expressed to evaluate the efficiency of the proposal before sampling. A method to partition the support is considered where regions are bifurcated based on their contribution to the bound. Several applications based on the von Mises Fisher distribution are presented to illustrate the framework." />
+<meta property="og:description" content="A number of distributions that arise in statistical applications can be expressed in the form of a weighted density: the product of a base density and a nonnegative weight function. Generating variates from such a distribution may be nontrivial and can involve an intractable normalizing constant. Rejection sampling may be used to generate exact draws, but requires formulation of a suitable proposal distribution. To be practically useful, the proposal must both be convenient to sample from and not reject candidate draws too frequently. A well-known approach to design a proposal involves decomposing the target density into a finite mixture, whose components may correspond to a partition of the support. This work considers such a construction that focuses on majorization of the weight function. This approach may be applicable when assumptions for adaptive rejection sampling and related algorithms are not met. An upper bound for the rejection probability based on this construction can be expressed to evaluate the efficiency of the proposal before sampling. A method to partition the support is considered where regions are bifurcated based on their contribution to the bound. Several applications based on the von Mises Fisher distribution are presented to illustrate the framework." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/03/18/RejectionSamplingwithVerticalWeightedStrips.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/03/18/RejectionSamplingwithVerticalWeightedStrips.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Rejection Sampling with Vertical Weighted Strips" />
+<script type="application/ld+json">
+{"description":"A number of distributions that arise in statistical applications can be expressed in the form of a weighted density: the product of a base density and a nonnegative weight function. Generating variates from such a distribution may be nontrivial and can involve an intractable normalizing constant. Rejection sampling may be used to generate exact draws, but requires formulation of a suitable proposal distribution. To be practically useful, the proposal must both be convenient to sample from and not reject candidate draws too frequently. A well-known approach to design a proposal involves decomposing the target density into a finite mixture, whose components may correspond to a partition of the support. This work considers such a construction that focuses on majorization of the weight function. This approach may be applicable when assumptions for adaptive rejection sampling and related algorithms are not met. An upper bound for the rejection probability based on this construction can be expressed to evaluate the efficiency of the proposal before sampling. A method to partition the support is considered where regions are bifurcated based on their contribution to the bound. Several applications based on the von Mises Fisher distribution are presented to illustrate the framework.","headline":"Rejection Sampling with Vertical Weighted Strips","dateModified":"2025-03-18T00:00:00+00:00","datePublished":"2025-03-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/18/RejectionSamplingwithVerticalWeightedStrips.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/18/RejectionSamplingwithVerticalWeightedStrips.html","author":{"@type":"Person","name":"Andrew M. Raim, James A. Livsey, Kyle M. Irimata"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-18 00:00:00 +0000">03-18</time>
+  </p>
+  
+  <h1>Rejection Sampling with Vertical Weighted Strips</h1>
+  <br>Andrew M. Raim, James A. Livsey, Kyle M. Irimata</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>A number of distributions that arise in statistical applications can be expressed in the form of a weighted density: the product of a base density and a nonnegative weight function. Generating variates from such a distribution may be nontrivial and can involve an intractable normalizing constant. Rejection sampling may be used to generate exact draws, but requires formulation of a suitable proposal distribution. To be practically useful, the proposal must both be convenient to sample from and not reject candidate draws too frequently. A well-known approach to design a proposal involves decomposing the target density into a finite mixture, whose components may correspond to a partition of the support. This work considers such a construction that focuses on majorization of the weight function. This approach may be applicable when assumptions for adaptive rejection sampling and related algorithms are not met. An upper bound for the rejection probability based on this construction can be expressed to evaluate the efficiency of the proposal before sampling. A method to partition the support is considered where regions are bifurcated based on their contribution to the bound. Several applications based on the von Mises Fisher distribution are presented to illustrate the framework.</p>
+
+<p><a href="https://arxiv.org/abs/2401.09696">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
