@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On prior smoothing with discrete spatial data in the context of disease mapping</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On prior smoothing with discrete spatial data in the context of disease mapping" />
+<meta name="author" content="Garazi Retegui, Alan E. Gelfand, Jaione Etxeberria, María Dolores Ugarte" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Disease mapping attempts to explain observed health event counts across areal units, typically using Markov random field models. These models rely on spatial priors to account for variation in raw relative risk or rate estimates. Spatial priors introduce some degree of smoothing, wherein, for any particular unit, empirical risk or incidence estimates are either adjusted towards a suitable mean or incorporate neighbor-based smoothing. While model explanation may be the primary focus, the literature lacks a comparison of the amount of smoothing introduced by different spatial priors. Additionally, there has been no investigation into how varying the parameters of these priors influences the resulting smoothing. This study examines seven commonly used spatial priors through both simulations and real data analyses. Using areal maps of peninsular Spain and England, we analyze smoothing effects with two datasets with associated populations at risk. We propose empirical metrics to quantify the smoothing achieved by each model and theoretical metrics to calibrate the expected extent of smoothing as a function of model parameters. We employ areal maps in order to quantitatively characterize the extent of smoothing within and across the models as well as to link the theoretical metrics to the empirical metrics." />
+<meta property="og:description" content="Disease mapping attempts to explain observed health event counts across areal units, typically using Markov random field models. These models rely on spatial priors to account for variation in raw relative risk or rate estimates. Spatial priors introduce some degree of smoothing, wherein, for any particular unit, empirical risk or incidence estimates are either adjusted towards a suitable mean or incorporate neighbor-based smoothing. While model explanation may be the primary focus, the literature lacks a comparison of the amount of smoothing introduced by different spatial priors. Additionally, there has been no investigation into how varying the parameters of these priors influences the resulting smoothing. This study examines seven commonly used spatial priors through both simulations and real data analyses. Using areal maps of peninsular Spain and England, we analyze smoothing effects with two datasets with associated populations at risk. We propose empirical metrics to quantify the smoothing achieved by each model and theoretical metrics to calibrate the expected extent of smoothing as a function of model parameters. We employ areal maps in order to quantitatively characterize the extent of smoothing within and across the models as well as to link the theoretical metrics to the empirical metrics." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/03/21/Onpriorsmoothingwithdiscretespatialdatainthecontextofdiseasemapping.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/03/21/Onpriorsmoothingwithdiscretespatialdatainthecontextofdiseasemapping.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On prior smoothing with discrete spatial data in the context of disease mapping" />
+<script type="application/ld+json">
+{"description":"Disease mapping attempts to explain observed health event counts across areal units, typically using Markov random field models. These models rely on spatial priors to account for variation in raw relative risk or rate estimates. Spatial priors introduce some degree of smoothing, wherein, for any particular unit, empirical risk or incidence estimates are either adjusted towards a suitable mean or incorporate neighbor-based smoothing. While model explanation may be the primary focus, the literature lacks a comparison of the amount of smoothing introduced by different spatial priors. Additionally, there has been no investigation into how varying the parameters of these priors influences the resulting smoothing. This study examines seven commonly used spatial priors through both simulations and real data analyses. Using areal maps of peninsular Spain and England, we analyze smoothing effects with two datasets with associated populations at risk. We propose empirical metrics to quantify the smoothing achieved by each model and theoretical metrics to calibrate the expected extent of smoothing as a function of model parameters. We employ areal maps in order to quantitatively characterize the extent of smoothing within and across the models as well as to link the theoretical metrics to the empirical metrics.","headline":"On prior smoothing with discrete spatial data in the context of disease mapping","dateModified":"2025-03-21T00:00:00+00:00","datePublished":"2025-03-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/21/Onpriorsmoothingwithdiscretespatialdatainthecontextofdiseasemapping.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/21/Onpriorsmoothingwithdiscretespatialdatainthecontextofdiseasemapping.html","author":{"@type":"Person","name":"Garazi Retegui, Alan E. Gelfand, Jaione Etxeberria, María Dolores Ugarte"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-21 00:00:00 +0000">03-21</time>
+  </p>
+  
+  <h1>On prior smoothing with discrete spatial data in the context of disease mapping</h1>
+  <br>Garazi Retegui, Alan E. Gelfand, Jaione Etxeberria, María Dolores Ugarte</h3>
+  <br> [stat.ME]
+
+  <p>Disease mapping attempts to explain observed health event counts across areal units, typically using Markov random field models. These models rely on spatial priors to account for variation in raw relative risk or rate estimates. Spatial priors introduce some degree of smoothing, wherein, for any particular unit, empirical risk or incidence estimates are either adjusted towards a suitable mean or incorporate neighbor-based smoothing. While model explanation may be the primary focus, the literature lacks a comparison of the amount of smoothing introduced by different spatial priors. Additionally, there has been no investigation into how varying the parameters of these priors influences the resulting smoothing. This study examines seven commonly used spatial priors through both simulations and real data analyses. Using areal maps of peninsular Spain and England, we analyze smoothing effects with two datasets with associated populations at risk. We propose empirical metrics to quantify the smoothing achieved by each model and theoretical metrics to calibrate the expected extent of smoothing as a function of model parameters. We employ areal maps in order to quantitatively characterize the extent of smoothing within and across the models as well as to link the theoretical metrics to the empirical metrics.</p>
+
+<p><a href="https://arxiv.org/abs/2503.16151">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
