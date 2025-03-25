@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficiently Vectorized MCMC on Modern Accelerators</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficiently Vectorized MCMC on Modern Accelerators" />
+<meta name="author" content="Hugh Dance, Pierre Glaser, Peter Orbanz, Ryan Adams" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="With the advent of automatic vectorization tools (e.g., JAX’s $\texttt{vmap}$), writing multi-chain MCMC algorithms is often now as simple as invoking those tools on single-chain code. Whilst convenient, for various MCMC algorithms this results in a synchronization problem – loosely speaking, at each iteration all chains running in parallel must wait until the last chain has finished drawing its sample. In this work, we show how to design single-chain MCMC algorithms in a way that avoids synchronization overheads when vectorizing with tools like $\texttt{vmap}$ by using the framework of finite state machines (FSMs). Using a simplified model, we derive an exact theoretical form of the obtainable speed-ups using our approach, and use it to make principled recommendations for optimal algorithm design. We implement several popular MCMC algorithms as FSMs, including Elliptical Slice Sampling, HMC-NUTS, and Delayed Rejection, demonstrating speed-ups of up to an order of magnitude in experiments." />
+<meta property="og:description" content="With the advent of automatic vectorization tools (e.g., JAX’s $\texttt{vmap}$), writing multi-chain MCMC algorithms is often now as simple as invoking those tools on single-chain code. Whilst convenient, for various MCMC algorithms this results in a synchronization problem – loosely speaking, at each iteration all chains running in parallel must wait until the last chain has finished drawing its sample. In this work, we show how to design single-chain MCMC algorithms in a way that avoids synchronization overheads when vectorizing with tools like $\texttt{vmap}$ by using the framework of finite state machines (FSMs). Using a simplified model, we derive an exact theoretical form of the obtainable speed-ups using our approach, and use it to make principled recommendations for optimal algorithm design. We implement several popular MCMC algorithms as FSMs, including Elliptical Slice Sampling, HMC-NUTS, and Delayed Rejection, demonstrating speed-ups of up to an order of magnitude in experiments." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/03/25/EfficientlyVectorizedMCMConModernAccelerators.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/03/25/EfficientlyVectorizedMCMConModernAccelerators.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficiently Vectorized MCMC on Modern Accelerators" />
+<script type="application/ld+json">
+{"description":"With the advent of automatic vectorization tools (e.g., JAX’s $\\texttt{vmap}$), writing multi-chain MCMC algorithms is often now as simple as invoking those tools on single-chain code. Whilst convenient, for various MCMC algorithms this results in a synchronization problem – loosely speaking, at each iteration all chains running in parallel must wait until the last chain has finished drawing its sample. In this work, we show how to design single-chain MCMC algorithms in a way that avoids synchronization overheads when vectorizing with tools like $\\texttt{vmap}$ by using the framework of finite state machines (FSMs). Using a simplified model, we derive an exact theoretical form of the obtainable speed-ups using our approach, and use it to make principled recommendations for optimal algorithm design. We implement several popular MCMC algorithms as FSMs, including Elliptical Slice Sampling, HMC-NUTS, and Delayed Rejection, demonstrating speed-ups of up to an order of magnitude in experiments.","headline":"Efficiently Vectorized MCMC on Modern Accelerators","dateModified":"2025-03-25T00:00:00+00:00","datePublished":"2025-03-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/25/EfficientlyVectorizedMCMConModernAccelerators.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/25/EfficientlyVectorizedMCMConModernAccelerators.html","author":{"@type":"Person","name":"Hugh Dance, Pierre Glaser, Peter Orbanz, Ryan Adams"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-25 00:00:00 +0000">03-25</time>
+  </p>
+  
+  <h1>Efficiently Vectorized MCMC on Modern Accelerators</h1>
+  <br>Hugh Dance, Pierre Glaser, Peter Orbanz, Ryan Adams</h3>
+  <br> [stat.CO,stat.ML]
+
+  <p>With the advent of automatic vectorization tools (e.g., JAX’s $\texttt{vmap}$), writing multi-chain MCMC algorithms is often now as simple as invoking those tools on single-chain code. Whilst convenient, for various MCMC algorithms this results in a synchronization problem – loosely speaking, at each iteration all chains running in parallel must wait until the last chain has finished drawing its sample. In this work, we show how to design single-chain MCMC algorithms in a way that avoids synchronization overheads when vectorizing with tools like $\texttt{vmap}$ by using the framework of finite state machines (FSMs). Using a simplified model, we derive an exact theoretical form of the obtainable speed-ups using our approach, and use it to make principled recommendations for optimal algorithm design. We implement several popular MCMC algorithms as FSMs, including Elliptical Slice Sampling, HMC-NUTS, and Delayed Rejection, demonstrating speed-ups of up to an order of magnitude in experiments.</p>
+
+<p><a href="https://arxiv.org/abs/2503.17405">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

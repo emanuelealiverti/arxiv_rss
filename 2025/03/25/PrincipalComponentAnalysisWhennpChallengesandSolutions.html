@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Principal Component Analysis When n < p: Challenges and Solutions</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Principal Component Analysis When n &lt; p: Challenges and Solutions" />
+<meta name="author" content="Nuwan Weeraratne, Lyn Hunt, Jason Kurz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Principal Component Analysis is a key technique for reducing the complexity of high-dimensional data while preserving its fundamental data structure, ensuring models remain stable and interpretable. This is achieved by transforming the original variables into a new set of uncorrelated variables (principal components) based on the covariance structure of the original variables. However, since the traditional maximum likelihood covariance estimator does not accurately converge to the true covariance matrix, the standard principal component analysis performs poorly as a dimensionality reduction technique in high-dimensional scenarios $n&lt;p&gt;&lt;p&gt;&lt; p high dimensional data settings. In empirical comparisons with existing methods (maximum likelihood estimation and its best alternative method called Ledoit-Wolf estimation) and the proposed method(s), all the proposed regularized versions of pairwise differences covariance estimation perform well compared to those well-known estimators in estimating the covariance and principal components while minimizing the PCs’ overdispersion and cosine similarity error. Real data applications are presented." />
+<meta property="og:description" content="Principal Component Analysis is a key technique for reducing the complexity of high-dimensional data while preserving its fundamental data structure, ensuring models remain stable and interpretable. This is achieved by transforming the original variables into a new set of uncorrelated variables (principal components) based on the covariance structure of the original variables. However, since the traditional maximum likelihood covariance estimator does not accurately converge to the true covariance matrix, the standard principal component analysis performs poorly as a dimensionality reduction technique in high-dimensional scenarios $n&lt;p&gt;&lt;p&gt;&lt; p high dimensional data settings. In empirical comparisons with existing methods (maximum likelihood estimation and its best alternative method called Ledoit-Wolf estimation) and the proposed method(s), all the proposed regularized versions of pairwise differences covariance estimation perform well compared to those well-known estimators in estimating the covariance and principal components while minimizing the PCs’ overdispersion and cosine similarity error. Real data applications are presented." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/03/25/PrincipalComponentAnalysisWhennpChallengesandSolutions.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/03/25/PrincipalComponentAnalysisWhennpChallengesandSolutions.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Principal Component Analysis When n &lt; p: Challenges and Solutions" />
+<script type="application/ld+json">
+{"description":"Principal Component Analysis is a key technique for reducing the complexity of high-dimensional data while preserving its fundamental data structure, ensuring models remain stable and interpretable. This is achieved by transforming the original variables into a new set of uncorrelated variables (principal components) based on the covariance structure of the original variables. However, since the traditional maximum likelihood covariance estimator does not accurately converge to the true covariance matrix, the standard principal component analysis performs poorly as a dimensionality reduction technique in high-dimensional scenarios $n&lt;p&gt;&lt;p&gt;&lt; p high dimensional data settings. In empirical comparisons with existing methods (maximum likelihood estimation and its best alternative method called Ledoit-Wolf estimation) and the proposed method(s), all the proposed regularized versions of pairwise differences covariance estimation perform well compared to those well-known estimators in estimating the covariance and principal components while minimizing the PCs’ overdispersion and cosine similarity error. Real data applications are presented.","headline":"Principal Component Analysis When n &lt; p: Challenges and Solutions","dateModified":"2025-03-25T00:00:00+00:00","datePublished":"2025-03-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/25/PrincipalComponentAnalysisWhennpChallengesandSolutions.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/03/25/PrincipalComponentAnalysisWhennpChallengesandSolutions.html","author":{"@type":"Person","name":"Nuwan Weeraratne, Lyn Hunt, Jason Kurz"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-25 00:00:00 +0000">03-25</time>
+  </p>
+  
+  <h1>Principal Component Analysis When n < p: Challenges and Solutions</h1>
+  <br>Nuwan Weeraratne, Lyn Hunt, Jason Kurz</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Principal Component Analysis is a key technique for reducing the complexity of high-dimensional data while preserving its fundamental data structure, ensuring models remain stable and interpretable. This is achieved by transforming the original variables into a new set of uncorrelated variables (principal components) based on the covariance structure of the original variables. However, since the traditional maximum likelihood covariance estimator does not accurately converge to the true covariance matrix, the standard principal component analysis performs poorly as a dimensionality reduction technique in high-dimensional scenarios $n&lt;p&gt;&lt;p&gt;&lt; p high dimensional data settings. In empirical comparisons with existing methods (maximum likelihood estimation and its best alternative method called Ledoit-Wolf estimation) and the proposed method(s), all the proposed regularized versions of pairwise differences covariance estimation perform well compared to those well-known estimators in estimating the covariance and principal components while minimizing the PCs’ overdispersion and cosine similarity error. Real data applications are presented.</p>
+
+<p><a href="https://arxiv.org/abs/2503.17560">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
