@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Langevin Bi-fidelity Importance Sampling for Failure Probability Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Langevin Bi-fidelity Importance Sampling for Failure Probability Estimation" />
+<meta name="author" content="Nuojin Cheng, Alireza Doostan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Estimating failure probability is a key task in the field of uncertainty quantification. In this domain, importance sampling has proven to be an effective estimation strategy; however, its efficiency heavily depends on the choice of the biasing distribution. An improperly selected biasing distribution can significantly increase estimation error. One approach to address this challenge is to leverage a less expensive, lower-fidelity surrogate. Building on the accessibility to such a model and its derivative on the random uncertain inputs, we introduce an importance sampling-based estimator, termed the Langevin bi-fidelity importance sampling (L-BF-IS), which uses score-function-based sampling algorithms to generate new samples and substantially reduces the mean square error (MSE) of failure probability estimation. The proposed method demonstrates lower estimation error, especially in high-dimensional input spaces and when limited high-fidelity evaluations are available. The L-BF-IS estimator’s effectiveness is validated through experiments with two synthetic functions and two real-world applications governed by partial differential equations. These real-world applications involve a composite beam, which is represented using a simplified Euler-Bernoulli equation as a low-fidelity surrogate, and a steady-state stochastic heat equation, for which a pre-trained neural operator serves as the low-fidelity surrogate." />
+<meta property="og:description" content="Estimating failure probability is a key task in the field of uncertainty quantification. In this domain, importance sampling has proven to be an effective estimation strategy; however, its efficiency heavily depends on the choice of the biasing distribution. An improperly selected biasing distribution can significantly increase estimation error. One approach to address this challenge is to leverage a less expensive, lower-fidelity surrogate. Building on the accessibility to such a model and its derivative on the random uncertain inputs, we introduce an importance sampling-based estimator, termed the Langevin bi-fidelity importance sampling (L-BF-IS), which uses score-function-based sampling algorithms to generate new samples and substantially reduces the mean square error (MSE) of failure probability estimation. The proposed method demonstrates lower estimation error, especially in high-dimensional input spaces and when limited high-fidelity evaluations are available. The L-BF-IS estimator’s effectiveness is validated through experiments with two synthetic functions and two real-world applications governed by partial differential equations. These real-world applications involve a composite beam, which is represented using a simplified Euler-Bernoulli equation as a low-fidelity surrogate, and a steady-state stochastic heat equation, for which a pre-trained neural operator serves as the low-fidelity surrogate." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/01/LangevinBifidelityImportanceSamplingforFailureProbabilityEstimation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/01/LangevinBifidelityImportanceSamplingforFailureProbabilityEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Langevin Bi-fidelity Importance Sampling for Failure Probability Estimation" />
+<script type="application/ld+json">
+{"description":"Estimating failure probability is a key task in the field of uncertainty quantification. In this domain, importance sampling has proven to be an effective estimation strategy; however, its efficiency heavily depends on the choice of the biasing distribution. An improperly selected biasing distribution can significantly increase estimation error. One approach to address this challenge is to leverage a less expensive, lower-fidelity surrogate. Building on the accessibility to such a model and its derivative on the random uncertain inputs, we introduce an importance sampling-based estimator, termed the Langevin bi-fidelity importance sampling (L-BF-IS), which uses score-function-based sampling algorithms to generate new samples and substantially reduces the mean square error (MSE) of failure probability estimation. The proposed method demonstrates lower estimation error, especially in high-dimensional input spaces and when limited high-fidelity evaluations are available. The L-BF-IS estimator’s effectiveness is validated through experiments with two synthetic functions and two real-world applications governed by partial differential equations. These real-world applications involve a composite beam, which is represented using a simplified Euler-Bernoulli equation as a low-fidelity surrogate, and a steady-state stochastic heat equation, for which a pre-trained neural operator serves as the low-fidelity surrogate.","headline":"Langevin Bi-fidelity Importance Sampling for Failure Probability Estimation","dateModified":"2025-04-01T00:00:00+00:00","datePublished":"2025-04-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/01/LangevinBifidelityImportanceSamplingforFailureProbabilityEstimation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/01/LangevinBifidelityImportanceSamplingforFailureProbabilityEstimation.html","author":{"@type":"Person","name":"Nuojin Cheng, Alireza Doostan"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-01 00:00:00 +0000">04-01</time>
+  </p>
+  
+  <h1>Langevin Bi-fidelity Importance Sampling for Failure Probability Estimation</h1>
+  <br>Nuojin Cheng, Alireza Doostan</h3>
+  <br> [stat.CO]
+
+  <p>Estimating failure probability is a key task in the field of uncertainty quantification. In this domain, importance sampling has proven to be an effective estimation strategy; however, its efficiency heavily depends on the choice of the biasing distribution. An improperly selected biasing distribution can significantly increase estimation error. One approach to address this challenge is to leverage a less expensive, lower-fidelity surrogate. Building on the accessibility to such a model and its derivative on the random uncertain inputs, we introduce an importance sampling-based estimator, termed the Langevin bi-fidelity importance sampling (L-BF-IS), which uses score-function-based sampling algorithms to generate new samples and substantially reduces the mean square error (MSE) of failure probability estimation. The proposed method demonstrates lower estimation error, especially in high-dimensional input spaces and when limited high-fidelity evaluations are available. The L-BF-IS estimator’s effectiveness is validated through experiments with two synthetic functions and two real-world applications governed by partial differential equations. These real-world applications involve a composite beam, which is represented using a simplified Euler-Bernoulli equation as a low-fidelity surrogate, and a steady-state stochastic heat equation, for which a pre-trained neural operator serves as the low-fidelity surrogate.</p>
+
+<p><a href="https://arxiv.org/abs/2503.17796">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
