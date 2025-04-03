@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the limitations for causal inference in Cox models with time-varying treatment</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On the limitations for causal inference in Cox models with time-varying treatment" />
+<meta name="author" content="Mark B. Knudsen, Erin E. Gabriel, Torben Martinussen, Helene C. W. Rytgaard, Arvid Sjölander" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When using the Cox model to analyze the effect of a time-varying treatment on a survival outcome, treatment is commonly included, using only the current level as a time-dependent covariate. Such a model does not necessarily assume that past treatment is not associated with the outcome (the Markov property), since it is possible to model the hazard conditional on only the current treatment value. However, modeling the hazard conditional on the full treatment history is required in order to interpret the results causally, and such a full model assumes the Markov property when only including current treatment. This is, for example, common in marginal structural Cox models. We demonstrate that relying on the Markov property is problematic, since it only holds in unrealistic settings or if the treatment has no causal effect. This is the case even if there are no confounders and the true causal effect of treatment really only depends on its current level. Further, we provide an example of a scenario where the Markov property is not fulfilled, but the Cox model that includes only current treatment as a covariate is correctly specified. Transforming the result to the survival scale does not give the true intervention-specific survival probabilities, showcasing that it is unclear how to make causal statements from such models." />
+<meta property="og:description" content="When using the Cox model to analyze the effect of a time-varying treatment on a survival outcome, treatment is commonly included, using only the current level as a time-dependent covariate. Such a model does not necessarily assume that past treatment is not associated with the outcome (the Markov property), since it is possible to model the hazard conditional on only the current treatment value. However, modeling the hazard conditional on the full treatment history is required in order to interpret the results causally, and such a full model assumes the Markov property when only including current treatment. This is, for example, common in marginal structural Cox models. We demonstrate that relying on the Markov property is problematic, since it only holds in unrealistic settings or if the treatment has no causal effect. This is the case even if there are no confounders and the true causal effect of treatment really only depends on its current level. Further, we provide an example of a scenario where the Markov property is not fulfilled, but the Cox model that includes only current treatment as a covariate is correctly specified. Transforming the result to the survival scale does not give the true intervention-specific survival probabilities, showcasing that it is unclear how to make causal statements from such models." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/03/OnthelimitationsforcausalinferenceinCoxmodelswithtimevaryingtreatment.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/03/OnthelimitationsforcausalinferenceinCoxmodelswithtimevaryingtreatment.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On the limitations for causal inference in Cox models with time-varying treatment" />
+<script type="application/ld+json">
+{"description":"When using the Cox model to analyze the effect of a time-varying treatment on a survival outcome, treatment is commonly included, using only the current level as a time-dependent covariate. Such a model does not necessarily assume that past treatment is not associated with the outcome (the Markov property), since it is possible to model the hazard conditional on only the current treatment value. However, modeling the hazard conditional on the full treatment history is required in order to interpret the results causally, and such a full model assumes the Markov property when only including current treatment. This is, for example, common in marginal structural Cox models. We demonstrate that relying on the Markov property is problematic, since it only holds in unrealistic settings or if the treatment has no causal effect. This is the case even if there are no confounders and the true causal effect of treatment really only depends on its current level. Further, we provide an example of a scenario where the Markov property is not fulfilled, but the Cox model that includes only current treatment as a covariate is correctly specified. Transforming the result to the survival scale does not give the true intervention-specific survival probabilities, showcasing that it is unclear how to make causal statements from such models.","headline":"On the limitations for causal inference in Cox models with time-varying treatment","dateModified":"2025-04-03T00:00:00+00:00","datePublished":"2025-04-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/03/OnthelimitationsforcausalinferenceinCoxmodelswithtimevaryingtreatment.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/03/OnthelimitationsforcausalinferenceinCoxmodelswithtimevaryingtreatment.html","author":{"@type":"Person","name":"Mark B. Knudsen, Erin E. Gabriel, Torben Martinussen, Helene C. W. Rytgaard, Arvid Sjölander"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-03 00:00:00 +0000">04-03</time>
+  </p>
+  
+  <h1>On the limitations for causal inference in Cox models with time-varying treatment</h1>
+  <br>Mark B. Knudsen, Erin E. Gabriel, Torben Martinussen, Helene C. W. Rytgaard, Arvid Sjölander</h3>
+  <br> [stat.ME]
+
+  <p>When using the Cox model to analyze the effect of a time-varying treatment on a survival outcome, treatment is commonly included, using only the current level as a time-dependent covariate. Such a model does not necessarily assume that past treatment is not associated with the outcome (the Markov property), since it is possible to model the hazard conditional on only the current treatment value. However, modeling the hazard conditional on the full treatment history is required in order to interpret the results causally, and such a full model assumes the Markov property when only including current treatment. This is, for example, common in marginal structural Cox models. We demonstrate that relying on the Markov property is problematic, since it only holds in unrealistic settings or if the treatment has no causal effect. This is the case even if there are no confounders and the true causal effect of treatment really only depends on its current level. Further, we provide an example of a scenario where the Markov property is not fulfilled, but the Cox model that includes only current treatment as a covariate is correctly specified. Transforming the result to the survival scale does not give the true intervention-specific survival probabilities, showcasing that it is unclear how to make causal statements from such models.</p>
+
+<p><a href="https://arxiv.org/abs/2504.01524">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
