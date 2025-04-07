@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mixing Samples to Address Weak Overlap in Causal Inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Mixing Samples to Address Weak Overlap in Causal Inference" />
+<meta name="author" content="Jaehyuk Jang, Suehyun Kim, Kwonsang Lee" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In observational studies, the assumption of sufficient overlap (positivity) is fundamental for the identification and estimation of causal effects. Failing to account for this assumption yields inaccurate and potentially infeasible estimators. To address this issue, we introduce a simple yet novel approach, \textit{mixing}, which mitigates overlap violations by constructing a synthetic treated group that combines treated and control units. Our strategy offers three key advantages. First, it improves the accuracy of the estimator by preserving unbiasedness while reducing variance. The benefit is particularly significant in settings with weak overlap, though the method remains effective regardless of the overlap level. This phenomenon results from the shrinkage of propensity scores in the mixed sample, which enhances robustness to poor overlap. Second, it enables direct estimation of the target estimand without discarding extreme observations or modifying the target population, thus facilitating a straightforward interpretation of the results. Third, the mixing approach is highly adaptable to various weighting schemes, including contemporary methods such as entropy balancing. The estimation of the Mixed IPW (MIPW) estimator is done via M-estimation, and the method extends to a broader class of weighting estimators through a resampling algorithm. We illustrate the mixing approach through extensive simulation studies and provide practical guidance with a real-data analysis." />
+<meta property="og:description" content="In observational studies, the assumption of sufficient overlap (positivity) is fundamental for the identification and estimation of causal effects. Failing to account for this assumption yields inaccurate and potentially infeasible estimators. To address this issue, we introduce a simple yet novel approach, \textit{mixing}, which mitigates overlap violations by constructing a synthetic treated group that combines treated and control units. Our strategy offers three key advantages. First, it improves the accuracy of the estimator by preserving unbiasedness while reducing variance. The benefit is particularly significant in settings with weak overlap, though the method remains effective regardless of the overlap level. This phenomenon results from the shrinkage of propensity scores in the mixed sample, which enhances robustness to poor overlap. Second, it enables direct estimation of the target estimand without discarding extreme observations or modifying the target population, thus facilitating a straightforward interpretation of the results. Third, the mixing approach is highly adaptable to various weighting schemes, including contemporary methods such as entropy balancing. The estimation of the Mixed IPW (MIPW) estimator is done via M-estimation, and the method extends to a broader class of weighting estimators through a resampling algorithm. We illustrate the mixing approach through extensive simulation studies and provide practical guidance with a real-data analysis." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/MixingSamplestoAddressWeakOverlapinCausalInference.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/MixingSamplestoAddressWeakOverlapinCausalInference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mixing Samples to Address Weak Overlap in Causal Inference" />
+<script type="application/ld+json">
+{"description":"In observational studies, the assumption of sufficient overlap (positivity) is fundamental for the identification and estimation of causal effects. Failing to account for this assumption yields inaccurate and potentially infeasible estimators. To address this issue, we introduce a simple yet novel approach, \\textit{mixing}, which mitigates overlap violations by constructing a synthetic treated group that combines treated and control units. Our strategy offers three key advantages. First, it improves the accuracy of the estimator by preserving unbiasedness while reducing variance. The benefit is particularly significant in settings with weak overlap, though the method remains effective regardless of the overlap level. This phenomenon results from the shrinkage of propensity scores in the mixed sample, which enhances robustness to poor overlap. Second, it enables direct estimation of the target estimand without discarding extreme observations or modifying the target population, thus facilitating a straightforward interpretation of the results. Third, the mixing approach is highly adaptable to various weighting schemes, including contemporary methods such as entropy balancing. The estimation of the Mixed IPW (MIPW) estimator is done via M-estimation, and the method extends to a broader class of weighting estimators through a resampling algorithm. We illustrate the mixing approach through extensive simulation studies and provide practical guidance with a real-data analysis.","headline":"Mixing Samples to Address Weak Overlap in Causal Inference","dateModified":"2025-04-07T00:00:00+00:00","datePublished":"2025-04-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/MixingSamplestoAddressWeakOverlapinCausalInference.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/MixingSamplestoAddressWeakOverlapinCausalInference.html","author":{"@type":"Person","name":"Jaehyuk Jang, Suehyun Kim, Kwonsang Lee"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-07 00:00:00 +0000">04-07</time>
+  </p>
+  
+  <h1>Mixing Samples to Address Weak Overlap in Causal Inference</h1>
+  <br>Jaehyuk Jang, Suehyun Kim, Kwonsang Lee</h3>
+  <br> [stat.ME]
+
+  <p>In observational studies, the assumption of sufficient overlap (positivity) is fundamental for the identification and estimation of causal effects. Failing to account for this assumption yields inaccurate and potentially infeasible estimators. To address this issue, we introduce a simple yet novel approach, \textit{mixing}, which mitigates overlap violations by constructing a synthetic treated group that combines treated and control units. Our strategy offers three key advantages. First, it improves the accuracy of the estimator by preserving unbiasedness while reducing variance. The benefit is particularly significant in settings with weak overlap, though the method remains effective regardless of the overlap level. This phenomenon results from the shrinkage of propensity scores in the mixed sample, which enhances robustness to poor overlap. Second, it enables direct estimation of the target estimand without discarding extreme observations or modifying the target population, thus facilitating a straightforward interpretation of the results. Third, the mixing approach is highly adaptable to various weighting schemes, including contemporary methods such as entropy balancing. The estimation of the Mixed IPW (MIPW) estimator is done via M-estimation, and the method extends to a broader class of weighting estimators through a resampling algorithm. We illustrate the mixing approach through extensive simulation studies and provide practical guidance with a real-data analysis.</p>
+
+<p><a href="https://arxiv.org/abs/2411.10801">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Enhanced ECG Arrhythmia Detection Accuracy by Optimizing Divergence-Based Data Fusion</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Enhanced ECG Arrhythmia Detection Accuracy by Optimizing Divergence-Based Data Fusion" />
+<meta name="author" content="Baozhuo Su, Qingli Dou, Kang Liu, Zhengxian Qu, Jerry Deng, Ting Tan, Yanan Gu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AI computation in healthcare faces significant challenges when clinical datasets are limited and heterogeneous. Integrating datasets from multiple sources and different equipments is critical for effective AI computation but is complicated by their diversity, complexity, and lack of representativeness, so we often need to join multiple datasets for analysis. The currently used method is fusion after normalization. But when using this method, it can introduce redundant information, decreasing the signal-to-noise ratio and reducing classification accuracy. To tackle this issue, we propose a feature-based fusion algorithm utilizing Kernel Density Estimation (KDE) and Kullback-Leibler (KL) divergence. Our approach involves initially preprocessing and continuous estimation on the extracted features, followed by employing the gradient descent method to identify the optimal linear parameters that minimize the KL divergence between the feature distributions. Using our in-house datasets consisting of ECG signals collected from 2000 healthy and 2000 diseased individuals by different equipments and verifying our method by using the publicly available PTB-XL dataset which contains 21,837 ECG recordings from 18,885 patients. We employ a Light Gradient Boosting Machine (LGBM) model to do the binary classification. The results demonstrate that the proposed fusion method significantly enhances feature-based classification accuracy for abnormal ECG cases in the merged datasets, compared to the normalization method. This data fusion strategy provides a new approach to process heterogeneous datasets for the optimal AI computation results." />
+<meta property="og:description" content="AI computation in healthcare faces significant challenges when clinical datasets are limited and heterogeneous. Integrating datasets from multiple sources and different equipments is critical for effective AI computation but is complicated by their diversity, complexity, and lack of representativeness, so we often need to join multiple datasets for analysis. The currently used method is fusion after normalization. But when using this method, it can introduce redundant information, decreasing the signal-to-noise ratio and reducing classification accuracy. To tackle this issue, we propose a feature-based fusion algorithm utilizing Kernel Density Estimation (KDE) and Kullback-Leibler (KL) divergence. Our approach involves initially preprocessing and continuous estimation on the extracted features, followed by employing the gradient descent method to identify the optimal linear parameters that minimize the KL divergence between the feature distributions. Using our in-house datasets consisting of ECG signals collected from 2000 healthy and 2000 diseased individuals by different equipments and verifying our method by using the publicly available PTB-XL dataset which contains 21,837 ECG recordings from 18,885 patients. We employ a Light Gradient Boosting Machine (LGBM) model to do the binary classification. The results demonstrate that the proposed fusion method significantly enhances feature-based classification accuracy for abnormal ECG cases in the merged datasets, compared to the normalization method. This data fusion strategy provides a new approach to process heterogeneous datasets for the optimal AI computation results." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/EnhancedECGArrhythmiaDetectionAccuracybyOptimizingDivergenceBasedDataFusion.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/EnhancedECGArrhythmiaDetectionAccuracybyOptimizingDivergenceBasedDataFusion.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Enhanced ECG Arrhythmia Detection Accuracy by Optimizing Divergence-Based Data Fusion" />
+<script type="application/ld+json">
+{"description":"AI computation in healthcare faces significant challenges when clinical datasets are limited and heterogeneous. Integrating datasets from multiple sources and different equipments is critical for effective AI computation but is complicated by their diversity, complexity, and lack of representativeness, so we often need to join multiple datasets for analysis. The currently used method is fusion after normalization. But when using this method, it can introduce redundant information, decreasing the signal-to-noise ratio and reducing classification accuracy. To tackle this issue, we propose a feature-based fusion algorithm utilizing Kernel Density Estimation (KDE) and Kullback-Leibler (KL) divergence. Our approach involves initially preprocessing and continuous estimation on the extracted features, followed by employing the gradient descent method to identify the optimal linear parameters that minimize the KL divergence between the feature distributions. Using our in-house datasets consisting of ECG signals collected from 2000 healthy and 2000 diseased individuals by different equipments and verifying our method by using the publicly available PTB-XL dataset which contains 21,837 ECG recordings from 18,885 patients. We employ a Light Gradient Boosting Machine (LGBM) model to do the binary classification. The results demonstrate that the proposed fusion method significantly enhances feature-based classification accuracy for abnormal ECG cases in the merged datasets, compared to the normalization method. This data fusion strategy provides a new approach to process heterogeneous datasets for the optimal AI computation results.","headline":"Enhanced ECG Arrhythmia Detection Accuracy by Optimizing Divergence-Based Data Fusion","dateModified":"2025-04-07T00:00:00+00:00","datePublished":"2025-04-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/EnhancedECGArrhythmiaDetectionAccuracybyOptimizingDivergenceBasedDataFusion.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/EnhancedECGArrhythmiaDetectionAccuracybyOptimizingDivergenceBasedDataFusion.html","author":{"@type":"Person","name":"Baozhuo Su, Qingli Dou, Kang Liu, Zhengxian Qu, Jerry Deng, Ting Tan, Yanan Gu"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-07 00:00:00 +0000">04-07</time>
+  </p>
+  
+  <h1>Enhanced ECG Arrhythmia Detection Accuracy by Optimizing Divergence-Based Data Fusion</h1>
+  <br>Baozhuo Su, Qingli Dou, Kang Liu, Zhengxian Qu, Jerry Deng, Ting Tan, Yanan Gu</h3>
+  <br> [stat.AP,stat.ME]
+
+  <p>AI computation in healthcare faces significant challenges when clinical datasets are limited and heterogeneous. Integrating datasets from multiple sources and different equipments is critical for effective AI computation but is complicated by their diversity, complexity, and lack of representativeness, so we often need to join multiple datasets for analysis. The currently used method is fusion after normalization. But when using this method, it can introduce redundant information, decreasing the signal-to-noise ratio and reducing classification accuracy. To tackle this issue, we propose a feature-based fusion algorithm utilizing Kernel Density Estimation (KDE) and Kullback-Leibler (KL) divergence. Our approach involves initially preprocessing and continuous estimation on the extracted features, followed by employing the gradient descent method to identify the optimal linear parameters that minimize the KL divergence between the feature distributions. Using our in-house datasets consisting of ECG signals collected from 2000 healthy and 2000 diseased individuals by different equipments and verifying our method by using the publicly available PTB-XL dataset which contains 21,837 ECG recordings from 18,885 patients. We employ a Light Gradient Boosting Machine (LGBM) model to do the binary classification. The results demonstrate that the proposed fusion method significantly enhances feature-based classification accuracy for abnormal ECG cases in the merged datasets, compared to the normalization method. This data fusion strategy provides a new approach to process heterogeneous datasets for the optimal AI computation results.</p>
+
+<p><a href="https://arxiv.org/abs/2504.02842">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

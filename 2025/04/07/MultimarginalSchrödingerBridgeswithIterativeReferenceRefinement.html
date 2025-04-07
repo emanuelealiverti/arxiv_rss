@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Multi-marginal Schrödinger Bridges with Iterative Reference Refinement</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Multi-marginal Schrödinger Bridges with Iterative Reference Refinement" />
+<meta name="author" content="Yunyi Shen, Renato Berlinghieri, Tamara Broderick" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Practitioners often aim to infer an unobserved population trajectory using sample snapshots at multiple time points. E.g., given single-cell sequencing data, scientists would like to learn how gene expression changes over a cell’s life cycle. But sequencing any cell destroys that cell. So we can access data for any particular cell only at a single time point, but we have data across many cells. The deep learning community has recently explored using Schr&quot;odinger bridges (SBs) and their extensions in similar settings. However, existing methods either (1) interpolate between just two time points or (2) require a single fixed reference dynamic (often set to Brownian motion within SBs). But learning piecewise from adjacent time points can fail to capture long-term dependencies. And practitioners are typically able to specify a model family for the reference dynamic but not the exact values of the parameters within it. So we propose a new method that (1) learns the unobserved trajectories from sample snapshots across multiple time points and (2) requires specification only of a family of reference dynamics, not a single fixed one. We demonstrate the advantages of our method on simulated and real data." />
+<meta property="og:description" content="Practitioners often aim to infer an unobserved population trajectory using sample snapshots at multiple time points. E.g., given single-cell sequencing data, scientists would like to learn how gene expression changes over a cell’s life cycle. But sequencing any cell destroys that cell. So we can access data for any particular cell only at a single time point, but we have data across many cells. The deep learning community has recently explored using Schr&quot;odinger bridges (SBs) and their extensions in similar settings. However, existing methods either (1) interpolate between just two time points or (2) require a single fixed reference dynamic (often set to Brownian motion within SBs). But learning piecewise from adjacent time points can fail to capture long-term dependencies. And practitioners are typically able to specify a model family for the reference dynamic but not the exact values of the parameters within it. So we propose a new method that (1) learns the unobserved trajectories from sample snapshots across multiple time points and (2) requires specification only of a family of reference dynamics, not a single fixed one. We demonstrate the advantages of our method on simulated and real data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/MultimarginalSchr%C3%B6dingerBridgeswithIterativeReferenceRefinement.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/MultimarginalSchr%C3%B6dingerBridgeswithIterativeReferenceRefinement.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Multi-marginal Schrödinger Bridges with Iterative Reference Refinement" />
+<script type="application/ld+json">
+{"description":"Practitioners often aim to infer an unobserved population trajectory using sample snapshots at multiple time points. E.g., given single-cell sequencing data, scientists would like to learn how gene expression changes over a cell’s life cycle. But sequencing any cell destroys that cell. So we can access data for any particular cell only at a single time point, but we have data across many cells. The deep learning community has recently explored using Schr&quot;odinger bridges (SBs) and their extensions in similar settings. However, existing methods either (1) interpolate between just two time points or (2) require a single fixed reference dynamic (often set to Brownian motion within SBs). But learning piecewise from adjacent time points can fail to capture long-term dependencies. And practitioners are typically able to specify a model family for the reference dynamic but not the exact values of the parameters within it. So we propose a new method that (1) learns the unobserved trajectories from sample snapshots across multiple time points and (2) requires specification only of a family of reference dynamics, not a single fixed one. We demonstrate the advantages of our method on simulated and real data.","headline":"Multi-marginal Schrödinger Bridges with Iterative Reference Refinement","dateModified":"2025-04-07T00:00:00+00:00","datePublished":"2025-04-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/MultimarginalSchr%C3%B6dingerBridgeswithIterativeReferenceRefinement.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/07/MultimarginalSchr%C3%B6dingerBridgeswithIterativeReferenceRefinement.html","author":{"@type":"Person","name":"Yunyi Shen, Renato Berlinghieri, Tamara Broderick"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-07 00:00:00 +0000">04-07</time>
+  </p>
+  
+  <h1>Multi-marginal Schrödinger Bridges with Iterative Reference Refinement</h1>
+  <br>Yunyi Shen, Renato Berlinghieri, Tamara Broderick</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>Practitioners often aim to infer an unobserved population trajectory using sample snapshots at multiple time points. E.g., given single-cell sequencing data, scientists would like to learn how gene expression changes over a cell’s life cycle. But sequencing any cell destroys that cell. So we can access data for any particular cell only at a single time point, but we have data across many cells. The deep learning community has recently explored using Schr"odinger bridges (SBs) and their extensions in similar settings. However, existing methods either (1) interpolate between just two time points or (2) require a single fixed reference dynamic (often set to Brownian motion within SBs). But learning piecewise from adjacent time points can fail to capture long-term dependencies. And practitioners are typically able to specify a model family for the reference dynamic but not the exact values of the parameters within it. So we propose a new method that (1) learns the unobserved trajectories from sample snapshots across multiple time points and (2) requires specification only of a family of reference dynamics, not a single fixed one. We demonstrate the advantages of our method on simulated and real data.</p>
+
+<p><a href="https://arxiv.org/abs/2408.06277">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
