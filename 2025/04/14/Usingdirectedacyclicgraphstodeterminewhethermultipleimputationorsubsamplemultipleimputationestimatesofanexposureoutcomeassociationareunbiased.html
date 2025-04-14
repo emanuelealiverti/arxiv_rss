@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Using directed acyclic graphs to determine whether multiple imputation or subsample multiple imputation estimates of an exposure-outcome association are unbiased</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Using directed acyclic graphs to determine whether multiple imputation or subsample multiple imputation estimates of an exposure-outcome association are unbiased" />
+<meta name="author" content="Paul Madley-Dowd, Rachael A. Hughes, Maya B. Mathur, Jon Heron, Kate Tilling" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Missing data is a pervasive problem in epidemiology, with multiple imputation (MI) a commonly used analysis method. MI is valid when data are missing at random (MAR). However, definitions of MAR with multiple incomplete variables are not easily interpretable and graphical model-based conditions are not accessible to applied researchers. Previous literature shows that MI may be valid in subsamples, even if not in the full dataset. Practical guidance on applying MI with multiple incomplete variables is lacking. We present an algorithm using directed acyclic graphs to determine when MI will estimate an exposure-outcome coefficient without bias. We extend the algorithm to assess whether MI in a subsample of the data, in which some variables are complete, and the remaining are imputed, will be valid and unbiased for the same coefficient. We apply the algorithm to several simple exemplars, and in a more complex real-life example highlight that only subsample MI of the outcome would be valid. Our algorithm provides researchers with the tools to decide whether (and how) to use MI in practice when there are multiple incomplete variables. Further work could focus on the likely size and direction of biases, and the impact of different missing data patterns." />
+<meta property="og:description" content="Missing data is a pervasive problem in epidemiology, with multiple imputation (MI) a commonly used analysis method. MI is valid when data are missing at random (MAR). However, definitions of MAR with multiple incomplete variables are not easily interpretable and graphical model-based conditions are not accessible to applied researchers. Previous literature shows that MI may be valid in subsamples, even if not in the full dataset. Practical guidance on applying MI with multiple incomplete variables is lacking. We present an algorithm using directed acyclic graphs to determine when MI will estimate an exposure-outcome coefficient without bias. We extend the algorithm to assess whether MI in a subsample of the data, in which some variables are complete, and the remaining are imputed, will be valid and unbiased for the same coefficient. We apply the algorithm to several simple exemplars, and in a more complex real-life example highlight that only subsample MI of the outcome would be valid. Our algorithm provides researchers with the tools to decide whether (and how) to use MI in practice when there are multiple incomplete variables. Further work could focus on the likely size and direction of biases, and the impact of different missing data patterns." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/14/Usingdirectedacyclicgraphstodeterminewhethermultipleimputationorsubsamplemultipleimputationestimatesofanexposureoutcomeassociationareunbiased.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/14/Usingdirectedacyclicgraphstodeterminewhethermultipleimputationorsubsamplemultipleimputationestimatesofanexposureoutcomeassociationareunbiased.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Using directed acyclic graphs to determine whether multiple imputation or subsample multiple imputation estimates of an exposure-outcome association are unbiased" />
+<script type="application/ld+json">
+{"description":"Missing data is a pervasive problem in epidemiology, with multiple imputation (MI) a commonly used analysis method. MI is valid when data are missing at random (MAR). However, definitions of MAR with multiple incomplete variables are not easily interpretable and graphical model-based conditions are not accessible to applied researchers. Previous literature shows that MI may be valid in subsamples, even if not in the full dataset. Practical guidance on applying MI with multiple incomplete variables is lacking. We present an algorithm using directed acyclic graphs to determine when MI will estimate an exposure-outcome coefficient without bias. We extend the algorithm to assess whether MI in a subsample of the data, in which some variables are complete, and the remaining are imputed, will be valid and unbiased for the same coefficient. We apply the algorithm to several simple exemplars, and in a more complex real-life example highlight that only subsample MI of the outcome would be valid. Our algorithm provides researchers with the tools to decide whether (and how) to use MI in practice when there are multiple incomplete variables. Further work could focus on the likely size and direction of biases, and the impact of different missing data patterns.","headline":"Using directed acyclic graphs to determine whether multiple imputation or subsample multiple imputation estimates of an exposure-outcome association are unbiased","dateModified":"2025-04-14T00:00:00+00:00","datePublished":"2025-04-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/14/Usingdirectedacyclicgraphstodeterminewhethermultipleimputationorsubsamplemultipleimputationestimatesofanexposureoutcomeassociationareunbiased.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/14/Usingdirectedacyclicgraphstodeterminewhethermultipleimputationorsubsamplemultipleimputationestimatesofanexposureoutcomeassociationareunbiased.html","author":{"@type":"Person","name":"Paul Madley-Dowd, Rachael A. Hughes, Maya B. Mathur, Jon Heron, Kate Tilling"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-14 00:00:00 +0000">04-14</time>
+  </p>
+  
+  <h1>Using directed acyclic graphs to determine whether multiple imputation or subsample multiple imputation estimates of an exposure-outcome association are unbiased</h1>
+  <br>Paul Madley-Dowd, Rachael A. Hughes, Maya B. Mathur, Jon Heron, Kate Tilling</h3>
+  <br> [stat.ME]
+
+  <p>Missing data is a pervasive problem in epidemiology, with multiple imputation (MI) a commonly used analysis method. MI is valid when data are missing at random (MAR). However, definitions of MAR with multiple incomplete variables are not easily interpretable and graphical model-based conditions are not accessible to applied researchers. Previous literature shows that MI may be valid in subsamples, even if not in the full dataset. Practical guidance on applying MI with multiple incomplete variables is lacking. We present an algorithm using directed acyclic graphs to determine when MI will estimate an exposure-outcome coefficient without bias. We extend the algorithm to assess whether MI in a subsample of the data, in which some variables are complete, and the remaining are imputed, will be valid and unbiased for the same coefficient. We apply the algorithm to several simple exemplars, and in a more complex real-life example highlight that only subsample MI of the outcome would be valid. Our algorithm provides researchers with the tools to decide whether (and how) to use MI in practice when there are multiple incomplete variables. Further work could focus on the likely size and direction of biases, and the impact of different missing data patterns.</p>
+
+<p><a href="https://arxiv.org/abs/2503.24035">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
