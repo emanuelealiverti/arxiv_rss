@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Evaluating AI systems under uncertain ground truth: a case study in dermatology</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Evaluating AI systems under uncertain ground truth: a case study in dermatology" />
+<meta name="author" content="David Stutz, Ali Taylan Cemgil, Abhijit Guha Roy, Tatiana Matejovicova, Melih Barsbey, Patricia Strachan, Mike Schaekermann, Jan Freyberg, Rajeev Rikhye, Beverly Freeman, Javier Perez Matos, Umesh Telang, Dale R. Webster, Yuan Liu, Greg S. Corrado, Yossi Matias, Pushmeet Kohli, Yun Liu, Arnaud Doucet, Alan Karthikesalingam" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For safety, medical AI systems undergo thorough evaluations before deployment, validating their predictions against a ground truth which is assumed to be fixed and certain. However, this ground truth is often curated in the form of differential diagnoses. While a single differential diagnosis reflects the uncertainty in one expert assessment, multiple experts introduce another layer of uncertainty through disagreement. Both forms of uncertainty are ignored in standard evaluation which aggregates these differential diagnoses to a single label. In this paper, we show that ignoring uncertainty leads to overly optimistic estimates of model performance, therefore underestimating risk associated with particular diagnostic decisions. To this end, we propose a statistical aggregation approach, where we infer a distribution on probabilities of underlying medical condition candidates themselves, based on observed annotations. This formulation naturally accounts for the potential disagreements between different experts, as well as uncertainty stemming from individual differential diagnoses, capturing the entire ground truth uncertainty. Our approach boils down to generating multiple samples of medical condition probabilities, then evaluating and averaging performance metrics based on these sampled probabilities. In skin condition classification, we find that a large portion of the dataset exhibits significant ground truth uncertainty and standard evaluation severely over-estimates performance without providing uncertainty estimates. In contrast, our framework provides uncertainty estimates on common metrics of interest such as top-k accuracy and average overlap, showing that performance can change multiple percentage points. We conclude that, while assuming a crisp ground truth can be acceptable for many AI applications, a more nuanced evaluation protocol should be utilized in medical diagnosis." />
+<meta property="og:description" content="For safety, medical AI systems undergo thorough evaluations before deployment, validating their predictions against a ground truth which is assumed to be fixed and certain. However, this ground truth is often curated in the form of differential diagnoses. While a single differential diagnosis reflects the uncertainty in one expert assessment, multiple experts introduce another layer of uncertainty through disagreement. Both forms of uncertainty are ignored in standard evaluation which aggregates these differential diagnoses to a single label. In this paper, we show that ignoring uncertainty leads to overly optimistic estimates of model performance, therefore underestimating risk associated with particular diagnostic decisions. To this end, we propose a statistical aggregation approach, where we infer a distribution on probabilities of underlying medical condition candidates themselves, based on observed annotations. This formulation naturally accounts for the potential disagreements between different experts, as well as uncertainty stemming from individual differential diagnoses, capturing the entire ground truth uncertainty. Our approach boils down to generating multiple samples of medical condition probabilities, then evaluating and averaging performance metrics based on these sampled probabilities. In skin condition classification, we find that a large portion of the dataset exhibits significant ground truth uncertainty and standard evaluation severely over-estimates performance without providing uncertainty estimates. In contrast, our framework provides uncertainty estimates on common metrics of interest such as top-k accuracy and average overlap, showing that performance can change multiple percentage points. We conclude that, while assuming a crisp ground truth can be acceptable for many AI applications, a more nuanced evaluation protocol should be utilized in medical diagnosis." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/15/EvaluatingAIsystemsunderuncertaingroundtruthacasestudyindermatology.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/15/EvaluatingAIsystemsunderuncertaingroundtruthacasestudyindermatology.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Evaluating AI systems under uncertain ground truth: a case study in dermatology" />
+<script type="application/ld+json">
+{"description":"For safety, medical AI systems undergo thorough evaluations before deployment, validating their predictions against a ground truth which is assumed to be fixed and certain. However, this ground truth is often curated in the form of differential diagnoses. While a single differential diagnosis reflects the uncertainty in one expert assessment, multiple experts introduce another layer of uncertainty through disagreement. Both forms of uncertainty are ignored in standard evaluation which aggregates these differential diagnoses to a single label. In this paper, we show that ignoring uncertainty leads to overly optimistic estimates of model performance, therefore underestimating risk associated with particular diagnostic decisions. To this end, we propose a statistical aggregation approach, where we infer a distribution on probabilities of underlying medical condition candidates themselves, based on observed annotations. This formulation naturally accounts for the potential disagreements between different experts, as well as uncertainty stemming from individual differential diagnoses, capturing the entire ground truth uncertainty. Our approach boils down to generating multiple samples of medical condition probabilities, then evaluating and averaging performance metrics based on these sampled probabilities. In skin condition classification, we find that a large portion of the dataset exhibits significant ground truth uncertainty and standard evaluation severely over-estimates performance without providing uncertainty estimates. In contrast, our framework provides uncertainty estimates on common metrics of interest such as top-k accuracy and average overlap, showing that performance can change multiple percentage points. We conclude that, while assuming a crisp ground truth can be acceptable for many AI applications, a more nuanced evaluation protocol should be utilized in medical diagnosis.","headline":"Evaluating AI systems under uncertain ground truth: a case study in dermatology","dateModified":"2025-04-15T00:00:00+00:00","datePublished":"2025-04-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/15/EvaluatingAIsystemsunderuncertaingroundtruthacasestudyindermatology.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/15/EvaluatingAIsystemsunderuncertaingroundtruthacasestudyindermatology.html","author":{"@type":"Person","name":"David Stutz, Ali Taylan Cemgil, Abhijit Guha Roy, Tatiana Matejovicova, Melih Barsbey, Patricia Strachan, Mike Schaekermann, Jan Freyberg, Rajeev Rikhye, Beverly Freeman, Javier Perez Matos, Umesh Telang, Dale R. Webster, Yuan Liu, Greg S. Corrado, Yossi Matias, Pushmeet Kohli, Yun Liu, Arnaud Doucet, Alan Karthikesalingam"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-15 00:00:00 +0000">04-15</time>
+  </p>
+  
+  <h1>Evaluating AI systems under uncertain ground truth: a case study in dermatology</h1>
+  <br>David Stutz, Ali Taylan Cemgil, Abhijit Guha Roy, Tatiana Matejovicova, Melih Barsbey, Patricia Strachan, Mike Schaekermann, Jan Freyberg, Rajeev Rikhye, Beverly Freeman, Javier Perez Matos, Umesh Telang, Dale R. Webster, Yuan Liu, Greg S. Corrado, Yossi Matias, Pushmeet Kohli, Yun Liu, Arnaud Doucet, Alan Karthikesalingam</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>For safety, medical AI systems undergo thorough evaluations before deployment, validating their predictions against a ground truth which is assumed to be fixed and certain. However, this ground truth is often curated in the form of differential diagnoses. While a single differential diagnosis reflects the uncertainty in one expert assessment, multiple experts introduce another layer of uncertainty through disagreement. Both forms of uncertainty are ignored in standard evaluation which aggregates these differential diagnoses to a single label. In this paper, we show that ignoring uncertainty leads to overly optimistic estimates of model performance, therefore underestimating risk associated with particular diagnostic decisions. To this end, we propose a statistical aggregation approach, where we infer a distribution on probabilities of underlying medical condition candidates themselves, based on observed annotations. This formulation naturally accounts for the potential disagreements between different experts, as well as uncertainty stemming from individual differential diagnoses, capturing the entire ground truth uncertainty. Our approach boils down to generating multiple samples of medical condition probabilities, then evaluating and averaging performance metrics based on these sampled probabilities. In skin condition classification, we find that a large portion of the dataset exhibits significant ground truth uncertainty and standard evaluation severely over-estimates performance without providing uncertainty estimates. In contrast, our framework provides uncertainty estimates on common metrics of interest such as top-k accuracy and average overlap, showing that performance can change multiple percentage points. We conclude that, while assuming a crisp ground truth can be acceptable for many AI applications, a more nuanced evaluation protocol should be utilized in medical diagnosis.</p>
+
+<p><a href="https://arxiv.org/abs/2307.02191">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
