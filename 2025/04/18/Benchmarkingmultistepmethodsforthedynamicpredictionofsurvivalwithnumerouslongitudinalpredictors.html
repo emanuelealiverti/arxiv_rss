@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Benchmarking multi-step methods for the dynamic prediction of survival with numerous longitudinal predictors</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Benchmarking multi-step methods for the dynamic prediction of survival with numerous longitudinal predictors" />
+<meta name="author" content="Mirko Signorelli, Sophie Retif" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In recent years, the growing availability of biomedical datasets featuring numerous longitudinal covariates has motivated the development of several multi-step methods for the dynamic prediction of time-to-event (“survival”) outcomes. These methods employ either mixed-effects models or multivariate functional principal component analysis to model and summarize the longitudinal covariates’ evolution over time. Then, they use Cox models or random survival forests to predict survival probabilities, using as covariates both baseline variables and the summaries of the longitudinal variables obtained in the previous modelling step. Because these multi-step methods are still quite new, to date little is known about their applicability, limitations, and predictive performance when applied to real-world data. To gain a better understanding of these aspects, we performed a benchmarking of the aforementioned multi-step methods (and two simpler prediction approaches) based on three datasets that differ in sample size, number of longitudinal covariates and length of follow-up. We discuss the different modelling choices made by these methods, and some adjustments that one may need to do in order to be able to apply them to real-world data. Furthermore, we compare their predictive performance using multiple performance measures and landmark times, and assess their computing time." />
+<meta property="og:description" content="In recent years, the growing availability of biomedical datasets featuring numerous longitudinal covariates has motivated the development of several multi-step methods for the dynamic prediction of time-to-event (“survival”) outcomes. These methods employ either mixed-effects models or multivariate functional principal component analysis to model and summarize the longitudinal covariates’ evolution over time. Then, they use Cox models or random survival forests to predict survival probabilities, using as covariates both baseline variables and the summaries of the longitudinal variables obtained in the previous modelling step. Because these multi-step methods are still quite new, to date little is known about their applicability, limitations, and predictive performance when applied to real-world data. To gain a better understanding of these aspects, we performed a benchmarking of the aforementioned multi-step methods (and two simpler prediction approaches) based on three datasets that differ in sample size, number of longitudinal covariates and length of follow-up. We discuss the different modelling choices made by these methods, and some adjustments that one may need to do in order to be able to apply them to real-world data. Furthermore, we compare their predictive performance using multiple performance measures and landmark times, and assess their computing time." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/18/Benchmarkingmultistepmethodsforthedynamicpredictionofsurvivalwithnumerouslongitudinalpredictors.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/18/Benchmarkingmultistepmethodsforthedynamicpredictionofsurvivalwithnumerouslongitudinalpredictors.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Benchmarking multi-step methods for the dynamic prediction of survival with numerous longitudinal predictors" />
+<script type="application/ld+json">
+{"description":"In recent years, the growing availability of biomedical datasets featuring numerous longitudinal covariates has motivated the development of several multi-step methods for the dynamic prediction of time-to-event (“survival”) outcomes. These methods employ either mixed-effects models or multivariate functional principal component analysis to model and summarize the longitudinal covariates’ evolution over time. Then, they use Cox models or random survival forests to predict survival probabilities, using as covariates both baseline variables and the summaries of the longitudinal variables obtained in the previous modelling step. Because these multi-step methods are still quite new, to date little is known about their applicability, limitations, and predictive performance when applied to real-world data. To gain a better understanding of these aspects, we performed a benchmarking of the aforementioned multi-step methods (and two simpler prediction approaches) based on three datasets that differ in sample size, number of longitudinal covariates and length of follow-up. We discuss the different modelling choices made by these methods, and some adjustments that one may need to do in order to be able to apply them to real-world data. Furthermore, we compare their predictive performance using multiple performance measures and landmark times, and assess their computing time.","headline":"Benchmarking multi-step methods for the dynamic prediction of survival with numerous longitudinal predictors","dateModified":"2025-04-18T00:00:00+00:00","datePublished":"2025-04-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/18/Benchmarkingmultistepmethodsforthedynamicpredictionofsurvivalwithnumerouslongitudinalpredictors.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/18/Benchmarkingmultistepmethodsforthedynamicpredictionofsurvivalwithnumerouslongitudinalpredictors.html","author":{"@type":"Person","name":"Mirko Signorelli, Sophie Retif"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-18 00:00:00 +0000">04-18</time>
+  </p>
+  
+  <h1>Benchmarking multi-step methods for the dynamic prediction of survival with numerous longitudinal predictors</h1>
+  <br>Mirko Signorelli, Sophie Retif</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>In recent years, the growing availability of biomedical datasets featuring numerous longitudinal covariates has motivated the development of several multi-step methods for the dynamic prediction of time-to-event (“survival”) outcomes. These methods employ either mixed-effects models or multivariate functional principal component analysis to model and summarize the longitudinal covariates’ evolution over time. Then, they use Cox models or random survival forests to predict survival probabilities, using as covariates both baseline variables and the summaries of the longitudinal variables obtained in the previous modelling step.
+  Because these multi-step methods are still quite new, to date little is known about their applicability, limitations, and predictive performance when applied to real-world data. To gain a better understanding of these aspects, we performed a benchmarking of the aforementioned multi-step methods (and two simpler prediction approaches) based on three datasets that differ in sample size, number of longitudinal covariates and length of follow-up. We discuss the different modelling choices made by these methods, and some adjustments that one may need to do in order to be able to apply them to real-world data. Furthermore, we compare their predictive performance using multiple performance measures and landmark times, and assess their computing time.</p>
+
+<p><a href="https://arxiv.org/abs/2403.14336">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
