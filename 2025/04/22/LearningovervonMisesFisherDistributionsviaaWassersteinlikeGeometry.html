@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning over von Mises-Fisher Distributions via a Wasserstein-like Geometry</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Learning over von Mises-Fisher Distributions via a Wasserstein-like Geometry" />
+<meta name="author" content="Kisung You, Dennis Shung, Mauro Giuffrè" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce a novel, geometry-aware distance metric for the family of von Mises-Fisher (vMF) distributions, which are fundamental models for directional data on the unit hypersphere. Although the vMF distribution is widely employed in a variety of probabilistic learning tasks involving spherical data, principled tools for comparing vMF distributions remain limited, primarily due to the intractability of normalization constants and the absence of suitable geometric metrics. Motivated by the theory of optimal transport, we propose a Wasserstein-like distance that decomposes the discrepancy between two vMF distributions into two interpretable components: a geodesic term capturing the angular separation between mean directions, and a variance-like term quantifying differences in concentration parameters. The derivation leverages a Gaussian approximation in the high-concentration regime to yield a tractable, closed-form expression that respects the intrinsic spherical geometry. We show that the proposed distance exhibits desirable theoretical properties and induces a latent geometric structure on the space of non-degenerate vMF distributions. As a primary application, we develop the efficient algorithms for vMF mixture reduction, enabling structure-preserving compression of mixture models in high-dimensional settings. Empirical results on synthetic datasets and real-world high-dimensional embeddings, including biomedical sentence representations and deep visual features, demonstrate the effectiveness of the proposed geometry in distinguishing distributions and supporting interpretable inference. This work expands the statistical toolbox for directional data analysis by introducing a tractable, transport-inspired distance tailored to the geometry of the hypersphere." />
+<meta property="og:description" content="We introduce a novel, geometry-aware distance metric for the family of von Mises-Fisher (vMF) distributions, which are fundamental models for directional data on the unit hypersphere. Although the vMF distribution is widely employed in a variety of probabilistic learning tasks involving spherical data, principled tools for comparing vMF distributions remain limited, primarily due to the intractability of normalization constants and the absence of suitable geometric metrics. Motivated by the theory of optimal transport, we propose a Wasserstein-like distance that decomposes the discrepancy between two vMF distributions into two interpretable components: a geodesic term capturing the angular separation between mean directions, and a variance-like term quantifying differences in concentration parameters. The derivation leverages a Gaussian approximation in the high-concentration regime to yield a tractable, closed-form expression that respects the intrinsic spherical geometry. We show that the proposed distance exhibits desirable theoretical properties and induces a latent geometric structure on the space of non-degenerate vMF distributions. As a primary application, we develop the efficient algorithms for vMF mixture reduction, enabling structure-preserving compression of mixture models in high-dimensional settings. Empirical results on synthetic datasets and real-world high-dimensional embeddings, including biomedical sentence representations and deep visual features, demonstrate the effectiveness of the proposed geometry in distinguishing distributions and supporting interpretable inference. This work expands the statistical toolbox for directional data analysis by introducing a tractable, transport-inspired distance tailored to the geometry of the hypersphere." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/22/LearningovervonMisesFisherDistributionsviaaWassersteinlikeGeometry.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/22/LearningovervonMisesFisherDistributionsviaaWassersteinlikeGeometry.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learning over von Mises-Fisher Distributions via a Wasserstein-like Geometry" />
+<script type="application/ld+json">
+{"description":"We introduce a novel, geometry-aware distance metric for the family of von Mises-Fisher (vMF) distributions, which are fundamental models for directional data on the unit hypersphere. Although the vMF distribution is widely employed in a variety of probabilistic learning tasks involving spherical data, principled tools for comparing vMF distributions remain limited, primarily due to the intractability of normalization constants and the absence of suitable geometric metrics. Motivated by the theory of optimal transport, we propose a Wasserstein-like distance that decomposes the discrepancy between two vMF distributions into two interpretable components: a geodesic term capturing the angular separation between mean directions, and a variance-like term quantifying differences in concentration parameters. The derivation leverages a Gaussian approximation in the high-concentration regime to yield a tractable, closed-form expression that respects the intrinsic spherical geometry. We show that the proposed distance exhibits desirable theoretical properties and induces a latent geometric structure on the space of non-degenerate vMF distributions. As a primary application, we develop the efficient algorithms for vMF mixture reduction, enabling structure-preserving compression of mixture models in high-dimensional settings. Empirical results on synthetic datasets and real-world high-dimensional embeddings, including biomedical sentence representations and deep visual features, demonstrate the effectiveness of the proposed geometry in distinguishing distributions and supporting interpretable inference. This work expands the statistical toolbox for directional data analysis by introducing a tractable, transport-inspired distance tailored to the geometry of the hypersphere.","headline":"Learning over von Mises-Fisher Distributions via a Wasserstein-like Geometry","dateModified":"2025-04-22T00:00:00+00:00","datePublished":"2025-04-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/22/LearningovervonMisesFisherDistributionsviaaWassersteinlikeGeometry.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/22/LearningovervonMisesFisherDistributionsviaaWassersteinlikeGeometry.html","author":{"@type":"Person","name":"Kisung You, Dennis Shung, Mauro Giuffrè"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-22 00:00:00 +0000">04-22</time>
+  </p>
+  
+  <h1>Learning over von Mises-Fisher Distributions via a Wasserstein-like Geometry</h1>
+  <br>Kisung You, Dennis Shung, Mauro Giuffrè</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>We introduce a novel, geometry-aware distance metric for the family of von Mises-Fisher (vMF) distributions, which are fundamental models for directional data on the unit hypersphere. Although the vMF distribution is widely employed in a variety of probabilistic learning tasks involving spherical data, principled tools for comparing vMF distributions remain limited, primarily due to the intractability of normalization constants and the absence of suitable geometric metrics. Motivated by the theory of optimal transport, we propose a Wasserstein-like distance that decomposes the discrepancy between two vMF distributions into two interpretable components: a geodesic term capturing the angular separation between mean directions, and a variance-like term quantifying differences in concentration parameters. The derivation leverages a Gaussian approximation in the high-concentration regime to yield a tractable, closed-form expression that respects the intrinsic spherical geometry. We show that the proposed distance exhibits desirable theoretical properties and induces a latent geometric structure on the space of non-degenerate vMF distributions. As a primary application, we develop the efficient algorithms for vMF mixture reduction, enabling structure-preserving compression of mixture models in high-dimensional settings. Empirical results on synthetic datasets and real-world high-dimensional embeddings, including biomedical sentence representations and deep visual features, demonstrate the effectiveness of the proposed geometry in distinguishing distributions and supporting interpretable inference. This work expands the statistical toolbox for directional data analysis by introducing a tractable, transport-inspired distance tailored to the geometry of the hypersphere.</p>
+
+<p><a href="https://arxiv.org/abs/2504.14164">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
