@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Deep Gaussian Process Priors for Bayesian Image Reconstruction</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Deep Gaussian Process Priors for Bayesian Image Reconstruction" />
+<meta name="author" content="Jonas Latz, Aretha L. Teckentrup, Simon Urbainczyk" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In image reconstruction, an accurate quantification of uncertainty is of great importance for informed decision making. Here, the Bayesian approach to inverse problems can be used: the image is represented through a random function that incorporates prior information which is then updated through Bayes’ formula. However, finding a prior is difficult, as images often exhibit non-stationary effects and multi-scale behaviour. Thus, usual Gaussian process priors are not suitable. Deep Gaussian processes, on the other hand, encode non-stationary behaviour in a natural way through their hierarchical structure. To apply Bayes’ formula, one commonly employs a Markov chain Monte Carlo (MCMC) method. In the case of deep Gaussian processes, sampling is especially challenging in high dimensions: the associated covariance matrices are large, dense, and changing from sample to sample. A popular strategy towards decreasing computational complexity is to view Gaussian processes as the solutions to a fractional stochastic partial differential equation (SPDE). In this work, we investigate efficient computational strategies to solve the fractional SPDEs occurring in deep Gaussian process sampling, as well as MCMC algorithms to sample from the posterior. Namely, we combine rational approximation and a determinant-free sampling approach to achieve sampling via the fractional SPDE. We test our techniques in standard Bayesian image reconstruction problems: upsampling, edge detection, and computed tomography. In these examples, we show that choosing a non-stationary prior such as the deep GP over a stationary GP can improve the reconstruction. Moreover, our approach enables us to compare results for a range of fractional and non-fractional regularity parameter values." />
+<meta property="og:description" content="In image reconstruction, an accurate quantification of uncertainty is of great importance for informed decision making. Here, the Bayesian approach to inverse problems can be used: the image is represented through a random function that incorporates prior information which is then updated through Bayes’ formula. However, finding a prior is difficult, as images often exhibit non-stationary effects and multi-scale behaviour. Thus, usual Gaussian process priors are not suitable. Deep Gaussian processes, on the other hand, encode non-stationary behaviour in a natural way through their hierarchical structure. To apply Bayes’ formula, one commonly employs a Markov chain Monte Carlo (MCMC) method. In the case of deep Gaussian processes, sampling is especially challenging in high dimensions: the associated covariance matrices are large, dense, and changing from sample to sample. A popular strategy towards decreasing computational complexity is to view Gaussian processes as the solutions to a fractional stochastic partial differential equation (SPDE). In this work, we investigate efficient computational strategies to solve the fractional SPDEs occurring in deep Gaussian process sampling, as well as MCMC algorithms to sample from the posterior. Namely, we combine rational approximation and a determinant-free sampling approach to achieve sampling via the fractional SPDE. We test our techniques in standard Bayesian image reconstruction problems: upsampling, edge detection, and computed tomography. In these examples, we show that choosing a non-stationary prior such as the deep GP over a stationary GP can improve the reconstruction. Moreover, our approach enables us to compare results for a range of fractional and non-fractional regularity parameter values." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/24/DeepGaussianProcessPriorsforBayesianImageReconstruction.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/24/DeepGaussianProcessPriorsforBayesianImageReconstruction.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Deep Gaussian Process Priors for Bayesian Image Reconstruction" />
+<script type="application/ld+json">
+{"description":"In image reconstruction, an accurate quantification of uncertainty is of great importance for informed decision making. Here, the Bayesian approach to inverse problems can be used: the image is represented through a random function that incorporates prior information which is then updated through Bayes’ formula. However, finding a prior is difficult, as images often exhibit non-stationary effects and multi-scale behaviour. Thus, usual Gaussian process priors are not suitable. Deep Gaussian processes, on the other hand, encode non-stationary behaviour in a natural way through their hierarchical structure. To apply Bayes’ formula, one commonly employs a Markov chain Monte Carlo (MCMC) method. In the case of deep Gaussian processes, sampling is especially challenging in high dimensions: the associated covariance matrices are large, dense, and changing from sample to sample. A popular strategy towards decreasing computational complexity is to view Gaussian processes as the solutions to a fractional stochastic partial differential equation (SPDE). In this work, we investigate efficient computational strategies to solve the fractional SPDEs occurring in deep Gaussian process sampling, as well as MCMC algorithms to sample from the posterior. Namely, we combine rational approximation and a determinant-free sampling approach to achieve sampling via the fractional SPDE. We test our techniques in standard Bayesian image reconstruction problems: upsampling, edge detection, and computed tomography. In these examples, we show that choosing a non-stationary prior such as the deep GP over a stationary GP can improve the reconstruction. Moreover, our approach enables us to compare results for a range of fractional and non-fractional regularity parameter values.","headline":"Deep Gaussian Process Priors for Bayesian Image Reconstruction","dateModified":"2025-04-24T00:00:00+00:00","datePublished":"2025-04-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/24/DeepGaussianProcessPriorsforBayesianImageReconstruction.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/24/DeepGaussianProcessPriorsforBayesianImageReconstruction.html","author":{"@type":"Person","name":"Jonas Latz, Aretha L. Teckentrup, Simon Urbainczyk"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-24 00:00:00 +0000">04-24</time>
+  </p>
+  
+  <h1>Deep Gaussian Process Priors for Bayesian Image Reconstruction</h1>
+  <br>Jonas Latz, Aretha L. Teckentrup, Simon Urbainczyk</h3>
+  <br> [stat.CO]
+
+  <p>In image reconstruction, an accurate quantification of uncertainty is of great importance for informed decision making. Here, the Bayesian approach to inverse problems can be used: the image is represented through a random function that incorporates prior information which is then updated through Bayes’ formula. However, finding a prior is difficult, as images often exhibit non-stationary effects and multi-scale behaviour. Thus, usual Gaussian process priors are not suitable. Deep Gaussian processes, on the other hand, encode non-stationary behaviour in a natural way through their hierarchical structure. To apply Bayes’ formula, one commonly employs a Markov chain Monte Carlo (MCMC) method. In the case of deep Gaussian processes, sampling is especially challenging in high dimensions: the associated covariance matrices are large, dense, and changing from sample to sample. A popular strategy towards decreasing computational complexity is to view Gaussian processes as the solutions to a fractional stochastic partial differential equation (SPDE). In this work, we investigate efficient computational strategies to solve the fractional SPDEs occurring in deep Gaussian process sampling, as well as MCMC algorithms to sample from the posterior. Namely, we combine rational approximation and a determinant-free sampling approach to achieve sampling via the fractional SPDE. We test our techniques in standard Bayesian image reconstruction problems: upsampling, edge detection, and computed tomography. In these examples, we show that choosing a non-stationary prior such as the deep GP over a stationary GP can improve the reconstruction. Moreover, our approach enables us to compare results for a range of fractional and non-fractional regularity parameter values.</p>
+
+<p><a href="https://arxiv.org/abs/2412.10248">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

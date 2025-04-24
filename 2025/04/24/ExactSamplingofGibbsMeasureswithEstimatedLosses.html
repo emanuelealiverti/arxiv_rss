@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Exact Sampling of Gibbs Measures with Estimated Losses</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Exact Sampling of Gibbs Measures with Estimated Losses" />
+<meta name="author" content="David T. Frazier, Jeremias Knoblauch, Jack Jewson, Christopher Drovandi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In recent years, the shortcomings of Bayesian posteriors as inferential devices have received increased attention. A popular strategy for fixing them has been to instead target a Gibbs measure based on losses that connect a parameter of interest to observed data. However, existing theory for such inference procedures assumes these losses are analytically available, while in many situations these losses must be stochastically estimated using pseudo-observations. In such cases, we show that when standard Markov Chain Monte Carlo algorithms are used to produce posterior samples, the resulting posterior exhibits strong dependence on the number of pseudo-observations: unless the number of pseudo-observations diverge sufficiently fast the resulting posterior will concentrate very slowly. However, we show that in many situations it is feasible to alleviate this dependence entirely using a modified piecewise deterministic Markov process (PDMP) sampler, and we formally and empirically show that these samplers produce posterior draws that have no dependence on the number of pseudo-observations used to estimate the loss within the Gibbs Measure. We apply our results to three examples that feature intractable likelihoods and model misspecification." />
+<meta property="og:description" content="In recent years, the shortcomings of Bayesian posteriors as inferential devices have received increased attention. A popular strategy for fixing them has been to instead target a Gibbs measure based on losses that connect a parameter of interest to observed data. However, existing theory for such inference procedures assumes these losses are analytically available, while in many situations these losses must be stochastically estimated using pseudo-observations. In such cases, we show that when standard Markov Chain Monte Carlo algorithms are used to produce posterior samples, the resulting posterior exhibits strong dependence on the number of pseudo-observations: unless the number of pseudo-observations diverge sufficiently fast the resulting posterior will concentrate very slowly. However, we show that in many situations it is feasible to alleviate this dependence entirely using a modified piecewise deterministic Markov process (PDMP) sampler, and we formally and empirically show that these samplers produce posterior draws that have no dependence on the number of pseudo-observations used to estimate the loss within the Gibbs Measure. We apply our results to three examples that feature intractable likelihoods and model misspecification." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/24/ExactSamplingofGibbsMeasureswithEstimatedLosses.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/24/ExactSamplingofGibbsMeasureswithEstimatedLosses.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Exact Sampling of Gibbs Measures with Estimated Losses" />
+<script type="application/ld+json">
+{"description":"In recent years, the shortcomings of Bayesian posteriors as inferential devices have received increased attention. A popular strategy for fixing them has been to instead target a Gibbs measure based on losses that connect a parameter of interest to observed data. However, existing theory for such inference procedures assumes these losses are analytically available, while in many situations these losses must be stochastically estimated using pseudo-observations. In such cases, we show that when standard Markov Chain Monte Carlo algorithms are used to produce posterior samples, the resulting posterior exhibits strong dependence on the number of pseudo-observations: unless the number of pseudo-observations diverge sufficiently fast the resulting posterior will concentrate very slowly. However, we show that in many situations it is feasible to alleviate this dependence entirely using a modified piecewise deterministic Markov process (PDMP) sampler, and we formally and empirically show that these samplers produce posterior draws that have no dependence on the number of pseudo-observations used to estimate the loss within the Gibbs Measure. We apply our results to three examples that feature intractable likelihoods and model misspecification.","headline":"Exact Sampling of Gibbs Measures with Estimated Losses","dateModified":"2025-04-24T00:00:00+00:00","datePublished":"2025-04-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/24/ExactSamplingofGibbsMeasureswithEstimatedLosses.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/24/ExactSamplingofGibbsMeasureswithEstimatedLosses.html","author":{"@type":"Person","name":"David T. Frazier, Jeremias Knoblauch, Jack Jewson, Christopher Drovandi"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-24 00:00:00 +0000">04-24</time>
+  </p>
+  
+  <h1>Exact Sampling of Gibbs Measures with Estimated Losses</h1>
+  <br>David T. Frazier, Jeremias Knoblauch, Jack Jewson, Christopher Drovandi</h3>
+  <br> [stat.CO,stat.ME,stat.TH]
+
+  <p>In recent years, the shortcomings of Bayesian posteriors as inferential devices have received increased attention. A popular strategy for fixing them has been to instead target a Gibbs measure based on losses that connect a parameter of interest to observed data. However, existing theory for such inference procedures assumes these losses are analytically available, while in many situations these losses must be stochastically estimated using pseudo-observations. In such cases, we show that when standard Markov Chain Monte Carlo algorithms are used to produce posterior samples, the resulting posterior exhibits strong dependence on the number of pseudo-observations: unless the number of pseudo-observations diverge sufficiently fast the resulting posterior will concentrate very slowly. However, we show that in many situations it is feasible to alleviate this dependence entirely using a modified piecewise deterministic Markov process (PDMP) sampler, and we formally and empirically show that these samplers produce posterior draws that have no dependence on the number of pseudo-observations used to estimate the loss within the Gibbs Measure. We apply our results to three examples that feature intractable likelihoods and model misspecification.</p>
+
+<p><a href="https://arxiv.org/abs/2404.15649">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
