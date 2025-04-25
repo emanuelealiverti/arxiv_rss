@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Effective Bayesian Causal Inference via Structural Marginalisation and Autoregressive Orders</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Effective Bayesian Causal Inference via Structural Marginalisation and Autoregressive Orders" />
+<meta name="author" content="Christian Toth, Christian Knoll, Franz Pernkopf, Robert Peharz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The traditional two-stage approach to causal inference first identifies a single causal model (or equivalence class of models), which is then used to answer causal queries. However, this neglects any epistemic model uncertainty. In contrast, Bayesian causal inference does incorporate epistemic uncertainty into query estimates via Bayesian marginalisation (posterior averaging) over all causal models. While principled, this marginalisation over entire causal models, i.e., both causal structures (graphs) and mechanisms, poses a tremendous computational challenge. In this work, we address this challenge by decomposing structure marginalisation into the marginalisation over (i) causal orders and (ii) directed acyclic graphs (DAGs) given an order. We can marginalise the latter in closed form by limiting the number of parents per variable and utilising Gaussian processes to model mechanisms. To marginalise over orders, we use a sampling-based approximation, for which we devise a novel auto-regressive distribution over causal orders (ARCO). Our method outperforms state-of-the-art in structure learning on simulated non-linear additive noise benchmarks, and yields competitive results on real-world data. Furthermore, we can accurately infer interventional distributions and average causal effects." />
+<meta property="og:description" content="The traditional two-stage approach to causal inference first identifies a single causal model (or equivalence class of models), which is then used to answer causal queries. However, this neglects any epistemic model uncertainty. In contrast, Bayesian causal inference does incorporate epistemic uncertainty into query estimates via Bayesian marginalisation (posterior averaging) over all causal models. While principled, this marginalisation over entire causal models, i.e., both causal structures (graphs) and mechanisms, poses a tremendous computational challenge. In this work, we address this challenge by decomposing structure marginalisation into the marginalisation over (i) causal orders and (ii) directed acyclic graphs (DAGs) given an order. We can marginalise the latter in closed form by limiting the number of parents per variable and utilising Gaussian processes to model mechanisms. To marginalise over orders, we use a sampling-based approximation, for which we devise a novel auto-regressive distribution over causal orders (ARCO). Our method outperforms state-of-the-art in structure learning on simulated non-linear additive noise benchmarks, and yields competitive results on real-world data. Furthermore, we can accurately infer interventional distributions and average causal effects." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/25/EffectiveBayesianCausalInferenceviaStructuralMarginalisationandAutoregressiveOrders.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/25/EffectiveBayesianCausalInferenceviaStructuralMarginalisationandAutoregressiveOrders.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Effective Bayesian Causal Inference via Structural Marginalisation and Autoregressive Orders" />
+<script type="application/ld+json">
+{"description":"The traditional two-stage approach to causal inference first identifies a single causal model (or equivalence class of models), which is then used to answer causal queries. However, this neglects any epistemic model uncertainty. In contrast, Bayesian causal inference does incorporate epistemic uncertainty into query estimates via Bayesian marginalisation (posterior averaging) over all causal models. While principled, this marginalisation over entire causal models, i.e., both causal structures (graphs) and mechanisms, poses a tremendous computational challenge. In this work, we address this challenge by decomposing structure marginalisation into the marginalisation over (i) causal orders and (ii) directed acyclic graphs (DAGs) given an order. We can marginalise the latter in closed form by limiting the number of parents per variable and utilising Gaussian processes to model mechanisms. To marginalise over orders, we use a sampling-based approximation, for which we devise a novel auto-regressive distribution over causal orders (ARCO). Our method outperforms state-of-the-art in structure learning on simulated non-linear additive noise benchmarks, and yields competitive results on real-world data. Furthermore, we can accurately infer interventional distributions and average causal effects.","headline":"Effective Bayesian Causal Inference via Structural Marginalisation and Autoregressive Orders","dateModified":"2025-04-25T00:00:00+00:00","datePublished":"2025-04-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/25/EffectiveBayesianCausalInferenceviaStructuralMarginalisationandAutoregressiveOrders.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/25/EffectiveBayesianCausalInferenceviaStructuralMarginalisationandAutoregressiveOrders.html","author":{"@type":"Person","name":"Christian Toth, Christian Knoll, Franz Pernkopf, Robert Peharz"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-25 00:00:00 +0000">04-25</time>
+  </p>
+  
+  <h1>Effective Bayesian Causal Inference via Structural Marginalisation and Autoregressive Orders</h1>
+  <br>Christian Toth, Christian Knoll, Franz Pernkopf, Robert Peharz</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>The traditional two-stage approach to causal inference first identifies a single causal model (or equivalence class of models), which is then used to answer causal queries. However, this neglects any epistemic model uncertainty. In contrast, Bayesian causal inference does incorporate epistemic uncertainty into query estimates via Bayesian marginalisation (posterior averaging) over all causal models. While principled, this marginalisation over entire causal models, i.e., both causal structures (graphs) and mechanisms, poses a tremendous computational challenge. In this work, we address this challenge by decomposing structure marginalisation into the marginalisation over (i) causal orders and (ii) directed acyclic graphs (DAGs) given an order. We can marginalise the latter in closed form by limiting the number of parents per variable and utilising Gaussian processes to model mechanisms. To marginalise over orders, we use a sampling-based approximation, for which we devise a novel auto-regressive distribution over causal orders (ARCO). Our method outperforms state-of-the-art in structure learning on simulated non-linear additive noise benchmarks, and yields competitive results on real-world data. Furthermore, we can accurately infer interventional distributions and average causal effects.</p>
+
+<p><a href="https://arxiv.org/abs/2402.14781">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

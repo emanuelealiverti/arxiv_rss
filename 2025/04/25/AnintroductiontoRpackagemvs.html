@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An introduction to R package `mvs`</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="An introduction to R package mvs" />
+<meta name="author" content="Wouter van Loon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In biomedical science, a set of objects or persons can often be described by multiple distinct sets of features obtained from different data sources or modalities (called “multi-view data”). Classical machine learning methods ignore the multi-view structure of such data, limiting model interpretability and performance. The R package mvs provides methods that were designed specifically for dealing with multi-view data, based on the multi-view stacking (MVS) framework. MVS is a form of supervised (machine) learning used to train multi-view classification or prediction models. MVS works by training a learning algorithm on each view separately, estimating the predictive power of each view-specific model through cross-validation, and then using another learning algorithm to assign weights to the view-specific models based on their estimated predictions. MVS is a form of ensemble learning, dividing the large multi-view learning problem into smaller sub-problems. Most of these sub-problems can be solved in parallel, making it computationally attractive. Additionally, the number of features of the sub-problems is greatly reduced compared with the full multi-view learning problem. This makes MVS especially useful when the total number of features is larger than the number of observations (i.e., high-dimensional data). MVS can still be applied even if the sub-problems are themselves high-dimensional by adding suitable penalty terms to the learning algorithms. Furthermore, MVS can be used to automatically select the views which are most important for prediction. The R package mvs makes fitting MVS models, including such penalty terms, easily and openly accessible. mvs allows for the fitting of stacked models with any number of levels, with different penalty terms, different outcome distributions, and provides several options for missing data handling." />
+<meta property="og:description" content="In biomedical science, a set of objects or persons can often be described by multiple distinct sets of features obtained from different data sources or modalities (called “multi-view data”). Classical machine learning methods ignore the multi-view structure of such data, limiting model interpretability and performance. The R package mvs provides methods that were designed specifically for dealing with multi-view data, based on the multi-view stacking (MVS) framework. MVS is a form of supervised (machine) learning used to train multi-view classification or prediction models. MVS works by training a learning algorithm on each view separately, estimating the predictive power of each view-specific model through cross-validation, and then using another learning algorithm to assign weights to the view-specific models based on their estimated predictions. MVS is a form of ensemble learning, dividing the large multi-view learning problem into smaller sub-problems. Most of these sub-problems can be solved in parallel, making it computationally attractive. Additionally, the number of features of the sub-problems is greatly reduced compared with the full multi-view learning problem. This makes MVS especially useful when the total number of features is larger than the number of observations (i.e., high-dimensional data). MVS can still be applied even if the sub-problems are themselves high-dimensional by adding suitable penalty terms to the learning algorithms. Furthermore, MVS can be used to automatically select the views which are most important for prediction. The R package mvs makes fitting MVS models, including such penalty terms, easily and openly accessible. mvs allows for the fitting of stacked models with any number of levels, with different penalty terms, different outcome distributions, and provides several options for missing data handling." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/25/AnintroductiontoRpackagemvs.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/25/AnintroductiontoRpackagemvs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="An introduction to R package mvs" />
+<script type="application/ld+json">
+{"description":"In biomedical science, a set of objects or persons can often be described by multiple distinct sets of features obtained from different data sources or modalities (called “multi-view data”). Classical machine learning methods ignore the multi-view structure of such data, limiting model interpretability and performance. The R package mvs provides methods that were designed specifically for dealing with multi-view data, based on the multi-view stacking (MVS) framework. MVS is a form of supervised (machine) learning used to train multi-view classification or prediction models. MVS works by training a learning algorithm on each view separately, estimating the predictive power of each view-specific model through cross-validation, and then using another learning algorithm to assign weights to the view-specific models based on their estimated predictions. MVS is a form of ensemble learning, dividing the large multi-view learning problem into smaller sub-problems. Most of these sub-problems can be solved in parallel, making it computationally attractive. Additionally, the number of features of the sub-problems is greatly reduced compared with the full multi-view learning problem. This makes MVS especially useful when the total number of features is larger than the number of observations (i.e., high-dimensional data). MVS can still be applied even if the sub-problems are themselves high-dimensional by adding suitable penalty terms to the learning algorithms. Furthermore, MVS can be used to automatically select the views which are most important for prediction. The R package mvs makes fitting MVS models, including such penalty terms, easily and openly accessible. mvs allows for the fitting of stacked models with any number of levels, with different penalty terms, different outcome distributions, and provides several options for missing data handling.","headline":"An introduction to R package mvs","dateModified":"2025-04-25T00:00:00+00:00","datePublished":"2025-04-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/25/AnintroductiontoRpackagemvs.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/25/AnintroductiontoRpackagemvs.html","author":{"@type":"Person","name":"Wouter van Loon"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-25 00:00:00 +0000">04-25</time>
+  </p>
+  
+  <h1>An introduction to R package `mvs`</h1>
+  <br>Wouter van Loon</h3>
+  <br> [stat.CO,stat.ME,stat.ML]
+
+  <p>In biomedical science, a set of objects or persons can often be described by multiple distinct sets of features obtained from different data sources or modalities (called “multi-view data”). Classical machine learning methods ignore the multi-view structure of such data, limiting model interpretability and performance. The R package <code class="language-plaintext highlighter-rouge">mvs</code> provides methods that were designed specifically for dealing with multi-view data, based on the multi-view stacking (MVS) framework. MVS is a form of supervised (machine) learning used to train multi-view classification or prediction models. MVS works by training a learning algorithm on each view separately, estimating the predictive power of each view-specific model through cross-validation, and then using another learning algorithm to assign weights to the view-specific models based on their estimated predictions. MVS is a form of ensemble learning, dividing the large multi-view learning problem into smaller sub-problems. Most of these sub-problems can be solved in parallel, making it computationally attractive. Additionally, the number of features of the sub-problems is greatly reduced compared with the full multi-view learning problem. This makes MVS especially useful when the total number of features is larger than the number of observations (i.e., high-dimensional data). MVS can still be applied even if the sub-problems are themselves high-dimensional by adding suitable penalty terms to the learning algorithms. Furthermore, MVS can be used to automatically select the views which are most important for prediction. The R package <code class="language-plaintext highlighter-rouge">mvs</code> makes fitting MVS models, including such penalty terms, easily and openly accessible. <code class="language-plaintext highlighter-rouge">mvs</code> allows for the fitting of stacked models with any number of levels, with different penalty terms, different outcome distributions, and provides several options for missing data handling.</p>
+
+<p><a href="https://arxiv.org/abs/2504.17546">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
