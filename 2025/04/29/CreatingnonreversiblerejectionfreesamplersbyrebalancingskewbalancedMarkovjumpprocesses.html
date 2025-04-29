@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Creating non-reversible rejection-free samplers by rebalancing skew-balanced Markov jump processes</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Creating non-reversible rejection-free samplers by rebalancing skew-balanced Markov jump processes" />
+<meta name="author" content="Erik Jansson, Moritz Schauer, Ruben Seyer, Akash Sharma" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Markov chain sampling methods form the backbone of modern computational statistics. However, many popular methods are prone to random walk behavior, i.e., diffusion-like exploration of the sample space, leading to slow mixing that requires intricate tuning to alleviate. Non-reversible samplers can resolve some of these issues. We introduce a device that turns jump processes that satisfy a skew-detailed balance condition for a reference measure into a process that samples a target measure that is absolutely continuous with respect to the reference measure. The resulting sampler is rejection-free, non-reversible, and continuous-time. As an example, we apply the device to Hamiltonian dynamics discretized by the leapfrog integrator, resulting in a rejection-free non-reversible continuous-time version of Hamiltonian Monte Carlo (HMC). We prove the geometric ergodicity of the resulting sampler under certain convexity conditions, and demonstrate its qualitatively different behavior to HMC through numerical examples." />
+<meta property="og:description" content="Markov chain sampling methods form the backbone of modern computational statistics. However, many popular methods are prone to random walk behavior, i.e., diffusion-like exploration of the sample space, leading to slow mixing that requires intricate tuning to alleviate. Non-reversible samplers can resolve some of these issues. We introduce a device that turns jump processes that satisfy a skew-detailed balance condition for a reference measure into a process that samples a target measure that is absolutely continuous with respect to the reference measure. The resulting sampler is rejection-free, non-reversible, and continuous-time. As an example, we apply the device to Hamiltonian dynamics discretized by the leapfrog integrator, resulting in a rejection-free non-reversible continuous-time version of Hamiltonian Monte Carlo (HMC). We prove the geometric ergodicity of the resulting sampler under certain convexity conditions, and demonstrate its qualitatively different behavior to HMC through numerical examples." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/29/CreatingnonreversiblerejectionfreesamplersbyrebalancingskewbalancedMarkovjumpprocesses.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/29/CreatingnonreversiblerejectionfreesamplersbyrebalancingskewbalancedMarkovjumpprocesses.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Creating non-reversible rejection-free samplers by rebalancing skew-balanced Markov jump processes" />
+<script type="application/ld+json">
+{"description":"Markov chain sampling methods form the backbone of modern computational statistics. However, many popular methods are prone to random walk behavior, i.e., diffusion-like exploration of the sample space, leading to slow mixing that requires intricate tuning to alleviate. Non-reversible samplers can resolve some of these issues. We introduce a device that turns jump processes that satisfy a skew-detailed balance condition for a reference measure into a process that samples a target measure that is absolutely continuous with respect to the reference measure. The resulting sampler is rejection-free, non-reversible, and continuous-time. As an example, we apply the device to Hamiltonian dynamics discretized by the leapfrog integrator, resulting in a rejection-free non-reversible continuous-time version of Hamiltonian Monte Carlo (HMC). We prove the geometric ergodicity of the resulting sampler under certain convexity conditions, and demonstrate its qualitatively different behavior to HMC through numerical examples.","headline":"Creating non-reversible rejection-free samplers by rebalancing skew-balanced Markov jump processes","dateModified":"2025-04-29T00:00:00+00:00","datePublished":"2025-04-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/29/CreatingnonreversiblerejectionfreesamplersbyrebalancingskewbalancedMarkovjumpprocesses.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/29/CreatingnonreversiblerejectionfreesamplersbyrebalancingskewbalancedMarkovjumpprocesses.html","author":{"@type":"Person","name":"Erik Jansson, Moritz Schauer, Ruben Seyer, Akash Sharma"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-29 00:00:00 +0000">04-29</time>
+  </p>
+  
+  <h1>Creating non-reversible rejection-free samplers by rebalancing skew-balanced Markov jump processes</h1>
+  <br>Erik Jansson, Moritz Schauer, Ruben Seyer, Akash Sharma</h3>
+  <br> [stat.CO,stat.TH]
+
+  <p>Markov chain sampling methods form the backbone of modern computational statistics. However, many popular methods are prone to random walk behavior, i.e., diffusion-like exploration of the sample space, leading to slow mixing that requires intricate tuning to alleviate. Non-reversible samplers can resolve some of these issues. We introduce a device that turns jump processes that satisfy a skew-detailed balance condition for a reference measure into a process that samples a target measure that is absolutely continuous with respect to the reference measure. The resulting sampler is rejection-free, non-reversible, and continuous-time. As an example, we apply the device to Hamiltonian dynamics discretized by the leapfrog integrator, resulting in a rejection-free non-reversible continuous-time version of Hamiltonian Monte Carlo (HMC). We prove the geometric ergodicity of the resulting sampler under certain convexity conditions, and demonstrate its qualitatively different behavior to HMC through numerical examples.</p>
+
+<p><a href="https://arxiv.org/abs/2504.12190">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the choice of the non-trainable internal weights in random feature maps</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On the choice of the non-trainable internal weights in random feature maps" />
+<meta name="author" content="Pinak Mandal, Georg A. Gottwald, Nicholas Cranch" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The computationally cheap machine learning architecture of random feature maps can be viewed as a single-layer feedforward network in which the weights of the hidden layer are random but fixed and only the outer weights are learned via linear regression. The internal weights are typically chosen from a prescribed distribution. The choice of the internal weights significantly impacts the accuracy of random feature maps. We address here the task of how to best select the internal weights. In particular, we consider the forecasting problem whereby random feature maps are used to learn a one-step propagator map for a dynamical system. We provide a computationally cheap hit-and-run algorithm to select good internal weights which lead to good forecasting skill. We show that the number of good features is the main factor controlling the forecasting skill of random feature maps and acts as an effective feature dimension. Lastly, we compare random feature maps with single-layer feedforward neural networks in which the internal weights are now learned using gradient descent. We find that random feature maps have superior forecasting capabilities whilst having several orders of magnitude lower computational cost." />
+<meta property="og:description" content="The computationally cheap machine learning architecture of random feature maps can be viewed as a single-layer feedforward network in which the weights of the hidden layer are random but fixed and only the outer weights are learned via linear regression. The internal weights are typically chosen from a prescribed distribution. The choice of the internal weights significantly impacts the accuracy of random feature maps. We address here the task of how to best select the internal weights. In particular, we consider the forecasting problem whereby random feature maps are used to learn a one-step propagator map for a dynamical system. We provide a computationally cheap hit-and-run algorithm to select good internal weights which lead to good forecasting skill. We show that the number of good features is the main factor controlling the forecasting skill of random feature maps and acts as an effective feature dimension. Lastly, we compare random feature maps with single-layer feedforward neural networks in which the internal weights are now learned using gradient descent. We find that random feature maps have superior forecasting capabilities whilst having several orders of magnitude lower computational cost." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/04/29/Onthechoiceofthenontrainableinternalweightsinrandomfeaturemaps.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/04/29/Onthechoiceofthenontrainableinternalweightsinrandomfeaturemaps.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On the choice of the non-trainable internal weights in random feature maps" />
+<script type="application/ld+json">
+{"description":"The computationally cheap machine learning architecture of random feature maps can be viewed as a single-layer feedforward network in which the weights of the hidden layer are random but fixed and only the outer weights are learned via linear regression. The internal weights are typically chosen from a prescribed distribution. The choice of the internal weights significantly impacts the accuracy of random feature maps. We address here the task of how to best select the internal weights. In particular, we consider the forecasting problem whereby random feature maps are used to learn a one-step propagator map for a dynamical system. We provide a computationally cheap hit-and-run algorithm to select good internal weights which lead to good forecasting skill. We show that the number of good features is the main factor controlling the forecasting skill of random feature maps and acts as an effective feature dimension. Lastly, we compare random feature maps with single-layer feedforward neural networks in which the internal weights are now learned using gradient descent. We find that random feature maps have superior forecasting capabilities whilst having several orders of magnitude lower computational cost.","headline":"On the choice of the non-trainable internal weights in random feature maps","dateModified":"2025-04-29T00:00:00+00:00","datePublished":"2025-04-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/29/Onthechoiceofthenontrainableinternalweightsinrandomfeaturemaps.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/04/29/Onthechoiceofthenontrainableinternalweightsinrandomfeaturemaps.html","author":{"@type":"Person","name":"Pinak Mandal, Georg A. Gottwald, Nicholas Cranch"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-29 00:00:00 +0000">04-29</time>
+  </p>
+  
+  <h1>On the choice of the non-trainable internal weights in random feature maps</h1>
+  <br>Pinak Mandal, Georg A. Gottwald, Nicholas Cranch</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>The computationally cheap machine learning architecture of random feature maps can be viewed as a single-layer feedforward network in which the weights of the hidden layer are random but fixed and only the outer weights are learned via linear regression. The internal weights are typically chosen from a prescribed distribution. The choice of the internal weights significantly impacts the accuracy of random feature maps. We address here the task of how to best select the internal weights. In particular, we consider the forecasting problem whereby random feature maps are used to learn a one-step propagator map for a dynamical system. We provide a computationally cheap hit-and-run algorithm to select good internal weights which lead to good forecasting skill. We show that the number of good features is the main factor controlling the forecasting skill of random feature maps and acts as an effective feature dimension. Lastly, we compare random feature maps with single-layer feedforward neural networks in which the internal weights are now learned using gradient descent. We find that random feature maps have superior forecasting capabilities whilst having several orders of magnitude lower computational cost.</p>
+
+<p><a href="https://arxiv.org/abs/2408.03626">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
