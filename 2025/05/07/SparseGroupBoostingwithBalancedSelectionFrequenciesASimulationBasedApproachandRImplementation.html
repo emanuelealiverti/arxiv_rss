@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sparse-Group Boosting with Balanced Selection Frequencies: A Simulation-Based Approach and R Implementation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sparse-Group Boosting with Balanced Selection Frequencies: A Simulation-Based Approach and R Implementation" />
+<meta name="author" content="Fabian Obster, Christian Heumann" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper introduces a novel framework for reducing variable selection bias by balancing selection frequencies of base-learners in boosting and introduces the sgboost package in R, which implements this framework combined with sparse-group boosting. The group bias reduction algorithm employs a simulation-based approach to iteratively adjust the degrees of freedom for both individual and group base-learners, ensuring balanced selection probabilities and mitigating the tendency to over-select more complex groups. The efficacy of the group balancing algorithm is demonstrated through simulations. Sparse-group boosting offers a flexible approach for both group and individual variable selection, reducing overfitting and enhancing model interpretability for modeling high-dimensional data with natural groupings in covariates. The package uses regularization techniques based on the degrees of freedom of individual and group base-learners. Through comparisons with existing methods and demonstration of its unique functionalities, this paper provides a practical guide on utilizing sparse-group boosting in R, accompanied by code examples to facilitate its application in various research domains." />
+<meta property="og:description" content="This paper introduces a novel framework for reducing variable selection bias by balancing selection frequencies of base-learners in boosting and introduces the sgboost package in R, which implements this framework combined with sparse-group boosting. The group bias reduction algorithm employs a simulation-based approach to iteratively adjust the degrees of freedom for both individual and group base-learners, ensuring balanced selection probabilities and mitigating the tendency to over-select more complex groups. The efficacy of the group balancing algorithm is demonstrated through simulations. Sparse-group boosting offers a flexible approach for both group and individual variable selection, reducing overfitting and enhancing model interpretability for modeling high-dimensional data with natural groupings in covariates. The package uses regularization techniques based on the degrees of freedom of individual and group base-learners. Through comparisons with existing methods and demonstration of its unique functionalities, this paper provides a practical guide on utilizing sparse-group boosting in R, accompanied by code examples to facilitate its application in various research domains." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/07/SparseGroupBoostingwithBalancedSelectionFrequenciesASimulationBasedApproachandRImplementation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/07/SparseGroupBoostingwithBalancedSelectionFrequenciesASimulationBasedApproachandRImplementation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sparse-Group Boosting with Balanced Selection Frequencies: A Simulation-Based Approach and R Implementation" />
+<script type="application/ld+json">
+{"description":"This paper introduces a novel framework for reducing variable selection bias by balancing selection frequencies of base-learners in boosting and introduces the sgboost package in R, which implements this framework combined with sparse-group boosting. The group bias reduction algorithm employs a simulation-based approach to iteratively adjust the degrees of freedom for both individual and group base-learners, ensuring balanced selection probabilities and mitigating the tendency to over-select more complex groups. The efficacy of the group balancing algorithm is demonstrated through simulations. Sparse-group boosting offers a flexible approach for both group and individual variable selection, reducing overfitting and enhancing model interpretability for modeling high-dimensional data with natural groupings in covariates. The package uses regularization techniques based on the degrees of freedom of individual and group base-learners. Through comparisons with existing methods and demonstration of its unique functionalities, this paper provides a practical guide on utilizing sparse-group boosting in R, accompanied by code examples to facilitate its application in various research domains.","headline":"Sparse-Group Boosting with Balanced Selection Frequencies: A Simulation-Based Approach and R Implementation","dateModified":"2025-05-07T00:00:00+00:00","datePublished":"2025-05-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/07/SparseGroupBoostingwithBalancedSelectionFrequenciesASimulationBasedApproachandRImplementation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/07/SparseGroupBoostingwithBalancedSelectionFrequenciesASimulationBasedApproachandRImplementation.html","author":{"@type":"Person","name":"Fabian Obster, Christian Heumann"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-07 00:00:00 +0000">05-07</time>
+  </p>
+  
+  <h1>Sparse-Group Boosting with Balanced Selection Frequencies: A Simulation-Based Approach and R Implementation</h1>
+  <br>Fabian Obster, Christian Heumann</h3>
+  <br> [stat.AP,stat.CO,stat.ML]
+
+  <p>This paper introduces a novel framework for reducing variable selection bias by balancing selection frequencies of base-learners in boosting and introduces the sgboost package in R, which implements this framework combined with sparse-group boosting. The group bias reduction algorithm employs a simulation-based approach to iteratively adjust the degrees of freedom for both individual and group base-learners, ensuring balanced selection probabilities and mitigating the tendency to over-select more complex groups. The efficacy of the group balancing algorithm is demonstrated through simulations. Sparse-group boosting offers a flexible approach for both group and individual variable selection, reducing overfitting and enhancing model interpretability for modeling high-dimensional data with natural groupings in covariates. The package uses regularization techniques based on the degrees of freedom of individual and group base-learners. Through comparisons with existing methods and demonstration of its unique functionalities, this paper provides a practical guide on utilizing sparse-group boosting in R, accompanied by code examples to facilitate its application in various research domains.</p>
+
+<p><a href="https://arxiv.org/abs/2405.21037">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
