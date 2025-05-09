@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Unified Approach to Covariate Adjustment for Survival Endpoints in Randomized Clinical Trials</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Unified Approach to Covariate Adjustment for Survival Endpoints in Randomized Clinical Trials" />
+<meta name="author" content="Zhiwei Zhang, Ya Wang, Dong Xi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Covariate adjustment aims to improve the statistical efficiency of randomized trials by incorporating information from baseline covariates. Popular methods for covariate adjustment include analysis of covariance for continuous endpoints and standardized logistic regression for binary endpoints. For survival endpoints, while some covariate adjustment methods have been developed for specific effect measures, they are not commonly used in practice for various reasons, including high demands for theoretical and methodological sophistication as well as computational skills. This article describes an augmentation approach to covariate adjustment for survival endpoints that is relatively easy to understand and widely applicable to different effect measures. This approach involves augmenting a given treatment effect estimator in a way that preserves interpretation, consistency, and asymptotic normality. The optimal augmentation term, which minimizes asymptotic variance, can be estimated using various statistical and machine learning methods. Simulation results demonstrate that the augmentation approach can bring substantial gains in statistical efficiency. This approach has been implemented in an R package named \texttt{sleete}, which is described in detail and illustrated with real data." />
+<meta property="og:description" content="Covariate adjustment aims to improve the statistical efficiency of randomized trials by incorporating information from baseline covariates. Popular methods for covariate adjustment include analysis of covariance for continuous endpoints and standardized logistic regression for binary endpoints. For survival endpoints, while some covariate adjustment methods have been developed for specific effect measures, they are not commonly used in practice for various reasons, including high demands for theoretical and methodological sophistication as well as computational skills. This article describes an augmentation approach to covariate adjustment for survival endpoints that is relatively easy to understand and widely applicable to different effect measures. This approach involves augmenting a given treatment effect estimator in a way that preserves interpretation, consistency, and asymptotic normality. The optimal augmentation term, which minimizes asymptotic variance, can be estimated using various statistical and machine learning methods. Simulation results demonstrate that the augmentation approach can bring substantial gains in statistical efficiency. This approach has been implemented in an R package named \texttt{sleete}, which is described in detail and illustrated with real data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/09/AUnifiedApproachtoCovariateAdjustmentforSurvivalEndpointsinRandomizedClinicalTrials.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/09/AUnifiedApproachtoCovariateAdjustmentforSurvivalEndpointsinRandomizedClinicalTrials.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Unified Approach to Covariate Adjustment for Survival Endpoints in Randomized Clinical Trials" />
+<script type="application/ld+json">
+{"description":"Covariate adjustment aims to improve the statistical efficiency of randomized trials by incorporating information from baseline covariates. Popular methods for covariate adjustment include analysis of covariance for continuous endpoints and standardized logistic regression for binary endpoints. For survival endpoints, while some covariate adjustment methods have been developed for specific effect measures, they are not commonly used in practice for various reasons, including high demands for theoretical and methodological sophistication as well as computational skills. This article describes an augmentation approach to covariate adjustment for survival endpoints that is relatively easy to understand and widely applicable to different effect measures. This approach involves augmenting a given treatment effect estimator in a way that preserves interpretation, consistency, and asymptotic normality. The optimal augmentation term, which minimizes asymptotic variance, can be estimated using various statistical and machine learning methods. Simulation results demonstrate that the augmentation approach can bring substantial gains in statistical efficiency. This approach has been implemented in an R package named \\texttt{sleete}, which is described in detail and illustrated with real data.","headline":"A Unified Approach to Covariate Adjustment for Survival Endpoints in Randomized Clinical Trials","dateModified":"2025-05-09T00:00:00+00:00","datePublished":"2025-05-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/09/AUnifiedApproachtoCovariateAdjustmentforSurvivalEndpointsinRandomizedClinicalTrials.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/09/AUnifiedApproachtoCovariateAdjustmentforSurvivalEndpointsinRandomizedClinicalTrials.html","author":{"@type":"Person","name":"Zhiwei Zhang, Ya Wang, Dong Xi"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-09 00:00:00 +0000">05-09</time>
+  </p>
+  
+  <h1>A Unified Approach to Covariate Adjustment for Survival Endpoints in Randomized Clinical Trials</h1>
+  <br>Zhiwei Zhang, Ya Wang, Dong Xi</h3>
+  <br> [stat.ME]
+
+  <p>Covariate adjustment aims to improve the statistical efficiency of randomized trials by incorporating information from baseline covariates. Popular methods for covariate adjustment include analysis of covariance for continuous endpoints and standardized logistic regression for binary endpoints. For survival endpoints, while some covariate adjustment methods have been developed for specific effect measures, they are not commonly used in practice for various reasons, including high demands for theoretical and methodological sophistication as well as computational skills. This article describes an augmentation approach to covariate adjustment for survival endpoints that is relatively easy to understand and widely applicable to different effect measures. This approach involves augmenting a given treatment effect estimator in a way that preserves interpretation, consistency, and asymptotic normality. The optimal augmentation term, which minimizes asymptotic variance, can be estimated using various statistical and machine learning methods. Simulation results demonstrate that the augmentation approach can bring substantial gains in statistical efficiency. This approach has been implemented in an R package named \texttt{sleete}, which is described in detail and illustrated with real data.</p>
+
+<p><a href="https://arxiv.org/abs/2505.05338">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
