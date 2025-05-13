@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Understanding Model Calibration -- A gentle introduction and visual exploration of calibration and the expected calibration error (ECE)</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Understanding Model Calibration – A gentle introduction and visual exploration of calibration and the expected calibration error (ECE)" />
+<meta name="author" content="Maja Pavlovic" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="To be considered reliable, a model must be calibrated so that its confidence in each decision closely reflects its true outcome. In this blogpost we’ll take a look at the most commonly used definition for calibration and then dive into a frequently used evaluation measure for model calibration. We’ll then cover some of the drawbacks of this measure and how these surfaced the need for additional notions of calibration, which require their own new evaluation measures. This post is not intended to be an in-depth dissection of all works on calibration, nor does it focus on how to calibrate models. Instead, it is meant to provide a gentle introduction to the different notions and their evaluation measures as well as to re-highlight some issues with a measure that is still widely used to evaluate calibration." />
+<meta property="og:description" content="To be considered reliable, a model must be calibrated so that its confidence in each decision closely reflects its true outcome. In this blogpost we’ll take a look at the most commonly used definition for calibration and then dive into a frequently used evaluation measure for model calibration. We’ll then cover some of the drawbacks of this measure and how these surfaced the need for additional notions of calibration, which require their own new evaluation measures. This post is not intended to be an in-depth dissection of all works on calibration, nor does it focus on how to calibrate models. Instead, it is meant to provide a gentle introduction to the different notions and their evaluation measures as well as to re-highlight some issues with a measure that is still widely used to evaluate calibration." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/13/UnderstandingModelCalibrationAgentleintroductionandvisualexplorationofcalibrationandtheexpectedcalibrationerrorECE.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/13/UnderstandingModelCalibrationAgentleintroductionandvisualexplorationofcalibrationandtheexpectedcalibrationerrorECE.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Understanding Model Calibration – A gentle introduction and visual exploration of calibration and the expected calibration error (ECE)" />
+<script type="application/ld+json">
+{"description":"To be considered reliable, a model must be calibrated so that its confidence in each decision closely reflects its true outcome. In this blogpost we’ll take a look at the most commonly used definition for calibration and then dive into a frequently used evaluation measure for model calibration. We’ll then cover some of the drawbacks of this measure and how these surfaced the need for additional notions of calibration, which require their own new evaluation measures. This post is not intended to be an in-depth dissection of all works on calibration, nor does it focus on how to calibrate models. Instead, it is meant to provide a gentle introduction to the different notions and their evaluation measures as well as to re-highlight some issues with a measure that is still widely used to evaluate calibration.","headline":"Understanding Model Calibration – A gentle introduction and visual exploration of calibration and the expected calibration error (ECE)","dateModified":"2025-05-13T00:00:00+00:00","datePublished":"2025-05-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/13/UnderstandingModelCalibrationAgentleintroductionandvisualexplorationofcalibrationandtheexpectedcalibrationerrorECE.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/13/UnderstandingModelCalibrationAgentleintroductionandvisualexplorationofcalibrationandtheexpectedcalibrationerrorECE.html","author":{"@type":"Person","name":"Maja Pavlovic"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-13 00:00:00 +0000">05-13</time>
+  </p>
+  
+  <h1>Understanding Model Calibration -- A gentle introduction and visual exploration of calibration and the expected calibration error (ECE)</h1>
+  <br>Maja Pavlovic</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>To be considered reliable, a model must be calibrated so that its confidence in each decision closely reflects its true outcome. In this blogpost we’ll take a look at the most commonly used definition for calibration and then dive into a frequently used evaluation measure for model calibration. We’ll then cover some of the drawbacks of this measure and how these surfaced the need for additional notions of calibration, which require their own new evaluation measures. This post is not intended to be an in-depth dissection of all works on calibration, nor does it focus on how to calibrate models. Instead, it is meant to provide a gentle introduction to the different notions and their evaluation measures as well as to re-highlight some issues with a measure that is still widely used to evaluate calibration.</p>
+
+<p><a href="https://arxiv.org/abs/2501.19047">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
