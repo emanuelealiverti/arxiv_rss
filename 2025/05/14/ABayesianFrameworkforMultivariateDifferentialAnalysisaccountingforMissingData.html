@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Bayesian Framework for Multivariate Differential Analysis accounting for Missing Data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Bayesian Framework for Multivariate Differential Analysis accounting for Missing Data" />
+<meta name="author" content="Marie Chion, Arthur Leroy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Current statistical methods in differential proteomics analysis generally leave aside several challenges, such as missing values, correlations between peptide intensities and uncertainty quantification. Moreover, they provide point estimates, such as the mean intensity for a given peptide or protein in a given condition. The decision of whether an analyte should be considered as differential is then based on comparing the p-value to a significance threshold, usually 5%. In the state-of-the-art limma approach, a hierarchical model is used to deduce the posterior distribution of the variance estimator for each analyte. The expectation of this distribution is then used as a moderated estimation of variance and is injected directly into the expression of the t-statistic. However, instead of merely relying on the moderated estimates, we could provide more powerful and intuitive results by leveraging a fully Bayesian approach and hence allow the quantification of uncertainty. The present work introduces this idea by taking advantage of standard results from Bayesian inference with conjugate priors in hierarchical models to derive a methodology tailored to handle multiple imputation contexts. Furthermore, we aim to tackle a more general problem of multivariate differential analysis, to account for possible inter-peptide correlations. By defining a hierarchical model with prior distributions on both mean and variance parameters, we achieve a global quantification of uncertainty for differential analysis. The inference is thus performed by computing the posterior distribution for the difference in mean peptide intensities between two experimental conditions. In contrast to more flexible models that can be achieved with hierarchical structures, our choice of conjugate priors maintains analytical expressions for direct sampling from posterior distributions without requiring expensive MCMC methods." />
+<meta property="og:description" content="Current statistical methods in differential proteomics analysis generally leave aside several challenges, such as missing values, correlations between peptide intensities and uncertainty quantification. Moreover, they provide point estimates, such as the mean intensity for a given peptide or protein in a given condition. The decision of whether an analyte should be considered as differential is then based on comparing the p-value to a significance threshold, usually 5%. In the state-of-the-art limma approach, a hierarchical model is used to deduce the posterior distribution of the variance estimator for each analyte. The expectation of this distribution is then used as a moderated estimation of variance and is injected directly into the expression of the t-statistic. However, instead of merely relying on the moderated estimates, we could provide more powerful and intuitive results by leveraging a fully Bayesian approach and hence allow the quantification of uncertainty. The present work introduces this idea by taking advantage of standard results from Bayesian inference with conjugate priors in hierarchical models to derive a methodology tailored to handle multiple imputation contexts. Furthermore, we aim to tackle a more general problem of multivariate differential analysis, to account for possible inter-peptide correlations. By defining a hierarchical model with prior distributions on both mean and variance parameters, we achieve a global quantification of uncertainty for differential analysis. The inference is thus performed by computing the posterior distribution for the difference in mean peptide intensities between two experimental conditions. In contrast to more flexible models that can be achieved with hierarchical structures, our choice of conjugate priors maintains analytical expressions for direct sampling from posterior distributions without requiring expensive MCMC methods." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/14/ABayesianFrameworkforMultivariateDifferentialAnalysisaccountingforMissingData.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/14/ABayesianFrameworkforMultivariateDifferentialAnalysisaccountingforMissingData.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Bayesian Framework for Multivariate Differential Analysis accounting for Missing Data" />
+<script type="application/ld+json">
+{"description":"Current statistical methods in differential proteomics analysis generally leave aside several challenges, such as missing values, correlations between peptide intensities and uncertainty quantification. Moreover, they provide point estimates, such as the mean intensity for a given peptide or protein in a given condition. The decision of whether an analyte should be considered as differential is then based on comparing the p-value to a significance threshold, usually 5%. In the state-of-the-art limma approach, a hierarchical model is used to deduce the posterior distribution of the variance estimator for each analyte. The expectation of this distribution is then used as a moderated estimation of variance and is injected directly into the expression of the t-statistic. However, instead of merely relying on the moderated estimates, we could provide more powerful and intuitive results by leveraging a fully Bayesian approach and hence allow the quantification of uncertainty. The present work introduces this idea by taking advantage of standard results from Bayesian inference with conjugate priors in hierarchical models to derive a methodology tailored to handle multiple imputation contexts. Furthermore, we aim to tackle a more general problem of multivariate differential analysis, to account for possible inter-peptide correlations. By defining a hierarchical model with prior distributions on both mean and variance parameters, we achieve a global quantification of uncertainty for differential analysis. The inference is thus performed by computing the posterior distribution for the difference in mean peptide intensities between two experimental conditions. In contrast to more flexible models that can be achieved with hierarchical structures, our choice of conjugate priors maintains analytical expressions for direct sampling from posterior distributions without requiring expensive MCMC methods.","headline":"A Bayesian Framework for Multivariate Differential Analysis accounting for Missing Data","dateModified":"2025-05-14T00:00:00+00:00","datePublished":"2025-05-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/14/ABayesianFrameworkforMultivariateDifferentialAnalysisaccountingforMissingData.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/14/ABayesianFrameworkforMultivariateDifferentialAnalysisaccountingforMissingData.html","author":{"@type":"Person","name":"Marie Chion, Arthur Leroy"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-14 00:00:00 +0000">05-14</time>
+  </p>
+  
+  <h1>A Bayesian Framework for Multivariate Differential Analysis accounting for Missing Data</h1>
+  <br>Marie Chion, Arthur Leroy</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Current statistical methods in differential proteomics analysis generally leave aside several challenges, such as missing values, correlations between peptide intensities and uncertainty quantification. Moreover, they provide point estimates, such as the mean intensity for a given peptide or protein in a given condition. The decision of whether an analyte should be considered as differential is then based on comparing the p-value to a significance threshold, usually 5%. In the state-of-the-art limma approach, a hierarchical model is used to deduce the posterior distribution of the variance estimator for each analyte. The expectation of this distribution is then used as a moderated estimation of variance and is injected directly into the expression of the t-statistic. However, instead of merely relying on the moderated estimates, we could provide more powerful and intuitive results by leveraging a fully Bayesian approach and hence allow the quantification of uncertainty. The present work introduces this idea by taking advantage of standard results from Bayesian inference with conjugate priors in hierarchical models to derive a methodology tailored to handle multiple imputation contexts. Furthermore, we aim to tackle a more general problem of multivariate differential analysis, to account for possible inter-peptide correlations. By defining a hierarchical model with prior distributions on both mean and variance parameters, we achieve a global quantification of uncertainty for differential analysis. The inference is thus performed by computing the posterior distribution for the difference in mean peptide intensities between two experimental conditions. In contrast to more flexible models that can be achieved with hierarchical structures, our choice of conjugate priors maintains analytical expressions for direct sampling from posterior distributions without requiring expensive MCMC methods.</p>
+
+<p><a href="https://arxiv.org/abs/2307.08975">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

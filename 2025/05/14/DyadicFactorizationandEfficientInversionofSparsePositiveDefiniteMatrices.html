@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dyadic Factorization and Efficient Inversion of Sparse Positive Definite Matrices</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Dyadic Factorization and Efficient Inversion of Sparse Positive Definite Matrices" />
+<meta name="author" content="Micha{\l} Kos, Krzysztof Podgórski, Hanqing Wu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In inverting large sparse matrices, the key difficulty lies in effectively exploiting sparsity during the inversion process. One well-established strategy is the nested dissection, which seeks the so-called sparse Cholesky factorization. We argue that the matrices for which such factors can be found are characterized by a hidden dyadic sparsity structure. This paper builds on that idea by proposing an efficient approach for inverting such matrices. The method consists of two independent steps: the first packs the matrix into a dyadic form, while the second performs a sparse (dyadic) Gram-Schmidt orthogonalization of the packed matrix. The novel packing procedure works by recovering block-tridiagonal structures, focusing on aggregating terms near the diagonal using the $l_1$-norm, which contrasts with traditional methods that prioritize minimizing bandwidth, i.e. the $l_\infty$-norm. The algorithm performs particularly well for matrices that can be packed into banded or dyadic forms which are moderately dense. Due to the properties of $l_1$-norm, the packing step can be applied iteratively to reconstruct the hidden dyadic structure, which corresponds to the detection of separators in the nested dissection method. We explore the algebraic properties of dyadic-structured matrices and present an algebraic framework that allows for a unified mathematical treatment of both sparse factorization and efficient inversion of factors. For matrices with a dyadic structure, we introduce an optimal inversion algorithm and evaluate its computational complexity. The proposed inversion algorithm and core algebraic operations for dyadic matrices are implemented in the R package DyadiCarma, utilizing Rcpp and RcppArmadillo for high-performance computing. An independent R-based matrix packing module, supported by C++ code, is also provided." />
+<meta property="og:description" content="In inverting large sparse matrices, the key difficulty lies in effectively exploiting sparsity during the inversion process. One well-established strategy is the nested dissection, which seeks the so-called sparse Cholesky factorization. We argue that the matrices for which such factors can be found are characterized by a hidden dyadic sparsity structure. This paper builds on that idea by proposing an efficient approach for inverting such matrices. The method consists of two independent steps: the first packs the matrix into a dyadic form, while the second performs a sparse (dyadic) Gram-Schmidt orthogonalization of the packed matrix. The novel packing procedure works by recovering block-tridiagonal structures, focusing on aggregating terms near the diagonal using the $l_1$-norm, which contrasts with traditional methods that prioritize minimizing bandwidth, i.e. the $l_\infty$-norm. The algorithm performs particularly well for matrices that can be packed into banded or dyadic forms which are moderately dense. Due to the properties of $l_1$-norm, the packing step can be applied iteratively to reconstruct the hidden dyadic structure, which corresponds to the detection of separators in the nested dissection method. We explore the algebraic properties of dyadic-structured matrices and present an algebraic framework that allows for a unified mathematical treatment of both sparse factorization and efficient inversion of factors. For matrices with a dyadic structure, we introduce an optimal inversion algorithm and evaluate its computational complexity. The proposed inversion algorithm and core algebraic operations for dyadic matrices are implemented in the R package DyadiCarma, utilizing Rcpp and RcppArmadillo for high-performance computing. An independent R-based matrix packing module, supported by C++ code, is also provided." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/14/DyadicFactorizationandEfficientInversionofSparsePositiveDefiniteMatrices.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/14/DyadicFactorizationandEfficientInversionofSparsePositiveDefiniteMatrices.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dyadic Factorization and Efficient Inversion of Sparse Positive Definite Matrices" />
+<script type="application/ld+json">
+{"description":"In inverting large sparse matrices, the key difficulty lies in effectively exploiting sparsity during the inversion process. One well-established strategy is the nested dissection, which seeks the so-called sparse Cholesky factorization. We argue that the matrices for which such factors can be found are characterized by a hidden dyadic sparsity structure. This paper builds on that idea by proposing an efficient approach for inverting such matrices. The method consists of two independent steps: the first packs the matrix into a dyadic form, while the second performs a sparse (dyadic) Gram-Schmidt orthogonalization of the packed matrix. The novel packing procedure works by recovering block-tridiagonal structures, focusing on aggregating terms near the diagonal using the $l_1$-norm, which contrasts with traditional methods that prioritize minimizing bandwidth, i.e. the $l_\\infty$-norm. The algorithm performs particularly well for matrices that can be packed into banded or dyadic forms which are moderately dense. Due to the properties of $l_1$-norm, the packing step can be applied iteratively to reconstruct the hidden dyadic structure, which corresponds to the detection of separators in the nested dissection method. We explore the algebraic properties of dyadic-structured matrices and present an algebraic framework that allows for a unified mathematical treatment of both sparse factorization and efficient inversion of factors. For matrices with a dyadic structure, we introduce an optimal inversion algorithm and evaluate its computational complexity. The proposed inversion algorithm and core algebraic operations for dyadic matrices are implemented in the R package DyadiCarma, utilizing Rcpp and RcppArmadillo for high-performance computing. An independent R-based matrix packing module, supported by C++ code, is also provided.","headline":"Dyadic Factorization and Efficient Inversion of Sparse Positive Definite Matrices","dateModified":"2025-05-14T00:00:00+00:00","datePublished":"2025-05-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/14/DyadicFactorizationandEfficientInversionofSparsePositiveDefiniteMatrices.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/14/DyadicFactorizationandEfficientInversionofSparsePositiveDefiniteMatrices.html","author":{"@type":"Person","name":"Micha{\\l} Kos, Krzysztof Podgórski, Hanqing Wu"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-14 00:00:00 +0000">05-14</time>
+  </p>
+  
+  <h1>Dyadic Factorization and Efficient Inversion of Sparse Positive Definite Matrices</h1>
+  <br>Micha{\l} Kos, Krzysztof Podgórski, Hanqing Wu</h3>
+  <br> [stat.CO]
+
+  <p>In inverting large sparse matrices, the key difficulty lies in effectively exploiting sparsity during the inversion process. One well-established strategy is the nested dissection, which seeks the so-called sparse Cholesky factorization. We argue that the matrices for which such factors can be found are characterized by a hidden dyadic sparsity structure. This paper builds on that idea by proposing an efficient approach for inverting such matrices. The method consists of two independent steps: the first packs the matrix into a dyadic form, while the second performs a sparse (dyadic) Gram-Schmidt orthogonalization of the packed matrix.
+  The novel packing procedure works by recovering block-tridiagonal structures, focusing on aggregating terms near the diagonal using the $l_1$-norm, which contrasts with traditional methods that prioritize minimizing bandwidth, i.e. the $l_\infty$-norm. The algorithm performs particularly well for matrices that can be packed into banded or dyadic forms which are moderately dense. Due to the properties of $l_1$-norm, the packing step can be applied iteratively to reconstruct the hidden dyadic structure, which corresponds to the detection of separators in the nested dissection method.
+  We explore the algebraic properties of dyadic-structured matrices and present an algebraic framework that allows for a unified mathematical treatment of both sparse factorization and efficient inversion of factors. For matrices with a dyadic structure, we introduce an optimal inversion algorithm and evaluate its computational complexity.
+  The proposed inversion algorithm and core algebraic operations for dyadic matrices are implemented in the R package DyadiCarma, utilizing Rcpp and RcppArmadillo for high-performance computing. An independent R-based matrix packing module, supported by C++ code, is also provided.</p>
+
+<p><a href="https://arxiv.org/abs/2505.08144">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
