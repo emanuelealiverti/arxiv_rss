@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Uncertainty Propagation in Bayesian Two-Step Procedures</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Uncertainty Propagation in Bayesian Two-Step Procedures" />
+<meta name="author" content="Svenja Jedhoff, Hadi Kutabi, Anne Meyer, Paul-Christian Bürkner" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian inference provides a principled framework for probabilistic reasoning. If inference is performed in two steps, uncertainty propagation plays a crucial role in accounting for all sources of uncertainty and variability. This becomes particularly important when both aleatoric uncertainty, caused by data variability, and epistemic uncertainty, arising from incomplete knowledge or missing data, are present. Examples include surrogate models and missing data problems. In surrogate modeling, the surrogate is used as a simplified approximation of a resource-heavy and costly simulation. The uncertainty from the surrogate-fitting process can be propagated using a two-step procedure. For modeling with missing data, methods like Multivariate Imputation by Chained Equations (MICE) generate multiple datasets to account for imputation uncertainty. These approaches, however, are computationally expensive, as multiple models must be fitted separately to surrogate parameters respectively imputed datasets. To address these challenges, we propose an efficient two-step approach that reduces computational overhead while maintaining accuracy. By selecting a representative subset of draws or imputations, we construct a mixture distribution to approximate the desired posteriors using Pareto smoothed importance sampling. For more complex scenarios, this is further refined with importance weighted moment matching and an iterative procedure that broadens the mixture distribution to better capture diverse posterior distributions." />
+<meta property="og:description" content="Bayesian inference provides a principled framework for probabilistic reasoning. If inference is performed in two steps, uncertainty propagation plays a crucial role in accounting for all sources of uncertainty and variability. This becomes particularly important when both aleatoric uncertainty, caused by data variability, and epistemic uncertainty, arising from incomplete knowledge or missing data, are present. Examples include surrogate models and missing data problems. In surrogate modeling, the surrogate is used as a simplified approximation of a resource-heavy and costly simulation. The uncertainty from the surrogate-fitting process can be propagated using a two-step procedure. For modeling with missing data, methods like Multivariate Imputation by Chained Equations (MICE) generate multiple datasets to account for imputation uncertainty. These approaches, however, are computationally expensive, as multiple models must be fitted separately to surrogate parameters respectively imputed datasets. To address these challenges, we propose an efficient two-step approach that reduces computational overhead while maintaining accuracy. By selecting a representative subset of draws or imputations, we construct a mixture distribution to approximate the desired posteriors using Pareto smoothed importance sampling. For more complex scenarios, this is further refined with importance weighted moment matching and an iterative procedure that broadens the mixture distribution to better capture diverse posterior distributions." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/16/EfficientUncertaintyPropagationinBayesianTwoStepProcedures.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/16/EfficientUncertaintyPropagationinBayesianTwoStepProcedures.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Uncertainty Propagation in Bayesian Two-Step Procedures" />
+<script type="application/ld+json">
+{"description":"Bayesian inference provides a principled framework for probabilistic reasoning. If inference is performed in two steps, uncertainty propagation plays a crucial role in accounting for all sources of uncertainty and variability. This becomes particularly important when both aleatoric uncertainty, caused by data variability, and epistemic uncertainty, arising from incomplete knowledge or missing data, are present. Examples include surrogate models and missing data problems. In surrogate modeling, the surrogate is used as a simplified approximation of a resource-heavy and costly simulation. The uncertainty from the surrogate-fitting process can be propagated using a two-step procedure. For modeling with missing data, methods like Multivariate Imputation by Chained Equations (MICE) generate multiple datasets to account for imputation uncertainty. These approaches, however, are computationally expensive, as multiple models must be fitted separately to surrogate parameters respectively imputed datasets. To address these challenges, we propose an efficient two-step approach that reduces computational overhead while maintaining accuracy. By selecting a representative subset of draws or imputations, we construct a mixture distribution to approximate the desired posteriors using Pareto smoothed importance sampling. For more complex scenarios, this is further refined with importance weighted moment matching and an iterative procedure that broadens the mixture distribution to better capture diverse posterior distributions.","headline":"Efficient Uncertainty Propagation in Bayesian Two-Step Procedures","dateModified":"2025-05-16T00:00:00+00:00","datePublished":"2025-05-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/16/EfficientUncertaintyPropagationinBayesianTwoStepProcedures.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/16/EfficientUncertaintyPropagationinBayesianTwoStepProcedures.html","author":{"@type":"Person","name":"Svenja Jedhoff, Hadi Kutabi, Anne Meyer, Paul-Christian Bürkner"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-16 00:00:00 +0000">05-16</time>
+  </p>
+  
+  <h1>Efficient Uncertainty Propagation in Bayesian Two-Step Procedures</h1>
+  <br>Svenja Jedhoff, Hadi Kutabi, Anne Meyer, Paul-Christian Bürkner</h3>
+  <br> [stat.ME]
+
+  <p>Bayesian inference provides a principled framework for probabilistic reasoning. If inference is performed in two steps, uncertainty propagation plays a crucial role in accounting for all sources of uncertainty and variability. This becomes particularly important when both aleatoric uncertainty, caused by data variability, and epistemic uncertainty, arising from incomplete knowledge or missing data, are present. Examples include surrogate models and missing data problems. In surrogate modeling, the surrogate is used as a simplified approximation of a resource-heavy and costly simulation. The uncertainty from the surrogate-fitting process can be propagated using a two-step procedure. For modeling with missing data, methods like Multivariate Imputation by Chained Equations (MICE) generate multiple datasets to account for imputation uncertainty. These approaches, however, are computationally expensive, as multiple models must be fitted separately to surrogate parameters respectively imputed datasets.
+  To address these challenges, we propose an efficient two-step approach that reduces computational overhead while maintaining accuracy. By selecting a representative subset of draws or imputations, we construct a mixture distribution to approximate the desired posteriors using Pareto smoothed importance sampling. For more complex scenarios, this is further refined with importance weighted moment matching and an iterative procedure that broadens the mixture distribution to better capture diverse posterior distributions.</p>
+
+<p><a href="https://arxiv.org/abs/2505.10510">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
