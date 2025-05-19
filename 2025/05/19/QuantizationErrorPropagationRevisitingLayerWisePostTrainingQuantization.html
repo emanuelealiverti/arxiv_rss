@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Quantization Error Propagation: Revisiting Layer-Wise Post-Training Quantization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Quantization Error Propagation: Revisiting Layer-Wise Post-Training Quantization" />
+<meta name="author" content="Yamato Arai, Yuma Ichikawa" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Layer-wise PTQ is a promising technique for compressing large language models (LLMs), due to its simplicity and effectiveness without requiring retraining. However, recent progress in this area is saturating, underscoring the need to revisit its core limitations and explore further improvements. We address this challenge by identifying a key limitation of existing layer-wise PTQ methods: the growth of quantization errors across layers significantly degrades performance, particularly in low-bit regimes. To address this fundamental issue, we propose Quantization Error Propagation (QEP), a general, lightweight, and scalable framework that enhances layer-wise PTQ by explicitly propagating quantization errors and compensating for accumulated errors. QEP also offers a tunable propagation mechanism that prevents overfitting and controls computational overhead, enabling the framework to adapt to various architectures and resource budgets. Extensive experiments on several LLMs demonstrate that QEP-enhanced layer-wise PTQ achieves substantially higher accuracy than existing methods. Notably, the gains are most pronounced in the extremely low-bit quantization regime." />
+<meta property="og:description" content="Layer-wise PTQ is a promising technique for compressing large language models (LLMs), due to its simplicity and effectiveness without requiring retraining. However, recent progress in this area is saturating, underscoring the need to revisit its core limitations and explore further improvements. We address this challenge by identifying a key limitation of existing layer-wise PTQ methods: the growth of quantization errors across layers significantly degrades performance, particularly in low-bit regimes. To address this fundamental issue, we propose Quantization Error Propagation (QEP), a general, lightweight, and scalable framework that enhances layer-wise PTQ by explicitly propagating quantization errors and compensating for accumulated errors. QEP also offers a tunable propagation mechanism that prevents overfitting and controls computational overhead, enabling the framework to adapt to various architectures and resource budgets. Extensive experiments on several LLMs demonstrate that QEP-enhanced layer-wise PTQ achieves substantially higher accuracy than existing methods. Notably, the gains are most pronounced in the extremely low-bit quantization regime." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/19/QuantizationErrorPropagationRevisitingLayerWisePostTrainingQuantization.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/19/QuantizationErrorPropagationRevisitingLayerWisePostTrainingQuantization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Quantization Error Propagation: Revisiting Layer-Wise Post-Training Quantization" />
+<script type="application/ld+json">
+{"description":"Layer-wise PTQ is a promising technique for compressing large language models (LLMs), due to its simplicity and effectiveness without requiring retraining. However, recent progress in this area is saturating, underscoring the need to revisit its core limitations and explore further improvements. We address this challenge by identifying a key limitation of existing layer-wise PTQ methods: the growth of quantization errors across layers significantly degrades performance, particularly in low-bit regimes. To address this fundamental issue, we propose Quantization Error Propagation (QEP), a general, lightweight, and scalable framework that enhances layer-wise PTQ by explicitly propagating quantization errors and compensating for accumulated errors. QEP also offers a tunable propagation mechanism that prevents overfitting and controls computational overhead, enabling the framework to adapt to various architectures and resource budgets. Extensive experiments on several LLMs demonstrate that QEP-enhanced layer-wise PTQ achieves substantially higher accuracy than existing methods. Notably, the gains are most pronounced in the extremely low-bit quantization regime.","headline":"Quantization Error Propagation: Revisiting Layer-Wise Post-Training Quantization","dateModified":"2025-05-19T00:00:00+00:00","datePublished":"2025-05-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/19/QuantizationErrorPropagationRevisitingLayerWisePostTrainingQuantization.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/19/QuantizationErrorPropagationRevisitingLayerWisePostTrainingQuantization.html","author":{"@type":"Person","name":"Yamato Arai, Yuma Ichikawa"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-19 00:00:00 +0000">05-19</time>
+  </p>
+  
+  <h1>Quantization Error Propagation: Revisiting Layer-Wise Post-Training Quantization</h1>
+  <br>Yamato Arai, Yuma Ichikawa</h3>
+  <br> [stat.AP,stat.ME,stat.ML]
+
+  <p>Layer-wise PTQ is a promising technique for compressing large language models (LLMs), due to its simplicity and effectiveness without requiring retraining. However, recent progress in this area is saturating, underscoring the need to revisit its core limitations and explore further improvements. We address this challenge by identifying a key limitation of existing layer-wise PTQ methods: the growth of quantization errors across layers significantly degrades performance, particularly in low-bit regimes. To address this fundamental issue, we propose Quantization Error Propagation (QEP), a general, lightweight, and scalable framework that enhances layer-wise PTQ by explicitly propagating quantization errors and compensating for accumulated errors. QEP also offers a tunable propagation mechanism that prevents overfitting and controls computational overhead, enabling the framework to adapt to various architectures and resource budgets. Extensive experiments on several LLMs demonstrate that QEP-enhanced layer-wise PTQ achieves substantially higher accuracy than existing methods. Notably, the gains are most pronounced in the extremely low-bit quantization regime.</p>
+
+<p><a href="https://arxiv.org/abs/2504.09629">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
