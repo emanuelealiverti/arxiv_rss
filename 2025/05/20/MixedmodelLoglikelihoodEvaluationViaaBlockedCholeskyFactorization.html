@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mixed-model Log-likelihood Evaluation Via a Blocked Cholesky Factorization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Mixed-model Log-likelihood Evaluation Via a Blocked Cholesky Factorization" />
+<meta name="author" content="Douglas Bates, Phillip M. Alday, Ajinkya H. Kokandakar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bates et al. (2015) described the evaluation of the profiled log-likelihood of a linear mixed-effects model by updating a sparse, symmetric positive-definite matrix and computing its Cholesky factor, as implemented in the lme4 package for R. Here we present enhancements to the derivation and theoretical presentation of the result and to its implementation using a blocked Cholesky factorization in the MixedModels.jl package for Julia (Bezanson et al., 2017). The gain in computational efficiency is primarily due to three factors: (1) the new derivation allows us to compute the penalized residual sum of squares without computing the conditional estimates of the fixed-effects parameters and the conditional modes of the random effects at each optimization step, (2) the blocked Cholesky representation and careful ordering of the random effects terms reduces the amount of “fill-in” that occurs during the Cholesky factorization, and (3) the multiple dispatch feature of the Julia language allows us to use specialized algorithms for different kinds of matrices instead of relying on generic algorithms during the Cholesky factorization. To show the effectiveness of the blocked Cholesky approach we use it to fit a linear mixed model to over 32 million ratings of movies in the MovieLens ml-32m (Harper and Konstan, 2016) data set. The model incorporates random effects for over 200,000 movies and over 80,000 participants. Further enhancements to these computational methods are suggested." />
+<meta property="og:description" content="Bates et al. (2015) described the evaluation of the profiled log-likelihood of a linear mixed-effects model by updating a sparse, symmetric positive-definite matrix and computing its Cholesky factor, as implemented in the lme4 package for R. Here we present enhancements to the derivation and theoretical presentation of the result and to its implementation using a blocked Cholesky factorization in the MixedModels.jl package for Julia (Bezanson et al., 2017). The gain in computational efficiency is primarily due to three factors: (1) the new derivation allows us to compute the penalized residual sum of squares without computing the conditional estimates of the fixed-effects parameters and the conditional modes of the random effects at each optimization step, (2) the blocked Cholesky representation and careful ordering of the random effects terms reduces the amount of “fill-in” that occurs during the Cholesky factorization, and (3) the multiple dispatch feature of the Julia language allows us to use specialized algorithms for different kinds of matrices instead of relying on generic algorithms during the Cholesky factorization. To show the effectiveness of the blocked Cholesky approach we use it to fit a linear mixed model to over 32 million ratings of movies in the MovieLens ml-32m (Harper and Konstan, 2016) data set. The model incorporates random effects for over 200,000 movies and over 80,000 participants. Further enhancements to these computational methods are suggested." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/20/MixedmodelLoglikelihoodEvaluationViaaBlockedCholeskyFactorization.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/20/MixedmodelLoglikelihoodEvaluationViaaBlockedCholeskyFactorization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mixed-model Log-likelihood Evaluation Via a Blocked Cholesky Factorization" />
+<script type="application/ld+json">
+{"description":"Bates et al. (2015) described the evaluation of the profiled log-likelihood of a linear mixed-effects model by updating a sparse, symmetric positive-definite matrix and computing its Cholesky factor, as implemented in the lme4 package for R. Here we present enhancements to the derivation and theoretical presentation of the result and to its implementation using a blocked Cholesky factorization in the MixedModels.jl package for Julia (Bezanson et al., 2017). The gain in computational efficiency is primarily due to three factors: (1) the new derivation allows us to compute the penalized residual sum of squares without computing the conditional estimates of the fixed-effects parameters and the conditional modes of the random effects at each optimization step, (2) the blocked Cholesky representation and careful ordering of the random effects terms reduces the amount of “fill-in” that occurs during the Cholesky factorization, and (3) the multiple dispatch feature of the Julia language allows us to use specialized algorithms for different kinds of matrices instead of relying on generic algorithms during the Cholesky factorization. To show the effectiveness of the blocked Cholesky approach we use it to fit a linear mixed model to over 32 million ratings of movies in the MovieLens ml-32m (Harper and Konstan, 2016) data set. The model incorporates random effects for over 200,000 movies and over 80,000 participants. Further enhancements to these computational methods are suggested.","headline":"Mixed-model Log-likelihood Evaluation Via a Blocked Cholesky Factorization","dateModified":"2025-05-20T00:00:00+00:00","datePublished":"2025-05-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/20/MixedmodelLoglikelihoodEvaluationViaaBlockedCholeskyFactorization.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/20/MixedmodelLoglikelihoodEvaluationViaaBlockedCholeskyFactorization.html","author":{"@type":"Person","name":"Douglas Bates, Phillip M. Alday, Ajinkya H. Kokandakar"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-20 00:00:00 +0000">05-20</time>
+  </p>
+  
+  <h1>Mixed-model Log-likelihood Evaluation Via a Blocked Cholesky Factorization</h1>
+  <br>Douglas Bates, Phillip M. Alday, Ajinkya H. Kokandakar</h3>
+  <br> [stat.CO]
+
+  <p>Bates et al. (2015) described the evaluation of the profiled log-likelihood of a linear mixed-effects model by updating a sparse, symmetric positive-definite matrix and computing its Cholesky factor, as implemented in the lme4 package for R. Here we present enhancements to the derivation and theoretical presentation of the result and to its implementation using a blocked Cholesky factorization in the MixedModels.jl package for Julia (Bezanson et al., 2017). The gain in computational efficiency is primarily due to three factors: (1) the new derivation allows us to compute the penalized residual sum of squares without computing the conditional estimates of the fixed-effects parameters and the conditional modes of the random effects at each optimization step, (2) the blocked Cholesky representation and careful ordering of the random effects terms reduces the amount of “fill-in” that occurs during the Cholesky factorization, and (3) the multiple dispatch feature of the Julia language allows us to use specialized algorithms for different kinds of matrices instead of relying on generic algorithms during the Cholesky factorization. To show the effectiveness of the blocked Cholesky approach we use it to fit a linear mixed model to over 32 million ratings of movies in the MovieLens ml-32m (Harper and Konstan, 2016) data set. The model incorporates random effects for over 200,000 movies and over 80,000 participants. Further enhancements to these computational methods are suggested.</p>
+
+<p><a href="https://arxiv.org/abs/2505.11674">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
