@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Finding Distributions that Differ, with False Discovery Rate Control</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Finding Distributions that Differ, with False Discovery Rate Control" />
+<meta name="author" content="Yonghoon Lee, Edgar Dobriban, Eric Tchetgen Tchetgen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We consider the problem of comparing a reference distribution with several other distributions. Given a sample from both the reference and the comparison groups, we aim to identify the comparison groups whose distributions differ from that of the reference group. Viewing this as a multiple testing problem, we introduce a methodology that provides exact, distribution-free control of the false discovery rate. To do so, we introduce the concept of batch conformal p-values and demonstrate that they satisfy positive regression dependence across the groups [Benjamini and Yekutieli, 2001], thereby enabling control of the false discovery rate through the Benjamini-Hochberg procedure. The proof of positive regression dependence introduces a novel technique for the inductive construction of rank vectors with almost sure dominance under exchangeability. We evaluate the performance of the proposed procedure through simulations, where, despite being distribution-free, in some cases they show performance comparable to methods with knowledge of the data-generating normal distribution; and further have more power than direct approaches based on conformal out-of-distribution detection. Further, we illustrate our methods on a Hepatitis C treatment dataset, where they can identify patient groups with large treatment effects; and on the Current Population Survey dataset, where they can identify sub-population with long work hours." />
+<meta property="og:description" content="We consider the problem of comparing a reference distribution with several other distributions. Given a sample from both the reference and the comparison groups, we aim to identify the comparison groups whose distributions differ from that of the reference group. Viewing this as a multiple testing problem, we introduce a methodology that provides exact, distribution-free control of the false discovery rate. To do so, we introduce the concept of batch conformal p-values and demonstrate that they satisfy positive regression dependence across the groups [Benjamini and Yekutieli, 2001], thereby enabling control of the false discovery rate through the Benjamini-Hochberg procedure. The proof of positive regression dependence introduces a novel technique for the inductive construction of rank vectors with almost sure dominance under exchangeability. We evaluate the performance of the proposed procedure through simulations, where, despite being distribution-free, in some cases they show performance comparable to methods with knowledge of the data-generating normal distribution; and further have more power than direct approaches based on conformal out-of-distribution detection. Further, we illustrate our methods on a Hepatitis C treatment dataset, where they can identify patient groups with large treatment effects; and on the Current Population Survey dataset, where they can identify sub-population with long work hours." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/21/FindingDistributionsthatDifferwithFalseDiscoveryRateControl.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/21/FindingDistributionsthatDifferwithFalseDiscoveryRateControl.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Finding Distributions that Differ, with False Discovery Rate Control" />
+<script type="application/ld+json">
+{"description":"We consider the problem of comparing a reference distribution with several other distributions. Given a sample from both the reference and the comparison groups, we aim to identify the comparison groups whose distributions differ from that of the reference group. Viewing this as a multiple testing problem, we introduce a methodology that provides exact, distribution-free control of the false discovery rate. To do so, we introduce the concept of batch conformal p-values and demonstrate that they satisfy positive regression dependence across the groups [Benjamini and Yekutieli, 2001], thereby enabling control of the false discovery rate through the Benjamini-Hochberg procedure. The proof of positive regression dependence introduces a novel technique for the inductive construction of rank vectors with almost sure dominance under exchangeability. We evaluate the performance of the proposed procedure through simulations, where, despite being distribution-free, in some cases they show performance comparable to methods with knowledge of the data-generating normal distribution; and further have more power than direct approaches based on conformal out-of-distribution detection. Further, we illustrate our methods on a Hepatitis C treatment dataset, where they can identify patient groups with large treatment effects; and on the Current Population Survey dataset, where they can identify sub-population with long work hours.","headline":"Finding Distributions that Differ, with False Discovery Rate Control","dateModified":"2025-05-21T00:00:00+00:00","datePublished":"2025-05-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/21/FindingDistributionsthatDifferwithFalseDiscoveryRateControl.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/21/FindingDistributionsthatDifferwithFalseDiscoveryRateControl.html","author":{"@type":"Person","name":"Yonghoon Lee, Edgar Dobriban, Eric Tchetgen Tchetgen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-21 00:00:00 +0000">05-21</time>
+  </p>
+  
+  <h1>Finding Distributions that Differ, with False Discovery Rate Control</h1>
+  <br>Yonghoon Lee, Edgar Dobriban, Eric Tchetgen Tchetgen</h3>
+  <br> [stat.ME]
+
+  <p>We consider the problem of comparing a reference distribution with several other distributions. Given a sample from both the reference and the comparison groups, we aim to identify the comparison groups whose distributions differ from that of the reference group. Viewing this as a multiple testing problem, we introduce a methodology that provides exact, distribution-free control of the false discovery rate. To do so, we introduce the concept of batch conformal p-values and demonstrate that they satisfy positive regression dependence across the groups [Benjamini and Yekutieli, 2001], thereby enabling control of the false discovery rate through the Benjamini-Hochberg procedure. The proof of positive regression dependence introduces a novel technique for the inductive construction of rank vectors with almost sure dominance under exchangeability. We evaluate the performance of the proposed procedure through simulations, where, despite being distribution-free, in some cases they show performance comparable to methods with knowledge of the data-generating normal distribution; and further have more power than direct approaches based on conformal out-of-distribution detection. Further, we illustrate our methods on a Hepatitis C treatment dataset, where they can identify patient groups with large treatment effects; and on the Current Population Survey dataset, where they can identify sub-population with long work hours.</p>
+
+<p><a href="https://arxiv.org/abs/2505.13769">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
