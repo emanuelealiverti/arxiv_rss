@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian adaptive randomization in the I-SPY2.2 sequential multiple assignment randomized trial</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bayesian adaptive randomization in the I-SPY2.2 sequential multiple assignment randomized trial" />
+<meta name="author" content="Peter Norwood, Christina Yau, Denise Wolf, Anastasios Tsiatis, Marie Davidian" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The I-SPY2 phase 2 clinical trial is a long-running platform trial evaluating neoadjuvant treatments for locally advanced breast cancer, assigning subjects to tumor subtype-specific experimental agents via a response-adaptive randomization algorithm that updates randomization probabilities based on accruing evidence of efficacy. Recently, I-SPY2 has been reconfigured as a sequential multiple assignment randomized trial (SMART), known as I-SPY2.2, in which subjects who are predicted to not achieve a satisfactory response to an initial assigned therapy are re-randomized to a second subtype-specific treatment followed by standard rescue therapy if a satisfactory response is not predicted. The I-SPY2.2 SMART thus supports evaluation of entire treatment regimes that dictate the choice of treatments at each stage on the basis of the outcome pathological complete response (pCR). The transition of I-SPY2 to a SMART required development of a trial-specific response-adaptive randomization scheme in which randomization probabilities at each stage are updated based on evolving evidence on the efficacy of full regimes, so as to skew probabilities toward treatments involved in regimes that the current evidence suggests are optimal in the sense of maximizing the probability of pCR. The approach uses Thompson sampling, which updates randomization probabilities based on the posterior probability that treatments are implicated in optimal regimes. We present the proposed algorithm and empirical studies that demonstrate it improves within-trial regime-specific pCR rates and recommends optimal regimes at similar rates relative to uniform, nonadaptive randomization." />
+<meta property="og:description" content="The I-SPY2 phase 2 clinical trial is a long-running platform trial evaluating neoadjuvant treatments for locally advanced breast cancer, assigning subjects to tumor subtype-specific experimental agents via a response-adaptive randomization algorithm that updates randomization probabilities based on accruing evidence of efficacy. Recently, I-SPY2 has been reconfigured as a sequential multiple assignment randomized trial (SMART), known as I-SPY2.2, in which subjects who are predicted to not achieve a satisfactory response to an initial assigned therapy are re-randomized to a second subtype-specific treatment followed by standard rescue therapy if a satisfactory response is not predicted. The I-SPY2.2 SMART thus supports evaluation of entire treatment regimes that dictate the choice of treatments at each stage on the basis of the outcome pathological complete response (pCR). The transition of I-SPY2 to a SMART required development of a trial-specific response-adaptive randomization scheme in which randomization probabilities at each stage are updated based on evolving evidence on the efficacy of full regimes, so as to skew probabilities toward treatments involved in regimes that the current evidence suggests are optimal in the sense of maximizing the probability of pCR. The approach uses Thompson sampling, which updates randomization probabilities based on the posterior probability that treatments are implicated in optimal regimes. We present the proposed algorithm and empirical studies that demonstrate it improves within-trial regime-specific pCR rates and recommends optimal regimes at similar rates relative to uniform, nonadaptive randomization." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/23/BayesianadaptiverandomizationintheISPY22sequentialmultipleassignmentrandomizedtrial.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/23/BayesianadaptiverandomizationintheISPY22sequentialmultipleassignmentrandomizedtrial.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bayesian adaptive randomization in the I-SPY2.2 sequential multiple assignment randomized trial" />
+<script type="application/ld+json">
+{"description":"The I-SPY2 phase 2 clinical trial is a long-running platform trial evaluating neoadjuvant treatments for locally advanced breast cancer, assigning subjects to tumor subtype-specific experimental agents via a response-adaptive randomization algorithm that updates randomization probabilities based on accruing evidence of efficacy. Recently, I-SPY2 has been reconfigured as a sequential multiple assignment randomized trial (SMART), known as I-SPY2.2, in which subjects who are predicted to not achieve a satisfactory response to an initial assigned therapy are re-randomized to a second subtype-specific treatment followed by standard rescue therapy if a satisfactory response is not predicted. The I-SPY2.2 SMART thus supports evaluation of entire treatment regimes that dictate the choice of treatments at each stage on the basis of the outcome pathological complete response (pCR). The transition of I-SPY2 to a SMART required development of a trial-specific response-adaptive randomization scheme in which randomization probabilities at each stage are updated based on evolving evidence on the efficacy of full regimes, so as to skew probabilities toward treatments involved in regimes that the current evidence suggests are optimal in the sense of maximizing the probability of pCR. The approach uses Thompson sampling, which updates randomization probabilities based on the posterior probability that treatments are implicated in optimal regimes. We present the proposed algorithm and empirical studies that demonstrate it improves within-trial regime-specific pCR rates and recommends optimal regimes at similar rates relative to uniform, nonadaptive randomization.","headline":"Bayesian adaptive randomization in the I-SPY2.2 sequential multiple assignment randomized trial","dateModified":"2025-05-23T00:00:00+00:00","datePublished":"2025-05-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/23/BayesianadaptiverandomizationintheISPY22sequentialmultipleassignmentrandomizedtrial.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/23/BayesianadaptiverandomizationintheISPY22sequentialmultipleassignmentrandomizedtrial.html","author":{"@type":"Person","name":"Peter Norwood, Christina Yau, Denise Wolf, Anastasios Tsiatis, Marie Davidian"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-23 00:00:00 +0000">05-23</time>
+  </p>
+  
+  <h1>Bayesian adaptive randomization in the I-SPY2.2 sequential multiple assignment randomized trial</h1>
+  <br>Peter Norwood, Christina Yau, Denise Wolf, Anastasios Tsiatis, Marie Davidian</h3>
+  <br> [stat.ME]
+
+  <p>The I-SPY2 phase 2 clinical trial is a
+  long-running platform trial evaluating neoadjuvant treatments for
+  locally advanced breast cancer, assigning subjects to tumor
+  subtype-specific experimental agents via a response-adaptive
+  randomization algorithm that updates randomization probabilities
+  based on accruing evidence of efficacy. Recently, I-SPY2 has been
+  reconfigured as a sequential multiple assignment randomized trial
+  (SMART), known as I-SPY2.2, in which subjects who are predicted to
+  not achieve a satisfactory response to an initial assigned therapy
+  are re-randomized to a second subtype-specific treatment followed by
+  standard rescue therapy if a satisfactory response is not predicted.
+  The I-SPY2.2 SMART thus supports evaluation of entire treatment
+  regimes that dictate the choice of treatments at each stage on the
+  basis of the outcome pathological complete response (pCR). The
+  transition of I-SPY2 to a SMART required development of a
+  trial-specific response-adaptive randomization scheme in which
+  randomization probabilities at each stage are updated based on
+  evolving evidence on the efficacy of full regimes, so as to skew
+  probabilities toward treatments involved in regimes that the current
+  evidence suggests are optimal in the sense of maximizing the
+  probability of pCR. The approach uses Thompson sampling, which
+  updates randomization probabilities based on the posterior
+  probability that treatments are implicated in optimal regimes. We
+  present the proposed algorithm and empirical studies that
+  demonstrate it improves within-trial regime-specific pCR rates and
+  recommends optimal regimes at similar rates relative to uniform,
+  nonadaptive randomization.</p>
+
+<p><a href="https://arxiv.org/abs/2505.16047">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
