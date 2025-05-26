@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Power calculation for cross-sectional stepped wedge cluster randomized trials with a time-to-event endpoint</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Power calculation for cross-sectional stepped wedge cluster randomized trials with a time-to-event endpoint" />
+<meta name="author" content="Mary Ryan Baumann, Denise Esserman, Monica Taljaard, Fan Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Stepped wedge cluster randomized trials (SW-CRTs) are a form of randomized trial whereby clusters are progressively transitioned from control to intervention, with the timing of transition randomized for each cluster. An important task at the design stage is to ensure that the planned trial has sufficient power. While methods for determining power have been well-developed for SW-CRTs with continuous and binary outcomes, limited methods for power calculation are available for SW-CRTs with censored time-to-event outcomes. In this article, we propose a stratified marginal Cox model to analyze cross-sectional SW-CRTs and then derive an explicit expression of the robust sandwich variance to facilitate power calculations without the need for computationally intensive simulations. Power formulas based on both the Wald and robust score tests are developed, assuming constant within-period and between-period correlation parameters, and are further validated via simulation under different finite-sample scenarios. Finally, we illustrate our methods in the context of a SW-CRT testing the effect of a new electronic reminder system on time to catheter removal in hospital settings. We also offer an R Shiny application to facilitate sample size and power calculations using our proposed methods." />
+<meta property="og:description" content="Stepped wedge cluster randomized trials (SW-CRTs) are a form of randomized trial whereby clusters are progressively transitioned from control to intervention, with the timing of transition randomized for each cluster. An important task at the design stage is to ensure that the planned trial has sufficient power. While methods for determining power have been well-developed for SW-CRTs with continuous and binary outcomes, limited methods for power calculation are available for SW-CRTs with censored time-to-event outcomes. In this article, we propose a stratified marginal Cox model to analyze cross-sectional SW-CRTs and then derive an explicit expression of the robust sandwich variance to facilitate power calculations without the need for computationally intensive simulations. Power formulas based on both the Wald and robust score tests are developed, assuming constant within-period and between-period correlation parameters, and are further validated via simulation under different finite-sample scenarios. Finally, we illustrate our methods in the context of a SW-CRT testing the effect of a new electronic reminder system on time to catheter removal in hospital settings. We also offer an R Shiny application to facilitate sample size and power calculations using our proposed methods." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/26/Powercalculationforcrosssectionalsteppedwedgeclusterrandomizedtrialswithatimetoeventendpoint.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/26/Powercalculationforcrosssectionalsteppedwedgeclusterrandomizedtrialswithatimetoeventendpoint.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Power calculation for cross-sectional stepped wedge cluster randomized trials with a time-to-event endpoint" />
+<script type="application/ld+json">
+{"description":"Stepped wedge cluster randomized trials (SW-CRTs) are a form of randomized trial whereby clusters are progressively transitioned from control to intervention, with the timing of transition randomized for each cluster. An important task at the design stage is to ensure that the planned trial has sufficient power. While methods for determining power have been well-developed for SW-CRTs with continuous and binary outcomes, limited methods for power calculation are available for SW-CRTs with censored time-to-event outcomes. In this article, we propose a stratified marginal Cox model to analyze cross-sectional SW-CRTs and then derive an explicit expression of the robust sandwich variance to facilitate power calculations without the need for computationally intensive simulations. Power formulas based on both the Wald and robust score tests are developed, assuming constant within-period and between-period correlation parameters, and are further validated via simulation under different finite-sample scenarios. Finally, we illustrate our methods in the context of a SW-CRT testing the effect of a new electronic reminder system on time to catheter removal in hospital settings. We also offer an R Shiny application to facilitate sample size and power calculations using our proposed methods.","headline":"Power calculation for cross-sectional stepped wedge cluster randomized trials with a time-to-event endpoint","dateModified":"2025-05-26T00:00:00+00:00","datePublished":"2025-05-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/26/Powercalculationforcrosssectionalsteppedwedgeclusterrandomizedtrialswithatimetoeventendpoint.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/26/Powercalculationforcrosssectionalsteppedwedgeclusterrandomizedtrialswithatimetoeventendpoint.html","author":{"@type":"Person","name":"Mary Ryan Baumann, Denise Esserman, Monica Taljaard, Fan Li"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-26 00:00:00 +0000">05-26</time>
+  </p>
+  
+  <h1>Power calculation for cross-sectional stepped wedge cluster randomized trials with a time-to-event endpoint</h1>
+  <br>Mary Ryan Baumann, Denise Esserman, Monica Taljaard, Fan Li</h3>
+  <br> [stat.ME]
+
+  <p>Stepped wedge cluster randomized trials (SW-CRTs) are a form of randomized trial whereby clusters are progressively transitioned from control to intervention, with the timing of transition randomized for each cluster. An important task at the design stage is to ensure that the planned trial has sufficient power. While methods for determining power have been well-developed for SW-CRTs with continuous and binary outcomes, limited methods for power calculation are available for SW-CRTs with censored time-to-event outcomes. In this article, we propose a stratified marginal Cox model to analyze cross-sectional SW-CRTs and then derive an explicit expression of the robust sandwich variance to facilitate power calculations without the need for computationally intensive simulations. Power formulas based on both the Wald and robust score tests are developed, assuming constant within-period and between-period correlation parameters, and are further validated via simulation under different finite-sample scenarios. Finally, we illustrate our methods in the context of a SW-CRT testing the effect of a new electronic reminder system on time to catheter removal in hospital settings. We also offer an R Shiny application to facilitate sample size and power calculations using our proposed methods.</p>
+
+<p><a href="https://arxiv.org/abs/2312.13097">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
