@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On Bessel's Correction: Unbiased Sample Variance, the Bariance, and a Novel Runtime-Optimized Estimator</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On Bessel’s Correction: Unbiased Sample Variance, the Bariance, and a Novel Runtime-Optimized Estimator" />
+<meta name="author" content="Felix Reichel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bessel’s correction adjusts the denominator in the sample variance formula from n to n-1 to ensure an unbiased estimator of the population variance. This paper provides rigorous algebraic derivations geometric interpretations and visualizations to reinforce the necessity of this correction. It further introduces the concept of Bariance an alternative dispersion measure based on pairwise squared differences that avoids reliance on the arithmetic mean. Building on this we address practical concerns raised in Rosenthals article [Rosenthal, 2015] which advocates for n-based estimates from a mean squared error (MSE) perspective particularly in pedagogical contexts and specific applied settings. Finally, the empirical component of this work based on simulation studies demonstrates that estimating the population variance via an algebraically optimized Bariance approach can yield a computational advantage. Specifically the unbiased Bariance estimator can be computed in linear time resulting in shorter runtimes while preserving statistical validity." />
+<meta property="og:description" content="Bessel’s correction adjusts the denominator in the sample variance formula from n to n-1 to ensure an unbiased estimator of the population variance. This paper provides rigorous algebraic derivations geometric interpretations and visualizations to reinforce the necessity of this correction. It further introduces the concept of Bariance an alternative dispersion measure based on pairwise squared differences that avoids reliance on the arithmetic mean. Building on this we address practical concerns raised in Rosenthals article [Rosenthal, 2015] which advocates for n-based estimates from a mean squared error (MSE) perspective particularly in pedagogical contexts and specific applied settings. Finally, the empirical component of this work based on simulation studies demonstrates that estimating the population variance via an algebraically optimized Bariance approach can yield a computational advantage. Specifically the unbiased Bariance estimator can be computed in linear time resulting in shorter runtimes while preserving statistical validity." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/OnBesselsCorrectionUnbiasedSampleVariancetheBarianceandaNovelRuntimeOptimizedEstimator.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/OnBesselsCorrectionUnbiasedSampleVariancetheBarianceandaNovelRuntimeOptimizedEstimator.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On Bessel’s Correction: Unbiased Sample Variance, the Bariance, and a Novel Runtime-Optimized Estimator" />
+<script type="application/ld+json">
+{"description":"Bessel’s correction adjusts the denominator in the sample variance formula from n to n-1 to ensure an unbiased estimator of the population variance. This paper provides rigorous algebraic derivations geometric interpretations and visualizations to reinforce the necessity of this correction. It further introduces the concept of Bariance an alternative dispersion measure based on pairwise squared differences that avoids reliance on the arithmetic mean. Building on this we address practical concerns raised in Rosenthals article [Rosenthal, 2015] which advocates for n-based estimates from a mean squared error (MSE) perspective particularly in pedagogical contexts and specific applied settings. Finally, the empirical component of this work based on simulation studies demonstrates that estimating the population variance via an algebraically optimized Bariance approach can yield a computational advantage. Specifically the unbiased Bariance estimator can be computed in linear time resulting in shorter runtimes while preserving statistical validity.","headline":"On Bessel’s Correction: Unbiased Sample Variance, the Bariance, and a Novel Runtime-Optimized Estimator","dateModified":"2025-05-27T00:00:00+00:00","datePublished":"2025-05-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/OnBesselsCorrectionUnbiasedSampleVariancetheBarianceandaNovelRuntimeOptimizedEstimator.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/OnBesselsCorrectionUnbiasedSampleVariancetheBarianceandaNovelRuntimeOptimizedEstimator.html","author":{"@type":"Person","name":"Felix Reichel"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-27 00:00:00 +0000">05-27</time>
+  </p>
+  
+  <h1>On Bessel's Correction: Unbiased Sample Variance, the Bariance, and a Novel Runtime-Optimized Estimator</h1>
+  <br>Felix Reichel</h3>
+  <br> [stat.ME]
+
+  <p>Bessel’s correction adjusts the denominator in the sample variance formula from n to n-1 to ensure an unbiased estimator of the population variance. This paper provides rigorous algebraic derivations geometric interpretations and visualizations to reinforce the necessity of this correction. It further introduces the concept of Bariance an alternative dispersion measure based on pairwise squared differences that avoids reliance on the arithmetic mean. Building on this we address practical concerns raised in Rosenthals article [Rosenthal, 2015] which advocates for n-based estimates from a mean squared error (MSE) perspective particularly in pedagogical contexts and specific applied settings. Finally, the empirical component of this work based on simulation studies demonstrates that estimating the population variance via an algebraically optimized Bariance approach can yield a computational advantage. Specifically the unbiased Bariance estimator can be computed in linear time resulting in shorter runtimes while preserving statistical validity.</p>
+
+<p><a href="https://arxiv.org/abs/2503.22333">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

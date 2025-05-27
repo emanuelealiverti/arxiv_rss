@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Langevin sampling algorithm inspired by the Adam optimizer</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Langevin sampling algorithm inspired by the Adam optimizer" />
+<meta name="author" content="Benedict Leimkuhler, René Lohmann, Peter Whalley" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We present a framework for adaptive-stepsize MCMC sampling based on time-rescaled Langevin dynamics, in which the stepsize variation is dynamically driven by an additional degree of freedom. Our approach augments the phase space by an additional variable which in turn defines a time reparameterization. The use of an auxiliary relaxation equation allows accumulation of a moving average of a local monitor function and provides for precise control of the timestep while circumventing the need to modify the drift term in the physical system. Our algorithm is straightforward to implement and can be readily combined with any off-the-peg fixed-stepsize Langevin integrator. As a particular example, we consider control of the stepsize by monitoring the norm of the log-posterior gradient, which takes inspiration from the Adam optimizer, the stepsize being automatically reduced in regions of steep change of the log posterior and increased on plateaus, improving numerical stability and convergence speed. As in Adam, the stepsize variation depends on the recent history of the gradient norm, which enhances stability and improves accuracy compared to more immediate control approaches. We demonstrate the potential benefit of this method–both in accuracy and in stability–in numerical experiments including Neal’s funnel and a Bayesian neural network for classification of MNIST data." />
+<meta property="og:description" content="We present a framework for adaptive-stepsize MCMC sampling based on time-rescaled Langevin dynamics, in which the stepsize variation is dynamically driven by an additional degree of freedom. Our approach augments the phase space by an additional variable which in turn defines a time reparameterization. The use of an auxiliary relaxation equation allows accumulation of a moving average of a local monitor function and provides for precise control of the timestep while circumventing the need to modify the drift term in the physical system. Our algorithm is straightforward to implement and can be readily combined with any off-the-peg fixed-stepsize Langevin integrator. As a particular example, we consider control of the stepsize by monitoring the norm of the log-posterior gradient, which takes inspiration from the Adam optimizer, the stepsize being automatically reduced in regions of steep change of the log posterior and increased on plateaus, improving numerical stability and convergence speed. As in Adam, the stepsize variation depends on the recent history of the gradient norm, which enhances stability and improves accuracy compared to more immediate control approaches. We demonstrate the potential benefit of this method–both in accuracy and in stability–in numerical experiments including Neal’s funnel and a Bayesian neural network for classification of MNIST data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/ALangevinsamplingalgorithminspiredbytheAdamoptimizer.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/ALangevinsamplingalgorithminspiredbytheAdamoptimizer.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Langevin sampling algorithm inspired by the Adam optimizer" />
+<script type="application/ld+json">
+{"description":"We present a framework for adaptive-stepsize MCMC sampling based on time-rescaled Langevin dynamics, in which the stepsize variation is dynamically driven by an additional degree of freedom. Our approach augments the phase space by an additional variable which in turn defines a time reparameterization. The use of an auxiliary relaxation equation allows accumulation of a moving average of a local monitor function and provides for precise control of the timestep while circumventing the need to modify the drift term in the physical system. Our algorithm is straightforward to implement and can be readily combined with any off-the-peg fixed-stepsize Langevin integrator. As a particular example, we consider control of the stepsize by monitoring the norm of the log-posterior gradient, which takes inspiration from the Adam optimizer, the stepsize being automatically reduced in regions of steep change of the log posterior and increased on plateaus, improving numerical stability and convergence speed. As in Adam, the stepsize variation depends on the recent history of the gradient norm, which enhances stability and improves accuracy compared to more immediate control approaches. We demonstrate the potential benefit of this method–both in accuracy and in stability–in numerical experiments including Neal’s funnel and a Bayesian neural network for classification of MNIST data.","headline":"A Langevin sampling algorithm inspired by the Adam optimizer","dateModified":"2025-05-27T00:00:00+00:00","datePublished":"2025-05-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/ALangevinsamplingalgorithminspiredbytheAdamoptimizer.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/ALangevinsamplingalgorithminspiredbytheAdamoptimizer.html","author":{"@type":"Person","name":"Benedict Leimkuhler, René Lohmann, Peter Whalley"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-27 00:00:00 +0000">05-27</time>
+  </p>
+  
+  <h1>A Langevin sampling algorithm inspired by the Adam optimizer</h1>
+  <br>Benedict Leimkuhler, René Lohmann, Peter Whalley</h3>
+  <br> [stat.CO,stat.ML]
+
+  <p>We present a framework for adaptive-stepsize MCMC sampling based on time-rescaled Langevin dynamics, in which the stepsize variation is dynamically driven by an additional degree of freedom. Our approach augments the phase space by an additional variable which in turn defines a time reparameterization. The use of an auxiliary relaxation equation allows accumulation of a moving average of a local monitor function and provides for precise control of the timestep while circumventing the need to modify the drift term in the physical system. Our algorithm is straightforward to implement and can be readily combined with any off-the-peg fixed-stepsize Langevin integrator. As a particular example, we consider control of the stepsize by monitoring the norm of the log-posterior gradient, which takes inspiration from the Adam optimizer, the stepsize being automatically reduced in regions of steep change of the log posterior and increased on plateaus, improving numerical stability and convergence speed. As in Adam, the stepsize variation depends on the recent history of the gradient norm, which enhances stability and improves accuracy compared to more immediate control approaches. We demonstrate the potential benefit of this method–both in accuracy and in stability–in numerical experiments including Neal’s funnel and a Bayesian neural network for classification of MNIST data.</p>
+
+<p><a href="https://arxiv.org/abs/2504.18911">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

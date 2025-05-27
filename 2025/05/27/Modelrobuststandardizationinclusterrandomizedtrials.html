@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Model-robust standardization in cluster-randomized trials</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Model-robust standardization in cluster-randomized trials" />
+<meta name="author" content="Fan Li, Jiaqi Tong, Xi Fang, Chao Cheng, Brennan C. Kahan, Bingkai Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In cluster-randomized trials, generalized linear mixed models and generalized estimating equations have conventionally been the default analytic methods for estimating the average treatment effect as routine practice. However, recent studies have demonstrated that their treatment effect coefficient estimators may correspond to ambiguous estimands when the models are misspecified or when there exists informative cluster sizes. In this article, we present a unified approach that standardizes output from a given regression model to ensure estimand-aligned inference for the treatment effect parameters in cluster-randomized trials. We introduce estimators for both the cluster-average and the individual-average treatment effects (marginal estimands) that are always consistent regardless of whether the specified working regression models align with the unknown data generating process. We further explore the use of a deletion-based jackknife variance estimator for inference. The development of our approach also motivates a natural test for informative cluster size. Extensive simulation experiments are designed to demonstrate the advantage of the proposed estimators under a variety of scenarios. The proposed model-robust standardization methods are implemented in the MRStdCRT R package." />
+<meta property="og:description" content="In cluster-randomized trials, generalized linear mixed models and generalized estimating equations have conventionally been the default analytic methods for estimating the average treatment effect as routine practice. However, recent studies have demonstrated that their treatment effect coefficient estimators may correspond to ambiguous estimands when the models are misspecified or when there exists informative cluster sizes. In this article, we present a unified approach that standardizes output from a given regression model to ensure estimand-aligned inference for the treatment effect parameters in cluster-randomized trials. We introduce estimators for both the cluster-average and the individual-average treatment effects (marginal estimands) that are always consistent regardless of whether the specified working regression models align with the unknown data generating process. We further explore the use of a deletion-based jackknife variance estimator for inference. The development of our approach also motivates a natural test for informative cluster size. Extensive simulation experiments are designed to demonstrate the advantage of the proposed estimators under a variety of scenarios. The proposed model-robust standardization methods are implemented in the MRStdCRT R package." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/Modelrobuststandardizationinclusterrandomizedtrials.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/Modelrobuststandardizationinclusterrandomizedtrials.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Model-robust standardization in cluster-randomized trials" />
+<script type="application/ld+json">
+{"description":"In cluster-randomized trials, generalized linear mixed models and generalized estimating equations have conventionally been the default analytic methods for estimating the average treatment effect as routine practice. However, recent studies have demonstrated that their treatment effect coefficient estimators may correspond to ambiguous estimands when the models are misspecified or when there exists informative cluster sizes. In this article, we present a unified approach that standardizes output from a given regression model to ensure estimand-aligned inference for the treatment effect parameters in cluster-randomized trials. We introduce estimators for both the cluster-average and the individual-average treatment effects (marginal estimands) that are always consistent regardless of whether the specified working regression models align with the unknown data generating process. We further explore the use of a deletion-based jackknife variance estimator for inference. The development of our approach also motivates a natural test for informative cluster size. Extensive simulation experiments are designed to demonstrate the advantage of the proposed estimators under a variety of scenarios. The proposed model-robust standardization methods are implemented in the MRStdCRT R package.","headline":"Model-robust standardization in cluster-randomized trials","dateModified":"2025-05-27T00:00:00+00:00","datePublished":"2025-05-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/Modelrobuststandardizationinclusterrandomizedtrials.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/27/Modelrobuststandardizationinclusterrandomizedtrials.html","author":{"@type":"Person","name":"Fan Li, Jiaqi Tong, Xi Fang, Chao Cheng, Brennan C. Kahan, Bingkai Wang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-27 00:00:00 +0000">05-27</time>
+  </p>
+  
+  <h1>Model-robust standardization in cluster-randomized trials</h1>
+  <br>Fan Li, Jiaqi Tong, Xi Fang, Chao Cheng, Brennan C. Kahan, Bingkai Wang</h3>
+  <br> [stat.ME]
+
+  <p>In cluster-randomized trials, generalized linear mixed models and generalized estimating equations have conventionally been the default analytic methods for estimating the average treatment effect as routine practice. However, recent studies have demonstrated that their treatment effect coefficient estimators may correspond to ambiguous estimands when the models are misspecified or when there exists informative cluster sizes. In this article, we present a unified approach that standardizes output from a given regression model to ensure estimand-aligned inference for the treatment effect parameters in cluster-randomized trials. We introduce estimators for both the cluster-average and the individual-average treatment effects (marginal estimands) that are always consistent regardless of whether the specified working regression models align with the unknown data generating process. We further explore the use of a deletion-based jackknife variance estimator for inference. The development of our approach also motivates a natural test for informative cluster size. Extensive simulation experiments are designed to demonstrate the advantage of the proposed estimators under a variety of scenarios. The proposed model-robust standardization methods are implemented in the MRStdCRT R package.</p>
+
+<p><a href="https://arxiv.org/abs/2505.19336">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
