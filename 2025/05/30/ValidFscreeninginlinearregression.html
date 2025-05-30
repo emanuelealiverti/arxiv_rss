@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Valid F-screening in linear regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Valid F-screening in linear regression" />
+<meta name="author" content="Olivia McGough, Daniela Witten, Daniel Kessler" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Suppose that a data analyst wishes to report the results of a least squares linear regression only if the overall null hypothesis, $H_0^{1:p}: \beta_1= \beta_2 = \ldots = \beta_p=0$, is rejected. This practice, which we refer to as F-screening (since the overall null hypothesis is typically tested using an $F$-statistic), is in fact common practice across a number of applied fields. Unfortunately, it poses a problem: standard guarantees for the inferential outputs of linear regression, such as Type 1 error control of hypothesis tests and nominal coverage of confidence intervals, hold unconditionally, but fail to hold conditional on rejection of the overall null hypothesis. In this paper, we develop an inferential toolbox for the coefficients in a least squares model that are valid conditional on rejection of the overall null hypothesis. We develop selective p-values that lead to tests that control the selective Type 1 error, i.e., the Type 1 error conditional on having rejected the overall null hypothesis. Furthermore, they can be computed without access to the raw data, i.e., using only the standard outputs of a least squares linear regression, and therefore are suitable for use in a retrospective analysis of a published study. We also develop confidence intervals that attain nominal selective coverage, and point estimates that account for having rejected the overall null hypothesis. We show empirically that our selective procedure is preferable to an alternative approach that relies on sample splitting, and we demonstrate its performance via re-analysis of two datasets from the biomedical literature." />
+<meta property="og:description" content="Suppose that a data analyst wishes to report the results of a least squares linear regression only if the overall null hypothesis, $H_0^{1:p}: \beta_1= \beta_2 = \ldots = \beta_p=0$, is rejected. This practice, which we refer to as F-screening (since the overall null hypothesis is typically tested using an $F$-statistic), is in fact common practice across a number of applied fields. Unfortunately, it poses a problem: standard guarantees for the inferential outputs of linear regression, such as Type 1 error control of hypothesis tests and nominal coverage of confidence intervals, hold unconditionally, but fail to hold conditional on rejection of the overall null hypothesis. In this paper, we develop an inferential toolbox for the coefficients in a least squares model that are valid conditional on rejection of the overall null hypothesis. We develop selective p-values that lead to tests that control the selective Type 1 error, i.e., the Type 1 error conditional on having rejected the overall null hypothesis. Furthermore, they can be computed without access to the raw data, i.e., using only the standard outputs of a least squares linear regression, and therefore are suitable for use in a retrospective analysis of a published study. We also develop confidence intervals that attain nominal selective coverage, and point estimates that account for having rejected the overall null hypothesis. We show empirically that our selective procedure is preferable to an alternative approach that relies on sample splitting, and we demonstrate its performance via re-analysis of two datasets from the biomedical literature." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/05/30/ValidFscreeninginlinearregression.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/05/30/ValidFscreeninginlinearregression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Valid F-screening in linear regression" />
+<script type="application/ld+json">
+{"description":"Suppose that a data analyst wishes to report the results of a least squares linear regression only if the overall null hypothesis, $H_0^{1:p}: \\beta_1= \\beta_2 = \\ldots = \\beta_p=0$, is rejected. This practice, which we refer to as F-screening (since the overall null hypothesis is typically tested using an $F$-statistic), is in fact common practice across a number of applied fields. Unfortunately, it poses a problem: standard guarantees for the inferential outputs of linear regression, such as Type 1 error control of hypothesis tests and nominal coverage of confidence intervals, hold unconditionally, but fail to hold conditional on rejection of the overall null hypothesis. In this paper, we develop an inferential toolbox for the coefficients in a least squares model that are valid conditional on rejection of the overall null hypothesis. We develop selective p-values that lead to tests that control the selective Type 1 error, i.e., the Type 1 error conditional on having rejected the overall null hypothesis. Furthermore, they can be computed without access to the raw data, i.e., using only the standard outputs of a least squares linear regression, and therefore are suitable for use in a retrospective analysis of a published study. We also develop confidence intervals that attain nominal selective coverage, and point estimates that account for having rejected the overall null hypothesis. We show empirically that our selective procedure is preferable to an alternative approach that relies on sample splitting, and we demonstrate its performance via re-analysis of two datasets from the biomedical literature.","headline":"Valid F-screening in linear regression","dateModified":"2025-05-30T00:00:00+00:00","datePublished":"2025-05-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/30/ValidFscreeninginlinearregression.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/05/30/ValidFscreeninginlinearregression.html","author":{"@type":"Person","name":"Olivia McGough, Daniela Witten, Daniel Kessler"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-30 00:00:00 +0000">05-30</time>
+  </p>
+  
+  <h1>Valid F-screening in linear regression</h1>
+  <br>Olivia McGough, Daniela Witten, Daniel Kessler</h3>
+  <br> [stat.ME,stat.AP,stat.TH]
+
+  <p>Suppose that a data analyst wishes to report the results of a least squares linear regression only if the overall null hypothesis, $H_0^{1:p}: \beta_1= \beta_2 = \ldots = \beta_p=0$, is rejected. This practice, which we refer to as F-screening (since the overall null hypothesis is typically tested using an $F$-statistic), is in fact common practice across a number of applied fields. Unfortunately, it poses a problem: standard guarantees for the inferential outputs of linear regression, such as Type 1 error control of hypothesis tests and nominal coverage of confidence intervals, hold unconditionally, but fail to hold conditional on rejection of the overall null hypothesis. In this paper, we develop an inferential toolbox for the coefficients in a least squares model that are valid conditional on rejection of the overall null hypothesis. We develop selective p-values that lead to tests that control the selective Type 1 error, i.e., the Type 1 error conditional on having rejected the overall null hypothesis. Furthermore, they can be computed without access to the raw data, i.e., using only the standard outputs of a least squares linear regression, and therefore are suitable for use in a retrospective analysis of a published study. We also develop confidence intervals that attain nominal selective coverage, and point estimates that account for having rejected the overall null hypothesis. We show empirically that our selective procedure is preferable to an alternative approach that relies on sample splitting, and we demonstrate its performance via re-analysis of two datasets from the biomedical literature.</p>
+
+<p><a href="https://arxiv.org/abs/2505.23113">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
