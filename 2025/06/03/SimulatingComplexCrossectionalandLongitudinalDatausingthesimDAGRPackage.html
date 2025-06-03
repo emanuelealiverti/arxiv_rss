@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Simulating Complex Crossectional and Longitudinal Data using the simDAG R Package</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Simulating Complex Crossectional and Longitudinal Data using the simDAG R Package" />
+<meta name="author" content="Robin Denz, Nina Timmesfeld" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Generating artificial data is a crucial step when performing Monte-Carlo simulation studies. Depending on the planned study, complex data generation processes (DGP) containing multiple, possibly time-varying, variables with various forms of dependencies and data types may be required. Simulating data from such DGP may therefore become a difficult and time-consuming endeavor. The simDAG R package offers a standardized approach to generate data from simple and complex DGP based on the definition of structural equations in directed acyclic graphs using arbitrary functions or regression models. The package offers a clear syntax with an enhanced formula interface and directly supports generating binary, categorical, count and time-to-event data with arbitrary dependencies, possibly non-linear relationships and interactions. It additionally includes a framework to conduct discrete-time based simulations which allows the generation of longitudinal data on a semi-continuous time-scale. This approach may be used to generate time-to-event data with both recurrent or competing events and possibly multiple time-varying covariates, which may themselves have arbitrary data types. In this article we demonstrate the vast amount of features included in simDAG by replicating the DGP of multiple real Monte-Carlo simulation studies." />
+<meta property="og:description" content="Generating artificial data is a crucial step when performing Monte-Carlo simulation studies. Depending on the planned study, complex data generation processes (DGP) containing multiple, possibly time-varying, variables with various forms of dependencies and data types may be required. Simulating data from such DGP may therefore become a difficult and time-consuming endeavor. The simDAG R package offers a standardized approach to generate data from simple and complex DGP based on the definition of structural equations in directed acyclic graphs using arbitrary functions or regression models. The package offers a clear syntax with an enhanced formula interface and directly supports generating binary, categorical, count and time-to-event data with arbitrary dependencies, possibly non-linear relationships and interactions. It additionally includes a framework to conduct discrete-time based simulations which allows the generation of longitudinal data on a semi-continuous time-scale. This approach may be used to generate time-to-event data with both recurrent or competing events and possibly multiple time-varying covariates, which may themselves have arbitrary data types. In this article we demonstrate the vast amount of features included in simDAG by replicating the DGP of multiple real Monte-Carlo simulation studies." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/03/SimulatingComplexCrossectionalandLongitudinalDatausingthesimDAGRPackage.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/03/SimulatingComplexCrossectionalandLongitudinalDatausingthesimDAGRPackage.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Simulating Complex Crossectional and Longitudinal Data using the simDAG R Package" />
+<script type="application/ld+json">
+{"description":"Generating artificial data is a crucial step when performing Monte-Carlo simulation studies. Depending on the planned study, complex data generation processes (DGP) containing multiple, possibly time-varying, variables with various forms of dependencies and data types may be required. Simulating data from such DGP may therefore become a difficult and time-consuming endeavor. The simDAG R package offers a standardized approach to generate data from simple and complex DGP based on the definition of structural equations in directed acyclic graphs using arbitrary functions or regression models. The package offers a clear syntax with an enhanced formula interface and directly supports generating binary, categorical, count and time-to-event data with arbitrary dependencies, possibly non-linear relationships and interactions. It additionally includes a framework to conduct discrete-time based simulations which allows the generation of longitudinal data on a semi-continuous time-scale. This approach may be used to generate time-to-event data with both recurrent or competing events and possibly multiple time-varying covariates, which may themselves have arbitrary data types. In this article we demonstrate the vast amount of features included in simDAG by replicating the DGP of multiple real Monte-Carlo simulation studies.","headline":"Simulating Complex Crossectional and Longitudinal Data using the simDAG R Package","dateModified":"2025-06-03T00:00:00+00:00","datePublished":"2025-06-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/03/SimulatingComplexCrossectionalandLongitudinalDatausingthesimDAGRPackage.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/03/SimulatingComplexCrossectionalandLongitudinalDatausingthesimDAGRPackage.html","author":{"@type":"Person","name":"Robin Denz, Nina Timmesfeld"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-03 00:00:00 +0000">06-03</time>
+  </p>
+  
+  <h1>Simulating Complex Crossectional and Longitudinal Data using the simDAG R Package</h1>
+  <br>Robin Denz, Nina Timmesfeld</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Generating artificial data is a crucial step when performing Monte-Carlo simulation studies. Depending on the planned study, complex data generation processes (DGP) containing multiple, possibly time-varying, variables with various forms of dependencies and data types may be required. Simulating data from such DGP may therefore become a difficult and time-consuming endeavor. The simDAG R package offers a standardized approach to generate data from simple and complex DGP based on the definition of structural equations in directed acyclic graphs using arbitrary functions or regression models. The package offers a clear syntax with an enhanced formula interface and directly supports generating binary, categorical, count and time-to-event data with arbitrary dependencies, possibly non-linear relationships and interactions. It additionally includes a framework to conduct discrete-time based simulations which allows the generation of longitudinal data on a semi-continuous time-scale. This approach may be used to generate time-to-event data with both recurrent or competing events and possibly multiple time-varying covariates, which may themselves have arbitrary data types. In this article we demonstrate the vast amount of features included in simDAG by replicating the DGP of multiple real Monte-Carlo simulation studies.</p>
+
+<p><a href="https://arxiv.org/abs/2506.01498">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

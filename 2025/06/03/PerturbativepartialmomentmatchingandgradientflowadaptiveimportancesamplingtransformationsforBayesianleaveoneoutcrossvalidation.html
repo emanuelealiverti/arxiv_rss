@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Perturbative partial moment matching and gradient-flow adaptive importance sampling transformations for Bayesian leave one out cross-validation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Perturbative partial moment matching and gradient-flow adaptive importance sampling transformations for Bayesian leave one out cross-validation" />
+<meta name="author" content="Joshua C Chang, Xiangting Li, Shixin Xu, Hao-Ren Yao, Julia Porcino, Carson Chow" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Importance sampling (IS) allows one to approximate leave one out (LOO) cross-validation for a Bayesian model, without refitting, by inverting the Bayesian update equation to subtract a given data point from a model posterior. For each data point, one computes expectations under the corresponding LOO posterior by weighted averaging over the full data posterior. This task sometimes requires weight stabilization in the form of adapting the posterior distribution via transformation. So long as one is successful in finding a suitable transformation, one avoids refitting. To this end, we motivate the use of bijective perturbative transformations of the form $T(\boldsymbol{\theta})=\boldsymbol{\theta} + h Q(\boldsymbol{\theta}),$ for $0&lt;h\ll 1,$ and introduce two classes of such transformations: 1) partial moment matching and 2) gradient flow evolution. The former extends prior literature on moment-matching under the recognition that adaptation for LOO is a small perturbation on the full data posterior. The latter class of methods define transformations based on relaxing various statistical objectives: in our case the variance of the IS estimator and the KL divergence between the transformed distribution and the statistics of the LOO fold. Being model-specific, the gradient flow transformations require evaluating Jacobian determinants. While these quantities are generally readily available through auto-differentiation, we derive closed-form expressions in the case of logistic regression and shallow ReLU activated neural networks. We tested the methodology on an $n\ll p$ dataset that is known to produce unstable LOO IS weights." />
+<meta property="og:description" content="Importance sampling (IS) allows one to approximate leave one out (LOO) cross-validation for a Bayesian model, without refitting, by inverting the Bayesian update equation to subtract a given data point from a model posterior. For each data point, one computes expectations under the corresponding LOO posterior by weighted averaging over the full data posterior. This task sometimes requires weight stabilization in the form of adapting the posterior distribution via transformation. So long as one is successful in finding a suitable transformation, one avoids refitting. To this end, we motivate the use of bijective perturbative transformations of the form $T(\boldsymbol{\theta})=\boldsymbol{\theta} + h Q(\boldsymbol{\theta}),$ for $0&lt;h\ll 1,$ and introduce two classes of such transformations: 1) partial moment matching and 2) gradient flow evolution. The former extends prior literature on moment-matching under the recognition that adaptation for LOO is a small perturbation on the full data posterior. The latter class of methods define transformations based on relaxing various statistical objectives: in our case the variance of the IS estimator and the KL divergence between the transformed distribution and the statistics of the LOO fold. Being model-specific, the gradient flow transformations require evaluating Jacobian determinants. While these quantities are generally readily available through auto-differentiation, we derive closed-form expressions in the case of logistic regression and shallow ReLU activated neural networks. We tested the methodology on an $n\ll p$ dataset that is known to produce unstable LOO IS weights." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/03/PerturbativepartialmomentmatchingandgradientflowadaptiveimportancesamplingtransformationsforBayesianleaveoneoutcrossvalidation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/03/PerturbativepartialmomentmatchingandgradientflowadaptiveimportancesamplingtransformationsforBayesianleaveoneoutcrossvalidation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Perturbative partial moment matching and gradient-flow adaptive importance sampling transformations for Bayesian leave one out cross-validation" />
+<script type="application/ld+json">
+{"description":"Importance sampling (IS) allows one to approximate leave one out (LOO) cross-validation for a Bayesian model, without refitting, by inverting the Bayesian update equation to subtract a given data point from a model posterior. For each data point, one computes expectations under the corresponding LOO posterior by weighted averaging over the full data posterior. This task sometimes requires weight stabilization in the form of adapting the posterior distribution via transformation. So long as one is successful in finding a suitable transformation, one avoids refitting. To this end, we motivate the use of bijective perturbative transformations of the form $T(\\boldsymbol{\\theta})=\\boldsymbol{\\theta} + h Q(\\boldsymbol{\\theta}),$ for $0&lt;h\\ll 1,$ and introduce two classes of such transformations: 1) partial moment matching and 2) gradient flow evolution. The former extends prior literature on moment-matching under the recognition that adaptation for LOO is a small perturbation on the full data posterior. The latter class of methods define transformations based on relaxing various statistical objectives: in our case the variance of the IS estimator and the KL divergence between the transformed distribution and the statistics of the LOO fold. Being model-specific, the gradient flow transformations require evaluating Jacobian determinants. While these quantities are generally readily available through auto-differentiation, we derive closed-form expressions in the case of logistic regression and shallow ReLU activated neural networks. We tested the methodology on an $n\\ll p$ dataset that is known to produce unstable LOO IS weights.","headline":"Perturbative partial moment matching and gradient-flow adaptive importance sampling transformations for Bayesian leave one out cross-validation","dateModified":"2025-06-03T00:00:00+00:00","datePublished":"2025-06-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/03/PerturbativepartialmomentmatchingandgradientflowadaptiveimportancesamplingtransformationsforBayesianleaveoneoutcrossvalidation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/03/PerturbativepartialmomentmatchingandgradientflowadaptiveimportancesamplingtransformationsforBayesianleaveoneoutcrossvalidation.html","author":{"@type":"Person","name":"Joshua C Chang, Xiangting Li, Shixin Xu, Hao-Ren Yao, Julia Porcino, Carson Chow"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-03 00:00:00 +0000">06-03</time>
+  </p>
+  
+  <h1>Perturbative partial moment matching and gradient-flow adaptive importance sampling transformations for Bayesian leave one out cross-validation</h1>
+  <br>Joshua C Chang, Xiangting Li, Shixin Xu, Hao-Ren Yao, Julia Porcino, Carson Chow</h3>
+  <br> [stat.ME,stat.TH]
+
+  <p>Importance sampling (IS) allows one to approximate leave one out (LOO) cross-validation for a Bayesian model, without refitting, by inverting the Bayesian update equation to subtract a given data point from a model posterior. For each data point, one computes expectations under the corresponding LOO posterior by weighted averaging over the full data posterior. This task sometimes requires weight stabilization in the form of adapting the posterior distribution via transformation. So long as one is successful in finding a suitable transformation, one avoids refitting. To this end, we motivate the use of bijective perturbative transformations of the form $T(\boldsymbol{\theta})=\boldsymbol{\theta} + h Q(\boldsymbol{\theta}),$ for $0&lt;h\ll 1,$ and introduce two classes of such transformations: 1) partial moment matching and 2) gradient flow evolution. The former extends prior literature on moment-matching under the recognition that adaptation for LOO is a small perturbation on the full data posterior. The latter class of methods define transformations based on relaxing various statistical objectives: in our case the variance of the IS estimator and the KL divergence between the transformed distribution and the statistics of the LOO fold. Being model-specific, the gradient flow transformations require evaluating Jacobian determinants. While these quantities are generally readily available through auto-differentiation, we derive closed-form expressions in the case of logistic regression and shallow ReLU activated neural networks. We tested the methodology on an $n\ll p$ dataset that is known to produce unstable LOO IS weights.</p>
+
+<p><a href="https://arxiv.org/abs/2402.08151">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
