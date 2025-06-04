@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the Need to Align Intent and Implementation in Uncertainty Quantification for Machine Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On the Need to Align Intent and Implementation in Uncertainty Quantification for Machine Learning" />
+<meta name="author" content="Shubhendu Trivedi, Brian D. Nord" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Quantifying uncertainties for machine learning (ML) models is a foundational challenge in modern data analysis. This challenge is compounded by at least two key aspects of the field: (a) inconsistent terminology surrounding uncertainty and estimation across disciplines, and (b) the varying technical requirements for establishing trustworthy uncertainties in diverse problem contexts. In this position paper, we aim to clarify the depth of these challenges by identifying these inconsistencies and articulating how different contexts impose distinct epistemic demands. We examine the current landscape of estimation targets (e.g., prediction, inference, simulation-based inference), uncertainty constructs (e.g., frequentist, Bayesian, fiducial), and the approaches used to map between them. Drawing on the literature, we highlight and explain examples of problematic mappings. To help address these issues, we advocate for standards that promote alignment between the \textit{intent} and \textit{implementation} of uncertainty quantification (UQ) approaches. We discuss several axes of trustworthiness that are necessary (if not sufficient) for reliable UQ in ML models, and show how these axes can inform the design and evaluation of uncertainty-aware ML systems. Our practical recommendations focus on scientific ML, offering illustrative cases and use scenarios, particularly in the context of simulation-based inference (SBI)." />
+<meta property="og:description" content="Quantifying uncertainties for machine learning (ML) models is a foundational challenge in modern data analysis. This challenge is compounded by at least two key aspects of the field: (a) inconsistent terminology surrounding uncertainty and estimation across disciplines, and (b) the varying technical requirements for establishing trustworthy uncertainties in diverse problem contexts. In this position paper, we aim to clarify the depth of these challenges by identifying these inconsistencies and articulating how different contexts impose distinct epistemic demands. We examine the current landscape of estimation targets (e.g., prediction, inference, simulation-based inference), uncertainty constructs (e.g., frequentist, Bayesian, fiducial), and the approaches used to map between them. Drawing on the literature, we highlight and explain examples of problematic mappings. To help address these issues, we advocate for standards that promote alignment between the \textit{intent} and \textit{implementation} of uncertainty quantification (UQ) approaches. We discuss several axes of trustworthiness that are necessary (if not sufficient) for reliable UQ in ML models, and show how these axes can inform the design and evaluation of uncertainty-aware ML systems. Our practical recommendations focus on scientific ML, offering illustrative cases and use scenarios, particularly in the context of simulation-based inference (SBI)." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/04/OntheNeedtoAlignIntentandImplementationinUncertaintyQuantificationforMachineLearning.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/04/OntheNeedtoAlignIntentandImplementationinUncertaintyQuantificationforMachineLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On the Need to Align Intent and Implementation in Uncertainty Quantification for Machine Learning" />
+<script type="application/ld+json">
+{"description":"Quantifying uncertainties for machine learning (ML) models is a foundational challenge in modern data analysis. This challenge is compounded by at least two key aspects of the field: (a) inconsistent terminology surrounding uncertainty and estimation across disciplines, and (b) the varying technical requirements for establishing trustworthy uncertainties in diverse problem contexts. In this position paper, we aim to clarify the depth of these challenges by identifying these inconsistencies and articulating how different contexts impose distinct epistemic demands. We examine the current landscape of estimation targets (e.g., prediction, inference, simulation-based inference), uncertainty constructs (e.g., frequentist, Bayesian, fiducial), and the approaches used to map between them. Drawing on the literature, we highlight and explain examples of problematic mappings. To help address these issues, we advocate for standards that promote alignment between the \\textit{intent} and \\textit{implementation} of uncertainty quantification (UQ) approaches. We discuss several axes of trustworthiness that are necessary (if not sufficient) for reliable UQ in ML models, and show how these axes can inform the design and evaluation of uncertainty-aware ML systems. Our practical recommendations focus on scientific ML, offering illustrative cases and use scenarios, particularly in the context of simulation-based inference (SBI).","headline":"On the Need to Align Intent and Implementation in Uncertainty Quantification for Machine Learning","dateModified":"2025-06-04T00:00:00+00:00","datePublished":"2025-06-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/04/OntheNeedtoAlignIntentandImplementationinUncertaintyQuantificationforMachineLearning.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/04/OntheNeedtoAlignIntentandImplementationinUncertaintyQuantificationforMachineLearning.html","author":{"@type":"Person","name":"Shubhendu Trivedi, Brian D. Nord"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-04 00:00:00 +0000">06-04</time>
+  </p>
+  
+  <h1>On the Need to Align Intent and Implementation in Uncertainty Quantification for Machine Learning</h1>
+  <br>Shubhendu Trivedi, Brian D. Nord</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Quantifying uncertainties for machine learning (ML) models is a foundational challenge in modern data analysis. This challenge is compounded by at least two key aspects of the field: (a) inconsistent terminology surrounding uncertainty and estimation across disciplines, and (b) the varying technical requirements for establishing trustworthy uncertainties in diverse problem contexts. In this position paper, we aim to clarify the depth of these challenges by identifying these inconsistencies and articulating how different contexts impose distinct epistemic demands. We examine the current landscape of estimation targets (e.g., prediction, inference, simulation-based inference), uncertainty constructs (e.g., frequentist, Bayesian, fiducial), and the approaches used to map between them. Drawing on the literature, we highlight and explain examples of problematic mappings. To help address these issues, we advocate for standards that promote alignment between the \textit{intent} and \textit{implementation} of uncertainty quantification (UQ) approaches. We discuss several axes of trustworthiness that are necessary (if not sufficient) for reliable UQ in ML models, and show how these axes can inform the design and evaluation of uncertainty-aware ML systems. Our practical recommendations focus on scientific ML, offering illustrative cases and use scenarios, particularly in the context of simulation-based inference (SBI).</p>
+
+<p><a href="https://arxiv.org/abs/2506.03037">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
