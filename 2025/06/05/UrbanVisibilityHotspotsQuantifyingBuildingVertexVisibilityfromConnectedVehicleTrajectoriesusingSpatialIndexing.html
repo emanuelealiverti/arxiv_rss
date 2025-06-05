@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Urban Visibility Hotspots: Quantifying Building Vertex Visibility from Connected Vehicle Trajectories using Spatial Indexing</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Urban Visibility Hotspots: Quantifying Building Vertex Visibility from Connected Vehicle Trajectories using Spatial Indexing" />
+<meta name="author" content="Artur Grigorev, Adriana-Simona Mihaita" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Effective placement of Out-of-Home advertising and street furniture requires accurate identification of locations offering maximum visual exposure to target audiences, particularly vehicular traffic. Traditional site selection methods often rely on static traffic counts or subjective assessments. This research introduces a data-driven methodology to objectively quantify location visibility by analyzing large-scale connected vehicle trajectory data (sourced from Compass IoT) within urban environments. We model the dynamic driver field-of-view using a forward-projected visibility area for each vehicle position derived from interpolated trajectories. By integrating this with building vertex locations extracted from OpenStreetMap, we quantify the cumulative visual exposure, or visibility count&#39;&#39;, for thousands of potential points of interest near roadways. The analysis reveals that visibility is highly concentrated, identifying specificvisual hotspots’’ that receive disproportionately high exposure compared to average locations. The core technical contribution involves the construction of a BallTree spatial index over building vertices. This enables highly efficient (O(logN) complexity) radius queries to determine which vertices fall within the viewing circles of millions of trajectory points across numerous trips, significantly outperforming brute-force geometric checks. Analysis reveals two key findings: 1) Visibility is highly concentrated, identifying distinct ‘visual hotspots’ receiving disproportionately high exposure compared to average locations. 2) The aggregated visibility counts across vertices conform to a Log-Normal distribution." />
+<meta property="og:description" content="Effective placement of Out-of-Home advertising and street furniture requires accurate identification of locations offering maximum visual exposure to target audiences, particularly vehicular traffic. Traditional site selection methods often rely on static traffic counts or subjective assessments. This research introduces a data-driven methodology to objectively quantify location visibility by analyzing large-scale connected vehicle trajectory data (sourced from Compass IoT) within urban environments. We model the dynamic driver field-of-view using a forward-projected visibility area for each vehicle position derived from interpolated trajectories. By integrating this with building vertex locations extracted from OpenStreetMap, we quantify the cumulative visual exposure, or visibility count&#39;&#39;, for thousands of potential points of interest near roadways. The analysis reveals that visibility is highly concentrated, identifying specificvisual hotspots’’ that receive disproportionately high exposure compared to average locations. The core technical contribution involves the construction of a BallTree spatial index over building vertices. This enables highly efficient (O(logN) complexity) radius queries to determine which vertices fall within the viewing circles of millions of trajectory points across numerous trips, significantly outperforming brute-force geometric checks. Analysis reveals two key findings: 1) Visibility is highly concentrated, identifying distinct ‘visual hotspots’ receiving disproportionately high exposure compared to average locations. 2) The aggregated visibility counts across vertices conform to a Log-Normal distribution." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/05/UrbanVisibilityHotspotsQuantifyingBuildingVertexVisibilityfromConnectedVehicleTrajectoriesusingSpatialIndexing.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/05/UrbanVisibilityHotspotsQuantifyingBuildingVertexVisibilityfromConnectedVehicleTrajectoriesusingSpatialIndexing.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Urban Visibility Hotspots: Quantifying Building Vertex Visibility from Connected Vehicle Trajectories using Spatial Indexing" />
+<script type="application/ld+json">
+{"description":"Effective placement of Out-of-Home advertising and street furniture requires accurate identification of locations offering maximum visual exposure to target audiences, particularly vehicular traffic. Traditional site selection methods often rely on static traffic counts or subjective assessments. This research introduces a data-driven methodology to objectively quantify location visibility by analyzing large-scale connected vehicle trajectory data (sourced from Compass IoT) within urban environments. We model the dynamic driver field-of-view using a forward-projected visibility area for each vehicle position derived from interpolated trajectories. By integrating this with building vertex locations extracted from OpenStreetMap, we quantify the cumulative visual exposure, or visibility count&#39;&#39;, for thousands of potential points of interest near roadways. The analysis reveals that visibility is highly concentrated, identifying specificvisual hotspots’’ that receive disproportionately high exposure compared to average locations. The core technical contribution involves the construction of a BallTree spatial index over building vertices. This enables highly efficient (O(logN) complexity) radius queries to determine which vertices fall within the viewing circles of millions of trajectory points across numerous trips, significantly outperforming brute-force geometric checks. Analysis reveals two key findings: 1) Visibility is highly concentrated, identifying distinct ‘visual hotspots’ receiving disproportionately high exposure compared to average locations. 2) The aggregated visibility counts across vertices conform to a Log-Normal distribution.","headline":"Urban Visibility Hotspots: Quantifying Building Vertex Visibility from Connected Vehicle Trajectories using Spatial Indexing","dateModified":"2025-06-05T00:00:00+00:00","datePublished":"2025-06-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/05/UrbanVisibilityHotspotsQuantifyingBuildingVertexVisibilityfromConnectedVehicleTrajectoriesusingSpatialIndexing.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/05/UrbanVisibilityHotspotsQuantifyingBuildingVertexVisibilityfromConnectedVehicleTrajectoriesusingSpatialIndexing.html","author":{"@type":"Person","name":"Artur Grigorev, Adriana-Simona Mihaita"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-05 00:00:00 +0000">06-05</time>
+  </p>
+  
+  <h1>Urban Visibility Hotspots: Quantifying Building Vertex Visibility from Connected Vehicle Trajectories using Spatial Indexing</h1>
+  <br>Artur Grigorev, Adriana-Simona Mihaita</h3>
+  <br> [stat.CO]
+
+  <p>Effective placement of Out-of-Home advertising and street furniture requires accurate identification of locations offering maximum visual exposure to target audiences, particularly vehicular traffic. Traditional site selection methods often rely on static traffic counts or subjective assessments. This research introduces a data-driven methodology to objectively quantify location visibility by analyzing large-scale connected vehicle trajectory data (sourced from Compass IoT) within urban environments. We model the dynamic driver field-of-view using a forward-projected visibility area for each vehicle position derived from interpolated trajectories. By integrating this with building vertex locations extracted from OpenStreetMap, we quantify the cumulative visual exposure, or <code class="language-plaintext highlighter-rouge">visibility count'', for thousands of potential points of interest near roadways. The analysis reveals that visibility is highly concentrated, identifying specific</code>visual hotspots’’ that receive disproportionately high exposure compared to average locations. The core technical contribution involves the construction of a BallTree spatial index over building vertices. This enables highly efficient (O(logN) complexity) radius queries to determine which vertices fall within the viewing circles of millions of trajectory points across numerous trips, significantly outperforming brute-force geometric checks. Analysis reveals two key findings: 1) Visibility is highly concentrated, identifying distinct ‘visual hotspots’ receiving disproportionately high exposure compared to average locations. 2) The aggregated visibility counts across vertices conform to a Log-Normal distribution.</p>
+
+<p><a href="https://arxiv.org/abs/2506.03365">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
