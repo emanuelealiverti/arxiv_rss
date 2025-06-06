@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Gibbs Sampling in Cox Regression Models Using Composite Partial Likelihood and Pólya-Gamma Augmentation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Gibbs Sampling in Cox Regression Models Using Composite Partial Likelihood and Pólya-Gamma Augmentation" />
+<meta name="author" content="Shu Tamano, Yui Tomo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Cox regression model and its Bayesian extensions are widely used in survival analysis. However, standard Bayesian approaches require modeling of the baseline hazard, and their full conditional distributions lack closed-form expressions. Therefore, the Metropolis-Hastings sampling algorithm is typically employed, whose efficiency is highly sensitive to the choice of proposal distribution. To address these issues, we propose the GS4Cox, an efficient Gibbs sampling algorithm for the Cox regression model based on four key components: (i) general Bayesian framework, (ii) composite partial likelihood, (iii) P&#39;olya-Gamma augmentation scheme, and (iv) finite corrections. Our experiments on both synthetic and actual datasets demonstrate that the GS4Cox algorithm outperforms existing sampling methods in terms of convergence speed and sampling efficiency." />
+<meta property="og:description" content="The Cox regression model and its Bayesian extensions are widely used in survival analysis. However, standard Bayesian approaches require modeling of the baseline hazard, and their full conditional distributions lack closed-form expressions. Therefore, the Metropolis-Hastings sampling algorithm is typically employed, whose efficiency is highly sensitive to the choice of proposal distribution. To address these issues, we propose the GS4Cox, an efficient Gibbs sampling algorithm for the Cox regression model based on four key components: (i) general Bayesian framework, (ii) composite partial likelihood, (iii) P&#39;olya-Gamma augmentation scheme, and (iv) finite corrections. Our experiments on both synthetic and actual datasets demonstrate that the GS4Cox algorithm outperforms existing sampling methods in terms of convergence speed and sampling efficiency." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/06/EfficientGibbsSamplinginCoxRegressionModelsUsingCompositePartialLikelihoodandP%C3%B3lyaGammaAugmentation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/06/EfficientGibbsSamplinginCoxRegressionModelsUsingCompositePartialLikelihoodandP%C3%B3lyaGammaAugmentation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Gibbs Sampling in Cox Regression Models Using Composite Partial Likelihood and Pólya-Gamma Augmentation" />
+<script type="application/ld+json">
+{"description":"The Cox regression model and its Bayesian extensions are widely used in survival analysis. However, standard Bayesian approaches require modeling of the baseline hazard, and their full conditional distributions lack closed-form expressions. Therefore, the Metropolis-Hastings sampling algorithm is typically employed, whose efficiency is highly sensitive to the choice of proposal distribution. To address these issues, we propose the GS4Cox, an efficient Gibbs sampling algorithm for the Cox regression model based on four key components: (i) general Bayesian framework, (ii) composite partial likelihood, (iii) P&#39;olya-Gamma augmentation scheme, and (iv) finite corrections. Our experiments on both synthetic and actual datasets demonstrate that the GS4Cox algorithm outperforms existing sampling methods in terms of convergence speed and sampling efficiency.","headline":"Efficient Gibbs Sampling in Cox Regression Models Using Composite Partial Likelihood and Pólya-Gamma Augmentation","dateModified":"2025-06-06T00:00:00+00:00","datePublished":"2025-06-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/06/EfficientGibbsSamplinginCoxRegressionModelsUsingCompositePartialLikelihoodandP%C3%B3lyaGammaAugmentation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/06/EfficientGibbsSamplinginCoxRegressionModelsUsingCompositePartialLikelihoodandP%C3%B3lyaGammaAugmentation.html","author":{"@type":"Person","name":"Shu Tamano, Yui Tomo"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-06 00:00:00 +0000">06-06</time>
+  </p>
+  
+  <h1>Efficient Gibbs Sampling in Cox Regression Models Using Composite Partial Likelihood and Pólya-Gamma Augmentation</h1>
+  <br>Shu Tamano, Yui Tomo</h3>
+  <br> [stat.ME]
+
+  <p>The Cox regression model and its Bayesian extensions are widely used in survival analysis. However, standard Bayesian approaches require modeling of the baseline hazard, and their full conditional distributions lack closed-form expressions. Therefore, the Metropolis-Hastings sampling algorithm is typically employed, whose efficiency is highly sensitive to the choice of proposal distribution. To address these issues, we propose the GS4Cox, an efficient Gibbs sampling algorithm for the Cox regression model based on four key components: (i) general Bayesian framework, (ii) composite partial likelihood, (iii) P'olya-Gamma augmentation scheme, and (iv) finite corrections. Our experiments on both synthetic and actual datasets demonstrate that the GS4Cox algorithm outperforms existing sampling methods in terms of convergence speed and sampling efficiency.</p>
+
+<p><a href="https://arxiv.org/abs/2506.04675">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
