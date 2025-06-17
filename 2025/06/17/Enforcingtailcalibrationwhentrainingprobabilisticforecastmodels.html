@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Enforcing tail calibration when training probabilistic forecast models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Enforcing tail calibration when training probabilistic forecast models" />
+<meta name="author" content="Jakob Benjamin Wessel, Maybritt Schillinger, Frank Kwasniok, Sam Allen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Probabilistic forecasts are typically obtained using state-of-the-art statistical and machine learning models, with model parameters estimated by optimizing a proper scoring rule over a set of training data. If the model class is not correctly specified, then the learned model will not necessarily issue forecasts that are calibrated. Calibrated forecasts allow users to appropriately balance risks in decision making, and it is particularly important that forecast models issue calibrated predictions for extreme events, since such outcomes often generate large socio-economic impacts. In this work, we study how the loss function used to train probabilistic forecast models can be adapted to improve the reliability of forecasts made for extreme events. We investigate loss functions based on weighted scoring rules, and additionally propose regularizing loss functions using a measure of tail miscalibration. We apply these approaches to a hierarchy of increasingly flexible forecast models for UK wind speeds, including simple parametric models, distributional regression networks, and conditional generative models. We demonstrate that state-of-the-art models do not issue calibrated forecasts for extreme wind speeds, and that the calibration of forecasts for extreme events can be improved by suitable adaptations to the loss function during model training. This, however, introduces a trade-off between calibrated forecasts for extreme events and calibrated forecasts for more common outcomes." />
+<meta property="og:description" content="Probabilistic forecasts are typically obtained using state-of-the-art statistical and machine learning models, with model parameters estimated by optimizing a proper scoring rule over a set of training data. If the model class is not correctly specified, then the learned model will not necessarily issue forecasts that are calibrated. Calibrated forecasts allow users to appropriately balance risks in decision making, and it is particularly important that forecast models issue calibrated predictions for extreme events, since such outcomes often generate large socio-economic impacts. In this work, we study how the loss function used to train probabilistic forecast models can be adapted to improve the reliability of forecasts made for extreme events. We investigate loss functions based on weighted scoring rules, and additionally propose regularizing loss functions using a measure of tail miscalibration. We apply these approaches to a hierarchy of increasingly flexible forecast models for UK wind speeds, including simple parametric models, distributional regression networks, and conditional generative models. We demonstrate that state-of-the-art models do not issue calibrated forecasts for extreme wind speeds, and that the calibration of forecasts for extreme events can be improved by suitable adaptations to the loss function during model training. This, however, introduces a trade-off between calibrated forecasts for extreme events and calibrated forecasts for more common outcomes." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/17/Enforcingtailcalibrationwhentrainingprobabilisticforecastmodels.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/17/Enforcingtailcalibrationwhentrainingprobabilisticforecastmodels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Enforcing tail calibration when training probabilistic forecast models" />
+<script type="application/ld+json">
+{"description":"Probabilistic forecasts are typically obtained using state-of-the-art statistical and machine learning models, with model parameters estimated by optimizing a proper scoring rule over a set of training data. If the model class is not correctly specified, then the learned model will not necessarily issue forecasts that are calibrated. Calibrated forecasts allow users to appropriately balance risks in decision making, and it is particularly important that forecast models issue calibrated predictions for extreme events, since such outcomes often generate large socio-economic impacts. In this work, we study how the loss function used to train probabilistic forecast models can be adapted to improve the reliability of forecasts made for extreme events. We investigate loss functions based on weighted scoring rules, and additionally propose regularizing loss functions using a measure of tail miscalibration. We apply these approaches to a hierarchy of increasingly flexible forecast models for UK wind speeds, including simple parametric models, distributional regression networks, and conditional generative models. We demonstrate that state-of-the-art models do not issue calibrated forecasts for extreme wind speeds, and that the calibration of forecasts for extreme events can be improved by suitable adaptations to the loss function during model training. This, however, introduces a trade-off between calibrated forecasts for extreme events and calibrated forecasts for more common outcomes.","headline":"Enforcing tail calibration when training probabilistic forecast models","dateModified":"2025-06-17T00:00:00+00:00","datePublished":"2025-06-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/17/Enforcingtailcalibrationwhentrainingprobabilisticforecastmodels.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/17/Enforcingtailcalibrationwhentrainingprobabilisticforecastmodels.html","author":{"@type":"Person","name":"Jakob Benjamin Wessel, Maybritt Schillinger, Frank Kwasniok, Sam Allen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-17 00:00:00 +0000">06-17</time>
+  </p>
+  
+  <h1>Enforcing tail calibration when training probabilistic forecast models</h1>
+  <br>Jakob Benjamin Wessel, Maybritt Schillinger, Frank Kwasniok, Sam Allen</h3>
+  <br> [stat.AP,stat.ML]
+
+  <p>Probabilistic forecasts are typically obtained using state-of-the-art statistical and machine learning models, with model parameters estimated by optimizing a proper scoring rule over a set of training data. If the model class is not correctly specified, then the learned model will not necessarily issue forecasts that are calibrated. Calibrated forecasts allow users to appropriately balance risks in decision making, and it is particularly important that forecast models issue calibrated predictions for extreme events, since such outcomes often generate large socio-economic impacts. In this work, we study how the loss function used to train probabilistic forecast models can be adapted to improve the reliability of forecasts made for extreme events. We investigate loss functions based on weighted scoring rules, and additionally propose regularizing loss functions using a measure of tail miscalibration. We apply these approaches to a hierarchy of increasingly flexible forecast models for UK wind speeds, including simple parametric models, distributional regression networks, and conditional generative models. We demonstrate that state-of-the-art models do not issue calibrated forecasts for extreme wind speeds, and that the calibration of forecasts for extreme events can be improved by suitable adaptations to the loss function during model training. This, however, introduces a trade-off between calibrated forecasts for extreme events and calibrated forecasts for more common outcomes.</p>
+
+<p><a href="https://arxiv.org/abs/2506.13687">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

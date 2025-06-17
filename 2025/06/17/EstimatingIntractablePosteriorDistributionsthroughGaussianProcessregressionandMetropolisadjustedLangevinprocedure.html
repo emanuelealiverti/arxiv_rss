@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Estimating Intractable Posterior Distributions through Gaussian Process regression and Metropolis-adjusted Langevin procedure</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Estimating Intractable Posterior Distributions through Gaussian Process regression and Metropolis-adjusted Langevin procedure" />
+<meta name="author" content="Guillaume Perrin, Romain Jorge Do Marco, Christian Soize, Christine Funfschilling" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Numerical simulations are crucial for modeling complex systems, but calibrating them becomes challenging when data are noisy or incomplete and likelihood evaluations are computationally expensive. Bayesian calibration offers an interesting way to handle uncertainty, yet computing the posterior distribution remains a major challenge under such conditions. To address this, we propose a sequential surrogate-based approach that incrementally improves the approximation of the log-likelihood using Gaussian Process Regression. Starting from limited evaluations, the surrogate and its gradient are refined step by step. At each iteration, new evaluations of the expensive likelihood are added only at informative locations, that is to say where the surrogate is most uncertain and where the potential impact on the posterior is greatest. The surrogate is then coupled with the Metropolis-Adjusted Langevin Algorithm, which uses gradient information to efficiently explore the posterior. This approach accelerates convergence, handles relatively high-dimensional settings, and keeps computational costs low. We demonstrate its effectiveness on both a synthetic benchmark and an industrial application involving the calibration of high-speed train parameters from incomplete sensor data." />
+<meta property="og:description" content="Numerical simulations are crucial for modeling complex systems, but calibrating them becomes challenging when data are noisy or incomplete and likelihood evaluations are computationally expensive. Bayesian calibration offers an interesting way to handle uncertainty, yet computing the posterior distribution remains a major challenge under such conditions. To address this, we propose a sequential surrogate-based approach that incrementally improves the approximation of the log-likelihood using Gaussian Process Regression. Starting from limited evaluations, the surrogate and its gradient are refined step by step. At each iteration, new evaluations of the expensive likelihood are added only at informative locations, that is to say where the surrogate is most uncertain and where the potential impact on the posterior is greatest. The surrogate is then coupled with the Metropolis-Adjusted Langevin Algorithm, which uses gradient information to efficiently explore the posterior. This approach accelerates convergence, handles relatively high-dimensional settings, and keeps computational costs low. We demonstrate its effectiveness on both a synthetic benchmark and an industrial application involving the calibration of high-speed train parameters from incomplete sensor data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/17/EstimatingIntractablePosteriorDistributionsthroughGaussianProcessregressionandMetropolisadjustedLangevinprocedure.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/17/EstimatingIntractablePosteriorDistributionsthroughGaussianProcessregressionandMetropolisadjustedLangevinprocedure.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Estimating Intractable Posterior Distributions through Gaussian Process regression and Metropolis-adjusted Langevin procedure" />
+<script type="application/ld+json">
+{"description":"Numerical simulations are crucial for modeling complex systems, but calibrating them becomes challenging when data are noisy or incomplete and likelihood evaluations are computationally expensive. Bayesian calibration offers an interesting way to handle uncertainty, yet computing the posterior distribution remains a major challenge under such conditions. To address this, we propose a sequential surrogate-based approach that incrementally improves the approximation of the log-likelihood using Gaussian Process Regression. Starting from limited evaluations, the surrogate and its gradient are refined step by step. At each iteration, new evaluations of the expensive likelihood are added only at informative locations, that is to say where the surrogate is most uncertain and where the potential impact on the posterior is greatest. The surrogate is then coupled with the Metropolis-Adjusted Langevin Algorithm, which uses gradient information to efficiently explore the posterior. This approach accelerates convergence, handles relatively high-dimensional settings, and keeps computational costs low. We demonstrate its effectiveness on both a synthetic benchmark and an industrial application involving the calibration of high-speed train parameters from incomplete sensor data.","headline":"Estimating Intractable Posterior Distributions through Gaussian Process regression and Metropolis-adjusted Langevin procedure","dateModified":"2025-06-17T00:00:00+00:00","datePublished":"2025-06-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/17/EstimatingIntractablePosteriorDistributionsthroughGaussianProcessregressionandMetropolisadjustedLangevinprocedure.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/17/EstimatingIntractablePosteriorDistributionsthroughGaussianProcessregressionandMetropolisadjustedLangevinprocedure.html","author":{"@type":"Person","name":"Guillaume Perrin, Romain Jorge Do Marco, Christian Soize, Christine Funfschilling"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-17 00:00:00 +0000">06-17</time>
+  </p>
+  
+  <h1>Estimating Intractable Posterior Distributions through Gaussian Process regression and Metropolis-adjusted Langevin procedure</h1>
+  <br>Guillaume Perrin, Romain Jorge Do Marco, Christian Soize, Christine Funfschilling</h3>
+  <br> [stat.ME]
+
+  <p>Numerical simulations are crucial for modeling complex systems, but calibrating them becomes challenging when data are noisy or incomplete and likelihood evaluations are computationally expensive. Bayesian calibration offers an interesting way to handle uncertainty, yet computing the posterior distribution remains a major challenge under such conditions. To address this, we propose a sequential surrogate-based approach that incrementally improves the approximation of the log-likelihood using Gaussian Process Regression. Starting from limited evaluations, the surrogate and its gradient are refined step by step. At each iteration, new evaluations of the expensive likelihood are added only at informative locations, that is to say where the surrogate is most uncertain and where the potential impact on the posterior is greatest. The surrogate is then coupled with the Metropolis-Adjusted Langevin Algorithm, which uses gradient information to efficiently explore the posterior. This approach accelerates convergence, handles relatively high-dimensional settings, and keeps computational costs low. We demonstrate its effectiveness on both a synthetic benchmark and an industrial application involving the calibration of high-speed train parameters from incomplete sensor data.</p>
+
+<p><a href="https://arxiv.org/abs/2506.13336">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
