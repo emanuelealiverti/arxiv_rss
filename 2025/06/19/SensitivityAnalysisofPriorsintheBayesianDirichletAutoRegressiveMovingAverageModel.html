@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sensitivity Analysis of Priors in the Bayesian Dirichlet Auto-Regressive Moving Average Model</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sensitivity Analysis of Priors in the Bayesian Dirichlet Auto-Regressive Moving Average Model" />
+<meta name="author" content="Harrison Katz, Liz Medina, Robert E. Weiss" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Prior choice can strongly influence Bayesian Dirichlet ARMA (B-DARMA) inference for compositional time-series. Using simulations with (i) correct lag order, (ii) overfitting, and (iii) underfitting, we assess five priors: weakly-informative, horseshoe, Laplace, mixture-of-normals, and hierarchical. With the true lag order, all priors achieve comparable RMSE, though horseshoe and hierarchical slightly reduce bias. Under overfitting, aggressive shrinkage-especially the horseshoe-suppresses noise and improves forecasts, yet no prior rescues a model that omits essential VAR or VMA terms. We then fit B-DARMA to daily SP 500 sector weights using an intentionally large lag structure. Shrinkage priors curb spurious dynamics, whereas weakly-informative priors magnify errors in volatile sectors. Two lessons emerge: (1) match shrinkage strength to the degree of overparameterization, and (2) prioritize correct lag selection, because no prior repairs structural misspecification. These insights guide prior selection and model complexity management in high-dimensional compositional time-series applications." />
+<meta property="og:description" content="Prior choice can strongly influence Bayesian Dirichlet ARMA (B-DARMA) inference for compositional time-series. Using simulations with (i) correct lag order, (ii) overfitting, and (iii) underfitting, we assess five priors: weakly-informative, horseshoe, Laplace, mixture-of-normals, and hierarchical. With the true lag order, all priors achieve comparable RMSE, though horseshoe and hierarchical slightly reduce bias. Under overfitting, aggressive shrinkage-especially the horseshoe-suppresses noise and improves forecasts, yet no prior rescues a model that omits essential VAR or VMA terms. We then fit B-DARMA to daily SP 500 sector weights using an intentionally large lag structure. Shrinkage priors curb spurious dynamics, whereas weakly-informative priors magnify errors in volatile sectors. Two lessons emerge: (1) match shrinkage strength to the degree of overparameterization, and (2) prioritize correct lag selection, because no prior repairs structural misspecification. These insights guide prior selection and model complexity management in high-dimensional compositional time-series applications." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/19/SensitivityAnalysisofPriorsintheBayesianDirichletAutoRegressiveMovingAverageModel.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/19/SensitivityAnalysisofPriorsintheBayesianDirichletAutoRegressiveMovingAverageModel.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sensitivity Analysis of Priors in the Bayesian Dirichlet Auto-Regressive Moving Average Model" />
+<script type="application/ld+json">
+{"description":"Prior choice can strongly influence Bayesian Dirichlet ARMA (B-DARMA) inference for compositional time-series. Using simulations with (i) correct lag order, (ii) overfitting, and (iii) underfitting, we assess five priors: weakly-informative, horseshoe, Laplace, mixture-of-normals, and hierarchical. With the true lag order, all priors achieve comparable RMSE, though horseshoe and hierarchical slightly reduce bias. Under overfitting, aggressive shrinkage-especially the horseshoe-suppresses noise and improves forecasts, yet no prior rescues a model that omits essential VAR or VMA terms. We then fit B-DARMA to daily SP 500 sector weights using an intentionally large lag structure. Shrinkage priors curb spurious dynamics, whereas weakly-informative priors magnify errors in volatile sectors. Two lessons emerge: (1) match shrinkage strength to the degree of overparameterization, and (2) prioritize correct lag selection, because no prior repairs structural misspecification. These insights guide prior selection and model complexity management in high-dimensional compositional time-series applications.","headline":"Sensitivity Analysis of Priors in the Bayesian Dirichlet Auto-Regressive Moving Average Model","dateModified":"2025-06-19T00:00:00+00:00","datePublished":"2025-06-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/19/SensitivityAnalysisofPriorsintheBayesianDirichletAutoRegressiveMovingAverageModel.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/19/SensitivityAnalysisofPriorsintheBayesianDirichletAutoRegressiveMovingAverageModel.html","author":{"@type":"Person","name":"Harrison Katz, Liz Medina, Robert E. Weiss"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-19 00:00:00 +0000">06-19</time>
+  </p>
+  
+  <h1>Sensitivity Analysis of Priors in the Bayesian Dirichlet Auto-Regressive Moving Average Model</h1>
+  <br>Harrison Katz, Liz Medina, Robert E. Weiss</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Prior choice can strongly influence Bayesian Dirichlet ARMA (B-DARMA) inference for compositional time-series. Using simulations with (i) correct lag order, (ii) overfitting, and (iii) underfitting, we assess five priors: weakly-informative, horseshoe, Laplace, mixture-of-normals, and hierarchical. With the true lag order, all priors achieve comparable RMSE, though horseshoe and hierarchical slightly reduce bias. Under overfitting, aggressive shrinkage-especially the horseshoe-suppresses noise and improves forecasts, yet no prior rescues a model that omits essential VAR or VMA terms.
+  We then fit B-DARMA to daily SP 500 sector weights using an intentionally large lag structure. Shrinkage priors curb spurious dynamics, whereas weakly-informative priors magnify errors in volatile sectors. Two lessons emerge: (1) match shrinkage strength to the degree of overparameterization, and (2) prioritize correct lag selection, because no prior repairs structural misspecification. These insights guide prior selection and model complexity management in high-dimensional compositional time-series applications.</p>
+
+<p><a href="https://arxiv.org/abs/2506.13973">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
