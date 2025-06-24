@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dependent Dirichlet processes via thinning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Dependent Dirichlet processes via thinning" />
+<meta name="author" content="Laura D'Angelo, Bernardo Nipoti, Andrea Ongaro" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When analyzing data from multiple sources, it is often convenient to strike a careful balance between two goals: capturing the heterogeneity of the samples and sharing information across them. We introduce a novel framework to model a collection of samples using dependent Dirichlet processes constructed through a thinning mechanism. The proposed approach modifies the stick-breaking representation of the Dirichlet process by thinning, that is, setting equal to zero a random subset of the beta random variables used in the original construction. This results in a collection of dependent random distributions that exhibit both shared and unique atoms, with the shared ones assigned distinct weights in each distribution. The generality of the construction allows expressing a wide variety of dependence structures among the elements of the generated random vectors. Moreover, its simplicity facilitates the characterization of several theoretical properties and the derivation of efficient computational methods for posterior inference. A simulation study illustrates how a modeling approach based on the proposed process reduces uncertainty in group-specific inferences while preventing excessive borrowing of information when the data indicate it is unnecessary. This added flexibility improves the accuracy of posterior inference, outperforming related state-of-the-art models. An application to the Collaborative Perinatal Project data highlights the model’s capability to estimate group-specific densities and uncover a meaningful partition of the observations, both within and across samples, providing valuable insights into the underlying data structure." />
+<meta property="og:description" content="When analyzing data from multiple sources, it is often convenient to strike a careful balance between two goals: capturing the heterogeneity of the samples and sharing information across them. We introduce a novel framework to model a collection of samples using dependent Dirichlet processes constructed through a thinning mechanism. The proposed approach modifies the stick-breaking representation of the Dirichlet process by thinning, that is, setting equal to zero a random subset of the beta random variables used in the original construction. This results in a collection of dependent random distributions that exhibit both shared and unique atoms, with the shared ones assigned distinct weights in each distribution. The generality of the construction allows expressing a wide variety of dependence structures among the elements of the generated random vectors. Moreover, its simplicity facilitates the characterization of several theoretical properties and the derivation of efficient computational methods for posterior inference. A simulation study illustrates how a modeling approach based on the proposed process reduces uncertainty in group-specific inferences while preventing excessive borrowing of information when the data indicate it is unnecessary. This added flexibility improves the accuracy of posterior inference, outperforming related state-of-the-art models. An application to the Collaborative Perinatal Project data highlights the model’s capability to estimate group-specific densities and uncover a meaningful partition of the observations, both within and across samples, providing valuable insights into the underlying data structure." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/24/DependentDirichletprocessesviathinning.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/24/DependentDirichletprocessesviathinning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dependent Dirichlet processes via thinning" />
+<script type="application/ld+json">
+{"description":"When analyzing data from multiple sources, it is often convenient to strike a careful balance between two goals: capturing the heterogeneity of the samples and sharing information across them. We introduce a novel framework to model a collection of samples using dependent Dirichlet processes constructed through a thinning mechanism. The proposed approach modifies the stick-breaking representation of the Dirichlet process by thinning, that is, setting equal to zero a random subset of the beta random variables used in the original construction. This results in a collection of dependent random distributions that exhibit both shared and unique atoms, with the shared ones assigned distinct weights in each distribution. The generality of the construction allows expressing a wide variety of dependence structures among the elements of the generated random vectors. Moreover, its simplicity facilitates the characterization of several theoretical properties and the derivation of efficient computational methods for posterior inference. A simulation study illustrates how a modeling approach based on the proposed process reduces uncertainty in group-specific inferences while preventing excessive borrowing of information when the data indicate it is unnecessary. This added flexibility improves the accuracy of posterior inference, outperforming related state-of-the-art models. An application to the Collaborative Perinatal Project data highlights the model’s capability to estimate group-specific densities and uncover a meaningful partition of the observations, both within and across samples, providing valuable insights into the underlying data structure.","headline":"Dependent Dirichlet processes via thinning","dateModified":"2025-06-24T00:00:00+00:00","datePublished":"2025-06-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/24/DependentDirichletprocessesviathinning.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/24/DependentDirichletprocessesviathinning.html","author":{"@type":"Person","name":"Laura D'Angelo, Bernardo Nipoti, Andrea Ongaro"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-24 00:00:00 +0000">06-24</time>
+  </p>
+  
+  <h1>Dependent Dirichlet processes via thinning</h1>
+  <br>Laura D'Angelo, Bernardo Nipoti, Andrea Ongaro</h3>
+  <br> [stat.ME]
+
+  <p>When analyzing data from multiple sources, it is often convenient to strike a careful balance between two goals: capturing the heterogeneity of the samples and sharing information across them. We introduce a novel framework to model a collection of samples using dependent Dirichlet processes constructed through a thinning mechanism. The proposed approach modifies the stick-breaking representation of the Dirichlet process by thinning, that is, setting equal to zero a random subset of the beta random variables used in the original construction. This results in a collection of dependent random distributions that exhibit both shared and unique atoms, with the shared ones assigned distinct weights in each distribution. The generality of the construction allows expressing a wide variety of dependence structures among the elements of the generated random vectors. Moreover, its simplicity facilitates the characterization of several theoretical properties and the derivation of efficient computational methods for posterior inference. A simulation study illustrates how a modeling approach based on the proposed process reduces uncertainty in group-specific inferences while preventing excessive borrowing of information when the data indicate it is unnecessary. This added flexibility improves the accuracy of posterior inference, outperforming related state-of-the-art models. An application to the Collaborative Perinatal Project data highlights the model’s capability to estimate group-specific densities and uncover a meaningful partition of the observations, both within and across samples, providing valuable insights into the underlying data structure.</p>
+
+<p><a href="https://arxiv.org/abs/2506.18223">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

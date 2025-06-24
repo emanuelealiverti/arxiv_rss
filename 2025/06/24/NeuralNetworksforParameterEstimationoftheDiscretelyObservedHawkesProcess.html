@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Neural Networks for Parameter Estimation of the Discretely Observed Hawkes Process</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Neural Networks for Parameter Estimation of the Discretely Observed Hawkes Process" />
+<meta name="author" content="Jason J. Lambe, Feng Chen, Tom Stindl, Tsz-Kit Jeffrey Kwan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When the sample path of a Hawkes process is observed discretely, such that only the total event counts in disjoint time intervals are known, the likelihood function becomes intractable. To overcome the challenge of likelihood-based inference in this setting, we propose to use a likelihood-free approach to parameter estimation, where simulated data is used to train a fully connected neural network (NN) to estimate the parameters of the Hawkes process from a summary statistic of the count data. A naive imputation estimate of the parameters forms the basis of our summary statistic, which is fast to generate and requires minimal expert knowledge to design. The resulting NN estimator is comparable to the best extant approximate likelihood estimators in terms of mean-squared error but requires significantly less computational time. We also propose to use a bootstrap procedure for bias correction and variance estimation. The proposed estimation procedure is applied to weekly count data for two infectious diseases, with a time-varying background rate used to capture seasonal fluctuations in infection risk." />
+<meta property="og:description" content="When the sample path of a Hawkes process is observed discretely, such that only the total event counts in disjoint time intervals are known, the likelihood function becomes intractable. To overcome the challenge of likelihood-based inference in this setting, we propose to use a likelihood-free approach to parameter estimation, where simulated data is used to train a fully connected neural network (NN) to estimate the parameters of the Hawkes process from a summary statistic of the count data. A naive imputation estimate of the parameters forms the basis of our summary statistic, which is fast to generate and requires minimal expert knowledge to design. The resulting NN estimator is comparable to the best extant approximate likelihood estimators in terms of mean-squared error but requires significantly less computational time. We also propose to use a bootstrap procedure for bias correction and variance estimation. The proposed estimation procedure is applied to weekly count data for two infectious diseases, with a time-varying background rate used to capture seasonal fluctuations in infection risk." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/24/NeuralNetworksforParameterEstimationoftheDiscretelyObservedHawkesProcess.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/24/NeuralNetworksforParameterEstimationoftheDiscretelyObservedHawkesProcess.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Neural Networks for Parameter Estimation of the Discretely Observed Hawkes Process" />
+<script type="application/ld+json">
+{"description":"When the sample path of a Hawkes process is observed discretely, such that only the total event counts in disjoint time intervals are known, the likelihood function becomes intractable. To overcome the challenge of likelihood-based inference in this setting, we propose to use a likelihood-free approach to parameter estimation, where simulated data is used to train a fully connected neural network (NN) to estimate the parameters of the Hawkes process from a summary statistic of the count data. A naive imputation estimate of the parameters forms the basis of our summary statistic, which is fast to generate and requires minimal expert knowledge to design. The resulting NN estimator is comparable to the best extant approximate likelihood estimators in terms of mean-squared error but requires significantly less computational time. We also propose to use a bootstrap procedure for bias correction and variance estimation. The proposed estimation procedure is applied to weekly count data for two infectious diseases, with a time-varying background rate used to capture seasonal fluctuations in infection risk.","headline":"Neural Networks for Parameter Estimation of the Discretely Observed Hawkes Process","dateModified":"2025-06-24T00:00:00+00:00","datePublished":"2025-06-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/24/NeuralNetworksforParameterEstimationoftheDiscretelyObservedHawkesProcess.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/24/NeuralNetworksforParameterEstimationoftheDiscretelyObservedHawkesProcess.html","author":{"@type":"Person","name":"Jason J. Lambe, Feng Chen, Tom Stindl, Tsz-Kit Jeffrey Kwan"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-24 00:00:00 +0000">06-24</time>
+  </p>
+  
+  <h1>Neural Networks for Parameter Estimation of the Discretely Observed Hawkes Process</h1>
+  <br>Jason J. Lambe, Feng Chen, Tom Stindl, Tsz-Kit Jeffrey Kwan</h3>
+  <br> [stat.ME]
+
+  <p>When the sample path of a Hawkes process is observed discretely, such that only the total event counts in disjoint time intervals are known, the likelihood function becomes intractable. To overcome the challenge of likelihood-based inference in this setting, we propose to use a likelihood-free approach to parameter estimation, where simulated data is used to train a fully connected neural network (NN) to estimate the parameters of the Hawkes process from a summary statistic of the count data. A naive imputation estimate of the parameters forms the basis of our summary statistic, which is fast to generate and requires minimal expert knowledge to design. The resulting NN estimator is comparable to the best extant approximate likelihood estimators in terms of mean-squared error but requires significantly less computational time. We also propose to use a bootstrap procedure for bias correction and variance estimation. The proposed estimation procedure is applied to weekly count data for two infectious diseases, with a time-varying background rate used to capture seasonal fluctuations in infection risk.</p>
+
+<p><a href="https://arxiv.org/abs/2506.01258">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
