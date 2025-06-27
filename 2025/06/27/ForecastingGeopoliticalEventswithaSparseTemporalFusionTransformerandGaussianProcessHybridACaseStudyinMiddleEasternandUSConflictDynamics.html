@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Forecasting Geopolitical Events with a Sparse Temporal Fusion Transformer and Gaussian Process Hybrid: A Case Study in Middle Eastern and U.S. Conflict Dynamics</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Forecasting Geopolitical Events with a Sparse Temporal Fusion Transformer and Gaussian Process Hybrid: A Case Study in Middle Eastern and U.S. Conflict Dynamics" />
+<meta name="author" content="Hsin-Hsiung Huang, Hayden Hampton" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Forecasting geopolitical conflict from data sources like the Global Database of Events, Language, and Tone (GDELT) is a critical challenge for national security. The inherent sparsity, burstiness, and overdispersion of such data cause standard deep learning models, including the Temporal Fusion Transformer (TFT), to produce unreliable long-horizon predictions. We introduce STFT-VNNGP, a hybrid architecture that won the 2023 Algorithms for Threat Detection (ATD) competition by overcoming these limitations. Designed to bridge this gap, our model employs a two-stage process: first, a TFT captures complex temporal dynamics to generate multi-quantile forecasts. These quantiles then serve as informed inputs for a Variational Nearest Neighbor Gaussian Process (VNNGP), which performs principled spatiotemporal smoothing and uncertainty quantification. In a case study forecasting conflict dynamics in the Middle East and the U.S., STFT-VNNGP consistently outperforms a standalone TFT, showing a superior ability to predict the timing and magnitude of bursty event periods, particularly at long-range horizons. This work offers a robust framework for generating more reliable and actionable intelligence from challenging event data, with all code and workflows made publicly available to ensure reproducibility." />
+<meta property="og:description" content="Forecasting geopolitical conflict from data sources like the Global Database of Events, Language, and Tone (GDELT) is a critical challenge for national security. The inherent sparsity, burstiness, and overdispersion of such data cause standard deep learning models, including the Temporal Fusion Transformer (TFT), to produce unreliable long-horizon predictions. We introduce STFT-VNNGP, a hybrid architecture that won the 2023 Algorithms for Threat Detection (ATD) competition by overcoming these limitations. Designed to bridge this gap, our model employs a two-stage process: first, a TFT captures complex temporal dynamics to generate multi-quantile forecasts. These quantiles then serve as informed inputs for a Variational Nearest Neighbor Gaussian Process (VNNGP), which performs principled spatiotemporal smoothing and uncertainty quantification. In a case study forecasting conflict dynamics in the Middle East and the U.S., STFT-VNNGP consistently outperforms a standalone TFT, showing a superior ability to predict the timing and magnitude of bursty event periods, particularly at long-range horizons. This work offers a robust framework for generating more reliable and actionable intelligence from challenging event data, with all code and workflows made publicly available to ensure reproducibility." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/27/ForecastingGeopoliticalEventswithaSparseTemporalFusionTransformerandGaussianProcessHybridACaseStudyinMiddleEasternandUSConflictDynamics.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/27/ForecastingGeopoliticalEventswithaSparseTemporalFusionTransformerandGaussianProcessHybridACaseStudyinMiddleEasternandUSConflictDynamics.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Forecasting Geopolitical Events with a Sparse Temporal Fusion Transformer and Gaussian Process Hybrid: A Case Study in Middle Eastern and U.S. Conflict Dynamics" />
+<script type="application/ld+json">
+{"description":"Forecasting geopolitical conflict from data sources like the Global Database of Events, Language, and Tone (GDELT) is a critical challenge for national security. The inherent sparsity, burstiness, and overdispersion of such data cause standard deep learning models, including the Temporal Fusion Transformer (TFT), to produce unreliable long-horizon predictions. We introduce STFT-VNNGP, a hybrid architecture that won the 2023 Algorithms for Threat Detection (ATD) competition by overcoming these limitations. Designed to bridge this gap, our model employs a two-stage process: first, a TFT captures complex temporal dynamics to generate multi-quantile forecasts. These quantiles then serve as informed inputs for a Variational Nearest Neighbor Gaussian Process (VNNGP), which performs principled spatiotemporal smoothing and uncertainty quantification. In a case study forecasting conflict dynamics in the Middle East and the U.S., STFT-VNNGP consistently outperforms a standalone TFT, showing a superior ability to predict the timing and magnitude of bursty event periods, particularly at long-range horizons. This work offers a robust framework for generating more reliable and actionable intelligence from challenging event data, with all code and workflows made publicly available to ensure reproducibility.","headline":"Forecasting Geopolitical Events with a Sparse Temporal Fusion Transformer and Gaussian Process Hybrid: A Case Study in Middle Eastern and U.S. Conflict Dynamics","dateModified":"2025-06-27T00:00:00+00:00","datePublished":"2025-06-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/27/ForecastingGeopoliticalEventswithaSparseTemporalFusionTransformerandGaussianProcessHybridACaseStudyinMiddleEasternandUSConflictDynamics.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/27/ForecastingGeopoliticalEventswithaSparseTemporalFusionTransformerandGaussianProcessHybridACaseStudyinMiddleEasternandUSConflictDynamics.html","author":{"@type":"Person","name":"Hsin-Hsiung Huang, Hayden Hampton"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-27 00:00:00 +0000">06-27</time>
+  </p>
+  
+  <h1>Forecasting Geopolitical Events with a Sparse Temporal Fusion Transformer and Gaussian Process Hybrid: A Case Study in Middle Eastern and U.S. Conflict Dynamics</h1>
+  <br>Hsin-Hsiung Huang, Hayden Hampton</h3>
+  <br> [stat.ML,stat.AP,stat.CO]
+
+  <p>Forecasting geopolitical conflict from data sources like the Global Database of Events, Language, and Tone (GDELT) is a critical challenge for national security. The inherent sparsity, burstiness, and overdispersion of such data cause standard deep learning models, including the Temporal Fusion Transformer (TFT), to produce unreliable long-horizon predictions. We introduce STFT-VNNGP, a hybrid architecture that won the 2023 Algorithms for Threat Detection (ATD) competition by overcoming these limitations. Designed to bridge this gap, our model employs a two-stage process: first, a TFT captures complex temporal dynamics to generate multi-quantile forecasts. These quantiles then serve as informed inputs for a Variational Nearest Neighbor Gaussian Process (VNNGP), which performs principled spatiotemporal smoothing and uncertainty quantification. In a case study forecasting conflict dynamics in the Middle East and the U.S., STFT-VNNGP consistently outperforms a standalone TFT, showing a superior ability to predict the timing and magnitude of bursty event periods, particularly at long-range horizons. This work offers a robust framework for generating more reliable and actionable intelligence from challenging event data, with all code and workflows made publicly available to ensure reproducibility.</p>
+
+<p><a href="https://arxiv.org/abs/2506.20935">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

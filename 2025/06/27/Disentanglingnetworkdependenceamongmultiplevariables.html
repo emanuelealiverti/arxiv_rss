@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Disentangling network dependence among multiple variables</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Disentangling network dependence among multiple variables" />
+<meta name="author" content="Zhejia Dong, Corwin Zigler, Youjin Lee" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When two variables depend on the same or similar underlying network, their shared network dependence structure can lead to spurious associations. While statistical associations between two variables sampled from interconnected subjects are a common inferential goal across various fields, little research has focused on how to disentangle shared dependence for valid statistical inference. We revisit two different approaches from distinct fields that may address shared network dependence: the pre-whitening approach, commonly used in time series analysis to remove the shared temporal dependence, and the network autocorrelation model, widely used in network analysis often to examine or account for autocorrelation of the outcome variable. We demonstrate how each approach implicitly entails assumptions about how a variable of interest propagates among nodes via network ties given the network structure. We further propose adaptations of existing pre-whitening methods to the network setting by explicitly reflecting underlying assumptions about “level of interaction” that induce network dependence, while accounting for its unique complexities. Our simulation studies demonstrate the effectiveness of the two approaches in reducing spurious associations due to shared network dependence when their respective assumptions hold. However, the results also show the sensitivity to assumption violations, underscoring the importance of correctly specifying the shared dependence structure based on available network information and prior knowledge about the interactions driving dependence." />
+<meta property="og:description" content="When two variables depend on the same or similar underlying network, their shared network dependence structure can lead to spurious associations. While statistical associations between two variables sampled from interconnected subjects are a common inferential goal across various fields, little research has focused on how to disentangle shared dependence for valid statistical inference. We revisit two different approaches from distinct fields that may address shared network dependence: the pre-whitening approach, commonly used in time series analysis to remove the shared temporal dependence, and the network autocorrelation model, widely used in network analysis often to examine or account for autocorrelation of the outcome variable. We demonstrate how each approach implicitly entails assumptions about how a variable of interest propagates among nodes via network ties given the network structure. We further propose adaptations of existing pre-whitening methods to the network setting by explicitly reflecting underlying assumptions about “level of interaction” that induce network dependence, while accounting for its unique complexities. Our simulation studies demonstrate the effectiveness of the two approaches in reducing spurious associations due to shared network dependence when their respective assumptions hold. However, the results also show the sensitivity to assumption violations, underscoring the importance of correctly specifying the shared dependence structure based on available network information and prior knowledge about the interactions driving dependence." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/27/Disentanglingnetworkdependenceamongmultiplevariables.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/27/Disentanglingnetworkdependenceamongmultiplevariables.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Disentangling network dependence among multiple variables" />
+<script type="application/ld+json">
+{"description":"When two variables depend on the same or similar underlying network, their shared network dependence structure can lead to spurious associations. While statistical associations between two variables sampled from interconnected subjects are a common inferential goal across various fields, little research has focused on how to disentangle shared dependence for valid statistical inference. We revisit two different approaches from distinct fields that may address shared network dependence: the pre-whitening approach, commonly used in time series analysis to remove the shared temporal dependence, and the network autocorrelation model, widely used in network analysis often to examine or account for autocorrelation of the outcome variable. We demonstrate how each approach implicitly entails assumptions about how a variable of interest propagates among nodes via network ties given the network structure. We further propose adaptations of existing pre-whitening methods to the network setting by explicitly reflecting underlying assumptions about “level of interaction” that induce network dependence, while accounting for its unique complexities. Our simulation studies demonstrate the effectiveness of the two approaches in reducing spurious associations due to shared network dependence when their respective assumptions hold. However, the results also show the sensitivity to assumption violations, underscoring the importance of correctly specifying the shared dependence structure based on available network information and prior knowledge about the interactions driving dependence.","headline":"Disentangling network dependence among multiple variables","dateModified":"2025-06-27T00:00:00+00:00","datePublished":"2025-06-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/27/Disentanglingnetworkdependenceamongmultiplevariables.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/27/Disentanglingnetworkdependenceamongmultiplevariables.html","author":{"@type":"Person","name":"Zhejia Dong, Corwin Zigler, Youjin Lee"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-27 00:00:00 +0000">06-27</time>
+  </p>
+  
+  <h1>Disentangling network dependence among multiple variables</h1>
+  <br>Zhejia Dong, Corwin Zigler, Youjin Lee</h3>
+  <br> [stat.ME]
+
+  <p>When two variables depend on the same or similar underlying network, their shared network dependence structure can lead to spurious associations. While statistical associations between two variables sampled from interconnected subjects are a common inferential goal across various fields, little research has focused on how to disentangle shared dependence for valid statistical inference. We revisit two different approaches from distinct fields that may address shared network dependence: the pre-whitening approach, commonly used in time series analysis to remove the shared temporal dependence, and the network autocorrelation model, widely used in network analysis often to examine or account for autocorrelation of the outcome variable. We demonstrate how each approach implicitly entails assumptions about how a variable of interest propagates among nodes via network ties given the network structure. We further propose adaptations of existing pre-whitening methods to the network setting by explicitly reflecting underlying assumptions about “level of interaction” that induce network dependence, while accounting for its unique complexities. Our simulation studies demonstrate the effectiveness of the two approaches in reducing spurious associations due to shared network dependence when their respective assumptions hold. However, the results also show the sensitivity to assumption violations, underscoring the importance of correctly specifying the shared dependence structure based on available network information and prior knowledge about the interactions driving dependence.</p>
+
+<p><a href="https://arxiv.org/abs/2506.20974">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
