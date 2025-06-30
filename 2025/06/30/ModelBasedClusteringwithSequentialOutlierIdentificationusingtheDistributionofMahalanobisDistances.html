@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Model-Based Clustering with Sequential Outlier Identification using the Distribution of Mahalanobis Distances</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Model-Based Clustering with Sequential Outlier Identification using the Distribution of Mahalanobis Distances" />
+<meta name="author" content="Ultán P. Doherty, Paul D. McNicholas, Arthur White" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The presence of outliers can prevent clustering algorithms from accurately determining an appropriate group structure within a data set. We present outlierMBC, a model-based approach for sequentially removing outliers and clustering the remaining observations. Our method identifies outliers one at a time while fitting a multivariate Gaussian mixture model to data. Since it can be difficult to classify observations as outliers without knowing what the correct cluster structure is a priori, and the presence of outliers interferes with the process of modelling clusters correctly, we use an iterative method to identify outliers one by one. At each iteration, outlierMBC removes the observation with the lowest density and fits a Gaussian mixture model to the remaining data. The method continues to remove potential outliers until a pre-set maximum number of outliers is reached, then retrospectively identifies the optimal number of outliers. To decide how many outliers to remove, it uses the fact that the squared sample Mahalanobis distances of Gaussian distributed observations are Beta distributed when scaled appropriately. outlierMBC chooses the number of outliers which minimises a dissimilarity between this theoretical Beta distribution and the observed distribution of the scaled squared sample Mahalanobis distances. This means that our method both clusters the data using a Gaussian mixture model and implements a model-based procedure to identify the optimal outliers to remove without requiring the number of outliers to be pre-specified. Unlike leading methods in the literature, outlierMBC does not assume that the outliers follow a known distribution or that the number of outliers can be pre-specified. Moreover, outlierMBC performs strongly compared to these algorithms when applied to a range of simulated and real data sets." />
+<meta property="og:description" content="The presence of outliers can prevent clustering algorithms from accurately determining an appropriate group structure within a data set. We present outlierMBC, a model-based approach for sequentially removing outliers and clustering the remaining observations. Our method identifies outliers one at a time while fitting a multivariate Gaussian mixture model to data. Since it can be difficult to classify observations as outliers without knowing what the correct cluster structure is a priori, and the presence of outliers interferes with the process of modelling clusters correctly, we use an iterative method to identify outliers one by one. At each iteration, outlierMBC removes the observation with the lowest density and fits a Gaussian mixture model to the remaining data. The method continues to remove potential outliers until a pre-set maximum number of outliers is reached, then retrospectively identifies the optimal number of outliers. To decide how many outliers to remove, it uses the fact that the squared sample Mahalanobis distances of Gaussian distributed observations are Beta distributed when scaled appropriately. outlierMBC chooses the number of outliers which minimises a dissimilarity between this theoretical Beta distribution and the observed distribution of the scaled squared sample Mahalanobis distances. This means that our method both clusters the data using a Gaussian mixture model and implements a model-based procedure to identify the optimal outliers to remove without requiring the number of outliers to be pre-specified. Unlike leading methods in the literature, outlierMBC does not assume that the outliers follow a known distribution or that the number of outliers can be pre-specified. Moreover, outlierMBC performs strongly compared to these algorithms when applied to a range of simulated and real data sets." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/06/30/ModelBasedClusteringwithSequentialOutlierIdentificationusingtheDistributionofMahalanobisDistances.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/06/30/ModelBasedClusteringwithSequentialOutlierIdentificationusingtheDistributionofMahalanobisDistances.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Model-Based Clustering with Sequential Outlier Identification using the Distribution of Mahalanobis Distances" />
+<script type="application/ld+json">
+{"description":"The presence of outliers can prevent clustering algorithms from accurately determining an appropriate group structure within a data set. We present outlierMBC, a model-based approach for sequentially removing outliers and clustering the remaining observations. Our method identifies outliers one at a time while fitting a multivariate Gaussian mixture model to data. Since it can be difficult to classify observations as outliers without knowing what the correct cluster structure is a priori, and the presence of outliers interferes with the process of modelling clusters correctly, we use an iterative method to identify outliers one by one. At each iteration, outlierMBC removes the observation with the lowest density and fits a Gaussian mixture model to the remaining data. The method continues to remove potential outliers until a pre-set maximum number of outliers is reached, then retrospectively identifies the optimal number of outliers. To decide how many outliers to remove, it uses the fact that the squared sample Mahalanobis distances of Gaussian distributed observations are Beta distributed when scaled appropriately. outlierMBC chooses the number of outliers which minimises a dissimilarity between this theoretical Beta distribution and the observed distribution of the scaled squared sample Mahalanobis distances. This means that our method both clusters the data using a Gaussian mixture model and implements a model-based procedure to identify the optimal outliers to remove without requiring the number of outliers to be pre-specified. Unlike leading methods in the literature, outlierMBC does not assume that the outliers follow a known distribution or that the number of outliers can be pre-specified. Moreover, outlierMBC performs strongly compared to these algorithms when applied to a range of simulated and real data sets.","headline":"Model-Based Clustering with Sequential Outlier Identification using the Distribution of Mahalanobis Distances","dateModified":"2025-06-30T00:00:00+00:00","datePublished":"2025-06-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/30/ModelBasedClusteringwithSequentialOutlierIdentificationusingtheDistributionofMahalanobisDistances.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/06/30/ModelBasedClusteringwithSequentialOutlierIdentificationusingtheDistributionofMahalanobisDistances.html","author":{"@type":"Person","name":"Ultán P. Doherty, Paul D. McNicholas, Arthur White"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-30 00:00:00 +0000">06-30</time>
+  </p>
+  
+  <h1>Model-Based Clustering with Sequential Outlier Identification using the Distribution of Mahalanobis Distances</h1>
+  <br>Ultán P. Doherty, Paul D. McNicholas, Arthur White</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>The presence of outliers can prevent clustering algorithms from accurately determining an appropriate group structure within a data set. We present outlierMBC, a model-based approach for sequentially removing outliers and clustering the remaining observations. Our method identifies outliers one at a time while fitting a multivariate Gaussian mixture model to data. Since it can be difficult to classify observations as outliers without knowing what the correct cluster structure is a priori, and the presence of outliers interferes with the process of modelling clusters correctly, we use an iterative method to identify outliers one by one. At each iteration, outlierMBC removes the observation with the lowest density and fits a Gaussian mixture model to the remaining data. The method continues to remove potential outliers until a pre-set maximum number of outliers is reached, then retrospectively identifies the optimal number of outliers. To decide how many outliers to remove, it uses the fact that the squared sample Mahalanobis distances of Gaussian distributed observations are Beta distributed when scaled appropriately. outlierMBC chooses the number of outliers which minimises a dissimilarity between this theoretical Beta distribution and the observed distribution of the scaled squared sample Mahalanobis distances. This means that our method both clusters the data using a Gaussian mixture model and implements a model-based procedure to identify the optimal outliers to remove without requiring the number of outliers to be pre-specified. Unlike leading methods in the literature, outlierMBC does not assume that the outliers follow a known distribution or that the number of outliers can be pre-specified. Moreover, outlierMBC performs strongly compared to these algorithms when applied to a range of simulated and real data sets.</p>
+
+<p><a href="https://arxiv.org/abs/2505.11668">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
