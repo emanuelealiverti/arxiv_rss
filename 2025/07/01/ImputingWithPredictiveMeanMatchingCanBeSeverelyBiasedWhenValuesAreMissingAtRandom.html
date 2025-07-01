@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Imputing With Predictive Mean Matching Can Be Severely Biased When Values Are Missing At Random</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Imputing With Predictive Mean Matching Can Be Severely Biased When Values Are Missing At Random" />
+<meta name="author" content="Paul T. von Hippel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Predictive mean matching (PMM) is a popular imputation strategy that imputes missing values by borrowing observed values from other cases with similar expectations. We show that, unlike other imputation strategies, PMM is not guaranteed to be consistent – and in fact can be severely biased – when values are missing at random (when the probability a value is missing depends only on values that are observed). We demonstrate the bias in a simple situation where a complete variable $X$ is both strongly correlated with $Y$ and strongly predictive of whether $Y$ is missing. The bias in the estimated regression slope can be as large as 80 percent, and persists even when we reduce the correlation between $X$ and $Y$. To make the bias vanish, the sample must be large ($n$=1,000) \emph{and} $Y$ values must be missing independently of $X$ (i.e., missing completely at random). Compared to other imputation methods, it seems that PMM requires larger samples and is more sensitive to the pattern of missing values. We cannot recommend PMM as a default approach to imputation." />
+<meta property="og:description" content="Predictive mean matching (PMM) is a popular imputation strategy that imputes missing values by borrowing observed values from other cases with similar expectations. We show that, unlike other imputation strategies, PMM is not guaranteed to be consistent – and in fact can be severely biased – when values are missing at random (when the probability a value is missing depends only on values that are observed). We demonstrate the bias in a simple situation where a complete variable $X$ is both strongly correlated with $Y$ and strongly predictive of whether $Y$ is missing. The bias in the estimated regression slope can be as large as 80 percent, and persists even when we reduce the correlation between $X$ and $Y$. To make the bias vanish, the sample must be large ($n$=1,000) \emph{and} $Y$ values must be missing independently of $X$ (i.e., missing completely at random). Compared to other imputation methods, it seems that PMM requires larger samples and is more sensitive to the pattern of missing values. We cannot recommend PMM as a default approach to imputation." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/07/01/ImputingWithPredictiveMeanMatchingCanBeSeverelyBiasedWhenValuesAreMissingAtRandom.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/07/01/ImputingWithPredictiveMeanMatchingCanBeSeverelyBiasedWhenValuesAreMissingAtRandom.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Imputing With Predictive Mean Matching Can Be Severely Biased When Values Are Missing At Random" />
+<script type="application/ld+json">
+{"description":"Predictive mean matching (PMM) is a popular imputation strategy that imputes missing values by borrowing observed values from other cases with similar expectations. We show that, unlike other imputation strategies, PMM is not guaranteed to be consistent – and in fact can be severely biased – when values are missing at random (when the probability a value is missing depends only on values that are observed). We demonstrate the bias in a simple situation where a complete variable $X$ is both strongly correlated with $Y$ and strongly predictive of whether $Y$ is missing. The bias in the estimated regression slope can be as large as 80 percent, and persists even when we reduce the correlation between $X$ and $Y$. To make the bias vanish, the sample must be large ($n$=1,000) \\emph{and} $Y$ values must be missing independently of $X$ (i.e., missing completely at random). Compared to other imputation methods, it seems that PMM requires larger samples and is more sensitive to the pattern of missing values. We cannot recommend PMM as a default approach to imputation.","headline":"Imputing With Predictive Mean Matching Can Be Severely Biased When Values Are Missing At Random","dateModified":"2025-07-01T00:00:00+00:00","datePublished":"2025-07-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/01/ImputingWithPredictiveMeanMatchingCanBeSeverelyBiasedWhenValuesAreMissingAtRandom.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/01/ImputingWithPredictiveMeanMatchingCanBeSeverelyBiasedWhenValuesAreMissingAtRandom.html","author":{"@type":"Person","name":"Paul T. von Hippel"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-01 00:00:00 +0000">07-01</time>
+  </p>
+  
+  <h1>Imputing With Predictive Mean Matching Can Be Severely Biased When Values Are Missing At Random</h1>
+  <br>Paul T. von Hippel</h3>
+  <br> [stat.ME]
+
+  <p>Predictive mean matching (PMM) is a popular imputation strategy that imputes missing values by borrowing observed values from other cases with similar expectations. We show that, unlike other imputation strategies, PMM is not guaranteed to be consistent – and in fact can be severely biased – when values are missing at random (when the probability a value is missing depends only on values that are observed).
+  We demonstrate the bias in a simple situation where a complete variable $X$ is both strongly correlated with $Y$ and strongly predictive of whether $Y$ is missing. The bias in the estimated regression slope can be as large as 80 percent, and persists even when we reduce the correlation between $X$ and $Y$. To make the bias vanish, the sample must be large ($n$=1,000) \emph{and} $Y$ values must be missing independently of $X$ (i.e., missing completely at random).
+  Compared to other imputation methods, it seems that PMM requires larger samples and is more sensitive to the pattern of missing values. We cannot recommend PMM as a default approach to imputation.</p>
+
+<p><a href="https://arxiv.org/abs/2506.22981">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
