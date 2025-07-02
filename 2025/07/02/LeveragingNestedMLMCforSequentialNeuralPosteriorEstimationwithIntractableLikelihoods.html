@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Leveraging Nested MLMC for Sequential Neural Posterior Estimation with Intractable Likelihoods</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Leveraging Nested MLMC for Sequential Neural Posterior Estimation with Intractable Likelihoods" />
+<meta name="author" content="Xiliang Yang, Yifei Xiong, Zhijian He" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There has been a growing interest in studying sequential neural posterior estimation (SNPE) techniques for their advantages in dealing with simulation-based models with intractable likelihoods. They are devoted to learning the posterior from adaptively proposed simulations using neural network-based conditional density estimators. As a SNPE technique, the automatic posterior transformation (APT) method proposed by Greenberg et al. (2019) performs notably and scales to high dimensional data. However, the APT method bears the computation of an expectation of the logarithm of an intractable normalizing constant, i.e., a nested expectation. Although atomic APT was proposed to solve this by discretizing the normalizing constant, it remains challenging to analyze the convergence of learning. In this paper, we propose a nested APT method to estimate the involved nested expectation instead. This facilitates establishing the convergence analysis. Since the nested estimators for the loss function and its gradient are biased, we make use of unbiased multi-level Monte Carlo (MLMC) estimators for debiasing. To further reduce the excessive variance of the unbiased estimators, this paper also develops some truncated MLMC estimators by taking account of the trade-off between the bias and the average cost. Numerical experiments for approximating complex posteriors with multimodal in moderate dimensions are provided." />
+<meta property="og:description" content="There has been a growing interest in studying sequential neural posterior estimation (SNPE) techniques for their advantages in dealing with simulation-based models with intractable likelihoods. They are devoted to learning the posterior from adaptively proposed simulations using neural network-based conditional density estimators. As a SNPE technique, the automatic posterior transformation (APT) method proposed by Greenberg et al. (2019) performs notably and scales to high dimensional data. However, the APT method bears the computation of an expectation of the logarithm of an intractable normalizing constant, i.e., a nested expectation. Although atomic APT was proposed to solve this by discretizing the normalizing constant, it remains challenging to analyze the convergence of learning. In this paper, we propose a nested APT method to estimate the involved nested expectation instead. This facilitates establishing the convergence analysis. Since the nested estimators for the loss function and its gradient are biased, we make use of unbiased multi-level Monte Carlo (MLMC) estimators for debiasing. To further reduce the excessive variance of the unbiased estimators, this paper also develops some truncated MLMC estimators by taking account of the trade-off between the bias and the average cost. Numerical experiments for approximating complex posteriors with multimodal in moderate dimensions are provided." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/07/02/LeveragingNestedMLMCforSequentialNeuralPosteriorEstimationwithIntractableLikelihoods.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/07/02/LeveragingNestedMLMCforSequentialNeuralPosteriorEstimationwithIntractableLikelihoods.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Leveraging Nested MLMC for Sequential Neural Posterior Estimation with Intractable Likelihoods" />
+<script type="application/ld+json">
+{"description":"There has been a growing interest in studying sequential neural posterior estimation (SNPE) techniques for their advantages in dealing with simulation-based models with intractable likelihoods. They are devoted to learning the posterior from adaptively proposed simulations using neural network-based conditional density estimators. As a SNPE technique, the automatic posterior transformation (APT) method proposed by Greenberg et al. (2019) performs notably and scales to high dimensional data. However, the APT method bears the computation of an expectation of the logarithm of an intractable normalizing constant, i.e., a nested expectation. Although atomic APT was proposed to solve this by discretizing the normalizing constant, it remains challenging to analyze the convergence of learning. In this paper, we propose a nested APT method to estimate the involved nested expectation instead. This facilitates establishing the convergence analysis. Since the nested estimators for the loss function and its gradient are biased, we make use of unbiased multi-level Monte Carlo (MLMC) estimators for debiasing. To further reduce the excessive variance of the unbiased estimators, this paper also develops some truncated MLMC estimators by taking account of the trade-off between the bias and the average cost. Numerical experiments for approximating complex posteriors with multimodal in moderate dimensions are provided.","headline":"Leveraging Nested MLMC for Sequential Neural Posterior Estimation with Intractable Likelihoods","dateModified":"2025-07-02T00:00:00+00:00","datePublished":"2025-07-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/02/LeveragingNestedMLMCforSequentialNeuralPosteriorEstimationwithIntractableLikelihoods.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/02/LeveragingNestedMLMCforSequentialNeuralPosteriorEstimationwithIntractableLikelihoods.html","author":{"@type":"Person","name":"Xiliang Yang, Yifei Xiong, Zhijian He"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-02 00:00:00 +0000">07-02</time>
+  </p>
+  
+  <h1>Leveraging Nested MLMC for Sequential Neural Posterior Estimation with Intractable Likelihoods</h1>
+  <br>Xiliang Yang, Yifei Xiong, Zhijian He</h3>
+  <br> [stat.CO,stat.ML]
+
+  <p>There has been a growing interest in studying sequential neural posterior estimation (SNPE) techniques for their advantages in dealing with simulation-based models with intractable likelihoods. They are devoted to learning the posterior from adaptively proposed simulations using neural network-based conditional density estimators. As a SNPE technique, the automatic posterior transformation (APT) method proposed by Greenberg et al. (2019) performs notably and scales to high dimensional data. However, the APT method bears the computation of an expectation of the logarithm of an intractable normalizing constant, i.e., a nested expectation. Although atomic APT was proposed to solve this by discretizing the normalizing constant, it remains challenging to analyze the convergence of learning. In this paper, we propose a nested APT method to estimate the involved nested expectation instead. This facilitates establishing the convergence analysis. Since the nested estimators for the loss function and its gradient are biased, we make use of unbiased multi-level Monte Carlo (MLMC) estimators for debiasing. To further reduce the excessive variance of the unbiased estimators, this paper also develops some truncated MLMC estimators by taking account of the trade-off between the bias and the average cost. Numerical experiments for approximating complex posteriors with multimodal in moderate dimensions are provided.</p>
+
+<p><a href="https://arxiv.org/abs/2401.16776">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
