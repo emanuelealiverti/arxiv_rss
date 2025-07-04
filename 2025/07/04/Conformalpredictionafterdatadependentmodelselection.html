@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Conformal prediction after data-dependent model selection</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Conformal prediction after data-dependent model selection" />
+<meta name="author" content="Ruiting Liang, Wanrong Zhu, Rina Foygel Barber" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Given a family of pretrained models and a hold-out set, how can we construct a valid conformal prediction set while selecting a model that minimizes the width of the set? If we use the same hold-out data set both to select a model (the model that yields the smallest conformal prediction sets) and then to construct a conformal prediction set based on that selected model, we suffer a loss of coverage due to selection bias. Alternatively, we could further splitting the data to perform selection and calibration separately, but this comes at a steep cost if the size of the dataset is limited. In this paper, we address the challenge of constructing a valid prediction set after data-dependent model selection – commonly, selecting the model that minimizes the width of the resulting prediction sets. Our novel methods can be implemented efficiently and admit finite-sample validity guarantees without invoking additional sample-splitting. We show that our methods yield prediction sets with asymptotically optimal width under certain notion of regularity for the model class. The improvement in the width of the prediction sets constructed by our methods are further demonstrated through applications to synthetic datasets in various settings and a real data example." />
+<meta property="og:description" content="Given a family of pretrained models and a hold-out set, how can we construct a valid conformal prediction set while selecting a model that minimizes the width of the set? If we use the same hold-out data set both to select a model (the model that yields the smallest conformal prediction sets) and then to construct a conformal prediction set based on that selected model, we suffer a loss of coverage due to selection bias. Alternatively, we could further splitting the data to perform selection and calibration separately, but this comes at a steep cost if the size of the dataset is limited. In this paper, we address the challenge of constructing a valid prediction set after data-dependent model selection – commonly, selecting the model that minimizes the width of the resulting prediction sets. Our novel methods can be implemented efficiently and admit finite-sample validity guarantees without invoking additional sample-splitting. We show that our methods yield prediction sets with asymptotically optimal width under certain notion of regularity for the model class. The improvement in the width of the prediction sets constructed by our methods are further demonstrated through applications to synthetic datasets in various settings and a real data example." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/07/04/Conformalpredictionafterdatadependentmodelselection.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/07/04/Conformalpredictionafterdatadependentmodelselection.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Conformal prediction after data-dependent model selection" />
+<script type="application/ld+json">
+{"description":"Given a family of pretrained models and a hold-out set, how can we construct a valid conformal prediction set while selecting a model that minimizes the width of the set? If we use the same hold-out data set both to select a model (the model that yields the smallest conformal prediction sets) and then to construct a conformal prediction set based on that selected model, we suffer a loss of coverage due to selection bias. Alternatively, we could further splitting the data to perform selection and calibration separately, but this comes at a steep cost if the size of the dataset is limited. In this paper, we address the challenge of constructing a valid prediction set after data-dependent model selection – commonly, selecting the model that minimizes the width of the resulting prediction sets. Our novel methods can be implemented efficiently and admit finite-sample validity guarantees without invoking additional sample-splitting. We show that our methods yield prediction sets with asymptotically optimal width under certain notion of regularity for the model class. The improvement in the width of the prediction sets constructed by our methods are further demonstrated through applications to synthetic datasets in various settings and a real data example.","headline":"Conformal prediction after data-dependent model selection","dateModified":"2025-07-04T00:00:00+00:00","datePublished":"2025-07-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/04/Conformalpredictionafterdatadependentmodelselection.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/04/Conformalpredictionafterdatadependentmodelselection.html","author":{"@type":"Person","name":"Ruiting Liang, Wanrong Zhu, Rina Foygel Barber"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-04 00:00:00 +0000">07-04</time>
+  </p>
+  
+  <h1>Conformal prediction after data-dependent model selection</h1>
+  <br>Ruiting Liang, Wanrong Zhu, Rina Foygel Barber</h3>
+  <br> [stat.ME]
+
+  <p>Given a family of pretrained models and a hold-out set, how can we construct a valid conformal prediction set while selecting a model that minimizes the width of the set? If we use the same hold-out data set both to select a model (the model that yields the smallest conformal prediction sets) and then to construct a conformal prediction set based on that selected model, we suffer a loss of coverage due to selection bias. Alternatively, we could further splitting the data to perform selection and calibration separately, but this comes at a steep cost if the size of the dataset is limited. In this paper, we address the challenge of constructing a valid prediction set after data-dependent model selection – commonly, selecting the model that minimizes the width of the resulting prediction sets. Our novel methods can be implemented efficiently and admit finite-sample validity guarantees without invoking additional sample-splitting. We show that our methods yield prediction sets with asymptotically optimal width under certain notion of regularity for the model class. The improvement in the width of the prediction sets constructed by our methods are further demonstrated through applications to synthetic datasets in various settings and a real data example.</p>
+
+<p><a href="https://arxiv.org/abs/2408.07066">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
