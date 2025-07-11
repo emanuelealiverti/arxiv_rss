@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>TRIP: A Nonparametric Test to Diagnose Biased Feature Importance Scores</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="TRIP: A Nonparametric Test to Diagnose Biased Feature Importance Scores" />
+<meta name="author" content="Aaron Foote, Danny Krizanc" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Along with accurate prediction, understanding the contribution of each feature to the making of the prediction, i.e., the importance of the feature, is a desirable and arguably necessary component of a machine learning model. For a complex model such as a random forest, such importances are not innate – as they are, e.g., with linear regression. Efficient methods have been created to provide such capabilities, with one of the most popular among them being permutation feature importance due to its efficiency, model-agnostic nature, and perceived intuitiveness. However, permutation feature importance has been shown to be misleading in the presence of dependent features as a result of the creation of unrealistic observations when permuting the dependent features. In this work, we develop TRIP (Test for Reliable Interpretation via Permutation), a test requiring minimal assumptions that is able to detect unreliable permutation feature importance scores that are the result of model extrapolation. To build on this, we demonstrate how the test can be complemented in order to allow its use in high dimensional settings. Through testing on simulated data and applications, our results show that the test can be used to reliably detect when permutation feature importance scores are unreliable." />
+<meta property="og:description" content="Along with accurate prediction, understanding the contribution of each feature to the making of the prediction, i.e., the importance of the feature, is a desirable and arguably necessary component of a machine learning model. For a complex model such as a random forest, such importances are not innate – as they are, e.g., with linear regression. Efficient methods have been created to provide such capabilities, with one of the most popular among them being permutation feature importance due to its efficiency, model-agnostic nature, and perceived intuitiveness. However, permutation feature importance has been shown to be misleading in the presence of dependent features as a result of the creation of unrealistic observations when permuting the dependent features. In this work, we develop TRIP (Test for Reliable Interpretation via Permutation), a test requiring minimal assumptions that is able to detect unreliable permutation feature importance scores that are the result of model extrapolation. To build on this, we demonstrate how the test can be complemented in order to allow its use in high dimensional settings. Through testing on simulated data and applications, our results show that the test can be used to reliably detect when permutation feature importance scores are unreliable." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/07/11/TRIPANonparametricTesttoDiagnoseBiasedFeatureImportanceScores.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/07/11/TRIPANonparametricTesttoDiagnoseBiasedFeatureImportanceScores.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TRIP: A Nonparametric Test to Diagnose Biased Feature Importance Scores" />
+<script type="application/ld+json">
+{"description":"Along with accurate prediction, understanding the contribution of each feature to the making of the prediction, i.e., the importance of the feature, is a desirable and arguably necessary component of a machine learning model. For a complex model such as a random forest, such importances are not innate – as they are, e.g., with linear regression. Efficient methods have been created to provide such capabilities, with one of the most popular among them being permutation feature importance due to its efficiency, model-agnostic nature, and perceived intuitiveness. However, permutation feature importance has been shown to be misleading in the presence of dependent features as a result of the creation of unrealistic observations when permuting the dependent features. In this work, we develop TRIP (Test for Reliable Interpretation via Permutation), a test requiring minimal assumptions that is able to detect unreliable permutation feature importance scores that are the result of model extrapolation. To build on this, we demonstrate how the test can be complemented in order to allow its use in high dimensional settings. Through testing on simulated data and applications, our results show that the test can be used to reliably detect when permutation feature importance scores are unreliable.","headline":"TRIP: A Nonparametric Test to Diagnose Biased Feature Importance Scores","dateModified":"2025-07-11T00:00:00+00:00","datePublished":"2025-07-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/11/TRIPANonparametricTesttoDiagnoseBiasedFeatureImportanceScores.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/11/TRIPANonparametricTesttoDiagnoseBiasedFeatureImportanceScores.html","author":{"@type":"Person","name":"Aaron Foote, Danny Krizanc"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-11 00:00:00 +0000">07-11</time>
+  </p>
+  
+  <h1>TRIP: A Nonparametric Test to Diagnose Biased Feature Importance Scores</h1>
+  <br>Aaron Foote, Danny Krizanc</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Along with accurate prediction, understanding the contribution of each feature to the making of the prediction, i.e., the importance of the feature, is a desirable and arguably necessary component of a machine learning model. For a complex model such as a random forest, such importances are not innate – as they are, e.g., with linear regression. Efficient methods have been created to provide such capabilities, with one of the most popular among them being permutation feature importance due to its efficiency, model-agnostic nature, and perceived intuitiveness. However, permutation feature importance has been shown to be misleading in the presence of dependent features as a result of the creation of unrealistic observations when permuting the dependent features. In this work, we develop TRIP (Test for Reliable Interpretation via Permutation), a test requiring minimal assumptions that is able to detect unreliable permutation feature importance scores that are the result of model extrapolation. To build on this, we demonstrate how the test can be complemented in order to allow its use in high dimensional settings. Through testing on simulated data and applications, our results show that the test can be used to reliably detect when permutation feature importance scores are unreliable.</p>
+
+<p><a href="https://arxiv.org/abs/2507.07276">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
