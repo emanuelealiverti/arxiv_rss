@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Forecasting intermittent time series with Gaussian Processes and Tweedie likelihood</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Forecasting intermittent time series with Gaussian Processes and Tweedie likelihood" />
+<meta name="author" content="Stefano Damato, Dario Azzimonti, Giorgio Corani" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We adopt Gaussian Processes (GPs) as latent functions for probabilistic forecasting of intermittent time series. The model is trained in a Bayesian framework that accounts for the uncertainty about the latent function. We couple the latent GP variable with two types of forecast distributions: the negative binomial (NegBinGP) and the Tweedie distribution (TweedieGP). While the negative binomial has already been used in forecasting intermittent time series, this is the first time in which a fully parameterized Tweedie density is used for intermittent time series. We properly evaluate the Tweedie density, which has both a point mass at zero and heavy tails, avoiding simplifying assumptions made in existing models. We test our models on thousands of intermittent count time series. Results show that our models provide consistently better probabilistic forecasts than the competitors. In particular, TweedieGP obtains the best estimates of the highest quantiles, thus showing that it is more flexible than NegBinGP." />
+<meta property="og:description" content="We adopt Gaussian Processes (GPs) as latent functions for probabilistic forecasting of intermittent time series. The model is trained in a Bayesian framework that accounts for the uncertainty about the latent function. We couple the latent GP variable with two types of forecast distributions: the negative binomial (NegBinGP) and the Tweedie distribution (TweedieGP). While the negative binomial has already been used in forecasting intermittent time series, this is the first time in which a fully parameterized Tweedie density is used for intermittent time series. We properly evaluate the Tweedie density, which has both a point mass at zero and heavy tails, avoiding simplifying assumptions made in existing models. We test our models on thousands of intermittent count time series. Results show that our models provide consistently better probabilistic forecasts than the competitors. In particular, TweedieGP obtains the best estimates of the highest quantiles, thus showing that it is more flexible than NegBinGP." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/07/16/ForecastingintermittenttimeserieswithGaussianProcessesandTweedielikelihood.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/07/16/ForecastingintermittenttimeserieswithGaussianProcessesandTweedielikelihood.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Forecasting intermittent time series with Gaussian Processes and Tweedie likelihood" />
+<script type="application/ld+json">
+{"description":"We adopt Gaussian Processes (GPs) as latent functions for probabilistic forecasting of intermittent time series. The model is trained in a Bayesian framework that accounts for the uncertainty about the latent function. We couple the latent GP variable with two types of forecast distributions: the negative binomial (NegBinGP) and the Tweedie distribution (TweedieGP). While the negative binomial has already been used in forecasting intermittent time series, this is the first time in which a fully parameterized Tweedie density is used for intermittent time series. We properly evaluate the Tweedie density, which has both a point mass at zero and heavy tails, avoiding simplifying assumptions made in existing models. We test our models on thousands of intermittent count time series. Results show that our models provide consistently better probabilistic forecasts than the competitors. In particular, TweedieGP obtains the best estimates of the highest quantiles, thus showing that it is more flexible than NegBinGP.","headline":"Forecasting intermittent time series with Gaussian Processes and Tweedie likelihood","dateModified":"2025-07-16T00:00:00+00:00","datePublished":"2025-07-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/16/ForecastingintermittenttimeserieswithGaussianProcessesandTweedielikelihood.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/16/ForecastingintermittenttimeserieswithGaussianProcessesandTweedielikelihood.html","author":{"@type":"Person","name":"Stefano Damato, Dario Azzimonti, Giorgio Corani"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-16 00:00:00 +0000">07-16</time>
+  </p>
+  
+  <h1>Forecasting intermittent time series with Gaussian Processes and Tweedie likelihood</h1>
+  <br>Stefano Damato, Dario Azzimonti, Giorgio Corani</h3>
+  <br> [stat.ML,stat.AP]
+
+  <p>We adopt Gaussian Processes (GPs) as latent functions for probabilistic forecasting of intermittent time series. The model is trained in a Bayesian framework that accounts for the uncertainty about the latent function. We couple the latent GP variable with two types of forecast distributions: the negative binomial (NegBinGP) and the Tweedie distribution (TweedieGP). While the negative binomial has already been used in forecasting intermittent time series, this is the first time in which a fully parameterized Tweedie density is used for intermittent time series. We properly evaluate the Tweedie density, which has both a point mass at zero and heavy tails, avoiding simplifying assumptions made in existing models. We test our models on thousands of intermittent count time series. Results show that our models provide consistently better probabilistic forecasts than the competitors. In particular, TweedieGP obtains the best estimates of the highest quantiles, thus showing that it is more flexible than NegBinGP.</p>
+
+<p><a href="https://arxiv.org/abs/2502.19086">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
