@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Online Random Sampling via Randomness Recycling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Online Random Sampling via Randomness Recycling" />
+<meta name="author" content="Thomas L. Draper, Feras A. Saad" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="``Randomness recycling’’ is a powerful algorithmic technique for reusing a fraction of the random information consumed by a probabilistic algorithm to reduce its entropy requirements. This article presents a family of randomness recycling algorithms for efficiently sampling a sequence $X_1, X_2, X_3, \dots$ of discrete random variables whose joint distribution follows an arbitrary stochastic process. We develop randomness recycling techniques to reduce the entropy cost of a variety of prominent sampling algorithms, which include uniform sampling, inverse transform sampling, lookup-table sampling, alias sampling, and discrete distribution generating (DDG) tree sampling. Our method achieves an expected amortized entropy cost of $H(X_1,\dots,X_k)/k + \varepsilon$ input bits per output sample using $O(\log(1/\varepsilon))$ space as $k\to\infty$, which is arbitrarily close to the optimal Shannon entropy rate of $H(X_1,\dots,X_k)/k$ bits per sample. The combination of space, time, and entropy properties of our method improves upon the Knuth and Yao entropy-optimal algorithm and Han and Hoshi interval algorithm for sampling a discrete random sequence. On the empirical side, we show that randomness recycling enables state-of-the-art runtime performance on the Fisher-Yates shuffle when using a cryptographically secure pseudorandom number generator; and it can also speed up discrete Gaussian samplers. Accompanying the manuscript is a performant software library in the C programming language that uses randomness recycling to accelerate several existing algorithms for random sampling." />
+<meta property="og:description" content="``Randomness recycling’’ is a powerful algorithmic technique for reusing a fraction of the random information consumed by a probabilistic algorithm to reduce its entropy requirements. This article presents a family of randomness recycling algorithms for efficiently sampling a sequence $X_1, X_2, X_3, \dots$ of discrete random variables whose joint distribution follows an arbitrary stochastic process. We develop randomness recycling techniques to reduce the entropy cost of a variety of prominent sampling algorithms, which include uniform sampling, inverse transform sampling, lookup-table sampling, alias sampling, and discrete distribution generating (DDG) tree sampling. Our method achieves an expected amortized entropy cost of $H(X_1,\dots,X_k)/k + \varepsilon$ input bits per output sample using $O(\log(1/\varepsilon))$ space as $k\to\infty$, which is arbitrarily close to the optimal Shannon entropy rate of $H(X_1,\dots,X_k)/k$ bits per sample. The combination of space, time, and entropy properties of our method improves upon the Knuth and Yao entropy-optimal algorithm and Han and Hoshi interval algorithm for sampling a discrete random sequence. On the empirical side, we show that randomness recycling enables state-of-the-art runtime performance on the Fisher-Yates shuffle when using a cryptographically secure pseudorandom number generator; and it can also speed up discrete Gaussian samplers. Accompanying the manuscript is a performant software library in the C programming language that uses randomness recycling to accelerate several existing algorithms for random sampling." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/07/21/EfficientOnlineRandomSamplingviaRandomnessRecycling.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/07/21/EfficientOnlineRandomSamplingviaRandomnessRecycling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Online Random Sampling via Randomness Recycling" />
+<script type="application/ld+json">
+{"description":"``Randomness recycling’’ is a powerful algorithmic technique for reusing a fraction of the random information consumed by a probabilistic algorithm to reduce its entropy requirements. This article presents a family of randomness recycling algorithms for efficiently sampling a sequence $X_1, X_2, X_3, \\dots$ of discrete random variables whose joint distribution follows an arbitrary stochastic process. We develop randomness recycling techniques to reduce the entropy cost of a variety of prominent sampling algorithms, which include uniform sampling, inverse transform sampling, lookup-table sampling, alias sampling, and discrete distribution generating (DDG) tree sampling. Our method achieves an expected amortized entropy cost of $H(X_1,\\dots,X_k)/k + \\varepsilon$ input bits per output sample using $O(\\log(1/\\varepsilon))$ space as $k\\to\\infty$, which is arbitrarily close to the optimal Shannon entropy rate of $H(X_1,\\dots,X_k)/k$ bits per sample. The combination of space, time, and entropy properties of our method improves upon the Knuth and Yao entropy-optimal algorithm and Han and Hoshi interval algorithm for sampling a discrete random sequence. On the empirical side, we show that randomness recycling enables state-of-the-art runtime performance on the Fisher-Yates shuffle when using a cryptographically secure pseudorandom number generator; and it can also speed up discrete Gaussian samplers. Accompanying the manuscript is a performant software library in the C programming language that uses randomness recycling to accelerate several existing algorithms for random sampling.","headline":"Efficient Online Random Sampling via Randomness Recycling","dateModified":"2025-07-21T00:00:00+00:00","datePublished":"2025-07-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/21/EfficientOnlineRandomSamplingviaRandomnessRecycling.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/21/EfficientOnlineRandomSamplingviaRandomnessRecycling.html","author":{"@type":"Person","name":"Thomas L. Draper, Feras A. Saad"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-21 00:00:00 +0000">07-21</time>
+  </p>
+  
+  <h1>Efficient Online Random Sampling via Randomness Recycling</h1>
+  <br>Thomas L. Draper, Feras A. Saad</h3>
+  <br> [stat.CO]
+
+  <p>``Randomness recycling’’ is a powerful algorithmic technique for reusing a fraction of the random information consumed by a probabilistic algorithm to reduce its entropy requirements. This article presents a family of randomness recycling algorithms for efficiently sampling a sequence $X_1, X_2, X_3, \dots$ of discrete random variables whose joint distribution follows an arbitrary stochastic process. We develop randomness recycling techniques to reduce the entropy cost of a variety of prominent sampling algorithms, which include uniform sampling, inverse transform sampling, lookup-table sampling, alias sampling, and discrete distribution generating (DDG) tree sampling. Our method achieves an expected amortized entropy cost of $H(X_1,\dots,X_k)/k + \varepsilon$ input bits per output sample using $O(\log(1/\varepsilon))$ space as $k\to\infty$, which is arbitrarily close to the optimal Shannon entropy rate of $H(X_1,\dots,X_k)/k$ bits per sample. The combination of space, time, and entropy properties of our method improves upon the Knuth and Yao entropy-optimal algorithm and Han and Hoshi interval algorithm for sampling a discrete random sequence.
+  On the empirical side, we show that randomness recycling enables state-of-the-art runtime performance on the Fisher-Yates shuffle when using a cryptographically secure pseudorandom number generator; and it can also speed up discrete Gaussian samplers. Accompanying the manuscript is a performant software library in the C programming language that uses randomness recycling to accelerate several existing algorithms for random sampling.</p>
+
+<p><a href="https://arxiv.org/abs/2505.18879">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
