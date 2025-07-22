@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Approaches for modelling the term-structure of default risk under IFRS 9: A tutorial using discrete-time survival analysis</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Approaches for modelling the term-structure of default risk under IFRS 9: A tutorial using discrete-time survival analysis" />
+<meta name="author" content="Arno Botha, Tanja Verster" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Under the International Financial Reporting Standards (IFRS) 9, credit losses ought to be recognised timeously and accurately. This requirement belies a certain degree of dynamicity when estimating the constituent parts of a credit loss event, most notably the probability of default (PD). It is notoriously difficult to produce such PD-estimates at every point of loan life that are adequately dynamic and accurate, especially when considering the ever-changing macroeconomic background. In rendering these lifetime PD-estimates, the choice of modelling technique plays an important role, which is why we first review a few classes of techniques, including the merits and limitations of each. Our main contribution however is the development of an in-depth and data-driven tutorial using a particular class of techniques called discrete-time survival analysis. This tutorial is accompanied by a diverse set of reusable diagnostic measures for evaluating various aspects of a survival model and the underlying data. A comprehensive R-based codebase is further contributed. We believe that our work can help cultivate common modelling practices under IFRS 9, and should be valuable to practitioners, model validators, and regulators alike." />
+<meta property="og:description" content="Under the International Financial Reporting Standards (IFRS) 9, credit losses ought to be recognised timeously and accurately. This requirement belies a certain degree of dynamicity when estimating the constituent parts of a credit loss event, most notably the probability of default (PD). It is notoriously difficult to produce such PD-estimates at every point of loan life that are adequately dynamic and accurate, especially when considering the ever-changing macroeconomic background. In rendering these lifetime PD-estimates, the choice of modelling technique plays an important role, which is why we first review a few classes of techniques, including the merits and limitations of each. Our main contribution however is the development of an in-depth and data-driven tutorial using a particular class of techniques called discrete-time survival analysis. This tutorial is accompanied by a diverse set of reusable diagnostic measures for evaluating various aspects of a survival model and the underlying data. A comprehensive R-based codebase is further contributed. We believe that our work can help cultivate common modelling practices under IFRS 9, and should be valuable to practitioners, model validators, and regulators alike." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/07/22/ApproachesformodellingthetermstructureofdefaultriskunderIFRS9Atutorialusingdiscretetimesurvivalanalysis.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/07/22/ApproachesformodellingthetermstructureofdefaultriskunderIFRS9Atutorialusingdiscretetimesurvivalanalysis.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Approaches for modelling the term-structure of default risk under IFRS 9: A tutorial using discrete-time survival analysis" />
+<script type="application/ld+json">
+{"description":"Under the International Financial Reporting Standards (IFRS) 9, credit losses ought to be recognised timeously and accurately. This requirement belies a certain degree of dynamicity when estimating the constituent parts of a credit loss event, most notably the probability of default (PD). It is notoriously difficult to produce such PD-estimates at every point of loan life that are adequately dynamic and accurate, especially when considering the ever-changing macroeconomic background. In rendering these lifetime PD-estimates, the choice of modelling technique plays an important role, which is why we first review a few classes of techniques, including the merits and limitations of each. Our main contribution however is the development of an in-depth and data-driven tutorial using a particular class of techniques called discrete-time survival analysis. This tutorial is accompanied by a diverse set of reusable diagnostic measures for evaluating various aspects of a survival model and the underlying data. A comprehensive R-based codebase is further contributed. We believe that our work can help cultivate common modelling practices under IFRS 9, and should be valuable to practitioners, model validators, and regulators alike.","headline":"Approaches for modelling the term-structure of default risk under IFRS 9: A tutorial using discrete-time survival analysis","dateModified":"2025-07-22T00:00:00+00:00","datePublished":"2025-07-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/22/ApproachesformodellingthetermstructureofdefaultriskunderIFRS9Atutorialusingdiscretetimesurvivalanalysis.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/22/ApproachesformodellingthetermstructureofdefaultriskunderIFRS9Atutorialusingdiscretetimesurvivalanalysis.html","author":{"@type":"Person","name":"Arno Botha, Tanja Verster"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-22 00:00:00 +0000">07-22</time>
+  </p>
+  
+  <h1>Approaches for modelling the term-structure of default risk under IFRS 9: A tutorial using discrete-time survival analysis</h1>
+  <br>Arno Botha, Tanja Verster</h3>
+  <br> [stat.AP]
+
+  <p>Under the International Financial Reporting Standards (IFRS) 9, credit losses ought to be recognised timeously and accurately. This requirement belies a certain degree of dynamicity when estimating the constituent parts of a credit loss event, most notably the probability of default (PD). It is notoriously difficult to produce such PD-estimates at every point of loan life that are adequately dynamic and accurate, especially when considering the ever-changing macroeconomic background. In rendering these lifetime PD-estimates, the choice of modelling technique plays an important role, which is why we first review a few classes of techniques, including the merits and limitations of each. Our main contribution however is the development of an in-depth and data-driven tutorial using a particular class of techniques called discrete-time survival analysis. This tutorial is accompanied by a diverse set of reusable diagnostic measures for evaluating various aspects of a survival model and the underlying data. A comprehensive R-based codebase is further contributed. We believe that our work can help cultivate common modelling practices under IFRS 9, and should be valuable to practitioners, model validators, and regulators alike.</p>
+
+<p><a href="https://arxiv.org/abs/2507.15441">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Statistician's Overview of Mechanistic-Informed Modeling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Statistician’s Overview of Mechanistic-Informed Modeling" />
+<meta name="author" content="Christopher K. Wikle, Joshua North, Giri Gopalan, Myungsoo Yoo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The recent success of deep neural network models with physical constraints (so-called, Physics-Informed Neural Networks, PINNs) has led to renewed interest in the incorporation of mechanistic information in predictive models. Statisticians and others have long been interested in this problem, which has led to several practical and innovative solutions dating back decades. In this overview, we focus on the problem of data-driven prediction and inference of dynamic spatio-temporal processes that include mechanistic information, such as would be available from partial differential equations, with a strong focus on the quantification of uncertainty associated with data, process, and parameters. We give a brief review of several paradigms and focus our attention on Bayesian implementations given they naturally accommodate uncertainty quantification. We then specify a general Bayesian hierarchical modeling framework for spatio-temporal data that can accommodate these mechanistic-informed process approaches. The advantage of this framework is its flexibility and generalizability. We illustrate the methodology via a simulation study in which a nonlinear Burgers’ equation PDE is embedded via a Bayesian PINN." />
+<meta property="og:description" content="The recent success of deep neural network models with physical constraints (so-called, Physics-Informed Neural Networks, PINNs) has led to renewed interest in the incorporation of mechanistic information in predictive models. Statisticians and others have long been interested in this problem, which has led to several practical and innovative solutions dating back decades. In this overview, we focus on the problem of data-driven prediction and inference of dynamic spatio-temporal processes that include mechanistic information, such as would be available from partial differential equations, with a strong focus on the quantification of uncertainty associated with data, process, and parameters. We give a brief review of several paradigms and focus our attention on Bayesian implementations given they naturally accommodate uncertainty quantification. We then specify a general Bayesian hierarchical modeling framework for spatio-temporal data that can accommodate these mechanistic-informed process approaches. The advantage of this framework is its flexibility and generalizability. We illustrate the methodology via a simulation study in which a nonlinear Burgers’ equation PDE is embedded via a Bayesian PINN." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/07/22/AStatisticiansOverviewofMechanisticInformedModeling.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/07/22/AStatisticiansOverviewofMechanisticInformedModeling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Statistician’s Overview of Mechanistic-Informed Modeling" />
+<script type="application/ld+json">
+{"description":"The recent success of deep neural network models with physical constraints (so-called, Physics-Informed Neural Networks, PINNs) has led to renewed interest in the incorporation of mechanistic information in predictive models. Statisticians and others have long been interested in this problem, which has led to several practical and innovative solutions dating back decades. In this overview, we focus on the problem of data-driven prediction and inference of dynamic spatio-temporal processes that include mechanistic information, such as would be available from partial differential equations, with a strong focus on the quantification of uncertainty associated with data, process, and parameters. We give a brief review of several paradigms and focus our attention on Bayesian implementations given they naturally accommodate uncertainty quantification. We then specify a general Bayesian hierarchical modeling framework for spatio-temporal data that can accommodate these mechanistic-informed process approaches. The advantage of this framework is its flexibility and generalizability. We illustrate the methodology via a simulation study in which a nonlinear Burgers’ equation PDE is embedded via a Bayesian PINN.","headline":"A Statistician’s Overview of Mechanistic-Informed Modeling","dateModified":"2025-07-22T00:00:00+00:00","datePublished":"2025-07-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/22/AStatisticiansOverviewofMechanisticInformedModeling.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/22/AStatisticiansOverviewofMechanisticInformedModeling.html","author":{"@type":"Person","name":"Christopher K. Wikle, Joshua North, Giri Gopalan, Myungsoo Yoo"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-22 00:00:00 +0000">07-22</time>
+  </p>
+  
+  <h1>A Statistician's Overview of Mechanistic-Informed Modeling</h1>
+  <br>Christopher K. Wikle, Joshua North, Giri Gopalan, Myungsoo Yoo</h3>
+  <br> [stat.ME]
+
+  <p>The recent success of deep neural network models with physical constraints (so-called, Physics-Informed Neural Networks, PINNs) has led to renewed interest in the incorporation of mechanistic information in predictive models. Statisticians and others have long been interested in this problem, which has led to several practical and innovative solutions dating back decades. In this overview, we focus on the problem of data-driven prediction and inference of dynamic spatio-temporal processes that include mechanistic information, such as would be available from partial differential equations, with a strong focus on the quantification of uncertainty associated with data, process, and parameters. We give a brief review of several paradigms and focus our attention on Bayesian implementations given they naturally accommodate uncertainty quantification. We then specify a general Bayesian hierarchical modeling framework for spatio-temporal data that can accommodate these mechanistic-informed process approaches. The advantage of this framework is its flexibility and generalizability. We illustrate the methodology via a simulation study in which a nonlinear Burgers’ equation PDE is embedded via a Bayesian PINN.</p>
+
+<p><a href="https://arxiv.org/abs/2507.14336">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
