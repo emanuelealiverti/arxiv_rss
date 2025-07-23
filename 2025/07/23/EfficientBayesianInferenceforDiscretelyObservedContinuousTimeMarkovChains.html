@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Bayesian Inference for Discretely Observed Continuous Time Markov Chains</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Bayesian Inference for Discretely Observed Continuous Time Markov Chains" />
+<meta name="author" content="Tao Tang, Lachlan Astfalck, David Dunson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Inference for continuous-time Markov chains (CTMCs) becomes challenging when the process is only observed at discrete time points. The exact likelihood is intractable, and existing methods often struggle even in medium-dimensional state-spaces. We propose a scalable Bayesian framework for CTMC inference based on a pseudo-likelihood that bypasses the need for the full intractable likelihood. Our approach jointly estimates the probability transition matrix and a biorthogonal spectral decomposition of the generator, enabling an efficient Gibbs sampling procedure that obeys embeddability. Existing methods typically integrate out the unobserved transitions, which becomes computationally burdensome as the number of data or dimensions increase. The computational cost of our method is near-invariant in the number of data and scales well to medium-high dimensions. We justify our pseudo-likelihood approach by establishing theoretical guarantees, including a Bernstein-von Mises theorem for the probability transition matrix and posterior consistency for the spectral parameters of the generator. Through simulation and applications, we showcase the flexibility and robustness of our approach, offering a tractable and scalable approach to Bayesian inference for CTMCs." />
+<meta property="og:description" content="Inference for continuous-time Markov chains (CTMCs) becomes challenging when the process is only observed at discrete time points. The exact likelihood is intractable, and existing methods often struggle even in medium-dimensional state-spaces. We propose a scalable Bayesian framework for CTMC inference based on a pseudo-likelihood that bypasses the need for the full intractable likelihood. Our approach jointly estimates the probability transition matrix and a biorthogonal spectral decomposition of the generator, enabling an efficient Gibbs sampling procedure that obeys embeddability. Existing methods typically integrate out the unobserved transitions, which becomes computationally burdensome as the number of data or dimensions increase. The computational cost of our method is near-invariant in the number of data and scales well to medium-high dimensions. We justify our pseudo-likelihood approach by establishing theoretical guarantees, including a Bernstein-von Mises theorem for the probability transition matrix and posterior consistency for the spectral parameters of the generator. Through simulation and applications, we showcase the flexibility and robustness of our approach, offering a tractable and scalable approach to Bayesian inference for CTMCs." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/07/23/EfficientBayesianInferenceforDiscretelyObservedContinuousTimeMarkovChains.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/07/23/EfficientBayesianInferenceforDiscretelyObservedContinuousTimeMarkovChains.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Bayesian Inference for Discretely Observed Continuous Time Markov Chains" />
+<script type="application/ld+json">
+{"description":"Inference for continuous-time Markov chains (CTMCs) becomes challenging when the process is only observed at discrete time points. The exact likelihood is intractable, and existing methods often struggle even in medium-dimensional state-spaces. We propose a scalable Bayesian framework for CTMC inference based on a pseudo-likelihood that bypasses the need for the full intractable likelihood. Our approach jointly estimates the probability transition matrix and a biorthogonal spectral decomposition of the generator, enabling an efficient Gibbs sampling procedure that obeys embeddability. Existing methods typically integrate out the unobserved transitions, which becomes computationally burdensome as the number of data or dimensions increase. The computational cost of our method is near-invariant in the number of data and scales well to medium-high dimensions. We justify our pseudo-likelihood approach by establishing theoretical guarantees, including a Bernstein-von Mises theorem for the probability transition matrix and posterior consistency for the spectral parameters of the generator. Through simulation and applications, we showcase the flexibility and robustness of our approach, offering a tractable and scalable approach to Bayesian inference for CTMCs.","headline":"Efficient Bayesian Inference for Discretely Observed Continuous Time Markov Chains","dateModified":"2025-07-23T00:00:00+00:00","datePublished":"2025-07-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/23/EfficientBayesianInferenceforDiscretelyObservedContinuousTimeMarkovChains.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/23/EfficientBayesianInferenceforDiscretelyObservedContinuousTimeMarkovChains.html","author":{"@type":"Person","name":"Tao Tang, Lachlan Astfalck, David Dunson"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-23 00:00:00 +0000">07-23</time>
+  </p>
+  
+  <h1>Efficient Bayesian Inference for Discretely Observed Continuous Time Markov Chains</h1>
+  <br>Tao Tang, Lachlan Astfalck, David Dunson</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Inference for continuous-time Markov chains (CTMCs) becomes challenging when the process is only observed at discrete time points. The exact likelihood is intractable, and existing methods often struggle even in medium-dimensional state-spaces. We propose a scalable Bayesian framework for CTMC inference based on a pseudo-likelihood that bypasses the need for the full intractable likelihood. Our approach jointly estimates the probability transition matrix and a biorthogonal spectral decomposition of the generator, enabling an efficient Gibbs sampling procedure that obeys embeddability. Existing methods typically integrate out the unobserved transitions, which becomes computationally burdensome as the number of data or dimensions increase. The computational cost of our method is near-invariant in the number of data and scales well to medium-high dimensions. We justify our pseudo-likelihood approach by establishing theoretical guarantees, including a Bernstein-von Mises theorem for the probability transition matrix and posterior consistency for the spectral parameters of the generator. Through simulation and applications, we showcase the flexibility and robustness of our approach, offering a tractable and scalable approach to Bayesian inference for CTMCs.</p>
+
+<p><a href="https://arxiv.org/abs/2507.16756">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
