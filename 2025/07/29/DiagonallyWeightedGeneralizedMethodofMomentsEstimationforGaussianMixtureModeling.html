@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Diagonally-Weighted Generalized Method of Moments Estimation for Gaussian Mixture Modeling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Diagonally-Weighted Generalized Method of Moments Estimation for Gaussian Mixture Modeling" />
+<meta name="author" content="Liu Zhang, Oscar Mickelin, Sheng Xu, Amit Singer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Since Pearson [Philosophical Transactions of the Royal Society of London. A, 185 (1894), pp. 71-110] first applied the method of moments (MM) for modeling data as a mixture of one-dimensional Gaussians, moment-based estimation methods have proliferated. Among these methods, the generalized method of moments (GMM) improves the statistical efficiency of MM by weighting the moments appropriately. However, the computational complexity and storage complexity of MM and GMM grow exponentially with the dimension, making these methods impractical for high-dimensional data or when higher-order moments are required. Such computational bottlenecks are more severe in GMM since it additionally requires estimating a large weighting matrix. To overcome these bottlenecks, we propose the diagonally-weighted GMM (DGMM), which achieves a balance among statistical efficiency, computational complexity, and numerical stability. We apply DGMM to study the parameter estimation problem for weakly separated heteroscedastic low-rank Gaussian mixtures and design a computationally efficient and numerically stable algorithm that obtains the DGMM estimator without explicitly computing or storing the moment tensors. We implement the proposed algorithm and empirically validate the advantages of DGMM: in numerical studies, DGMM attains smaller estimation errors while requiring substantially shorter runtime than MM and GMM. The code and data will be available upon publication at https://github.com/liu-lzhang/dgmm." />
+<meta property="og:description" content="Since Pearson [Philosophical Transactions of the Royal Society of London. A, 185 (1894), pp. 71-110] first applied the method of moments (MM) for modeling data as a mixture of one-dimensional Gaussians, moment-based estimation methods have proliferated. Among these methods, the generalized method of moments (GMM) improves the statistical efficiency of MM by weighting the moments appropriately. However, the computational complexity and storage complexity of MM and GMM grow exponentially with the dimension, making these methods impractical for high-dimensional data or when higher-order moments are required. Such computational bottlenecks are more severe in GMM since it additionally requires estimating a large weighting matrix. To overcome these bottlenecks, we propose the diagonally-weighted GMM (DGMM), which achieves a balance among statistical efficiency, computational complexity, and numerical stability. We apply DGMM to study the parameter estimation problem for weakly separated heteroscedastic low-rank Gaussian mixtures and design a computationally efficient and numerically stable algorithm that obtains the DGMM estimator without explicitly computing or storing the moment tensors. We implement the proposed algorithm and empirically validate the advantages of DGMM: in numerical studies, DGMM attains smaller estimation errors while requiring substantially shorter runtime than MM and GMM. The code and data will be available upon publication at https://github.com/liu-lzhang/dgmm." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/07/29/DiagonallyWeightedGeneralizedMethodofMomentsEstimationforGaussianMixtureModeling.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/07/29/DiagonallyWeightedGeneralizedMethodofMomentsEstimationforGaussianMixtureModeling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Diagonally-Weighted Generalized Method of Moments Estimation for Gaussian Mixture Modeling" />
+<script type="application/ld+json">
+{"description":"Since Pearson [Philosophical Transactions of the Royal Society of London. A, 185 (1894), pp. 71-110] first applied the method of moments (MM) for modeling data as a mixture of one-dimensional Gaussians, moment-based estimation methods have proliferated. Among these methods, the generalized method of moments (GMM) improves the statistical efficiency of MM by weighting the moments appropriately. However, the computational complexity and storage complexity of MM and GMM grow exponentially with the dimension, making these methods impractical for high-dimensional data or when higher-order moments are required. Such computational bottlenecks are more severe in GMM since it additionally requires estimating a large weighting matrix. To overcome these bottlenecks, we propose the diagonally-weighted GMM (DGMM), which achieves a balance among statistical efficiency, computational complexity, and numerical stability. We apply DGMM to study the parameter estimation problem for weakly separated heteroscedastic low-rank Gaussian mixtures and design a computationally efficient and numerically stable algorithm that obtains the DGMM estimator without explicitly computing or storing the moment tensors. We implement the proposed algorithm and empirically validate the advantages of DGMM: in numerical studies, DGMM attains smaller estimation errors while requiring substantially shorter runtime than MM and GMM. The code and data will be available upon publication at https://github.com/liu-lzhang/dgmm.","headline":"Diagonally-Weighted Generalized Method of Moments Estimation for Gaussian Mixture Modeling","dateModified":"2025-07-29T00:00:00+00:00","datePublished":"2025-07-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/29/DiagonallyWeightedGeneralizedMethodofMomentsEstimationforGaussianMixtureModeling.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/29/DiagonallyWeightedGeneralizedMethodofMomentsEstimationforGaussianMixtureModeling.html","author":{"@type":"Person","name":"Liu Zhang, Oscar Mickelin, Sheng Xu, Amit Singer"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-29 00:00:00 +0000">07-29</time>
+  </p>
+  
+  <h1>Diagonally-Weighted Generalized Method of Moments Estimation for Gaussian Mixture Modeling</h1>
+  <br>Liu Zhang, Oscar Mickelin, Sheng Xu, Amit Singer</h3>
+  <br> [stat.ME,stat.ML,stat.TH]
+
+  <p>Since Pearson [Philosophical Transactions of the Royal Society of London. A, 185 (1894), pp. 71-110] first applied the method of moments (MM) for modeling data as a mixture of one-dimensional Gaussians, moment-based estimation methods have proliferated. Among these methods, the generalized method of moments (GMM) improves the statistical efficiency of MM by weighting the moments appropriately. However, the computational complexity and storage complexity of MM and GMM grow exponentially with the dimension, making these methods impractical for high-dimensional data or when higher-order moments are required. Such computational bottlenecks are more severe in GMM since it additionally requires estimating a large weighting matrix. To overcome these bottlenecks, we propose the diagonally-weighted GMM (DGMM), which achieves a balance among statistical efficiency, computational complexity, and numerical stability. We apply DGMM to study the parameter estimation problem for weakly separated heteroscedastic low-rank Gaussian mixtures and design a computationally efficient and numerically stable algorithm that obtains the DGMM estimator without explicitly computing or storing the moment tensors. We implement the proposed algorithm and empirically validate the advantages of DGMM: in numerical studies, DGMM attains smaller estimation errors while requiring substantially shorter runtime than MM and GMM. The code and data will be available upon publication at https://github.com/liu-lzhang/dgmm.</p>
+
+<p><a href="https://arxiv.org/abs/2507.20459">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

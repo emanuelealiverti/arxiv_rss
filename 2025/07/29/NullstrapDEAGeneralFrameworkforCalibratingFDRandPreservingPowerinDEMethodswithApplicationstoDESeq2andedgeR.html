@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Nullstrap-DE: A General Framework for Calibrating FDR and Preserving Power in DE Methods, with Applications to DESeq2 and edgeR</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Nullstrap-DE: A General Framework for Calibrating FDR and Preserving Power in DE Methods, with Applications to DESeq2 and edgeR" />
+<meta name="author" content="Chenxin Jiang, Changhu Wang, Jingyi Jessica Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Differential expression (DE) analysis is a key task in RNA-seq studies, aiming to identify genes with expression differences across conditions. A central challenge is balancing false discovery rate (FDR) control with statistical power. Parametric methods such as DESeq2 and edgeR achieve high power by modeling gene-level counts using negative binomial distributions and applying empirical Bayes shrinkage. However, these methods may suffer from FDR inflation when model assumptions are mildly violated, especially in large-sample settings. In contrast, non-parametric tests like Wilcoxon offer more robust FDR control but often lack power and do not support covariate adjustment. We propose Nullstrap-DE, a general add-on framework that combines the strengths of both approaches. Designed to augment tools like DESeq2 and edgeR, Nullstrap-DE calibrates FDR while preserving power, without modifying the original method’s implementation. It generates synthetic null data from a model fitted under the gene-specific null (no DE), applies the same test statistic to both observed and synthetic data, and derives a threshold that satisfies the target FDR level. We show theoretically that Nullstrap-DE asymptotically controls FDR while maintaining power consistency. Simulations confirm that it achieves reliable FDR control and high power across diverse settings, where DESeq2, edgeR, or Wilcoxon often show inflated FDR or low power. Applications to real datasets show that Nullstrap-DE enhances statistical rigor and identifies biologically meaningful genes." />
+<meta property="og:description" content="Differential expression (DE) analysis is a key task in RNA-seq studies, aiming to identify genes with expression differences across conditions. A central challenge is balancing false discovery rate (FDR) control with statistical power. Parametric methods such as DESeq2 and edgeR achieve high power by modeling gene-level counts using negative binomial distributions and applying empirical Bayes shrinkage. However, these methods may suffer from FDR inflation when model assumptions are mildly violated, especially in large-sample settings. In contrast, non-parametric tests like Wilcoxon offer more robust FDR control but often lack power and do not support covariate adjustment. We propose Nullstrap-DE, a general add-on framework that combines the strengths of both approaches. Designed to augment tools like DESeq2 and edgeR, Nullstrap-DE calibrates FDR while preserving power, without modifying the original method’s implementation. It generates synthetic null data from a model fitted under the gene-specific null (no DE), applies the same test statistic to both observed and synthetic data, and derives a threshold that satisfies the target FDR level. We show theoretically that Nullstrap-DE asymptotically controls FDR while maintaining power consistency. Simulations confirm that it achieves reliable FDR control and high power across diverse settings, where DESeq2, edgeR, or Wilcoxon often show inflated FDR or low power. Applications to real datasets show that Nullstrap-DE enhances statistical rigor and identifies biologically meaningful genes." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/07/29/NullstrapDEAGeneralFrameworkforCalibratingFDRandPreservingPowerinDEMethodswithApplicationstoDESeq2andedgeR.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/07/29/NullstrapDEAGeneralFrameworkforCalibratingFDRandPreservingPowerinDEMethodswithApplicationstoDESeq2andedgeR.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Nullstrap-DE: A General Framework for Calibrating FDR and Preserving Power in DE Methods, with Applications to DESeq2 and edgeR" />
+<script type="application/ld+json">
+{"description":"Differential expression (DE) analysis is a key task in RNA-seq studies, aiming to identify genes with expression differences across conditions. A central challenge is balancing false discovery rate (FDR) control with statistical power. Parametric methods such as DESeq2 and edgeR achieve high power by modeling gene-level counts using negative binomial distributions and applying empirical Bayes shrinkage. However, these methods may suffer from FDR inflation when model assumptions are mildly violated, especially in large-sample settings. In contrast, non-parametric tests like Wilcoxon offer more robust FDR control but often lack power and do not support covariate adjustment. We propose Nullstrap-DE, a general add-on framework that combines the strengths of both approaches. Designed to augment tools like DESeq2 and edgeR, Nullstrap-DE calibrates FDR while preserving power, without modifying the original method’s implementation. It generates synthetic null data from a model fitted under the gene-specific null (no DE), applies the same test statistic to both observed and synthetic data, and derives a threshold that satisfies the target FDR level. We show theoretically that Nullstrap-DE asymptotically controls FDR while maintaining power consistency. Simulations confirm that it achieves reliable FDR control and high power across diverse settings, where DESeq2, edgeR, or Wilcoxon often show inflated FDR or low power. Applications to real datasets show that Nullstrap-DE enhances statistical rigor and identifies biologically meaningful genes.","headline":"Nullstrap-DE: A General Framework for Calibrating FDR and Preserving Power in DE Methods, with Applications to DESeq2 and edgeR","dateModified":"2025-07-29T00:00:00+00:00","datePublished":"2025-07-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/29/NullstrapDEAGeneralFrameworkforCalibratingFDRandPreservingPowerinDEMethodswithApplicationstoDESeq2andedgeR.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/07/29/NullstrapDEAGeneralFrameworkforCalibratingFDRandPreservingPowerinDEMethodswithApplicationstoDESeq2andedgeR.html","author":{"@type":"Person","name":"Chenxin Jiang, Changhu Wang, Jingyi Jessica Li"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-29 00:00:00 +0000">07-29</time>
+  </p>
+  
+  <h1>Nullstrap-DE: A General Framework for Calibrating FDR and Preserving Power in DE Methods, with Applications to DESeq2 and edgeR</h1>
+  <br>Chenxin Jiang, Changhu Wang, Jingyi Jessica Li</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Differential expression (DE) analysis is a key task in RNA-seq studies, aiming to identify genes with expression differences across conditions. A central challenge is balancing false discovery rate (FDR) control with statistical power. Parametric methods such as DESeq2 and edgeR achieve high power by modeling gene-level counts using negative binomial distributions and applying empirical Bayes shrinkage. However, these methods may suffer from FDR inflation when model assumptions are mildly violated, especially in large-sample settings. In contrast, non-parametric tests like Wilcoxon offer more robust FDR control but often lack power and do not support covariate adjustment. We propose Nullstrap-DE, a general add-on framework that combines the strengths of both approaches. Designed to augment tools like DESeq2 and edgeR, Nullstrap-DE calibrates FDR while preserving power, without modifying the original method’s implementation. It generates synthetic null data from a model fitted under the gene-specific null (no DE), applies the same test statistic to both observed and synthetic data, and derives a threshold that satisfies the target FDR level. We show theoretically that Nullstrap-DE asymptotically controls FDR while maintaining power consistency. Simulations confirm that it achieves reliable FDR control and high power across diverse settings, where DESeq2, edgeR, or Wilcoxon often show inflated FDR or low power. Applications to real datasets show that Nullstrap-DE enhances statistical rigor and identifies biologically meaningful genes.</p>
+
+<p><a href="https://arxiv.org/abs/2507.20598">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
