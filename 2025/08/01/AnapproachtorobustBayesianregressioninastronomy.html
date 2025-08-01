@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An approach to robust Bayesian regression in astronomy</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="An approach to robust Bayesian regression in astronomy" />
+<meta name="author" content="William Martin, Daniel J. Mortlock" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Model mis-specification (e.g. the presence of outliers) is commonly encountered in astronomical analyses, often requiring the use of ad hoc algorithms which are sensitive to arbitrary thresholds (e.g. sigma-clipping). For any given dataset, the optimal approach will be to develop a bespoke statistical model of the data generation and measurement processes, but these come with a development cost; there is hence utility in having generic modelling approaches that are both principled and robust to model mis-specification. Here we develop and implement a generic Bayesian approach to linear regression, based on Student’s t-distributions, that is robust to outliers and mis-specification of the noise model. Our method is validated using simulated datasets with various degrees of model mis-specification; the derived constraints are shown to be systematically less biased than those from a similar model using normal distributions. We demonstrate that, for a dataset without outliers, a worst-case inference using t-distributions would give unbiased results with $\lesssim!10$ per cent increase in the reported parameter uncertainties. We also compare with existing analyses of real-world datasets, finding qualitatively different results where normal distributions have been used and agreement where more robust methods have been applied. A Python implementation of this model, t-cup, is made available for others to use." />
+<meta property="og:description" content="Model mis-specification (e.g. the presence of outliers) is commonly encountered in astronomical analyses, often requiring the use of ad hoc algorithms which are sensitive to arbitrary thresholds (e.g. sigma-clipping). For any given dataset, the optimal approach will be to develop a bespoke statistical model of the data generation and measurement processes, but these come with a development cost; there is hence utility in having generic modelling approaches that are both principled and robust to model mis-specification. Here we develop and implement a generic Bayesian approach to linear regression, based on Student’s t-distributions, that is robust to outliers and mis-specification of the noise model. Our method is validated using simulated datasets with various degrees of model mis-specification; the derived constraints are shown to be systematically less biased than those from a similar model using normal distributions. We demonstrate that, for a dataset without outliers, a worst-case inference using t-distributions would give unbiased results with $\lesssim!10$ per cent increase in the reported parameter uncertainties. We also compare with existing analyses of real-world datasets, finding qualitatively different results where normal distributions have been used and agreement where more robust methods have been applied. A Python implementation of this model, t-cup, is made available for others to use." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/01/AnapproachtorobustBayesianregressioninastronomy.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/01/AnapproachtorobustBayesianregressioninastronomy.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="An approach to robust Bayesian regression in astronomy" />
+<script type="application/ld+json">
+{"description":"Model mis-specification (e.g. the presence of outliers) is commonly encountered in astronomical analyses, often requiring the use of ad hoc algorithms which are sensitive to arbitrary thresholds (e.g. sigma-clipping). For any given dataset, the optimal approach will be to develop a bespoke statistical model of the data generation and measurement processes, but these come with a development cost; there is hence utility in having generic modelling approaches that are both principled and robust to model mis-specification. Here we develop and implement a generic Bayesian approach to linear regression, based on Student’s t-distributions, that is robust to outliers and mis-specification of the noise model. Our method is validated using simulated datasets with various degrees of model mis-specification; the derived constraints are shown to be systematically less biased than those from a similar model using normal distributions. We demonstrate that, for a dataset without outliers, a worst-case inference using t-distributions would give unbiased results with $\\lesssim!10$ per cent increase in the reported parameter uncertainties. We also compare with existing analyses of real-world datasets, finding qualitatively different results where normal distributions have been used and agreement where more robust methods have been applied. A Python implementation of this model, t-cup, is made available for others to use.","headline":"An approach to robust Bayesian regression in astronomy","dateModified":"2025-08-01T00:00:00+00:00","datePublished":"2025-08-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/01/AnapproachtorobustBayesianregressioninastronomy.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/01/AnapproachtorobustBayesianregressioninastronomy.html","author":{"@type":"Person","name":"William Martin, Daniel J. Mortlock"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-01 00:00:00 +0000">08-01</time>
+  </p>
+  
+  <h1>An approach to robust Bayesian regression in astronomy</h1>
+  <br>William Martin, Daniel J. Mortlock</h3>
+  <br> [stat.ME]
+
+  <p>Model mis-specification (e.g. the presence of outliers) is commonly encountered in astronomical analyses, often requiring the use of ad hoc algorithms which are sensitive to arbitrary thresholds (e.g. sigma-clipping). For any given dataset, the optimal approach will be to develop a bespoke statistical model of the data generation and measurement processes, but these come with a development cost; there is hence utility in having generic modelling approaches that are both principled and robust to model mis-specification. Here we develop and implement a generic Bayesian approach to linear regression, based on Student’s t-distributions, that is robust to outliers and mis-specification of the noise model. Our method is validated using simulated datasets with various degrees of model mis-specification; the derived constraints are shown to be systematically less biased than those from a similar model using normal distributions. We demonstrate that, for a dataset without outliers, a worst-case inference using t-distributions would give unbiased results with $\lesssim!10$ per cent increase in the reported parameter uncertainties. We also compare with existing analyses of real-world datasets, finding qualitatively different results where normal distributions have been used and agreement where more robust methods have been applied. A Python implementation of this model, t-cup, is made available for others to use.</p>
+
+<p><a href="https://arxiv.org/abs/2411.02380">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
