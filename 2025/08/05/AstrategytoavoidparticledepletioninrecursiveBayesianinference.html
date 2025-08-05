@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A strategy to avoid particle depletion in recursive Bayesian inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A strategy to avoid particle depletion in recursive Bayesian inference" />
+<meta name="author" content="Henry R. Scharf" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recursive Bayesian inference, in which posterior beliefs are updated in light of accumulating data, is a tool for implementing Bayesian models in applications with streaming and/or very large data sets. As the posterior of one iteration becomes the prior for the next, beliefs are updated sequentially instead of all-at-once. Thus, recursive inference is relevant for both streaming data and settings where data too numerous to be analyzed together can be partitioned into manageable pieces. In practice, posteriors are characterized by samples obtained using, e.g., acceptance/rejection sampling in which draws from the posterior of one iteration are used as proposals for the next. While simple to implement, such filtering approaches suffer from particle depletion, degrading each sample’s ability to represent its target posterior. As a remedy, we investigate generating proposals from a smoothed version of the preceding sample’s empirical distribution. The method retains computationally valuable properties of similar methods, but without particle depletion, and we demonstrate its accuracy in simulation. We apply the method to data simulated from both a simple, logistic regression model as well as a hierarchical model originally developed for classifying forest vegetation in New Mexico using satellite imagery." />
+<meta property="og:description" content="Recursive Bayesian inference, in which posterior beliefs are updated in light of accumulating data, is a tool for implementing Bayesian models in applications with streaming and/or very large data sets. As the posterior of one iteration becomes the prior for the next, beliefs are updated sequentially instead of all-at-once. Thus, recursive inference is relevant for both streaming data and settings where data too numerous to be analyzed together can be partitioned into manageable pieces. In practice, posteriors are characterized by samples obtained using, e.g., acceptance/rejection sampling in which draws from the posterior of one iteration are used as proposals for the next. While simple to implement, such filtering approaches suffer from particle depletion, degrading each sample’s ability to represent its target posterior. As a remedy, we investigate generating proposals from a smoothed version of the preceding sample’s empirical distribution. The method retains computationally valuable properties of similar methods, but without particle depletion, and we demonstrate its accuracy in simulation. We apply the method to data simulated from both a simple, logistic regression model as well as a hierarchical model originally developed for classifying forest vegetation in New Mexico using satellite imagery." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/05/AstrategytoavoidparticledepletioninrecursiveBayesianinference.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/05/AstrategytoavoidparticledepletioninrecursiveBayesianinference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A strategy to avoid particle depletion in recursive Bayesian inference" />
+<script type="application/ld+json">
+{"description":"Recursive Bayesian inference, in which posterior beliefs are updated in light of accumulating data, is a tool for implementing Bayesian models in applications with streaming and/or very large data sets. As the posterior of one iteration becomes the prior for the next, beliefs are updated sequentially instead of all-at-once. Thus, recursive inference is relevant for both streaming data and settings where data too numerous to be analyzed together can be partitioned into manageable pieces. In practice, posteriors are characterized by samples obtained using, e.g., acceptance/rejection sampling in which draws from the posterior of one iteration are used as proposals for the next. While simple to implement, such filtering approaches suffer from particle depletion, degrading each sample’s ability to represent its target posterior. As a remedy, we investigate generating proposals from a smoothed version of the preceding sample’s empirical distribution. The method retains computationally valuable properties of similar methods, but without particle depletion, and we demonstrate its accuracy in simulation. We apply the method to data simulated from both a simple, logistic regression model as well as a hierarchical model originally developed for classifying forest vegetation in New Mexico using satellite imagery.","headline":"A strategy to avoid particle depletion in recursive Bayesian inference","dateModified":"2025-08-05T00:00:00+00:00","datePublished":"2025-08-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/05/AstrategytoavoidparticledepletioninrecursiveBayesianinference.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/05/AstrategytoavoidparticledepletioninrecursiveBayesianinference.html","author":{"@type":"Person","name":"Henry R. Scharf"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-05 00:00:00 +0000">08-05</time>
+  </p>
+  
+  <h1>A strategy to avoid particle depletion in recursive Bayesian inference</h1>
+  <br>Henry R. Scharf</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Recursive Bayesian inference, in which posterior beliefs are updated in light of accumulating data, is a tool for implementing Bayesian models in applications with streaming and/or very large data sets. As the posterior of one iteration becomes the prior for the next, beliefs are updated sequentially instead of all-at-once. Thus, recursive inference is relevant for both streaming data and settings where data too numerous to be analyzed together can be partitioned into manageable pieces. In practice, posteriors are characterized by samples obtained using, e.g., acceptance/rejection sampling in which draws from the posterior of one iteration are used as proposals for the next. While simple to implement, such filtering approaches suffer from particle depletion, degrading each sample’s ability to represent its target posterior. As a remedy, we investigate generating proposals from a smoothed version of the preceding sample’s empirical distribution. The method retains computationally valuable properties of similar methods, but without particle depletion, and we demonstrate its accuracy in simulation. We apply the method to data simulated from both a simple, logistic regression model as well as a hierarchical model originally developed for classifying forest vegetation in New Mexico using satellite imagery.</p>
+
+<p><a href="https://arxiv.org/abs/2508.01572">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
