@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Decorrelated feature importance from local sample weighting</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Decorrelated feature importance from local sample weighting" />
+<meta name="author" content="Benedikt Fröhlich, Alison Durst, Merle Behr" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Feature importance (FI) statistics provide a prominent and valuable method of insight into the decision process of machine learning (ML) models, but their effectiveness has well-known limitations when correlation is present among the features in the training data. In this case, the FI often tends to be distributed among all features which are in correlation with the response-generating signal features. Even worse, if multiple signal features are in strong correlation with a noise feature, while being only modestly correlated with one another, this can result in a noise feature having a distinctly larger FI score than any signal feature. Here we propose local sample weighting (losaw) which can flexibly be integrated into many ML algorithms to improve FI scores in the presence of feature correlation in the training data. Our approach is motivated from inverse probability weighting in causal inference and locally, within the ML model, uses a sample weighting scheme to decorrelate a target feature from the remaining features. This reduces model bias locally, whenever the effect of a potential signal feature is evaluated and compared to others. Moreover, losaw comes with a natural tuning parameter, the minimum effective sample size of the weighted population, which corresponds to an interpretation-prediction-tradeoff, analog to a bias-variance-tradeoff as for classical ML tuning parameters. We demonstrate how losaw can be integrated within decision tree-based ML methods and within mini-batch training of neural networks. We investigate losaw for random forest and convolutional neural networks in a simulation study on settings showing diverse correlation patterns. We found that losaw improves FI consistently. Moreover, it often improves prediction accuracy for out-of-distribution, while maintaining a similar accuracy for in-distribution test data." />
+<meta property="og:description" content="Feature importance (FI) statistics provide a prominent and valuable method of insight into the decision process of machine learning (ML) models, but their effectiveness has well-known limitations when correlation is present among the features in the training data. In this case, the FI often tends to be distributed among all features which are in correlation with the response-generating signal features. Even worse, if multiple signal features are in strong correlation with a noise feature, while being only modestly correlated with one another, this can result in a noise feature having a distinctly larger FI score than any signal feature. Here we propose local sample weighting (losaw) which can flexibly be integrated into many ML algorithms to improve FI scores in the presence of feature correlation in the training data. Our approach is motivated from inverse probability weighting in causal inference and locally, within the ML model, uses a sample weighting scheme to decorrelate a target feature from the remaining features. This reduces model bias locally, whenever the effect of a potential signal feature is evaluated and compared to others. Moreover, losaw comes with a natural tuning parameter, the minimum effective sample size of the weighted population, which corresponds to an interpretation-prediction-tradeoff, analog to a bias-variance-tradeoff as for classical ML tuning parameters. We demonstrate how losaw can be integrated within decision tree-based ML methods and within mini-batch training of neural networks. We investigate losaw for random forest and convolutional neural networks in a simulation study on settings showing diverse correlation patterns. We found that losaw improves FI consistently. Moreover, it often improves prediction accuracy for out-of-distribution, while maintaining a similar accuracy for in-distribution test data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/11/Decorrelatedfeatureimportancefromlocalsampleweighting.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/11/Decorrelatedfeatureimportancefromlocalsampleweighting.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Decorrelated feature importance from local sample weighting" />
+<script type="application/ld+json">
+{"description":"Feature importance (FI) statistics provide a prominent and valuable method of insight into the decision process of machine learning (ML) models, but their effectiveness has well-known limitations when correlation is present among the features in the training data. In this case, the FI often tends to be distributed among all features which are in correlation with the response-generating signal features. Even worse, if multiple signal features are in strong correlation with a noise feature, while being only modestly correlated with one another, this can result in a noise feature having a distinctly larger FI score than any signal feature. Here we propose local sample weighting (losaw) which can flexibly be integrated into many ML algorithms to improve FI scores in the presence of feature correlation in the training data. Our approach is motivated from inverse probability weighting in causal inference and locally, within the ML model, uses a sample weighting scheme to decorrelate a target feature from the remaining features. This reduces model bias locally, whenever the effect of a potential signal feature is evaluated and compared to others. Moreover, losaw comes with a natural tuning parameter, the minimum effective sample size of the weighted population, which corresponds to an interpretation-prediction-tradeoff, analog to a bias-variance-tradeoff as for classical ML tuning parameters. We demonstrate how losaw can be integrated within decision tree-based ML methods and within mini-batch training of neural networks. We investigate losaw for random forest and convolutional neural networks in a simulation study on settings showing diverse correlation patterns. We found that losaw improves FI consistently. Moreover, it often improves prediction accuracy for out-of-distribution, while maintaining a similar accuracy for in-distribution test data.","headline":"Decorrelated feature importance from local sample weighting","dateModified":"2025-08-11T00:00:00+00:00","datePublished":"2025-08-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/11/Decorrelatedfeatureimportancefromlocalsampleweighting.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/11/Decorrelatedfeatureimportancefromlocalsampleweighting.html","author":{"@type":"Person","name":"Benedikt Fröhlich, Alison Durst, Merle Behr"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-11 00:00:00 +0000">08-11</time>
+  </p>
+  
+  <h1>Decorrelated feature importance from local sample weighting</h1>
+  <br>Benedikt Fröhlich, Alison Durst, Merle Behr</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>Feature importance (FI) statistics provide a prominent and valuable method of insight into the decision process of machine learning (ML) models, but their effectiveness has well-known limitations when correlation is present among the features in the training data. In this case, the FI often tends to be distributed among all features which are in correlation with the response-generating signal features. Even worse, if multiple signal features are in strong correlation with a noise feature, while being only modestly correlated with one another, this can result in a noise feature having a distinctly larger FI score than any signal feature. Here we propose local sample weighting (losaw) which can flexibly be integrated into many ML algorithms to improve FI scores in the presence of feature correlation in the training data. Our approach is motivated from inverse probability weighting in causal inference and locally, within the ML model, uses a sample weighting scheme to decorrelate a target feature from the remaining features. This reduces model bias locally, whenever the effect of a potential signal feature is evaluated and compared to others. Moreover, losaw comes with a natural tuning parameter, the minimum effective sample size of the weighted population, which corresponds to an interpretation-prediction-tradeoff, analog to a bias-variance-tradeoff as for classical ML tuning parameters. We demonstrate how losaw can be integrated within decision tree-based ML methods and within mini-batch training of neural networks. We investigate losaw for random forest and convolutional neural networks in a simulation study on settings showing diverse correlation patterns. We found that losaw improves FI consistently. Moreover, it often improves prediction accuracy for out-of-distribution, while maintaining a similar accuracy for in-distribution test data.</p>
+
+<p><a href="https://arxiv.org/abs/2508.06337">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
