@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>sanba: An R Package for Bayesian Clustering of Distributions via Shared Atoms Nested Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="sanba: An R Package for Bayesian Clustering of Distributions via Shared Atoms Nested Models" />
+<meta name="author" content="Francesco Denti, Laura D'Angelo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Nested data structures arise when observations are grouped into distinct units, such as patients within hospitals or students within schools. Accounting for this hierarchical organization is essential for valid inference, as ignoring it can lead to biased estimates and poor generalization. This article addresses the challenge of clustering both individual observations and their corresponding groups while flexibly estimating group-specific densities. Bayesian nested mixture models offer a principled and robust framework for this task. However, their practical use has often been limited by computational complexity. To overcome this barrier, we present sanba, an R package for Bayesian analysis of grouped data using nested mixture models with a shared set of atoms, a structure recently introduced in the statistical literature. The package provides multiple inference strategies, including state-of-the-art Markov Chain Monte Carlo routines and variational inference algorithms tailored for large-scale datasets. All core functions are implemented in C++ and seamlessly integrated into R, making sanba a fast and user-friendly tool for fitting nested mixture models with modern Bayesian algorithms." />
+<meta property="og:description" content="Nested data structures arise when observations are grouped into distinct units, such as patients within hospitals or students within schools. Accounting for this hierarchical organization is essential for valid inference, as ignoring it can lead to biased estimates and poor generalization. This article addresses the challenge of clustering both individual observations and their corresponding groups while flexibly estimating group-specific densities. Bayesian nested mixture models offer a principled and robust framework for this task. However, their practical use has often been limited by computational complexity. To overcome this barrier, we present sanba, an R package for Bayesian analysis of grouped data using nested mixture models with a shared set of atoms, a structure recently introduced in the statistical literature. The package provides multiple inference strategies, including state-of-the-art Markov Chain Monte Carlo routines and variational inference algorithms tailored for large-scale datasets. All core functions are implemented in C++ and seamlessly integrated into R, making sanba a fast and user-friendly tool for fitting nested mixture models with modern Bayesian algorithms." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/14/sanbaAnRPackageforBayesianClusteringofDistributionsviaSharedAtomsNestedModels.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/14/sanbaAnRPackageforBayesianClusteringofDistributionsviaSharedAtomsNestedModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="sanba: An R Package for Bayesian Clustering of Distributions via Shared Atoms Nested Models" />
+<script type="application/ld+json">
+{"description":"Nested data structures arise when observations are grouped into distinct units, such as patients within hospitals or students within schools. Accounting for this hierarchical organization is essential for valid inference, as ignoring it can lead to biased estimates and poor generalization. This article addresses the challenge of clustering both individual observations and their corresponding groups while flexibly estimating group-specific densities. Bayesian nested mixture models offer a principled and robust framework for this task. However, their practical use has often been limited by computational complexity. To overcome this barrier, we present sanba, an R package for Bayesian analysis of grouped data using nested mixture models with a shared set of atoms, a structure recently introduced in the statistical literature. The package provides multiple inference strategies, including state-of-the-art Markov Chain Monte Carlo routines and variational inference algorithms tailored for large-scale datasets. All core functions are implemented in C++ and seamlessly integrated into R, making sanba a fast and user-friendly tool for fitting nested mixture models with modern Bayesian algorithms.","headline":"sanba: An R Package for Bayesian Clustering of Distributions via Shared Atoms Nested Models","dateModified":"2025-08-14T00:00:00+00:00","datePublished":"2025-08-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/14/sanbaAnRPackageforBayesianClusteringofDistributionsviaSharedAtomsNestedModels.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/14/sanbaAnRPackageforBayesianClusteringofDistributionsviaSharedAtomsNestedModels.html","author":{"@type":"Person","name":"Francesco Denti, Laura D'Angelo"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-14 00:00:00 +0000">08-14</time>
+  </p>
+  
+  <h1>sanba: An R Package for Bayesian Clustering of Distributions via Shared Atoms Nested Models</h1>
+  <br>Francesco Denti, Laura D'Angelo</h3>
+  <br> [stat.CO]
+
+  <p>Nested data structures arise when observations are grouped into distinct units, such as patients within hospitals or students within schools. Accounting for this hierarchical organization is essential for valid inference, as ignoring it can lead to biased estimates and poor generalization. This article addresses the challenge of clustering both individual observations and their corresponding groups while flexibly estimating group-specific densities. Bayesian nested mixture models offer a principled and robust framework for this task. However, their practical use has often been limited by computational complexity. To overcome this barrier, we present sanba, an R package for Bayesian analysis of grouped data using nested mixture models with a shared set of atoms, a structure recently introduced in the statistical literature. The package provides multiple inference strategies, including state-of-the-art Markov Chain Monte Carlo routines and variational inference algorithms tailored for large-scale datasets. All core functions are implemented in C++ and seamlessly integrated into R, making sanba a fast and user-friendly tool for fitting nested mixture models with modern Bayesian algorithms.</p>
+
+<p><a href="https://arxiv.org/abs/2508.09758">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
