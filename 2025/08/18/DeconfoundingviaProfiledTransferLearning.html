@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Deconfounding via Profiled Transfer Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Deconfounding via Profiled Transfer Learning" />
+<meta name="author" content="Ziyuan Chen, Yifan Jiang, Jingyuan Liu, Fang Yao" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Unmeasured confounders are a major source of bias in regression-based effect estimation and causal inference. In this paper, we advocate a new profiled transfer learning framework, ProTrans, to address confounding effects in the target dataset, when additional source datasets that possess similar confounding structures are available. We introduce the concept of profiled residuals to characterize the shared confounding patterns between source and target datasets. By incorporating these profiled residuals into the target debiasing step, we effectively mitigates the latent confounding effects. We also propose a source selection strategy to enhance robustness of ProTrans against noninformative sources. As a byproduct, ProTrans can also be utilized to estimate treatment effects when potential confounders exist, without the use of auxiliary features such as instrumental or proxy variables, which are often challenging to select in practice. Theoretically, we prove that the resulting estimated model shift from sources to target is confounding-free without any assumptions imposed on the true confounding structure, and that the target parameter estimation achieves the minimax optimal rate under mild conditions. Simulated and real-world experiments validate the effectiveness of ProTrans and support the theoretical findings." />
+<meta property="og:description" content="Unmeasured confounders are a major source of bias in regression-based effect estimation and causal inference. In this paper, we advocate a new profiled transfer learning framework, ProTrans, to address confounding effects in the target dataset, when additional source datasets that possess similar confounding structures are available. We introduce the concept of profiled residuals to characterize the shared confounding patterns between source and target datasets. By incorporating these profiled residuals into the target debiasing step, we effectively mitigates the latent confounding effects. We also propose a source selection strategy to enhance robustness of ProTrans against noninformative sources. As a byproduct, ProTrans can also be utilized to estimate treatment effects when potential confounders exist, without the use of auxiliary features such as instrumental or proxy variables, which are often challenging to select in practice. Theoretically, we prove that the resulting estimated model shift from sources to target is confounding-free without any assumptions imposed on the true confounding structure, and that the target parameter estimation achieves the minimax optimal rate under mild conditions. Simulated and real-world experiments validate the effectiveness of ProTrans and support the theoretical findings." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/18/DeconfoundingviaProfiledTransferLearning.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/18/DeconfoundingviaProfiledTransferLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Deconfounding via Profiled Transfer Learning" />
+<script type="application/ld+json">
+{"description":"Unmeasured confounders are a major source of bias in regression-based effect estimation and causal inference. In this paper, we advocate a new profiled transfer learning framework, ProTrans, to address confounding effects in the target dataset, when additional source datasets that possess similar confounding structures are available. We introduce the concept of profiled residuals to characterize the shared confounding patterns between source and target datasets. By incorporating these profiled residuals into the target debiasing step, we effectively mitigates the latent confounding effects. We also propose a source selection strategy to enhance robustness of ProTrans against noninformative sources. As a byproduct, ProTrans can also be utilized to estimate treatment effects when potential confounders exist, without the use of auxiliary features such as instrumental or proxy variables, which are often challenging to select in practice. Theoretically, we prove that the resulting estimated model shift from sources to target is confounding-free without any assumptions imposed on the true confounding structure, and that the target parameter estimation achieves the minimax optimal rate under mild conditions. Simulated and real-world experiments validate the effectiveness of ProTrans and support the theoretical findings.","headline":"Deconfounding via Profiled Transfer Learning","dateModified":"2025-08-18T00:00:00+00:00","datePublished":"2025-08-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/18/DeconfoundingviaProfiledTransferLearning.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/18/DeconfoundingviaProfiledTransferLearning.html","author":{"@type":"Person","name":"Ziyuan Chen, Yifan Jiang, Jingyuan Liu, Fang Yao"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-18 00:00:00 +0000">08-18</time>
+  </p>
+  
+  <h1>Deconfounding via Profiled Transfer Learning</h1>
+  <br>Ziyuan Chen, Yifan Jiang, Jingyuan Liu, Fang Yao</h3>
+  <br> [stat.ME]
+
+  <p>Unmeasured confounders are a major source of bias in regression-based effect estimation and causal inference. In this paper, we advocate a new profiled transfer learning framework, ProTrans, to address confounding effects in the target dataset, when additional source datasets that possess similar confounding structures are available. We introduce the concept of profiled residuals to characterize the shared confounding patterns between source and target datasets. By incorporating these profiled residuals into the target debiasing step, we effectively mitigates the latent confounding effects. We also propose a source selection strategy to enhance robustness of ProTrans against noninformative sources. As a byproduct, ProTrans can also be utilized to estimate treatment effects when potential confounders exist, without the use of auxiliary features such as instrumental or proxy variables, which are often challenging to select in practice. Theoretically, we prove that the resulting estimated model shift from sources to target is confounding-free without any assumptions imposed on the true confounding structure, and that the target parameter estimation achieves the minimax optimal rate under mild conditions. Simulated and real-world experiments validate the effectiveness of ProTrans and support the theoretical findings.</p>
+
+<p><a href="https://arxiv.org/abs/2508.11622">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
