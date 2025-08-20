@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Diffusion-Driven High-Dimensional Variable Selection</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Diffusion-Driven High-Dimensional Variable Selection" />
+<meta name="author" content="Minjie Wang, Xiaotong Shen, Wei Pan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Variable selection for high-dimensional, highly correlated data has long been a challenging problem, often yielding unstable and unreliable models. We propose a resample-aggregate framework that exploits diffusion models’ ability to generate high-fidelity synthetic data. Specifically, we draw multiple pseudo-data sets from a diffusion model fitted to the original data, apply any off-the-shelf selector (e.g., lasso or SCAD), and store the resulting inclusion indicators and coefficients. Aggregating across replicas produces a stable subset of predictors with calibrated stability scores for variable selection. Theoretically, we show that the proposed method is selection consistent under mild assumptions. Because the generative model imports knowledge from large pre-trained weights, the procedure naturally benefits from transfer learning, boosting power when the observed sample is small or noisy. We also extend the framework of aggregating synthetic data to other model selection problems, including graphical model selection, and statistical inference that supports valid confidence intervals and hypothesis tests. Extensive simulations show consistent gains over the lasso, stability selection, and knockoff baselines, especially when predictors are strongly correlated, achieving higher true-positive rates and lower false-discovery proportions. By coupling diffusion-based data augmentation with principled aggregation, our method advances variable selection methodology and broadens the toolkit for interpretable, statistically rigorous analysis in complex scientific applications." />
+<meta property="og:description" content="Variable selection for high-dimensional, highly correlated data has long been a challenging problem, often yielding unstable and unreliable models. We propose a resample-aggregate framework that exploits diffusion models’ ability to generate high-fidelity synthetic data. Specifically, we draw multiple pseudo-data sets from a diffusion model fitted to the original data, apply any off-the-shelf selector (e.g., lasso or SCAD), and store the resulting inclusion indicators and coefficients. Aggregating across replicas produces a stable subset of predictors with calibrated stability scores for variable selection. Theoretically, we show that the proposed method is selection consistent under mild assumptions. Because the generative model imports knowledge from large pre-trained weights, the procedure naturally benefits from transfer learning, boosting power when the observed sample is small or noisy. We also extend the framework of aggregating synthetic data to other model selection problems, including graphical model selection, and statistical inference that supports valid confidence intervals and hypothesis tests. Extensive simulations show consistent gains over the lasso, stability selection, and knockoff baselines, especially when predictors are strongly correlated, achieving higher true-positive rates and lower false-discovery proportions. By coupling diffusion-based data augmentation with principled aggregation, our method advances variable selection methodology and broadens the toolkit for interpretable, statistically rigorous analysis in complex scientific applications." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/20/DiffusionDrivenHighDimensionalVariableSelection.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/20/DiffusionDrivenHighDimensionalVariableSelection.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Diffusion-Driven High-Dimensional Variable Selection" />
+<script type="application/ld+json">
+{"description":"Variable selection for high-dimensional, highly correlated data has long been a challenging problem, often yielding unstable and unreliable models. We propose a resample-aggregate framework that exploits diffusion models’ ability to generate high-fidelity synthetic data. Specifically, we draw multiple pseudo-data sets from a diffusion model fitted to the original data, apply any off-the-shelf selector (e.g., lasso or SCAD), and store the resulting inclusion indicators and coefficients. Aggregating across replicas produces a stable subset of predictors with calibrated stability scores for variable selection. Theoretically, we show that the proposed method is selection consistent under mild assumptions. Because the generative model imports knowledge from large pre-trained weights, the procedure naturally benefits from transfer learning, boosting power when the observed sample is small or noisy. We also extend the framework of aggregating synthetic data to other model selection problems, including graphical model selection, and statistical inference that supports valid confidence intervals and hypothesis tests. Extensive simulations show consistent gains over the lasso, stability selection, and knockoff baselines, especially when predictors are strongly correlated, achieving higher true-positive rates and lower false-discovery proportions. By coupling diffusion-based data augmentation with principled aggregation, our method advances variable selection methodology and broadens the toolkit for interpretable, statistically rigorous analysis in complex scientific applications.","headline":"Diffusion-Driven High-Dimensional Variable Selection","dateModified":"2025-08-20T00:00:00+00:00","datePublished":"2025-08-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/20/DiffusionDrivenHighDimensionalVariableSelection.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/20/DiffusionDrivenHighDimensionalVariableSelection.html","author":{"@type":"Person","name":"Minjie Wang, Xiaotong Shen, Wei Pan"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-20 00:00:00 +0000">08-20</time>
+  </p>
+  
+  <h1>Diffusion-Driven High-Dimensional Variable Selection</h1>
+  <br>Minjie Wang, Xiaotong Shen, Wei Pan</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Variable selection for high-dimensional, highly correlated data has long been a challenging problem, often yielding unstable and unreliable models. We propose a resample-aggregate framework that exploits diffusion models’ ability to generate high-fidelity synthetic data. Specifically, we draw multiple pseudo-data sets from a diffusion model fitted to the original data, apply any off-the-shelf selector (e.g., lasso or SCAD), and store the resulting inclusion indicators and coefficients. Aggregating across replicas produces a stable subset of predictors with calibrated stability scores for variable selection. Theoretically, we show that the proposed method is selection consistent under mild assumptions. Because the generative model imports knowledge from large pre-trained weights, the procedure naturally benefits from transfer learning, boosting power when the observed sample is small or noisy. We also extend the framework of aggregating synthetic data to other model selection problems, including graphical model selection, and statistical inference that supports valid confidence intervals and hypothesis tests. Extensive simulations show consistent gains over the lasso, stability selection, and knockoff baselines, especially when predictors are strongly correlated, achieving higher true-positive rates and lower false-discovery proportions. By coupling diffusion-based data augmentation with principled aggregation, our method advances variable selection methodology and broadens the toolkit for interpretable, statistically rigorous analysis in complex scientific applications.</p>
+
+<p><a href="https://arxiv.org/abs/2508.13890">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
