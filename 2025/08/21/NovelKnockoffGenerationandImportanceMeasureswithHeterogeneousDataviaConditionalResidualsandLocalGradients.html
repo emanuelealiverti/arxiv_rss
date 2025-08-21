@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Novel Knockoff Generation and Importance Measures with Heterogeneous Data via Conditional Residuals and Local Gradients</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Novel Knockoff Generation and Importance Measures with Heterogeneous Data via Conditional Residuals and Local Gradients" />
+<meta name="author" content="Evan Mason, Zhe Fei" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Knockoff variable selection is a powerful framework that creates synthetic knockoff variables to mirror the correlation structure of the observed features, enabling principled control of the false discovery rate in variable selection. However, existing methods often assume homogeneous data types or known distributions, limiting their applicability in real-world settings with heterogeneous, distribution-free data. Moreover, common variable importance measures rely on linear outcome models, hindering their effectiveness for complex relationships. We propose a flexible knockoff generation framework based on conditional residuals that accommodates mixed data types without assuming known distributions. To assess variable importance, we introduce the Mean Absolute Local Derivative (MALD), an interpretable metric compatible with nonlinear outcome functions, including random forests and neural networks. Simulations show that our approach achieves better false discovery rate control and higher power than existing methods. We demonstrate its practical utility on a DNA methylation dataset from mouse tissues, identifying CpG sites linked to aging. Software is available in R (rangerKnockoff) and Python (MALDimportance)." />
+<meta property="og:description" content="Knockoff variable selection is a powerful framework that creates synthetic knockoff variables to mirror the correlation structure of the observed features, enabling principled control of the false discovery rate in variable selection. However, existing methods often assume homogeneous data types or known distributions, limiting their applicability in real-world settings with heterogeneous, distribution-free data. Moreover, common variable importance measures rely on linear outcome models, hindering their effectiveness for complex relationships. We propose a flexible knockoff generation framework based on conditional residuals that accommodates mixed data types without assuming known distributions. To assess variable importance, we introduce the Mean Absolute Local Derivative (MALD), an interpretable metric compatible with nonlinear outcome functions, including random forests and neural networks. Simulations show that our approach achieves better false discovery rate control and higher power than existing methods. We demonstrate its practical utility on a DNA methylation dataset from mouse tissues, identifying CpG sites linked to aging. Software is available in R (rangerKnockoff) and Python (MALDimportance)." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/21/NovelKnockoffGenerationandImportanceMeasureswithHeterogeneousDataviaConditionalResidualsandLocalGradients.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/21/NovelKnockoffGenerationandImportanceMeasureswithHeterogeneousDataviaConditionalResidualsandLocalGradients.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Novel Knockoff Generation and Importance Measures with Heterogeneous Data via Conditional Residuals and Local Gradients" />
+<script type="application/ld+json">
+{"description":"Knockoff variable selection is a powerful framework that creates synthetic knockoff variables to mirror the correlation structure of the observed features, enabling principled control of the false discovery rate in variable selection. However, existing methods often assume homogeneous data types or known distributions, limiting their applicability in real-world settings with heterogeneous, distribution-free data. Moreover, common variable importance measures rely on linear outcome models, hindering their effectiveness for complex relationships. We propose a flexible knockoff generation framework based on conditional residuals that accommodates mixed data types without assuming known distributions. To assess variable importance, we introduce the Mean Absolute Local Derivative (MALD), an interpretable metric compatible with nonlinear outcome functions, including random forests and neural networks. Simulations show that our approach achieves better false discovery rate control and higher power than existing methods. We demonstrate its practical utility on a DNA methylation dataset from mouse tissues, identifying CpG sites linked to aging. Software is available in R (rangerKnockoff) and Python (MALDimportance).","headline":"Novel Knockoff Generation and Importance Measures with Heterogeneous Data via Conditional Residuals and Local Gradients","dateModified":"2025-08-21T00:00:00+00:00","datePublished":"2025-08-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/21/NovelKnockoffGenerationandImportanceMeasureswithHeterogeneousDataviaConditionalResidualsandLocalGradients.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/21/NovelKnockoffGenerationandImportanceMeasureswithHeterogeneousDataviaConditionalResidualsandLocalGradients.html","author":{"@type":"Person","name":"Evan Mason, Zhe Fei"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-21 00:00:00 +0000">08-21</time>
+  </p>
+  
+  <h1>Novel Knockoff Generation and Importance Measures with Heterogeneous Data via Conditional Residuals and Local Gradients</h1>
+  <br>Evan Mason, Zhe Fei</h3>
+  <br> [stat.ME]
+
+  <p>Knockoff variable selection is a powerful framework that creates synthetic knockoff variables to mirror the correlation structure of the observed features, enabling principled control of the false discovery rate in variable selection. However, existing methods often assume homogeneous data types or known distributions, limiting their applicability in real-world settings with heterogeneous, distribution-free data. Moreover, common variable importance measures rely on linear outcome models, hindering their effectiveness for complex relationships. We propose a flexible knockoff generation framework based on conditional residuals that accommodates mixed data types without assuming known distributions. To assess variable importance, we introduce the Mean Absolute Local Derivative (MALD), an interpretable metric compatible with nonlinear outcome functions, including random forests and neural networks. Simulations show that our approach achieves better false discovery rate control and higher power than existing methods. We demonstrate its practical utility on a DNA methylation dataset from mouse tissues, identifying CpG sites linked to aging. Software is available in R (rangerKnockoff) and Python (MALDimportance).</p>
+
+<p><a href="https://arxiv.org/abs/2508.14882">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

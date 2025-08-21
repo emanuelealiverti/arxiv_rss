@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The C-index Multiverse</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The C-index Multiverse" />
+<meta name="author" content="Begoña B. Sierra, Colin McLean, Peter S. Hall, Catalina A. Vallejos" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Quantifying out-of-sample discrimination performance for time-to-event outcomes is a fundamental step for model evaluation and selection in the context of predictive modelling. The concordance index, or C-index, is a widely used metric for this purpose, particularly with the growing development of machine learning methods. Beyond differences between proposed C-index estimators (e.g. Harrell’s, Uno’s and Antolini’s), we demonstrate the existence of a C-index multiverse among available R and python software, where seemingly equal implementations can yield different results. This can undermine reproducibility and complicate fair comparisons across models and studies. Key variation sources include tie handling and adjustment to censoring. Additionally, the absence of a standardised approach to summarise risk from survival distributions, result in another source of variation dependent on input types. We demonstrate the consequences of the C-index multiverse when quantifying predictive performance for several survival models (from Cox proportional hazards to recent deep learning approaches) on publicly available breast cancer data, and semi-synthetic examples. Our work emphasises the need for better reporting to improve transparency and reproducibility. This article aims to be a useful guideline, helping analysts when navigating the multiverse, providing unified documentation and highlighting potential pitfalls of existing software. All code is publicly available at: www.github.com/BBolosSierra/CindexMultiverse." />
+<meta property="og:description" content="Quantifying out-of-sample discrimination performance for time-to-event outcomes is a fundamental step for model evaluation and selection in the context of predictive modelling. The concordance index, or C-index, is a widely used metric for this purpose, particularly with the growing development of machine learning methods. Beyond differences between proposed C-index estimators (e.g. Harrell’s, Uno’s and Antolini’s), we demonstrate the existence of a C-index multiverse among available R and python software, where seemingly equal implementations can yield different results. This can undermine reproducibility and complicate fair comparisons across models and studies. Key variation sources include tie handling and adjustment to censoring. Additionally, the absence of a standardised approach to summarise risk from survival distributions, result in another source of variation dependent on input types. We demonstrate the consequences of the C-index multiverse when quantifying predictive performance for several survival models (from Cox proportional hazards to recent deep learning approaches) on publicly available breast cancer data, and semi-synthetic examples. Our work emphasises the need for better reporting to improve transparency and reproducibility. This article aims to be a useful guideline, helping analysts when navigating the multiverse, providing unified documentation and highlighting potential pitfalls of existing software. All code is publicly available at: www.github.com/BBolosSierra/CindexMultiverse." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/21/TheCindexMultiverse.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/21/TheCindexMultiverse.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The C-index Multiverse" />
+<script type="application/ld+json">
+{"description":"Quantifying out-of-sample discrimination performance for time-to-event outcomes is a fundamental step for model evaluation and selection in the context of predictive modelling. The concordance index, or C-index, is a widely used metric for this purpose, particularly with the growing development of machine learning methods. Beyond differences between proposed C-index estimators (e.g. Harrell’s, Uno’s and Antolini’s), we demonstrate the existence of a C-index multiverse among available R and python software, where seemingly equal implementations can yield different results. This can undermine reproducibility and complicate fair comparisons across models and studies. Key variation sources include tie handling and adjustment to censoring. Additionally, the absence of a standardised approach to summarise risk from survival distributions, result in another source of variation dependent on input types. We demonstrate the consequences of the C-index multiverse when quantifying predictive performance for several survival models (from Cox proportional hazards to recent deep learning approaches) on publicly available breast cancer data, and semi-synthetic examples. Our work emphasises the need for better reporting to improve transparency and reproducibility. This article aims to be a useful guideline, helping analysts when navigating the multiverse, providing unified documentation and highlighting potential pitfalls of existing software. All code is publicly available at: www.github.com/BBolosSierra/CindexMultiverse.","headline":"The C-index Multiverse","dateModified":"2025-08-21T00:00:00+00:00","datePublished":"2025-08-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/21/TheCindexMultiverse.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/21/TheCindexMultiverse.html","author":{"@type":"Person","name":"Begoña B. Sierra, Colin McLean, Peter S. Hall, Catalina A. Vallejos"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-21 00:00:00 +0000">08-21</time>
+  </p>
+  
+  <h1>The C-index Multiverse</h1>
+  <br>Begoña B. Sierra, Colin McLean, Peter S. Hall, Catalina A. Vallejos</h3>
+  <br> [stat.ML,stat.AP]
+
+  <p>Quantifying out-of-sample discrimination performance for time-to-event outcomes is a fundamental step for model evaluation and selection in the context of predictive modelling. The concordance index, or C-index, is a widely used metric for this purpose, particularly with the growing development of machine learning methods. Beyond differences between proposed C-index estimators (e.g. Harrell’s, Uno’s and Antolini’s), we demonstrate the existence of a C-index multiverse among available R and python software, where seemingly equal implementations can yield different results. This can undermine reproducibility and complicate fair comparisons across models and studies. Key variation sources include tie handling and adjustment to censoring. Additionally, the absence of a standardised approach to summarise risk from survival distributions, result in another source of variation dependent on input types. We demonstrate the consequences of the C-index multiverse when quantifying predictive performance for several survival models (from Cox proportional hazards to recent deep learning approaches) on publicly available breast cancer data, and semi-synthetic examples. Our work emphasises the need for better reporting to improve transparency and reproducibility. This article aims to be a useful guideline, helping analysts when navigating the multiverse, providing unified documentation and highlighting potential pitfalls of existing software. All code is publicly available at: www.github.com/BBolosSierra/CindexMultiverse.</p>
+
+<p><a href="https://arxiv.org/abs/2508.14821">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
