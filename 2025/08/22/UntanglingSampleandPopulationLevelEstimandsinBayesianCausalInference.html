@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Untangling Sample and Population Level Estimands in Bayesian Causal Inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Untangling Sample and Population Level Estimands in Bayesian Causal Inference" />
+<meta name="author" content="Arman Oganisian" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian inference for causal estimands has been growing in popularity, however many misconceptions and implementation errors arise from conflating sample and population-level estimands. We have anecdotally witnessed these at conference talks, in the course of peer review service, and even in published and arXiv-ed papers. Our goal here is to elucidate the crucial differences between sample and population-level quantities when it comes to identification, modeling, Bayesian computation, and interpretation. For example, common sample-level estimands require cross-world assumptions for identification, whereas common population-level estimands do not. Similarly, the former requires explicit imputation of counterfactuals from their joint posterior, whereas the latter typically only requires a posterior distribution over parameters. We start by defining some examples of both types of estimands, then discuss the full joint posterior over all unknowns (both missing counterfactuals and population distribution parameters). We continue to outline how inference for different estimands are derived from different marginals of this joint posterior. Because the differences are conceptually subtle but can be practically substantial, we provide an illustration of using synthetic data in Stan. We also provide a detailed appendix with derivations and computational tips along with a discussion of common implementation errors. The overarching message here is to always engage in first-principles thinking about which marginal of the joint posterior is of interest in a particular application, then follow the strict logic of Bayes’ theorem and probability to avoid common implementation errors." />
+<meta property="og:description" content="Bayesian inference for causal estimands has been growing in popularity, however many misconceptions and implementation errors arise from conflating sample and population-level estimands. We have anecdotally witnessed these at conference talks, in the course of peer review service, and even in published and arXiv-ed papers. Our goal here is to elucidate the crucial differences between sample and population-level quantities when it comes to identification, modeling, Bayesian computation, and interpretation. For example, common sample-level estimands require cross-world assumptions for identification, whereas common population-level estimands do not. Similarly, the former requires explicit imputation of counterfactuals from their joint posterior, whereas the latter typically only requires a posterior distribution over parameters. We start by defining some examples of both types of estimands, then discuss the full joint posterior over all unknowns (both missing counterfactuals and population distribution parameters). We continue to outline how inference for different estimands are derived from different marginals of this joint posterior. Because the differences are conceptually subtle but can be practically substantial, we provide an illustration of using synthetic data in Stan. We also provide a detailed appendix with derivations and computational tips along with a discussion of common implementation errors. The overarching message here is to always engage in first-principles thinking about which marginal of the joint posterior is of interest in a particular application, then follow the strict logic of Bayes’ theorem and probability to avoid common implementation errors." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/22/UntanglingSampleandPopulationLevelEstimandsinBayesianCausalInference.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/22/UntanglingSampleandPopulationLevelEstimandsinBayesianCausalInference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Untangling Sample and Population Level Estimands in Bayesian Causal Inference" />
+<script type="application/ld+json">
+{"description":"Bayesian inference for causal estimands has been growing in popularity, however many misconceptions and implementation errors arise from conflating sample and population-level estimands. We have anecdotally witnessed these at conference talks, in the course of peer review service, and even in published and arXiv-ed papers. Our goal here is to elucidate the crucial differences between sample and population-level quantities when it comes to identification, modeling, Bayesian computation, and interpretation. For example, common sample-level estimands require cross-world assumptions for identification, whereas common population-level estimands do not. Similarly, the former requires explicit imputation of counterfactuals from their joint posterior, whereas the latter typically only requires a posterior distribution over parameters. We start by defining some examples of both types of estimands, then discuss the full joint posterior over all unknowns (both missing counterfactuals and population distribution parameters). We continue to outline how inference for different estimands are derived from different marginals of this joint posterior. Because the differences are conceptually subtle but can be practically substantial, we provide an illustration of using synthetic data in Stan. We also provide a detailed appendix with derivations and computational tips along with a discussion of common implementation errors. The overarching message here is to always engage in first-principles thinking about which marginal of the joint posterior is of interest in a particular application, then follow the strict logic of Bayes’ theorem and probability to avoid common implementation errors.","headline":"Untangling Sample and Population Level Estimands in Bayesian Causal Inference","dateModified":"2025-08-22T00:00:00+00:00","datePublished":"2025-08-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/22/UntanglingSampleandPopulationLevelEstimandsinBayesianCausalInference.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/22/UntanglingSampleandPopulationLevelEstimandsinBayesianCausalInference.html","author":{"@type":"Person","name":"Arman Oganisian"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-22 00:00:00 +0000">08-22</time>
+  </p>
+  
+  <h1>Untangling Sample and Population Level Estimands in Bayesian Causal Inference</h1>
+  <br>Arman Oganisian</h3>
+  <br> [stat.ME]
+
+  <p>Bayesian inference for causal estimands has been growing in popularity, however many misconceptions and implementation errors arise from conflating sample and population-level estimands. We have anecdotally witnessed these at conference talks, in the course of peer review service, and even in published and arXiv-ed papers. Our goal here is to elucidate the crucial differences between sample and population-level quantities when it comes to identification, modeling, Bayesian computation, and interpretation. For example, common sample-level estimands require cross-world assumptions for identification, whereas common population-level estimands do not. Similarly, the former requires explicit imputation of counterfactuals from their joint posterior, whereas the latter typically only requires a posterior distribution over parameters. We start by defining some examples of both types of estimands, then discuss the full joint posterior over all unknowns (both missing counterfactuals and population distribution parameters). We continue to outline how inference for different estimands are derived from different marginals of this joint posterior. Because the differences are conceptually subtle but can be practically substantial, we provide an illustration of using synthetic data in Stan. We also provide a detailed appendix with derivations and computational tips along with a discussion of common implementation errors. The overarching message here is to always engage in first-principles thinking about which marginal of the joint posterior is of interest in a particular application, then follow the strict logic of Bayes’ theorem and probability to avoid common implementation errors.</p>
+
+<p><a href="https://arxiv.org/abs/2508.15016">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
