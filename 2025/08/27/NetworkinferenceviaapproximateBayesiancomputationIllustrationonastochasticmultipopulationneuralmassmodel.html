@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Network inference via approximate Bayesian computation. Illustration on a stochastic multi-population neural mass model</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Network inference via approximate Bayesian computation. Illustration on a stochastic multi-population neural mass model" />
+<meta name="author" content="Susanne Ditlevsen, Massimiliano Tamborrino, Irene Tubikanec" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this article, we propose an adapted sequential Monte Carlo approximate Bayesian computation (SMC-ABC) algorithm for network inference in coupled stochastic differential equations (SDEs) used for multivariate time series modeling. Our approach is motivated by neuroscience, specifically the challenge of estimating brain connectivity before and during epileptic seizures. To this end, we make four key contributions. First, we introduce a 6N-dimensional SDE to model the activity of N coupled neuronal populations, extending the (single-population) stochastic Jansen and Rit neural mass model used to describe human electroencephalography (EEG) rhythms, particularly epileptic activity. Second, we construct a reliable and efficient numerical splitting scheme for the model simulation. Third, we apply the proposed adapted SMC-ABC algorithm to the neural mass model and validate it on different types of simulated data. Compared to standard SMC-ABC, our approach significantly reduces computational cost by requiring fewer model simulations to reach the desired posterior region, thanks to the inclusion of binary parameters describing the presence or absence of coupling directions. Finally, we apply our method to real multi-channel EEG data, uncovering potential similarities in patients’ brain activities across different epileptic seizures, as well as differences between pre-seizure and seizure periods." />
+<meta property="og:description" content="In this article, we propose an adapted sequential Monte Carlo approximate Bayesian computation (SMC-ABC) algorithm for network inference in coupled stochastic differential equations (SDEs) used for multivariate time series modeling. Our approach is motivated by neuroscience, specifically the challenge of estimating brain connectivity before and during epileptic seizures. To this end, we make four key contributions. First, we introduce a 6N-dimensional SDE to model the activity of N coupled neuronal populations, extending the (single-population) stochastic Jansen and Rit neural mass model used to describe human electroencephalography (EEG) rhythms, particularly epileptic activity. Second, we construct a reliable and efficient numerical splitting scheme for the model simulation. Third, we apply the proposed adapted SMC-ABC algorithm to the neural mass model and validate it on different types of simulated data. Compared to standard SMC-ABC, our approach significantly reduces computational cost by requiring fewer model simulations to reach the desired posterior region, thanks to the inclusion of binary parameters describing the presence or absence of coupling directions. Finally, we apply our method to real multi-channel EEG data, uncovering potential similarities in patients’ brain activities across different epileptic seizures, as well as differences between pre-seizure and seizure periods." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/27/NetworkinferenceviaapproximateBayesiancomputationIllustrationonastochasticmultipopulationneuralmassmodel.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/27/NetworkinferenceviaapproximateBayesiancomputationIllustrationonastochasticmultipopulationneuralmassmodel.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Network inference via approximate Bayesian computation. Illustration on a stochastic multi-population neural mass model" />
+<script type="application/ld+json">
+{"description":"In this article, we propose an adapted sequential Monte Carlo approximate Bayesian computation (SMC-ABC) algorithm for network inference in coupled stochastic differential equations (SDEs) used for multivariate time series modeling. Our approach is motivated by neuroscience, specifically the challenge of estimating brain connectivity before and during epileptic seizures. To this end, we make four key contributions. First, we introduce a 6N-dimensional SDE to model the activity of N coupled neuronal populations, extending the (single-population) stochastic Jansen and Rit neural mass model used to describe human electroencephalography (EEG) rhythms, particularly epileptic activity. Second, we construct a reliable and efficient numerical splitting scheme for the model simulation. Third, we apply the proposed adapted SMC-ABC algorithm to the neural mass model and validate it on different types of simulated data. Compared to standard SMC-ABC, our approach significantly reduces computational cost by requiring fewer model simulations to reach the desired posterior region, thanks to the inclusion of binary parameters describing the presence or absence of coupling directions. Finally, we apply our method to real multi-channel EEG data, uncovering potential similarities in patients’ brain activities across different epileptic seizures, as well as differences between pre-seizure and seizure periods.","headline":"Network inference via approximate Bayesian computation. Illustration on a stochastic multi-population neural mass model","dateModified":"2025-08-27T00:00:00+00:00","datePublished":"2025-08-27T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/27/NetworkinferenceviaapproximateBayesiancomputationIllustrationonastochasticmultipopulationneuralmassmodel.html","author":{"@type":"Person","name":"Susanne Ditlevsen, Massimiliano Tamborrino, Irene Tubikanec"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/27/NetworkinferenceviaapproximateBayesiancomputationIllustrationonastochasticmultipopulationneuralmassmodel.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-27 00:00:00 +0000">08-27</time>
+  </p>
+  
+  <h1>Network inference via approximate Bayesian computation. Illustration on a stochastic multi-population neural mass model</h1>
+  <br>Susanne Ditlevsen, Massimiliano Tamborrino, Irene Tubikanec</h3>
+  <br> [stat.ME]
+
+  <p>In this article, we propose an adapted sequential Monte Carlo approximate Bayesian computation (SMC-ABC) algorithm for network inference in coupled stochastic differential equations (SDEs) used for multivariate time series modeling. Our approach is motivated by neuroscience, specifically the challenge of estimating brain connectivity before and during epileptic seizures. To this end, we make four key contributions. First, we introduce a 6N-dimensional SDE to model the activity of N coupled neuronal populations, extending the (single-population) stochastic Jansen and Rit neural mass model used to describe human electroencephalography (EEG) rhythms, particularly epileptic activity. Second, we construct a reliable and efficient numerical splitting scheme for the model simulation. Third, we apply the proposed adapted SMC-ABC algorithm to the neural mass model and validate it on different types of simulated data. Compared to standard SMC-ABC, our approach significantly reduces computational cost by requiring fewer model simulations to reach the desired posterior region, thanks to the inclusion of binary parameters describing the presence or absence of coupling directions. Finally, we apply our method to real multi-channel EEG data, uncovering potential similarities in patients’ brain activities across different epileptic seizures, as well as differences between pre-seizure and seizure periods.</p>
+
+<p><a href="https://arxiv.org/abs/2306.15787">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Covariance Uncertainty for Adaptive Pilot-Sampling Termination in Multi-fidelity Uncertainty Quantification</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bayesian Covariance Uncertainty for Adaptive Pilot-Sampling Termination in Multi-fidelity Uncertainty Quantification" />
+<meta name="author" content="Thomas E. Coons, Aniket Jivani, Xun Huan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Monte Carlo integration becomes prohibitively expensive when each sample requires a high-fidelity model evaluation. Multi-fidelity uncertainty quantification methods mitigate this by combining estimators from high- and low-fidelity models, preserving unbiasedness while reducing variance under a fixed budget. Constructing such estimators optimally requires the model-output covariance matrix, typically estimated from pilot samples. Too few pilot samples lead to inaccurate covariance estimates and suboptimal estimators, while too many consume budget that could be used for final estimation. We propose a Bayesian framework to quantify covariance uncertainty from pilot samples, incorporating prior knowledge and enabling probabilistic assessments of estimator performance. A central component is a flexible $\gamma$-Gaussian prior that ensures computational tractability and supports efficient posterior projection under additional pilot samples. These tools enable adaptive pilot-sampling termination via an interpretable loss criterion that decomposes variance inefficiency into accuracy and cost components. While demonstrated here in the context of approximate control variates (ACV), the framework generalizes to other multi-fidelity estimators. We validate the approach on a monomial benchmark and a PDE-based Darcy flow problem. Across these tests, our adaptive method demonstrates its value for multi-fidelity estimation under limited pilot budgets and expensive models, achieving variance reduction comparable to baseline estimators with oracle covariance." />
+<meta property="og:description" content="Monte Carlo integration becomes prohibitively expensive when each sample requires a high-fidelity model evaluation. Multi-fidelity uncertainty quantification methods mitigate this by combining estimators from high- and low-fidelity models, preserving unbiasedness while reducing variance under a fixed budget. Constructing such estimators optimally requires the model-output covariance matrix, typically estimated from pilot samples. Too few pilot samples lead to inaccurate covariance estimates and suboptimal estimators, while too many consume budget that could be used for final estimation. We propose a Bayesian framework to quantify covariance uncertainty from pilot samples, incorporating prior knowledge and enabling probabilistic assessments of estimator performance. A central component is a flexible $\gamma$-Gaussian prior that ensures computational tractability and supports efficient posterior projection under additional pilot samples. These tools enable adaptive pilot-sampling termination via an interpretable loss criterion that decomposes variance inefficiency into accuracy and cost components. While demonstrated here in the context of approximate control variates (ACV), the framework generalizes to other multi-fidelity estimators. We validate the approach on a monomial benchmark and a PDE-based Darcy flow problem. Across these tests, our adaptive method demonstrates its value for multi-fidelity estimation under limited pilot budgets and expensive models, achieving variance reduction comparable to baseline estimators with oracle covariance." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/27/BayesianCovarianceUncertaintyforAdaptivePilotSamplingTerminationinMultifidelityUncertaintyQuantification.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/27/BayesianCovarianceUncertaintyforAdaptivePilotSamplingTerminationinMultifidelityUncertaintyQuantification.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bayesian Covariance Uncertainty for Adaptive Pilot-Sampling Termination in Multi-fidelity Uncertainty Quantification" />
+<script type="application/ld+json">
+{"description":"Monte Carlo integration becomes prohibitively expensive when each sample requires a high-fidelity model evaluation. Multi-fidelity uncertainty quantification methods mitigate this by combining estimators from high- and low-fidelity models, preserving unbiasedness while reducing variance under a fixed budget. Constructing such estimators optimally requires the model-output covariance matrix, typically estimated from pilot samples. Too few pilot samples lead to inaccurate covariance estimates and suboptimal estimators, while too many consume budget that could be used for final estimation. We propose a Bayesian framework to quantify covariance uncertainty from pilot samples, incorporating prior knowledge and enabling probabilistic assessments of estimator performance. A central component is a flexible $\\gamma$-Gaussian prior that ensures computational tractability and supports efficient posterior projection under additional pilot samples. These tools enable adaptive pilot-sampling termination via an interpretable loss criterion that decomposes variance inefficiency into accuracy and cost components. While demonstrated here in the context of approximate control variates (ACV), the framework generalizes to other multi-fidelity estimators. We validate the approach on a monomial benchmark and a PDE-based Darcy flow problem. Across these tests, our adaptive method demonstrates its value for multi-fidelity estimation under limited pilot budgets and expensive models, achieving variance reduction comparable to baseline estimators with oracle covariance.","headline":"Bayesian Covariance Uncertainty for Adaptive Pilot-Sampling Termination in Multi-fidelity Uncertainty Quantification","dateModified":"2025-08-27T00:00:00+00:00","datePublished":"2025-08-27T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/27/BayesianCovarianceUncertaintyforAdaptivePilotSamplingTerminationinMultifidelityUncertaintyQuantification.html","author":{"@type":"Person","name":"Thomas E. Coons, Aniket Jivani, Xun Huan"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/27/BayesianCovarianceUncertaintyforAdaptivePilotSamplingTerminationinMultifidelityUncertaintyQuantification.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-27 00:00:00 +0000">08-27</time>
+  </p>
+  
+  <h1>Bayesian Covariance Uncertainty for Adaptive Pilot-Sampling Termination in Multi-fidelity Uncertainty Quantification</h1>
+  <br>Thomas E. Coons, Aniket Jivani, Xun Huan</h3>
+  <br> [stat.ME]
+
+  <p>Monte Carlo integration becomes prohibitively expensive when each sample requires a high-fidelity model evaluation. Multi-fidelity uncertainty quantification methods mitigate this by combining estimators from high- and low-fidelity models, preserving unbiasedness while reducing variance under a fixed budget. Constructing such estimators optimally requires the model-output covariance matrix, typically estimated from pilot samples. Too few pilot samples lead to inaccurate covariance estimates and suboptimal estimators, while too many consume budget that could be used for final estimation. We propose a Bayesian framework to quantify covariance uncertainty from pilot samples, incorporating prior knowledge and enabling probabilistic assessments of estimator performance. A central component is a flexible $\gamma$-Gaussian prior that ensures computational tractability and supports efficient posterior projection under additional pilot samples. These tools enable adaptive pilot-sampling termination via an interpretable loss criterion that decomposes variance inefficiency into accuracy and cost components. While demonstrated here in the context of approximate control variates (ACV), the framework generalizes to other multi-fidelity estimators. We validate the approach on a monomial benchmark and a PDE-based Darcy flow problem. Across these tests, our adaptive method demonstrates its value for multi-fidelity estimation under limited pilot budgets and expensive models, achieving variance reduction comparable to baseline estimators with oracle covariance.</p>
+
+<p><a href="https://arxiv.org/abs/2508.18490">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
