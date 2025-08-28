@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Scalable Bayesian Structure Learning for Gaussian Graphical Models Using Marginal Pseudo-likelihood</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Scalable Bayesian Structure Learning for Gaussian Graphical Models Using Marginal Pseudo-likelihood" />
+<meta name="author" content="Reza Mohammadi, Marit Schoonhoven, Lucas Vogels, S. Ilker Birbil" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian methods for learning Gaussian graphical models offer a principled framework for quantifying model uncertainty and incorporating prior knowledge. However, their scalability is constrained by the computational cost of jointly exploring graph structures and precision matrices. To address this challenge, we perform inference directly on the graph by integrating out the precision matrix. We adopt a marginal pseudo-likelihood approach, eliminating the need to compute intractable normalizing constants and perform computationally intensive precision matrix sampling. Building on this framework, we develop continuous-time (birth-death) and discrete-time (reversible jump) Markov chain Monte Carlo (MCMC) algorithms that efficiently explore the posterior over graph space. We establish theoretical guarantees for posterior contraction, convergence, and graph selection consistency. The algorithms scale to large graph spaces, enabling parallel exploration for graphs with over 1,000 nodes, while providing uncertainty quantification and supporting flexible prior specification over the graph space. Extensive simulations show substantial computational gains over state-of-the-art Bayesian approaches without sacrificing graph recovery accuracy. Applications to human and mouse gene expression datasets demonstrate the ability of our approach to recover biologically meaningful structures and quantify uncertainty in complex networks. An implementation is available in the R package BDgraph." />
+<meta property="og:description" content="Bayesian methods for learning Gaussian graphical models offer a principled framework for quantifying model uncertainty and incorporating prior knowledge. However, their scalability is constrained by the computational cost of jointly exploring graph structures and precision matrices. To address this challenge, we perform inference directly on the graph by integrating out the precision matrix. We adopt a marginal pseudo-likelihood approach, eliminating the need to compute intractable normalizing constants and perform computationally intensive precision matrix sampling. Building on this framework, we develop continuous-time (birth-death) and discrete-time (reversible jump) Markov chain Monte Carlo (MCMC) algorithms that efficiently explore the posterior over graph space. We establish theoretical guarantees for posterior contraction, convergence, and graph selection consistency. The algorithms scale to large graph spaces, enabling parallel exploration for graphs with over 1,000 nodes, while providing uncertainty quantification and supporting flexible prior specification over the graph space. Extensive simulations show substantial computational gains over state-of-the-art Bayesian approaches without sacrificing graph recovery accuracy. Applications to human and mouse gene expression datasets demonstrate the ability of our approach to recover biologically meaningful structures and quantify uncertainty in complex networks. An implementation is available in the R package BDgraph." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/08/28/ScalableBayesianStructureLearningforGaussianGraphicalModelsUsingMarginalPseudolikelihood.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/08/28/ScalableBayesianStructureLearningforGaussianGraphicalModelsUsingMarginalPseudolikelihood.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Scalable Bayesian Structure Learning for Gaussian Graphical Models Using Marginal Pseudo-likelihood" />
+<script type="application/ld+json">
+{"description":"Bayesian methods for learning Gaussian graphical models offer a principled framework for quantifying model uncertainty and incorporating prior knowledge. However, their scalability is constrained by the computational cost of jointly exploring graph structures and precision matrices. To address this challenge, we perform inference directly on the graph by integrating out the precision matrix. We adopt a marginal pseudo-likelihood approach, eliminating the need to compute intractable normalizing constants and perform computationally intensive precision matrix sampling. Building on this framework, we develop continuous-time (birth-death) and discrete-time (reversible jump) Markov chain Monte Carlo (MCMC) algorithms that efficiently explore the posterior over graph space. We establish theoretical guarantees for posterior contraction, convergence, and graph selection consistency. The algorithms scale to large graph spaces, enabling parallel exploration for graphs with over 1,000 nodes, while providing uncertainty quantification and supporting flexible prior specification over the graph space. Extensive simulations show substantial computational gains over state-of-the-art Bayesian approaches without sacrificing graph recovery accuracy. Applications to human and mouse gene expression datasets demonstrate the ability of our approach to recover biologically meaningful structures and quantify uncertainty in complex networks. An implementation is available in the R package BDgraph.","headline":"Scalable Bayesian Structure Learning for Gaussian Graphical Models Using Marginal Pseudo-likelihood","dateModified":"2025-08-28T00:00:00+00:00","datePublished":"2025-08-28T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/28/ScalableBayesianStructureLearningforGaussianGraphicalModelsUsingMarginalPseudolikelihood.html","author":{"@type":"Person","name":"Reza Mohammadi, Marit Schoonhoven, Lucas Vogels, S. Ilker Birbil"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/08/28/ScalableBayesianStructureLearningforGaussianGraphicalModelsUsingMarginalPseudolikelihood.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-28 00:00:00 +0000">08-28</time>
+  </p>
+  
+  <h1>Scalable Bayesian Structure Learning for Gaussian Graphical Models Using Marginal Pseudo-likelihood</h1>
+  <br>Reza Mohammadi, Marit Schoonhoven, Lucas Vogels, S. Ilker Birbil</h3>
+  <br> [stat.ME,stat.CO,stat.ML]
+
+  <p>Bayesian methods for learning Gaussian graphical models offer a principled framework for quantifying model uncertainty and incorporating prior knowledge. However, their scalability is constrained by the computational cost of jointly exploring graph structures and precision matrices. To address this challenge, we perform inference directly on the graph by integrating out the precision matrix. We adopt a marginal pseudo-likelihood approach, eliminating the need to compute intractable normalizing constants and perform computationally intensive precision matrix sampling. Building on this framework, we develop continuous-time (birth-death) and discrete-time (reversible jump) Markov chain Monte Carlo (MCMC) algorithms that efficiently explore the posterior over graph space. We establish theoretical guarantees for posterior contraction, convergence, and graph selection consistency. The algorithms scale to large graph spaces, enabling parallel exploration for graphs with over 1,000 nodes, while providing uncertainty quantification and supporting flexible prior specification over the graph space. Extensive simulations show substantial computational gains over state-of-the-art Bayesian approaches without sacrificing graph recovery accuracy. Applications to human and mouse gene expression datasets demonstrate the ability of our approach to recover biologically meaningful structures and quantify uncertainty in complex networks. An implementation is available in the R package BDgraph.</p>
+
+<p><a href="https://arxiv.org/abs/2307.00127">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
