@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The super learner for time-to-event outcomes: A tutorial</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The super learner for time-to-event outcomes: A tutorial" />
+<meta name="author" content="Ruth H. Keogh, Karla Diaz-Ordaz, Nan van Geloven, Jon Michael Gran, Kamaryn T. Tanner" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Estimating risks or survival probabilities conditional on individual characteristics based on censored time-to-event data is a commonly faced task. This may be for the purpose of developing a prediction model or may be part of a wider estimation procedure, such as in causal inference. A challenge is that it is impossible to know at the outset which of a set of candidate models will provide the best predictions. The super learner is a powerful approach for finding the best model or combination of models (‘ensemble’) among a pre-specified set of candidate models or ‘learners’, which can include parametric and machine learning models. Super learners for time-to-event outcomes have been developed, but the literature is technical and a reader may find it challenging to gather together the full details of how these methods work and can be implemented. In this paper we provide a practical tutorial on super learner methods for time-to-event outcomes. An overview of the general steps involved in the super learner is given, followed by details of three specific implementations for time-to-event outcomes. We cover discrete-time and continuous-time versions of the super learner, as described by Polley and van der Laan (2011), Westling et al. (2023) and Munch and Gerds (2024). We compare the properties of the methods and provide information on how they can be implemented in R. The methods are illustrated using an open access data set and R code is provided." />
+<meta property="og:description" content="Estimating risks or survival probabilities conditional on individual characteristics based on censored time-to-event data is a commonly faced task. This may be for the purpose of developing a prediction model or may be part of a wider estimation procedure, such as in causal inference. A challenge is that it is impossible to know at the outset which of a set of candidate models will provide the best predictions. The super learner is a powerful approach for finding the best model or combination of models (‘ensemble’) among a pre-specified set of candidate models or ‘learners’, which can include parametric and machine learning models. Super learners for time-to-event outcomes have been developed, but the literature is technical and a reader may find it challenging to gather together the full details of how these methods work and can be implemented. In this paper we provide a practical tutorial on super learner methods for time-to-event outcomes. An overview of the general steps involved in the super learner is given, followed by details of three specific implementations for time-to-event outcomes. We cover discrete-time and continuous-time versions of the super learner, as described by Polley and van der Laan (2011), Westling et al. (2023) and Munch and Gerds (2024). We compare the properties of the methods and provide information on how they can be implemented in R. The methods are illustrated using an open access data set and R code is provided." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/ThesuperlearnerfortimetoeventoutcomesAtutorial.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/ThesuperlearnerfortimetoeventoutcomesAtutorial.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The super learner for time-to-event outcomes: A tutorial" />
+<script type="application/ld+json">
+{"description":"Estimating risks or survival probabilities conditional on individual characteristics based on censored time-to-event data is a commonly faced task. This may be for the purpose of developing a prediction model or may be part of a wider estimation procedure, such as in causal inference. A challenge is that it is impossible to know at the outset which of a set of candidate models will provide the best predictions. The super learner is a powerful approach for finding the best model or combination of models (‘ensemble’) among a pre-specified set of candidate models or ‘learners’, which can include parametric and machine learning models. Super learners for time-to-event outcomes have been developed, but the literature is technical and a reader may find it challenging to gather together the full details of how these methods work and can be implemented. In this paper we provide a practical tutorial on super learner methods for time-to-event outcomes. An overview of the general steps involved in the super learner is given, followed by details of three specific implementations for time-to-event outcomes. We cover discrete-time and continuous-time versions of the super learner, as described by Polley and van der Laan (2011), Westling et al. (2023) and Munch and Gerds (2024). We compare the properties of the methods and provide information on how they can be implemented in R. The methods are illustrated using an open access data set and R code is provided.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/ThesuperlearnerfortimetoeventoutcomesAtutorial.html"},"headline":"The super learner for time-to-event outcomes: A tutorial","dateModified":"2025-09-04T00:00:00+00:00","datePublished":"2025-09-04T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/ThesuperlearnerfortimetoeventoutcomesAtutorial.html","author":{"@type":"Person","name":"Ruth H. Keogh, Karla Diaz-Ordaz, Nan van Geloven, Jon Michael Gran, Kamaryn T. Tanner"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-04 00:00:00 +0000">09-04</time>
+  </p>
+  
+  <h1>The super learner for time-to-event outcomes: A tutorial</h1>
+  <br>Ruth H. Keogh, Karla Diaz-Ordaz, Nan van Geloven, Jon Michael Gran, Kamaryn T. Tanner</h3>
+  <br> [stat.ME]
+
+  <p>Estimating risks or survival probabilities conditional on individual characteristics based on censored time-to-event data is a commonly faced task. This may be for the purpose of developing a prediction model or may be part of a wider estimation procedure, such as in causal inference. A challenge is that it is impossible to know at the outset which of a set of candidate models will provide the best predictions. The super learner is a powerful approach for finding the best model or combination of models (‘ensemble’) among a pre-specified set of candidate models or ‘learners’, which can include parametric and machine learning models. Super learners for time-to-event outcomes have been developed, but the literature is technical and a reader may find it challenging to gather together the full details of how these methods work and can be implemented. In this paper we provide a practical tutorial on super learner methods for time-to-event outcomes. An overview of the general steps involved in the super learner is given, followed by details of three specific implementations for time-to-event outcomes. We cover discrete-time and continuous-time versions of the super learner, as described by Polley and van der Laan (2011), Westling et al. (2023) and Munch and Gerds (2024). We compare the properties of the methods and provide information on how they can be implemented in R. The methods are illustrated using an open access data set and R code is provided.</p>
+
+<p><a href="https://arxiv.org/abs/2509.03315">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

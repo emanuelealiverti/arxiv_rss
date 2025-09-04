@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Nearest-Neighbor Derivative Process: Modeling Spatial Rates of Change in Massive Datasets</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Nearest-Neighbor Derivative Process: Modeling Spatial Rates of Change in Massive Datasets" />
+<meta name="author" content="Jiawen Chen, Aritra Halder, Yun Li, Sudipto Banerjee, Didong Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gaussian processes (GPs) are instrumental in modeling spatial processes, offering precise interpolation and prediction capabilities across fields such as environmental science and biology. Recently, there has been growing interest in extending GPs to infer spatial derivatives, which are vital for analyzing spatial dynamics and detecting subtle changes in data patterns. Despite their utility, traditional GPs suffer from computational inefficiencies, due to the cubic scaling with the number of spatial locations. Fortunately, the computational challenge has spurred extensive research on scalable GP methods. However, these scalable approaches do not directly accommodate the inference of derivative processes. A straightforward approach is to use scalable GP models followed by finite-difference methods, known as the plug-in estimator. This approach, while intuitive, suffers from sensitivity to parameter choices, and the approximate gradient may not be a valid GP, leading to compromised inference. To bridge this gap, we introduce the Nearest-Neighbor Derivative Process (NNDP), an innovative framework that models the spatial processes and their derivatives within a single scalable GP model. NNDP significantly reduces the computational time complexity from $O(n^3)$ to $O(n)$, making it feasible for large datasets. We provide various theoretical supports for NNDP and demonstrate its effectiveness through extensive simulations and real data analysis." />
+<meta property="og:description" content="Gaussian processes (GPs) are instrumental in modeling spatial processes, offering precise interpolation and prediction capabilities across fields such as environmental science and biology. Recently, there has been growing interest in extending GPs to infer spatial derivatives, which are vital for analyzing spatial dynamics and detecting subtle changes in data patterns. Despite their utility, traditional GPs suffer from computational inefficiencies, due to the cubic scaling with the number of spatial locations. Fortunately, the computational challenge has spurred extensive research on scalable GP methods. However, these scalable approaches do not directly accommodate the inference of derivative processes. A straightforward approach is to use scalable GP models followed by finite-difference methods, known as the plug-in estimator. This approach, while intuitive, suffers from sensitivity to parameter choices, and the approximate gradient may not be a valid GP, leading to compromised inference. To bridge this gap, we introduce the Nearest-Neighbor Derivative Process (NNDP), an innovative framework that models the spatial processes and their derivatives within a single scalable GP model. NNDP significantly reduces the computational time complexity from $O(n^3)$ to $O(n)$, making it feasible for large datasets. We provide various theoretical supports for NNDP and demonstrate its effectiveness through extensive simulations and real data analysis." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/TheNearestNeighborDerivativeProcessModelingSpatialRatesofChangeinMassiveDatasets.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/TheNearestNeighborDerivativeProcessModelingSpatialRatesofChangeinMassiveDatasets.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Nearest-Neighbor Derivative Process: Modeling Spatial Rates of Change in Massive Datasets" />
+<script type="application/ld+json">
+{"description":"Gaussian processes (GPs) are instrumental in modeling spatial processes, offering precise interpolation and prediction capabilities across fields such as environmental science and biology. Recently, there has been growing interest in extending GPs to infer spatial derivatives, which are vital for analyzing spatial dynamics and detecting subtle changes in data patterns. Despite their utility, traditional GPs suffer from computational inefficiencies, due to the cubic scaling with the number of spatial locations. Fortunately, the computational challenge has spurred extensive research on scalable GP methods. However, these scalable approaches do not directly accommodate the inference of derivative processes. A straightforward approach is to use scalable GP models followed by finite-difference methods, known as the plug-in estimator. This approach, while intuitive, suffers from sensitivity to parameter choices, and the approximate gradient may not be a valid GP, leading to compromised inference. To bridge this gap, we introduce the Nearest-Neighbor Derivative Process (NNDP), an innovative framework that models the spatial processes and their derivatives within a single scalable GP model. NNDP significantly reduces the computational time complexity from $O(n^3)$ to $O(n)$, making it feasible for large datasets. We provide various theoretical supports for NNDP and demonstrate its effectiveness through extensive simulations and real data analysis.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/TheNearestNeighborDerivativeProcessModelingSpatialRatesofChangeinMassiveDatasets.html"},"headline":"The Nearest-Neighbor Derivative Process: Modeling Spatial Rates of Change in Massive Datasets","dateModified":"2025-09-04T00:00:00+00:00","datePublished":"2025-09-04T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/TheNearestNeighborDerivativeProcessModelingSpatialRatesofChangeinMassiveDatasets.html","author":{"@type":"Person","name":"Jiawen Chen, Aritra Halder, Yun Li, Sudipto Banerjee, Didong Li"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-04 00:00:00 +0000">09-04</time>
+  </p>
+  
+  <h1>The Nearest-Neighbor Derivative Process: Modeling Spatial Rates of Change in Massive Datasets</h1>
+  <br>Jiawen Chen, Aritra Halder, Yun Li, Sudipto Banerjee, Didong Li</h3>
+  <br> [stat.ME,stat.TH]
+
+  <p>Gaussian processes (GPs) are instrumental in modeling spatial processes, offering precise interpolation and prediction capabilities across fields such as environmental science and biology. Recently, there has been growing interest in extending GPs to infer spatial derivatives, which are vital for analyzing spatial dynamics and detecting subtle changes in data patterns. Despite their utility, traditional GPs suffer from computational inefficiencies, due to the cubic scaling with the number of spatial locations. Fortunately, the computational challenge has spurred extensive research on scalable GP methods. However, these scalable approaches do not directly accommodate the inference of derivative processes. A straightforward approach is to use scalable GP models followed by finite-difference methods, known as the plug-in estimator. This approach, while intuitive, suffers from sensitivity to parameter choices, and the approximate gradient may not be a valid GP, leading to compromised inference. To bridge this gap, we introduce the Nearest-Neighbor Derivative Process (NNDP), an innovative framework that models the spatial processes and their derivatives within a single scalable GP model. NNDP significantly reduces the computational time complexity from $O(n^3)$ to $O(n)$, making it feasible for large datasets. We provide various theoretical supports for NNDP and demonstrate its effectiveness through extensive simulations and real data analysis.</p>
+
+<p><a href="https://arxiv.org/abs/2509.02752">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Multivariate Sparse Functional PCA</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bayesian Multivariate Sparse Functional PCA" />
+<meta name="author" content="Joseph Sartini, Scott Zeger, Ciprian Crainiceanu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Functional Principal Components Analysis (FPCA) provides a parsimonious, semi-parametric model for multivariate, sparsely-observed functional data. Frequentist FPCA approaches estimate principal components (PCs) from the data, then condition on these estimates in subsequent analyses. As an alternative, we propose a fully Bayesian inferential framework for multivariate, sparse functional data (MSFAST) which explicitly models the PCs and incorporates their uncertainty. MSFAST builds upon the FAST approach to FPCA for univariate, densely-observed functional data. Like FAST, MSFAST represents PCs using orthonormal splines, samples the orthonormal spline coefficients using parameter expansion, and enforces eigenvalue ordering during model fit. MSFAST extends FAST to multivariate, sparsely-observed data by (1) standardizing each functional covariate to mitigate poor posterior conditioning due to disparate scales; (2) using a better-suited orthogonal spline basis; (3) parallelizing likelihood calculations over covariates; (4) updating parameterizations and priors for computational stability; (5) using a Procrustes-based posterior alignment procedure; and (6) providing efficient prediction routines. We evaluated MSFAST alongside existing implementations using simulations. MSFAST produces uniquely valid inferences and accurate estimates, particularly for smaller signals. MSFAST is motivated by and applied to a study of child growth, with an accompanying vignette illustrating the implementation step-by-step." />
+<meta property="og:description" content="Functional Principal Components Analysis (FPCA) provides a parsimonious, semi-parametric model for multivariate, sparsely-observed functional data. Frequentist FPCA approaches estimate principal components (PCs) from the data, then condition on these estimates in subsequent analyses. As an alternative, we propose a fully Bayesian inferential framework for multivariate, sparse functional data (MSFAST) which explicitly models the PCs and incorporates their uncertainty. MSFAST builds upon the FAST approach to FPCA for univariate, densely-observed functional data. Like FAST, MSFAST represents PCs using orthonormal splines, samples the orthonormal spline coefficients using parameter expansion, and enforces eigenvalue ordering during model fit. MSFAST extends FAST to multivariate, sparsely-observed data by (1) standardizing each functional covariate to mitigate poor posterior conditioning due to disparate scales; (2) using a better-suited orthogonal spline basis; (3) parallelizing likelihood calculations over covariates; (4) updating parameterizations and priors for computational stability; (5) using a Procrustes-based posterior alignment procedure; and (6) providing efficient prediction routines. We evaluated MSFAST alongside existing implementations using simulations. MSFAST produces uniquely valid inferences and accurate estimates, particularly for smaller signals. MSFAST is motivated by and applied to a study of child growth, with an accompanying vignette illustrating the implementation step-by-step." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/BayesianMultivariateSparseFunctionalPCA.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/BayesianMultivariateSparseFunctionalPCA.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bayesian Multivariate Sparse Functional PCA" />
+<script type="application/ld+json">
+{"description":"Functional Principal Components Analysis (FPCA) provides a parsimonious, semi-parametric model for multivariate, sparsely-observed functional data. Frequentist FPCA approaches estimate principal components (PCs) from the data, then condition on these estimates in subsequent analyses. As an alternative, we propose a fully Bayesian inferential framework for multivariate, sparse functional data (MSFAST) which explicitly models the PCs and incorporates their uncertainty. MSFAST builds upon the FAST approach to FPCA for univariate, densely-observed functional data. Like FAST, MSFAST represents PCs using orthonormal splines, samples the orthonormal spline coefficients using parameter expansion, and enforces eigenvalue ordering during model fit. MSFAST extends FAST to multivariate, sparsely-observed data by (1) standardizing each functional covariate to mitigate poor posterior conditioning due to disparate scales; (2) using a better-suited orthogonal spline basis; (3) parallelizing likelihood calculations over covariates; (4) updating parameterizations and priors for computational stability; (5) using a Procrustes-based posterior alignment procedure; and (6) providing efficient prediction routines. We evaluated MSFAST alongside existing implementations using simulations. MSFAST produces uniquely valid inferences and accurate estimates, particularly for smaller signals. MSFAST is motivated by and applied to a study of child growth, with an accompanying vignette illustrating the implementation step-by-step.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/BayesianMultivariateSparseFunctionalPCA.html"},"headline":"Bayesian Multivariate Sparse Functional PCA","dateModified":"2025-09-04T00:00:00+00:00","datePublished":"2025-09-04T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/BayesianMultivariateSparseFunctionalPCA.html","author":{"@type":"Person","name":"Joseph Sartini, Scott Zeger, Ciprian Crainiceanu"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-04 00:00:00 +0000">09-04</time>
+  </p>
+  
+  <h1>Bayesian Multivariate Sparse Functional PCA</h1>
+  <br>Joseph Sartini, Scott Zeger, Ciprian Crainiceanu</h3>
+  <br> [stat.ME]
+
+  <p>Functional Principal Components Analysis (FPCA) provides a parsimonious, semi-parametric model for multivariate, sparsely-observed functional data. Frequentist FPCA approaches estimate principal components (PCs) from the data, then condition on these estimates in subsequent analyses. As an alternative, we propose a fully Bayesian inferential framework for multivariate, sparse functional data (MSFAST) which explicitly models the PCs and incorporates their uncertainty. MSFAST builds upon the FAST approach to FPCA for univariate, densely-observed functional data. Like FAST, MSFAST represents PCs using orthonormal splines, samples the orthonormal spline coefficients using parameter expansion, and enforces eigenvalue ordering during model fit. MSFAST extends FAST to multivariate, sparsely-observed data by (1) standardizing each functional covariate to mitigate poor posterior conditioning due to disparate scales; (2) using a better-suited orthogonal spline basis; (3) parallelizing likelihood calculations over covariates; (4) updating parameterizations and priors for computational stability; (5) using a Procrustes-based posterior alignment procedure; and (6) providing efficient prediction routines. We evaluated MSFAST alongside existing implementations using simulations. MSFAST produces uniquely valid inferences and accurate estimates, particularly for smaller signals. MSFAST is motivated by and applied to a study of child growth, with an accompanying vignette illustrating the implementation step-by-step.</p>
+
+<p><a href="https://arxiv.org/abs/2509.03512">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

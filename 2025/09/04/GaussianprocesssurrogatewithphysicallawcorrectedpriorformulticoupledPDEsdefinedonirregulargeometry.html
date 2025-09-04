@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Gaussian process surrogate with physical law-corrected prior for multi-coupled PDEs defined on irregular geometry</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Gaussian process surrogate with physical law-corrected prior for multi-coupled PDEs defined on irregular geometry" />
+<meta name="author" content="Pucheng Tang, Hongqiao Wang, Wenzhou Lin, Qian Chen, Heng Yong" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Parametric partial differential equations (PDEs) are fundamental mathematical tools for modeling complex physical systems, yet their numerical evaluation across parameter spaces remains computationally intensive when using conventional high-fidelity solvers. To address this challenge, we propose a novel physical law-corrected prior Gaussian process (LC-prior GP) surrogate modeling framework that effectively integrates data-driven learning with underlying physical constraints to flexibly handle multi-coupled variables defined on complex geometries. The proposed approach leverages proper orthogonal decomposition (POD) to parameterize high-dimensional PDE solutions via their dominant modes and associated coefficients, thereby enabling efficient Gaussian process (GP) surrogate modeling within a reduced-dimensional coefficient space. A key contribution lies in the incorporation of physical laws together with a limited number of parameter samples to correct the GP posterior mean, thus avoiding reliance on computationally expensive numerical solvers. Furthermore, interpolation functions are constructed to describe the mapping from the full parameter space to the physics-based correction term. This mapping is subsequently backpropagated to constrain the original GP surrogate, yielding a more physically consistent conditional prior. To handle irregular geometries, the radial basis function-finite difference (RBF-FD) method is incorporated during training set computation, with its inherent differentiation matrices providing both computational efficiency and numerical accuracy for physical constraint optimization. The effectiveness of the proposed method is demonstrated through numerical experiments involving a reaction-diffusion model, miscible flooding models, and Navier-Stokes equations with multi-physics coupling defined on irregular domains." />
+<meta property="og:description" content="Parametric partial differential equations (PDEs) are fundamental mathematical tools for modeling complex physical systems, yet their numerical evaluation across parameter spaces remains computationally intensive when using conventional high-fidelity solvers. To address this challenge, we propose a novel physical law-corrected prior Gaussian process (LC-prior GP) surrogate modeling framework that effectively integrates data-driven learning with underlying physical constraints to flexibly handle multi-coupled variables defined on complex geometries. The proposed approach leverages proper orthogonal decomposition (POD) to parameterize high-dimensional PDE solutions via their dominant modes and associated coefficients, thereby enabling efficient Gaussian process (GP) surrogate modeling within a reduced-dimensional coefficient space. A key contribution lies in the incorporation of physical laws together with a limited number of parameter samples to correct the GP posterior mean, thus avoiding reliance on computationally expensive numerical solvers. Furthermore, interpolation functions are constructed to describe the mapping from the full parameter space to the physics-based correction term. This mapping is subsequently backpropagated to constrain the original GP surrogate, yielding a more physically consistent conditional prior. To handle irregular geometries, the radial basis function-finite difference (RBF-FD) method is incorporated during training set computation, with its inherent differentiation matrices providing both computational efficiency and numerical accuracy for physical constraint optimization. The effectiveness of the proposed method is demonstrated through numerical experiments involving a reaction-diffusion model, miscible flooding models, and Navier-Stokes equations with multi-physics coupling defined on irregular domains." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/GaussianprocesssurrogatewithphysicallawcorrectedpriorformulticoupledPDEsdefinedonirregulargeometry.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/GaussianprocesssurrogatewithphysicallawcorrectedpriorformulticoupledPDEsdefinedonirregulargeometry.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Gaussian process surrogate with physical law-corrected prior for multi-coupled PDEs defined on irregular geometry" />
+<script type="application/ld+json">
+{"description":"Parametric partial differential equations (PDEs) are fundamental mathematical tools for modeling complex physical systems, yet their numerical evaluation across parameter spaces remains computationally intensive when using conventional high-fidelity solvers. To address this challenge, we propose a novel physical law-corrected prior Gaussian process (LC-prior GP) surrogate modeling framework that effectively integrates data-driven learning with underlying physical constraints to flexibly handle multi-coupled variables defined on complex geometries. The proposed approach leverages proper orthogonal decomposition (POD) to parameterize high-dimensional PDE solutions via their dominant modes and associated coefficients, thereby enabling efficient Gaussian process (GP) surrogate modeling within a reduced-dimensional coefficient space. A key contribution lies in the incorporation of physical laws together with a limited number of parameter samples to correct the GP posterior mean, thus avoiding reliance on computationally expensive numerical solvers. Furthermore, interpolation functions are constructed to describe the mapping from the full parameter space to the physics-based correction term. This mapping is subsequently backpropagated to constrain the original GP surrogate, yielding a more physically consistent conditional prior. To handle irregular geometries, the radial basis function-finite difference (RBF-FD) method is incorporated during training set computation, with its inherent differentiation matrices providing both computational efficiency and numerical accuracy for physical constraint optimization. The effectiveness of the proposed method is demonstrated through numerical experiments involving a reaction-diffusion model, miscible flooding models, and Navier-Stokes equations with multi-physics coupling defined on irregular domains.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/GaussianprocesssurrogatewithphysicallawcorrectedpriorformulticoupledPDEsdefinedonirregulargeometry.html"},"headline":"Gaussian process surrogate with physical law-corrected prior for multi-coupled PDEs defined on irregular geometry","dateModified":"2025-09-04T00:00:00+00:00","datePublished":"2025-09-04T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/GaussianprocesssurrogatewithphysicallawcorrectedpriorformulticoupledPDEsdefinedonirregulargeometry.html","author":{"@type":"Person","name":"Pucheng Tang, Hongqiao Wang, Wenzhou Lin, Qian Chen, Heng Yong"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-04 00:00:00 +0000">09-04</time>
+  </p>
+  
+  <h1>Gaussian process surrogate with physical law-corrected prior for multi-coupled PDEs defined on irregular geometry</h1>
+  <br>Pucheng Tang, Hongqiao Wang, Wenzhou Lin, Qian Chen, Heng Yong</h3>
+  <br> [stat.ML,stat.CO]
+
+  <p>Parametric partial differential equations (PDEs) are fundamental mathematical tools for modeling complex physical systems, yet their numerical evaluation across parameter spaces remains computationally intensive when using conventional high-fidelity solvers. To address this challenge, we propose a novel physical law-corrected prior Gaussian process (LC-prior GP) surrogate modeling framework that effectively integrates data-driven learning with underlying physical constraints to flexibly handle multi-coupled variables defined on complex geometries. The proposed approach leverages proper orthogonal decomposition (POD) to parameterize high-dimensional PDE solutions via their dominant modes and associated coefficients, thereby enabling efficient Gaussian process (GP) surrogate modeling within a reduced-dimensional coefficient space. A key contribution lies in the incorporation of physical laws together with a limited number of parameter samples to correct the GP posterior mean, thus avoiding reliance on computationally expensive numerical solvers. Furthermore, interpolation functions are constructed to describe the mapping from the full parameter space to the physics-based correction term. This mapping is subsequently backpropagated to constrain the original GP surrogate, yielding a more physically consistent conditional prior. To handle irregular geometries, the radial basis function-finite difference (RBF-FD) method is incorporated during training set computation, with its inherent differentiation matrices providing both computational efficiency and numerical accuracy for physical constraint optimization. The effectiveness of the proposed method is demonstrated through numerical experiments involving a reaction-diffusion model, miscible flooding models, and Navier-Stokes equations with multi-physics coupling defined on irregular domains.</p>
+
+<p><a href="https://arxiv.org/abs/2509.02617">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

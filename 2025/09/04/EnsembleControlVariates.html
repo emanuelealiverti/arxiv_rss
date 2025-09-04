@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Ensemble Control Variates</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Ensemble Control Variates" />
+<meta name="author" content="Long M. Nguyen, Christopher Drovandi, Leah F. South" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Control variates have become an increasingly popular variance-reduction technique in Bayesian inference. Many broadly applicable control variates are based on the Langevin-Stein operator, which leverages gradient information from any gradient-based sampler to produce variance-reduced estimators of expectations. These control variates typically require optimising over a function $u(\theta)$ within a user-defined functional class $G$, such as the space of $Q$th-order polynomials or a reproducing kernel Hilbert space. We propose using averaging-based ensemble learning to construct Stein-based control variates. While the proposed framework is broadly applicable, we focus on ensembles constructed from zero-variance control variates (ZVCV), a popular parametric approach based on solving a linear approximation problem that can easily be over-parameterised in medium-to-high dimensional settings. A common remedy is to use regularised ZVCV via penalised regression, but these methods can be prohibitively slow. We introduce ensemble ZVCV methods based on ensembles of OLS estimators and evaluate the proposed methods against established methods in the literature in a simulation study. Our results show that ensemble ZVCV methods are competitive with regularised ZVCV methods in terms of statistical efficiency, but are substantially faster. This work opens a new direction for constructing broadly applicable control variate techniques via ensemble learning." />
+<meta property="og:description" content="Control variates have become an increasingly popular variance-reduction technique in Bayesian inference. Many broadly applicable control variates are based on the Langevin-Stein operator, which leverages gradient information from any gradient-based sampler to produce variance-reduced estimators of expectations. These control variates typically require optimising over a function $u(\theta)$ within a user-defined functional class $G$, such as the space of $Q$th-order polynomials or a reproducing kernel Hilbert space. We propose using averaging-based ensemble learning to construct Stein-based control variates. While the proposed framework is broadly applicable, we focus on ensembles constructed from zero-variance control variates (ZVCV), a popular parametric approach based on solving a linear approximation problem that can easily be over-parameterised in medium-to-high dimensional settings. A common remedy is to use regularised ZVCV via penalised regression, but these methods can be prohibitively slow. We introduce ensemble ZVCV methods based on ensembles of OLS estimators and evaluate the proposed methods against established methods in the literature in a simulation study. Our results show that ensemble ZVCV methods are competitive with regularised ZVCV methods in terms of statistical efficiency, but are substantially faster. This work opens a new direction for constructing broadly applicable control variate techniques via ensemble learning." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/EnsembleControlVariates.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/EnsembleControlVariates.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Ensemble Control Variates" />
+<script type="application/ld+json">
+{"description":"Control variates have become an increasingly popular variance-reduction technique in Bayesian inference. Many broadly applicable control variates are based on the Langevin-Stein operator, which leverages gradient information from any gradient-based sampler to produce variance-reduced estimators of expectations. These control variates typically require optimising over a function $u(\\theta)$ within a user-defined functional class $G$, such as the space of $Q$th-order polynomials or a reproducing kernel Hilbert space. We propose using averaging-based ensemble learning to construct Stein-based control variates. While the proposed framework is broadly applicable, we focus on ensembles constructed from zero-variance control variates (ZVCV), a popular parametric approach based on solving a linear approximation problem that can easily be over-parameterised in medium-to-high dimensional settings. A common remedy is to use regularised ZVCV via penalised regression, but these methods can be prohibitively slow. We introduce ensemble ZVCV methods based on ensembles of OLS estimators and evaluate the proposed methods against established methods in the literature in a simulation study. Our results show that ensemble ZVCV methods are competitive with regularised ZVCV methods in terms of statistical efficiency, but are substantially faster. This work opens a new direction for constructing broadly applicable control variate techniques via ensemble learning.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/EnsembleControlVariates.html"},"headline":"Ensemble Control Variates","dateModified":"2025-09-04T00:00:00+00:00","datePublished":"2025-09-04T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/04/EnsembleControlVariates.html","author":{"@type":"Person","name":"Long M. Nguyen, Christopher Drovandi, Leah F. South"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-04 00:00:00 +0000">09-04</time>
+  </p>
+  
+  <h1>Ensemble Control Variates</h1>
+  <br>Long M. Nguyen, Christopher Drovandi, Leah F. South</h3>
+  <br> [stat.CO]
+
+  <p>Control variates have become an increasingly popular variance-reduction technique in Bayesian inference. Many broadly applicable control variates are based on the Langevin-Stein operator, which leverages gradient information from any gradient-based sampler to produce variance-reduced estimators of expectations. These control variates typically require optimising over a function $u(\theta)$ within a user-defined functional class $G$, such as the space of $Q$th-order polynomials or a reproducing kernel Hilbert space. We propose using averaging-based ensemble learning to construct Stein-based control variates. While the proposed framework is broadly applicable, we focus on ensembles constructed from zero-variance control variates (ZVCV), a popular parametric approach based on solving a linear approximation problem that can easily be over-parameterised in medium-to-high dimensional settings. A common remedy is to use regularised ZVCV via penalised regression, but these methods can be prohibitively slow. We introduce ensemble ZVCV methods based on ensembles of OLS estimators and evaluate the proposed methods against established methods in the literature in a simulation study. Our results show that ensemble ZVCV methods are competitive with regularised ZVCV methods in terms of statistical efficiency, but are substantially faster. This work opens a new direction for constructing broadly applicable control variate techniques via ensemble learning.</p>
+
+<p><a href="https://arxiv.org/abs/2509.01091">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
