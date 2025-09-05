@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Latent space projections and atlases: A cautionary tale in deep neuroimaging using autoencoders</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Latent space projections and atlases: A cautionary tale in deep neuroimaging using autoencoders" />
+<meta name="author" content="J. M. Gorriz, F. Segovia, C. Jimenez, J. E. Arco, F. J. Martinez, J Ramirez, S. Abulikemu, J. Suckling" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This study introduces a deep learning pipeline for the unsupervised analysis of 3D brain MRI using a simple convolutional autoencoder architecture. Trained on segmented gray matter images from the ADNI dataset, the model learns compact latent representations that preserve neuroanatomical structure and reflect clinical variability across cognitive states. We apply dimensionality reduction techniques (PCA, tSNE, PLS, UMAP) to visualize and interpret the latent space, correlating it with anatomical regions defined by the AAL atlas. As a novel contribution, we propose the Latent Regional Correlation Profiling (LRCP) framework, which combines statistical association and supervised discriminability to identify brain regions that encode clinically relevant latent features. Our results show that even minimal architectures can capture meaningful patterns associated with progression to Alzheimer Disease. Furthermore, we validate the interpretability of latent features using SHAP-based regression and statistical agnostic methods, highlighting the importance of rigorous evaluation in neuroimaging. This work demonstrates the potential of autoencoders as exploratory tools for biomarker discovery and hypothesis generation in clinical neuroscience." />
+<meta property="og:description" content="This study introduces a deep learning pipeline for the unsupervised analysis of 3D brain MRI using a simple convolutional autoencoder architecture. Trained on segmented gray matter images from the ADNI dataset, the model learns compact latent representations that preserve neuroanatomical structure and reflect clinical variability across cognitive states. We apply dimensionality reduction techniques (PCA, tSNE, PLS, UMAP) to visualize and interpret the latent space, correlating it with anatomical regions defined by the AAL atlas. As a novel contribution, we propose the Latent Regional Correlation Profiling (LRCP) framework, which combines statistical association and supervised discriminability to identify brain regions that encode clinically relevant latent features. Our results show that even minimal architectures can capture meaningful patterns associated with progression to Alzheimer Disease. Furthermore, we validate the interpretability of latent features using SHAP-based regression and statistical agnostic methods, highlighting the importance of rigorous evaluation in neuroimaging. This work demonstrates the potential of autoencoders as exploratory tools for biomarker discovery and hypothesis generation in clinical neuroscience." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/05/LatentspaceprojectionsandatlasesAcautionarytaleindeepneuroimagingusingautoencoders.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/05/LatentspaceprojectionsandatlasesAcautionarytaleindeepneuroimagingusingautoencoders.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Latent space projections and atlases: A cautionary tale in deep neuroimaging using autoencoders" />
+<script type="application/ld+json">
+{"description":"This study introduces a deep learning pipeline for the unsupervised analysis of 3D brain MRI using a simple convolutional autoencoder architecture. Trained on segmented gray matter images from the ADNI dataset, the model learns compact latent representations that preserve neuroanatomical structure and reflect clinical variability across cognitive states. We apply dimensionality reduction techniques (PCA, tSNE, PLS, UMAP) to visualize and interpret the latent space, correlating it with anatomical regions defined by the AAL atlas. As a novel contribution, we propose the Latent Regional Correlation Profiling (LRCP) framework, which combines statistical association and supervised discriminability to identify brain regions that encode clinically relevant latent features. Our results show that even minimal architectures can capture meaningful patterns associated with progression to Alzheimer Disease. Furthermore, we validate the interpretability of latent features using SHAP-based regression and statistical agnostic methods, highlighting the importance of rigorous evaluation in neuroimaging. This work demonstrates the potential of autoencoders as exploratory tools for biomarker discovery and hypothesis generation in clinical neuroscience.","headline":"Latent space projections and atlases: A cautionary tale in deep neuroimaging using autoencoders","dateModified":"2025-09-05T00:00:00+00:00","datePublished":"2025-09-05T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/05/LatentspaceprojectionsandatlasesAcautionarytaleindeepneuroimagingusingautoencoders.html","author":{"@type":"Person","name":"J. M. Gorriz, F. Segovia, C. Jimenez, J. E. Arco, F. J. Martinez, J Ramirez, S. Abulikemu, J. Suckling"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/05/LatentspaceprojectionsandatlasesAcautionarytaleindeepneuroimagingusingautoencoders.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-05 00:00:00 +0000">09-05</time>
+  </p>
+  
+  <h1>Latent space projections and atlases: A cautionary tale in deep neuroimaging using autoencoders</h1>
+  <br>J. M. Gorriz, F. Segovia, C. Jimenez, J. E. Arco, F. J. Martinez, J Ramirez, S. Abulikemu, J. Suckling</h3>
+  <br> [stat.AP]
+
+  <p>This study introduces a deep learning pipeline for the unsupervised analysis of 3D brain MRI using a simple convolutional autoencoder architecture. Trained on segmented gray matter images from the ADNI dataset, the model learns compact latent representations that preserve neuroanatomical structure and reflect clinical variability across cognitive states. We apply dimensionality reduction techniques (PCA, tSNE, PLS, UMAP) to visualize and interpret the latent space, correlating it with anatomical regions defined by the AAL atlas. As a novel contribution, we propose the Latent Regional Correlation Profiling (LRCP) framework, which combines statistical association and supervised discriminability to identify brain regions that encode clinically relevant latent features. Our results show that even minimal architectures can capture meaningful patterns associated with progression to Alzheimer Disease. Furthermore, we validate the interpretability of latent features using SHAP-based regression and statistical agnostic methods, highlighting the importance of rigorous evaluation in neuroimaging. This work demonstrates the potential of autoencoders as exploratory tools for biomarker discovery and hypothesis generation in clinical neuroscience.</p>
+
+<p><a href="https://arxiv.org/abs/2509.03675">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
