@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adding structure to generalized additive models, with applications in ecology</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Adding structure to generalized additive models, with applications in ecology" />
+<meta name="author" content="David L Miller, Ken Newman, Thomas Cornulier" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Generalized additive models (GAMs) connecting a set of scalar covariates that map 1-1 to a response are commonly employed in ecology and beyond. However, covariates are often inherently non-scalar, taking multiple values for each observation of the response. They can sometimes have a temporal structure, e.g., a time series of temperatures, or a spatial structure, e.g., multiple soil pH measurements made at nearby locations. While aggregating or selectively summarizing such covariates to yield a scalar covariate allows the use of standard GAM fitting procedures, exactly how to do so can be problematic and information is necessarily lost. Naively including all $p$ components of a vector-valued covariate as $p$ separate covariates, say, without recognizing the structure, can lead to problems of multicollinearity, data sets that are excessively wide given the sample size, and difficulty extracting the primary signal provided by the covariate. Here we introduce three useful extensions to GAMs that efficiently and effectively handle vector-valued covariates without requiring one to choose aggregations or selective summarizations. These extensions are varying-coefficient, scalar-on-function and distributed lag models. While these models have existed for some time they remain relatively underused in ecology. This article aims to show when these models can be useful and how to fit them with the popular R package \mgcv{}." />
+<meta property="og:description" content="Generalized additive models (GAMs) connecting a set of scalar covariates that map 1-1 to a response are commonly employed in ecology and beyond. However, covariates are often inherently non-scalar, taking multiple values for each observation of the response. They can sometimes have a temporal structure, e.g., a time series of temperatures, or a spatial structure, e.g., multiple soil pH measurements made at nearby locations. While aggregating or selectively summarizing such covariates to yield a scalar covariate allows the use of standard GAM fitting procedures, exactly how to do so can be problematic and information is necessarily lost. Naively including all $p$ components of a vector-valued covariate as $p$ separate covariates, say, without recognizing the structure, can lead to problems of multicollinearity, data sets that are excessively wide given the sample size, and difficulty extracting the primary signal provided by the covariate. Here we introduce three useful extensions to GAMs that efficiently and effectively handle vector-valued covariates without requiring one to choose aggregations or selective summarizations. These extensions are varying-coefficient, scalar-on-function and distributed lag models. While these models have existed for some time they remain relatively underused in ecology. This article aims to show when these models can be useful and how to fit them with the popular R package \mgcv{}." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/11/Addingstructuretogeneralizedadditivemodelswithapplicationsinecology.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/11/Addingstructuretogeneralizedadditivemodelswithapplicationsinecology.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adding structure to generalized additive models, with applications in ecology" />
+<script type="application/ld+json">
+{"description":"Generalized additive models (GAMs) connecting a set of scalar covariates that map 1-1 to a response are commonly employed in ecology and beyond. However, covariates are often inherently non-scalar, taking multiple values for each observation of the response. They can sometimes have a temporal structure, e.g., a time series of temperatures, or a spatial structure, e.g., multiple soil pH measurements made at nearby locations. While aggregating or selectively summarizing such covariates to yield a scalar covariate allows the use of standard GAM fitting procedures, exactly how to do so can be problematic and information is necessarily lost. Naively including all $p$ components of a vector-valued covariate as $p$ separate covariates, say, without recognizing the structure, can lead to problems of multicollinearity, data sets that are excessively wide given the sample size, and difficulty extracting the primary signal provided by the covariate. Here we introduce three useful extensions to GAMs that efficiently and effectively handle vector-valued covariates without requiring one to choose aggregations or selective summarizations. These extensions are varying-coefficient, scalar-on-function and distributed lag models. While these models have existed for some time they remain relatively underused in ecology. This article aims to show when these models can be useful and how to fit them with the popular R package \\mgcv{}.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/11/Addingstructuretogeneralizedadditivemodelswithapplicationsinecology.html"},"headline":"Adding structure to generalized additive models, with applications in ecology","dateModified":"2025-09-11T00:00:00+00:00","datePublished":"2025-09-11T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/11/Addingstructuretogeneralizedadditivemodelswithapplicationsinecology.html","author":{"@type":"Person","name":"David L Miller, Ken Newman, Thomas Cornulier"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-11 00:00:00 +0000">09-11</time>
+  </p>
+  
+  <h1>Adding structure to generalized additive models, with applications in ecology</h1>
+  <br>David L Miller, Ken Newman, Thomas Cornulier</h3>
+  <br> [stat.ME]
+
+  <p>Generalized additive models (GAMs) connecting a set of scalar covariates that map 1-1 to a response are commonly employed in ecology and beyond. However, covariates are often inherently non-scalar, taking multiple values for each observation of the response. They can sometimes have a temporal structure, e.g., a time series of temperatures, or a spatial structure, e.g., multiple soil pH measurements made at nearby locations. While aggregating or selectively summarizing such covariates to yield a scalar covariate allows the use of standard GAM fitting procedures, exactly how to do so can be problematic and information is necessarily lost. Naively including all $p$ components of a vector-valued covariate as $p$ separate covariates, say, without recognizing the structure, can lead to problems of multicollinearity, data sets that are excessively wide given the sample size, and difficulty extracting the primary signal provided by the covariate. Here we introduce three useful extensions to GAMs that efficiently and effectively handle vector-valued covariates without requiring one to choose aggregations or selective summarizations. These extensions are varying-coefficient, scalar-on-function and distributed lag models. While these models have existed for some time they remain relatively underused in ecology. This article aims to show when these models can be useful and how to fit them with the popular R package \mgcv{}.</p>
+
+<p><a href="https://arxiv.org/abs/2508.07915">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

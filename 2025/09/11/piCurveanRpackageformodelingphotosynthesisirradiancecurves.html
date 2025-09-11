@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>piCurve: an R package for modeling photosynthesis-irradiance curves</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="piCurve: an R package for modeling photosynthesis-irradiance curves" />
+<meta name="author" content="Mohammad M. Amirian, Andrew J. Irwin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Photosynthesis-irradiance (PI) curves are foundational for quantifying primary production, parameterizing ecosystem and biogeochemical models, and interpreting physiological acclimation to light. Despite their broad use, researchers lack a unified, reproducible toolkit to fit, compare, and diagnose the many PI formulations that have accumulated over the last century. We introduce piCurve, an R package that standardizes the modeling of PI relationships, with a library of widely used light-limited, light-saturated, and photoinhibited formulations and a consistent statistical framework for estimation and comparison. With the total of 24 PI models, piCurve supports mean squared error (MSE) and maximum likelihood estimation (MLE), provides uncertainty quantification via information matrix (Hessian), and includes automated, data-informed initialization to improve convergence. Utilities classify PI data into light-limited, light-saturated, and photoinhibited regions, while plotting and ‘tidy’ helpers streamline workflow and reporting. Together, these features enable reproducible analyses and fair model comparisons, including for curves exhibiting a plateau followed by photoinhibition." />
+<meta property="og:description" content="Photosynthesis-irradiance (PI) curves are foundational for quantifying primary production, parameterizing ecosystem and biogeochemical models, and interpreting physiological acclimation to light. Despite their broad use, researchers lack a unified, reproducible toolkit to fit, compare, and diagnose the many PI formulations that have accumulated over the last century. We introduce piCurve, an R package that standardizes the modeling of PI relationships, with a library of widely used light-limited, light-saturated, and photoinhibited formulations and a consistent statistical framework for estimation and comparison. With the total of 24 PI models, piCurve supports mean squared error (MSE) and maximum likelihood estimation (MLE), provides uncertainty quantification via information matrix (Hessian), and includes automated, data-informed initialization to improve convergence. Utilities classify PI data into light-limited, light-saturated, and photoinhibited regions, while plotting and ‘tidy’ helpers streamline workflow and reporting. Together, these features enable reproducible analyses and fair model comparisons, including for curves exhibiting a plateau followed by photoinhibition." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/11/piCurveanRpackageformodelingphotosynthesisirradiancecurves.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/11/piCurveanRpackageformodelingphotosynthesisirradiancecurves.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="piCurve: an R package for modeling photosynthesis-irradiance curves" />
+<script type="application/ld+json">
+{"description":"Photosynthesis-irradiance (PI) curves are foundational for quantifying primary production, parameterizing ecosystem and biogeochemical models, and interpreting physiological acclimation to light. Despite their broad use, researchers lack a unified, reproducible toolkit to fit, compare, and diagnose the many PI formulations that have accumulated over the last century. We introduce piCurve, an R package that standardizes the modeling of PI relationships, with a library of widely used light-limited, light-saturated, and photoinhibited formulations and a consistent statistical framework for estimation and comparison. With the total of 24 PI models, piCurve supports mean squared error (MSE) and maximum likelihood estimation (MLE), provides uncertainty quantification via information matrix (Hessian), and includes automated, data-informed initialization to improve convergence. Utilities classify PI data into light-limited, light-saturated, and photoinhibited regions, while plotting and ‘tidy’ helpers streamline workflow and reporting. Together, these features enable reproducible analyses and fair model comparisons, including for curves exhibiting a plateau followed by photoinhibition.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/11/piCurveanRpackageformodelingphotosynthesisirradiancecurves.html"},"headline":"piCurve: an R package for modeling photosynthesis-irradiance curves","dateModified":"2025-09-11T00:00:00+00:00","datePublished":"2025-09-11T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/11/piCurveanRpackageformodelingphotosynthesisirradiancecurves.html","author":{"@type":"Person","name":"Mohammad M. Amirian, Andrew J. Irwin"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-11 00:00:00 +0000">09-11</time>
+  </p>
+  
+  <h1>piCurve: an R package for modeling photosynthesis-irradiance curves</h1>
+  <br>Mohammad M. Amirian, Andrew J. Irwin</h3>
+  <br> [stat.AP,stat.CO]
+
+  <p>Photosynthesis-irradiance (PI) curves are foundational for quantifying primary production, parameterizing ecosystem and biogeochemical models, and interpreting physiological acclimation to light. Despite their broad use, researchers lack a unified, reproducible toolkit to fit, compare, and diagnose the many PI formulations that have accumulated over the last century. We introduce piCurve, an R package that standardizes the modeling of PI relationships, with a library of widely used light-limited, light-saturated, and photoinhibited formulations and a consistent statistical framework for estimation and comparison. With the total of 24 PI models, piCurve supports mean squared error (MSE) and maximum likelihood estimation (MLE), provides uncertainty quantification via information matrix (Hessian), and includes automated, data-informed initialization to improve convergence. Utilities classify PI data into light-limited, light-saturated, and photoinhibited regions, while plotting and ‘tidy’ helpers streamline workflow and reporting. Together, these features enable reproducible analyses and fair model comparisons, including for curves exhibiting a plateau followed by photoinhibition.</p>
+
+<p><a href="https://arxiv.org/abs/2508.14321">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
