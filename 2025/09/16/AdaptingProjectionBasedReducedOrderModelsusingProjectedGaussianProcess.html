@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adapting Projection-Based Reduced-Order Models using Projected Gaussian Process</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Adapting Projection-Based Reduced-Order Models using Projected Gaussian Process" />
+<meta name="author" content="Xiao Liu, Jingyi Feng, Xinchao Liu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Projection-based model reduction is among the most widely adopted methods for constructing parametric Reduced-Order Models (ROM). Utilizing the snapshot data from solving full-order governing equations, the Proper Orthogonal Decomposition (POD) computes the optimal basis modes that represent the data, and a ROM can be constructed in the low-dimensional vector subspace spanned by the POD basis. For parametric governing equations, a potential challenge arises when there is a need to update the POD basis to adapt ROM that accurately capture the variation of a system’s behavior over its parameter space (in design, control, uncertainty quantification, digital twins applications, etc.). In this paper, we propose a Projected Gaussian Process (pGP) and formulate the problem of adapting the POD basis as a supervised statistical learning problem, for which the goal is to learn a mapping from the parameter space to the Grassmann manifold that contains the optimal subspaces. A mapping is firstly established between the Euclidean space and the horizontal space of an orthogonal matrix that spans a reference subspace in the Grassmann manifold. A second mapping from the horizontal space to the Grassmann manifold is established through the Exponential/Logarithm maps between the manifold and its tangent space. Finally, given a new parameter, the conditional distribution of a vector can be found in the Euclidean space using the Gaussian Process (GP) regression, and such a distribution is then projected to the Grassmann manifold that enables us to predict the optimal subspace for the new parameter. As a statistical learning approach, the proposed pGP allows us to optimally estimate (or tune) the model parameters from data and quantify the statistical uncertainty associated with the prediction. The advantages of the proposed pGP are demonstrated by numerical experiments." />
+<meta property="og:description" content="Projection-based model reduction is among the most widely adopted methods for constructing parametric Reduced-Order Models (ROM). Utilizing the snapshot data from solving full-order governing equations, the Proper Orthogonal Decomposition (POD) computes the optimal basis modes that represent the data, and a ROM can be constructed in the low-dimensional vector subspace spanned by the POD basis. For parametric governing equations, a potential challenge arises when there is a need to update the POD basis to adapt ROM that accurately capture the variation of a system’s behavior over its parameter space (in design, control, uncertainty quantification, digital twins applications, etc.). In this paper, we propose a Projected Gaussian Process (pGP) and formulate the problem of adapting the POD basis as a supervised statistical learning problem, for which the goal is to learn a mapping from the parameter space to the Grassmann manifold that contains the optimal subspaces. A mapping is firstly established between the Euclidean space and the horizontal space of an orthogonal matrix that spans a reference subspace in the Grassmann manifold. A second mapping from the horizontal space to the Grassmann manifold is established through the Exponential/Logarithm maps between the manifold and its tangent space. Finally, given a new parameter, the conditional distribution of a vector can be found in the Euclidean space using the Gaussian Process (GP) regression, and such a distribution is then projected to the Grassmann manifold that enables us to predict the optimal subspace for the new parameter. As a statistical learning approach, the proposed pGP allows us to optimally estimate (or tune) the model parameters from data and quantify the statistical uncertainty associated with the prediction. The advantages of the proposed pGP are demonstrated by numerical experiments." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/AdaptingProjectionBasedReducedOrderModelsusingProjectedGaussianProcess.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/AdaptingProjectionBasedReducedOrderModelsusingProjectedGaussianProcess.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adapting Projection-Based Reduced-Order Models using Projected Gaussian Process" />
+<script type="application/ld+json">
+{"description":"Projection-based model reduction is among the most widely adopted methods for constructing parametric Reduced-Order Models (ROM). Utilizing the snapshot data from solving full-order governing equations, the Proper Orthogonal Decomposition (POD) computes the optimal basis modes that represent the data, and a ROM can be constructed in the low-dimensional vector subspace spanned by the POD basis. For parametric governing equations, a potential challenge arises when there is a need to update the POD basis to adapt ROM that accurately capture the variation of a system’s behavior over its parameter space (in design, control, uncertainty quantification, digital twins applications, etc.). In this paper, we propose a Projected Gaussian Process (pGP) and formulate the problem of adapting the POD basis as a supervised statistical learning problem, for which the goal is to learn a mapping from the parameter space to the Grassmann manifold that contains the optimal subspaces. A mapping is firstly established between the Euclidean space and the horizontal space of an orthogonal matrix that spans a reference subspace in the Grassmann manifold. A second mapping from the horizontal space to the Grassmann manifold is established through the Exponential/Logarithm maps between the manifold and its tangent space. Finally, given a new parameter, the conditional distribution of a vector can be found in the Euclidean space using the Gaussian Process (GP) regression, and such a distribution is then projected to the Grassmann manifold that enables us to predict the optimal subspace for the new parameter. As a statistical learning approach, the proposed pGP allows us to optimally estimate (or tune) the model parameters from data and quantify the statistical uncertainty associated with the prediction. The advantages of the proposed pGP are demonstrated by numerical experiments.","headline":"Adapting Projection-Based Reduced-Order Models using Projected Gaussian Process","dateModified":"2025-09-16T00:00:00+00:00","datePublished":"2025-09-16T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/AdaptingProjectionBasedReducedOrderModelsusingProjectedGaussianProcess.html","author":{"@type":"Person","name":"Xiao Liu, Jingyi Feng, Xinchao Liu"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/AdaptingProjectionBasedReducedOrderModelsusingProjectedGaussianProcess.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-16 00:00:00 +0000">09-16</time>
+  </p>
+  
+  <h1>Adapting Projection-Based Reduced-Order Models using Projected Gaussian Process</h1>
+  <br>Xiao Liu, Jingyi Feng, Xinchao Liu</h3>
+  <br> [stat.ML,stat.AP]
+
+  <p>Projection-based model reduction is among the most widely adopted methods for constructing parametric Reduced-Order Models (ROM). Utilizing the snapshot data from solving full-order governing equations, the Proper Orthogonal Decomposition (POD) computes the optimal basis modes that represent the data, and a ROM can be constructed in the low-dimensional vector subspace spanned by the POD basis. For parametric governing equations, a potential challenge arises when there is a need to update the POD basis to adapt ROM that accurately capture the variation of a system’s behavior over its parameter space (in design, control, uncertainty quantification, digital twins applications, etc.). In this paper, we propose a Projected Gaussian Process (pGP) and formulate the problem of adapting the POD basis as a supervised statistical learning problem, for which the goal is to learn a mapping from the parameter space to the Grassmann manifold that contains the optimal subspaces. A mapping is firstly established between the Euclidean space and the horizontal space of an orthogonal matrix that spans a reference subspace in the Grassmann manifold. A second mapping from the horizontal space to the Grassmann manifold is established through the Exponential/Logarithm maps between the manifold and its tangent space. Finally, given a new parameter, the conditional distribution of a vector can be found in the Euclidean space using the Gaussian Process (GP) regression, and such a distribution is then projected to the Grassmann manifold that enables us to predict the optimal subspace for the new parameter. As a statistical learning approach, the proposed pGP allows us to optimally estimate (or tune) the model parameters from data and quantify the statistical uncertainty associated with the prediction. The advantages of the proposed pGP are demonstrated by numerical experiments.</p>
+
+<p><a href="https://arxiv.org/abs/2410.14090">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

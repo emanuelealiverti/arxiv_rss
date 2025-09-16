@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Computational Framework and Implementation of Implicit Priors in Bayesian Inverse Problems</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Computational Framework and Implementation of Implicit Priors in Bayesian Inverse Problems" />
+<meta name="author" content="Jasper M. Everink, Chao Zhang, Amal M. A. Alghamdi, Rémi Laumont, Nicolai A. B. Riis, Jakob S. J{\o}rgensen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Solving Bayesian inverse problems typically involves deriving a posterior distribution using Bayes’ rule, followed by sampling from this posterior for analysis. Sampling methods, such as general-purpose Markov chain Monte Carlo (MCMC), are commonly used, but they require prior and likelihood densities to be explicitly provided. In cases where expressing the prior explicitly is challenging, implicit priors offer an alternative, encoding prior information indirectly. These priors have gained increased interest in recent years, with methods like Plug-and-Play (PnP) priors and Regularized Linear Randomize-then-Optimize (RLRTO) providing computationally efficient alternatives to standard MCMC algorithms. However, the abstract concept of implicit priors for Bayesian inverse problems is yet to be systematically explored and little effort has been made to unify different kinds of implicit priors. This paper presents a computational framework for implicit priors and their distinction from explicit priors. We also introduce an implementation of various implicit priors within the CUQIpy Python package for Computational Uncertainty Quantification in Inverse Problems. Using this implementation, we showcase several implicit prior techniques by applying them to a variety of different inverse problems from image processing to parameter estimation in partial differential equations." />
+<meta property="og:description" content="Solving Bayesian inverse problems typically involves deriving a posterior distribution using Bayes’ rule, followed by sampling from this posterior for analysis. Sampling methods, such as general-purpose Markov chain Monte Carlo (MCMC), are commonly used, but they require prior and likelihood densities to be explicitly provided. In cases where expressing the prior explicitly is challenging, implicit priors offer an alternative, encoding prior information indirectly. These priors have gained increased interest in recent years, with methods like Plug-and-Play (PnP) priors and Regularized Linear Randomize-then-Optimize (RLRTO) providing computationally efficient alternatives to standard MCMC algorithms. However, the abstract concept of implicit priors for Bayesian inverse problems is yet to be systematically explored and little effort has been made to unify different kinds of implicit priors. This paper presents a computational framework for implicit priors and their distinction from explicit priors. We also introduce an implementation of various implicit priors within the CUQIpy Python package for Computational Uncertainty Quantification in Inverse Problems. Using this implementation, we showcase several implicit prior techniques by applying them to a variety of different inverse problems from image processing to parameter estimation in partial differential equations." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/AComputationalFrameworkandImplementationofImplicitPriorsinBayesianInverseProblems.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/AComputationalFrameworkandImplementationofImplicitPriorsinBayesianInverseProblems.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Computational Framework and Implementation of Implicit Priors in Bayesian Inverse Problems" />
+<script type="application/ld+json">
+{"description":"Solving Bayesian inverse problems typically involves deriving a posterior distribution using Bayes’ rule, followed by sampling from this posterior for analysis. Sampling methods, such as general-purpose Markov chain Monte Carlo (MCMC), are commonly used, but they require prior and likelihood densities to be explicitly provided. In cases where expressing the prior explicitly is challenging, implicit priors offer an alternative, encoding prior information indirectly. These priors have gained increased interest in recent years, with methods like Plug-and-Play (PnP) priors and Regularized Linear Randomize-then-Optimize (RLRTO) providing computationally efficient alternatives to standard MCMC algorithms. However, the abstract concept of implicit priors for Bayesian inverse problems is yet to be systematically explored and little effort has been made to unify different kinds of implicit priors. This paper presents a computational framework for implicit priors and their distinction from explicit priors. We also introduce an implementation of various implicit priors within the CUQIpy Python package for Computational Uncertainty Quantification in Inverse Problems. Using this implementation, we showcase several implicit prior techniques by applying them to a variety of different inverse problems from image processing to parameter estimation in partial differential equations.","headline":"A Computational Framework and Implementation of Implicit Priors in Bayesian Inverse Problems","dateModified":"2025-09-16T00:00:00+00:00","datePublished":"2025-09-16T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/AComputationalFrameworkandImplementationofImplicitPriorsinBayesianInverseProblems.html","author":{"@type":"Person","name":"Jasper M. Everink, Chao Zhang, Amal M. A. Alghamdi, Rémi Laumont, Nicolai A. B. Riis, Jakob S. J{\\o}rgensen"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/AComputationalFrameworkandImplementationofImplicitPriorsinBayesianInverseProblems.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-16 00:00:00 +0000">09-16</time>
+  </p>
+  
+  <h1>A Computational Framework and Implementation of Implicit Priors in Bayesian Inverse Problems</h1>
+  <br>Jasper M. Everink, Chao Zhang, Amal M. A. Alghamdi, Rémi Laumont, Nicolai A. B. Riis, Jakob S. J{\o}rgensen</h3>
+  <br> [stat.CO]
+
+  <p>Solving Bayesian inverse problems typically involves deriving a posterior distribution using Bayes’ rule, followed by sampling from this posterior for analysis. Sampling methods, such as general-purpose Markov chain Monte Carlo (MCMC), are commonly used, but they require prior and likelihood densities to be explicitly provided. In cases where expressing the prior explicitly is challenging, implicit priors offer an alternative, encoding prior information indirectly. These priors have gained increased interest in recent years, with methods like Plug-and-Play (PnP) priors and Regularized Linear Randomize-then-Optimize (RLRTO) providing computationally efficient alternatives to standard MCMC algorithms. However, the abstract concept of implicit priors for Bayesian inverse problems is yet to be systematically explored and little effort has been made to unify different kinds of implicit priors. This paper presents a computational framework for implicit priors and their distinction from explicit priors. We also introduce an implementation of various implicit priors within the CUQIpy Python package for Computational Uncertainty Quantification in Inverse Problems. Using this implementation, we showcase several implicit prior techniques by applying them to a variety of different inverse problems from image processing to parameter estimation in partial differential equations.</p>
+
+<p><a href="https://arxiv.org/abs/2509.11781">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

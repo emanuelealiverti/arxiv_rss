@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Testing for LLM response differences: the case of a composite null consisting of semantically irrelevant query perturbations</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Testing for LLM response differences: the case of a composite null consisting of semantically irrelevant query perturbations" />
+<meta name="author" content="Aranyak Acharyya, Carey E. Priebe, Hayden S. Helm" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Given an input query, generative models such as large language models produce a random response drawn from a response distribution. Given two input queries, it is natural to ask if their response distributions are the same. While traditional statistical hypothesis testing is designed to address this question, the response distribution induced by an input query is often sensitive to semantically irrelevant perturbations to the query, so much so that a traditional test of equality might indicate that two semantically equivalent queries induce statistically different response distributions. As a result, the outcome of the statistical test may not align with the user’s requirements. In this paper, we address this misalignment by incorporating into the testing procedure consideration of a collection of semantically similar queries. In our setting, the mapping from the collection of user-defined semantically similar queries to the corresponding collection of response distributions is not known a priori and must be estimated, with a fixed budget. Although the problem we address is quite general, we focus our analysis on the setting where the responses are binary, show that the proposed test is asymptotically valid and consistent, and discuss important practical considerations with respect to power and computation." />
+<meta property="og:description" content="Given an input query, generative models such as large language models produce a random response drawn from a response distribution. Given two input queries, it is natural to ask if their response distributions are the same. While traditional statistical hypothesis testing is designed to address this question, the response distribution induced by an input query is often sensitive to semantically irrelevant perturbations to the query, so much so that a traditional test of equality might indicate that two semantically equivalent queries induce statistically different response distributions. As a result, the outcome of the statistical test may not align with the user’s requirements. In this paper, we address this misalignment by incorporating into the testing procedure consideration of a collection of semantically similar queries. In our setting, the mapping from the collection of user-defined semantically similar queries to the corresponding collection of response distributions is not known a priori and must be estimated, with a fixed budget. Although the problem we address is quite general, we focus our analysis on the setting where the responses are binary, show that the proposed test is asymptotically valid and consistent, and discuss important practical considerations with respect to power and computation." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/TestingforLLMresponsedifferencesthecaseofacompositenullconsistingofsemanticallyirrelevantqueryperturbations.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/TestingforLLMresponsedifferencesthecaseofacompositenullconsistingofsemanticallyirrelevantqueryperturbations.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Testing for LLM response differences: the case of a composite null consisting of semantically irrelevant query perturbations" />
+<script type="application/ld+json">
+{"description":"Given an input query, generative models such as large language models produce a random response drawn from a response distribution. Given two input queries, it is natural to ask if their response distributions are the same. While traditional statistical hypothesis testing is designed to address this question, the response distribution induced by an input query is often sensitive to semantically irrelevant perturbations to the query, so much so that a traditional test of equality might indicate that two semantically equivalent queries induce statistically different response distributions. As a result, the outcome of the statistical test may not align with the user’s requirements. In this paper, we address this misalignment by incorporating into the testing procedure consideration of a collection of semantically similar queries. In our setting, the mapping from the collection of user-defined semantically similar queries to the corresponding collection of response distributions is not known a priori and must be estimated, with a fixed budget. Although the problem we address is quite general, we focus our analysis on the setting where the responses are binary, show that the proposed test is asymptotically valid and consistent, and discuss important practical considerations with respect to power and computation.","headline":"Testing for LLM response differences: the case of a composite null consisting of semantically irrelevant query perturbations","dateModified":"2025-09-16T00:00:00+00:00","datePublished":"2025-09-16T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/TestingforLLMresponsedifferencesthecaseofacompositenullconsistingofsemanticallyirrelevantqueryperturbations.html","author":{"@type":"Person","name":"Aranyak Acharyya, Carey E. Priebe, Hayden S. Helm"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/TestingforLLMresponsedifferencesthecaseofacompositenullconsistingofsemanticallyirrelevantqueryperturbations.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-16 00:00:00 +0000">09-16</time>
+  </p>
+  
+  <h1>Testing for LLM response differences: the case of a composite null consisting of semantically irrelevant query perturbations</h1>
+  <br>Aranyak Acharyya, Carey E. Priebe, Hayden S. Helm</h3>
+  <br> [stat.ME,stat.TH]
+
+  <p>Given an input query, generative models such as large language models produce a random response drawn from a response distribution. Given two input queries, it is natural to ask if their response distributions are the same. While traditional statistical hypothesis testing is designed to address this question, the response distribution induced by an input query is often sensitive to semantically irrelevant perturbations to the query, so much so that a traditional test of equality might indicate that two semantically equivalent queries induce statistically different response distributions. As a result, the outcome of the statistical test may not align with the user’s requirements. In this paper, we address this misalignment by incorporating into the testing procedure consideration of a collection of semantically similar queries. In our setting, the mapping from the collection of user-defined semantically similar queries to the corresponding collection of response distributions is not known a priori and must be estimated, with a fixed budget. Although the problem we address is quite general, we focus our analysis on the setting where the responses are binary, show that the proposed test is asymptotically valid and consistent, and discuss important practical considerations with respect to power and computation.</p>
+
+<p><a href="https://arxiv.org/abs/2509.10963">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

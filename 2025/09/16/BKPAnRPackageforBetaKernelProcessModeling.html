@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>BKP: An R Package for Beta Kernel Process Modeling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="BKP: An R Package for Beta Kernel Process Modeling" />
+<meta name="author" content="Jiangyan Zhao, Kunhai Qing, Jin Xu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We present BKP, a user-friendly and extensible R package that implements the Beta Kernel Process (BKP) – a fully nonparametric and computationally efficient framework for modeling spatially varying binomial probabilities. The BKP model combines localized kernel-weighted likelihoods with conjugate beta priors, resulting in closed-form posterior inference without requiring latent variable augmentation or intensive MCMC sampling. The package supports binary and aggregated binomial responses, allows flexible choices of kernel functions and prior specification, and provides loss-based kernel hyperparameter tuning procedures. In addition, BKP extends naturally to the Dirichlet Kernel Process (DKP) for modeling spatially varying multinomial or compositional data. To our knowledge, this is the first publicly available R package for implementing BKP-based methods. We illustrate the use of BKP through several synthetic and real-world datasets, highlighting its interpretability, accuracy, and scalability. The package aims to facilitate practical application and future methodological development of kernel-based beta modeling in statistics and machine learning." />
+<meta property="og:description" content="We present BKP, a user-friendly and extensible R package that implements the Beta Kernel Process (BKP) – a fully nonparametric and computationally efficient framework for modeling spatially varying binomial probabilities. The BKP model combines localized kernel-weighted likelihoods with conjugate beta priors, resulting in closed-form posterior inference without requiring latent variable augmentation or intensive MCMC sampling. The package supports binary and aggregated binomial responses, allows flexible choices of kernel functions and prior specification, and provides loss-based kernel hyperparameter tuning procedures. In addition, BKP extends naturally to the Dirichlet Kernel Process (DKP) for modeling spatially varying multinomial or compositional data. To our knowledge, this is the first publicly available R package for implementing BKP-based methods. We illustrate the use of BKP through several synthetic and real-world datasets, highlighting its interpretability, accuracy, and scalability. The package aims to facilitate practical application and future methodological development of kernel-based beta modeling in statistics and machine learning." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/BKPAnRPackageforBetaKernelProcessModeling.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/BKPAnRPackageforBetaKernelProcessModeling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="BKP: An R Package for Beta Kernel Process Modeling" />
+<script type="application/ld+json">
+{"description":"We present BKP, a user-friendly and extensible R package that implements the Beta Kernel Process (BKP) – a fully nonparametric and computationally efficient framework for modeling spatially varying binomial probabilities. The BKP model combines localized kernel-weighted likelihoods with conjugate beta priors, resulting in closed-form posterior inference without requiring latent variable augmentation or intensive MCMC sampling. The package supports binary and aggregated binomial responses, allows flexible choices of kernel functions and prior specification, and provides loss-based kernel hyperparameter tuning procedures. In addition, BKP extends naturally to the Dirichlet Kernel Process (DKP) for modeling spatially varying multinomial or compositional data. To our knowledge, this is the first publicly available R package for implementing BKP-based methods. We illustrate the use of BKP through several synthetic and real-world datasets, highlighting its interpretability, accuracy, and scalability. The package aims to facilitate practical application and future methodological development of kernel-based beta modeling in statistics and machine learning.","headline":"BKP: An R Package for Beta Kernel Process Modeling","dateModified":"2025-09-16T00:00:00+00:00","datePublished":"2025-09-16T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/BKPAnRPackageforBetaKernelProcessModeling.html","author":{"@type":"Person","name":"Jiangyan Zhao, Kunhai Qing, Jin Xu"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/16/BKPAnRPackageforBetaKernelProcessModeling.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-16 00:00:00 +0000">09-16</time>
+  </p>
+  
+  <h1>BKP: An R Package for Beta Kernel Process Modeling</h1>
+  <br>Jiangyan Zhao, Kunhai Qing, Jin Xu</h3>
+  <br> [stat.CO,stat.ML]
+
+  <p>We present BKP, a user-friendly and extensible R package that implements the Beta Kernel Process (BKP) – a fully nonparametric and computationally efficient framework for modeling spatially varying binomial probabilities. The BKP model combines localized kernel-weighted likelihoods with conjugate beta priors, resulting in closed-form posterior inference without requiring latent variable augmentation or intensive MCMC sampling. The package supports binary and aggregated binomial responses, allows flexible choices of kernel functions and prior specification, and provides loss-based kernel hyperparameter tuning procedures. In addition, BKP extends naturally to the Dirichlet Kernel Process (DKP) for modeling spatially varying multinomial or compositional data. To our knowledge, this is the first publicly available R package for implementing BKP-based methods. We illustrate the use of BKP through several synthetic and real-world datasets, highlighting its interpretability, accuracy, and scalability. The package aims to facilitate practical application and future methodological development of kernel-based beta modeling in statistics and machine learning.</p>
+
+<p><a href="https://arxiv.org/abs/2508.10447">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
