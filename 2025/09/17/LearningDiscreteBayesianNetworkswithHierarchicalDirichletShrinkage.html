@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning Discrete Bayesian Networks with Hierarchical Dirichlet Shrinkage</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Learning Discrete Bayesian Networks with Hierarchical Dirichlet Shrinkage" />
+<meta name="author" content="Alexander Dombowsky, David B. Dunson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Discrete Bayesian networks (DBNs) provide a broadly useful framework for modeling dependence structures in multivariate categorical data. There is a vast literature on methods for inferring conditional probabilities and graphical structure in DBNs, but data sparsity and parametric assumptions are major practical issues. In this article, we detail a comprehensive Bayesian framework for learning DBNs. First, we propose a hierarchical prior for the conditional probabilities that enables complicated interactions between parent variables and stability in sparse regimes. We give a novel Markov chain Monte Carlo (MCMC) algorithm utilizing parallel Langevin proposals to generate exact posterior samples, avoiding the pitfalls of variational approximations. Moreover, we verify that the full conditional distribution of the concentration parameters is log-concave under mild conditions, facilitating efficient sampling. We then propose two methods for learning network structures, including parent sets, Markov blankets, and DAGs, from categorical data. The first cycles through individual edges each MCMC iteration, whereas the second updates the entire structure as a single step. We evaluate the accuracy, power, and MCMC performance of our methods on several simulation studies. Finally, we apply our methodology to uncover prognostic network structure from primary breast cancer samples." />
+<meta property="og:description" content="Discrete Bayesian networks (DBNs) provide a broadly useful framework for modeling dependence structures in multivariate categorical data. There is a vast literature on methods for inferring conditional probabilities and graphical structure in DBNs, but data sparsity and parametric assumptions are major practical issues. In this article, we detail a comprehensive Bayesian framework for learning DBNs. First, we propose a hierarchical prior for the conditional probabilities that enables complicated interactions between parent variables and stability in sparse regimes. We give a novel Markov chain Monte Carlo (MCMC) algorithm utilizing parallel Langevin proposals to generate exact posterior samples, avoiding the pitfalls of variational approximations. Moreover, we verify that the full conditional distribution of the concentration parameters is log-concave under mild conditions, facilitating efficient sampling. We then propose two methods for learning network structures, including parent sets, Markov blankets, and DAGs, from categorical data. The first cycles through individual edges each MCMC iteration, whereas the second updates the entire structure as a single step. We evaluate the accuracy, power, and MCMC performance of our methods on several simulation studies. Finally, we apply our methodology to uncover prognostic network structure from primary breast cancer samples." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/17/LearningDiscreteBayesianNetworkswithHierarchicalDirichletShrinkage.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/17/LearningDiscreteBayesianNetworkswithHierarchicalDirichletShrinkage.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learning Discrete Bayesian Networks with Hierarchical Dirichlet Shrinkage" />
+<script type="application/ld+json">
+{"description":"Discrete Bayesian networks (DBNs) provide a broadly useful framework for modeling dependence structures in multivariate categorical data. There is a vast literature on methods for inferring conditional probabilities and graphical structure in DBNs, but data sparsity and parametric assumptions are major practical issues. In this article, we detail a comprehensive Bayesian framework for learning DBNs. First, we propose a hierarchical prior for the conditional probabilities that enables complicated interactions between parent variables and stability in sparse regimes. We give a novel Markov chain Monte Carlo (MCMC) algorithm utilizing parallel Langevin proposals to generate exact posterior samples, avoiding the pitfalls of variational approximations. Moreover, we verify that the full conditional distribution of the concentration parameters is log-concave under mild conditions, facilitating efficient sampling. We then propose two methods for learning network structures, including parent sets, Markov blankets, and DAGs, from categorical data. The first cycles through individual edges each MCMC iteration, whereas the second updates the entire structure as a single step. We evaluate the accuracy, power, and MCMC performance of our methods on several simulation studies. Finally, we apply our methodology to uncover prognostic network structure from primary breast cancer samples.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/17/LearningDiscreteBayesianNetworkswithHierarchicalDirichletShrinkage.html"},"headline":"Learning Discrete Bayesian Networks with Hierarchical Dirichlet Shrinkage","dateModified":"2025-09-17T00:00:00+00:00","datePublished":"2025-09-17T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/17/LearningDiscreteBayesianNetworkswithHierarchicalDirichletShrinkage.html","author":{"@type":"Person","name":"Alexander Dombowsky, David B. Dunson"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-17 00:00:00 +0000">09-17</time>
+  </p>
+  
+  <h1>Learning Discrete Bayesian Networks with Hierarchical Dirichlet Shrinkage</h1>
+  <br>Alexander Dombowsky, David B. Dunson</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Discrete Bayesian networks (DBNs) provide a broadly useful framework for modeling dependence structures in multivariate categorical data. There is a vast literature on methods for inferring conditional probabilities and graphical structure in DBNs, but data sparsity and parametric assumptions are major practical issues. In this article, we detail a comprehensive Bayesian framework for learning DBNs. First, we propose a hierarchical prior for the conditional probabilities that enables complicated interactions between parent variables and stability in sparse regimes. We give a novel Markov chain Monte Carlo (MCMC) algorithm utilizing parallel Langevin proposals to generate exact posterior samples, avoiding the pitfalls of variational approximations. Moreover, we verify that the full conditional distribution of the concentration parameters is log-concave under mild conditions, facilitating efficient sampling. We then propose two methods for learning network structures, including parent sets, Markov blankets, and DAGs, from categorical data. The first cycles through individual edges each MCMC iteration, whereas the second updates the entire structure as a single step. We evaluate the accuracy, power, and MCMC performance of our methods on several simulation studies. Finally, we apply our methodology to uncover prognostic network structure from primary breast cancer samples.</p>
+
+<p><a href="https://arxiv.org/abs/2509.13267">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
