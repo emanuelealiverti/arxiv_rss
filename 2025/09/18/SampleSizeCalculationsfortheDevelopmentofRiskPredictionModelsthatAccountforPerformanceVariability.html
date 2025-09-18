@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sample Size Calculations for the Development of Risk Prediction Models that Account for Performance Variability</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sample Size Calculations for the Development of Risk Prediction Models that Account for Performance Variability" />
+<meta name="author" content="Menelaos Pavlou, Rumana Z. Omar, Gareth Ambler" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Existing approaches to sample size calculations for developing clinical prediction models have focused on ensuring that the expected value of a chosen performance measure meets a pre-specified target. For example, to limit model-overfitting, the sample size is commonly chosen such that the expected calibration slope (CS) is 0.9, close to 1 for a perfectly calibrated model. In practice, due to sampling variability, model performance can vary considerably across different development samples of the recommended size. If this variability is high, the probability of obtaining a model with performance close to the target for a given measure may be unacceptably low. To address this, we propose an adapted approach to sample size calculations that explicitly incorporates performance variability by targeting the probability of acceptable performance (PrAP). For example, in the context of calibration, we may define a model as acceptably calibrated if CS falls in a pre-defined range, e.g. between 0.85 and 1.15. Then we choose the required sample size to ensure that PrAP(CS)=80%. For binary outcomes we implemented our approach for CS within a simulation-based framework via the R package `samplesizedev’. Additionally, for CS specifically, we have proposed an equivalent analytical calculation which is computationally efficient. While we focused on CS, the simulation-based framework is flexible and can be easily extended to accommodate other performance measures and types of outcomes. When adhering to existing recommendations, we found that performance variability increased substantially as the number of predictors, p, decreased. Consequently, PrAP(CS) was often low. For example, with 5 predictors, PrAP(CS) was around 50%. Our adapted approach resulted in considerably larger sample sizes, especially for p&lt;10. Applying shrinkage tends to improve PrAP(CS)." />
+<meta property="og:description" content="Existing approaches to sample size calculations for developing clinical prediction models have focused on ensuring that the expected value of a chosen performance measure meets a pre-specified target. For example, to limit model-overfitting, the sample size is commonly chosen such that the expected calibration slope (CS) is 0.9, close to 1 for a perfectly calibrated model. In practice, due to sampling variability, model performance can vary considerably across different development samples of the recommended size. If this variability is high, the probability of obtaining a model with performance close to the target for a given measure may be unacceptably low. To address this, we propose an adapted approach to sample size calculations that explicitly incorporates performance variability by targeting the probability of acceptable performance (PrAP). For example, in the context of calibration, we may define a model as acceptably calibrated if CS falls in a pre-defined range, e.g. between 0.85 and 1.15. Then we choose the required sample size to ensure that PrAP(CS)=80%. For binary outcomes we implemented our approach for CS within a simulation-based framework via the R package `samplesizedev’. Additionally, for CS specifically, we have proposed an equivalent analytical calculation which is computationally efficient. While we focused on CS, the simulation-based framework is flexible and can be easily extended to accommodate other performance measures and types of outcomes. When adhering to existing recommendations, we found that performance variability increased substantially as the number of predictors, p, decreased. Consequently, PrAP(CS) was often low. For example, with 5 predictors, PrAP(CS) was around 50%. Our adapted approach resulted in considerably larger sample sizes, especially for p&lt;10. Applying shrinkage tends to improve PrAP(CS)." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/18/SampleSizeCalculationsfortheDevelopmentofRiskPredictionModelsthatAccountforPerformanceVariability.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/18/SampleSizeCalculationsfortheDevelopmentofRiskPredictionModelsthatAccountforPerformanceVariability.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sample Size Calculations for the Development of Risk Prediction Models that Account for Performance Variability" />
+<script type="application/ld+json">
+{"description":"Existing approaches to sample size calculations for developing clinical prediction models have focused on ensuring that the expected value of a chosen performance measure meets a pre-specified target. For example, to limit model-overfitting, the sample size is commonly chosen such that the expected calibration slope (CS) is 0.9, close to 1 for a perfectly calibrated model. In practice, due to sampling variability, model performance can vary considerably across different development samples of the recommended size. If this variability is high, the probability of obtaining a model with performance close to the target for a given measure may be unacceptably low. To address this, we propose an adapted approach to sample size calculations that explicitly incorporates performance variability by targeting the probability of acceptable performance (PrAP). For example, in the context of calibration, we may define a model as acceptably calibrated if CS falls in a pre-defined range, e.g. between 0.85 and 1.15. Then we choose the required sample size to ensure that PrAP(CS)=80%. For binary outcomes we implemented our approach for CS within a simulation-based framework via the R package `samplesizedev’. Additionally, for CS specifically, we have proposed an equivalent analytical calculation which is computationally efficient. While we focused on CS, the simulation-based framework is flexible and can be easily extended to accommodate other performance measures and types of outcomes. When adhering to existing recommendations, we found that performance variability increased substantially as the number of predictors, p, decreased. Consequently, PrAP(CS) was often low. For example, with 5 predictors, PrAP(CS) was around 50%. Our adapted approach resulted in considerably larger sample sizes, especially for p&lt;10. Applying shrinkage tends to improve PrAP(CS).","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/18/SampleSizeCalculationsfortheDevelopmentofRiskPredictionModelsthatAccountforPerformanceVariability.html"},"headline":"Sample Size Calculations for the Development of Risk Prediction Models that Account for Performance Variability","dateModified":"2025-09-18T00:00:00+00:00","datePublished":"2025-09-18T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/18/SampleSizeCalculationsfortheDevelopmentofRiskPredictionModelsthatAccountforPerformanceVariability.html","author":{"@type":"Person","name":"Menelaos Pavlou, Rumana Z. Omar, Gareth Ambler"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-18 00:00:00 +0000">09-18</time>
+  </p>
+  
+  <h1>Sample Size Calculations for the Development of Risk Prediction Models that Account for Performance Variability</h1>
+  <br>Menelaos Pavlou, Rumana Z. Omar, Gareth Ambler</h3>
+  <br> [stat.ME,stat.AP,stat.CO]
+
+  <p>Existing approaches to sample size calculations for developing clinical prediction models have focused on ensuring that the expected value of a chosen performance measure meets a pre-specified target. For example, to limit model-overfitting, the sample size is commonly chosen such that the expected calibration slope (CS) is 0.9, close to 1 for a perfectly calibrated model. In practice, due to sampling variability, model performance can vary considerably across different development samples of the recommended size. If this variability is high, the probability of obtaining a model with performance close to the target for a given measure may be unacceptably low. To address this, we propose an adapted approach to sample size calculations that explicitly incorporates performance variability by targeting the probability of acceptable performance (PrAP). For example, in the context of calibration, we may define a model as acceptably calibrated if CS falls in a pre-defined range, e.g. between 0.85 and 1.15. Then we choose the required sample size to ensure that PrAP(CS)=80%. For binary outcomes we implemented our approach for CS within a simulation-based framework via the R package `samplesizedev’. Additionally, for CS specifically, we have proposed an equivalent analytical calculation which is computationally efficient. While we focused on CS, the simulation-based framework is flexible and can be easily extended to accommodate other performance measures and types of outcomes. When adhering to existing recommendations, we found that performance variability increased substantially as the number of predictors, p, decreased. Consequently, PrAP(CS) was often low. For example, with 5 predictors, PrAP(CS) was around 50%. Our adapted approach resulted in considerably larger sample sizes, especially for p&lt;10. Applying shrinkage tends to improve PrAP(CS).</p>
+
+<p><a href="https://arxiv.org/abs/2509.14028">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
