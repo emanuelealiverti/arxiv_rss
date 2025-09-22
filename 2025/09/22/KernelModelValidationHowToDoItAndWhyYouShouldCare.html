@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Kernel Model Validation: How To Do It, And Why You Should Care</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Kernel Model Validation: How To Do It, And Why You Should Care" />
+<meta name="author" content="Carlo Graziani, Marieme Ngom" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gaussian Process (GP) models are popular tools in uncertainty quantification (UQ) because they purport to furnish functional uncertainty estimates that can be used to represent model uncertainty. It is often difficult to state with precision what probabilistic interpretation attaches to such an uncertainty, and in what way is it calibrated. Without such a calibration statement, the value of such uncertainty estimates is quite limited and qualitative. We motivate the importance of proper probabilistic calibration of GP predictions by describing how GP predictive calibration failures can cause degraded convergence properties in a target optimization algorithm called Targeted Adaptive Design (TAD). We discuss the interpretation of GP-generated uncertainty intervals in UQ, and how one may learn to trust them, through a formal procedure for covariance kernel validation that exploits the multivariate normal nature of GP predictions. We give simple examples of GP regression misspecified 1-dimensional models, and discuss the situation with respect to higher-dimensional models." />
+<meta property="og:description" content="Gaussian Process (GP) models are popular tools in uncertainty quantification (UQ) because they purport to furnish functional uncertainty estimates that can be used to represent model uncertainty. It is often difficult to state with precision what probabilistic interpretation attaches to such an uncertainty, and in what way is it calibrated. Without such a calibration statement, the value of such uncertainty estimates is quite limited and qualitative. We motivate the importance of proper probabilistic calibration of GP predictions by describing how GP predictive calibration failures can cause degraded convergence properties in a target optimization algorithm called Targeted Adaptive Design (TAD). We discuss the interpretation of GP-generated uncertainty intervals in UQ, and how one may learn to trust them, through a formal procedure for covariance kernel validation that exploits the multivariate normal nature of GP predictions. We give simple examples of GP regression misspecified 1-dimensional models, and discuss the situation with respect to higher-dimensional models." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/22/KernelModelValidationHowToDoItAndWhyYouShouldCare.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/22/KernelModelValidationHowToDoItAndWhyYouShouldCare.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Kernel Model Validation: How To Do It, And Why You Should Care" />
+<script type="application/ld+json">
+{"description":"Gaussian Process (GP) models are popular tools in uncertainty quantification (UQ) because they purport to furnish functional uncertainty estimates that can be used to represent model uncertainty. It is often difficult to state with precision what probabilistic interpretation attaches to such an uncertainty, and in what way is it calibrated. Without such a calibration statement, the value of such uncertainty estimates is quite limited and qualitative. We motivate the importance of proper probabilistic calibration of GP predictions by describing how GP predictive calibration failures can cause degraded convergence properties in a target optimization algorithm called Targeted Adaptive Design (TAD). We discuss the interpretation of GP-generated uncertainty intervals in UQ, and how one may learn to trust them, through a formal procedure for covariance kernel validation that exploits the multivariate normal nature of GP predictions. We give simple examples of GP regression misspecified 1-dimensional models, and discuss the situation with respect to higher-dimensional models.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/22/KernelModelValidationHowToDoItAndWhyYouShouldCare.html"},"headline":"Kernel Model Validation: How To Do It, And Why You Should Care","dateModified":"2025-09-22T00:00:00+00:00","datePublished":"2025-09-22T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/22/KernelModelValidationHowToDoItAndWhyYouShouldCare.html","author":{"@type":"Person","name":"Carlo Graziani, Marieme Ngom"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-22 00:00:00 +0000">09-22</time>
+  </p>
+  
+  <h1>Kernel Model Validation: How To Do It, And Why You Should Care</h1>
+  <br>Carlo Graziani, Marieme Ngom</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Gaussian Process (GP) models are popular tools in uncertainty quantification (UQ) because they purport to furnish functional uncertainty estimates that can be used to represent model uncertainty. It is often difficult to state with precision what probabilistic interpretation attaches to such an uncertainty, and in what way is it calibrated. Without such a calibration statement, the value of such uncertainty estimates is quite limited and qualitative. We motivate the importance of proper probabilistic calibration of GP predictions by describing how GP predictive calibration failures can cause degraded convergence properties in a target optimization algorithm called Targeted Adaptive Design (TAD). We discuss the interpretation of GP-generated uncertainty intervals in UQ, and how one may learn to trust them, through a formal procedure for covariance kernel validation that exploits the multivariate normal nature of GP predictions. We give simple examples of GP regression misspecified 1-dimensional models, and discuss the situation with respect to higher-dimensional models.</p>
+
+<p><a href="https://arxiv.org/abs/2509.15244">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
