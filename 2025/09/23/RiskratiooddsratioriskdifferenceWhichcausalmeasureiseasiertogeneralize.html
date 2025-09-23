@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Risk ratio, odds ratio, risk difference... Which causal measure is easier to generalize?</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Risk ratio, odds ratio, risk difference… Which causal measure is easier to generalize?" />
+<meta name="author" content="Bénédicte Colnet, Julie Josse, Gaël Varoquaux, Erwan Scornet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There are many measures to report so-called treatment or causal effects: absolute difference, ratio, odds ratio, number needed to treat, and so on. The choice of a measure, e.g. absolute versus relative, is often debated because it leads to different impressions of the benefit or risk of a treatment. Besides, different causal measures may lead to various treatment effect heterogeneity: some input variables may have an influence on some causal measures and no effect at all on others. In addition some measures – but not all – have appealing properties such as collapsibility, matching the intuition of a population summary. In this paper, we first review common causal measures and their pros and cons typically brought forward. Doing so, we clarify the notions of collapsibility and treatment effect heterogeneity, unifying existing definitions. Then, we show that for any causal measures there exists a discriminative model such that the conditional average treatment effect (CATE) captures the treatment effect. However, only the risk difference has its CATE and ATE (average treatment effect) disentangled from the baseline, regardless of the outcome type (continuous or binary). As our primary goal is the generalization of causal measures, we show that different sets of covariates are needed to generalize an effect to a target population depending on (i) the causal measure of interest, and (ii) the identification method chosen, that is generalizing either conditional outcome or local effects." />
+<meta property="og:description" content="There are many measures to report so-called treatment or causal effects: absolute difference, ratio, odds ratio, number needed to treat, and so on. The choice of a measure, e.g. absolute versus relative, is often debated because it leads to different impressions of the benefit or risk of a treatment. Besides, different causal measures may lead to various treatment effect heterogeneity: some input variables may have an influence on some causal measures and no effect at all on others. In addition some measures – but not all – have appealing properties such as collapsibility, matching the intuition of a population summary. In this paper, we first review common causal measures and their pros and cons typically brought forward. Doing so, we clarify the notions of collapsibility and treatment effect heterogeneity, unifying existing definitions. Then, we show that for any causal measures there exists a discriminative model such that the conditional average treatment effect (CATE) captures the treatment effect. However, only the risk difference has its CATE and ATE (average treatment effect) disentangled from the baseline, regardless of the outcome type (continuous or binary). As our primary goal is the generalization of causal measures, we show that different sets of covariates are needed to generalize an effect to a target population depending on (i) the causal measure of interest, and (ii) the identification method chosen, that is generalizing either conditional outcome or local effects." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/23/RiskratiooddsratioriskdifferenceWhichcausalmeasureiseasiertogeneralize.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/23/RiskratiooddsratioriskdifferenceWhichcausalmeasureiseasiertogeneralize.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Risk ratio, odds ratio, risk difference… Which causal measure is easier to generalize?" />
+<script type="application/ld+json">
+{"description":"There are many measures to report so-called treatment or causal effects: absolute difference, ratio, odds ratio, number needed to treat, and so on. The choice of a measure, e.g. absolute versus relative, is often debated because it leads to different impressions of the benefit or risk of a treatment. Besides, different causal measures may lead to various treatment effect heterogeneity: some input variables may have an influence on some causal measures and no effect at all on others. In addition some measures – but not all – have appealing properties such as collapsibility, matching the intuition of a population summary. In this paper, we first review common causal measures and their pros and cons typically brought forward. Doing so, we clarify the notions of collapsibility and treatment effect heterogeneity, unifying existing definitions. Then, we show that for any causal measures there exists a discriminative model such that the conditional average treatment effect (CATE) captures the treatment effect. However, only the risk difference has its CATE and ATE (average treatment effect) disentangled from the baseline, regardless of the outcome type (continuous or binary). As our primary goal is the generalization of causal measures, we show that different sets of covariates are needed to generalize an effect to a target population depending on (i) the causal measure of interest, and (ii) the identification method chosen, that is generalizing either conditional outcome or local effects.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/23/RiskratiooddsratioriskdifferenceWhichcausalmeasureiseasiertogeneralize.html"},"headline":"Risk ratio, odds ratio, risk difference… Which causal measure is easier to generalize?","dateModified":"2025-09-23T00:00:00+00:00","datePublished":"2025-09-23T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/23/RiskratiooddsratioriskdifferenceWhichcausalmeasureiseasiertogeneralize.html","author":{"@type":"Person","name":"Bénédicte Colnet, Julie Josse, Gaël Varoquaux, Erwan Scornet"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-23 00:00:00 +0000">09-23</time>
+  </p>
+  
+  <h1>Risk ratio, odds ratio, risk difference... Which causal measure is easier to generalize?</h1>
+  <br>Bénédicte Colnet, Julie Josse, Gaël Varoquaux, Erwan Scornet</h3>
+  <br> [stat.ME]
+
+  <p>There are many measures to report so-called treatment or causal effects: absolute difference, ratio, odds ratio, number needed to treat, and so on. The choice of a measure, e.g. absolute versus relative, is often debated because it leads to different impressions of the benefit or risk of a treatment. Besides, different causal measures may lead to various treatment effect heterogeneity: some input variables may have an influence on some causal measures and no effect at all on others. In addition some measures – but not all – have appealing properties such as collapsibility, matching the intuition of a population summary. In this paper, we first review common causal measures and their pros and cons typically brought forward. Doing so, we clarify the notions of collapsibility and treatment effect heterogeneity, unifying existing definitions. Then, we show that for any causal measures there exists a discriminative model such that the conditional average treatment effect (CATE) captures the treatment effect. However, only the risk difference has its CATE and ATE (average treatment effect) disentangled from the baseline, regardless of the outcome type (continuous or binary). As our primary goal is the generalization of causal measures, we show that different sets of covariates are needed to generalize an effect to a target population depending on (i) the causal measure of interest, and (ii) the identification method chosen, that is generalizing either conditional outcome or local effects.</p>
+
+<p><a href="https://arxiv.org/abs/2303.16008">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

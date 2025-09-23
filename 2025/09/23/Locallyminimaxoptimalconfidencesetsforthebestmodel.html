@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Locally minimax optimal confidence sets for the best model</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Locally minimax optimal confidence sets for the best model" />
+<meta name="author" content="Ilmun Kim, Aaditya Ramdas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper tackles a fundamental inference problem: given $n$ observations from a distribution $P$ over $\mathbb{R}^d$ with unknown mean $\boldsymbol{\mu}$, we must form a confidence set for the index (or indices) corresponding to the smallest component of $\boldsymbol{\mu}$. By duality, we reduce this to testing, for each $r$ in $1,\ldots,d$, whether $\mu_r$ is the smallest. Based on the sample splitting and self-normalization approach of Kim and Ramdas (2024), we propose “dimension-agnostic” tests that maintain validity regardless of how $d$ scales with $n$, and regardless of arbitrary ties in $\boldsymbol{\mu}$. Notably, our validity holds under mild moment conditions, requiring little more than finiteness of a second moment, and permitting possibly strong dependence between coordinates. In addition, we establish the \emph{local} minimax separation rate for this problem, which adapts to the cardinality of a confusion set, and show that the proposed tests attain this rate. Furthermore, we develop robust variants that continue to achieve the same minimax rate under heavy-tailed distributions with only finite second moments. While these results highlight the theoretical strength of our method, a practical concern is that sample splitting can reduce finite-sample power. We show that this drawback can be substantially alleviated by the multi-split aggregation method of Guo and Shah (2025). Finally, empirical results on simulated and real data illustrate the strong performance of our approach in terms of type I error control and power compared to existing methods." />
+<meta property="og:description" content="This paper tackles a fundamental inference problem: given $n$ observations from a distribution $P$ over $\mathbb{R}^d$ with unknown mean $\boldsymbol{\mu}$, we must form a confidence set for the index (or indices) corresponding to the smallest component of $\boldsymbol{\mu}$. By duality, we reduce this to testing, for each $r$ in $1,\ldots,d$, whether $\mu_r$ is the smallest. Based on the sample splitting and self-normalization approach of Kim and Ramdas (2024), we propose “dimension-agnostic” tests that maintain validity regardless of how $d$ scales with $n$, and regardless of arbitrary ties in $\boldsymbol{\mu}$. Notably, our validity holds under mild moment conditions, requiring little more than finiteness of a second moment, and permitting possibly strong dependence between coordinates. In addition, we establish the \emph{local} minimax separation rate for this problem, which adapts to the cardinality of a confusion set, and show that the proposed tests attain this rate. Furthermore, we develop robust variants that continue to achieve the same minimax rate under heavy-tailed distributions with only finite second moments. While these results highlight the theoretical strength of our method, a practical concern is that sample splitting can reduce finite-sample power. We show that this drawback can be substantially alleviated by the multi-split aggregation method of Guo and Shah (2025). Finally, empirical results on simulated and real data illustrate the strong performance of our approach in terms of type I error control and power compared to existing methods." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/23/Locallyminimaxoptimalconfidencesetsforthebestmodel.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/23/Locallyminimaxoptimalconfidencesetsforthebestmodel.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Locally minimax optimal confidence sets for the best model" />
+<script type="application/ld+json">
+{"description":"This paper tackles a fundamental inference problem: given $n$ observations from a distribution $P$ over $\\mathbb{R}^d$ with unknown mean $\\boldsymbol{\\mu}$, we must form a confidence set for the index (or indices) corresponding to the smallest component of $\\boldsymbol{\\mu}$. By duality, we reduce this to testing, for each $r$ in $1,\\ldots,d$, whether $\\mu_r$ is the smallest. Based on the sample splitting and self-normalization approach of Kim and Ramdas (2024), we propose “dimension-agnostic” tests that maintain validity regardless of how $d$ scales with $n$, and regardless of arbitrary ties in $\\boldsymbol{\\mu}$. Notably, our validity holds under mild moment conditions, requiring little more than finiteness of a second moment, and permitting possibly strong dependence between coordinates. In addition, we establish the \\emph{local} minimax separation rate for this problem, which adapts to the cardinality of a confusion set, and show that the proposed tests attain this rate. Furthermore, we develop robust variants that continue to achieve the same minimax rate under heavy-tailed distributions with only finite second moments. While these results highlight the theoretical strength of our method, a practical concern is that sample splitting can reduce finite-sample power. We show that this drawback can be substantially alleviated by the multi-split aggregation method of Guo and Shah (2025). Finally, empirical results on simulated and real data illustrate the strong performance of our approach in terms of type I error control and power compared to existing methods.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/23/Locallyminimaxoptimalconfidencesetsforthebestmodel.html"},"headline":"Locally minimax optimal confidence sets for the best model","dateModified":"2025-09-23T00:00:00+00:00","datePublished":"2025-09-23T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/23/Locallyminimaxoptimalconfidencesetsforthebestmodel.html","author":{"@type":"Person","name":"Ilmun Kim, Aaditya Ramdas"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-23 00:00:00 +0000">09-23</time>
+  </p>
+  
+  <h1>Locally minimax optimal confidence sets for the best model</h1>
+  <br>Ilmun Kim, Aaditya Ramdas</h3>
+  <br> [stat.ME,stat.ML,stat.TH]
+
+  <p>This paper tackles a fundamental inference problem: given $n$ observations from a distribution $P$ over $\mathbb{R}^d$ with unknown mean $\boldsymbol{\mu}$, we must form a confidence set for the index (or indices) corresponding to the smallest component of $\boldsymbol{\mu}$. By duality, we reduce this to testing, for each $r$ in $1,\ldots,d$, whether $\mu_r$ is the smallest. Based on the sample splitting and self-normalization approach of Kim and Ramdas (2024), we propose “dimension-agnostic” tests that maintain validity regardless of how $d$ scales with $n$, and regardless of arbitrary ties in $\boldsymbol{\mu}$. Notably, our validity holds under mild moment conditions, requiring little more than finiteness of a second moment, and permitting possibly strong dependence between coordinates. In addition, we establish the \emph{local} minimax separation rate for this problem, which adapts to the cardinality of a confusion set, and show that the proposed tests attain this rate. Furthermore, we develop robust variants that continue to achieve the same minimax rate under heavy-tailed distributions with only finite second moments. While these results highlight the theoretical strength of our method, a practical concern is that sample splitting can reduce finite-sample power. We show that this drawback can be substantially alleviated by the multi-split aggregation method of Guo and Shah (2025). Finally, empirical results on simulated and real data illustrate the strong performance of our approach in terms of type I error control and power compared to existing methods.</p>
+
+<p><a href="https://arxiv.org/abs/2503.21639">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
