@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Stochastic Path Planning in Correlated Obstacle Fields</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Stochastic Path Planning in Correlated Obstacle Fields" />
+<meta name="author" content="Li Zhou, Elvan Ceyhan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce the Stochastic Correlated Obstacle Scene (SCOS) problem, a navigation setting with spatially correlated obstacles of uncertain blockage status, realistically constrained sensors that provide noisy readings and costly disambiguation. Modeling the spatial correlation with Gaussian Random Field (GRF), we develop Bayesian belief updates that refine blockage probabilities, and use the posteriors to reduce search space for efficiency. To find the optimal traversal policy, we propose a novel two-stage learning framework. An offline phase learns a robust base policy via optimistic policy iteration augmented with information bonus to encourage exploration in informative regions, followed by an online rollout policy with periodic base updates via a Bayesian mechanism for information adaptation. This framework supports both Monte Carlo point estimation and distributional reinforcement learning (RL) to learn full cost distributions, leading to stronger uncertainty quantification. We establish theoretical benefits of correlation-aware updating and convergence property under posterior sampling. Comprehensive empirical evaluations across varying obstacle densities, sensor capabilities demonstrate consistent performance gains over baselines. This framework addresses navigation challenges in environments with adversarial interruptions or clustered natural hazards." />
+<meta property="og:description" content="We introduce the Stochastic Correlated Obstacle Scene (SCOS) problem, a navigation setting with spatially correlated obstacles of uncertain blockage status, realistically constrained sensors that provide noisy readings and costly disambiguation. Modeling the spatial correlation with Gaussian Random Field (GRF), we develop Bayesian belief updates that refine blockage probabilities, and use the posteriors to reduce search space for efficiency. To find the optimal traversal policy, we propose a novel two-stage learning framework. An offline phase learns a robust base policy via optimistic policy iteration augmented with information bonus to encourage exploration in informative regions, followed by an online rollout policy with periodic base updates via a Bayesian mechanism for information adaptation. This framework supports both Monte Carlo point estimation and distributional reinforcement learning (RL) to learn full cost distributions, leading to stronger uncertainty quantification. We establish theoretical benefits of correlation-aware updating and convergence property under posterior sampling. Comprehensive empirical evaluations across varying obstacle densities, sensor capabilities demonstrate consistent performance gains over baselines. This framework addresses navigation challenges in environments with adversarial interruptions or clustered natural hazards." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/25/StochasticPathPlanninginCorrelatedObstacleFields.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/25/StochasticPathPlanninginCorrelatedObstacleFields.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Stochastic Path Planning in Correlated Obstacle Fields" />
+<script type="application/ld+json">
+{"description":"We introduce the Stochastic Correlated Obstacle Scene (SCOS) problem, a navigation setting with spatially correlated obstacles of uncertain blockage status, realistically constrained sensors that provide noisy readings and costly disambiguation. Modeling the spatial correlation with Gaussian Random Field (GRF), we develop Bayesian belief updates that refine blockage probabilities, and use the posteriors to reduce search space for efficiency. To find the optimal traversal policy, we propose a novel two-stage learning framework. An offline phase learns a robust base policy via optimistic policy iteration augmented with information bonus to encourage exploration in informative regions, followed by an online rollout policy with periodic base updates via a Bayesian mechanism for information adaptation. This framework supports both Monte Carlo point estimation and distributional reinforcement learning (RL) to learn full cost distributions, leading to stronger uncertainty quantification. We establish theoretical benefits of correlation-aware updating and convergence property under posterior sampling. Comprehensive empirical evaluations across varying obstacle densities, sensor capabilities demonstrate consistent performance gains over baselines. This framework addresses navigation challenges in environments with adversarial interruptions or clustered natural hazards.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/25/StochasticPathPlanninginCorrelatedObstacleFields.html"},"headline":"Stochastic Path Planning in Correlated Obstacle Fields","dateModified":"2025-09-25T00:00:00+00:00","datePublished":"2025-09-25T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/25/StochasticPathPlanninginCorrelatedObstacleFields.html","author":{"@type":"Person","name":"Li Zhou, Elvan Ceyhan"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-25 00:00:00 +0000">09-25</time>
+  </p>
+  
+  <h1>Stochastic Path Planning in Correlated Obstacle Fields</h1>
+  <br>Li Zhou, Elvan Ceyhan</h3>
+  <br> [stat.ML,stat.CO]
+
+  <p>We introduce the Stochastic Correlated Obstacle Scene (SCOS) problem, a navigation setting with spatially correlated obstacles of uncertain blockage status, realistically constrained sensors that provide noisy readings and costly disambiguation. Modeling the spatial correlation with Gaussian Random Field (GRF), we develop Bayesian belief updates that refine blockage probabilities, and use the posteriors to reduce search space for efficiency. To find the optimal traversal policy, we propose a novel two-stage learning framework. An offline phase learns a robust base policy via optimistic policy iteration augmented with information bonus to encourage exploration in informative regions, followed by an online rollout policy with periodic base updates via a Bayesian mechanism for information adaptation. This framework supports both Monte Carlo point estimation and distributional reinforcement learning (RL) to learn full cost distributions, leading to stronger uncertainty quantification. We establish theoretical benefits of correlation-aware updating and convergence property under posterior sampling. Comprehensive empirical evaluations across varying obstacle densities, sensor capabilities demonstrate consistent performance gains over baselines. This framework addresses navigation challenges in environments with adversarial interruptions or clustered natural hazards.</p>
+
+<p><a href="https://arxiv.org/abs/2509.19559">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
