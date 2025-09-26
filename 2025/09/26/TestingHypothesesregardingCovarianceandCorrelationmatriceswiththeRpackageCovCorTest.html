@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Testing Hypotheses regarding Covariance and Correlation matrices with the R package CovCorTest</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Testing Hypotheses regarding Covariance and Correlation matrices with the R package CovCorTest" />
+<meta name="author" content="Paavo Sattler, Svenja Jedhoff" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In addition to the commonly analyzed measures of location, dispersion measurements such as variance and correlation provide many valuable information. Consequently, they play a crucial role in multivariate statistics, which leads to tests regarding covariance and correlation matrices. Furthermore, also the structure of these matrices leads to important hypotheses of interest, since it contains substantial information about the underlying model. In fact, assumptions regarding the structures of covariance and correlation matrices are often fundamental in statistical modelling and testing. In this context, semi-parametric settings with minimal distributional assumptions and very general hypotheses are essential for enabling manifold usage. The free available package CovCorTest provides suitable tests addressing all aforementioned issues, using bootstrap and similar techniques to achieve good performance, particularly in small samples. Additionally, the package offers flexible specification options for the hypotheses under investigation in two central tests, accommodating users with varying levels of expertise, which results in high flexibility and user-friendliness at the same time. This paper also presents the application of \textbf{CovCorTest} for various issues, illustrated by multiple examples, where the tests are applied to a real-world dataset." />
+<meta property="og:description" content="In addition to the commonly analyzed measures of location, dispersion measurements such as variance and correlation provide many valuable information. Consequently, they play a crucial role in multivariate statistics, which leads to tests regarding covariance and correlation matrices. Furthermore, also the structure of these matrices leads to important hypotheses of interest, since it contains substantial information about the underlying model. In fact, assumptions regarding the structures of covariance and correlation matrices are often fundamental in statistical modelling and testing. In this context, semi-parametric settings with minimal distributional assumptions and very general hypotheses are essential for enabling manifold usage. The free available package CovCorTest provides suitable tests addressing all aforementioned issues, using bootstrap and similar techniques to achieve good performance, particularly in small samples. Additionally, the package offers flexible specification options for the hypotheses under investigation in two central tests, accommodating users with varying levels of expertise, which results in high flexibility and user-friendliness at the same time. This paper also presents the application of \textbf{CovCorTest} for various issues, illustrated by multiple examples, where the tests are applied to a real-world dataset." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/26/TestingHypothesesregardingCovarianceandCorrelationmatriceswiththeRpackageCovCorTest.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/26/TestingHypothesesregardingCovarianceandCorrelationmatriceswiththeRpackageCovCorTest.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Testing Hypotheses regarding Covariance and Correlation matrices with the R package CovCorTest" />
+<script type="application/ld+json">
+{"description":"In addition to the commonly analyzed measures of location, dispersion measurements such as variance and correlation provide many valuable information. Consequently, they play a crucial role in multivariate statistics, which leads to tests regarding covariance and correlation matrices. Furthermore, also the structure of these matrices leads to important hypotheses of interest, since it contains substantial information about the underlying model. In fact, assumptions regarding the structures of covariance and correlation matrices are often fundamental in statistical modelling and testing. In this context, semi-parametric settings with minimal distributional assumptions and very general hypotheses are essential for enabling manifold usage. The free available package CovCorTest provides suitable tests addressing all aforementioned issues, using bootstrap and similar techniques to achieve good performance, particularly in small samples. Additionally, the package offers flexible specification options for the hypotheses under investigation in two central tests, accommodating users with varying levels of expertise, which results in high flexibility and user-friendliness at the same time. This paper also presents the application of \\textbf{CovCorTest} for various issues, illustrated by multiple examples, where the tests are applied to a real-world dataset.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/26/TestingHypothesesregardingCovarianceandCorrelationmatriceswiththeRpackageCovCorTest.html"},"headline":"Testing Hypotheses regarding Covariance and Correlation matrices with the R package CovCorTest","dateModified":"2025-09-26T00:00:00+00:00","datePublished":"2025-09-26T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/26/TestingHypothesesregardingCovarianceandCorrelationmatriceswiththeRpackageCovCorTest.html","author":{"@type":"Person","name":"Paavo Sattler, Svenja Jedhoff"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-26 00:00:00 +0000">09-26</time>
+  </p>
+  
+  <h1>Testing Hypotheses regarding Covariance and Correlation matrices with the R package CovCorTest</h1>
+  <br>Paavo Sattler, Svenja Jedhoff</h3>
+  <br> [stat.CO,stat.ME]
+
+  <p>In addition to the commonly analyzed measures of location, dispersion measurements such as variance and correlation provide many valuable information. Consequently, they play a crucial role in multivariate statistics, which leads to tests regarding covariance and correlation matrices. Furthermore, also the structure of these matrices leads to important hypotheses of interest, since it contains substantial information about the underlying model. In fact, assumptions regarding the structures of covariance and correlation matrices are often fundamental in statistical modelling and testing.
+  In this context, semi-parametric settings with minimal distributional assumptions and very general hypotheses are essential for enabling manifold usage. The free available package CovCorTest provides suitable tests addressing all aforementioned issues, using bootstrap and similar techniques to achieve good performance, particularly in small samples. Additionally, the package offers flexible specification options for the hypotheses under investigation in two central tests, accommodating users with varying levels of expertise, which results in high flexibility and user-friendliness at the same time. This paper also presents the application of \textbf{CovCorTest} for various issues, illustrated by multiple examples, where the tests are applied to a real-world dataset.</p>
+
+<p><a href="https://arxiv.org/abs/2507.03406">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

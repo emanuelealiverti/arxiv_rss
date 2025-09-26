@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bilateral Distribution Compression: Reducing Both Data Size and Dimensionality</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bilateral Distribution Compression: Reducing Both Data Size and Dimensionality" />
+<meta name="author" content="Dominic Broadbent, Nick Whiteley, Robert Allison, Tom Lovett" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Existing distribution compression methods reduce dataset size by minimising the Maximum Mean Discrepancy (MMD) between original and compressed sets, but modern datasets are often large in both sample size and dimensionality. We propose Bilateral Distribution Compression (BDC), a two-stage framework that compresses along both axes while preserving the underlying distribution, with overall linear time and memory complexity in dataset size and dimension. Central to BDC is the Decoded MMD (DMMD), which quantifies the discrepancy between the original data and a compressed set decoded from a low-dimensional latent space. BDC proceeds by (i) learning a low-dimensional projection using the Reconstruction MMD (RMMD), and (ii) optimising a latent compressed set with the Encoded MMD (EMMD). We show that this procedure minimises the DMMD, guaranteeing that the compressed set faithfully represents the original distribution. Experiments show that across a variety of scenarios BDC can achieve comparable or superior performance to ambient-space compression at substantially lower cost." />
+<meta property="og:description" content="Existing distribution compression methods reduce dataset size by minimising the Maximum Mean Discrepancy (MMD) between original and compressed sets, but modern datasets are often large in both sample size and dimensionality. We propose Bilateral Distribution Compression (BDC), a two-stage framework that compresses along both axes while preserving the underlying distribution, with overall linear time and memory complexity in dataset size and dimension. Central to BDC is the Decoded MMD (DMMD), which quantifies the discrepancy between the original data and a compressed set decoded from a low-dimensional latent space. BDC proceeds by (i) learning a low-dimensional projection using the Reconstruction MMD (RMMD), and (ii) optimising a latent compressed set with the Encoded MMD (EMMD). We show that this procedure minimises the DMMD, guaranteeing that the compressed set faithfully represents the original distribution. Experiments show that across a variety of scenarios BDC can achieve comparable or superior performance to ambient-space compression at substantially lower cost." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/26/BilateralDistributionCompressionReducingBothDataSizeandDimensionality.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/26/BilateralDistributionCompressionReducingBothDataSizeandDimensionality.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bilateral Distribution Compression: Reducing Both Data Size and Dimensionality" />
+<script type="application/ld+json">
+{"description":"Existing distribution compression methods reduce dataset size by minimising the Maximum Mean Discrepancy (MMD) between original and compressed sets, but modern datasets are often large in both sample size and dimensionality. We propose Bilateral Distribution Compression (BDC), a two-stage framework that compresses along both axes while preserving the underlying distribution, with overall linear time and memory complexity in dataset size and dimension. Central to BDC is the Decoded MMD (DMMD), which quantifies the discrepancy between the original data and a compressed set decoded from a low-dimensional latent space. BDC proceeds by (i) learning a low-dimensional projection using the Reconstruction MMD (RMMD), and (ii) optimising a latent compressed set with the Encoded MMD (EMMD). We show that this procedure minimises the DMMD, guaranteeing that the compressed set faithfully represents the original distribution. Experiments show that across a variety of scenarios BDC can achieve comparable or superior performance to ambient-space compression at substantially lower cost.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/26/BilateralDistributionCompressionReducingBothDataSizeandDimensionality.html"},"headline":"Bilateral Distribution Compression: Reducing Both Data Size and Dimensionality","dateModified":"2025-09-26T00:00:00+00:00","datePublished":"2025-09-26T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/26/BilateralDistributionCompressionReducingBothDataSizeandDimensionality.html","author":{"@type":"Person","name":"Dominic Broadbent, Nick Whiteley, Robert Allison, Tom Lovett"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-26 00:00:00 +0000">09-26</time>
+  </p>
+  
+  <h1>Bilateral Distribution Compression: Reducing Both Data Size and Dimensionality</h1>
+  <br>Dominic Broadbent, Nick Whiteley, Robert Allison, Tom Lovett</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>Existing distribution compression methods reduce dataset size by minimising the Maximum Mean Discrepancy (MMD) between original and compressed sets, but modern datasets are often large in both sample size and dimensionality. We propose Bilateral Distribution Compression (BDC), a two-stage framework that compresses along both axes while preserving the underlying distribution, with overall linear time and memory complexity in dataset size and dimension. Central to BDC is the Decoded MMD (DMMD), which quantifies the discrepancy between the original data and a compressed set decoded from a low-dimensional latent space. BDC proceeds by (i) learning a low-dimensional projection using the Reconstruction MMD (RMMD), and (ii) optimising a latent compressed set with the Encoded MMD (EMMD). We show that this procedure minimises the DMMD, guaranteeing that the compressed set faithfully represents the original distribution. Experiments show that across a variety of scenarios BDC can achieve comparable or superior performance to ambient-space compression at substantially lower cost.</p>
+
+<p><a href="https://arxiv.org/abs/2509.17543">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
