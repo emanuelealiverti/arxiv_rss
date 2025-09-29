@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fast Rank Adaptive CUR via a Recycled Small Sketch</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Fast Rank Adaptive CUR via a Recycled Small Sketch" />
+<meta name="author" content="Nathaniel Pritchard, Taejun Park, Yuji Nakatsukasa, Per-Gunnar Martinsson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The computation of accurate low-rank matrix approximations is central to improving the scalability of various techniques in machine learning, uncertainty quantification, and control. Traditionally, low-rank approximations are constructed using SVD-based approaches such as truncated SVD or RandomizedSVD. Although these SVD approaches – especially RandomizedSVD – have proven to be very computationally efficient, other low-rank approximation methods can offer even greater performance. One such approach is the CUR decomposition, which forms a low-rank approximation using direct row and column subsets of a matrix. Because CUR uses direct matrix subsets, it is also often better able to preserve native matrix structures like sparsity or non-negativity than SVD-based approaches and can facilitate data interpretation in many contexts. This paper introduces IterativeCUR, which draws on previous work in randomized numerical linear algebra to build a new algorithm that is highly competitive compared to prior work: (1) It is adaptive in the sense that it takes as an input parameter the desired tolerance, rather than an a priori guess of the numerical rank. (2) It typically runs significantly faster than both existing CUR algorithms and techniques such as RandomizedSVD, in particular when these methods are run in an adaptive rank mode. Its asymptotic complexity is $\mathcal{O}(mn + (m+n)r^2 + r^3)$ for an $m\times n$ matrix of numerical rank $r$. (3) It relies on a single small sketch from the matrix that is successively downdated as the algorithm proceeds. We demonstrate through extensive experiments that IterativeCUR achieves up to $4\times$ speed-up over state-of-the-art pivoting-on-sketch approaches with no loss of accuracy, and up to $40\times$ speed-up over rank-adaptive randomized SVD approaches." />
+<meta property="og:description" content="The computation of accurate low-rank matrix approximations is central to improving the scalability of various techniques in machine learning, uncertainty quantification, and control. Traditionally, low-rank approximations are constructed using SVD-based approaches such as truncated SVD or RandomizedSVD. Although these SVD approaches – especially RandomizedSVD – have proven to be very computationally efficient, other low-rank approximation methods can offer even greater performance. One such approach is the CUR decomposition, which forms a low-rank approximation using direct row and column subsets of a matrix. Because CUR uses direct matrix subsets, it is also often better able to preserve native matrix structures like sparsity or non-negativity than SVD-based approaches and can facilitate data interpretation in many contexts. This paper introduces IterativeCUR, which draws on previous work in randomized numerical linear algebra to build a new algorithm that is highly competitive compared to prior work: (1) It is adaptive in the sense that it takes as an input parameter the desired tolerance, rather than an a priori guess of the numerical rank. (2) It typically runs significantly faster than both existing CUR algorithms and techniques such as RandomizedSVD, in particular when these methods are run in an adaptive rank mode. Its asymptotic complexity is $\mathcal{O}(mn + (m+n)r^2 + r^3)$ for an $m\times n$ matrix of numerical rank $r$. (3) It relies on a single small sketch from the matrix that is successively downdated as the algorithm proceeds. We demonstrate through extensive experiments that IterativeCUR achieves up to $4\times$ speed-up over state-of-the-art pivoting-on-sketch approaches with no loss of accuracy, and up to $40\times$ speed-up over rank-adaptive randomized SVD approaches." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/FastRankAdaptiveCURviaaRecycledSmallSketch.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/FastRankAdaptiveCURviaaRecycledSmallSketch.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fast Rank Adaptive CUR via a Recycled Small Sketch" />
+<script type="application/ld+json">
+{"description":"The computation of accurate low-rank matrix approximations is central to improving the scalability of various techniques in machine learning, uncertainty quantification, and control. Traditionally, low-rank approximations are constructed using SVD-based approaches such as truncated SVD or RandomizedSVD. Although these SVD approaches – especially RandomizedSVD – have proven to be very computationally efficient, other low-rank approximation methods can offer even greater performance. One such approach is the CUR decomposition, which forms a low-rank approximation using direct row and column subsets of a matrix. Because CUR uses direct matrix subsets, it is also often better able to preserve native matrix structures like sparsity or non-negativity than SVD-based approaches and can facilitate data interpretation in many contexts. This paper introduces IterativeCUR, which draws on previous work in randomized numerical linear algebra to build a new algorithm that is highly competitive compared to prior work: (1) It is adaptive in the sense that it takes as an input parameter the desired tolerance, rather than an a priori guess of the numerical rank. (2) It typically runs significantly faster than both existing CUR algorithms and techniques such as RandomizedSVD, in particular when these methods are run in an adaptive rank mode. Its asymptotic complexity is $\\mathcal{O}(mn + (m+n)r^2 + r^3)$ for an $m\\times n$ matrix of numerical rank $r$. (3) It relies on a single small sketch from the matrix that is successively downdated as the algorithm proceeds. We demonstrate through extensive experiments that IterativeCUR achieves up to $4\\times$ speed-up over state-of-the-art pivoting-on-sketch approaches with no loss of accuracy, and up to $40\\times$ speed-up over rank-adaptive randomized SVD approaches.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/FastRankAdaptiveCURviaaRecycledSmallSketch.html"},"headline":"Fast Rank Adaptive CUR via a Recycled Small Sketch","dateModified":"2025-09-29T00:00:00+00:00","datePublished":"2025-09-29T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/FastRankAdaptiveCURviaaRecycledSmallSketch.html","author":{"@type":"Person","name":"Nathaniel Pritchard, Taejun Park, Yuji Nakatsukasa, Per-Gunnar Martinsson"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-29 00:00:00 +0000">09-29</time>
+  </p>
+  
+  <h1>Fast Rank Adaptive CUR via a Recycled Small Sketch</h1>
+  <br>Nathaniel Pritchard, Taejun Park, Yuji Nakatsukasa, Per-Gunnar Martinsson</h3>
+  <br> [stat.CO]
+
+  <p>The computation of accurate low-rank matrix approximations is central to improving the scalability of various techniques in machine learning, uncertainty quantification, and control. Traditionally, low-rank approximations are constructed using SVD-based approaches such as truncated SVD or RandomizedSVD. Although these SVD approaches – especially RandomizedSVD – have proven to be very computationally efficient, other low-rank approximation methods can offer even greater performance. One such approach is the CUR decomposition, which forms a low-rank approximation using direct row and column subsets of a matrix. Because CUR uses direct matrix subsets, it is also often better able to preserve native matrix structures like sparsity or non-negativity than SVD-based approaches and can facilitate data interpretation in many contexts. This paper introduces IterativeCUR, which draws on previous work in randomized numerical linear algebra to build a new algorithm that is highly competitive compared to prior work: (1) It is adaptive in the sense that it takes as an input parameter the desired tolerance, rather than an a priori guess of the numerical rank. (2) It typically runs significantly faster than both existing CUR algorithms and techniques such as RandomizedSVD, in particular when these methods are run in an adaptive rank mode. Its asymptotic complexity is $\mathcal{O}(mn + (m+n)r^2 + r^3)$ for an $m\times n$ matrix of numerical rank $r$. (3) It relies on a single small sketch from the matrix that is successively downdated as the algorithm proceeds.
+  We demonstrate through extensive experiments that IterativeCUR achieves up to $4\times$ speed-up over state-of-the-art pivoting-on-sketch approaches with no loss of accuracy, and up to $40\times$ speed-up over rank-adaptive randomized SVD approaches.</p>
+
+<p><a href="https://arxiv.org/abs/2509.21963">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

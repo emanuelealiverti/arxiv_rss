@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Direct Bias-Correction Term Estimation for Propensity Scores and Average Treatment Effect Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Direct Bias-Correction Term Estimation for Propensity Scores and Average Treatment Effect Estimation" />
+<meta name="author" content="Masahiro Kato" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This study considers the estimation of the average treatment effect (ATE). For ATE estimation, we estimate the propensity score through direct bias-correction term estimation. Let ${(X_i, D_i, Y_i)}_{i=1}^{n}$ be the observations, where $X_i \in \mathbb{R}^p$ denotes $p$-dimensional covariates, $D_i \in {0, 1}$ denotes a binary treatment assignment indicator, and $Y_i \in \mathbb{R}$ is an outcome. In ATE estimation, the bias-correction term $h_0(X_i, D_i) = \frac{1[D_i = 1]}{e_0(X_i)} - \frac{1[D_i = 0]}{1 - e_0(X_i)}$ plays an important role, where $e_0(X_i)$ is the propensity score, the probability of being assigned treatment $1$. In this study, we propose estimating $h_0$ (or equivalently the propensity score $e_0$) by directly minimizing the prediction error of $h_0$. Since the bias-correction term $h_0$ is essential for ATE estimation, this direct approach is expected to improve estimation accuracy for the ATE. For example, existing studies often employ maximum likelihood or covariate balancing to estimate $e_0$, but these approaches may not be optimal for accurately estimating $h_0$ or the ATE. We present a general framework for this direct bias-correction term estimation approach from the perspective of Bregman divergence minimization and conduct simulation studies to evaluate the effectiveness of the proposed method." />
+<meta property="og:description" content="This study considers the estimation of the average treatment effect (ATE). For ATE estimation, we estimate the propensity score through direct bias-correction term estimation. Let ${(X_i, D_i, Y_i)}_{i=1}^{n}$ be the observations, where $X_i \in \mathbb{R}^p$ denotes $p$-dimensional covariates, $D_i \in {0, 1}$ denotes a binary treatment assignment indicator, and $Y_i \in \mathbb{R}$ is an outcome. In ATE estimation, the bias-correction term $h_0(X_i, D_i) = \frac{1[D_i = 1]}{e_0(X_i)} - \frac{1[D_i = 0]}{1 - e_0(X_i)}$ plays an important role, where $e_0(X_i)$ is the propensity score, the probability of being assigned treatment $1$. In this study, we propose estimating $h_0$ (or equivalently the propensity score $e_0$) by directly minimizing the prediction error of $h_0$. Since the bias-correction term $h_0$ is essential for ATE estimation, this direct approach is expected to improve estimation accuracy for the ATE. For example, existing studies often employ maximum likelihood or covariate balancing to estimate $e_0$, but these approaches may not be optimal for accurately estimating $h_0$ or the ATE. We present a general framework for this direct bias-correction term estimation approach from the perspective of Bregman divergence minimization and conduct simulation studies to evaluate the effectiveness of the proposed method." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/DirectBiasCorrectionTermEstimationforPropensityScoresandAverageTreatmentEffectEstimation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/DirectBiasCorrectionTermEstimationforPropensityScoresandAverageTreatmentEffectEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Direct Bias-Correction Term Estimation for Propensity Scores and Average Treatment Effect Estimation" />
+<script type="application/ld+json">
+{"description":"This study considers the estimation of the average treatment effect (ATE). For ATE estimation, we estimate the propensity score through direct bias-correction term estimation. Let ${(X_i, D_i, Y_i)}_{i=1}^{n}$ be the observations, where $X_i \\in \\mathbb{R}^p$ denotes $p$-dimensional covariates, $D_i \\in {0, 1}$ denotes a binary treatment assignment indicator, and $Y_i \\in \\mathbb{R}$ is an outcome. In ATE estimation, the bias-correction term $h_0(X_i, D_i) = \\frac{1[D_i = 1]}{e_0(X_i)} - \\frac{1[D_i = 0]}{1 - e_0(X_i)}$ plays an important role, where $e_0(X_i)$ is the propensity score, the probability of being assigned treatment $1$. In this study, we propose estimating $h_0$ (or equivalently the propensity score $e_0$) by directly minimizing the prediction error of $h_0$. Since the bias-correction term $h_0$ is essential for ATE estimation, this direct approach is expected to improve estimation accuracy for the ATE. For example, existing studies often employ maximum likelihood or covariate balancing to estimate $e_0$, but these approaches may not be optimal for accurately estimating $h_0$ or the ATE. We present a general framework for this direct bias-correction term estimation approach from the perspective of Bregman divergence minimization and conduct simulation studies to evaluate the effectiveness of the proposed method.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/DirectBiasCorrectionTermEstimationforPropensityScoresandAverageTreatmentEffectEstimation.html"},"headline":"Direct Bias-Correction Term Estimation for Propensity Scores and Average Treatment Effect Estimation","dateModified":"2025-09-29T00:00:00+00:00","datePublished":"2025-09-29T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/DirectBiasCorrectionTermEstimationforPropensityScoresandAverageTreatmentEffectEstimation.html","author":{"@type":"Person","name":"Masahiro Kato"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-29 00:00:00 +0000">09-29</time>
+  </p>
+  
+  <h1>Direct Bias-Correction Term Estimation for Propensity Scores and Average Treatment Effect Estimation</h1>
+  <br>Masahiro Kato</h3>
+  <br> [stat.ME,stat.ML,stat.TH]
+
+  <p>This study considers the estimation of the average treatment effect (ATE). For ATE estimation, we estimate the propensity score through direct bias-correction term estimation. Let ${(X_i, D_i, Y_i)}_{i=1}^{n}$ be the observations, where $X_i \in \mathbb{R}^p$ denotes $p$-dimensional covariates, $D_i \in {0, 1}$ denotes a binary treatment assignment indicator, and $Y_i \in \mathbb{R}$ is an outcome. In ATE estimation, the bias-correction term $h_0(X_i, D_i) = \frac{1[D_i = 1]}{e_0(X_i)} - \frac{1[D_i = 0]}{1 - e_0(X_i)}$ plays an important role, where $e_0(X_i)$ is the propensity score, the probability of being assigned treatment $1$. In this study, we propose estimating $h_0$ (or equivalently the propensity score $e_0$) by directly minimizing the prediction error of $h_0$. Since the bias-correction term $h_0$ is essential for ATE estimation, this direct approach is expected to improve estimation accuracy for the ATE. For example, existing studies often employ maximum likelihood or covariate balancing to estimate $e_0$, but these approaches may not be optimal for accurately estimating $h_0$ or the ATE. We present a general framework for this direct bias-correction term estimation approach from the perspective of Bregman divergence minimization and conduct simulation studies to evaluate the effectiveness of the proposed method.</p>
+
+<p><a href="https://arxiv.org/abs/2509.22122">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

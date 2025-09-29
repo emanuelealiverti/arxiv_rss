@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Estimating average treatment effects when treatment data are absent in a target study</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Estimating average treatment effects when treatment data are absent in a target study" />
+<meta name="author" content="Lan Wen, Aaron L Sarvet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Researchers are frequently interested in understanding the causal effect of treatment interventions. However, in some cases, the treatment of interest–readily available in a randomized controlled trial (RCT)–is either not directly measured or entirely unavailable in observational datasets. This challenge has motivated the development of stochastic incremental propensity score interventions which operate on post-treatment exposures affected by the treatment of interest with the aim of approximating the causal effects of the treatment intervention. Yet, a key challenge lies in the fact that the precise distributional shift of these post-treatment exposures induced by the treatment is typically unknown, making it uncertain whether the approximation truly reflects the causal effect of interest. The primary objective of this paper is to explore data integration methodologies to characterize a distribution of post-treatment exposures resulting from the treatment in an external dataset, and to use this information to estimate counterfactual mean outcomes under treatment interventions, in settings where the observational data lack treatment information and the external data may not contain measurements of the outcome of interest. We will discuss the underlying assumptions required for this approach and provide methodological guidance on estimation strategies to address these challenges." />
+<meta property="og:description" content="Researchers are frequently interested in understanding the causal effect of treatment interventions. However, in some cases, the treatment of interest–readily available in a randomized controlled trial (RCT)–is either not directly measured or entirely unavailable in observational datasets. This challenge has motivated the development of stochastic incremental propensity score interventions which operate on post-treatment exposures affected by the treatment of interest with the aim of approximating the causal effects of the treatment intervention. Yet, a key challenge lies in the fact that the precise distributional shift of these post-treatment exposures induced by the treatment is typically unknown, making it uncertain whether the approximation truly reflects the causal effect of interest. The primary objective of this paper is to explore data integration methodologies to characterize a distribution of post-treatment exposures resulting from the treatment in an external dataset, and to use this information to estimate counterfactual mean outcomes under treatment interventions, in settings where the observational data lack treatment information and the external data may not contain measurements of the outcome of interest. We will discuss the underlying assumptions required for this approach and provide methodological guidance on estimation strategies to address these challenges." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/Estimatingaveragetreatmenteffectswhentreatmentdataareabsentinatargetstudy.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/Estimatingaveragetreatmenteffectswhentreatmentdataareabsentinatargetstudy.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Estimating average treatment effects when treatment data are absent in a target study" />
+<script type="application/ld+json">
+{"description":"Researchers are frequently interested in understanding the causal effect of treatment interventions. However, in some cases, the treatment of interest–readily available in a randomized controlled trial (RCT)–is either not directly measured or entirely unavailable in observational datasets. This challenge has motivated the development of stochastic incremental propensity score interventions which operate on post-treatment exposures affected by the treatment of interest with the aim of approximating the causal effects of the treatment intervention. Yet, a key challenge lies in the fact that the precise distributional shift of these post-treatment exposures induced by the treatment is typically unknown, making it uncertain whether the approximation truly reflects the causal effect of interest. The primary objective of this paper is to explore data integration methodologies to characterize a distribution of post-treatment exposures resulting from the treatment in an external dataset, and to use this information to estimate counterfactual mean outcomes under treatment interventions, in settings where the observational data lack treatment information and the external data may not contain measurements of the outcome of interest. We will discuss the underlying assumptions required for this approach and provide methodological guidance on estimation strategies to address these challenges.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/Estimatingaveragetreatmenteffectswhentreatmentdataareabsentinatargetstudy.html"},"headline":"Estimating average treatment effects when treatment data are absent in a target study","dateModified":"2025-09-29T00:00:00+00:00","datePublished":"2025-09-29T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/29/Estimatingaveragetreatmenteffectswhentreatmentdataareabsentinatargetstudy.html","author":{"@type":"Person","name":"Lan Wen, Aaron L Sarvet"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-29 00:00:00 +0000">09-29</time>
+  </p>
+  
+  <h1>Estimating average treatment effects when treatment data are absent in a target study</h1>
+  <br>Lan Wen, Aaron L Sarvet</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Researchers are frequently interested in understanding the causal effect of treatment interventions. However, in some cases, the treatment of interest–readily available in a randomized controlled trial (RCT)–is either not directly measured or entirely unavailable in observational datasets. This challenge has motivated the development of stochastic incremental propensity score interventions which operate on post-treatment exposures affected by the treatment of interest with the aim of approximating the causal effects of the treatment intervention. Yet, a key challenge lies in the fact that the precise distributional shift of these post-treatment exposures induced by the treatment is typically unknown, making it uncertain whether the approximation truly reflects the causal effect of interest. The primary objective of this paper is to explore data integration methodologies to characterize a distribution of post-treatment exposures resulting from the treatment in an external dataset, and to use this information to estimate counterfactual mean outcomes under treatment interventions, in settings where the observational data lack treatment information and the external data may not contain measurements of the outcome of interest. We will discuss the underlying assumptions required for this approach and provide methodological guidance on estimation strategies to address these challenges.</p>
+
+<p><a href="https://arxiv.org/abs/2509.22543">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
