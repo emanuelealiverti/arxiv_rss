@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>reslife: Residual Lifetime Analysis Tool in R</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="reslife: Residual Lifetime Analysis Tool in R" />
+<meta name="author" content="Zekai Wang, Andrew Crawford, Ka Lok Lee, Lin Lu, Srihari Jaganathan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Mean residual lifetime is an important measure utilized in various fields, including pharmaceutical companies, manufacturing companies, and insurance companies for survival analysis. However, the computation of mean residual lifetime can be laborious and challenging. To address this issue, the R package reslife has been developed, which enables efficient calculation of mean residual lifetime based on closed-form solution in a user-friendly manner. reslife offers the capability to utilize either the results of a flexsurv regression or user-provided parameters to compute mean residual lifetime. Furthermore, there are options to return median and percentile residual lifetime. If the user chooses to use the outputs of a flexsurv regression, there is an option to input a data frame with unobserved data. In this article, we present reslife, explain its underlying mathematical principles, illustrate its functioning, and provide examples on how to utilize the package. The aim is to facilitate the use of mean residual lifetime, making it more accessible and efficient for practitioners in various disciplines, particularly those involved in survival analysis within the pharmaceutical industry. This package has been approved and available on CRAN: https://cran.r-project.org/web/packages/reslife/index.html" />
+<meta property="og:description" content="Mean residual lifetime is an important measure utilized in various fields, including pharmaceutical companies, manufacturing companies, and insurance companies for survival analysis. However, the computation of mean residual lifetime can be laborious and challenging. To address this issue, the R package reslife has been developed, which enables efficient calculation of mean residual lifetime based on closed-form solution in a user-friendly manner. reslife offers the capability to utilize either the results of a flexsurv regression or user-provided parameters to compute mean residual lifetime. Furthermore, there are options to return median and percentile residual lifetime. If the user chooses to use the outputs of a flexsurv regression, there is an option to input a data frame with unobserved data. In this article, we present reslife, explain its underlying mathematical principles, illustrate its functioning, and provide examples on how to utilize the package. The aim is to facilitate the use of mean residual lifetime, making it more accessible and efficient for practitioners in various disciplines, particularly those involved in survival analysis within the pharmaceutical industry. This package has been approved and available on CRAN: https://cran.r-project.org/web/packages/reslife/index.html" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/09/30/reslifeResidualLifetimeAnalysisToolinR.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/09/30/reslifeResidualLifetimeAnalysisToolinR.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="reslife: Residual Lifetime Analysis Tool in R" />
+<script type="application/ld+json">
+{"description":"Mean residual lifetime is an important measure utilized in various fields, including pharmaceutical companies, manufacturing companies, and insurance companies for survival analysis. However, the computation of mean residual lifetime can be laborious and challenging. To address this issue, the R package reslife has been developed, which enables efficient calculation of mean residual lifetime based on closed-form solution in a user-friendly manner. reslife offers the capability to utilize either the results of a flexsurv regression or user-provided parameters to compute mean residual lifetime. Furthermore, there are options to return median and percentile residual lifetime. If the user chooses to use the outputs of a flexsurv regression, there is an option to input a data frame with unobserved data. In this article, we present reslife, explain its underlying mathematical principles, illustrate its functioning, and provide examples on how to utilize the package. The aim is to facilitate the use of mean residual lifetime, making it more accessible and efficient for practitioners in various disciplines, particularly those involved in survival analysis within the pharmaceutical industry. This package has been approved and available on CRAN: https://cran.r-project.org/web/packages/reslife/index.html","headline":"reslife: Residual Lifetime Analysis Tool in R","dateModified":"2025-09-30T00:00:00+00:00","datePublished":"2025-09-30T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/30/reslifeResidualLifetimeAnalysisToolinR.html","author":{"@type":"Person","name":"Zekai Wang, Andrew Crawford, Ka Lok Lee, Lin Lu, Srihari Jaganathan"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/09/30/reslifeResidualLifetimeAnalysisToolinR.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-30 00:00:00 +0000">09-30</time>
+  </p>
+  
+  <h1>reslife: Residual Lifetime Analysis Tool in R</h1>
+  <br>Zekai Wang, Andrew Crawford, Ka Lok Lee, Lin Lu, Srihari Jaganathan</h3>
+  <br> [stat.CO]
+
+  <p>Mean residual lifetime is an important measure utilized in various fields, including pharmaceutical companies, manufacturing companies, and insurance companies for survival analysis. However, the computation of mean residual lifetime can be laborious and challenging. To address this issue, the R package reslife has been developed, which enables efficient calculation of mean residual lifetime based on closed-form solution in a user-friendly manner. reslife offers the capability to utilize either the results of a flexsurv regression or user-provided parameters to compute mean residual lifetime. Furthermore, there are options to return median and percentile residual lifetime. If the user chooses to use the outputs of a flexsurv regression, there is an option to input a data frame with unobserved data. In this article, we present reslife, explain its underlying mathematical principles, illustrate its functioning, and provide examples on how to utilize the package. The aim is to facilitate the use of mean residual lifetime, making it more accessible and efficient for practitioners in various disciplines, particularly those involved in survival analysis within the pharmaceutical industry. This package has been approved and available on CRAN: https://cran.r-project.org/web/packages/reslife/index.html</p>
+
+<p><a href="https://arxiv.org/abs/2308.07410">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
