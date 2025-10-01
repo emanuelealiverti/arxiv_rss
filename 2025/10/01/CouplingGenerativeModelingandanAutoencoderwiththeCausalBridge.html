@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Coupling Generative Modeling and an Autoencoder with the Causal Bridge</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Coupling Generative Modeling and an Autoencoder with the Causal Bridge" />
+<meta name="author" content="Ruolin Meng, Ming-Yu Chung, Dhanajit Brahma, Ricardo Henao, Lawrence Carin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We consider inferring the causal effect of a treatment (intervention) on an outcome of interest in situations where there is potentially an unobserved confounder influencing both the treatment and the outcome. This is achievable by assuming access to two separate sets of control (proxy) measurements associated with treatment and outcomes, which are used to estimate treatment effects through a function termed the em causal bridge (CB). We present a new theoretical perspective, associated assumptions for when estimating treatment effects with the CB is feasible, and a bound on the average error of the treatment effect when the CB assumptions are violated. From this new perspective, we then demonstrate how coupling the CB with an autoencoder architecture allows for the sharing of statistical strength between observed quantities (proxies, treatment, and outcomes), thus improving the quality of the CB estimates. Experiments on synthetic and real-world data demonstrate the effectiveness of the proposed approach in relation to the state-of-the-art methodology for proxy measurements." />
+<meta property="og:description" content="We consider inferring the causal effect of a treatment (intervention) on an outcome of interest in situations where there is potentially an unobserved confounder influencing both the treatment and the outcome. This is achievable by assuming access to two separate sets of control (proxy) measurements associated with treatment and outcomes, which are used to estimate treatment effects through a function termed the em causal bridge (CB). We present a new theoretical perspective, associated assumptions for when estimating treatment effects with the CB is feasible, and a bound on the average error of the treatment effect when the CB assumptions are violated. From this new perspective, we then demonstrate how coupling the CB with an autoencoder architecture allows for the sharing of statistical strength between observed quantities (proxies, treatment, and outcomes), thus improving the quality of the CB estimates. Experiments on synthetic and real-world data demonstrate the effectiveness of the proposed approach in relation to the state-of-the-art methodology for proxy measurements." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/01/CouplingGenerativeModelingandanAutoencoderwiththeCausalBridge.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/01/CouplingGenerativeModelingandanAutoencoderwiththeCausalBridge.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Coupling Generative Modeling and an Autoencoder with the Causal Bridge" />
+<script type="application/ld+json">
+{"description":"We consider inferring the causal effect of a treatment (intervention) on an outcome of interest in situations where there is potentially an unobserved confounder influencing both the treatment and the outcome. This is achievable by assuming access to two separate sets of control (proxy) measurements associated with treatment and outcomes, which are used to estimate treatment effects through a function termed the em causal bridge (CB). We present a new theoretical perspective, associated assumptions for when estimating treatment effects with the CB is feasible, and a bound on the average error of the treatment effect when the CB assumptions are violated. From this new perspective, we then demonstrate how coupling the CB with an autoencoder architecture allows for the sharing of statistical strength between observed quantities (proxies, treatment, and outcomes), thus improving the quality of the CB estimates. Experiments on synthetic and real-world data demonstrate the effectiveness of the proposed approach in relation to the state-of-the-art methodology for proxy measurements.","headline":"Coupling Generative Modeling and an Autoencoder with the Causal Bridge","dateModified":"2025-10-01T00:00:00+00:00","datePublished":"2025-10-01T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/01/CouplingGenerativeModelingandanAutoencoderwiththeCausalBridge.html","author":{"@type":"Person","name":"Ruolin Meng, Ming-Yu Chung, Dhanajit Brahma, Ricardo Henao, Lawrence Carin"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/01/CouplingGenerativeModelingandanAutoencoderwiththeCausalBridge.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-01 00:00:00 +0000">10-01</time>
+  </p>
+  
+  <h1>Coupling Generative Modeling and an Autoencoder with the Causal Bridge</h1>
+  <br>Ruolin Meng, Ming-Yu Chung, Dhanajit Brahma, Ricardo Henao, Lawrence Carin</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>We consider inferring the causal effect of a treatment (intervention) on an outcome of interest in situations where there is potentially an unobserved confounder influencing both the treatment and the outcome. This is achievable by assuming access to two separate sets of control (proxy) measurements associated with treatment and outcomes, which are used to estimate treatment effects through a function termed the em causal bridge (CB). We present a new theoretical perspective, associated assumptions for when estimating treatment effects with the CB is feasible, and a bound on the average error of the treatment effect when the CB assumptions are violated. From this new perspective, we then demonstrate how coupling the CB with an autoencoder architecture allows for the sharing of statistical strength between observed quantities (proxies, treatment, and outcomes), thus improving the quality of the CB estimates. Experiments on synthetic and real-world data demonstrate the effectiveness of the proposed approach in relation to the state-of-the-art methodology for proxy measurements.</p>
+
+<p><a href="https://arxiv.org/abs/2509.25599">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
