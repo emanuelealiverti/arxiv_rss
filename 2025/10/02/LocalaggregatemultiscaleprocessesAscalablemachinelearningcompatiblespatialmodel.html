@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Local aggregate multiscale processes: A scalable, machine-learning-compatible spatial model</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Local aggregate multiscale processes: A scalable, machine-learning-compatible spatial model" />
+<meta name="author" content="Daisuke Murakami, Alexis Comber, Takahiro Yoshida, Narumasa Tsutsumida, Chris Brunsdon, Tomoki Nakaya" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This study develops the Local Aggregate Multiscale Process (LAMP), a scalable and machine-learning-compatible alternative to conventional spatial Gaussian processes (GPs, or kriging). Unlike conventional covariance-based spatial models, LAMP represents spatial processes by a multiscale ensemble of local models, inspired by geographically weighted regression. To ensure stable model training, larger-scale patterns that are easier to learn are modeled first, followed by smaller-scale patterns, with training terminated once the validation score stops improving. The training procedure, which is based on holdout validation, is easily integrated with other machine learning algorithms (e.g., random forests and neural networks). LAMP training is computationally efficient as it avoids explicit matrix inversion, a major computational bottleneck in conventional GPs. Comparative Monte Carlo experiments demonstrate that LAMP, as well as its integration with random forests, achieves superior predictive performance compared to existing models. Finally, we apply the proposed methods to an analysis of residential land prices in the Tokyo metropolitan area, Japan. The R code is available from available from https://github.com/dmuraka/spLAMP_dev_version/tree/main" />
+<meta property="og:description" content="This study develops the Local Aggregate Multiscale Process (LAMP), a scalable and machine-learning-compatible alternative to conventional spatial Gaussian processes (GPs, or kriging). Unlike conventional covariance-based spatial models, LAMP represents spatial processes by a multiscale ensemble of local models, inspired by geographically weighted regression. To ensure stable model training, larger-scale patterns that are easier to learn are modeled first, followed by smaller-scale patterns, with training terminated once the validation score stops improving. The training procedure, which is based on holdout validation, is easily integrated with other machine learning algorithms (e.g., random forests and neural networks). LAMP training is computationally efficient as it avoids explicit matrix inversion, a major computational bottleneck in conventional GPs. Comparative Monte Carlo experiments demonstrate that LAMP, as well as its integration with random forests, achieves superior predictive performance compared to existing models. Finally, we apply the proposed methods to an analysis of residential land prices in the Tokyo metropolitan area, Japan. The R code is available from available from https://github.com/dmuraka/spLAMP_dev_version/tree/main" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/02/LocalaggregatemultiscaleprocessesAscalablemachinelearningcompatiblespatialmodel.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/02/LocalaggregatemultiscaleprocessesAscalablemachinelearningcompatiblespatialmodel.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Local aggregate multiscale processes: A scalable, machine-learning-compatible spatial model" />
+<script type="application/ld+json">
+{"description":"This study develops the Local Aggregate Multiscale Process (LAMP), a scalable and machine-learning-compatible alternative to conventional spatial Gaussian processes (GPs, or kriging). Unlike conventional covariance-based spatial models, LAMP represents spatial processes by a multiscale ensemble of local models, inspired by geographically weighted regression. To ensure stable model training, larger-scale patterns that are easier to learn are modeled first, followed by smaller-scale patterns, with training terminated once the validation score stops improving. The training procedure, which is based on holdout validation, is easily integrated with other machine learning algorithms (e.g., random forests and neural networks). LAMP training is computationally efficient as it avoids explicit matrix inversion, a major computational bottleneck in conventional GPs. Comparative Monte Carlo experiments demonstrate that LAMP, as well as its integration with random forests, achieves superior predictive performance compared to existing models. Finally, we apply the proposed methods to an analysis of residential land prices in the Tokyo metropolitan area, Japan. The R code is available from available from https://github.com/dmuraka/spLAMP_dev_version/tree/main","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/02/LocalaggregatemultiscaleprocessesAscalablemachinelearningcompatiblespatialmodel.html"},"headline":"Local aggregate multiscale processes: A scalable, machine-learning-compatible spatial model","dateModified":"2025-10-02T00:00:00+00:00","datePublished":"2025-10-02T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/02/LocalaggregatemultiscaleprocessesAscalablemachinelearningcompatiblespatialmodel.html","author":{"@type":"Person","name":"Daisuke Murakami, Alexis Comber, Takahiro Yoshida, Narumasa Tsutsumida, Chris Brunsdon, Tomoki Nakaya"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-02 00:00:00 +0000">10-02</time>
+  </p>
+  
+  <h1>Local aggregate multiscale processes: A scalable, machine-learning-compatible spatial model</h1>
+  <br>Daisuke Murakami, Alexis Comber, Takahiro Yoshida, Narumasa Tsutsumida, Chris Brunsdon, Tomoki Nakaya</h3>
+  <br> [stat.ME]
+
+  <p>This study develops the Local Aggregate Multiscale Process (LAMP), a scalable and machine-learning-compatible alternative to conventional spatial Gaussian processes (GPs, or kriging). Unlike conventional covariance-based spatial models, LAMP represents spatial processes by a multiscale ensemble of local models, inspired by geographically weighted regression. To ensure stable model training, larger-scale patterns that are easier to learn are modeled first, followed by smaller-scale patterns, with training terminated once the validation score stops improving. The training procedure, which is based on holdout validation, is easily integrated with other machine learning algorithms (e.g., random forests and neural networks). LAMP training is computationally efficient as it avoids explicit matrix inversion, a major computational bottleneck in conventional GPs. Comparative Monte Carlo experiments demonstrate that LAMP, as well as its integration with random forests, achieves superior predictive performance compared to existing models. Finally, we apply the proposed methods to an analysis of residential land prices in the Tokyo metropolitan area, Japan.
+  The R code is available from available from https://github.com/dmuraka/spLAMP_dev_version/tree/main</p>
+
+<p><a href="https://arxiv.org/abs/2510.00968">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
