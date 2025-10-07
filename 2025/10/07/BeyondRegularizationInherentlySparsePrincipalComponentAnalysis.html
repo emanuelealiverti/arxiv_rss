@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Beyond Regularization: Inherently Sparse Principal Component Analysis</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Beyond Regularization: Inherently Sparse Principal Component Analysis" />
+<meta name="author" content="Jan O. Bauer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sparse principal component analysis (sparse PCA) is a widely used technique for dimensionality reduction in multivariate analysis, addressing two key limitations of standard PCA. First, sparse PCA can be implemented in high-dimensional low sample size settings, such as genetic microarrays. Second, it improves interpretability as components are regularized to zero. However, over-regularization of sparse singular vectors can cause them to deviate greatly from the population singular vectors, potentially misrepresenting the data structure. Additionally, sparse singular vectors are often not orthogonal, resulting in shared information between components, which complicates the calculation of variance explained. To address these challenges, we propose a methodology for sparse PCA that reflects the inherent structure of the data matrix. Specifically, we identify uncorrelated submatrices of the data matrix, meaning that the covariance matrix exhibits a sparse block diagonal structure. Such sparse matrices commonly occur in high-dimensional settings. The singular vectors of such a data matrix are inherently sparse, which improves interpretability while capturing the underlying data structure. Furthermore, these singular vectors are orthogonal by construction, ensuring that they do not share information. We demonstrate the effectiveness of our method through simulations and provide real data applications. Supplementary materials for this article are available online." />
+<meta property="og:description" content="Sparse principal component analysis (sparse PCA) is a widely used technique for dimensionality reduction in multivariate analysis, addressing two key limitations of standard PCA. First, sparse PCA can be implemented in high-dimensional low sample size settings, such as genetic microarrays. Second, it improves interpretability as components are regularized to zero. However, over-regularization of sparse singular vectors can cause them to deviate greatly from the population singular vectors, potentially misrepresenting the data structure. Additionally, sparse singular vectors are often not orthogonal, resulting in shared information between components, which complicates the calculation of variance explained. To address these challenges, we propose a methodology for sparse PCA that reflects the inherent structure of the data matrix. Specifically, we identify uncorrelated submatrices of the data matrix, meaning that the covariance matrix exhibits a sparse block diagonal structure. Such sparse matrices commonly occur in high-dimensional settings. The singular vectors of such a data matrix are inherently sparse, which improves interpretability while capturing the underlying data structure. Furthermore, these singular vectors are orthogonal by construction, ensuring that they do not share information. We demonstrate the effectiveness of our method through simulations and provide real data applications. Supplementary materials for this article are available online." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/BeyondRegularizationInherentlySparsePrincipalComponentAnalysis.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/BeyondRegularizationInherentlySparsePrincipalComponentAnalysis.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Beyond Regularization: Inherently Sparse Principal Component Analysis" />
+<script type="application/ld+json">
+{"description":"Sparse principal component analysis (sparse PCA) is a widely used technique for dimensionality reduction in multivariate analysis, addressing two key limitations of standard PCA. First, sparse PCA can be implemented in high-dimensional low sample size settings, such as genetic microarrays. Second, it improves interpretability as components are regularized to zero. However, over-regularization of sparse singular vectors can cause them to deviate greatly from the population singular vectors, potentially misrepresenting the data structure. Additionally, sparse singular vectors are often not orthogonal, resulting in shared information between components, which complicates the calculation of variance explained. To address these challenges, we propose a methodology for sparse PCA that reflects the inherent structure of the data matrix. Specifically, we identify uncorrelated submatrices of the data matrix, meaning that the covariance matrix exhibits a sparse block diagonal structure. Such sparse matrices commonly occur in high-dimensional settings. The singular vectors of such a data matrix are inherently sparse, which improves interpretability while capturing the underlying data structure. Furthermore, these singular vectors are orthogonal by construction, ensuring that they do not share information. We demonstrate the effectiveness of our method through simulations and provide real data applications. Supplementary materials for this article are available online.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/BeyondRegularizationInherentlySparsePrincipalComponentAnalysis.html"},"headline":"Beyond Regularization: Inherently Sparse Principal Component Analysis","dateModified":"2025-10-07T00:00:00+00:00","datePublished":"2025-10-07T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/BeyondRegularizationInherentlySparsePrincipalComponentAnalysis.html","author":{"@type":"Person","name":"Jan O. Bauer"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-07 00:00:00 +0000">10-07</time>
+  </p>
+  
+  <h1>Beyond Regularization: Inherently Sparse Principal Component Analysis</h1>
+  <br>Jan O. Bauer</h3>
+  <br> [stat.ME]
+
+  <p>Sparse principal component analysis (sparse PCA) is a widely used technique for dimensionality reduction in multivariate analysis, addressing two key limitations of standard PCA. First, sparse PCA can be implemented in high-dimensional low sample size settings, such as genetic microarrays. Second, it improves interpretability as components are regularized to zero. However, over-regularization of sparse singular vectors can cause them to deviate greatly from the population singular vectors, potentially misrepresenting the data structure. Additionally, sparse singular vectors are often not orthogonal, resulting in shared information between components, which complicates the calculation of variance explained. To address these challenges, we propose a methodology for sparse PCA that reflects the inherent structure of the data matrix. Specifically, we identify uncorrelated submatrices of the data matrix, meaning that the covariance matrix exhibits a sparse block diagonal structure. Such sparse matrices commonly occur in high-dimensional settings. The singular vectors of such a data matrix are inherently sparse, which improves interpretability while capturing the underlying data structure. Furthermore, these singular vectors are orthogonal by construction, ensuring that they do not share information. We demonstrate the effectiveness of our method through simulations and provide real data applications. Supplementary materials for this article are available online.</p>
+
+<p><a href="https://arxiv.org/abs/2510.03729">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

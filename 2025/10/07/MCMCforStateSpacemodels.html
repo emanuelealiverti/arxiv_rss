@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>MCMC for State Space models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="MCMC for State Space models" />
+<meta name="author" content="Paul Fearnhead, Chris Sherlock" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A state-space model is a time-series model that has an unobserved latent process from which we take noisy measurements over time. The observations are conditionally independent given the latent process and the latent process itself is Markovian. These properties lead to simplifications for the conditional distribution of the latent process given the parameters and the observations. This chapter looks at how we can leverage the properties of state-space models to construct efficient MCMC samplers. We consider a range of Gibbs-sampler schemes, including those which use the forward-backward algorithm to simulate from the full conditional of the latent process given the parameters. For models where the forward-backward algorithm is not applicable we look at particle MCMC algorithms that, given the parameters, use particle filters to approximately simulate from the latent process or estimate the likelihood of the observations. Throughout, we provide intuition and informally discuss theory about the properties of the model that impact the efficiency of the different algorithms and how approaches such as reparameterization can improve mixing." />
+<meta property="og:description" content="A state-space model is a time-series model that has an unobserved latent process from which we take noisy measurements over time. The observations are conditionally independent given the latent process and the latent process itself is Markovian. These properties lead to simplifications for the conditional distribution of the latent process given the parameters and the observations. This chapter looks at how we can leverage the properties of state-space models to construct efficient MCMC samplers. We consider a range of Gibbs-sampler schemes, including those which use the forward-backward algorithm to simulate from the full conditional of the latent process given the parameters. For models where the forward-backward algorithm is not applicable we look at particle MCMC algorithms that, given the parameters, use particle filters to approximately simulate from the latent process or estimate the likelihood of the observations. Throughout, we provide intuition and informally discuss theory about the properties of the model that impact the efficiency of the different algorithms and how approaches such as reparameterization can improve mixing." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/MCMCforStateSpacemodels.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/MCMCforStateSpacemodels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MCMC for State Space models" />
+<script type="application/ld+json">
+{"description":"A state-space model is a time-series model that has an unobserved latent process from which we take noisy measurements over time. The observations are conditionally independent given the latent process and the latent process itself is Markovian. These properties lead to simplifications for the conditional distribution of the latent process given the parameters and the observations. This chapter looks at how we can leverage the properties of state-space models to construct efficient MCMC samplers. We consider a range of Gibbs-sampler schemes, including those which use the forward-backward algorithm to simulate from the full conditional of the latent process given the parameters. For models where the forward-backward algorithm is not applicable we look at particle MCMC algorithms that, given the parameters, use particle filters to approximately simulate from the latent process or estimate the likelihood of the observations. Throughout, we provide intuition and informally discuss theory about the properties of the model that impact the efficiency of the different algorithms and how approaches such as reparameterization can improve mixing.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/MCMCforStateSpacemodels.html"},"headline":"MCMC for State Space models","dateModified":"2025-10-07T00:00:00+00:00","datePublished":"2025-10-07T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/MCMCforStateSpacemodels.html","author":{"@type":"Person","name":"Paul Fearnhead, Chris Sherlock"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-07 00:00:00 +0000">10-07</time>
+  </p>
+  
+  <h1>MCMC for State Space models</h1>
+  <br>Paul Fearnhead, Chris Sherlock</h3>
+  <br> [stat.ME]
+
+  <p>A state-space model is a time-series model that has an unobserved latent process from which we take noisy measurements over time. The observations are conditionally independent given the latent process and the latent process itself is Markovian. These properties lead to simplifications for the conditional distribution of the latent process given the parameters and the observations. This chapter looks at how we can leverage the properties of state-space models to construct efficient MCMC samplers. We consider a range of Gibbs-sampler schemes, including those which use the forward-backward algorithm to simulate from the full conditional of the latent process given the parameters. For models where the forward-backward algorithm is not applicable we look at particle MCMC algorithms that, given the parameters, use particle filters to approximately simulate from the latent process or estimate the likelihood of the observations. Throughout, we provide intuition and informally discuss theory about the properties of the model that impact the efficiency of the different algorithms and how approaches such as reparameterization can improve mixing.</p>
+
+<p><a href="https://arxiv.org/abs/2510.04932">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

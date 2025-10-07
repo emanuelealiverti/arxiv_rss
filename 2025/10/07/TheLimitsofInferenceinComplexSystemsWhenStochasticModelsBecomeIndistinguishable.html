@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Limits of Inference in Complex Systems: When Stochastic Models Become Indistinguishable</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Limits of Inference in Complex Systems: When Stochastic Models Become Indistinguishable" />
+<meta name="author" content="Javier Aguilar, Miguel A. Muñoz, Sandro Azaele" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Robust inference for stochastic dynamical systems is often hampered by sparse sampling and the absence of closed-form likelihoods. We introduce a Monte Carlo path-inference framework that leverages full-path statistics and bridge processes to deliver reliable parameter estimation and model selection from coarsely sampled time series, without requiring analytical solutions. Crucially, we couple mechanistic stochastic models with their inference procedures to quantify how experimental design -specifically, sampling frequency and dataset size- governs estimator precision and model distinguishability. This analysis reveals optimal sampling regimes and sharp, resolution-dependent limits beyond which competing models become empirically indistinguishable. We validate the approach across four disparate systems -trajectories of optically trapped particles, human microbiome dynamics, social-media topic mentions, and forest population time series- recovering parameters and identifying when inference is fundamentally constrained by measurement resolution, thereby clarifying ongoing debates about dominant noise sources in these systems. Together, these results establish path-based Monte Carlo as a practical, general tool for inference and model discrimination in complex systems and provide principled guidelines for designing measurements that maximize information under real-world constraints." />
+<meta property="og:description" content="Robust inference for stochastic dynamical systems is often hampered by sparse sampling and the absence of closed-form likelihoods. We introduce a Monte Carlo path-inference framework that leverages full-path statistics and bridge processes to deliver reliable parameter estimation and model selection from coarsely sampled time series, without requiring analytical solutions. Crucially, we couple mechanistic stochastic models with their inference procedures to quantify how experimental design -specifically, sampling frequency and dataset size- governs estimator precision and model distinguishability. This analysis reveals optimal sampling regimes and sharp, resolution-dependent limits beyond which competing models become empirically indistinguishable. We validate the approach across four disparate systems -trajectories of optically trapped particles, human microbiome dynamics, social-media topic mentions, and forest population time series- recovering parameters and identifying when inference is fundamentally constrained by measurement resolution, thereby clarifying ongoing debates about dominant noise sources in these systems. Together, these results establish path-based Monte Carlo as a practical, general tool for inference and model discrimination in complex systems and provide principled guidelines for designing measurements that maximize information under real-world constraints." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/TheLimitsofInferenceinComplexSystemsWhenStochasticModelsBecomeIndistinguishable.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/TheLimitsofInferenceinComplexSystemsWhenStochasticModelsBecomeIndistinguishable.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Limits of Inference in Complex Systems: When Stochastic Models Become Indistinguishable" />
+<script type="application/ld+json">
+{"description":"Robust inference for stochastic dynamical systems is often hampered by sparse sampling and the absence of closed-form likelihoods. We introduce a Monte Carlo path-inference framework that leverages full-path statistics and bridge processes to deliver reliable parameter estimation and model selection from coarsely sampled time series, without requiring analytical solutions. Crucially, we couple mechanistic stochastic models with their inference procedures to quantify how experimental design -specifically, sampling frequency and dataset size- governs estimator precision and model distinguishability. This analysis reveals optimal sampling regimes and sharp, resolution-dependent limits beyond which competing models become empirically indistinguishable. We validate the approach across four disparate systems -trajectories of optically trapped particles, human microbiome dynamics, social-media topic mentions, and forest population time series- recovering parameters and identifying when inference is fundamentally constrained by measurement resolution, thereby clarifying ongoing debates about dominant noise sources in these systems. Together, these results establish path-based Monte Carlo as a practical, general tool for inference and model discrimination in complex systems and provide principled guidelines for designing measurements that maximize information under real-world constraints.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/TheLimitsofInferenceinComplexSystemsWhenStochasticModelsBecomeIndistinguishable.html"},"headline":"The Limits of Inference in Complex Systems: When Stochastic Models Become Indistinguishable","dateModified":"2025-10-07T00:00:00+00:00","datePublished":"2025-10-07T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/TheLimitsofInferenceinComplexSystemsWhenStochasticModelsBecomeIndistinguishable.html","author":{"@type":"Person","name":"Javier Aguilar, Miguel A. Muñoz, Sandro Azaele"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-07 00:00:00 +0000">10-07</time>
+  </p>
+  
+  <h1>The Limits of Inference in Complex Systems: When Stochastic Models Become Indistinguishable</h1>
+  <br>Javier Aguilar, Miguel A. Muñoz, Sandro Azaele</h3>
+  <br> [cond-mat.stat-mech,stat.AP,stat.ME]
+
+  <p>Robust inference for stochastic dynamical systems is often hampered by sparse sampling and the absence of closed-form likelihoods. We introduce a Monte Carlo path-inference framework that leverages full-path statistics and bridge processes to deliver reliable parameter estimation and model selection from coarsely sampled time series, without requiring analytical solutions. Crucially, we couple mechanistic stochastic models with their inference procedures to quantify how experimental design -specifically, sampling frequency and dataset size- governs estimator precision and model distinguishability. This analysis reveals optimal sampling regimes and sharp, resolution-dependent limits beyond which competing models become empirically indistinguishable. We validate the approach across four disparate systems -trajectories of optically trapped particles, human microbiome dynamics, social-media topic mentions, and forest population time series- recovering parameters and identifying when inference is fundamentally constrained by measurement resolution, thereby clarifying ongoing debates about dominant noise sources in these systems. Together, these results establish path-based Monte Carlo as a practical, general tool for inference and model discrimination in complex systems and provide principled guidelines for designing measurements that maximize information under real-world constraints.</p>
+
+<p><a href="https://arxiv.org/abs/2509.24977">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

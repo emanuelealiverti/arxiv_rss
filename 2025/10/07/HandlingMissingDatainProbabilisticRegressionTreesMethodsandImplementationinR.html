@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Handling Missing Data in Probabilistic Regression Trees: Methods and Implementation in R</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Handling Missing Data in Probabilistic Regression Trees: Methods and Implementation in R" />
+<meta name="author" content="Taiane Schaedler Prass, Alisson Silva Neimaier, Guilherme Pumi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Probabilistic Regression Trees (PRTrees) generalize traditional decision trees by incorporating probability functions that associate each data point with different regions of the tree, providing smooth decisions and continuous responses. This paper introduces an adaptation of PRTrees capable of handling missing values in covariates through three distinct approaches: (i) a uniform probability method, (ii) a partial observation approach, and (iii) a dimension-reduced smoothing technique. The proposed methods preserve the interpretability properties of PRTrees while extending their applicability to incomplete datasets. Simulation studies under MCAR conditions demonstrate the relative performance of each approach, including comparisons with traditional regression trees on smooth function estimation tasks. The proposed methods, together with the original version, have been developed in R with highly optimized routines and are distributed in the PRTree package, publicly available on CRAN. In this paper we also present and discuss the main functionalities of the PRTree package, providing researchers and practitioners with new tools for incomplete data analysis." />
+<meta property="og:description" content="Probabilistic Regression Trees (PRTrees) generalize traditional decision trees by incorporating probability functions that associate each data point with different regions of the tree, providing smooth decisions and continuous responses. This paper introduces an adaptation of PRTrees capable of handling missing values in covariates through three distinct approaches: (i) a uniform probability method, (ii) a partial observation approach, and (iii) a dimension-reduced smoothing technique. The proposed methods preserve the interpretability properties of PRTrees while extending their applicability to incomplete datasets. Simulation studies under MCAR conditions demonstrate the relative performance of each approach, including comparisons with traditional regression trees on smooth function estimation tasks. The proposed methods, together with the original version, have been developed in R with highly optimized routines and are distributed in the PRTree package, publicly available on CRAN. In this paper we also present and discuss the main functionalities of the PRTree package, providing researchers and practitioners with new tools for incomplete data analysis." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/HandlingMissingDatainProbabilisticRegressionTreesMethodsandImplementationinR.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/HandlingMissingDatainProbabilisticRegressionTreesMethodsandImplementationinR.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Handling Missing Data in Probabilistic Regression Trees: Methods and Implementation in R" />
+<script type="application/ld+json">
+{"description":"Probabilistic Regression Trees (PRTrees) generalize traditional decision trees by incorporating probability functions that associate each data point with different regions of the tree, providing smooth decisions and continuous responses. This paper introduces an adaptation of PRTrees capable of handling missing values in covariates through three distinct approaches: (i) a uniform probability method, (ii) a partial observation approach, and (iii) a dimension-reduced smoothing technique. The proposed methods preserve the interpretability properties of PRTrees while extending their applicability to incomplete datasets. Simulation studies under MCAR conditions demonstrate the relative performance of each approach, including comparisons with traditional regression trees on smooth function estimation tasks. The proposed methods, together with the original version, have been developed in R with highly optimized routines and are distributed in the PRTree package, publicly available on CRAN. In this paper we also present and discuss the main functionalities of the PRTree package, providing researchers and practitioners with new tools for incomplete data analysis.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/HandlingMissingDatainProbabilisticRegressionTreesMethodsandImplementationinR.html"},"headline":"Handling Missing Data in Probabilistic Regression Trees: Methods and Implementation in R","dateModified":"2025-10-07T00:00:00+00:00","datePublished":"2025-10-07T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/HandlingMissingDatainProbabilisticRegressionTreesMethodsandImplementationinR.html","author":{"@type":"Person","name":"Taiane Schaedler Prass, Alisson Silva Neimaier, Guilherme Pumi"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-07 00:00:00 +0000">10-07</time>
+  </p>
+  
+  <h1>Handling Missing Data in Probabilistic Regression Trees: Methods and Implementation in R</h1>
+  <br>Taiane Schaedler Prass, Alisson Silva Neimaier, Guilherme Pumi</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Probabilistic Regression Trees (PRTrees) generalize traditional decision trees by incorporating probability functions that associate each data point with different regions of the tree, providing smooth decisions and continuous responses. This paper introduces an adaptation of PRTrees capable of handling missing values in covariates through three distinct approaches: (i) a uniform probability method, (ii) a partial observation approach, and (iii) a dimension-reduced smoothing technique. The proposed methods preserve the interpretability properties of PRTrees while extending their applicability to incomplete datasets. Simulation studies under MCAR conditions demonstrate the relative performance of each approach, including comparisons with traditional regression trees on smooth function estimation tasks. The proposed methods, together with the original version, have been developed in R with highly optimized routines and are distributed in the PRTree package, publicly available on CRAN. In this paper we also present and discuss the main functionalities of the PRTree package, providing researchers and practitioners with new tools for incomplete data analysis.</p>
+
+<p><a href="https://arxiv.org/abs/2510.03634">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

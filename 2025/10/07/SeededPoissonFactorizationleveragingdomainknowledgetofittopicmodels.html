@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Seeded Poisson Factorization: leveraging domain knowledge to fit topic models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Seeded Poisson Factorization: leveraging domain knowledge to fit topic models" />
+<meta name="author" content="Bernd Prostmaier, Jan Vávra, Bettina Grün, Paul Hofmarcher" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Topic models are widely used for discovering latent thematic structures in large text corpora, yet traditional unsupervised methods often struggle to align with pre-defined conceptual domains. This paper introduces seeded Poisson Factorization (SPF), a novel approach that extends the Poisson Factorization (PF) framework by incorporating domain knowledge through seed words. SPF enables a structured topic discovery by modifying the prior distribution of topic-specific term intensities, assigning higher initial rates to pre-defined seed words. The model is estimated using variational inference with stochastic gradient optimization, ensuring scalability to large datasets. We present in detail the results of applying SPF to an Amazon customer feedback dataset, leveraging pre-defined product categories as guiding structures. SPF achieves superior performance compared to alternative guided probabilistic topic models in terms of computational efficiency and classification performance. Robustness checks highlight SPF’s ability to adaptively balance domain knowledge and data-driven topic discovery, even in case of imperfect seed word selection. Further applications of SPF to four additional benchmark datasets, where the corpus varies in size and the number of topics differs, demonstrate its general superior classification performance compared to the unseeded PF model." />
+<meta property="og:description" content="Topic models are widely used for discovering latent thematic structures in large text corpora, yet traditional unsupervised methods often struggle to align with pre-defined conceptual domains. This paper introduces seeded Poisson Factorization (SPF), a novel approach that extends the Poisson Factorization (PF) framework by incorporating domain knowledge through seed words. SPF enables a structured topic discovery by modifying the prior distribution of topic-specific term intensities, assigning higher initial rates to pre-defined seed words. The model is estimated using variational inference with stochastic gradient optimization, ensuring scalability to large datasets. We present in detail the results of applying SPF to an Amazon customer feedback dataset, leveraging pre-defined product categories as guiding structures. SPF achieves superior performance compared to alternative guided probabilistic topic models in terms of computational efficiency and classification performance. Robustness checks highlight SPF’s ability to adaptively balance domain knowledge and data-driven topic discovery, even in case of imperfect seed word selection. Further applications of SPF to four additional benchmark datasets, where the corpus varies in size and the number of topics differs, demonstrate its general superior classification performance compared to the unseeded PF model." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/SeededPoissonFactorizationleveragingdomainknowledgetofittopicmodels.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/SeededPoissonFactorizationleveragingdomainknowledgetofittopicmodels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Seeded Poisson Factorization: leveraging domain knowledge to fit topic models" />
+<script type="application/ld+json">
+{"description":"Topic models are widely used for discovering latent thematic structures in large text corpora, yet traditional unsupervised methods often struggle to align with pre-defined conceptual domains. This paper introduces seeded Poisson Factorization (SPF), a novel approach that extends the Poisson Factorization (PF) framework by incorporating domain knowledge through seed words. SPF enables a structured topic discovery by modifying the prior distribution of topic-specific term intensities, assigning higher initial rates to pre-defined seed words. The model is estimated using variational inference with stochastic gradient optimization, ensuring scalability to large datasets. We present in detail the results of applying SPF to an Amazon customer feedback dataset, leveraging pre-defined product categories as guiding structures. SPF achieves superior performance compared to alternative guided probabilistic topic models in terms of computational efficiency and classification performance. Robustness checks highlight SPF’s ability to adaptively balance domain knowledge and data-driven topic discovery, even in case of imperfect seed word selection. Further applications of SPF to four additional benchmark datasets, where the corpus varies in size and the number of topics differs, demonstrate its general superior classification performance compared to the unseeded PF model.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/SeededPoissonFactorizationleveragingdomainknowledgetofittopicmodels.html"},"headline":"Seeded Poisson Factorization: leveraging domain knowledge to fit topic models","dateModified":"2025-10-07T00:00:00+00:00","datePublished":"2025-10-07T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/SeededPoissonFactorizationleveragingdomainknowledgetofittopicmodels.html","author":{"@type":"Person","name":"Bernd Prostmaier, Jan Vávra, Bettina Grün, Paul Hofmarcher"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-07 00:00:00 +0000">10-07</time>
+  </p>
+  
+  <h1>Seeded Poisson Factorization: leveraging domain knowledge to fit topic models</h1>
+  <br>Bernd Prostmaier, Jan Vávra, Bettina Grün, Paul Hofmarcher</h3>
+  <br> [stat.ME]
+
+  <p>Topic models are widely used for discovering latent thematic structures in large text corpora, yet traditional unsupervised methods often struggle to align with pre-defined conceptual domains. This paper introduces seeded Poisson Factorization (SPF), a novel approach that extends the Poisson Factorization (PF) framework by incorporating domain knowledge through seed words. SPF enables a structured topic discovery by modifying the prior distribution of topic-specific term intensities, assigning higher initial rates to pre-defined seed words. The model is estimated using variational inference with stochastic gradient optimization, ensuring scalability to large datasets.
+  We present in detail the results of applying SPF to an Amazon customer feedback dataset, leveraging pre-defined product categories as guiding structures. SPF achieves superior performance compared to alternative guided probabilistic topic models in terms of computational efficiency and classification performance. Robustness checks highlight SPF’s ability to adaptively balance domain knowledge and data-driven topic discovery, even in case of imperfect seed word selection. Further applications of SPF to four additional benchmark datasets, where the corpus varies in size and the number of topics differs, demonstrate its general superior classification performance compared to the unseeded PF model.</p>
+
+<p><a href="https://arxiv.org/abs/2503.02741">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

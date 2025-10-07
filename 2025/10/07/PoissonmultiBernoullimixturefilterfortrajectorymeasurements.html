@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Poisson multi-Bernoulli mixture filter for trajectory measurements</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Poisson multi-Bernoulli mixture filter for trajectory measurements" />
+<meta name="author" content="Marco Fontana, Ángel F. García-Fernández, Simon Maskell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper presents a Poisson multi-Bernoulli mixture (PMBM) filter for multi-target filtering based on sensor measurements that are sets of trajectories in the last two-time step window. The proposed filter, the trajectory measurement PMBM (TM-PMBM) filter, propagates a PMBM density on the set of target states. In prediction, the filter obtains the PMBM density on the set of trajectories over the last two time steps. This density is then updated with the set of trajectory measurements. After the update step, the PMBM posterior on the set of two-step trajectories is marginalised to obtain a PMBM density on the set of target states. The filter provides a closed-form solution for multi-target filtering based on sets of trajectory measurements, estimating the set of target states at the end of each time window. Additionally, the paper proposes computationally lighter alternatives to the TM-PMBM filter by deriving a Poisson multi-Bernoulli (PMB) density through Kullback-Leibler divergence minimisation in an augmented space with auxiliary variables. The performance of the proposed filters are evaluated in a simulation study." />
+<meta property="og:description" content="This paper presents a Poisson multi-Bernoulli mixture (PMBM) filter for multi-target filtering based on sensor measurements that are sets of trajectories in the last two-time step window. The proposed filter, the trajectory measurement PMBM (TM-PMBM) filter, propagates a PMBM density on the set of target states. In prediction, the filter obtains the PMBM density on the set of trajectories over the last two time steps. This density is then updated with the set of trajectory measurements. After the update step, the PMBM posterior on the set of two-step trajectories is marginalised to obtain a PMBM density on the set of target states. The filter provides a closed-form solution for multi-target filtering based on sets of trajectory measurements, estimating the set of target states at the end of each time window. Additionally, the paper proposes computationally lighter alternatives to the TM-PMBM filter by deriving a Poisson multi-Bernoulli (PMB) density through Kullback-Leibler divergence minimisation in an augmented space with auxiliary variables. The performance of the proposed filters are evaluated in a simulation study." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/PoissonmultiBernoullimixturefilterfortrajectorymeasurements.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/PoissonmultiBernoullimixturefilterfortrajectorymeasurements.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Poisson multi-Bernoulli mixture filter for trajectory measurements" />
+<script type="application/ld+json">
+{"description":"This paper presents a Poisson multi-Bernoulli mixture (PMBM) filter for multi-target filtering based on sensor measurements that are sets of trajectories in the last two-time step window. The proposed filter, the trajectory measurement PMBM (TM-PMBM) filter, propagates a PMBM density on the set of target states. In prediction, the filter obtains the PMBM density on the set of trajectories over the last two time steps. This density is then updated with the set of trajectory measurements. After the update step, the PMBM posterior on the set of two-step trajectories is marginalised to obtain a PMBM density on the set of target states. The filter provides a closed-form solution for multi-target filtering based on sets of trajectory measurements, estimating the set of target states at the end of each time window. Additionally, the paper proposes computationally lighter alternatives to the TM-PMBM filter by deriving a Poisson multi-Bernoulli (PMB) density through Kullback-Leibler divergence minimisation in an augmented space with auxiliary variables. The performance of the proposed filters are evaluated in a simulation study.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/PoissonmultiBernoullimixturefilterfortrajectorymeasurements.html"},"headline":"Poisson multi-Bernoulli mixture filter for trajectory measurements","dateModified":"2025-10-07T00:00:00+00:00","datePublished":"2025-10-07T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/PoissonmultiBernoullimixturefilterfortrajectorymeasurements.html","author":{"@type":"Person","name":"Marco Fontana, Ángel F. García-Fernández, Simon Maskell"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-07 00:00:00 +0000">10-07</time>
+  </p>
+  
+  <h1>Poisson multi-Bernoulli mixture filter for trajectory measurements</h1>
+  <br>Marco Fontana, Ángel F. García-Fernández, Simon Maskell</h3>
+  <br> [stat.AP]
+
+  <p>This paper presents a Poisson multi-Bernoulli mixture (PMBM) filter for multi-target filtering based on sensor measurements that are sets of trajectories in the last two-time step window. The proposed filter, the trajectory measurement PMBM (TM-PMBM) filter, propagates a PMBM density on the set of target states. In prediction, the filter obtains the PMBM density on the set of trajectories over the last two time steps. This density is then updated with the set of trajectory measurements. After the update step, the PMBM posterior on the set of two-step trajectories is marginalised to obtain a PMBM density on the set of target states. The filter provides a closed-form solution for multi-target filtering based on sets of trajectory measurements, estimating the set of target states at the end of each time window. Additionally, the paper proposes computationally lighter alternatives to the TM-PMBM filter by deriving a Poisson multi-Bernoulli (PMB) density through Kullback-Leibler divergence minimisation in an augmented space with auxiliary variables. The performance of the proposed filters are evaluated in a simulation study.</p>
+
+<p><a href="https://arxiv.org/abs/2504.08421">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

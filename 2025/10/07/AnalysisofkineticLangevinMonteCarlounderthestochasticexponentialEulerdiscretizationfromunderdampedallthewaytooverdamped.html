@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Analysis of kinetic Langevin Monte Carlo under the stochastic exponential Euler discretization from underdamped all the way to overdamped</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Analysis of kinetic Langevin Monte Carlo under the stochastic exponential Euler discretization from underdamped all the way to overdamped" />
+<meta name="author" content="Kyurae Kim, Samuel Gruffaz, Ji Won Park, Alain Oliviero Durmus" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Simulating the kinetic Langevin dynamics is a popular approach for sampling from distributions, where only their unnormalized densities are available. Various discretizations of the kinetic Langevin dynamics have been considered, where the resulting algorithm is collectively referred to as the kinetic Langevin Monte Carlo (KLMC) or underdamped Langevin Monte Carlo. Specifically, the stochastic exponential Euler discretization, or exponential integrator for short, has previously been studied under strongly log-concave and log-Lipschitz smooth potentials via the synchronous Wasserstein coupling strategy. Existing analyses, however, impose restrictions on the parameters that do not explain the behavior of KLMC under various choices of parameters. In particular, all known results fail to hold in the overdamped regime, suggesting that the exponential integrator degenerates in the overdamped limit. In this work, we revisit the synchronous Wasserstein coupling analysis of KLMC with the exponential integrator. Our refined analysis results in Wasserstein contractions and bounds on the asymptotic bias that hold under weaker restrictions on the parameters, which assert that the exponential integrator is capable of stably simulating the kinetic Langevin dynamics in the overdamped regime, as long as proper time acceleration is applied." />
+<meta property="og:description" content="Simulating the kinetic Langevin dynamics is a popular approach for sampling from distributions, where only their unnormalized densities are available. Various discretizations of the kinetic Langevin dynamics have been considered, where the resulting algorithm is collectively referred to as the kinetic Langevin Monte Carlo (KLMC) or underdamped Langevin Monte Carlo. Specifically, the stochastic exponential Euler discretization, or exponential integrator for short, has previously been studied under strongly log-concave and log-Lipschitz smooth potentials via the synchronous Wasserstein coupling strategy. Existing analyses, however, impose restrictions on the parameters that do not explain the behavior of KLMC under various choices of parameters. In particular, all known results fail to hold in the overdamped regime, suggesting that the exponential integrator degenerates in the overdamped limit. In this work, we revisit the synchronous Wasserstein coupling analysis of KLMC with the exponential integrator. Our refined analysis results in Wasserstein contractions and bounds on the asymptotic bias that hold under weaker restrictions on the parameters, which assert that the exponential integrator is capable of stably simulating the kinetic Langevin dynamics in the overdamped regime, as long as proper time acceleration is applied." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/AnalysisofkineticLangevinMonteCarlounderthestochasticexponentialEulerdiscretizationfromunderdampedallthewaytooverdamped.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/AnalysisofkineticLangevinMonteCarlounderthestochasticexponentialEulerdiscretizationfromunderdampedallthewaytooverdamped.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Analysis of kinetic Langevin Monte Carlo under the stochastic exponential Euler discretization from underdamped all the way to overdamped" />
+<script type="application/ld+json">
+{"description":"Simulating the kinetic Langevin dynamics is a popular approach for sampling from distributions, where only their unnormalized densities are available. Various discretizations of the kinetic Langevin dynamics have been considered, where the resulting algorithm is collectively referred to as the kinetic Langevin Monte Carlo (KLMC) or underdamped Langevin Monte Carlo. Specifically, the stochastic exponential Euler discretization, or exponential integrator for short, has previously been studied under strongly log-concave and log-Lipschitz smooth potentials via the synchronous Wasserstein coupling strategy. Existing analyses, however, impose restrictions on the parameters that do not explain the behavior of KLMC under various choices of parameters. In particular, all known results fail to hold in the overdamped regime, suggesting that the exponential integrator degenerates in the overdamped limit. In this work, we revisit the synchronous Wasserstein coupling analysis of KLMC with the exponential integrator. Our refined analysis results in Wasserstein contractions and bounds on the asymptotic bias that hold under weaker restrictions on the parameters, which assert that the exponential integrator is capable of stably simulating the kinetic Langevin dynamics in the overdamped regime, as long as proper time acceleration is applied.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/AnalysisofkineticLangevinMonteCarlounderthestochasticexponentialEulerdiscretizationfromunderdampedallthewaytooverdamped.html"},"headline":"Analysis of kinetic Langevin Monte Carlo under the stochastic exponential Euler discretization from underdamped all the way to overdamped","dateModified":"2025-10-07T00:00:00+00:00","datePublished":"2025-10-07T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/07/AnalysisofkineticLangevinMonteCarlounderthestochasticexponentialEulerdiscretizationfromunderdampedallthewaytooverdamped.html","author":{"@type":"Person","name":"Kyurae Kim, Samuel Gruffaz, Ji Won Park, Alain Oliviero Durmus"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-07 00:00:00 +0000">10-07</time>
+  </p>
+  
+  <h1>Analysis of kinetic Langevin Monte Carlo under the stochastic exponential Euler discretization from underdamped all the way to overdamped</h1>
+  <br>Kyurae Kim, Samuel Gruffaz, Ji Won Park, Alain Oliviero Durmus</h3>
+  <br> [stat.CO,stat.ML]
+
+  <p>Simulating the kinetic Langevin dynamics is a popular approach for sampling from distributions, where only their unnormalized densities are available. Various discretizations of the kinetic Langevin dynamics have been considered, where the resulting algorithm is collectively referred to as the kinetic Langevin Monte Carlo (KLMC) or underdamped Langevin Monte Carlo. Specifically, the stochastic exponential Euler discretization, or exponential integrator for short, has previously been studied under strongly log-concave and log-Lipschitz smooth potentials via the synchronous Wasserstein coupling strategy. Existing analyses, however, impose restrictions on the parameters that do not explain the behavior of KLMC under various choices of parameters. In particular, all known results fail to hold in the overdamped regime, suggesting that the exponential integrator degenerates in the overdamped limit. In this work, we revisit the synchronous Wasserstein coupling analysis of KLMC with the exponential integrator. Our refined analysis results in Wasserstein contractions and bounds on the asymptotic bias that hold under weaker restrictions on the parameters, which assert that the exponential integrator is capable of stably simulating the kinetic Langevin dynamics in the overdamped regime, as long as proper time acceleration is applied.</p>
+
+<p><a href="https://arxiv.org/abs/2510.03949">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
