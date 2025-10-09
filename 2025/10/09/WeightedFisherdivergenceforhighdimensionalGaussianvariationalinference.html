@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Weighted Fisher divergence for high-dimensional Gaussian variational inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Weighted Fisher divergence for high-dimensional Gaussian variational inference" />
+<meta name="author" content="Aoxiang Chen, David J. Nott, Linda S. L. Tan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian inference has many advantages for complex models, but standard Monte Carlo methods for summarizing the posterior can be computationally demanding, and it is attractive to consider optimization-based variational methods. Our work considers Gaussian approximations with sparse precision matrices which are tractable to optimize in high-dimensions. The optimal Gaussian approximation is usually defined as being closest to the posterior in Kullback-Leibler divergence, but it is useful to consider other divergences when the Gaussian assumption is crude, to capture important posterior features for given applications. Our work studies the weighted Fisher divergence, which focuses on gradient differences between the target posterior and its approximation, with the Fisher and score-based divergences as special cases. We make three main contributions. First, we compare approximations for weighted Fisher divergences under mean-field assumptions for Gaussian and non-Gaussian targets with Kullback-Leibler approximations. Second, we go beyond mean-field and consider approximations with sparse precision matrices reflecting posterior conditional independence structure for hierarchical models. Using stochastic gradient descent to enforce sparsity, we develop two approaches to minimize the Fisher and score-based divergences, based on the reparametrization trick and a batch approximation of the objective. Finally, we study the performances of our methods using logistic regression, generalized linear mixed models and stochastic volatility models." />
+<meta property="og:description" content="Bayesian inference has many advantages for complex models, but standard Monte Carlo methods for summarizing the posterior can be computationally demanding, and it is attractive to consider optimization-based variational methods. Our work considers Gaussian approximations with sparse precision matrices which are tractable to optimize in high-dimensions. The optimal Gaussian approximation is usually defined as being closest to the posterior in Kullback-Leibler divergence, but it is useful to consider other divergences when the Gaussian assumption is crude, to capture important posterior features for given applications. Our work studies the weighted Fisher divergence, which focuses on gradient differences between the target posterior and its approximation, with the Fisher and score-based divergences as special cases. We make three main contributions. First, we compare approximations for weighted Fisher divergences under mean-field assumptions for Gaussian and non-Gaussian targets with Kullback-Leibler approximations. Second, we go beyond mean-field and consider approximations with sparse precision matrices reflecting posterior conditional independence structure for hierarchical models. Using stochastic gradient descent to enforce sparsity, we develop two approaches to minimize the Fisher and score-based divergences, based on the reparametrization trick and a batch approximation of the objective. Finally, we study the performances of our methods using logistic regression, generalized linear mixed models and stochastic volatility models." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/09/WeightedFisherdivergenceforhighdimensionalGaussianvariationalinference.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/09/WeightedFisherdivergenceforhighdimensionalGaussianvariationalinference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Weighted Fisher divergence for high-dimensional Gaussian variational inference" />
+<script type="application/ld+json">
+{"description":"Bayesian inference has many advantages for complex models, but standard Monte Carlo methods for summarizing the posterior can be computationally demanding, and it is attractive to consider optimization-based variational methods. Our work considers Gaussian approximations with sparse precision matrices which are tractable to optimize in high-dimensions. The optimal Gaussian approximation is usually defined as being closest to the posterior in Kullback-Leibler divergence, but it is useful to consider other divergences when the Gaussian assumption is crude, to capture important posterior features for given applications. Our work studies the weighted Fisher divergence, which focuses on gradient differences between the target posterior and its approximation, with the Fisher and score-based divergences as special cases. We make three main contributions. First, we compare approximations for weighted Fisher divergences under mean-field assumptions for Gaussian and non-Gaussian targets with Kullback-Leibler approximations. Second, we go beyond mean-field and consider approximations with sparse precision matrices reflecting posterior conditional independence structure for hierarchical models. Using stochastic gradient descent to enforce sparsity, we develop two approaches to minimize the Fisher and score-based divergences, based on the reparametrization trick and a batch approximation of the objective. Finally, we study the performances of our methods using logistic regression, generalized linear mixed models and stochastic volatility models.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/09/WeightedFisherdivergenceforhighdimensionalGaussianvariationalinference.html"},"headline":"Weighted Fisher divergence for high-dimensional Gaussian variational inference","dateModified":"2025-10-09T00:00:00+00:00","datePublished":"2025-10-09T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/09/WeightedFisherdivergenceforhighdimensionalGaussianvariationalinference.html","author":{"@type":"Person","name":"Aoxiang Chen, David J. Nott, Linda S. L. Tan"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-09 00:00:00 +0000">10-09</time>
+  </p>
+  
+  <h1>Weighted Fisher divergence for high-dimensional Gaussian variational inference</h1>
+  <br>Aoxiang Chen, David J. Nott, Linda S. L. Tan</h3>
+  <br> [stat.CO]
+
+  <p>Bayesian inference has many advantages for complex models, but standard Monte Carlo methods for summarizing the posterior can be computationally demanding, and it is attractive to consider optimization-based variational methods. Our work considers Gaussian approximations with sparse precision matrices which are tractable to optimize in high-dimensions. The optimal Gaussian approximation is usually defined as being closest to the posterior in Kullback-Leibler divergence, but it is useful to consider other divergences when the Gaussian assumption is crude, to capture important posterior features for given applications. Our work studies the weighted Fisher divergence, which focuses on gradient differences between the target posterior and its approximation, with the Fisher and score-based divergences as special cases. We make three main contributions. First, we compare approximations for weighted Fisher divergences under mean-field assumptions for Gaussian and non-Gaussian targets with Kullback-Leibler approximations. Second, we go beyond mean-field and consider approximations with sparse precision matrices reflecting posterior conditional independence structure for hierarchical models. Using stochastic gradient descent to enforce sparsity, we develop two approaches to minimize the Fisher and score-based divergences, based on the reparametrization trick and a batch approximation of the objective. Finally, we study the performances of our methods using logistic regression, generalized linear mixed models and stochastic volatility models.</p>
+
+<p><a href="https://arxiv.org/abs/2503.04246">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

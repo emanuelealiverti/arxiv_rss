@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>jmstate, a Flexible Python Package for Multi-State Joint Modeling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="jmstate, a Flexible Python Package for Multi-State Joint Modeling" />
+<meta name="author" content="Félix Laplante, Christophe Ambroise, Estelle Kuhn, Sarah Lemler" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Classical joint modeling approaches often rely on competing risks or recurrent event formulations to account for complex real-world processes involving evolving longitudinal markers and discrete event occurrences. However, these frameworks typically capture only limited aspects of the underlying event dynamics. Multi-state joint models offer a more flexible alternative by representing full event histories through a network of possible transitions, including recurrent cycles and terminal absorptions, all potentially influenced by longitudinal covariates. In this paper, we propose a general framework that unifies longitudinal biomarker modeling with multi-state event processes defined on arbitrary directed graphs. Our approach accommodates both Markovian and semi-Markovian transition structures, and extends classical joint models by coupling nonlinear mixed-effects longitudinal submodels with multi-state survival processes via shared latent structures. We derive the full likelihood and develop scalable inference procedures based on stochastic gradient descent. Furthermore, we introduce a dynamic prediction framework, enabling individualized risk assessments along complex state-transition trajectories. To facilitate reproducibility and dissemination, we provide an open-source Python library \texttt{jmstate} implementing the proposed methodology, available on \href{https://pypi.org/project/jmstate/}{PyPI}. Simulation experiments and a biomedical case study demonstrate the flexibility and performance of the framework in representing complex longitudinal and multi-state event dynamics. The full Python notebooks used to reproduce the experiments as well as the source code of this paper are available on \href{https://gitlab.com/felixlaplante0/jmstate-paper/}{GitLab}." />
+<meta property="og:description" content="Classical joint modeling approaches often rely on competing risks or recurrent event formulations to account for complex real-world processes involving evolving longitudinal markers and discrete event occurrences. However, these frameworks typically capture only limited aspects of the underlying event dynamics. Multi-state joint models offer a more flexible alternative by representing full event histories through a network of possible transitions, including recurrent cycles and terminal absorptions, all potentially influenced by longitudinal covariates. In this paper, we propose a general framework that unifies longitudinal biomarker modeling with multi-state event processes defined on arbitrary directed graphs. Our approach accommodates both Markovian and semi-Markovian transition structures, and extends classical joint models by coupling nonlinear mixed-effects longitudinal submodels with multi-state survival processes via shared latent structures. We derive the full likelihood and develop scalable inference procedures based on stochastic gradient descent. Furthermore, we introduce a dynamic prediction framework, enabling individualized risk assessments along complex state-transition trajectories. To facilitate reproducibility and dissemination, we provide an open-source Python library \texttt{jmstate} implementing the proposed methodology, available on \href{https://pypi.org/project/jmstate/}{PyPI}. Simulation experiments and a biomedical case study demonstrate the flexibility and performance of the framework in representing complex longitudinal and multi-state event dynamics. The full Python notebooks used to reproduce the experiments as well as the source code of this paper are available on \href{https://gitlab.com/felixlaplante0/jmstate-paper/}{GitLab}." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/09/jmstateaFlexiblePythonPackageforMultiStateJointModeling.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/09/jmstateaFlexiblePythonPackageforMultiStateJointModeling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="jmstate, a Flexible Python Package for Multi-State Joint Modeling" />
+<script type="application/ld+json">
+{"description":"Classical joint modeling approaches often rely on competing risks or recurrent event formulations to account for complex real-world processes involving evolving longitudinal markers and discrete event occurrences. However, these frameworks typically capture only limited aspects of the underlying event dynamics. Multi-state joint models offer a more flexible alternative by representing full event histories through a network of possible transitions, including recurrent cycles and terminal absorptions, all potentially influenced by longitudinal covariates. In this paper, we propose a general framework that unifies longitudinal biomarker modeling with multi-state event processes defined on arbitrary directed graphs. Our approach accommodates both Markovian and semi-Markovian transition structures, and extends classical joint models by coupling nonlinear mixed-effects longitudinal submodels with multi-state survival processes via shared latent structures. We derive the full likelihood and develop scalable inference procedures based on stochastic gradient descent. Furthermore, we introduce a dynamic prediction framework, enabling individualized risk assessments along complex state-transition trajectories. To facilitate reproducibility and dissemination, we provide an open-source Python library \\texttt{jmstate} implementing the proposed methodology, available on \\href{https://pypi.org/project/jmstate/}{PyPI}. Simulation experiments and a biomedical case study demonstrate the flexibility and performance of the framework in representing complex longitudinal and multi-state event dynamics. The full Python notebooks used to reproduce the experiments as well as the source code of this paper are available on \\href{https://gitlab.com/felixlaplante0/jmstate-paper/}{GitLab}.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/09/jmstateaFlexiblePythonPackageforMultiStateJointModeling.html"},"headline":"jmstate, a Flexible Python Package for Multi-State Joint Modeling","dateModified":"2025-10-09T00:00:00+00:00","datePublished":"2025-10-09T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/09/jmstateaFlexiblePythonPackageforMultiStateJointModeling.html","author":{"@type":"Person","name":"Félix Laplante, Christophe Ambroise, Estelle Kuhn, Sarah Lemler"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-09 00:00:00 +0000">10-09</time>
+  </p>
+  
+  <h1>jmstate, a Flexible Python Package for Multi-State Joint Modeling</h1>
+  <br>Félix Laplante, Christophe Ambroise, Estelle Kuhn, Sarah Lemler</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Classical joint modeling approaches often rely on competing risks or recurrent event formulations to account for complex real-world processes involving evolving longitudinal markers and discrete event occurrences. However, these frameworks typically capture only limited aspects of the underlying event dynamics.
+  Multi-state joint models offer a more flexible alternative by representing full event histories through a network of possible transitions, including recurrent cycles and terminal absorptions, all potentially influenced by longitudinal covariates.
+  In this paper, we propose a general framework that unifies longitudinal biomarker modeling with multi-state event processes defined on arbitrary directed graphs. Our approach accommodates both Markovian and semi-Markovian transition structures, and extends classical joint models by coupling nonlinear mixed-effects longitudinal submodels with multi-state survival processes via shared latent structures.
+  We derive the full likelihood and develop scalable inference procedures based on stochastic gradient descent. Furthermore, we introduce a dynamic prediction framework, enabling individualized risk assessments along complex state-transition trajectories.
+  To facilitate reproducibility and dissemination, we provide an open-source Python library \texttt{jmstate} implementing the proposed methodology, available on \href{https://pypi.org/project/jmstate/}{PyPI}. Simulation experiments and a biomedical case study demonstrate the flexibility and performance of the framework in representing complex longitudinal and multi-state event dynamics. The full Python notebooks used to reproduce the experiments as well as the source code of this paper are available on \href{https://gitlab.com/felixlaplante0/jmstate-paper/}{GitLab}.</p>
+
+<p><a href="https://arxiv.org/abs/2510.07128">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
