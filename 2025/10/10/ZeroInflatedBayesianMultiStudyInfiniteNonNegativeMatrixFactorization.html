@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Zero-Inflated Bayesian Multi-Study Infinite Non-Negative Matrix Factorization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Zero-Inflated Bayesian Multi-Study Infinite Non-Negative Matrix Factorization" />
+<meta name="author" content="Blake Hansen, Dafne Zorzetto, Valeria Edefonti, Roberta De Vito" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understanding the association between dietary patterns and health outcomes, such as the cancer risk, is crucial to inform public health guidelines and shaping future dietary interventions. However, dietary intake data present several statistical challenges: they are high-dimensional, often sparse with excess zeros, and exhibit heterogeneity driven by individual-level covariates. Non-Negative Matrix Factorization (NMF), commonly used to estimate patterns in high-dimensional count data, typically relies on Poisson assumptions and lacks the flexibility to fully address these complexities. Additionally, integrating data across multiple studies, such as case-control studies on cancer risk, requires models that can share information across sources while preserving study-specific structure. In this paper, we introduce a novel Bayesian NMF model that (i) jointly models multi-study count data to enable cross-study information sharing, (ii) incorporate a mixture component to account for zero inflation, and (iii) leverage flexible Bayesian non-parametric priors for characterizing the heterogeneity in pattern scores induced by the individual covariates. This structure allows for clustering of individuals based on dietary profiles, enabling downstream association analyses with health outcomes. Through extensive simulation studies, we demonstrate that our model significantly improves estimation accuracy compared to existing Bayesian NMF methods. We further illustrate its utility through an application to multiple case-control studies on diet and upper aero-digestive tract cancers, identifying nutritionally meaningful dietary patterns. An R package implementing our approach is available at https://github.com/blhansen/ZIMultiStudyNMF." />
+<meta property="og:description" content="Understanding the association between dietary patterns and health outcomes, such as the cancer risk, is crucial to inform public health guidelines and shaping future dietary interventions. However, dietary intake data present several statistical challenges: they are high-dimensional, often sparse with excess zeros, and exhibit heterogeneity driven by individual-level covariates. Non-Negative Matrix Factorization (NMF), commonly used to estimate patterns in high-dimensional count data, typically relies on Poisson assumptions and lacks the flexibility to fully address these complexities. Additionally, integrating data across multiple studies, such as case-control studies on cancer risk, requires models that can share information across sources while preserving study-specific structure. In this paper, we introduce a novel Bayesian NMF model that (i) jointly models multi-study count data to enable cross-study information sharing, (ii) incorporate a mixture component to account for zero inflation, and (iii) leverage flexible Bayesian non-parametric priors for characterizing the heterogeneity in pattern scores induced by the individual covariates. This structure allows for clustering of individuals based on dietary profiles, enabling downstream association analyses with health outcomes. Through extensive simulation studies, we demonstrate that our model significantly improves estimation accuracy compared to existing Bayesian NMF methods. We further illustrate its utility through an application to multiple case-control studies on diet and upper aero-digestive tract cancers, identifying nutritionally meaningful dietary patterns. An R package implementing our approach is available at https://github.com/blhansen/ZIMultiStudyNMF." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/10/ZeroInflatedBayesianMultiStudyInfiniteNonNegativeMatrixFactorization.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/10/ZeroInflatedBayesianMultiStudyInfiniteNonNegativeMatrixFactorization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Zero-Inflated Bayesian Multi-Study Infinite Non-Negative Matrix Factorization" />
+<script type="application/ld+json">
+{"description":"Understanding the association between dietary patterns and health outcomes, such as the cancer risk, is crucial to inform public health guidelines and shaping future dietary interventions. However, dietary intake data present several statistical challenges: they are high-dimensional, often sparse with excess zeros, and exhibit heterogeneity driven by individual-level covariates. Non-Negative Matrix Factorization (NMF), commonly used to estimate patterns in high-dimensional count data, typically relies on Poisson assumptions and lacks the flexibility to fully address these complexities. Additionally, integrating data across multiple studies, such as case-control studies on cancer risk, requires models that can share information across sources while preserving study-specific structure. In this paper, we introduce a novel Bayesian NMF model that (i) jointly models multi-study count data to enable cross-study information sharing, (ii) incorporate a mixture component to account for zero inflation, and (iii) leverage flexible Bayesian non-parametric priors for characterizing the heterogeneity in pattern scores induced by the individual covariates. This structure allows for clustering of individuals based on dietary profiles, enabling downstream association analyses with health outcomes. Through extensive simulation studies, we demonstrate that our model significantly improves estimation accuracy compared to existing Bayesian NMF methods. We further illustrate its utility through an application to multiple case-control studies on diet and upper aero-digestive tract cancers, identifying nutritionally meaningful dietary patterns. An R package implementing our approach is available at https://github.com/blhansen/ZIMultiStudyNMF.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/10/ZeroInflatedBayesianMultiStudyInfiniteNonNegativeMatrixFactorization.html"},"headline":"Zero-Inflated Bayesian Multi-Study Infinite Non-Negative Matrix Factorization","dateModified":"2025-10-10T00:00:00+00:00","datePublished":"2025-10-10T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/10/ZeroInflatedBayesianMultiStudyInfiniteNonNegativeMatrixFactorization.html","author":{"@type":"Person","name":"Blake Hansen, Dafne Zorzetto, Valeria Edefonti, Roberta De Vito"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-10 00:00:00 +0000">10-10</time>
+  </p>
+  
+  <h1>Zero-Inflated Bayesian Multi-Study Infinite Non-Negative Matrix Factorization</h1>
+  <br>Blake Hansen, Dafne Zorzetto, Valeria Edefonti, Roberta De Vito</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Understanding the association between dietary patterns and health outcomes, such as the cancer risk, is crucial to inform public health guidelines and shaping future dietary interventions. However, dietary intake data present several statistical challenges: they are high-dimensional, often sparse with excess zeros, and exhibit heterogeneity driven by individual-level covariates. Non-Negative Matrix Factorization (NMF), commonly used to estimate patterns in high-dimensional count data, typically relies on Poisson assumptions and lacks the flexibility to fully address these complexities. Additionally, integrating data across multiple studies, such as case-control studies on cancer risk, requires models that can share information across sources while preserving study-specific structure.
+  In this paper, we introduce a novel Bayesian NMF model that (i) jointly models multi-study count data to enable cross-study information sharing, (ii) incorporate a mixture component to account for zero inflation, and (iii) leverage flexible Bayesian non-parametric priors for characterizing the heterogeneity in pattern scores induced by the individual covariates. This structure allows for clustering of individuals based on dietary profiles, enabling downstream association analyses with health outcomes. Through extensive simulation studies, we demonstrate that our model significantly improves estimation accuracy compared to existing Bayesian NMF methods.
+  We further illustrate its utility through an application to multiple case-control studies on diet and upper aero-digestive tract cancers, identifying nutritionally meaningful dietary patterns. An R package implementing our approach is available at https://github.com/blhansen/ZIMultiStudyNMF.</p>
+
+<p><a href="https://arxiv.org/abs/2510.07518">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
