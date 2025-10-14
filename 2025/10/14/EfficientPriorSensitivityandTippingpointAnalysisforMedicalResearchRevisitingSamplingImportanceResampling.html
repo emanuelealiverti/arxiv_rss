@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Prior Sensitivity and Tipping-point Analysis for Medical Research: Revisiting Sampling Importance Resampling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Prior Sensitivity and Tipping-point Analysis for Medical Research: Revisiting Sampling Importance Resampling" />
+<meta name="author" content="Tomohiro Ohigashi, Shonosuke Sugasawa" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian methods have received increasing attention in medical research, where sensitivity analysis of prior distributions is essential. Such analyses typically require the evaluation of the posterior distribution of a parameter under multiple alternative prior settings. When the posterior distribution of the parameter of interest cannot be derived analytically, the standard approach is to re-fit the Markov chain Monte Carlo (MCMC) algorithm for each setting, which incurs substantial computational costs. This issue is particularly relevant in tipping-point analysis, in which the posterior must be evaluated across gradually changing degrees of borrowing. Sampling importance resampling (SIR) provides an efficient alternative by approximating posterior samples under new settings without MCMC re-fitting. However, to our knowledge , its utility has not been evaluated in scenarios involving repeated MCMC – such as tipping-point analysis – or in the application of complex Bayesian models. In this study, we re-evaluate the utility of SIR through two case studies: one involving tipping-point analysis under external data borrowing and another involving sensitivity analysis for a nonparametric Bayesian model in meta-analysis. These examples demonstrate that SIR can significantly reduce computational costs while maintaining a reasonable approximation accuracy." />
+<meta property="og:description" content="Bayesian methods have received increasing attention in medical research, where sensitivity analysis of prior distributions is essential. Such analyses typically require the evaluation of the posterior distribution of a parameter under multiple alternative prior settings. When the posterior distribution of the parameter of interest cannot be derived analytically, the standard approach is to re-fit the Markov chain Monte Carlo (MCMC) algorithm for each setting, which incurs substantial computational costs. This issue is particularly relevant in tipping-point analysis, in which the posterior must be evaluated across gradually changing degrees of borrowing. Sampling importance resampling (SIR) provides an efficient alternative by approximating posterior samples under new settings without MCMC re-fitting. However, to our knowledge , its utility has not been evaluated in scenarios involving repeated MCMC – such as tipping-point analysis – or in the application of complex Bayesian models. In this study, we re-evaluate the utility of SIR through two case studies: one involving tipping-point analysis under external data borrowing and another involving sensitivity analysis for a nonparametric Bayesian model in meta-analysis. These examples demonstrate that SIR can significantly reduce computational costs while maintaining a reasonable approximation accuracy." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/14/EfficientPriorSensitivityandTippingpointAnalysisforMedicalResearchRevisitingSamplingImportanceResampling.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/14/EfficientPriorSensitivityandTippingpointAnalysisforMedicalResearchRevisitingSamplingImportanceResampling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Prior Sensitivity and Tipping-point Analysis for Medical Research: Revisiting Sampling Importance Resampling" />
+<script type="application/ld+json">
+{"description":"Bayesian methods have received increasing attention in medical research, where sensitivity analysis of prior distributions is essential. Such analyses typically require the evaluation of the posterior distribution of a parameter under multiple alternative prior settings. When the posterior distribution of the parameter of interest cannot be derived analytically, the standard approach is to re-fit the Markov chain Monte Carlo (MCMC) algorithm for each setting, which incurs substantial computational costs. This issue is particularly relevant in tipping-point analysis, in which the posterior must be evaluated across gradually changing degrees of borrowing. Sampling importance resampling (SIR) provides an efficient alternative by approximating posterior samples under new settings without MCMC re-fitting. However, to our knowledge , its utility has not been evaluated in scenarios involving repeated MCMC – such as tipping-point analysis – or in the application of complex Bayesian models. In this study, we re-evaluate the utility of SIR through two case studies: one involving tipping-point analysis under external data borrowing and another involving sensitivity analysis for a nonparametric Bayesian model in meta-analysis. These examples demonstrate that SIR can significantly reduce computational costs while maintaining a reasonable approximation accuracy.","headline":"Efficient Prior Sensitivity and Tipping-point Analysis for Medical Research: Revisiting Sampling Importance Resampling","dateModified":"2025-10-14T00:00:00+00:00","datePublished":"2025-10-14T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/14/EfficientPriorSensitivityandTippingpointAnalysisforMedicalResearchRevisitingSamplingImportanceResampling.html","author":{"@type":"Person","name":"Tomohiro Ohigashi, Shonosuke Sugasawa"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/14/EfficientPriorSensitivityandTippingpointAnalysisforMedicalResearchRevisitingSamplingImportanceResampling.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-14 00:00:00 +0000">10-14</time>
+  </p>
+  
+  <h1>Efficient Prior Sensitivity and Tipping-point Analysis for Medical Research: Revisiting Sampling Importance Resampling</h1>
+  <br>Tomohiro Ohigashi, Shonosuke Sugasawa</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Bayesian methods have received increasing attention in medical research, where sensitivity analysis of prior distributions is essential. Such analyses typically require the evaluation of the posterior distribution of a parameter under multiple alternative prior settings. When the posterior distribution of the parameter of interest cannot be derived analytically, the standard approach is to re-fit the Markov chain Monte Carlo (MCMC) algorithm for each setting, which incurs substantial computational costs. This issue is particularly relevant in tipping-point analysis, in which the posterior must be evaluated across gradually changing degrees of borrowing. Sampling importance resampling (SIR) provides an efficient alternative by approximating posterior samples under new settings without MCMC re-fitting. However, to our knowledge , its utility has not been evaluated in scenarios involving repeated MCMC – such as tipping-point analysis – or in the application of complex Bayesian models. In this study, we re-evaluate the utility of SIR through two case studies: one involving tipping-point analysis under external data borrowing and another involving sensitivity analysis for a nonparametric Bayesian model in meta-analysis. These examples demonstrate that SIR can significantly reduce computational costs while maintaining a reasonable approximation accuracy.</p>
+
+<p><a href="https://arxiv.org/abs/2510.10034">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

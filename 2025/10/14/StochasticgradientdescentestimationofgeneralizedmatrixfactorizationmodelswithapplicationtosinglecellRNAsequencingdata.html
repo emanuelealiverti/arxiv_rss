@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Stochastic gradient descent estimation of generalized matrix factorization models with application to single-cell RNA sequencing data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Stochastic gradient descent estimation of generalized matrix factorization models with application to single-cell RNA sequencing data" />
+<meta name="author" content="Cristian Castiglione, Alexandre Segers, Lieven Clement, Davide Risso" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Single-cell RNA sequencing allows the quantification of gene expression at the individual cell level, enabling the study of cellular heterogeneity and gene expression dynamics. Dimensionality reduction is a common preprocessing step critical for the visualization, clustering, and phenotypic characterization of samples. This step, often performed using principal component analysis or closely related methods, is challenging because of the size and complexity of the data. In this work, we present a generalized matrix factorization model assuming a general exponential dispersion family distribution and we show that many of the proposed approaches in the single-cell dimensionality reduction literature can be seen as special cases of this model. Furthermore, we propose a scalable adaptive stochastic gradient descent algorithm that allows us to estimate the model efficiently, enabling the analysis of millions of cells. We benchmark the proposed algorithm through extensive numerical experiments against state-of-the-art methods and showcase its use in real-world biological applications. The proposed method systematically outperforms existing methods of both generalized and non-negative matrix factorization, demonstrating faster execution times and parsimonious memory usage, while maintaining, or even enhancing, matrix reconstruction fidelity and accuracy in biological signal extraction. On real data, we show that our method scales seamlessly to millions of cells, enabling dimensionality reduction in large single-cell datasets. Finally, all the methods discussed here are implemented in an efficient open-source R package, sgdGMF, available on CRAN." />
+<meta property="og:description" content="Single-cell RNA sequencing allows the quantification of gene expression at the individual cell level, enabling the study of cellular heterogeneity and gene expression dynamics. Dimensionality reduction is a common preprocessing step critical for the visualization, clustering, and phenotypic characterization of samples. This step, often performed using principal component analysis or closely related methods, is challenging because of the size and complexity of the data. In this work, we present a generalized matrix factorization model assuming a general exponential dispersion family distribution and we show that many of the proposed approaches in the single-cell dimensionality reduction literature can be seen as special cases of this model. Furthermore, we propose a scalable adaptive stochastic gradient descent algorithm that allows us to estimate the model efficiently, enabling the analysis of millions of cells. We benchmark the proposed algorithm through extensive numerical experiments against state-of-the-art methods and showcase its use in real-world biological applications. The proposed method systematically outperforms existing methods of both generalized and non-negative matrix factorization, demonstrating faster execution times and parsimonious memory usage, while maintaining, or even enhancing, matrix reconstruction fidelity and accuracy in biological signal extraction. On real data, we show that our method scales seamlessly to millions of cells, enabling dimensionality reduction in large single-cell datasets. Finally, all the methods discussed here are implemented in an efficient open-source R package, sgdGMF, available on CRAN." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/14/StochasticgradientdescentestimationofgeneralizedmatrixfactorizationmodelswithapplicationtosinglecellRNAsequencingdata.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/14/StochasticgradientdescentestimationofgeneralizedmatrixfactorizationmodelswithapplicationtosinglecellRNAsequencingdata.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Stochastic gradient descent estimation of generalized matrix factorization models with application to single-cell RNA sequencing data" />
+<script type="application/ld+json">
+{"description":"Single-cell RNA sequencing allows the quantification of gene expression at the individual cell level, enabling the study of cellular heterogeneity and gene expression dynamics. Dimensionality reduction is a common preprocessing step critical for the visualization, clustering, and phenotypic characterization of samples. This step, often performed using principal component analysis or closely related methods, is challenging because of the size and complexity of the data. In this work, we present a generalized matrix factorization model assuming a general exponential dispersion family distribution and we show that many of the proposed approaches in the single-cell dimensionality reduction literature can be seen as special cases of this model. Furthermore, we propose a scalable adaptive stochastic gradient descent algorithm that allows us to estimate the model efficiently, enabling the analysis of millions of cells. We benchmark the proposed algorithm through extensive numerical experiments against state-of-the-art methods and showcase its use in real-world biological applications. The proposed method systematically outperforms existing methods of both generalized and non-negative matrix factorization, demonstrating faster execution times and parsimonious memory usage, while maintaining, or even enhancing, matrix reconstruction fidelity and accuracy in biological signal extraction. On real data, we show that our method scales seamlessly to millions of cells, enabling dimensionality reduction in large single-cell datasets. Finally, all the methods discussed here are implemented in an efficient open-source R package, sgdGMF, available on CRAN.","headline":"Stochastic gradient descent estimation of generalized matrix factorization models with application to single-cell RNA sequencing data","dateModified":"2025-10-14T00:00:00+00:00","datePublished":"2025-10-14T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/14/StochasticgradientdescentestimationofgeneralizedmatrixfactorizationmodelswithapplicationtosinglecellRNAsequencingdata.html","author":{"@type":"Person","name":"Cristian Castiglione, Alexandre Segers, Lieven Clement, Davide Risso"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/14/StochasticgradientdescentestimationofgeneralizedmatrixfactorizationmodelswithapplicationtosinglecellRNAsequencingdata.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-14 00:00:00 +0000">10-14</time>
+  </p>
+  
+  <h1>Stochastic gradient descent estimation of generalized matrix factorization models with application to single-cell RNA sequencing data</h1>
+  <br>Cristian Castiglione, Alexandre Segers, Lieven Clement, Davide Risso</h3>
+  <br> [stat.CO,stat.ML]
+
+  <p>Single-cell RNA sequencing allows the quantification of gene expression at the individual cell level, enabling the study of cellular heterogeneity and gene expression dynamics. Dimensionality reduction is a common preprocessing step critical for the visualization, clustering, and phenotypic characterization of samples. This step, often performed using principal component analysis or closely related methods, is challenging because of the size and complexity of the data. In this work, we present a generalized matrix factorization model assuming a general exponential dispersion family distribution and we show that many of the proposed approaches in the single-cell dimensionality reduction literature can be seen as special cases of this model. Furthermore, we propose a scalable adaptive stochastic gradient descent algorithm that allows us to estimate the model efficiently, enabling the analysis of millions of cells. We benchmark the proposed algorithm through extensive numerical experiments against state-of-the-art methods and showcase its use in real-world biological applications. The proposed method systematically outperforms existing methods of both generalized and non-negative matrix factorization, demonstrating faster execution times and parsimonious memory usage, while maintaining, or even enhancing, matrix reconstruction fidelity and accuracy in biological signal extraction. On real data, we show that our method scales seamlessly to millions of cells, enabling dimensionality reduction in large single-cell datasets. Finally, all the methods discussed here are implemented in an efficient open-source R package, sgdGMF, available on CRAN.</p>
+
+<p><a href="https://arxiv.org/abs/2412.20509">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
