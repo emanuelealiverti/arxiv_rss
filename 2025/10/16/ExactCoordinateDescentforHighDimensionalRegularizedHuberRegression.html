@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Exact Coordinate Descent for High-Dimensional Regularized Huber Regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Exact Coordinate Descent for High-Dimensional Regularized Huber Regression" />
+<meta name="author" content="Younghoon Kim, Po-Ling Loh, Sumanta Basu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop an exact coordinate descent algorithm for high-dimensional regularized Huber regression. In contrast to composite gradient descent methods, our algorithm fully exploits the advantages of coordinate descent when the underlying model is sparse. Moreover, unlike existing second-order approximation methods previously introduced in the literature, it remains effective even when the Hessian becomes ill-conditioned due to high correlations among covariates drawn from heavy-tailed distributions. The key idea is that, for each coordinate, marginal increments arise only from inlier observations, while the derivatives remain monotonically increasing over a grid constructed from the partial residuals. Building on conventional coordinate descent strategies, we further propose variable screening rules that selectively determine which variables to update at each iteration, thereby accelerating convergence. To the best of our knowledge, this is the first work to develop a first-order coordinate descent algorithm for penalized Huber loss minimization. We bound the nonasymptotic convergence rate of the proposed algorithm by extending arguments developed for the Lasso and formally characterize the operation of the proposed screening rule. Extensive simulation studies under heavy-tailed and highly-correlated predictors, together with a real data application, demonstrate both the practical efficiency of the method and the benefits of the computational enhancements." />
+<meta property="og:description" content="We develop an exact coordinate descent algorithm for high-dimensional regularized Huber regression. In contrast to composite gradient descent methods, our algorithm fully exploits the advantages of coordinate descent when the underlying model is sparse. Moreover, unlike existing second-order approximation methods previously introduced in the literature, it remains effective even when the Hessian becomes ill-conditioned due to high correlations among covariates drawn from heavy-tailed distributions. The key idea is that, for each coordinate, marginal increments arise only from inlier observations, while the derivatives remain monotonically increasing over a grid constructed from the partial residuals. Building on conventional coordinate descent strategies, we further propose variable screening rules that selectively determine which variables to update at each iteration, thereby accelerating convergence. To the best of our knowledge, this is the first work to develop a first-order coordinate descent algorithm for penalized Huber loss minimization. We bound the nonasymptotic convergence rate of the proposed algorithm by extending arguments developed for the Lasso and formally characterize the operation of the proposed screening rule. Extensive simulation studies under heavy-tailed and highly-correlated predictors, together with a real data application, demonstrate both the practical efficiency of the method and the benefits of the computational enhancements." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/16/ExactCoordinateDescentforHighDimensionalRegularizedHuberRegression.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/16/ExactCoordinateDescentforHighDimensionalRegularizedHuberRegression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Exact Coordinate Descent for High-Dimensional Regularized Huber Regression" />
+<script type="application/ld+json">
+{"description":"We develop an exact coordinate descent algorithm for high-dimensional regularized Huber regression. In contrast to composite gradient descent methods, our algorithm fully exploits the advantages of coordinate descent when the underlying model is sparse. Moreover, unlike existing second-order approximation methods previously introduced in the literature, it remains effective even when the Hessian becomes ill-conditioned due to high correlations among covariates drawn from heavy-tailed distributions. The key idea is that, for each coordinate, marginal increments arise only from inlier observations, while the derivatives remain monotonically increasing over a grid constructed from the partial residuals. Building on conventional coordinate descent strategies, we further propose variable screening rules that selectively determine which variables to update at each iteration, thereby accelerating convergence. To the best of our knowledge, this is the first work to develop a first-order coordinate descent algorithm for penalized Huber loss minimization. We bound the nonasymptotic convergence rate of the proposed algorithm by extending arguments developed for the Lasso and formally characterize the operation of the proposed screening rule. Extensive simulation studies under heavy-tailed and highly-correlated predictors, together with a real data application, demonstrate both the practical efficiency of the method and the benefits of the computational enhancements.","headline":"Exact Coordinate Descent for High-Dimensional Regularized Huber Regression","dateModified":"2025-10-16T00:00:00+00:00","datePublished":"2025-10-16T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/16/ExactCoordinateDescentforHighDimensionalRegularizedHuberRegression.html","author":{"@type":"Person","name":"Younghoon Kim, Po-Ling Loh, Sumanta Basu"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/16/ExactCoordinateDescentforHighDimensionalRegularizedHuberRegression.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-16 00:00:00 +0000">10-16</time>
+  </p>
+  
+  <h1>Exact Coordinate Descent for High-Dimensional Regularized Huber Regression</h1>
+  <br>Younghoon Kim, Po-Ling Loh, Sumanta Basu</h3>
+  <br> [stat.ME]
+
+  <p>We develop an exact coordinate descent algorithm for high-dimensional regularized Huber regression. In contrast to composite gradient descent methods, our algorithm fully exploits the advantages of coordinate descent when the underlying model is sparse. Moreover, unlike existing second-order approximation methods previously introduced in the literature, it remains effective even when the Hessian becomes ill-conditioned due to high correlations among covariates drawn from heavy-tailed distributions. The key idea is that, for each coordinate, marginal increments arise only from inlier observations, while the derivatives remain monotonically increasing over a grid constructed from the partial residuals. Building on conventional coordinate descent strategies, we further propose variable screening rules that selectively determine which variables to update at each iteration, thereby accelerating convergence. To the best of our knowledge, this is the first work to develop a first-order coordinate descent algorithm for penalized Huber loss minimization. We bound the nonasymptotic convergence rate of the proposed algorithm by extending arguments developed for the Lasso and formally characterize the operation of the proposed screening rule. Extensive simulation studies under heavy-tailed and highly-correlated predictors, together with a real data application, demonstrate both the practical efficiency of the method and the benefits of the computational enhancements.</p>
+
+<p><a href="https://arxiv.org/abs/2510.13715">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
