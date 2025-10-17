@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Earthquake Forecasting with ETAS.inlabru</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Earthquake Forecasting with ETAS.inlabru" />
+<meta name="author" content="Ziwen Zhong" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The ETAS models are currently the most popular in the field of earthquake forecasting. The MCMC method is time-consuming and limited by parameter correlation while bringing parameter uncertainty. The INLA-based method “inlabru” solves these problems and performs better at Bayesian inference. The report introduces the composition of the ETAS model, then provides the model’s log-likelihood and approximates it using Taylor expansion and binning strategies. We also present the general procedure of Bayesian inference in inlabru. The report follows three experiments. The first one explores the effect of fixing one parameter at its actual or wrong values on the posterior distribution of other parameters. We found that $\alpha$ and $K$ have an apparent mutual influence relationship. At the same time, fixing $\alpha$ or $K$ to its actual value can reduce the model fitting time by more than half. The second experiment compares normalised inter-event-time distribution on real data and synthetic catalogues. The distributions of normalised inter-event-time of real data and synthetic catalogues are consistent. Compared with Exp(1), they have more short and long inter-event-time, indicating the existence of clustering. Change on $\mu$ and $p$ will influence the inter-event-time distribution. In the last one, we use events before the mainshock to predict events ten weeks after the mainshock. We use the number test and Continuous Ranked Probability Score (CRPS) to measure the accuracy and precision of the predictions. We found that we need at least one mainshock and corresponding offspring to make reliable forecasting. And when we have more mainshocks in our data, our forecasting will be better. Besides, we also figure out what is needed to obtain a good posterior distribution for each parameter." />
+<meta property="og:description" content="The ETAS models are currently the most popular in the field of earthquake forecasting. The MCMC method is time-consuming and limited by parameter correlation while bringing parameter uncertainty. The INLA-based method “inlabru” solves these problems and performs better at Bayesian inference. The report introduces the composition of the ETAS model, then provides the model’s log-likelihood and approximates it using Taylor expansion and binning strategies. We also present the general procedure of Bayesian inference in inlabru. The report follows three experiments. The first one explores the effect of fixing one parameter at its actual or wrong values on the posterior distribution of other parameters. We found that $\alpha$ and $K$ have an apparent mutual influence relationship. At the same time, fixing $\alpha$ or $K$ to its actual value can reduce the model fitting time by more than half. The second experiment compares normalised inter-event-time distribution on real data and synthetic catalogues. The distributions of normalised inter-event-time of real data and synthetic catalogues are consistent. Compared with Exp(1), they have more short and long inter-event-time, indicating the existence of clustering. Change on $\mu$ and $p$ will influence the inter-event-time distribution. In the last one, we use events before the mainshock to predict events ten weeks after the mainshock. We use the number test and Continuous Ranked Probability Score (CRPS) to measure the accuracy and precision of the predictions. We found that we need at least one mainshock and corresponding offspring to make reliable forecasting. And when we have more mainshocks in our data, our forecasting will be better. Besides, we also figure out what is needed to obtain a good posterior distribution for each parameter." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/17/EarthquakeForecastingwithETASinlabru.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/17/EarthquakeForecastingwithETASinlabru.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Earthquake Forecasting with ETAS.inlabru" />
+<script type="application/ld+json">
+{"description":"The ETAS models are currently the most popular in the field of earthquake forecasting. The MCMC method is time-consuming and limited by parameter correlation while bringing parameter uncertainty. The INLA-based method “inlabru” solves these problems and performs better at Bayesian inference. The report introduces the composition of the ETAS model, then provides the model’s log-likelihood and approximates it using Taylor expansion and binning strategies. We also present the general procedure of Bayesian inference in inlabru. The report follows three experiments. The first one explores the effect of fixing one parameter at its actual or wrong values on the posterior distribution of other parameters. We found that $\\alpha$ and $K$ have an apparent mutual influence relationship. At the same time, fixing $\\alpha$ or $K$ to its actual value can reduce the model fitting time by more than half. The second experiment compares normalised inter-event-time distribution on real data and synthetic catalogues. The distributions of normalised inter-event-time of real data and synthetic catalogues are consistent. Compared with Exp(1), they have more short and long inter-event-time, indicating the existence of clustering. Change on $\\mu$ and $p$ will influence the inter-event-time distribution. In the last one, we use events before the mainshock to predict events ten weeks after the mainshock. We use the number test and Continuous Ranked Probability Score (CRPS) to measure the accuracy and precision of the predictions. We found that we need at least one mainshock and corresponding offspring to make reliable forecasting. And when we have more mainshocks in our data, our forecasting will be better. Besides, we also figure out what is needed to obtain a good posterior distribution for each parameter.","headline":"Earthquake Forecasting with ETAS.inlabru","dateModified":"2025-10-17T00:00:00+00:00","datePublished":"2025-10-17T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/17/EarthquakeForecastingwithETASinlabru.html","author":{"@type":"Person","name":"Ziwen Zhong"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/17/EarthquakeForecastingwithETASinlabru.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-17 00:00:00 +0000">10-17</time>
+  </p>
+  
+  <h1>Earthquake Forecasting with ETAS.inlabru</h1>
+  <br>Ziwen Zhong</h3>
+  <br> [stat.AP]
+
+  <p>The ETAS models are currently the most popular in the field of earthquake forecasting. The MCMC method is time-consuming and limited by parameter correlation while bringing parameter uncertainty. The INLA-based method “inlabru” solves these problems and performs better at Bayesian inference.
+  The report introduces the composition of the ETAS model, then provides the model’s log-likelihood and approximates it using Taylor expansion and binning strategies. We also present the general procedure of Bayesian inference in inlabru.
+  The report follows three experiments. The first one explores the effect of fixing one parameter at its actual or wrong values on the posterior distribution of other parameters. We found that $\alpha$ and $K$ have an apparent mutual influence relationship. At the same time, fixing $\alpha$ or $K$ to its actual value can reduce the model fitting time by more than half.
+  The second experiment compares normalised inter-event-time distribution on real data and synthetic catalogues. The distributions of normalised inter-event-time of real data and synthetic catalogues are consistent. Compared with Exp(1), they have more short and long inter-event-time, indicating the existence of clustering. Change on $\mu$ and $p$ will influence the inter-event-time distribution.
+  In the last one, we use events before the mainshock to predict events ten weeks after the mainshock. We use the number test and Continuous Ranked Probability Score (CRPS) to measure the accuracy and precision of the predictions. We found that we need at least one mainshock and corresponding offspring to make reliable forecasting. And when we have more mainshocks in our data, our forecasting will be better. Besides, we also figure out what is needed to obtain a good posterior distribution for each parameter.</p>
+
+<p><a href="https://arxiv.org/abs/2510.13930">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
