@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Picard-Lagrange Framework for Higher-Order Langevin Monte Carlo</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Picard-Lagrange Framework for Higher-Order Langevin Monte Carlo" />
+<meta name="author" content="Jaideep Mahajan, Kaihong Zhang, Feng Liang, Jingbo Liu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sampling from log-concave distributions is a central problem in statistics and machine learning. Prior work establishes theoretical guarantees for Langevin Monte Carlo algorithm based on overdamped and underdamped Langevin dynamics and, more recently, some third-order variants. In this paper, we introduce a new sampling algorithm built on a general $K$th-order Langevin dynamics, extending beyond second- and third-order methods. To discretize the $K$th-order dynamics, we approximate the drift induced by the potential via Lagrange interpolation and refine the node values at the interpolation points using Picard-iteration corrections, yielding a flexible scheme that fully utilizes the acceleration of higher-order Langevin dynamics. For targets with smooth, strongly log-concave densities, we prove dimension-dependent convergence in Wasserstein distance: the sampler achieves $\varepsilon$-accuracy within $\widetilde O(d^{\frac{K-1}{2K-3}}\varepsilon^{-\frac{2}{2K-3}})$ gradient evaluations for $K \ge 3$. To our best knowledge, this is the first sampling algorithm achieving such query complexity. The rate improves with the order $K$ increases, yielding better rates than existing first to third-order approaches." />
+<meta property="og:description" content="Sampling from log-concave distributions is a central problem in statistics and machine learning. Prior work establishes theoretical guarantees for Langevin Monte Carlo algorithm based on overdamped and underdamped Langevin dynamics and, more recently, some third-order variants. In this paper, we introduce a new sampling algorithm built on a general $K$th-order Langevin dynamics, extending beyond second- and third-order methods. To discretize the $K$th-order dynamics, we approximate the drift induced by the potential via Lagrange interpolation and refine the node values at the interpolation points using Picard-iteration corrections, yielding a flexible scheme that fully utilizes the acceleration of higher-order Langevin dynamics. For targets with smooth, strongly log-concave densities, we prove dimension-dependent convergence in Wasserstein distance: the sampler achieves $\varepsilon$-accuracy within $\widetilde O(d^{\frac{K-1}{2K-3}}\varepsilon^{-\frac{2}{2K-3}})$ gradient evaluations for $K \ge 3$. To our best knowledge, this is the first sampling algorithm achieving such query complexity. The rate improves with the order $K$ increases, yielding better rates than existing first to third-order approaches." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/22/ThePicardLagrangeFrameworkforHigherOrderLangevinMonteCarlo.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/22/ThePicardLagrangeFrameworkforHigherOrderLangevinMonteCarlo.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Picard-Lagrange Framework for Higher-Order Langevin Monte Carlo" />
+<script type="application/ld+json">
+{"description":"Sampling from log-concave distributions is a central problem in statistics and machine learning. Prior work establishes theoretical guarantees for Langevin Monte Carlo algorithm based on overdamped and underdamped Langevin dynamics and, more recently, some third-order variants. In this paper, we introduce a new sampling algorithm built on a general $K$th-order Langevin dynamics, extending beyond second- and third-order methods. To discretize the $K$th-order dynamics, we approximate the drift induced by the potential via Lagrange interpolation and refine the node values at the interpolation points using Picard-iteration corrections, yielding a flexible scheme that fully utilizes the acceleration of higher-order Langevin dynamics. For targets with smooth, strongly log-concave densities, we prove dimension-dependent convergence in Wasserstein distance: the sampler achieves $\\varepsilon$-accuracy within $\\widetilde O(d^{\\frac{K-1}{2K-3}}\\varepsilon^{-\\frac{2}{2K-3}})$ gradient evaluations for $K \\ge 3$. To our best knowledge, this is the first sampling algorithm achieving such query complexity. The rate improves with the order $K$ increases, yielding better rates than existing first to third-order approaches.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/22/ThePicardLagrangeFrameworkforHigherOrderLangevinMonteCarlo.html"},"headline":"The Picard-Lagrange Framework for Higher-Order Langevin Monte Carlo","dateModified":"2025-10-22T00:00:00+00:00","datePublished":"2025-10-22T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/22/ThePicardLagrangeFrameworkforHigherOrderLangevinMonteCarlo.html","author":{"@type":"Person","name":"Jaideep Mahajan, Kaihong Zhang, Feng Liang, Jingbo Liu"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-22 00:00:00 +0000">10-22</time>
+  </p>
+  
+  <h1>The Picard-Lagrange Framework for Higher-Order Langevin Monte Carlo</h1>
+  <br>Jaideep Mahajan, Kaihong Zhang, Feng Liang, Jingbo Liu</h3>
+  <br> [stat.ME,stat.ML,stat.TH]
+
+  <p>Sampling from log-concave distributions is a central problem in statistics and machine learning. Prior work establishes theoretical guarantees for Langevin Monte Carlo algorithm based on overdamped and underdamped Langevin dynamics and, more recently, some third-order variants. In this paper, we introduce a new sampling algorithm built on a general $K$th-order Langevin dynamics, extending beyond second- and third-order methods. To discretize the $K$th-order dynamics, we approximate the drift induced by the potential via Lagrange interpolation and refine the node values at the interpolation points using Picard-iteration corrections, yielding a flexible scheme that fully utilizes the acceleration of higher-order Langevin dynamics. For targets with smooth, strongly log-concave densities, we prove dimension-dependent convergence in Wasserstein distance: the sampler achieves $\varepsilon$-accuracy within $\widetilde O(d^{\frac{K-1}{2K-3}}\varepsilon^{-\frac{2}{2K-3}})$ gradient evaluations for $K \ge 3$. To our best knowledge, this is the first sampling algorithm achieving such query complexity. The rate improves with the order $K$ increases, yielding better rates than existing first to third-order approaches.</p>
+
+<p><a href="https://arxiv.org/abs/2510.18242">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

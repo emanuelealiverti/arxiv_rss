@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Partial VOROS: A Cost-aware Performance Metric for Binary Classifiers with Precision and Capacity Constraints</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Partial VOROS: A Cost-aware Performance Metric for Binary Classifiers with Precision and Capacity Constraints" />
+<meta name="author" content="Christopher Ratigan, Kyle Heuton, Carissa Wang, Lenore Cowen, Michael C. Hughes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The ROC curve is widely used to assess binary classification performance. Yet for some applications such as alert systems for hospitalized patient monitoring, conventional ROC analysis cannot capture crucial factors that impact deployment, such as enforcing a minimum precision constraint to avoid false alarm fatigue or imposing an upper bound on the number of predicted positives to represent the capacity of hospital staff. The usual area under the curve metric also does not reflect asymmetric costs for false positives and false negatives. In this paper we address all three of these issues. First, we show how the subset of classifiers that meet given precision and capacity constraints can be represented as a feasible region in ROC space. We establish the geometry of this feasible region. We then define the partial area of lesser classifiers, a performance metric that is monotonic with cost and only accounts for the feasible portion of ROC space. Averaging this area over a desired range of cost parameters results in the partial volume over the ROC surface, or partial VOROS. In experiments predicting mortality risk using vital sign history on the MIMIC-IV dataset, we show this cost-aware metric is better than alternatives for ranking classifiers in hospital alert applications." />
+<meta property="og:description" content="The ROC curve is widely used to assess binary classification performance. Yet for some applications such as alert systems for hospitalized patient monitoring, conventional ROC analysis cannot capture crucial factors that impact deployment, such as enforcing a minimum precision constraint to avoid false alarm fatigue or imposing an upper bound on the number of predicted positives to represent the capacity of hospital staff. The usual area under the curve metric also does not reflect asymmetric costs for false positives and false negatives. In this paper we address all three of these issues. First, we show how the subset of classifiers that meet given precision and capacity constraints can be represented as a feasible region in ROC space. We establish the geometry of this feasible region. We then define the partial area of lesser classifiers, a performance metric that is monotonic with cost and only accounts for the feasible portion of ROC space. Averaging this area over a desired range of cost parameters results in the partial volume over the ROC surface, or partial VOROS. In experiments predicting mortality risk using vital sign history on the MIMIC-IV dataset, we show this cost-aware metric is better than alternatives for ranking classifiers in hospital alert applications." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/22/PartialVOROSACostawarePerformanceMetricforBinaryClassifierswithPrecisionandCapacityConstraints.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/22/PartialVOROSACostawarePerformanceMetricforBinaryClassifierswithPrecisionandCapacityConstraints.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Partial VOROS: A Cost-aware Performance Metric for Binary Classifiers with Precision and Capacity Constraints" />
+<script type="application/ld+json">
+{"description":"The ROC curve is widely used to assess binary classification performance. Yet for some applications such as alert systems for hospitalized patient monitoring, conventional ROC analysis cannot capture crucial factors that impact deployment, such as enforcing a minimum precision constraint to avoid false alarm fatigue or imposing an upper bound on the number of predicted positives to represent the capacity of hospital staff. The usual area under the curve metric also does not reflect asymmetric costs for false positives and false negatives. In this paper we address all three of these issues. First, we show how the subset of classifiers that meet given precision and capacity constraints can be represented as a feasible region in ROC space. We establish the geometry of this feasible region. We then define the partial area of lesser classifiers, a performance metric that is monotonic with cost and only accounts for the feasible portion of ROC space. Averaging this area over a desired range of cost parameters results in the partial volume over the ROC surface, or partial VOROS. In experiments predicting mortality risk using vital sign history on the MIMIC-IV dataset, we show this cost-aware metric is better than alternatives for ranking classifiers in hospital alert applications.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/22/PartialVOROSACostawarePerformanceMetricforBinaryClassifierswithPrecisionandCapacityConstraints.html"},"headline":"Partial VOROS: A Cost-aware Performance Metric for Binary Classifiers with Precision and Capacity Constraints","dateModified":"2025-10-22T00:00:00+00:00","datePublished":"2025-10-22T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/22/PartialVOROSACostawarePerformanceMetricforBinaryClassifierswithPrecisionandCapacityConstraints.html","author":{"@type":"Person","name":"Christopher Ratigan, Kyle Heuton, Carissa Wang, Lenore Cowen, Michael C. Hughes"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-22 00:00:00 +0000">10-22</time>
+  </p>
+  
+  <h1>Partial VOROS: A Cost-aware Performance Metric for Binary Classifiers with Precision and Capacity Constraints</h1>
+  <br>Christopher Ratigan, Kyle Heuton, Carissa Wang, Lenore Cowen, Michael C. Hughes</h3>
+  <br> [stat.ME]
+
+  <p>The ROC curve is widely used to assess binary classification performance. Yet for some applications such as alert systems for hospitalized patient monitoring, conventional ROC analysis cannot capture crucial factors that impact deployment, such as enforcing a minimum precision constraint to avoid false alarm fatigue or imposing an upper bound on the number of predicted positives to represent the capacity of hospital staff. The usual area under the curve metric also does not reflect asymmetric costs for false positives and false negatives. In this paper we address all three of these issues. First, we show how the subset of classifiers that meet given precision and capacity constraints can be represented as a feasible region in ROC space. We establish the geometry of this feasible region. We then define the partial area of lesser classifiers, a performance metric that is monotonic with cost and only accounts for the feasible portion of ROC space. Averaging this area over a desired range of cost parameters results in the partial volume over the ROC surface, or partial VOROS. In experiments predicting mortality risk using vital sign history on the MIMIC-IV dataset, we show this cost-aware metric is better than alternatives for ranking classifiers in hospital alert applications.</p>
+
+<p><a href="https://arxiv.org/abs/2510.18520">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
