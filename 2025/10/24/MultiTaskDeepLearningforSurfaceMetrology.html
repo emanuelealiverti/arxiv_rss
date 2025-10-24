@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Multi-Task Deep Learning for Surface Metrology</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Multi-Task Deep Learning for Surface Metrology" />
+<meta name="author" content="D. Kucharski, A. Gaska, T. Kowaluk, K. Stepien, M. Repalska, B. Gapinski, M. Wieczorowski, M. Nawotka, P. Sobecki, P. Sosinowski, J. Tomasik, A. Wojtowicz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A reproducible deep learning framework is presented for surface metrology to predict surface texture parameters together with their reported standard uncertainties. Using a multi-instrument dataset spanning tactile and optical systems, measurement system type classification is addressed alongside coordinated regression of Ra, Rz, RONt and their uncertainty targets (Ra_uncert, Rz_uncert, RONt_uncert). Uncertainty is modelled via quantile and heteroscedastic heads with post-hoc conformal calibration to yield calibrated intervals. On a held-out set, high fidelity was achieved by single-target regressors (R2: Ra 0.9824, Rz 0.9847, RONt 0.9918), with two uncertainty targets also well modelled (Ra_uncert 0.9899, Rz_uncert 0.9955); RONt_uncert remained difficult (R2 0.4934). The classifier reached 92.85% accuracy and probability calibration was essentially unchanged after temperature scaling (ECE 0.00504 -&gt; 0.00503 on the test split). Negative transfer was observed for naive multi-output trunks, with single-target models performing better. These results provide calibrated predictions suitable to inform instrument selection and acceptance decisions in metrological workflows." />
+<meta property="og:description" content="A reproducible deep learning framework is presented for surface metrology to predict surface texture parameters together with their reported standard uncertainties. Using a multi-instrument dataset spanning tactile and optical systems, measurement system type classification is addressed alongside coordinated regression of Ra, Rz, RONt and their uncertainty targets (Ra_uncert, Rz_uncert, RONt_uncert). Uncertainty is modelled via quantile and heteroscedastic heads with post-hoc conformal calibration to yield calibrated intervals. On a held-out set, high fidelity was achieved by single-target regressors (R2: Ra 0.9824, Rz 0.9847, RONt 0.9918), with two uncertainty targets also well modelled (Ra_uncert 0.9899, Rz_uncert 0.9955); RONt_uncert remained difficult (R2 0.4934). The classifier reached 92.85% accuracy and probability calibration was essentially unchanged after temperature scaling (ECE 0.00504 -&gt; 0.00503 on the test split). Negative transfer was observed for naive multi-output trunks, with single-target models performing better. These results provide calibrated predictions suitable to inform instrument selection and acceptance decisions in metrological workflows." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/24/MultiTaskDeepLearningforSurfaceMetrology.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/24/MultiTaskDeepLearningforSurfaceMetrology.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Multi-Task Deep Learning for Surface Metrology" />
+<script type="application/ld+json">
+{"description":"A reproducible deep learning framework is presented for surface metrology to predict surface texture parameters together with their reported standard uncertainties. Using a multi-instrument dataset spanning tactile and optical systems, measurement system type classification is addressed alongside coordinated regression of Ra, Rz, RONt and their uncertainty targets (Ra_uncert, Rz_uncert, RONt_uncert). Uncertainty is modelled via quantile and heteroscedastic heads with post-hoc conformal calibration to yield calibrated intervals. On a held-out set, high fidelity was achieved by single-target regressors (R2: Ra 0.9824, Rz 0.9847, RONt 0.9918), with two uncertainty targets also well modelled (Ra_uncert 0.9899, Rz_uncert 0.9955); RONt_uncert remained difficult (R2 0.4934). The classifier reached 92.85% accuracy and probability calibration was essentially unchanged after temperature scaling (ECE 0.00504 -&gt; 0.00503 on the test split). Negative transfer was observed for naive multi-output trunks, with single-target models performing better. These results provide calibrated predictions suitable to inform instrument selection and acceptance decisions in metrological workflows.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/24/MultiTaskDeepLearningforSurfaceMetrology.html"},"headline":"Multi-Task Deep Learning for Surface Metrology","dateModified":"2025-10-24T00:00:00+00:00","datePublished":"2025-10-24T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/24/MultiTaskDeepLearningforSurfaceMetrology.html","author":{"@type":"Person","name":"D. Kucharski, A. Gaska, T. Kowaluk, K. Stepien, M. Repalska, B. Gapinski, M. Wieczorowski, M. Nawotka, P. Sobecki, P. Sosinowski, J. Tomasik, A. Wojtowicz"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-24 00:00:00 +0000">10-24</time>
+  </p>
+  
+  <h1>Multi-Task Deep Learning for Surface Metrology</h1>
+  <br>D. Kucharski, A. Gaska, T. Kowaluk, K. Stepien, M. Repalska, B. Gapinski, M. Wieczorowski, M. Nawotka, P. Sobecki, P. Sosinowski, J. Tomasik, A. Wojtowicz</h3>
+  <br> [stat.AP,stat.ML]
+
+  <p>A reproducible deep learning framework is presented for surface metrology to predict surface texture parameters together with their reported standard uncertainties. Using a multi-instrument dataset spanning tactile and optical systems, measurement system type classification is addressed alongside coordinated regression of Ra, Rz, RONt and their uncertainty targets (Ra_uncert, Rz_uncert, RONt_uncert). Uncertainty is modelled via quantile and heteroscedastic heads with post-hoc conformal calibration to yield calibrated intervals. On a held-out set, high fidelity was achieved by single-target regressors (R2: Ra 0.9824, Rz 0.9847, RONt 0.9918), with two uncertainty targets also well modelled (Ra_uncert 0.9899, Rz_uncert 0.9955); RONt_uncert remained difficult (R2 0.4934). The classifier reached 92.85% accuracy and probability calibration was essentially unchanged after temperature scaling (ECE 0.00504 -&gt; 0.00503 on the test split). Negative transfer was observed for naive multi-output trunks, with single-target models performing better. These results provide calibrated predictions suitable to inform instrument selection and acceptance decisions in metrological workflows.</p>
+
+<p><a href="https://arxiv.org/abs/2510.20339">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
