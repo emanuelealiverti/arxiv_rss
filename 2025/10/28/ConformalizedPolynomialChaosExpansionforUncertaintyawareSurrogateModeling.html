@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Conformalized Polynomial Chaos Expansion for Uncertainty-aware Surrogate Modeling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Conformalized Polynomial Chaos Expansion for Uncertainty-aware Surrogate Modeling" />
+<meta name="author" content="Dimitrios Loukrezis, Dimitris G. Giovanis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This work introduces a method to equip data-driven polynomial chaos expansion surrogate models with intervals that quantify the predictive uncertainty of the surrogate. To that end, we integrate jackknife-based conformal prediction into regression-based polynomial chaos expansions. The jackknife algorithm uses leave-one-out residuals to generate predictive intervals around the predictions of the polynomial chaos surrogate. The jackknife+ extension additionally requires leave-one-out model predictions. The key to efficient implementation is to leverage the linearity of the polynomial chaos regression model, so that leave-one-out residuals and, if necessary, leave-one-out model predictions can be computed with analytical, closed-form expressions, thus eliminating the need for repeated model re-training. In addition to the efficient computation of the predictive intervals, a significant advantage of this approach is its data efficiency, as it requires no hold-out dataset for prediction interval calibration, thus allowing the entire dataset to be used for model training. The conformalized polynomial chaos expansion method is validated on several benchmark models, where the impact of training data volume on the predictive intervals is additionally investigated." />
+<meta property="og:description" content="This work introduces a method to equip data-driven polynomial chaos expansion surrogate models with intervals that quantify the predictive uncertainty of the surrogate. To that end, we integrate jackknife-based conformal prediction into regression-based polynomial chaos expansions. The jackknife algorithm uses leave-one-out residuals to generate predictive intervals around the predictions of the polynomial chaos surrogate. The jackknife+ extension additionally requires leave-one-out model predictions. The key to efficient implementation is to leverage the linearity of the polynomial chaos regression model, so that leave-one-out residuals and, if necessary, leave-one-out model predictions can be computed with analytical, closed-form expressions, thus eliminating the need for repeated model re-training. In addition to the efficient computation of the predictive intervals, a significant advantage of this approach is its data efficiency, as it requires no hold-out dataset for prediction interval calibration, thus allowing the entire dataset to be used for model training. The conformalized polynomial chaos expansion method is validated on several benchmark models, where the impact of training data volume on the predictive intervals is additionally investigated." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/28/ConformalizedPolynomialChaosExpansionforUncertaintyawareSurrogateModeling.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/28/ConformalizedPolynomialChaosExpansionforUncertaintyawareSurrogateModeling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Conformalized Polynomial Chaos Expansion for Uncertainty-aware Surrogate Modeling" />
+<script type="application/ld+json">
+{"description":"This work introduces a method to equip data-driven polynomial chaos expansion surrogate models with intervals that quantify the predictive uncertainty of the surrogate. To that end, we integrate jackknife-based conformal prediction into regression-based polynomial chaos expansions. The jackknife algorithm uses leave-one-out residuals to generate predictive intervals around the predictions of the polynomial chaos surrogate. The jackknife+ extension additionally requires leave-one-out model predictions. The key to efficient implementation is to leverage the linearity of the polynomial chaos regression model, so that leave-one-out residuals and, if necessary, leave-one-out model predictions can be computed with analytical, closed-form expressions, thus eliminating the need for repeated model re-training. In addition to the efficient computation of the predictive intervals, a significant advantage of this approach is its data efficiency, as it requires no hold-out dataset for prediction interval calibration, thus allowing the entire dataset to be used for model training. The conformalized polynomial chaos expansion method is validated on several benchmark models, where the impact of training data volume on the predictive intervals is additionally investigated.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/28/ConformalizedPolynomialChaosExpansionforUncertaintyawareSurrogateModeling.html"},"headline":"Conformalized Polynomial Chaos Expansion for Uncertainty-aware Surrogate Modeling","dateModified":"2025-10-28T00:00:00+00:00","datePublished":"2025-10-28T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/28/ConformalizedPolynomialChaosExpansionforUncertaintyawareSurrogateModeling.html","author":{"@type":"Person","name":"Dimitrios Loukrezis, Dimitris G. Giovanis"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-28 00:00:00 +0000">10-28</time>
+  </p>
+  
+  <h1>Conformalized Polynomial Chaos Expansion for Uncertainty-aware Surrogate Modeling</h1>
+  <br>Dimitrios Loukrezis, Dimitris G. Giovanis</h3>
+  <br> [stat.ME,stat.CO,stat.ML]
+
+  <p>This work introduces a method to equip data-driven polynomial chaos expansion surrogate models with intervals that quantify the predictive uncertainty of the surrogate. To that end, we integrate jackknife-based conformal prediction into regression-based polynomial chaos expansions. The jackknife algorithm uses leave-one-out residuals to generate predictive intervals around the predictions of the polynomial chaos surrogate. The jackknife+ extension additionally requires leave-one-out model predictions. The key to efficient implementation is to leverage the linearity of the polynomial chaos regression model, so that leave-one-out residuals and, if necessary, leave-one-out model predictions can be computed with analytical, closed-form expressions, thus eliminating the need for repeated model re-training. In addition to the efficient computation of the predictive intervals, a significant advantage of this approach is its data efficiency, as it requires no hold-out dataset for prediction interval calibration, thus allowing the entire dataset to be used for model training. The conformalized polynomial chaos expansion method is validated on several benchmark models, where the impact of training data volume on the predictive intervals is additionally investigated.</p>
+
+<p><a href="https://arxiv.org/abs/2510.22375">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

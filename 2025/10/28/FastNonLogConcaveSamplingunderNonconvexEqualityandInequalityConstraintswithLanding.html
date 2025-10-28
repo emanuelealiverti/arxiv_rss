@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fast Non-Log-Concave Sampling under Nonconvex Equality and Inequality Constraints with Landing</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Fast Non-Log-Concave Sampling under Nonconvex Equality and Inequality Constraints with Landing" />
+<meta name="author" content="Kijung Jeon, Michael Muehlebach, Molei Tao" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sampling from constrained statistical distributions is a fundamental task in various fields including Bayesian statistics, computational chemistry, and statistical physics. This article considers the cases where the constrained distribution is described by an unconstrained density, as well as additional equality and/or inequality constraints, which often make the constraint set nonconvex. Existing methods for nonconvex constraint set $\Sigma \subset \mathbb{R}^d$ defined by equality or inequality constraints commonly rely on costly projection steps. Moreover, they cannot handle equality and inequality constraints simultaneously as each method only specialized in one case. In addition, rigorous and quantitative convergence guarantee is often lacking. In this paper, we introduce Overdamped Langevin with LAnding (OLLA), a new framework that can design overdamped Langevin dynamics accommodating both equality and inequality constraints. The proposed dynamics also deterministically corrects trajectories along the normal direction of the constraint surface, thus obviating the need for explicit projections. We show that, under suitable regularity conditions on the target density and $\Sigma$, OLLA converges exponentially fast in $W_2$ distance to the constrained target density $\rho_\Sigma(x) \propto \exp(-f(x))d\sigma_\Sigma$. Lastly, through experiments, we demonstrate the efficiency of OLLA compared to projection-based constrained Langevin algorithms and their slack variable variants, highlighting its favorable computational cost and reasonable empirical mixing." />
+<meta property="og:description" content="Sampling from constrained statistical distributions is a fundamental task in various fields including Bayesian statistics, computational chemistry, and statistical physics. This article considers the cases where the constrained distribution is described by an unconstrained density, as well as additional equality and/or inequality constraints, which often make the constraint set nonconvex. Existing methods for nonconvex constraint set $\Sigma \subset \mathbb{R}^d$ defined by equality or inequality constraints commonly rely on costly projection steps. Moreover, they cannot handle equality and inequality constraints simultaneously as each method only specialized in one case. In addition, rigorous and quantitative convergence guarantee is often lacking. In this paper, we introduce Overdamped Langevin with LAnding (OLLA), a new framework that can design overdamped Langevin dynamics accommodating both equality and inequality constraints. The proposed dynamics also deterministically corrects trajectories along the normal direction of the constraint surface, thus obviating the need for explicit projections. We show that, under suitable regularity conditions on the target density and $\Sigma$, OLLA converges exponentially fast in $W_2$ distance to the constrained target density $\rho_\Sigma(x) \propto \exp(-f(x))d\sigma_\Sigma$. Lastly, through experiments, we demonstrate the efficiency of OLLA compared to projection-based constrained Langevin algorithms and their slack variable variants, highlighting its favorable computational cost and reasonable empirical mixing." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/28/FastNonLogConcaveSamplingunderNonconvexEqualityandInequalityConstraintswithLanding.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/28/FastNonLogConcaveSamplingunderNonconvexEqualityandInequalityConstraintswithLanding.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fast Non-Log-Concave Sampling under Nonconvex Equality and Inequality Constraints with Landing" />
+<script type="application/ld+json">
+{"description":"Sampling from constrained statistical distributions is a fundamental task in various fields including Bayesian statistics, computational chemistry, and statistical physics. This article considers the cases where the constrained distribution is described by an unconstrained density, as well as additional equality and/or inequality constraints, which often make the constraint set nonconvex. Existing methods for nonconvex constraint set $\\Sigma \\subset \\mathbb{R}^d$ defined by equality or inequality constraints commonly rely on costly projection steps. Moreover, they cannot handle equality and inequality constraints simultaneously as each method only specialized in one case. In addition, rigorous and quantitative convergence guarantee is often lacking. In this paper, we introduce Overdamped Langevin with LAnding (OLLA), a new framework that can design overdamped Langevin dynamics accommodating both equality and inequality constraints. The proposed dynamics also deterministically corrects trajectories along the normal direction of the constraint surface, thus obviating the need for explicit projections. We show that, under suitable regularity conditions on the target density and $\\Sigma$, OLLA converges exponentially fast in $W_2$ distance to the constrained target density $\\rho_\\Sigma(x) \\propto \\exp(-f(x))d\\sigma_\\Sigma$. Lastly, through experiments, we demonstrate the efficiency of OLLA compared to projection-based constrained Langevin algorithms and their slack variable variants, highlighting its favorable computational cost and reasonable empirical mixing.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/28/FastNonLogConcaveSamplingunderNonconvexEqualityandInequalityConstraintswithLanding.html"},"headline":"Fast Non-Log-Concave Sampling under Nonconvex Equality and Inequality Constraints with Landing","dateModified":"2025-10-28T00:00:00+00:00","datePublished":"2025-10-28T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/28/FastNonLogConcaveSamplingunderNonconvexEqualityandInequalityConstraintswithLanding.html","author":{"@type":"Person","name":"Kijung Jeon, Michael Muehlebach, Molei Tao"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-28 00:00:00 +0000">10-28</time>
+  </p>
+  
+  <h1>Fast Non-Log-Concave Sampling under Nonconvex Equality and Inequality Constraints with Landing</h1>
+  <br>Kijung Jeon, Michael Muehlebach, Molei Tao</h3>
+  <br> [stat.CO,stat.ML]
+
+  <p>Sampling from constrained statistical distributions is a fundamental task in various fields including Bayesian statistics, computational chemistry, and statistical physics. This article considers the cases where the constrained distribution is described by an unconstrained density, as well as additional equality and/or inequality constraints, which often make the constraint set nonconvex. Existing methods for nonconvex constraint set $\Sigma \subset \mathbb{R}^d$ defined by equality or inequality constraints commonly rely on costly projection steps. Moreover, they cannot handle equality and inequality constraints simultaneously as each method only specialized in one case. In addition, rigorous and quantitative convergence guarantee is often lacking. In this paper, we introduce Overdamped Langevin with LAnding (OLLA), a new framework that can design overdamped Langevin dynamics accommodating both equality and inequality constraints. The proposed dynamics also deterministically corrects trajectories along the normal direction of the constraint surface, thus obviating the need for explicit projections. We show that, under suitable regularity conditions on the target density and $\Sigma$, OLLA converges exponentially fast in $W_2$ distance to the constrained target density $\rho_\Sigma(x) \propto \exp(-f(x))d\sigma_\Sigma$. Lastly, through experiments, we demonstrate the efficiency of OLLA compared to projection-based constrained Langevin algorithms and their slack variable variants, highlighting its favorable computational cost and reasonable empirical mixing.</p>
+
+<p><a href="https://arxiv.org/abs/2510.22044">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
