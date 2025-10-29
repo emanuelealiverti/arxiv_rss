@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fast Bayesian Multilevel Quasi-Monte Carlo</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Fast Bayesian Multilevel Quasi-Monte Carlo" />
+<meta name="author" content="Aleksei G. Sorokin, Pieterjan Robbe, Gianluca Geraci, Michael S. Eldred, Fred J. Hickernell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Existing multilevel quasi-Monte Carlo (MLQMC) methods often rely on multiple independent randomizations of a low-discrepancy (LD) sequence to estimate statistical errors on each level. While this approach is standard, it can be less efficient than simply increasing the number of points from a single LD sequence. However, a single LD sequence does not permit statistical error estimates in the current framework. We propose to recast the MLQMC problem in a Bayesian cubature framework, which uses a single LD sequence and quantifies numerical error through the posterior variance of a Gaussian process (GP) model. When paired with certain LD sequences, GP regression and hyperparameter optimization can be carried out at only $\mathcal{O}(n \log n)$ cost, where $n$ is the number of samples. Building on the adaptive sample allocation used in traditional MLQMC, where the number of samples is doubled on the level with the greatest expected benefit, we introduce a new Bayesian utility function that balances the computational cost of doubling against the anticipated reduction in posterior uncertainty. We also propose a new digitally-shift-invariant (DSI) kernel of adaptive smoothness, which combines multiple higher-order DSI kernels through a weighted sum of smoothness parameters, for use with fast digital net GPs. A series of numerical experiments illustrate the performance of our fast Bayesian MLQMC method and error estimates for both single-level problems and multilevel problems with a fixed number of levels. The Bayesian error estimates obtained using digital nets are found to be reliable, although, in some cases, mildly conservative." />
+<meta property="og:description" content="Existing multilevel quasi-Monte Carlo (MLQMC) methods often rely on multiple independent randomizations of a low-discrepancy (LD) sequence to estimate statistical errors on each level. While this approach is standard, it can be less efficient than simply increasing the number of points from a single LD sequence. However, a single LD sequence does not permit statistical error estimates in the current framework. We propose to recast the MLQMC problem in a Bayesian cubature framework, which uses a single LD sequence and quantifies numerical error through the posterior variance of a Gaussian process (GP) model. When paired with certain LD sequences, GP regression and hyperparameter optimization can be carried out at only $\mathcal{O}(n \log n)$ cost, where $n$ is the number of samples. Building on the adaptive sample allocation used in traditional MLQMC, where the number of samples is doubled on the level with the greatest expected benefit, we introduce a new Bayesian utility function that balances the computational cost of doubling against the anticipated reduction in posterior uncertainty. We also propose a new digitally-shift-invariant (DSI) kernel of adaptive smoothness, which combines multiple higher-order DSI kernels through a weighted sum of smoothness parameters, for use with fast digital net GPs. A series of numerical experiments illustrate the performance of our fast Bayesian MLQMC method and error estimates for both single-level problems and multilevel problems with a fixed number of levels. The Bayesian error estimates obtained using digital nets are found to be reliable, although, in some cases, mildly conservative." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/29/FastBayesianMultilevelQuasiMonteCarlo.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/29/FastBayesianMultilevelQuasiMonteCarlo.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fast Bayesian Multilevel Quasi-Monte Carlo" />
+<script type="application/ld+json">
+{"description":"Existing multilevel quasi-Monte Carlo (MLQMC) methods often rely on multiple independent randomizations of a low-discrepancy (LD) sequence to estimate statistical errors on each level. While this approach is standard, it can be less efficient than simply increasing the number of points from a single LD sequence. However, a single LD sequence does not permit statistical error estimates in the current framework. We propose to recast the MLQMC problem in a Bayesian cubature framework, which uses a single LD sequence and quantifies numerical error through the posterior variance of a Gaussian process (GP) model. When paired with certain LD sequences, GP regression and hyperparameter optimization can be carried out at only $\\mathcal{O}(n \\log n)$ cost, where $n$ is the number of samples. Building on the adaptive sample allocation used in traditional MLQMC, where the number of samples is doubled on the level with the greatest expected benefit, we introduce a new Bayesian utility function that balances the computational cost of doubling against the anticipated reduction in posterior uncertainty. We also propose a new digitally-shift-invariant (DSI) kernel of adaptive smoothness, which combines multiple higher-order DSI kernels through a weighted sum of smoothness parameters, for use with fast digital net GPs. A series of numerical experiments illustrate the performance of our fast Bayesian MLQMC method and error estimates for both single-level problems and multilevel problems with a fixed number of levels. The Bayesian error estimates obtained using digital nets are found to be reliable, although, in some cases, mildly conservative.","headline":"Fast Bayesian Multilevel Quasi-Monte Carlo","dateModified":"2025-10-29T00:00:00+00:00","datePublished":"2025-10-29T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/29/FastBayesianMultilevelQuasiMonteCarlo.html","author":{"@type":"Person","name":"Aleksei G. Sorokin, Pieterjan Robbe, Gianluca Geraci, Michael S. Eldred, Fred J. Hickernell"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/29/FastBayesianMultilevelQuasiMonteCarlo.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-29 00:00:00 +0000">10-29</time>
+  </p>
+  
+  <h1>Fast Bayesian Multilevel Quasi-Monte Carlo</h1>
+  <br>Aleksei G. Sorokin, Pieterjan Robbe, Gianluca Geraci, Michael S. Eldred, Fred J. Hickernell</h3>
+  <br> [stat.CO]
+
+  <p>Existing multilevel quasi-Monte Carlo (MLQMC) methods often rely on multiple independent randomizations of a low-discrepancy (LD) sequence to estimate statistical errors on each level. While this approach is standard, it can be less efficient than simply increasing the number of points from a single LD sequence. However, a single LD sequence does not permit statistical error estimates in the current framework. We propose to recast the MLQMC problem in a Bayesian cubature framework, which uses a single LD sequence and quantifies numerical error through the posterior variance of a Gaussian process (GP) model. When paired with certain LD sequences, GP regression and hyperparameter optimization can be carried out at only $\mathcal{O}(n \log n)$ cost, where $n$ is the number of samples. Building on the adaptive sample allocation used in traditional MLQMC, where the number of samples is doubled on the level with the greatest expected benefit, we introduce a new Bayesian utility function that balances the computational cost of doubling against the anticipated reduction in posterior uncertainty. We also propose a new digitally-shift-invariant (DSI) kernel of adaptive smoothness, which combines multiple higher-order DSI kernels through a weighted sum of smoothness parameters, for use with fast digital net GPs. A series of numerical experiments illustrate the performance of our fast Bayesian MLQMC method and error estimates for both single-level problems and multilevel problems with a fixed number of levels. The Bayesian error estimates obtained using digital nets are found to be reliable, although, in some cases, mildly conservative.</p>
+
+<p><a href="https://arxiv.org/abs/2510.24604">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

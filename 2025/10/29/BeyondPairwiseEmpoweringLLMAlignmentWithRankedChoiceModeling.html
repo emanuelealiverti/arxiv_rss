@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Beyond Pairwise: Empowering LLM Alignment With Ranked Choice Modeling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Beyond Pairwise: Empowering LLM Alignment With Ranked Choice Modeling" />
+<meta name="author" content="Yuxuan Tang, Yifan Feng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Alignment of large language models (LLMs) has predominantly relied on pairwise preference optimization, where annotators select the better of two responses to a prompt. While simple, this approach overlooks the opportunity to learn from richer forms of human feedback, such as multiwise comparisons and top-$k$ rankings. We propose Ranked Choice Preference Optimization (RCPO), a unified framework that bridges preference optimization with (ranked) choice modeling via maximum likelihood estimation. The framework is flexible, supporting both utility-based and rank-based choice models. It subsumes several existing pairwise methods (e.g., DPO, SimPO), while providing principled training objectives for richer feedback formats. We instantiate this framework with two representative ranked choice models (Multinomial Logit and Mallows-RMJ). Empirical studies on Llama-3-8B-Instruct and Gemma-2-9B-it across AlpacaEval 2 and Arena-Hard benchmarks show that RCPO consistently outperforms competitive baselines. RCPO shows how directly leveraging ranked preference data, combined with the right choice models, yields more effective alignment. It offers a versatile and extensible foundation for incorporating (ranked) choice modeling into LLM training." />
+<meta property="og:description" content="Alignment of large language models (LLMs) has predominantly relied on pairwise preference optimization, where annotators select the better of two responses to a prompt. While simple, this approach overlooks the opportunity to learn from richer forms of human feedback, such as multiwise comparisons and top-$k$ rankings. We propose Ranked Choice Preference Optimization (RCPO), a unified framework that bridges preference optimization with (ranked) choice modeling via maximum likelihood estimation. The framework is flexible, supporting both utility-based and rank-based choice models. It subsumes several existing pairwise methods (e.g., DPO, SimPO), while providing principled training objectives for richer feedback formats. We instantiate this framework with two representative ranked choice models (Multinomial Logit and Mallows-RMJ). Empirical studies on Llama-3-8B-Instruct and Gemma-2-9B-it across AlpacaEval 2 and Arena-Hard benchmarks show that RCPO consistently outperforms competitive baselines. RCPO shows how directly leveraging ranked preference data, combined with the right choice models, yields more effective alignment. It offers a versatile and extensible foundation for incorporating (ranked) choice modeling into LLM training." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/29/BeyondPairwiseEmpoweringLLMAlignmentWithRankedChoiceModeling.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/29/BeyondPairwiseEmpoweringLLMAlignmentWithRankedChoiceModeling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Beyond Pairwise: Empowering LLM Alignment With Ranked Choice Modeling" />
+<script type="application/ld+json">
+{"description":"Alignment of large language models (LLMs) has predominantly relied on pairwise preference optimization, where annotators select the better of two responses to a prompt. While simple, this approach overlooks the opportunity to learn from richer forms of human feedback, such as multiwise comparisons and top-$k$ rankings. We propose Ranked Choice Preference Optimization (RCPO), a unified framework that bridges preference optimization with (ranked) choice modeling via maximum likelihood estimation. The framework is flexible, supporting both utility-based and rank-based choice models. It subsumes several existing pairwise methods (e.g., DPO, SimPO), while providing principled training objectives for richer feedback formats. We instantiate this framework with two representative ranked choice models (Multinomial Logit and Mallows-RMJ). Empirical studies on Llama-3-8B-Instruct and Gemma-2-9B-it across AlpacaEval 2 and Arena-Hard benchmarks show that RCPO consistently outperforms competitive baselines. RCPO shows how directly leveraging ranked preference data, combined with the right choice models, yields more effective alignment. It offers a versatile and extensible foundation for incorporating (ranked) choice modeling into LLM training.","headline":"Beyond Pairwise: Empowering LLM Alignment With Ranked Choice Modeling","dateModified":"2025-10-29T00:00:00+00:00","datePublished":"2025-10-29T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/29/BeyondPairwiseEmpoweringLLMAlignmentWithRankedChoiceModeling.html","author":{"@type":"Person","name":"Yuxuan Tang, Yifan Feng"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/29/BeyondPairwiseEmpoweringLLMAlignmentWithRankedChoiceModeling.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-29 00:00:00 +0000">10-29</time>
+  </p>
+  
+  <h1>Beyond Pairwise: Empowering LLM Alignment With Ranked Choice Modeling</h1>
+  <br>Yuxuan Tang, Yifan Feng</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Alignment of large language models (LLMs) has predominantly relied on pairwise preference optimization, where annotators select the better of two responses to a prompt. While simple, this approach overlooks the opportunity to learn from richer forms of human feedback, such as multiwise comparisons and top-$k$ rankings. We propose Ranked Choice Preference Optimization (RCPO), a unified framework that bridges preference optimization with (ranked) choice modeling via maximum likelihood estimation. The framework is flexible, supporting both utility-based and rank-based choice models. It subsumes several existing pairwise methods (e.g., DPO, SimPO), while providing principled training objectives for richer feedback formats. We instantiate this framework with two representative ranked choice models (Multinomial Logit and Mallows-RMJ). Empirical studies on Llama-3-8B-Instruct and Gemma-2-9B-it across AlpacaEval 2 and Arena-Hard benchmarks show that RCPO consistently outperforms competitive baselines. RCPO shows how directly leveraging ranked preference data, combined with the right choice models, yields more effective alignment. It offers a versatile and extensible foundation for incorporating (ranked) choice modeling into LLM training.</p>
+
+<p><a href="https://arxiv.org/abs/2510.23631">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
