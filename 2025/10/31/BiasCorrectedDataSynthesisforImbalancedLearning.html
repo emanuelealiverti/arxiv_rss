@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bias-Corrected Data Synthesis for Imbalanced Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bias-Corrected Data Synthesis for Imbalanced Learning" />
+<meta name="author" content="Pengfei Lyu, Zhengchi Ma, Linjun Zhang, Anru R. Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Imbalanced data, where the positive samples represent only a small proportion compared to the negative samples, makes it challenging for classification problems to balance the false positive and false negative rates. A common approach to addressing the challenge involves generating synthetic data for the minority group and then training classification models with both observed and synthetic data. However, since the synthetic data depends on the observed data and fails to replicate the original data distribution accurately, prediction accuracy is reduced when the synthetic data is naively treated as the true data. In this paper, we address the bias introduced by synthetic data and provide consistent estimators for this bias by borrowing information from the majority group. We propose a bias correction procedure to mitigate the adverse effects of synthetic data, enhancing prediction accuracy while avoiding overfitting. This procedure is extended to broader scenarios with imbalanced data, such as imbalanced multi-task learning and causal inference. Theoretical properties, including bounds on bias estimation errors and improvements in prediction accuracy, are provided. Simulation results and data analysis on handwritten digit datasets demonstrate the effectiveness of our method." />
+<meta property="og:description" content="Imbalanced data, where the positive samples represent only a small proportion compared to the negative samples, makes it challenging for classification problems to balance the false positive and false negative rates. A common approach to addressing the challenge involves generating synthetic data for the minority group and then training classification models with both observed and synthetic data. However, since the synthetic data depends on the observed data and fails to replicate the original data distribution accurately, prediction accuracy is reduced when the synthetic data is naively treated as the true data. In this paper, we address the bias introduced by synthetic data and provide consistent estimators for this bias by borrowing information from the majority group. We propose a bias correction procedure to mitigate the adverse effects of synthetic data, enhancing prediction accuracy while avoiding overfitting. This procedure is extended to broader scenarios with imbalanced data, such as imbalanced multi-task learning and causal inference. Theoretical properties, including bounds on bias estimation errors and improvements in prediction accuracy, are provided. Simulation results and data analysis on handwritten digit datasets demonstrate the effectiveness of our method." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/10/31/BiasCorrectedDataSynthesisforImbalancedLearning.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/10/31/BiasCorrectedDataSynthesisforImbalancedLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-31T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bias-Corrected Data Synthesis for Imbalanced Learning" />
+<script type="application/ld+json">
+{"description":"Imbalanced data, where the positive samples represent only a small proportion compared to the negative samples, makes it challenging for classification problems to balance the false positive and false negative rates. A common approach to addressing the challenge involves generating synthetic data for the minority group and then training classification models with both observed and synthetic data. However, since the synthetic data depends on the observed data and fails to replicate the original data distribution accurately, prediction accuracy is reduced when the synthetic data is naively treated as the true data. In this paper, we address the bias introduced by synthetic data and provide consistent estimators for this bias by borrowing information from the majority group. We propose a bias correction procedure to mitigate the adverse effects of synthetic data, enhancing prediction accuracy while avoiding overfitting. This procedure is extended to broader scenarios with imbalanced data, such as imbalanced multi-task learning and causal inference. Theoretical properties, including bounds on bias estimation errors and improvements in prediction accuracy, are provided. Simulation results and data analysis on handwritten digit datasets demonstrate the effectiveness of our method.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/31/BiasCorrectedDataSynthesisforImbalancedLearning.html"},"headline":"Bias-Corrected Data Synthesis for Imbalanced Learning","dateModified":"2025-10-31T00:00:00+00:00","datePublished":"2025-10-31T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/10/31/BiasCorrectedDataSynthesisforImbalancedLearning.html","author":{"@type":"Person","name":"Pengfei Lyu, Zhengchi Ma, Linjun Zhang, Anru R. Zhang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-31 00:00:00 +0000">10-31</time>
+  </p>
+  
+  <h1>Bias-Corrected Data Synthesis for Imbalanced Learning</h1>
+  <br>Pengfei Lyu, Zhengchi Ma, Linjun Zhang, Anru R. Zhang</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>Imbalanced data, where the positive samples represent only a small proportion compared to the negative samples, makes it challenging for classification problems to balance the false positive and false negative rates. A common approach to addressing the challenge involves generating synthetic data for the minority group and then training classification models with both observed and synthetic data. However, since the synthetic data depends on the observed data and fails to replicate the original data distribution accurately, prediction accuracy is reduced when the synthetic data is naively treated as the true data. In this paper, we address the bias introduced by synthetic data and provide consistent estimators for this bias by borrowing information from the majority group. We propose a bias correction procedure to mitigate the adverse effects of synthetic data, enhancing prediction accuracy while avoiding overfitting. This procedure is extended to broader scenarios with imbalanced data, such as imbalanced multi-task learning and causal inference. Theoretical properties, including bounds on bias estimation errors and improvements in prediction accuracy, are provided. Simulation results and data analysis on handwritten digit datasets demonstrate the effectiveness of our method.</p>
+
+<p><a href="https://arxiv.org/abs/2510.26046">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
