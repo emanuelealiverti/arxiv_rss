@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mastering an Accurate and Generalizable Simulation-Based Method to Obtain Bias-corrected Point Estimates and Sampling Variance for Any Effect Sizes</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Mastering an Accurate and Generalizable Simulation-Based Method to Obtain Bias-corrected Point Estimates and Sampling Variance for Any Effect Sizes" />
+<meta name="author" content="Shinichi Nakagawa, Ayumi Mizuno, Coralie Williams, Santiago Ortega, Szymon M. Drobniak, Malgorzata Lagisz, Yefeng Yang, Alistair M. Senior, Daniel W. A. Noble, Erick Lundgren" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Meta-analyses require an effect-size estimate and its corresponding sampling variance from primary studies. In some cases, estimators for the sampling variance of a given effect size statistic may not exist, necessitating the derivation of a new formula for sampling variance. Traditionally, sampling variance formulas are obtained via hand-derived Taylor expansions (the delta method), though this procedure can be challenging for non-statisticians. Building on the idea of single-fit parametric resampling, we introduce SAFE bootstrap: a Single-fit, Accurate, Fast, and Easy simulation recipe that replaces potentially complex algebra with four intuitive steps: fit, draw, transform, and summarise. In a unified framework, the SAFE bootstrap yields bias-corrected point estimates and standard errors for any effect size statistic, regardless of whether the outcome is continuous or discrete. SAFE bootstrapping works by drawing once from a simple sampling model (normal, binomial, etc.), converting each replicate into any effect size of interest and then calculating the bias and sampling variance from simulated data. We demonstrate how to implement the SAFE bootstrap for a simple example first, and then for common effect sizes, such as the standardised mean difference and log odds ratio, as well as for less common effect sizes. With some additional coding, SAFE can also handle zero values and small sample sizes. Our tutorial, with R code supplements, should not only enhance understanding of sampling variance for effect sizes, but also serve as an introduction to the power of simulation-based methods for deriving any effect size with bias correction and its associated sampling variance." />
+<meta property="og:description" content="Meta-analyses require an effect-size estimate and its corresponding sampling variance from primary studies. In some cases, estimators for the sampling variance of a given effect size statistic may not exist, necessitating the derivation of a new formula for sampling variance. Traditionally, sampling variance formulas are obtained via hand-derived Taylor expansions (the delta method), though this procedure can be challenging for non-statisticians. Building on the idea of single-fit parametric resampling, we introduce SAFE bootstrap: a Single-fit, Accurate, Fast, and Easy simulation recipe that replaces potentially complex algebra with four intuitive steps: fit, draw, transform, and summarise. In a unified framework, the SAFE bootstrap yields bias-corrected point estimates and standard errors for any effect size statistic, regardless of whether the outcome is continuous or discrete. SAFE bootstrapping works by drawing once from a simple sampling model (normal, binomial, etc.), converting each replicate into any effect size of interest and then calculating the bias and sampling variance from simulated data. We demonstrate how to implement the SAFE bootstrap for a simple example first, and then for common effect sizes, such as the standardised mean difference and log odds ratio, as well as for less common effect sizes. With some additional coding, SAFE can also handle zero values and small sample sizes. Our tutorial, with R code supplements, should not only enhance understanding of sampling variance for effect sizes, but also serve as an introduction to the power of simulation-based methods for deriving any effect size with bias correction and its associated sampling variance." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/03/MasteringanAccurateandGeneralizableSimulationBasedMethodtoObtainBiascorrectedPointEstimatesandSamplingVarianceforAnyEffectSizes.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/03/MasteringanAccurateandGeneralizableSimulationBasedMethodtoObtainBiascorrectedPointEstimatesandSamplingVarianceforAnyEffectSizes.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mastering an Accurate and Generalizable Simulation-Based Method to Obtain Bias-corrected Point Estimates and Sampling Variance for Any Effect Sizes" />
+<script type="application/ld+json">
+{"description":"Meta-analyses require an effect-size estimate and its corresponding sampling variance from primary studies. In some cases, estimators for the sampling variance of a given effect size statistic may not exist, necessitating the derivation of a new formula for sampling variance. Traditionally, sampling variance formulas are obtained via hand-derived Taylor expansions (the delta method), though this procedure can be challenging for non-statisticians. Building on the idea of single-fit parametric resampling, we introduce SAFE bootstrap: a Single-fit, Accurate, Fast, and Easy simulation recipe that replaces potentially complex algebra with four intuitive steps: fit, draw, transform, and summarise. In a unified framework, the SAFE bootstrap yields bias-corrected point estimates and standard errors for any effect size statistic, regardless of whether the outcome is continuous or discrete. SAFE bootstrapping works by drawing once from a simple sampling model (normal, binomial, etc.), converting each replicate into any effect size of interest and then calculating the bias and sampling variance from simulated data. We demonstrate how to implement the SAFE bootstrap for a simple example first, and then for common effect sizes, such as the standardised mean difference and log odds ratio, as well as for less common effect sizes. With some additional coding, SAFE can also handle zero values and small sample sizes. Our tutorial, with R code supplements, should not only enhance understanding of sampling variance for effect sizes, but also serve as an introduction to the power of simulation-based methods for deriving any effect size with bias correction and its associated sampling variance.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/03/MasteringanAccurateandGeneralizableSimulationBasedMethodtoObtainBiascorrectedPointEstimatesandSamplingVarianceforAnyEffectSizes.html"},"headline":"Mastering an Accurate and Generalizable Simulation-Based Method to Obtain Bias-corrected Point Estimates and Sampling Variance for Any Effect Sizes","dateModified":"2025-11-03T00:00:00+00:00","datePublished":"2025-11-03T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/03/MasteringanAccurateandGeneralizableSimulationBasedMethodtoObtainBiascorrectedPointEstimatesandSamplingVarianceforAnyEffectSizes.html","author":{"@type":"Person","name":"Shinichi Nakagawa, Ayumi Mizuno, Coralie Williams, Santiago Ortega, Szymon M. Drobniak, Malgorzata Lagisz, Yefeng Yang, Alistair M. Senior, Daniel W. A. Noble, Erick Lundgren"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-03 00:00:00 +0000">11-03</time>
+  </p>
+  
+  <h1>Mastering an Accurate and Generalizable Simulation-Based Method to Obtain Bias-corrected Point Estimates and Sampling Variance for Any Effect Sizes</h1>
+  <br>Shinichi Nakagawa, Ayumi Mizuno, Coralie Williams, Santiago Ortega, Szymon M. Drobniak, Malgorzata Lagisz, Yefeng Yang, Alistair M. Senior, Daniel W. A. Noble, Erick Lundgren</h3>
+  <br> [stat.ME]
+
+  <p>Meta-analyses require an effect-size estimate and its corresponding sampling variance from primary studies. In some cases, estimators for the sampling variance of a given effect size statistic may not exist, necessitating the derivation of a new formula for sampling variance. Traditionally, sampling variance formulas are obtained via hand-derived Taylor expansions (the delta method), though this procedure can be challenging for non-statisticians. Building on the idea of single-fit parametric resampling, we introduce SAFE bootstrap: a Single-fit, Accurate, Fast, and Easy simulation recipe that replaces potentially complex algebra with four intuitive steps: fit, draw, transform, and summarise. In a unified framework, the SAFE bootstrap yields bias-corrected point estimates and standard errors for any effect size statistic, regardless of whether the outcome is continuous or discrete. SAFE bootstrapping works by drawing once from a simple sampling model (normal, binomial, etc.), converting each replicate into any effect size of interest and then calculating the bias and sampling variance from simulated data. We demonstrate how to implement the SAFE bootstrap for a simple example first, and then for common effect sizes, such as the standardised mean difference and log odds ratio, as well as for less common effect sizes. With some additional coding, SAFE can also handle zero values and small sample sizes. Our tutorial, with R code supplements, should not only enhance understanding of sampling variance for effect sizes, but also serve as an introduction to the power of simulation-based methods for deriving any effect size with bias correction and its associated sampling variance.</p>
+
+<p><a href="https://arxiv.org/abs/2510.27519">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
