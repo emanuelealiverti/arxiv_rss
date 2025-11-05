@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A tutorial on conducting sample size and power calculations for detecting treatment effect heterogeneity in cluster randomized trials with linear mixed models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A tutorial on conducting sample size and power calculations for detecting treatment effect heterogeneity in cluster randomized trials with linear mixed models" />
+<meta name="author" content="Mary Ryan Baumann, Monica Taljaard, Patrick J. Heagerty, Michael O. Harhay, Guangyu Tong, Rui Wang, Fan Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cluster-randomized trials (CRTs) are a well-established class of designs for evaluating community-based interventions. An essential task in planning these trials is determining the number of clusters and cluster sizes needed to achieve sufficient statistical power for detecting a clinically relevant effect size. While methods for evaluating the average treatment effect (ATE) for the entire study population are well-established, sample size methods for testing heterogeneity of treatment effects (HTEs), i.e., treatment-covariate interaction or difference in subpopulation-specific treatment effects, in CRTs have only recently been developed. For pre-specified analyses of HTEs in CRTs, effect-modifying covariates should, ideally, be accompanied by sample size or power calculations to ensure the trial has adequate power for the planned analyses. Power analysis for testing HTEs is more complex than for ATEs due to the additional design parameters that must be specified. Power and sample size formulas for testing HTEs via linear mixed effects (LME) models have been separately derived for different cluster-randomized designs, including single and multi-period parallel designs, crossover designs, and stepped-wedge designs, and for continuous and binary outcomes. This tutorial provides a consolidated reference guide for these methods and enhances their accessibility through an online R Shiny calculator. We further discuss key considerations for conducting sample size and power calculations to test pre-specified HTE hypotheses in CRTs, highlighting the importance of specifying advanced estimates of intracluster correlation coefficients for both outcomes and covariates, and their implications for power. The sample size methodology and calculator functionality are demonstrated through a real CRT example." />
+<meta property="og:description" content="Cluster-randomized trials (CRTs) are a well-established class of designs for evaluating community-based interventions. An essential task in planning these trials is determining the number of clusters and cluster sizes needed to achieve sufficient statistical power for detecting a clinically relevant effect size. While methods for evaluating the average treatment effect (ATE) for the entire study population are well-established, sample size methods for testing heterogeneity of treatment effects (HTEs), i.e., treatment-covariate interaction or difference in subpopulation-specific treatment effects, in CRTs have only recently been developed. For pre-specified analyses of HTEs in CRTs, effect-modifying covariates should, ideally, be accompanied by sample size or power calculations to ensure the trial has adequate power for the planned analyses. Power analysis for testing HTEs is more complex than for ATEs due to the additional design parameters that must be specified. Power and sample size formulas for testing HTEs via linear mixed effects (LME) models have been separately derived for different cluster-randomized designs, including single and multi-period parallel designs, crossover designs, and stepped-wedge designs, and for continuous and binary outcomes. This tutorial provides a consolidated reference guide for these methods and enhances their accessibility through an online R Shiny calculator. We further discuss key considerations for conducting sample size and power calculations to test pre-specified HTE hypotheses in CRTs, highlighting the importance of specifying advanced estimates of intracluster correlation coefficients for both outcomes and covariates, and their implications for power. The sample size methodology and calculator functionality are demonstrated through a real CRT example." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/05/Atutorialonconductingsamplesizeandpowercalculationsfordetectingtreatmenteffectheterogeneityinclusterrandomizedtrialswithlinearmixedmodels.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/05/Atutorialonconductingsamplesizeandpowercalculationsfordetectingtreatmenteffectheterogeneityinclusterrandomizedtrialswithlinearmixedmodels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A tutorial on conducting sample size and power calculations for detecting treatment effect heterogeneity in cluster randomized trials with linear mixed models" />
+<script type="application/ld+json">
+{"description":"Cluster-randomized trials (CRTs) are a well-established class of designs for evaluating community-based interventions. An essential task in planning these trials is determining the number of clusters and cluster sizes needed to achieve sufficient statistical power for detecting a clinically relevant effect size. While methods for evaluating the average treatment effect (ATE) for the entire study population are well-established, sample size methods for testing heterogeneity of treatment effects (HTEs), i.e., treatment-covariate interaction or difference in subpopulation-specific treatment effects, in CRTs have only recently been developed. For pre-specified analyses of HTEs in CRTs, effect-modifying covariates should, ideally, be accompanied by sample size or power calculations to ensure the trial has adequate power for the planned analyses. Power analysis for testing HTEs is more complex than for ATEs due to the additional design parameters that must be specified. Power and sample size formulas for testing HTEs via linear mixed effects (LME) models have been separately derived for different cluster-randomized designs, including single and multi-period parallel designs, crossover designs, and stepped-wedge designs, and for continuous and binary outcomes. This tutorial provides a consolidated reference guide for these methods and enhances their accessibility through an online R Shiny calculator. We further discuss key considerations for conducting sample size and power calculations to test pre-specified HTE hypotheses in CRTs, highlighting the importance of specifying advanced estimates of intracluster correlation coefficients for both outcomes and covariates, and their implications for power. The sample size methodology and calculator functionality are demonstrated through a real CRT example.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/05/Atutorialonconductingsamplesizeandpowercalculationsfordetectingtreatmenteffectheterogeneityinclusterrandomizedtrialswithlinearmixedmodels.html"},"headline":"A tutorial on conducting sample size and power calculations for detecting treatment effect heterogeneity in cluster randomized trials with linear mixed models","dateModified":"2025-11-05T00:00:00+00:00","datePublished":"2025-11-05T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/05/Atutorialonconductingsamplesizeandpowercalculationsfordetectingtreatmenteffectheterogeneityinclusterrandomizedtrialswithlinearmixedmodels.html","author":{"@type":"Person","name":"Mary Ryan Baumann, Monica Taljaard, Patrick J. Heagerty, Michael O. Harhay, Guangyu Tong, Rui Wang, Fan Li"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-05 00:00:00 +0000">11-05</time>
+  </p>
+  
+  <h1>A tutorial on conducting sample size and power calculations for detecting treatment effect heterogeneity in cluster randomized trials with linear mixed models</h1>
+  <br>Mary Ryan Baumann, Monica Taljaard, Patrick J. Heagerty, Michael O. Harhay, Guangyu Tong, Rui Wang, Fan Li</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Cluster-randomized trials (CRTs) are a well-established class of designs for evaluating community-based interventions. An essential task in planning these trials is determining the number of clusters and cluster sizes needed to achieve sufficient statistical power for detecting a clinically relevant effect size. While methods for evaluating the average treatment effect (ATE) for the entire study population are well-established, sample size methods for testing heterogeneity of treatment effects (HTEs), i.e., treatment-covariate interaction or difference in subpopulation-specific treatment effects, in CRTs have only recently been developed. For pre-specified analyses of HTEs in CRTs, effect-modifying covariates should, ideally, be accompanied by sample size or power calculations to ensure the trial has adequate power for the planned analyses. Power analysis for testing HTEs is more complex than for ATEs due to the additional design parameters that must be specified. Power and sample size formulas for testing HTEs via linear mixed effects (LME) models have been separately derived for different cluster-randomized designs, including single and multi-period parallel designs, crossover designs, and stepped-wedge designs, and for continuous and binary outcomes. This tutorial provides a consolidated reference guide for these methods and enhances their accessibility through an online R Shiny calculator. We further discuss key considerations for conducting sample size and power calculations to test pre-specified HTE hypotheses in CRTs, highlighting the importance of specifying advanced estimates of intracluster correlation coefficients for both outcomes and covariates, and their implications for power. The sample size methodology and calculator functionality are demonstrated through a real CRT example.</p>
+
+<p><a href="https://arxiv.org/abs/2501.18383">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
