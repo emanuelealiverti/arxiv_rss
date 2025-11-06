@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>New sampling approaches for Shrinkage Inverse-Wishart distribution</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="New sampling approaches for Shrinkage Inverse-Wishart distribution" />
+<meta name="author" content="Yiye Jiang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this paper, we propose new sampling approaches for the Shrinkage Inverse-Wishart (SIW) distribution, a generalized family of the Inverse-Wishart distribution originally proposed by Berger et al. (2020, Annals of Statistics). It offers a flexible prior for covariance matrices and remains conjugate to the Gaussian likelihood, similar to the classical Inverse-Wishart. Despite these advantages, sampling from SIW remains challenging. The existing algorithm relies on a nested Gibbs sampler, which is slow and lacks rigorous theoretical analysis of its convergence. We propose a new algorithm based on the Sampling Importance Resampling (SIR) method, which is significantly faster and comes with theoretical guarantees on convergence rates. A known issue with SIR methods is the large discrepancy in importance weights, which occurs when the proposal distribution has thinner tails than the target. In the case of SIW, certain parameter settings can lead to such discrepancies, reducing the robustness of the output samples. To sample from such SIW distributions, we robustify the proposed algorithm by including a clipping step to the SIR framework which transforms large importance weights. We provide theoretical results on the convergence behavior in terms of the clipping size, and discuss strategies for choosing this parameter via simulation studies. The robustified version retains the computational efficiency of the original algorithm." />
+<meta property="og:description" content="In this paper, we propose new sampling approaches for the Shrinkage Inverse-Wishart (SIW) distribution, a generalized family of the Inverse-Wishart distribution originally proposed by Berger et al. (2020, Annals of Statistics). It offers a flexible prior for covariance matrices and remains conjugate to the Gaussian likelihood, similar to the classical Inverse-Wishart. Despite these advantages, sampling from SIW remains challenging. The existing algorithm relies on a nested Gibbs sampler, which is slow and lacks rigorous theoretical analysis of its convergence. We propose a new algorithm based on the Sampling Importance Resampling (SIR) method, which is significantly faster and comes with theoretical guarantees on convergence rates. A known issue with SIR methods is the large discrepancy in importance weights, which occurs when the proposal distribution has thinner tails than the target. In the case of SIW, certain parameter settings can lead to such discrepancies, reducing the robustness of the output samples. To sample from such SIW distributions, we robustify the proposed algorithm by including a clipping step to the SIR framework which transforms large importance weights. We provide theoretical results on the convergence behavior in terms of the clipping size, and discuss strategies for choosing this parameter via simulation studies. The robustified version retains the computational efficiency of the original algorithm." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/06/NewsamplingapproachesforShrinkageInverseWishartdistribution.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/06/NewsamplingapproachesforShrinkageInverseWishartdistribution.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="New sampling approaches for Shrinkage Inverse-Wishart distribution" />
+<script type="application/ld+json">
+{"description":"In this paper, we propose new sampling approaches for the Shrinkage Inverse-Wishart (SIW) distribution, a generalized family of the Inverse-Wishart distribution originally proposed by Berger et al. (2020, Annals of Statistics). It offers a flexible prior for covariance matrices and remains conjugate to the Gaussian likelihood, similar to the classical Inverse-Wishart. Despite these advantages, sampling from SIW remains challenging. The existing algorithm relies on a nested Gibbs sampler, which is slow and lacks rigorous theoretical analysis of its convergence. We propose a new algorithm based on the Sampling Importance Resampling (SIR) method, which is significantly faster and comes with theoretical guarantees on convergence rates. A known issue with SIR methods is the large discrepancy in importance weights, which occurs when the proposal distribution has thinner tails than the target. In the case of SIW, certain parameter settings can lead to such discrepancies, reducing the robustness of the output samples. To sample from such SIW distributions, we robustify the proposed algorithm by including a clipping step to the SIR framework which transforms large importance weights. We provide theoretical results on the convergence behavior in terms of the clipping size, and discuss strategies for choosing this parameter via simulation studies. The robustified version retains the computational efficiency of the original algorithm.","headline":"New sampling approaches for Shrinkage Inverse-Wishart distribution","dateModified":"2025-11-06T00:00:00+00:00","datePublished":"2025-11-06T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/06/NewsamplingapproachesforShrinkageInverseWishartdistribution.html","author":{"@type":"Person","name":"Yiye Jiang"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/06/NewsamplingapproachesforShrinkageInverseWishartdistribution.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-06 00:00:00 +0000">11-06</time>
+  </p>
+  
+  <h1>New sampling approaches for Shrinkage Inverse-Wishart distribution</h1>
+  <br>Yiye Jiang</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>In this paper, we propose new sampling approaches for the Shrinkage Inverse-Wishart (SIW) distribution, a generalized family of the Inverse-Wishart distribution originally proposed by Berger et al. (2020, Annals of Statistics). It offers a flexible prior for covariance matrices and remains conjugate to the Gaussian likelihood, similar to the classical Inverse-Wishart. Despite these advantages, sampling from SIW remains challenging. The existing algorithm relies on a nested Gibbs sampler, which is slow and lacks rigorous theoretical analysis of its convergence. We propose a new algorithm based on the Sampling Importance Resampling (SIR) method, which is significantly faster and comes with theoretical guarantees on convergence rates. A known issue with SIR methods is the large discrepancy in importance weights, which occurs when the proposal distribution has thinner tails than the target. In the case of SIW, certain parameter settings can lead to such discrepancies, reducing the robustness of the output samples. To sample from such SIW distributions, we robustify the proposed algorithm by including a clipping step to the SIR framework which transforms large importance weights. We provide theoretical results on the convergence behavior in terms of the clipping size, and discuss strategies for choosing this parameter via simulation studies. The robustified version retains the computational efficiency of the original algorithm.</p>
+
+<p><a href="https://arxiv.org/abs/2511.03044">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
