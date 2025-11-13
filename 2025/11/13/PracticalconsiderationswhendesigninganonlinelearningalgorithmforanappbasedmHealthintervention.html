@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Practical considerations when designing an online learning algorithm for an app-based mHealth intervention</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Practical considerations when designing an online learning algorithm for an app-based mHealth intervention" />
+<meta name="author" content="Rachel T Gonzalez, Madeline R Abbott, Brahmajee Nallamothu, Scott Hummel, Michael Dorsch, Walter Dempsey" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The ubiquitous nature of mobile health (mHealth) technology has expanded opportunities for the integration of reinforcement learning into traditional clinical trial designs, allowing researchers to learn individualized treatment policies during the study. LowSalt4Life 2 (LS4L2) is a recent trial aimed at reducing sodium intake among hypertensive individuals through an app-based intervention. A reinforcement learning algorithm, which was deployed in one of the trial arms, was designed to send reminder notifications to promote app engagement in contexts where the notification would be effective, i.e., when a participant is likely to open the app in the next 30-minute and not when prior data suggested reduced effectiveness. Such an algorithm can improve app-based mHealth interventions by reducing participant burden and more effectively promoting behavior change. We encountered various challenges during the implementation of the learning algorithm, which we present as a template to solving challenges in future trials that deploy reinforcement learning algorithms. We provide template solutions based on LS4L2 for solving the key challenges of (i) defining a relevant reward, (ii) determining a meaningful timescale for optimization, (iii) specifying a robust statistical model that allows for automation, (iv) balancing model flexibility with computational cost, and (v) addressing missing values in gradually collected data." />
+<meta property="og:description" content="The ubiquitous nature of mobile health (mHealth) technology has expanded opportunities for the integration of reinforcement learning into traditional clinical trial designs, allowing researchers to learn individualized treatment policies during the study. LowSalt4Life 2 (LS4L2) is a recent trial aimed at reducing sodium intake among hypertensive individuals through an app-based intervention. A reinforcement learning algorithm, which was deployed in one of the trial arms, was designed to send reminder notifications to promote app engagement in contexts where the notification would be effective, i.e., when a participant is likely to open the app in the next 30-minute and not when prior data suggested reduced effectiveness. Such an algorithm can improve app-based mHealth interventions by reducing participant burden and more effectively promoting behavior change. We encountered various challenges during the implementation of the learning algorithm, which we present as a template to solving challenges in future trials that deploy reinforcement learning algorithms. We provide template solutions based on LS4L2 for solving the key challenges of (i) defining a relevant reward, (ii) determining a meaningful timescale for optimization, (iii) specifying a robust statistical model that allows for automation, (iv) balancing model flexibility with computational cost, and (v) addressing missing values in gradually collected data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/13/PracticalconsiderationswhendesigninganonlinelearningalgorithmforanappbasedmHealthintervention.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/13/PracticalconsiderationswhendesigninganonlinelearningalgorithmforanappbasedmHealthintervention.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Practical considerations when designing an online learning algorithm for an app-based mHealth intervention" />
+<script type="application/ld+json">
+{"description":"The ubiquitous nature of mobile health (mHealth) technology has expanded opportunities for the integration of reinforcement learning into traditional clinical trial designs, allowing researchers to learn individualized treatment policies during the study. LowSalt4Life 2 (LS4L2) is a recent trial aimed at reducing sodium intake among hypertensive individuals through an app-based intervention. A reinforcement learning algorithm, which was deployed in one of the trial arms, was designed to send reminder notifications to promote app engagement in contexts where the notification would be effective, i.e., when a participant is likely to open the app in the next 30-minute and not when prior data suggested reduced effectiveness. Such an algorithm can improve app-based mHealth interventions by reducing participant burden and more effectively promoting behavior change. We encountered various challenges during the implementation of the learning algorithm, which we present as a template to solving challenges in future trials that deploy reinforcement learning algorithms. We provide template solutions based on LS4L2 for solving the key challenges of (i) defining a relevant reward, (ii) determining a meaningful timescale for optimization, (iii) specifying a robust statistical model that allows for automation, (iv) balancing model flexibility with computational cost, and (v) addressing missing values in gradually collected data.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/13/PracticalconsiderationswhendesigninganonlinelearningalgorithmforanappbasedmHealthintervention.html"},"headline":"Practical considerations when designing an online learning algorithm for an app-based mHealth intervention","dateModified":"2025-11-13T00:00:00+00:00","datePublished":"2025-11-13T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/13/PracticalconsiderationswhendesigninganonlinelearningalgorithmforanappbasedmHealthintervention.html","author":{"@type":"Person","name":"Rachel T Gonzalez, Madeline R Abbott, Brahmajee Nallamothu, Scott Hummel, Michael Dorsch, Walter Dempsey"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-13 00:00:00 +0000">11-13</time>
+  </p>
+  
+  <h1>Practical considerations when designing an online learning algorithm for an app-based mHealth intervention</h1>
+  <br>Rachel T Gonzalez, Madeline R Abbott, Brahmajee Nallamothu, Scott Hummel, Michael Dorsch, Walter Dempsey</h3>
+  <br> [stat.ME,stat.AP,stat.ML]
+
+  <p>The ubiquitous nature of mobile health (mHealth) technology has expanded opportunities for the integration of reinforcement learning into traditional clinical trial designs, allowing researchers to learn individualized treatment policies during the study. LowSalt4Life 2 (LS4L2) is a recent trial aimed at reducing sodium intake among hypertensive individuals through an app-based intervention. A reinforcement learning algorithm, which was deployed in one of the trial arms, was designed to send reminder notifications to promote app engagement in contexts where the notification would be effective, i.e., when a participant is likely to open the app in the next 30-minute and not when prior data suggested reduced effectiveness. Such an algorithm can improve app-based mHealth interventions by reducing participant burden and more effectively promoting behavior change. We encountered various challenges during the implementation of the learning algorithm, which we present as a template to solving challenges in future trials that deploy reinforcement learning algorithms. We provide template solutions based on LS4L2 for solving the key challenges of (i) defining a relevant reward, (ii) determining a meaningful timescale for optimization, (iii) specifying a robust statistical model that allows for automation, (iv) balancing model flexibility with computational cost, and (v) addressing missing values in gradually collected data.</p>
+
+<p><a href="https://arxiv.org/abs/2511.08719">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
