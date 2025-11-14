@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Why do zeroes happen? A model-based approach for demand classification</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Why do zeroes happen? A model-based approach for demand classification" />
+<meta name="author" content="Ivan Svetunkov, Anna Sroginis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Effective demand forecasting is critical for inventory management, production planning, and decision making across industries. Selecting the appropriate model and suitable features to efficiently capture patterns in the data is one of the main challenges in demand forecasting. In reality, this becomes even more complicated when the recorded sales have zeroes, which can happen naturally or due to some anomalies, such as stockouts and recording errors. Mistreating the zeroes can lead to the application of inappropriate forecasting methods, and thus leading to poor decision making. Furthermore, the demand itself can have different fundamental characteristics, and being able to distinguish one type from another might bring substantial benefits in terms of accuracy and thus decision making. We propose a two-stage model-based classification framework that in the first step, identifies artificially occurring zeroes, and in the second, classifies demand to one of the possible types: regular/intermittent, intermittent smooth/lumpy, fractional/count. The framework relies on statistical modelling and information criteria. We argue that different types of demand need different features, and show empirically that they tend to increase the accuracy of the forecasting methods and reduce inventory costs compared to those applied directly to the dataset without the generated features and the two-stage framework." />
+<meta property="og:description" content="Effective demand forecasting is critical for inventory management, production planning, and decision making across industries. Selecting the appropriate model and suitable features to efficiently capture patterns in the data is one of the main challenges in demand forecasting. In reality, this becomes even more complicated when the recorded sales have zeroes, which can happen naturally or due to some anomalies, such as stockouts and recording errors. Mistreating the zeroes can lead to the application of inappropriate forecasting methods, and thus leading to poor decision making. Furthermore, the demand itself can have different fundamental characteristics, and being able to distinguish one type from another might bring substantial benefits in terms of accuracy and thus decision making. We propose a two-stage model-based classification framework that in the first step, identifies artificially occurring zeroes, and in the second, classifies demand to one of the possible types: regular/intermittent, intermittent smooth/lumpy, fractional/count. The framework relies on statistical modelling and information criteria. We argue that different types of demand need different features, and show empirically that they tend to increase the accuracy of the forecasting methods and reduce inventory costs compared to those applied directly to the dataset without the generated features and the two-stage framework." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/14/WhydozeroeshappenAmodelbasedapproachfordemandclassification.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/14/WhydozeroeshappenAmodelbasedapproachfordemandclassification.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Why do zeroes happen? A model-based approach for demand classification" />
+<script type="application/ld+json">
+{"description":"Effective demand forecasting is critical for inventory management, production planning, and decision making across industries. Selecting the appropriate model and suitable features to efficiently capture patterns in the data is one of the main challenges in demand forecasting. In reality, this becomes even more complicated when the recorded sales have zeroes, which can happen naturally or due to some anomalies, such as stockouts and recording errors. Mistreating the zeroes can lead to the application of inappropriate forecasting methods, and thus leading to poor decision making. Furthermore, the demand itself can have different fundamental characteristics, and being able to distinguish one type from another might bring substantial benefits in terms of accuracy and thus decision making. We propose a two-stage model-based classification framework that in the first step, identifies artificially occurring zeroes, and in the second, classifies demand to one of the possible types: regular/intermittent, intermittent smooth/lumpy, fractional/count. The framework relies on statistical modelling and information criteria. We argue that different types of demand need different features, and show empirically that they tend to increase the accuracy of the forecasting methods and reduce inventory costs compared to those applied directly to the dataset without the generated features and the two-stage framework.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/14/WhydozeroeshappenAmodelbasedapproachfordemandclassification.html"},"headline":"Why do zeroes happen? A model-based approach for demand classification","dateModified":"2025-11-14T00:00:00+00:00","datePublished":"2025-11-14T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/14/WhydozeroeshappenAmodelbasedapproachfordemandclassification.html","author":{"@type":"Person","name":"Ivan Svetunkov, Anna Sroginis"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-14 00:00:00 +0000">11-14</time>
+  </p>
+  
+  <h1>Why do zeroes happen? A model-based approach for demand classification</h1>
+  <br>Ivan Svetunkov, Anna Sroginis</h3>
+  <br> [stat.ME]
+
+  <p>Effective demand forecasting is critical for inventory management, production planning, and decision making across industries. Selecting the appropriate model and suitable features to efficiently capture patterns in the data is one of the main challenges in demand forecasting. In reality, this becomes even more complicated when the recorded sales have zeroes, which can happen naturally or due to some anomalies, such as stockouts and recording errors. Mistreating the zeroes can lead to the application of inappropriate forecasting methods, and thus leading to poor decision making. Furthermore, the demand itself can have different fundamental characteristics, and being able to distinguish one type from another might bring substantial benefits in terms of accuracy and thus decision making. We propose a two-stage model-based classification framework that in the first step, identifies artificially occurring zeroes, and in the second, classifies demand to one of the possible types: regular/intermittent, intermittent smooth/lumpy, fractional/count. The framework relies on statistical modelling and information criteria. We argue that different types of demand need different features, and show empirically that they tend to increase the accuracy of the forecasting methods and reduce inventory costs compared to those applied directly to the dataset without the generated features and the two-stage framework.</p>
+
+<p><a href="https://arxiv.org/abs/2504.05894">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
