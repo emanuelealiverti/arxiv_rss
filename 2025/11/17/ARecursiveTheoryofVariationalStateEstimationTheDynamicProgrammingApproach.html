@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Recursive Theory of Variational State Estimation: The Dynamic Programming Approach</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Recursive Theory of Variational State Estimation: The Dynamic Programming Approach" />
+<meta name="author" content="Filip Tronarp" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this article, variational state estimation is examined from the dynamic programming perspective. This leads to two different value functional recursions depending on whether backward or forward dynamic programming is employed. The result is a theory of variational state estimation that corresponds to the classical theory of Bayesian state estimation. More specifically, in the backward method, the value functional corresponds to a likelihood that is upper bounded by the state likelihood from the Bayesian backward recursion. In the forward method, the value functional corresponds to an unnormalized density that is upper bounded by the unnormalized filtering density. Both methods can be combined to arrive at a variational two-filter formula. Additionally, it is noted that optimal variational filtering is generally of quadratic time-complexity in the sequence length. This motivates the notion of sub-optimal variational filtering, which also lower bounds the evidence but is of linear time-complexity. Another problem is the fact that the value functional recursions are generally intractable. This is briefly discussed and a simple approximation is suggested that retrieves the filter proposed by Courts et al. (2021). The methodology is examined in a jump Gauss–Markov system, where it is observed that the value functional recursions are tractable under a certain factored Markov process approximation. A simulation study demonstrates that the posterior approximation is of adequate quality." />
+<meta property="og:description" content="In this article, variational state estimation is examined from the dynamic programming perspective. This leads to two different value functional recursions depending on whether backward or forward dynamic programming is employed. The result is a theory of variational state estimation that corresponds to the classical theory of Bayesian state estimation. More specifically, in the backward method, the value functional corresponds to a likelihood that is upper bounded by the state likelihood from the Bayesian backward recursion. In the forward method, the value functional corresponds to an unnormalized density that is upper bounded by the unnormalized filtering density. Both methods can be combined to arrive at a variational two-filter formula. Additionally, it is noted that optimal variational filtering is generally of quadratic time-complexity in the sequence length. This motivates the notion of sub-optimal variational filtering, which also lower bounds the evidence but is of linear time-complexity. Another problem is the fact that the value functional recursions are generally intractable. This is briefly discussed and a simple approximation is suggested that retrieves the filter proposed by Courts et al. (2021). The methodology is examined in a jump Gauss–Markov system, where it is observed that the value functional recursions are tractable under a certain factored Markov process approximation. A simulation study demonstrates that the posterior approximation is of adequate quality." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/17/ARecursiveTheoryofVariationalStateEstimationTheDynamicProgrammingApproach.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/17/ARecursiveTheoryofVariationalStateEstimationTheDynamicProgrammingApproach.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Recursive Theory of Variational State Estimation: The Dynamic Programming Approach" />
+<script type="application/ld+json">
+{"description":"In this article, variational state estimation is examined from the dynamic programming perspective. This leads to two different value functional recursions depending on whether backward or forward dynamic programming is employed. The result is a theory of variational state estimation that corresponds to the classical theory of Bayesian state estimation. More specifically, in the backward method, the value functional corresponds to a likelihood that is upper bounded by the state likelihood from the Bayesian backward recursion. In the forward method, the value functional corresponds to an unnormalized density that is upper bounded by the unnormalized filtering density. Both methods can be combined to arrive at a variational two-filter formula. Additionally, it is noted that optimal variational filtering is generally of quadratic time-complexity in the sequence length. This motivates the notion of sub-optimal variational filtering, which also lower bounds the evidence but is of linear time-complexity. Another problem is the fact that the value functional recursions are generally intractable. This is briefly discussed and a simple approximation is suggested that retrieves the filter proposed by Courts et al. (2021). The methodology is examined in a jump Gauss–Markov system, where it is observed that the value functional recursions are tractable under a certain factored Markov process approximation. A simulation study demonstrates that the posterior approximation is of adequate quality.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/17/ARecursiveTheoryofVariationalStateEstimationTheDynamicProgrammingApproach.html"},"headline":"A Recursive Theory of Variational State Estimation: The Dynamic Programming Approach","dateModified":"2025-11-17T00:00:00+00:00","datePublished":"2025-11-17T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/17/ARecursiveTheoryofVariationalStateEstimationTheDynamicProgrammingApproach.html","author":{"@type":"Person","name":"Filip Tronarp"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-17 00:00:00 +0000">11-17</time>
+  </p>
+  
+  <h1>A Recursive Theory of Variational State Estimation: The Dynamic Programming Approach</h1>
+  <br>Filip Tronarp</h3>
+  <br> [stat.ME]
+
+  <p>In this article, variational state estimation is examined from the dynamic programming perspective. This leads to two different value functional recursions depending on whether backward or forward dynamic programming is employed. The result is a theory of variational state estimation that corresponds to the classical theory of Bayesian state estimation. More specifically, in the backward method, the value functional corresponds to a likelihood that is upper bounded by the state likelihood from the Bayesian backward recursion. In the forward method, the value functional corresponds to an unnormalized density that is upper bounded by the unnormalized filtering density. Both methods can be combined to arrive at a variational two-filter formula. Additionally, it is noted that optimal variational filtering is generally of quadratic time-complexity in the sequence length. This motivates the notion of sub-optimal variational filtering, which also lower bounds the evidence but is of linear time-complexity. Another problem is the fact that the value functional recursions are generally intractable. This is briefly discussed and a simple approximation is suggested that retrieves the filter proposed by Courts et al. (2021). The methodology is examined in a jump Gauss–Markov system, where it is observed that the value functional recursions are tractable under a certain factored Markov process approximation. A simulation study demonstrates that the posterior approximation is of adequate quality.</p>
+
+<p><a href="https://arxiv.org/abs/2511.11497">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
