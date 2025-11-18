@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Variable importance measures for heterogeneous treatment effects</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Variable importance measures for heterogeneous treatment effects" />
+<meta name="author" content="Oliver J. Hines, Karla Diaz-Ordaz, Stijn Vansteelandt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Motivated by applications in precision medicine and treatment effect heterogeneity, recent research has focused on estimating conditional average treatment effects (CATEs) using machine learning (ML). CATE estimates may represent complicated functions that provide little insight into the key drivers of heterogeneity. Therefore, we introduce nonparametric treatment effect variable importance measures (TE-VIMs), based on the mean-squared error (MSE) in predicting the individual treatment effect. More precisely, TE-VIMs represent the increase in MSE when variables are removed from the CATE conditioning set. We derive efficient TE-VIM estimators which can be used with any CATE estimation strategy and are amenable to ML estimation. We propose several strategies to calculate these VIMs (e.g. leave-one out, or keep-one in), using popular meta-learners for the CATE. We study the finite sample performance through a simulation study and illustrate their application using clinical trial data." />
+<meta property="og:description" content="Motivated by applications in precision medicine and treatment effect heterogeneity, recent research has focused on estimating conditional average treatment effects (CATEs) using machine learning (ML). CATE estimates may represent complicated functions that provide little insight into the key drivers of heterogeneity. Therefore, we introduce nonparametric treatment effect variable importance measures (TE-VIMs), based on the mean-squared error (MSE) in predicting the individual treatment effect. More precisely, TE-VIMs represent the increase in MSE when variables are removed from the CATE conditioning set. We derive efficient TE-VIM estimators which can be used with any CATE estimation strategy and are amenable to ML estimation. We propose several strategies to calculate these VIMs (e.g. leave-one out, or keep-one in), using popular meta-learners for the CATE. We study the finite sample performance through a simulation study and illustrate their application using clinical trial data." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/18/Variableimportancemeasuresforheterogeneoustreatmenteffects.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/18/Variableimportancemeasuresforheterogeneoustreatmenteffects.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Variable importance measures for heterogeneous treatment effects" />
+<script type="application/ld+json">
+{"description":"Motivated by applications in precision medicine and treatment effect heterogeneity, recent research has focused on estimating conditional average treatment effects (CATEs) using machine learning (ML). CATE estimates may represent complicated functions that provide little insight into the key drivers of heterogeneity. Therefore, we introduce nonparametric treatment effect variable importance measures (TE-VIMs), based on the mean-squared error (MSE) in predicting the individual treatment effect. More precisely, TE-VIMs represent the increase in MSE when variables are removed from the CATE conditioning set. We derive efficient TE-VIM estimators which can be used with any CATE estimation strategy and are amenable to ML estimation. We propose several strategies to calculate these VIMs (e.g. leave-one out, or keep-one in), using popular meta-learners for the CATE. We study the finite sample performance through a simulation study and illustrate their application using clinical trial data.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/18/Variableimportancemeasuresforheterogeneoustreatmenteffects.html"},"headline":"Variable importance measures for heterogeneous treatment effects","dateModified":"2025-11-18T00:00:00+00:00","datePublished":"2025-11-18T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/18/Variableimportancemeasuresforheterogeneoustreatmenteffects.html","author":{"@type":"Person","name":"Oliver J. Hines, Karla Diaz-Ordaz, Stijn Vansteelandt"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-18 00:00:00 +0000">11-18</time>
+  </p>
+  
+  <h1>Variable importance measures for heterogeneous treatment effects</h1>
+  <br>Oliver J. Hines, Karla Diaz-Ordaz, Stijn Vansteelandt</h3>
+  <br> [stat.ME]
+
+  <p>Motivated by applications in precision medicine and treatment effect heterogeneity, recent research has focused on estimating conditional average treatment effects (CATEs) using machine learning (ML). CATE estimates may represent complicated functions that provide little insight into the key drivers of heterogeneity. Therefore, we introduce nonparametric treatment effect variable importance measures (TE-VIMs), based on the mean-squared error (MSE) in predicting the individual treatment effect. More precisely, TE-VIMs represent the increase in MSE when variables are removed from the CATE conditioning set. We derive efficient TE-VIM estimators which can be used with any CATE estimation strategy and are amenable to ML estimation. We propose several strategies to calculate these VIMs (e.g. leave-one out, or keep-one in), using popular meta-learners for the CATE. We study the finite sample performance through a simulation study and illustrate their application using clinical trial data.</p>
+
+<p><a href="https://arxiv.org/abs/2204.06030">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
