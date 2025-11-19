@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Teaching Longitudinal Linear Mixed Models End-to-End: A Reproducible Case Study in Mouse Body-Weight Growth</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Teaching Longitudinal Linear Mixed Models End-to-End: A Reproducible Case Study in Mouse Body-Weight Growth" />
+<meta name="author" content="Sunday A. Adetunji" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Background: Linear mixed-effects models are central for analyzing longitudinal continuous data, yet many learners meet them as scattered formulas or software output rather than as a coherent workflow. There is a need for a single, reproducible case study that links questions, model building, diagnostics, and interpretation. Methods: We reanalyze a published mouse body-weight experiment with 31 mice in three groups weighed weekly for 12 weeks. After reshaping the data to long format and using profile plots to motivate linear time trends, we fit three random-intercept linear mixed models: a common-slope model, a fully interacted group-by-time model, and a parsimonious model with group-specific intercepts, a shared slope for two groups, and an extra slope for the third. Models are compared using maximum likelihood, AIC, BIC, and likelihood ratio tests, and linear contrasts are used to estimate group differences in weekly means and 12 week gains. Results: The parsimonious model fits as well as the fully interacted model and clearly outperforms the common-slope model, revealing small and similar gains in two groups and much steeper growth in the third, with highly significant contrasts for excess weight gain. Interpretation: This case study gives a complete, executable workflow for longitudinal linear mixed modeling, from raw data and exploratory plots through model selection, diagnostics, and targeted contrasts. By making explicit the mapping from scientific questions to model terms and estimable contrasts, and by providing R code and a stepwise checklist, it serves as a practical template for teaching and applied work in biostatistics, epidemiology, and related fields" />
+<meta property="og:description" content="Background: Linear mixed-effects models are central for analyzing longitudinal continuous data, yet many learners meet them as scattered formulas or software output rather than as a coherent workflow. There is a need for a single, reproducible case study that links questions, model building, diagnostics, and interpretation. Methods: We reanalyze a published mouse body-weight experiment with 31 mice in three groups weighed weekly for 12 weeks. After reshaping the data to long format and using profile plots to motivate linear time trends, we fit three random-intercept linear mixed models: a common-slope model, a fully interacted group-by-time model, and a parsimonious model with group-specific intercepts, a shared slope for two groups, and an extra slope for the third. Models are compared using maximum likelihood, AIC, BIC, and likelihood ratio tests, and linear contrasts are used to estimate group differences in weekly means and 12 week gains. Results: The parsimonious model fits as well as the fully interacted model and clearly outperforms the common-slope model, revealing small and similar gains in two groups and much steeper growth in the third, with highly significant contrasts for excess weight gain. Interpretation: This case study gives a complete, executable workflow for longitudinal linear mixed modeling, from raw data and exploratory plots through model selection, diagnostics, and targeted contrasts. By making explicit the mapping from scientific questions to model terms and estimable contrasts, and by providing R code and a stepwise checklist, it serves as a practical template for teaching and applied work in biostatistics, epidemiology, and related fields" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/19/TeachingLongitudinalLinearMixedModelsEndtoEndAReproducibleCaseStudyinMouseBodyWeightGrowth.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/19/TeachingLongitudinalLinearMixedModelsEndtoEndAReproducibleCaseStudyinMouseBodyWeightGrowth.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Teaching Longitudinal Linear Mixed Models End-to-End: A Reproducible Case Study in Mouse Body-Weight Growth" />
+<script type="application/ld+json">
+{"description":"Background: Linear mixed-effects models are central for analyzing longitudinal continuous data, yet many learners meet them as scattered formulas or software output rather than as a coherent workflow. There is a need for a single, reproducible case study that links questions, model building, diagnostics, and interpretation. Methods: We reanalyze a published mouse body-weight experiment with 31 mice in three groups weighed weekly for 12 weeks. After reshaping the data to long format and using profile plots to motivate linear time trends, we fit three random-intercept linear mixed models: a common-slope model, a fully interacted group-by-time model, and a parsimonious model with group-specific intercepts, a shared slope for two groups, and an extra slope for the third. Models are compared using maximum likelihood, AIC, BIC, and likelihood ratio tests, and linear contrasts are used to estimate group differences in weekly means and 12 week gains. Results: The parsimonious model fits as well as the fully interacted model and clearly outperforms the common-slope model, revealing small and similar gains in two groups and much steeper growth in the third, with highly significant contrasts for excess weight gain. Interpretation: This case study gives a complete, executable workflow for longitudinal linear mixed modeling, from raw data and exploratory plots through model selection, diagnostics, and targeted contrasts. By making explicit the mapping from scientific questions to model terms and estimable contrasts, and by providing R code and a stepwise checklist, it serves as a practical template for teaching and applied work in biostatistics, epidemiology, and related fields","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/19/TeachingLongitudinalLinearMixedModelsEndtoEndAReproducibleCaseStudyinMouseBodyWeightGrowth.html"},"headline":"Teaching Longitudinal Linear Mixed Models End-to-End: A Reproducible Case Study in Mouse Body-Weight Growth","dateModified":"2025-11-19T00:00:00+00:00","datePublished":"2025-11-19T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/19/TeachingLongitudinalLinearMixedModelsEndtoEndAReproducibleCaseStudyinMouseBodyWeightGrowth.html","author":{"@type":"Person","name":"Sunday A. Adetunji"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-19 00:00:00 +0000">11-19</time>
+  </p>
+  
+  <h1>Teaching Longitudinal Linear Mixed Models End-to-End: A Reproducible Case Study in Mouse Body-Weight Growth</h1>
+  <br>Sunday A. Adetunji</h3>
+  <br> [stat.ME]
+
+  <p>Background: Linear mixed-effects models are central for analyzing longitudinal continuous data, yet many learners meet them as scattered formulas or software output rather than as a coherent workflow. There is a need for a single, reproducible case study that links questions, model building, diagnostics, and interpretation.
+  Methods: We reanalyze a published mouse body-weight experiment with 31 mice in three groups weighed weekly for 12 weeks. After reshaping the data to long format and using profile plots to motivate linear time trends, we fit three random-intercept linear mixed models: a common-slope model, a fully interacted group-by-time model, and a parsimonious model with group-specific intercepts, a shared slope for two groups, and an extra slope for the third. Models are compared using maximum likelihood, AIC, BIC, and likelihood ratio tests, and linear contrasts are used to estimate group differences in weekly means and 12 week gains.
+  Results: The parsimonious model fits as well as the fully interacted model and clearly outperforms the common-slope model, revealing small and similar gains in two groups and much steeper growth in the third, with highly significant contrasts for excess weight gain.
+  Interpretation: This case study gives a complete, executable workflow for longitudinal linear mixed modeling, from raw data and exploratory plots through model selection, diagnostics, and targeted contrasts. By making explicit the mapping from scientific questions to model terms and estimable contrasts, and by providing R code and a stepwise checklist, it serves as a practical template for teaching and applied work in biostatistics, epidemiology, and related fields</p>
+
+<p><a href="https://arxiv.org/abs/2511.14523">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
