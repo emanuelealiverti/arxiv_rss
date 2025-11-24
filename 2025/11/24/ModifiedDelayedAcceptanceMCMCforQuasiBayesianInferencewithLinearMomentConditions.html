@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Modified Delayed Acceptance MCMC for Quasi-Bayesian Inference with Linear Moment Conditions</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Modified Delayed Acceptance MCMC for Quasi-Bayesian Inference with Linear Moment Conditions" />
+<meta name="author" content="Masahiro Tanaka" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a computationally efficient framework for quasi-Bayesian inference based on linear moment conditions. The approach employs a delayed acceptance Markov chain Monte Carlo (DA-MCMC) algorithm that uses a surrogate target kernel and a proposal distribution derived from an approximate conditional posterior, thereby exploiting the structure of the quasi-likelihood. Two implementations are introduced. DA-MCMC-Exact fully incorporates prior information into the proposal distribution and maximizes per-iteration efficiency, whereas DA-MCMC-Approx omits the prior in the proposal to reduce matrix inversions, improving numerical stability and computational speed in higher dimensions. Simulation studies on heteroskedastic linear regressions show substantial gains over standard MCMC and conventional DA-MCMC baselines, measured by multivariate effective sample size per iteration and per second. The Approx variant yields the best overall throughput, while the Exact variant attains the highest per-iteration efficiency. Applications to two empirical instrumental variable regressions corroborate these findings: the Approx implementation scales to larger designs where other methods become impractical, while still delivering precise inference. Although developed for moment-based quasi-posteriors, the proposed approach also extends to risk-based quasi-Bayesian formulations when first-order conditions are linear and can be transformed analogously. Overall, the proposed algorithms provide a practical and robust tool for quasi-Bayesian analysis in statistical applications." />
+<meta property="og:description" content="We develop a computationally efficient framework for quasi-Bayesian inference based on linear moment conditions. The approach employs a delayed acceptance Markov chain Monte Carlo (DA-MCMC) algorithm that uses a surrogate target kernel and a proposal distribution derived from an approximate conditional posterior, thereby exploiting the structure of the quasi-likelihood. Two implementations are introduced. DA-MCMC-Exact fully incorporates prior information into the proposal distribution and maximizes per-iteration efficiency, whereas DA-MCMC-Approx omits the prior in the proposal to reduce matrix inversions, improving numerical stability and computational speed in higher dimensions. Simulation studies on heteroskedastic linear regressions show substantial gains over standard MCMC and conventional DA-MCMC baselines, measured by multivariate effective sample size per iteration and per second. The Approx variant yields the best overall throughput, while the Exact variant attains the highest per-iteration efficiency. Applications to two empirical instrumental variable regressions corroborate these findings: the Approx implementation scales to larger designs where other methods become impractical, while still delivering precise inference. Although developed for moment-based quasi-posteriors, the proposed approach also extends to risk-based quasi-Bayesian formulations when first-order conditions are linear and can be transformed analogously. Overall, the proposed algorithms provide a practical and robust tool for quasi-Bayesian analysis in statistical applications." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/24/ModifiedDelayedAcceptanceMCMCforQuasiBayesianInferencewithLinearMomentConditions.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/24/ModifiedDelayedAcceptanceMCMCforQuasiBayesianInferencewithLinearMomentConditions.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Modified Delayed Acceptance MCMC for Quasi-Bayesian Inference with Linear Moment Conditions" />
+<script type="application/ld+json">
+{"description":"We develop a computationally efficient framework for quasi-Bayesian inference based on linear moment conditions. The approach employs a delayed acceptance Markov chain Monte Carlo (DA-MCMC) algorithm that uses a surrogate target kernel and a proposal distribution derived from an approximate conditional posterior, thereby exploiting the structure of the quasi-likelihood. Two implementations are introduced. DA-MCMC-Exact fully incorporates prior information into the proposal distribution and maximizes per-iteration efficiency, whereas DA-MCMC-Approx omits the prior in the proposal to reduce matrix inversions, improving numerical stability and computational speed in higher dimensions. Simulation studies on heteroskedastic linear regressions show substantial gains over standard MCMC and conventional DA-MCMC baselines, measured by multivariate effective sample size per iteration and per second. The Approx variant yields the best overall throughput, while the Exact variant attains the highest per-iteration efficiency. Applications to two empirical instrumental variable regressions corroborate these findings: the Approx implementation scales to larger designs where other methods become impractical, while still delivering precise inference. Although developed for moment-based quasi-posteriors, the proposed approach also extends to risk-based quasi-Bayesian formulations when first-order conditions are linear and can be transformed analogously. Overall, the proposed algorithms provide a practical and robust tool for quasi-Bayesian analysis in statistical applications.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/24/ModifiedDelayedAcceptanceMCMCforQuasiBayesianInferencewithLinearMomentConditions.html"},"headline":"Modified Delayed Acceptance MCMC for Quasi-Bayesian Inference with Linear Moment Conditions","dateModified":"2025-11-24T00:00:00+00:00","datePublished":"2025-11-24T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/24/ModifiedDelayedAcceptanceMCMCforQuasiBayesianInferencewithLinearMomentConditions.html","author":{"@type":"Person","name":"Masahiro Tanaka"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-24 00:00:00 +0000">11-24</time>
+  </p>
+  
+  <h1>Modified Delayed Acceptance MCMC for Quasi-Bayesian Inference with Linear Moment Conditions</h1>
+  <br>Masahiro Tanaka</h3>
+  <br> [stat.CO]
+
+  <p>We develop a computationally efficient framework for quasi-Bayesian inference based on linear moment conditions. The approach employs a delayed acceptance Markov chain Monte Carlo (DA-MCMC) algorithm that uses a surrogate target kernel and a proposal distribution derived from an approximate conditional posterior, thereby exploiting the structure of the quasi-likelihood. Two implementations are introduced. DA-MCMC-Exact fully incorporates prior information into the proposal distribution and maximizes per-iteration efficiency, whereas DA-MCMC-Approx omits the prior in the proposal to reduce matrix inversions, improving numerical stability and computational speed in higher dimensions. Simulation studies on heteroskedastic linear regressions show substantial gains over standard MCMC and conventional DA-MCMC baselines, measured by multivariate effective sample size per iteration and per second. The Approx variant yields the best overall throughput, while the Exact variant attains the highest per-iteration efficiency. Applications to two empirical instrumental variable regressions corroborate these findings: the Approx implementation scales to larger designs where other methods become impractical, while still delivering precise inference. Although developed for moment-based quasi-posteriors, the proposed approach also extends to risk-based quasi-Bayesian formulations when first-order conditions are linear and can be transformed analogously. Overall, the proposed algorithms provide a practical and robust tool for quasi-Bayesian analysis in statistical applications.</p>
+
+<p><a href="https://arxiv.org/abs/2511.17117">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
