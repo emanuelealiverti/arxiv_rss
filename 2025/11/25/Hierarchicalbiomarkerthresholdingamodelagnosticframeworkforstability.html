@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Hierarchical biomarker thresholding: a model-agnostic framework for stability</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Hierarchical biomarker thresholding: a model-agnostic framework for stability" />
+<meta name="author" content="O. Debeaupuis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many biomarker pipelines require patient-level decisions aggregated from instance-level (cell/patch) scores. Thresholds tuned on pooled instances often fail across sites due to hierarchical dependence, prevalence shift, and score-scale mismatch. We present a selection-honest framework for hierarchical thresholding that makes patient-level decisions reproducible and more defensible. At its core is a risk decomposition theorem for selection-honest thresholds. The theorem separates contributions from (i) internal fit and patient-level generalization, (ii) operating-point shift reflecting prevalence and shape changes, and (iii) a stability term that penalizes sensitivity to threshold perturbations. The stability component is computable via patient-block bootstraps mapped through a monotone modulus of risk. This framework is model-agnostic, reconciles heterogeneous decision rules on a quantile scale, and yields monotone-invariant ensembles and reportable diagnostics (e.g. flip-rate, operating-point shift)." />
+<meta property="og:description" content="Many biomarker pipelines require patient-level decisions aggregated from instance-level (cell/patch) scores. Thresholds tuned on pooled instances often fail across sites due to hierarchical dependence, prevalence shift, and score-scale mismatch. We present a selection-honest framework for hierarchical thresholding that makes patient-level decisions reproducible and more defensible. At its core is a risk decomposition theorem for selection-honest thresholds. The theorem separates contributions from (i) internal fit and patient-level generalization, (ii) operating-point shift reflecting prevalence and shape changes, and (iii) a stability term that penalizes sensitivity to threshold perturbations. The stability component is computable via patient-block bootstraps mapped through a monotone modulus of risk. This framework is model-agnostic, reconciles heterogeneous decision rules on a quantile scale, and yields monotone-invariant ensembles and reportable diagnostics (e.g. flip-rate, operating-point shift)." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/Hierarchicalbiomarkerthresholdingamodelagnosticframeworkforstability.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/Hierarchicalbiomarkerthresholdingamodelagnosticframeworkforstability.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Hierarchical biomarker thresholding: a model-agnostic framework for stability" />
+<script type="application/ld+json">
+{"description":"Many biomarker pipelines require patient-level decisions aggregated from instance-level (cell/patch) scores. Thresholds tuned on pooled instances often fail across sites due to hierarchical dependence, prevalence shift, and score-scale mismatch. We present a selection-honest framework for hierarchical thresholding that makes patient-level decisions reproducible and more defensible. At its core is a risk decomposition theorem for selection-honest thresholds. The theorem separates contributions from (i) internal fit and patient-level generalization, (ii) operating-point shift reflecting prevalence and shape changes, and (iii) a stability term that penalizes sensitivity to threshold perturbations. The stability component is computable via patient-block bootstraps mapped through a monotone modulus of risk. This framework is model-agnostic, reconciles heterogeneous decision rules on a quantile scale, and yields monotone-invariant ensembles and reportable diagnostics (e.g. flip-rate, operating-point shift).","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/Hierarchicalbiomarkerthresholdingamodelagnosticframeworkforstability.html"},"headline":"Hierarchical biomarker thresholding: a model-agnostic framework for stability","dateModified":"2025-11-25T00:00:00+00:00","datePublished":"2025-11-25T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/Hierarchicalbiomarkerthresholdingamodelagnosticframeworkforstability.html","author":{"@type":"Person","name":"O. Debeaupuis"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-25 00:00:00 +0000">11-25</time>
+  </p>
+  
+  <h1>Hierarchical biomarker thresholding: a model-agnostic framework for stability</h1>
+  <br>O. Debeaupuis</h3>
+  <br> [stat.ME,stat.TH]
+
+  <p>Many biomarker pipelines require patient-level decisions aggregated from instance-level (cell/patch) scores. Thresholds tuned on pooled instances often fail across sites due to hierarchical dependence, prevalence shift, and score-scale mismatch. We present a selection-honest framework for hierarchical thresholding that makes patient-level decisions reproducible and more defensible. At its core is a risk decomposition theorem for selection-honest thresholds. The theorem separates contributions from (i) internal fit and patient-level generalization, (ii) operating-point shift reflecting prevalence and shape changes, and (iii) a stability term that penalizes sensitivity to threshold perturbations. The stability component is computable via patient-block bootstraps mapped through a monotone modulus of risk. This framework is model-agnostic, reconciles heterogeneous decision rules on a quantile scale, and yields monotone-invariant ensembles and reportable diagnostics (e.g. flip-rate, operating-point shift).</p>
+
+<p><a href="https://arxiv.org/abs/2511.18030">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

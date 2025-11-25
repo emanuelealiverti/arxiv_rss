@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Blessing of dimension in Bayesian inference on covariance matrices</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Blessing of dimension in Bayesian inference on covariance matrices" />
+<meta name="author" content="Shounak Chattopadhyay, Anru R. Zhang, David B. Dunson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian factor analysis is routinely used for dimensionality reduction in modeling of high-dimensional covariance matrices. Factor analytic decompositions express the covariance as a sum of a low rank and diagonal matrix. In practice, Gibbs sampling algorithms are typically used for posterior computation, alternating between updating the latent factors, loadings, and residual variances. In this article, we exploit a blessing of dimensionality to develop a provably accurate pseudo-posterior for the covariance matrix that bypasses the need for Gibbs or other variants of Markov chain Monte Carlo sampling. Our proposed Factor Analysis with BLEssing of dimensionality (FABLE) approach relies on a first-stage singular value decomposition (SVD) to estimate the latent factors, and then defines a jointly conjugate prior for the loadings and residual variances. The accuracy of the resulting pseudo-posterior for the covariance improves with increasing dimensionality. We show that FABLE has excellent performance in high-dimensional covariance matrix estimation, including producing well calibrated credible intervals, both theoretically and through simulation experiments. We also demonstrate the strength of our approach in terms of accurate inference and computational efficiency by applying it to a gene expression data set." />
+<meta property="og:description" content="Bayesian factor analysis is routinely used for dimensionality reduction in modeling of high-dimensional covariance matrices. Factor analytic decompositions express the covariance as a sum of a low rank and diagonal matrix. In practice, Gibbs sampling algorithms are typically used for posterior computation, alternating between updating the latent factors, loadings, and residual variances. In this article, we exploit a blessing of dimensionality to develop a provably accurate pseudo-posterior for the covariance matrix that bypasses the need for Gibbs or other variants of Markov chain Monte Carlo sampling. Our proposed Factor Analysis with BLEssing of dimensionality (FABLE) approach relies on a first-stage singular value decomposition (SVD) to estimate the latent factors, and then defines a jointly conjugate prior for the loadings and residual variances. The accuracy of the resulting pseudo-posterior for the covariance improves with increasing dimensionality. We show that FABLE has excellent performance in high-dimensional covariance matrix estimation, including producing well calibrated credible intervals, both theoretically and through simulation experiments. We also demonstrate the strength of our approach in terms of accurate inference and computational efficiency by applying it to a gene expression data set." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/BlessingofdimensioninBayesianinferenceoncovariancematrices.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/BlessingofdimensioninBayesianinferenceoncovariancematrices.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Blessing of dimension in Bayesian inference on covariance matrices" />
+<script type="application/ld+json">
+{"description":"Bayesian factor analysis is routinely used for dimensionality reduction in modeling of high-dimensional covariance matrices. Factor analytic decompositions express the covariance as a sum of a low rank and diagonal matrix. In practice, Gibbs sampling algorithms are typically used for posterior computation, alternating between updating the latent factors, loadings, and residual variances. In this article, we exploit a blessing of dimensionality to develop a provably accurate pseudo-posterior for the covariance matrix that bypasses the need for Gibbs or other variants of Markov chain Monte Carlo sampling. Our proposed Factor Analysis with BLEssing of dimensionality (FABLE) approach relies on a first-stage singular value decomposition (SVD) to estimate the latent factors, and then defines a jointly conjugate prior for the loadings and residual variances. The accuracy of the resulting pseudo-posterior for the covariance improves with increasing dimensionality. We show that FABLE has excellent performance in high-dimensional covariance matrix estimation, including producing well calibrated credible intervals, both theoretically and through simulation experiments. We also demonstrate the strength of our approach in terms of accurate inference and computational efficiency by applying it to a gene expression data set.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/BlessingofdimensioninBayesianinferenceoncovariancematrices.html"},"headline":"Blessing of dimension in Bayesian inference on covariance matrices","dateModified":"2025-11-25T00:00:00+00:00","datePublished":"2025-11-25T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/BlessingofdimensioninBayesianinferenceoncovariancematrices.html","author":{"@type":"Person","name":"Shounak Chattopadhyay, Anru R. Zhang, David B. Dunson"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-25 00:00:00 +0000">11-25</time>
+  </p>
+  
+  <h1>Blessing of dimension in Bayesian inference on covariance matrices</h1>
+  <br>Shounak Chattopadhyay, Anru R. Zhang, David B. Dunson</h3>
+  <br> [stat.ME]
+
+  <p>Bayesian factor analysis is routinely used for dimensionality reduction in modeling of high-dimensional covariance matrices. Factor analytic decompositions express the covariance as a sum of a low rank and diagonal matrix. In practice, Gibbs sampling algorithms are typically used for posterior computation, alternating between updating the latent factors, loadings, and residual variances. In this article, we exploit a blessing of dimensionality to develop a provably accurate pseudo-posterior for the covariance matrix that bypasses the need for Gibbs or other variants of Markov chain Monte Carlo sampling. Our proposed Factor Analysis with BLEssing of dimensionality (FABLE) approach relies on a first-stage singular value decomposition (SVD) to estimate the latent factors, and then defines a jointly conjugate prior for the loadings and residual variances. The accuracy of the resulting pseudo-posterior for the covariance improves with increasing dimensionality. We show that FABLE has excellent performance in high-dimensional covariance matrix estimation, including producing well calibrated credible intervals, both theoretically and through simulation experiments. We also demonstrate the strength of our approach in terms of accurate inference and computational efficiency by applying it to a gene expression data set.</p>
+
+<p><a href="https://arxiv.org/abs/2404.03805">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

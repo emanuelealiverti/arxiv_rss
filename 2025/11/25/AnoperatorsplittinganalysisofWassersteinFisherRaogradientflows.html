@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An operator splitting analysis of Wasserstein--Fisher--Rao gradient flows</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="An operator splitting analysis of Wasserstein–Fisher–Rao gradient flows" />
+<meta name="author" content="Francesca Romana Crucinio, Sahani Pathiraja" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Wasserstein-Fisher-Rao (WFR) gradient flows have been recently proposed as a powerful sampling tool that combines the advantages of pure Wasserstein (W) and pure Fisher-Rao (FR) gradient flows. Existing algorithmic developments implicitly make use of operator splitting techniques to numerically approximate the WFR partial differential equation, whereby the W flow is evaluated over a given step size and then the FR flow (or vice versa). This works investigates the impact of the order in which the W and FR operator are evaluated and aims to provide a quantitative analysis. Somewhat surprisingly, we show that with a judicious choice of step size and operator ordering, the split scheme can converge to the target distribution faster than the exact WFR flow (in terms of model time). We obtain variational formulae describing the evolution over one time step of both sequential splitting schemes and investigate in which settings the W-FR split should be preferred to the FR-W split. As a step towards this goal we show that the WFR gradient flow preserves log-concavity and obtain the first sharp decay bound for WFR." />
+<meta property="og:description" content="Wasserstein-Fisher-Rao (WFR) gradient flows have been recently proposed as a powerful sampling tool that combines the advantages of pure Wasserstein (W) and pure Fisher-Rao (FR) gradient flows. Existing algorithmic developments implicitly make use of operator splitting techniques to numerically approximate the WFR partial differential equation, whereby the W flow is evaluated over a given step size and then the FR flow (or vice versa). This works investigates the impact of the order in which the W and FR operator are evaluated and aims to provide a quantitative analysis. Somewhat surprisingly, we show that with a judicious choice of step size and operator ordering, the split scheme can converge to the target distribution faster than the exact WFR flow (in terms of model time). We obtain variational formulae describing the evolution over one time step of both sequential splitting schemes and investigate in which settings the W-FR split should be preferred to the FR-W split. As a step towards this goal we show that the WFR gradient flow preserves log-concavity and obtain the first sharp decay bound for WFR." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/AnoperatorsplittinganalysisofWassersteinFisherRaogradientflows.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/AnoperatorsplittinganalysisofWassersteinFisherRaogradientflows.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="An operator splitting analysis of Wasserstein–Fisher–Rao gradient flows" />
+<script type="application/ld+json">
+{"description":"Wasserstein-Fisher-Rao (WFR) gradient flows have been recently proposed as a powerful sampling tool that combines the advantages of pure Wasserstein (W) and pure Fisher-Rao (FR) gradient flows. Existing algorithmic developments implicitly make use of operator splitting techniques to numerically approximate the WFR partial differential equation, whereby the W flow is evaluated over a given step size and then the FR flow (or vice versa). This works investigates the impact of the order in which the W and FR operator are evaluated and aims to provide a quantitative analysis. Somewhat surprisingly, we show that with a judicious choice of step size and operator ordering, the split scheme can converge to the target distribution faster than the exact WFR flow (in terms of model time). We obtain variational formulae describing the evolution over one time step of both sequential splitting schemes and investigate in which settings the W-FR split should be preferred to the FR-W split. As a step towards this goal we show that the WFR gradient flow preserves log-concavity and obtain the first sharp decay bound for WFR.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/AnoperatorsplittinganalysisofWassersteinFisherRaogradientflows.html"},"headline":"An operator splitting analysis of Wasserstein–Fisher–Rao gradient flows","dateModified":"2025-11-25T00:00:00+00:00","datePublished":"2025-11-25T00:00:00+00:00","url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/25/AnoperatorsplittinganalysisofWassersteinFisherRaogradientflows.html","author":{"@type":"Person","name":"Francesca Romana Crucinio, Sahani Pathiraja"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-25 00:00:00 +0000">11-25</time>
+  </p>
+  
+  <h1>An operator splitting analysis of Wasserstein--Fisher--Rao gradient flows</h1>
+  <br>Francesca Romana Crucinio, Sahani Pathiraja</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>Wasserstein-Fisher-Rao (WFR) gradient flows have been recently proposed as a powerful sampling tool that combines the advantages of pure Wasserstein (W) and pure Fisher-Rao (FR) gradient flows. Existing algorithmic developments implicitly make use of operator splitting techniques to numerically approximate the WFR partial differential equation, whereby the W flow is evaluated over a given step size and then the FR flow (or vice versa). This works investigates the impact of the order in which the W and FR operator are evaluated and aims to provide a quantitative analysis. Somewhat surprisingly, we show that with a judicious choice of step size and operator ordering, the split scheme can converge to the target distribution faster than the exact WFR flow (in terms of model time). We obtain variational formulae describing the evolution over one time step of both sequential splitting schemes and investigate in which settings the W-FR split should be preferred to the FR-W split. As a step towards this goal we show that the WFR gradient flow preserves log-concavity and obtain the first sharp decay bound for WFR.</p>
+
+<p><a href="https://arxiv.org/abs/2511.18060">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
