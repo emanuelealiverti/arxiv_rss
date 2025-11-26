@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Optimization and Regularization Under Arbitrary Objectives</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Optimization and Regularization Under Arbitrary Objectives" />
+<meta name="author" content="Jared N. Lakhani, Etienne Pienaar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This study investigates the limitations of applying Markov Chain Monte Carlo (MCMC) methods to arbitrary objective functions, focusing on a two-block MCMC framework which alternates between Metropolis-Hastings and Gibbs sampling. While such approaches are often considered advantageous for enabling data-driven regularization, we show that their performance critically depends on the sharpness of the employed likelihood form. By introducing a sharpness parameter and exploring alternative likelihood formulations proportional to the target objective function, we demonstrate how likelihood curvature governs both in-sample performance and the degree of regularization inferred by the training data. Empirical applications are conducted on reinforcement learning tasks: including a navigation problem and the game of tic-tac-toe. The study concludes with a separate analysis examining the implications of extreme likelihood sharpness on arbitrary objective functions stemming from the classic game of blackjack, where the first block of the two-block MCMC framework is replaced with an iterative optimization step. The resulting hybrid approach achieves performance nearly identical to the original MCMC framework, indicating that excessive likelihood sharpness effectively collapses posterior mass onto a single dominant mode." />
+<meta property="og:description" content="This study investigates the limitations of applying Markov Chain Monte Carlo (MCMC) methods to arbitrary objective functions, focusing on a two-block MCMC framework which alternates between Metropolis-Hastings and Gibbs sampling. While such approaches are often considered advantageous for enabling data-driven regularization, we show that their performance critically depends on the sharpness of the employed likelihood form. By introducing a sharpness parameter and exploring alternative likelihood formulations proportional to the target objective function, we demonstrate how likelihood curvature governs both in-sample performance and the degree of regularization inferred by the training data. Empirical applications are conducted on reinforcement learning tasks: including a navigation problem and the game of tic-tac-toe. The study concludes with a separate analysis examining the implications of extreme likelihood sharpness on arbitrary objective functions stemming from the classic game of blackjack, where the first block of the two-block MCMC framework is replaced with an iterative optimization step. The resulting hybrid approach achieves performance nearly identical to the original MCMC framework, indicating that excessive likelihood sharpness effectively collapses posterior mass onto a single dominant mode." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/26/OptimizationandRegularizationUnderArbitraryObjectives.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/26/OptimizationandRegularizationUnderArbitraryObjectives.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Optimization and Regularization Under Arbitrary Objectives" />
+<script type="application/ld+json">
+{"description":"This study investigates the limitations of applying Markov Chain Monte Carlo (MCMC) methods to arbitrary objective functions, focusing on a two-block MCMC framework which alternates between Metropolis-Hastings and Gibbs sampling. While such approaches are often considered advantageous for enabling data-driven regularization, we show that their performance critically depends on the sharpness of the employed likelihood form. By introducing a sharpness parameter and exploring alternative likelihood formulations proportional to the target objective function, we demonstrate how likelihood curvature governs both in-sample performance and the degree of regularization inferred by the training data. Empirical applications are conducted on reinforcement learning tasks: including a navigation problem and the game of tic-tac-toe. The study concludes with a separate analysis examining the implications of extreme likelihood sharpness on arbitrary objective functions stemming from the classic game of blackjack, where the first block of the two-block MCMC framework is replaced with an iterative optimization step. The resulting hybrid approach achieves performance nearly identical to the original MCMC framework, indicating that excessive likelihood sharpness effectively collapses posterior mass onto a single dominant mode.","headline":"Optimization and Regularization Under Arbitrary Objectives","dateModified":"2025-11-26T00:00:00+00:00","datePublished":"2025-11-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/26/OptimizationandRegularizationUnderArbitraryObjectives.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/26/OptimizationandRegularizationUnderArbitraryObjectives.html","author":{"@type":"Person","name":"Jared N. Lakhani, Etienne Pienaar"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-26 00:00:00 +0000">11-26</time>
+  </p>
+  
+  <h1>Optimization and Regularization Under Arbitrary Objectives</h1>
+  <br>Jared N. Lakhani, Etienne Pienaar</h3>
+  <br> [stat.ML,stat.CO]
+
+  <p>This study investigates the limitations of applying Markov Chain Monte Carlo (MCMC) methods to arbitrary objective functions, focusing on a two-block MCMC framework which alternates between Metropolis-Hastings and Gibbs sampling. While such approaches are often considered advantageous for enabling data-driven regularization, we show that their performance critically depends on the sharpness of the employed likelihood form. By introducing a sharpness parameter and exploring alternative likelihood formulations proportional to the target objective function, we demonstrate how likelihood curvature governs both in-sample performance and the degree of regularization inferred by the training data. Empirical applications are conducted on reinforcement learning tasks: including a navigation problem and the game of tic-tac-toe. The study concludes with a separate analysis examining the implications of extreme likelihood sharpness on arbitrary objective functions stemming from the classic game of blackjack, where the first block of the two-block MCMC framework is replaced with an iterative optimization step. The resulting hybrid approach achieves performance nearly identical to the original MCMC framework, indicating that excessive likelihood sharpness effectively collapses posterior mass onto a single dominant mode.</p>
+
+<p><a href="https://arxiv.org/abs/2511.19628">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

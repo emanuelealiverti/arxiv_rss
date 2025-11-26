@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sparse Techniques for Regression in Deep Gaussian Processes</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sparse Techniques for Regression in Deep Gaussian Processes" />
+<meta name="author" content="Jonas Latz, Aretha L. Teckentrup, Simon Urbainczyk" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gaussian processes (GPs) have gained popularity as flexible machine learning models for regression and function approximation with an in-built method for uncertainty quantification. However, GPs suffer when the amount of training data is large or when the underlying function contains multi-scale features that are difficult to represent by a stationary kernel. To address the former, training of GPs with large-scale data is often performed through inducing point approximations, also known as sparse GP regression (GPR), where the size of the covariance matrices in GPR is reduced considerably through a greedy search on the data set. To aid the latter, deep GPs have gained traction as hierarchical models that resolve multi-scale features by combining multiple GPs. Posterior inference in deep GPs requires a sampling or, more usual, a variational approximation. Variational approximations lead to large-scale stochastic, non-convex optimisation problems and the resulting approximation tends to represent uncertainty incorrectly. In this work, we combine variational learning with MCMC to develop a particle-based expectation-maximisation method to simultaneously find inducing points within the large-scale data (variationally) and accurately train the deep GPs (sampling-based). The result is a highly efficient and accurate methodology for deep GP training on large-scale data. We test our method on standard benchmark problems." />
+<meta property="og:description" content="Gaussian processes (GPs) have gained popularity as flexible machine learning models for regression and function approximation with an in-built method for uncertainty quantification. However, GPs suffer when the amount of training data is large or when the underlying function contains multi-scale features that are difficult to represent by a stationary kernel. To address the former, training of GPs with large-scale data is often performed through inducing point approximations, also known as sparse GP regression (GPR), where the size of the covariance matrices in GPR is reduced considerably through a greedy search on the data set. To aid the latter, deep GPs have gained traction as hierarchical models that resolve multi-scale features by combining multiple GPs. Posterior inference in deep GPs requires a sampling or, more usual, a variational approximation. Variational approximations lead to large-scale stochastic, non-convex optimisation problems and the resulting approximation tends to represent uncertainty incorrectly. In this work, we combine variational learning with MCMC to develop a particle-based expectation-maximisation method to simultaneously find inducing points within the large-scale data (variationally) and accurately train the deep GPs (sampling-based). The result is a highly efficient and accurate methodology for deep GP training on large-scale data. We test our method on standard benchmark problems." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/26/SparseTechniquesforRegressioninDeepGaussianProcesses.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/26/SparseTechniquesforRegressioninDeepGaussianProcesses.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sparse Techniques for Regression in Deep Gaussian Processes" />
+<script type="application/ld+json">
+{"description":"Gaussian processes (GPs) have gained popularity as flexible machine learning models for regression and function approximation with an in-built method for uncertainty quantification. However, GPs suffer when the amount of training data is large or when the underlying function contains multi-scale features that are difficult to represent by a stationary kernel. To address the former, training of GPs with large-scale data is often performed through inducing point approximations, also known as sparse GP regression (GPR), where the size of the covariance matrices in GPR is reduced considerably through a greedy search on the data set. To aid the latter, deep GPs have gained traction as hierarchical models that resolve multi-scale features by combining multiple GPs. Posterior inference in deep GPs requires a sampling or, more usual, a variational approximation. Variational approximations lead to large-scale stochastic, non-convex optimisation problems and the resulting approximation tends to represent uncertainty incorrectly. In this work, we combine variational learning with MCMC to develop a particle-based expectation-maximisation method to simultaneously find inducing points within the large-scale data (variationally) and accurately train the deep GPs (sampling-based). The result is a highly efficient and accurate methodology for deep GP training on large-scale data. We test our method on standard benchmark problems.","headline":"Sparse Techniques for Regression in Deep Gaussian Processes","dateModified":"2025-11-26T00:00:00+00:00","datePublished":"2025-11-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/26/SparseTechniquesforRegressioninDeepGaussianProcesses.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/26/SparseTechniquesforRegressioninDeepGaussianProcesses.html","author":{"@type":"Person","name":"Jonas Latz, Aretha L. Teckentrup, Simon Urbainczyk"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-26 00:00:00 +0000">11-26</time>
+  </p>
+  
+  <h1>Sparse Techniques for Regression in Deep Gaussian Processes</h1>
+  <br>Jonas Latz, Aretha L. Teckentrup, Simon Urbainczyk</h3>
+  <br> [stat.ML,stat.CO]
+
+  <p>Gaussian processes (GPs) have gained popularity as flexible machine learning models for regression and function approximation with an in-built method for uncertainty quantification. However, GPs suffer when the amount of training data is large or when the underlying function contains multi-scale features that are difficult to represent by a stationary kernel. To address the former, training of GPs with large-scale data is often performed through inducing point approximations, also known as sparse GP regression (GPR), where the size of the covariance matrices in GPR is reduced considerably through a greedy search on the data set. To aid the latter, deep GPs have gained traction as hierarchical models that resolve multi-scale features by combining multiple GPs. Posterior inference in deep GPs requires a sampling or, more usual, a variational approximation. Variational approximations lead to large-scale stochastic, non-convex optimisation problems and the resulting approximation tends to represent uncertainty incorrectly. In this work, we combine variational learning with MCMC to develop a particle-based expectation-maximisation method to simultaneously find inducing points within the large-scale data (variationally) and accurately train the deep GPs (sampling-based). The result is a highly efficient and accurate methodology for deep GP training on large-scale data. We test our method on standard benchmark problems.</p>
+
+<p><a href="https://arxiv.org/abs/2505.11355">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
