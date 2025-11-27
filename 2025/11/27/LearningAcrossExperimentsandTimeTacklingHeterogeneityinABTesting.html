@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning Across Experiments and Time: Tackling Heterogeneity in A/B Testing</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Learning Across Experiments and Time: Tackling Heterogeneity in A/B Testing" />
+<meta name="author" content="Xinran Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A/B testing plays a central role in data-driven product development, guiding launch decisions for new features and designs. However, treatment effect estimates are often noisy due to short horizons, early stopping, and slowly accumulating long-tail metrics, making early conclusions unreliable. A natural remedy is to pool information across related experiments, but naive pooling potentially fails: within experiments, treatment effects may evolve over time, so mixing early and late outcomes without accounting for nonstationarity induces bias; across experiments, heterogeneity in product, user population, or season dilutes the signal with unrelated noise. These issues highlight the need for pooling strategies that adapt to both temporal evolution and cross-experiment variability. To address these challenges, we propose a local empirical Bayes framework that adapts to both temporal and cross-experiment heterogeneity. Throughout an experiment’s timeline, our method builds a tailored comparison set: time-aware within the experiment to respect nonstationarity, and context-aware across experiments to draw only from comparable counterparts. The estimator then borrows strength selectively from this set, producing stabilized treatment effect estimates that remain sensitive to both time dynamics and experimental context. Through theoretical analysis and empirical evaluation, we show that the proposed local pooling strategy consistently outperforms global pooling by reducing variance while avoiding bias. Our proposed framework enhances the reliability of A/B testing under practical constraints, thereby enabling more timely and informed decision-making." />
+<meta property="og:description" content="A/B testing plays a central role in data-driven product development, guiding launch decisions for new features and designs. However, treatment effect estimates are often noisy due to short horizons, early stopping, and slowly accumulating long-tail metrics, making early conclusions unreliable. A natural remedy is to pool information across related experiments, but naive pooling potentially fails: within experiments, treatment effects may evolve over time, so mixing early and late outcomes without accounting for nonstationarity induces bias; across experiments, heterogeneity in product, user population, or season dilutes the signal with unrelated noise. These issues highlight the need for pooling strategies that adapt to both temporal evolution and cross-experiment variability. To address these challenges, we propose a local empirical Bayes framework that adapts to both temporal and cross-experiment heterogeneity. Throughout an experiment’s timeline, our method builds a tailored comparison set: time-aware within the experiment to respect nonstationarity, and context-aware across experiments to draw only from comparable counterparts. The estimator then borrows strength selectively from this set, producing stabilized treatment effect estimates that remain sensitive to both time dynamics and experimental context. Through theoretical analysis and empirical evaluation, we show that the proposed local pooling strategy consistently outperforms global pooling by reducing variance while avoiding bias. Our proposed framework enhances the reliability of A/B testing under practical constraints, thereby enabling more timely and informed decision-making." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/11/27/LearningAcrossExperimentsandTimeTacklingHeterogeneityinABTesting.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/11/27/LearningAcrossExperimentsandTimeTacklingHeterogeneityinABTesting.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learning Across Experiments and Time: Tackling Heterogeneity in A/B Testing" />
+<script type="application/ld+json">
+{"description":"A/B testing plays a central role in data-driven product development, guiding launch decisions for new features and designs. However, treatment effect estimates are often noisy due to short horizons, early stopping, and slowly accumulating long-tail metrics, making early conclusions unreliable. A natural remedy is to pool information across related experiments, but naive pooling potentially fails: within experiments, treatment effects may evolve over time, so mixing early and late outcomes without accounting for nonstationarity induces bias; across experiments, heterogeneity in product, user population, or season dilutes the signal with unrelated noise. These issues highlight the need for pooling strategies that adapt to both temporal evolution and cross-experiment variability. To address these challenges, we propose a local empirical Bayes framework that adapts to both temporal and cross-experiment heterogeneity. Throughout an experiment’s timeline, our method builds a tailored comparison set: time-aware within the experiment to respect nonstationarity, and context-aware across experiments to draw only from comparable counterparts. The estimator then borrows strength selectively from this set, producing stabilized treatment effect estimates that remain sensitive to both time dynamics and experimental context. Through theoretical analysis and empirical evaluation, we show that the proposed local pooling strategy consistently outperforms global pooling by reducing variance while avoiding bias. Our proposed framework enhances the reliability of A/B testing under practical constraints, thereby enabling more timely and informed decision-making.","headline":"Learning Across Experiments and Time: Tackling Heterogeneity in A/B Testing","dateModified":"2025-11-27T00:00:00+00:00","datePublished":"2025-11-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/27/LearningAcrossExperimentsandTimeTacklingHeterogeneityinABTesting.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/11/27/LearningAcrossExperimentsandTimeTacklingHeterogeneityinABTesting.html","author":{"@type":"Person","name":"Xinran Li"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-27 00:00:00 +0000">11-27</time>
+  </p>
+  
+  <h1>Learning Across Experiments and Time: Tackling Heterogeneity in A/B Testing</h1>
+  <br>Xinran Li</h3>
+  <br> [stat.ME]
+
+  <p>A/B testing plays a central role in data-driven product development, guiding launch decisions for new features and designs. However, treatment effect estimates are often noisy due to short horizons, early stopping, and slowly accumulating long-tail metrics, making early conclusions unreliable. A natural remedy is to pool information across related experiments, but naive pooling potentially fails: within experiments, treatment effects may evolve over time, so mixing early and late outcomes without accounting for nonstationarity induces bias; across experiments, heterogeneity in product, user population, or season dilutes the signal with unrelated noise. These issues highlight the need for pooling strategies that adapt to both temporal evolution and cross-experiment variability. To address these challenges, we propose a local empirical Bayes framework that adapts to both temporal and cross-experiment heterogeneity. Throughout an experiment’s timeline, our method builds a tailored comparison set: time-aware within the experiment to respect nonstationarity, and context-aware across experiments to draw only from comparable counterparts. The estimator then borrows strength selectively from this set, producing stabilized treatment effect estimates that remain sensitive to both time dynamics and experimental context. Through theoretical analysis and empirical evaluation, we show that the proposed local pooling strategy consistently outperforms global pooling by reducing variance while avoiding bias. Our proposed framework enhances the reliability of A/B testing under practical constraints, thereby enabling more timely and informed decision-making.</p>
+
+<p><a href="https://arxiv.org/abs/2511.21282">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
