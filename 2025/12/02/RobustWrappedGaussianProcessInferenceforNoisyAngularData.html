@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Robust Wrapped Gaussian Process Inference for Noisy Angular Data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Robust Wrapped Gaussian Process Inference for Noisy Angular Data" />
+<meta name="author" content="Andrew Cooper, Justin Strait, Mary Frances Dorn, Robert B. Gramacy, Brendon Parsons, Alessandro Cattaneo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Angular data are commonly encountered in settings with a directional or orientational component. Regressing an angular response on real-valued features requires intrinsically capturing the circular or spherical manifold the data lie on, or using an appropriate extrinsic transformation. A popular example of the latter is the technique of distributional wrapping, in which functions are “wrapped” around the unit circle via a modulo-$2{\pi}$ transformation. This approach enables flexible, non-linear models like Gaussian processes (GPs) to properly account for circular structure. While straightforward in concept, the need to infer the latent unwrapped distribution along with its wrapping behavior makes inference difficult in noisy response settings, as misspecification of one can severely hinder estimation of the other. However, applications such as radiowave analysis (Shangguan et al., 2015) and biomedical engineering (Kurz and Hanebeck, 2015) encounter radial data where wrapping occurs in only one direction. We therefore propose a novel wrapped GP (WGP) model formulation that recognizes monotonic wrapping behavior for more accurate inference in these situations. This is achieved by estimating the locations where wrapping occurs and partitioning the input space accordingly. We also specify a more robust Student’s t response likelihood, and take advantage of an elliptical slice sampling (ESS) algorithm for rejection-free sampling from the latent GP space. We showcase our model’s preferable performance on simulated examples compared to existing WGP methodologies. We then apply our method to the problem of localizing radiofrequency identification (RFID) tags, in which we model the relationship between frequency and phase angle to infer how far away an RFID tag is from an antenna." />
+<meta property="og:description" content="Angular data are commonly encountered in settings with a directional or orientational component. Regressing an angular response on real-valued features requires intrinsically capturing the circular or spherical manifold the data lie on, or using an appropriate extrinsic transformation. A popular example of the latter is the technique of distributional wrapping, in which functions are “wrapped” around the unit circle via a modulo-$2{\pi}$ transformation. This approach enables flexible, non-linear models like Gaussian processes (GPs) to properly account for circular structure. While straightforward in concept, the need to infer the latent unwrapped distribution along with its wrapping behavior makes inference difficult in noisy response settings, as misspecification of one can severely hinder estimation of the other. However, applications such as radiowave analysis (Shangguan et al., 2015) and biomedical engineering (Kurz and Hanebeck, 2015) encounter radial data where wrapping occurs in only one direction. We therefore propose a novel wrapped GP (WGP) model formulation that recognizes monotonic wrapping behavior for more accurate inference in these situations. This is achieved by estimating the locations where wrapping occurs and partitioning the input space accordingly. We also specify a more robust Student’s t response likelihood, and take advantage of an elliptical slice sampling (ESS) algorithm for rejection-free sampling from the latent GP space. We showcase our model’s preferable performance on simulated examples compared to existing WGP methodologies. We then apply our method to the problem of localizing radiofrequency identification (RFID) tags, in which we model the relationship between frequency and phase angle to infer how far away an RFID tag is from an antenna." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/12/02/RobustWrappedGaussianProcessInferenceforNoisyAngularData.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/12/02/RobustWrappedGaussianProcessInferenceforNoisyAngularData.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Robust Wrapped Gaussian Process Inference for Noisy Angular Data" />
+<script type="application/ld+json">
+{"description":"Angular data are commonly encountered in settings with a directional or orientational component. Regressing an angular response on real-valued features requires intrinsically capturing the circular or spherical manifold the data lie on, or using an appropriate extrinsic transformation. A popular example of the latter is the technique of distributional wrapping, in which functions are “wrapped” around the unit circle via a modulo-$2{\\pi}$ transformation. This approach enables flexible, non-linear models like Gaussian processes (GPs) to properly account for circular structure. While straightforward in concept, the need to infer the latent unwrapped distribution along with its wrapping behavior makes inference difficult in noisy response settings, as misspecification of one can severely hinder estimation of the other. However, applications such as radiowave analysis (Shangguan et al., 2015) and biomedical engineering (Kurz and Hanebeck, 2015) encounter radial data where wrapping occurs in only one direction. We therefore propose a novel wrapped GP (WGP) model formulation that recognizes monotonic wrapping behavior for more accurate inference in these situations. This is achieved by estimating the locations where wrapping occurs and partitioning the input space accordingly. We also specify a more robust Student’s t response likelihood, and take advantage of an elliptical slice sampling (ESS) algorithm for rejection-free sampling from the latent GP space. We showcase our model’s preferable performance on simulated examples compared to existing WGP methodologies. We then apply our method to the problem of localizing radiofrequency identification (RFID) tags, in which we model the relationship between frequency and phase angle to infer how far away an RFID tag is from an antenna.","headline":"Robust Wrapped Gaussian Process Inference for Noisy Angular Data","dateModified":"2025-12-02T00:00:00+00:00","datePublished":"2025-12-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/02/RobustWrappedGaussianProcessInferenceforNoisyAngularData.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/02/RobustWrappedGaussianProcessInferenceforNoisyAngularData.html","author":{"@type":"Person","name":"Andrew Cooper, Justin Strait, Mary Frances Dorn, Robert B. Gramacy, Brendon Parsons, Alessandro Cattaneo"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-02 00:00:00 +0000">12-02</time>
+  </p>
+  
+  <h1>Robust Wrapped Gaussian Process Inference for Noisy Angular Data</h1>
+  <br>Andrew Cooper, Justin Strait, Mary Frances Dorn, Robert B. Gramacy, Brendon Parsons, Alessandro Cattaneo</h3>
+  <br> [stat.AP]
+
+  <p>Angular data are commonly encountered in settings with a directional or orientational component. Regressing an angular response on real-valued features requires intrinsically capturing the circular or spherical manifold the data lie on, or using an appropriate extrinsic transformation. A popular example of the latter is the technique of distributional wrapping, in which functions are “wrapped” around the unit circle via a modulo-$2{\pi}$ transformation. This approach enables flexible, non-linear models like Gaussian processes (GPs) to properly account for circular structure. While straightforward in concept, the need to infer the latent unwrapped distribution along with its wrapping behavior makes inference difficult in noisy response settings, as misspecification of one can severely hinder estimation of the other. However, applications such as radiowave analysis (Shangguan et al., 2015) and biomedical engineering (Kurz and Hanebeck, 2015) encounter radial data where wrapping occurs in only one direction. We therefore propose a novel wrapped GP (WGP) model formulation that recognizes monotonic wrapping behavior for more accurate inference in these situations. This is achieved by estimating the locations where wrapping occurs and partitioning the input space accordingly. We also specify a more robust Student’s t response likelihood, and take advantage of an elliptical slice sampling (ESS) algorithm for rejection-free sampling from the latent GP space. We showcase our model’s preferable performance on simulated examples compared to existing WGP methodologies. We then apply our method to the problem of localizing radiofrequency identification (RFID) tags, in which we model the relationship between frequency and phase angle to infer how far away an RFID tag is from an antenna.</p>
+
+<p><a href="https://arxiv.org/abs/2512.00277">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Discriminative classification with generative features: bridging Naive Bayes and logistic regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Discriminative classification with generative features: bridging Naive Bayes and logistic regression" />
+<meta name="author" content="Zachary Terner, Alexander Petersen, Yuedong Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce Smart Bayes, a new classification framework that bridges generative and discriminative modeling by integrating likelihood-ratio-based generative features into a logistic-regression-style discriminative classifier. From the generative perspective, Smart Bayes relaxes the fixed unit weights of Naive Bayes by allowing data-driven coefficients on density-ratio features. From a discriminative perspective, it constructs transformed inputs as marginal log-density ratios that explicitly quantify how much more likely each feature value is under one class than another, thereby providing predictors with stronger class separation than the raw covariates. To support this framework, we develop a spline-based estimator for univariate log-density ratios that is flexible, robust, and computationally efficient. Through extensive simulations and real-data studies, Smart Bayes often outperforms both logistic regression and Naive Bayes. Our results highlight the potential of hybrid approaches that exploit generative structure to enhance discriminative performance." />
+<meta property="og:description" content="We introduce Smart Bayes, a new classification framework that bridges generative and discriminative modeling by integrating likelihood-ratio-based generative features into a logistic-regression-style discriminative classifier. From the generative perspective, Smart Bayes relaxes the fixed unit weights of Naive Bayes by allowing data-driven coefficients on density-ratio features. From a discriminative perspective, it constructs transformed inputs as marginal log-density ratios that explicitly quantify how much more likely each feature value is under one class than another, thereby providing predictors with stronger class separation than the raw covariates. To support this framework, we develop a spline-based estimator for univariate log-density ratios that is flexible, robust, and computationally efficient. Through extensive simulations and real-data studies, Smart Bayes often outperforms both logistic regression and Naive Bayes. Our results highlight the potential of hybrid approaches that exploit generative structure to enhance discriminative performance." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/12/02/DiscriminativeclassificationwithgenerativefeaturesbridgingNaiveBayesandlogisticregression.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/12/02/DiscriminativeclassificationwithgenerativefeaturesbridgingNaiveBayesandlogisticregression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Discriminative classification with generative features: bridging Naive Bayes and logistic regression" />
+<script type="application/ld+json">
+{"description":"We introduce Smart Bayes, a new classification framework that bridges generative and discriminative modeling by integrating likelihood-ratio-based generative features into a logistic-regression-style discriminative classifier. From the generative perspective, Smart Bayes relaxes the fixed unit weights of Naive Bayes by allowing data-driven coefficients on density-ratio features. From a discriminative perspective, it constructs transformed inputs as marginal log-density ratios that explicitly quantify how much more likely each feature value is under one class than another, thereby providing predictors with stronger class separation than the raw covariates. To support this framework, we develop a spline-based estimator for univariate log-density ratios that is flexible, robust, and computationally efficient. Through extensive simulations and real-data studies, Smart Bayes often outperforms both logistic regression and Naive Bayes. Our results highlight the potential of hybrid approaches that exploit generative structure to enhance discriminative performance.","headline":"Discriminative classification with generative features: bridging Naive Bayes and logistic regression","dateModified":"2025-12-02T00:00:00+00:00","datePublished":"2025-12-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/02/DiscriminativeclassificationwithgenerativefeaturesbridgingNaiveBayesandlogisticregression.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/02/DiscriminativeclassificationwithgenerativefeaturesbridgingNaiveBayesandlogisticregression.html","author":{"@type":"Person","name":"Zachary Terner, Alexander Petersen, Yuedong Wang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-02 00:00:00 +0000">12-02</time>
+  </p>
+  
+  <h1>Discriminative classification with generative features: bridging Naive Bayes and logistic regression</h1>
+  <br>Zachary Terner, Alexander Petersen, Yuedong Wang</h3>
+  <br> [stat.ML,stat.CO,stat.ME]
+
+  <p>We introduce Smart Bayes, a new classification framework that bridges generative and discriminative modeling by integrating likelihood-ratio-based generative features into a logistic-regression-style discriminative classifier. From the generative perspective, Smart Bayes relaxes the fixed unit weights of Naive Bayes by allowing data-driven coefficients on density-ratio features. From a discriminative perspective, it constructs transformed inputs as marginal log-density ratios that explicitly quantify how much more likely each feature value is under one class than another, thereby providing predictors with stronger class separation than the raw covariates. To support this framework, we develop a spline-based estimator for univariate log-density ratios that is flexible, robust, and computationally efficient. Through extensive simulations and real-data studies, Smart Bayes often outperforms both logistic regression and Naive Bayes. Our results highlight the potential of hybrid approaches that exploit generative structure to enhance discriminative performance.</p>
+
+<p><a href="https://arxiv.org/abs/2512.01097">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
