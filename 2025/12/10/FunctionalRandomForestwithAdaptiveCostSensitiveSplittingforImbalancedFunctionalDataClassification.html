@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Functional Random Forest with Adaptive Cost-Sensitive Splitting for Imbalanced Functional Data Classification</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Functional Random Forest with Adaptive Cost-Sensitive Splitting for Imbalanced Functional Data Classification" />
+<meta name="author" content="Fahad Mostafa, Hafiz Khan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Classification of functional data where observations are curves or trajectories poses unique challenges, particularly under severe class imbalance. Traditional Random Forest algorithms, while robust for tabular data, often fail to capture the intrinsic structure of functional observations and struggle with minority class detection. This paper introduces Functional Random Forest with Adaptive Cost-Sensitive Splitting (FRF-ACS), a novel ensemble framework designed for imbalanced functional data classification. The proposed method leverages basis expansions and Functional Principal Component Analysis (FPCA) to represent curves efficiently, enabling trees to operate on low dimensional functional features. To address imbalance, we incorporate a dynamic cost sensitive splitting criterion that adjusts class weights locally at each node, combined with a hybrid sampling strategy integrating functional SMOTE and weighted bootstrapping. Additionally, curve specific similarity metrics replace traditional Euclidean measures to preserve functional characteristics during leaf assignment. Extensive experiments on synthetic and real world datasets including biomedical signals and sensor trajectories demonstrate that FRF-ACS significantly improves minority class recall and overall predictive performance compared to existing functional classifiers and imbalance handling techniques. This work provides a scalable, interpretable solution for high dimensional functional data analysis in domains where minority class detection is critical." />
+<meta property="og:description" content="Classification of functional data where observations are curves or trajectories poses unique challenges, particularly under severe class imbalance. Traditional Random Forest algorithms, while robust for tabular data, often fail to capture the intrinsic structure of functional observations and struggle with minority class detection. This paper introduces Functional Random Forest with Adaptive Cost-Sensitive Splitting (FRF-ACS), a novel ensemble framework designed for imbalanced functional data classification. The proposed method leverages basis expansions and Functional Principal Component Analysis (FPCA) to represent curves efficiently, enabling trees to operate on low dimensional functional features. To address imbalance, we incorporate a dynamic cost sensitive splitting criterion that adjusts class weights locally at each node, combined with a hybrid sampling strategy integrating functional SMOTE and weighted bootstrapping. Additionally, curve specific similarity metrics replace traditional Euclidean measures to preserve functional characteristics during leaf assignment. Extensive experiments on synthetic and real world datasets including biomedical signals and sensor trajectories demonstrate that FRF-ACS significantly improves minority class recall and overall predictive performance compared to existing functional classifiers and imbalance handling techniques. This work provides a scalable, interpretable solution for high dimensional functional data analysis in domains where minority class detection is critical." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/12/10/FunctionalRandomForestwithAdaptiveCostSensitiveSplittingforImbalancedFunctionalDataClassification.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/12/10/FunctionalRandomForestwithAdaptiveCostSensitiveSplittingforImbalancedFunctionalDataClassification.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Functional Random Forest with Adaptive Cost-Sensitive Splitting for Imbalanced Functional Data Classification" />
+<script type="application/ld+json">
+{"description":"Classification of functional data where observations are curves or trajectories poses unique challenges, particularly under severe class imbalance. Traditional Random Forest algorithms, while robust for tabular data, often fail to capture the intrinsic structure of functional observations and struggle with minority class detection. This paper introduces Functional Random Forest with Adaptive Cost-Sensitive Splitting (FRF-ACS), a novel ensemble framework designed for imbalanced functional data classification. The proposed method leverages basis expansions and Functional Principal Component Analysis (FPCA) to represent curves efficiently, enabling trees to operate on low dimensional functional features. To address imbalance, we incorporate a dynamic cost sensitive splitting criterion that adjusts class weights locally at each node, combined with a hybrid sampling strategy integrating functional SMOTE and weighted bootstrapping. Additionally, curve specific similarity metrics replace traditional Euclidean measures to preserve functional characteristics during leaf assignment. Extensive experiments on synthetic and real world datasets including biomedical signals and sensor trajectories demonstrate that FRF-ACS significantly improves minority class recall and overall predictive performance compared to existing functional classifiers and imbalance handling techniques. This work provides a scalable, interpretable solution for high dimensional functional data analysis in domains where minority class detection is critical.","headline":"Functional Random Forest with Adaptive Cost-Sensitive Splitting for Imbalanced Functional Data Classification","dateModified":"2025-12-10T00:00:00+00:00","datePublished":"2025-12-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/10/FunctionalRandomForestwithAdaptiveCostSensitiveSplittingforImbalancedFunctionalDataClassification.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/10/FunctionalRandomForestwithAdaptiveCostSensitiveSplittingforImbalancedFunctionalDataClassification.html","author":{"@type":"Person","name":"Fahad Mostafa, Hafiz Khan"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-10 00:00:00 +0000">12-10</time>
+  </p>
+  
+  <h1>Functional Random Forest with Adaptive Cost-Sensitive Splitting for Imbalanced Functional Data Classification</h1>
+  <br>Fahad Mostafa, Hafiz Khan</h3>
+  <br> [stat.ML,stat.AP,stat.CO]
+
+  <p>Classification of functional data where observations are curves or trajectories poses unique challenges, particularly under severe class imbalance. Traditional Random Forest algorithms, while robust for tabular data, often fail to capture the intrinsic structure of functional observations and struggle with minority class detection. This paper introduces Functional Random Forest with Adaptive Cost-Sensitive Splitting (FRF-ACS), a novel ensemble framework designed for imbalanced functional data classification. The proposed method leverages basis expansions and Functional Principal Component Analysis (FPCA) to represent curves efficiently, enabling trees to operate on low dimensional functional features. To address imbalance, we incorporate a dynamic cost sensitive splitting criterion that adjusts class weights locally at each node, combined with a hybrid sampling strategy integrating functional SMOTE and weighted bootstrapping. Additionally, curve specific similarity metrics replace traditional Euclidean measures to preserve functional characteristics during leaf assignment. Extensive experiments on synthetic and real world datasets including biomedical signals and sensor trajectories demonstrate that FRF-ACS significantly improves minority class recall and overall predictive performance compared to existing functional classifiers and imbalance handling techniques. This work provides a scalable, interpretable solution for high dimensional functional data analysis in domains where minority class detection is critical.</p>
+
+<p><a href="https://arxiv.org/abs/2512.07888">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
