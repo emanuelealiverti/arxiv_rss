@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Causal Attribution of Model Performance Gaps in Medical Imaging Under Distribution Shifts</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Causal Attribution of Model Performance Gaps in Medical Imaging Under Distribution Shifts" />
+<meta name="author" content="Pedro M. Gordaliza, Nataliia Molchanova, Jaume Banus, Thomas Sanchez, Meritxell Bach Cuadra" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Deep learning models for medical image segmentation suffer significant performance drops due to distribution shifts, but the causal mechanisms behind these drops remain poorly understood. We extend causal attribution frameworks to high-dimensional segmentation tasks, quantifying how acquisition protocols and annotation variability independently contribute to performance degradation. We model the data-generating process through a causal graph and employ Shapley values to fairly attribute performance changes to individual mechanisms. Our framework addresses unique challenges in medical imaging: high-dimensional outputs, limited samples, and complex mechanism interactions. Validation on multiple sclerosis (MS) lesion segmentation across 4 centers and 7 annotators reveals context-dependent failure modes: annotation protocol shifts dominate when crossing annotators (7.4% $\pm$ 8.9% DSC attribution), while acquisition shifts dominate when crossing imaging centers (6.5% $\pm$ 9.1%). This mechanism-specific quantification enables practitioners to prioritize targeted interventions based on deployment context." />
+<meta property="og:description" content="Deep learning models for medical image segmentation suffer significant performance drops due to distribution shifts, but the causal mechanisms behind these drops remain poorly understood. We extend causal attribution frameworks to high-dimensional segmentation tasks, quantifying how acquisition protocols and annotation variability independently contribute to performance degradation. We model the data-generating process through a causal graph and employ Shapley values to fairly attribute performance changes to individual mechanisms. Our framework addresses unique challenges in medical imaging: high-dimensional outputs, limited samples, and complex mechanism interactions. Validation on multiple sclerosis (MS) lesion segmentation across 4 centers and 7 annotators reveals context-dependent failure modes: annotation protocol shifts dominate when crossing annotators (7.4% $\pm$ 8.9% DSC attribution), while acquisition shifts dominate when crossing imaging centers (6.5% $\pm$ 9.1%). This mechanism-specific quantification enables practitioners to prioritize targeted interventions based on deployment context." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/12/11/CausalAttributionofModelPerformanceGapsinMedicalImagingUnderDistributionShifts.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/12/11/CausalAttributionofModelPerformanceGapsinMedicalImagingUnderDistributionShifts.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Causal Attribution of Model Performance Gaps in Medical Imaging Under Distribution Shifts" />
+<script type="application/ld+json">
+{"description":"Deep learning models for medical image segmentation suffer significant performance drops due to distribution shifts, but the causal mechanisms behind these drops remain poorly understood. We extend causal attribution frameworks to high-dimensional segmentation tasks, quantifying how acquisition protocols and annotation variability independently contribute to performance degradation. We model the data-generating process through a causal graph and employ Shapley values to fairly attribute performance changes to individual mechanisms. Our framework addresses unique challenges in medical imaging: high-dimensional outputs, limited samples, and complex mechanism interactions. Validation on multiple sclerosis (MS) lesion segmentation across 4 centers and 7 annotators reveals context-dependent failure modes: annotation protocol shifts dominate when crossing annotators (7.4% $\\pm$ 8.9% DSC attribution), while acquisition shifts dominate when crossing imaging centers (6.5% $\\pm$ 9.1%). This mechanism-specific quantification enables practitioners to prioritize targeted interventions based on deployment context.","headline":"Causal Attribution of Model Performance Gaps in Medical Imaging Under Distribution Shifts","dateModified":"2025-12-11T00:00:00+00:00","datePublished":"2025-12-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/11/CausalAttributionofModelPerformanceGapsinMedicalImagingUnderDistributionShifts.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/11/CausalAttributionofModelPerformanceGapsinMedicalImagingUnderDistributionShifts.html","author":{"@type":"Person","name":"Pedro M. Gordaliza, Nataliia Molchanova, Jaume Banus, Thomas Sanchez, Meritxell Bach Cuadra"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-11 00:00:00 +0000">12-11</time>
+  </p>
+  
+  <h1>Causal Attribution of Model Performance Gaps in Medical Imaging Under Distribution Shifts</h1>
+  <br>Pedro M. Gordaliza, Nataliia Molchanova, Jaume Banus, Thomas Sanchez, Meritxell Bach Cuadra</h3>
+  <br> [stat.ME]
+
+  <p>Deep learning models for medical image segmentation suffer significant performance drops due to distribution shifts, but the causal mechanisms behind these drops remain poorly understood. We extend causal attribution frameworks to high-dimensional segmentation tasks, quantifying how acquisition protocols and annotation variability independently contribute to performance degradation. We model the data-generating process through a causal graph and employ Shapley values to fairly attribute performance changes to individual mechanisms. Our framework addresses unique challenges in medical imaging: high-dimensional outputs, limited samples, and complex mechanism interactions. Validation on multiple sclerosis (MS) lesion segmentation across 4 centers and 7 annotators reveals context-dependent failure modes: annotation protocol shifts dominate when crossing annotators (7.4% $\pm$ 8.9% DSC attribution), while acquisition shifts dominate when crossing imaging centers (6.5% $\pm$ 9.1%). This mechanism-specific quantification enables practitioners to prioritize targeted interventions based on deployment context.</p>
+
+<p><a href="https://arxiv.org/abs/2512.09094">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
