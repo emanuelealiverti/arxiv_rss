@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Causal Judge Evaluation: Calibrated Surrogate Metrics for LLM Systems</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Causal Judge Evaluation: Calibrated Surrogate Metrics for LLM Systems" />
+<meta name="author" content="Eddie Landesberg" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="LLM-as-judge evaluation has become the de facto standard for scaling model assessment, but the practice is statistically unsound: uncalibrated scores can invert preferences, naive confidence intervals on uncalibrated scores achieve near-0% coverage, and importance-weighted estimators collapse under limited overlap despite high effective sample size (ESS). We introduce Causal Judge Evaluation (CJE), a framework that fixes all three failures. On n=4,961 Chatbot Arena prompts (after filtering from 5k), CJE achieves 99% pairwise ranking accuracy at full sample size (94% averaged across configurations), matching oracle quality, at 14x lower cost (for ranking 5 policies) by calibrating a 16x cheaper judge on just 5% oracle labels (~250 labels). CJE combines three components: (i) AutoCal-R, reward calibration via mean-preserving isotonic regression; (ii) SIMCal-W, weight stabilization via stacking of S-monotone candidates; and (iii) Oracle-Uncertainty Aware (OUA) inference that propagates calibration uncertainty into confidence intervals. We formalize the Coverage-Limited Efficiency (CLE) diagnostic, which explains why IPS-style estimators fail even when ESS exceeds 90%: the logger rarely visits regions where target policies concentrate. Key findings: SNIPS inverts rankings even with reward calibration (38% pairwise, negative Kendall’s tau) due to weight instability; calibrated IPS remains near-random (47%) despite weight stabilization, consistent with CLE; OUA improves coverage from near-0% to ~86% (Direct) and ~96% (stacked-DR), where naive intervals severely under-cover." />
+<meta property="og:description" content="LLM-as-judge evaluation has become the de facto standard for scaling model assessment, but the practice is statistically unsound: uncalibrated scores can invert preferences, naive confidence intervals on uncalibrated scores achieve near-0% coverage, and importance-weighted estimators collapse under limited overlap despite high effective sample size (ESS). We introduce Causal Judge Evaluation (CJE), a framework that fixes all three failures. On n=4,961 Chatbot Arena prompts (after filtering from 5k), CJE achieves 99% pairwise ranking accuracy at full sample size (94% averaged across configurations), matching oracle quality, at 14x lower cost (for ranking 5 policies) by calibrating a 16x cheaper judge on just 5% oracle labels (~250 labels). CJE combines three components: (i) AutoCal-R, reward calibration via mean-preserving isotonic regression; (ii) SIMCal-W, weight stabilization via stacking of S-monotone candidates; and (iii) Oracle-Uncertainty Aware (OUA) inference that propagates calibration uncertainty into confidence intervals. We formalize the Coverage-Limited Efficiency (CLE) diagnostic, which explains why IPS-style estimators fail even when ESS exceeds 90%: the logger rarely visits regions where target policies concentrate. Key findings: SNIPS inverts rankings even with reward calibration (38% pairwise, negative Kendall’s tau) due to weight instability; calibrated IPS remains near-random (47%) despite weight stabilization, consistent with CLE; OUA improves coverage from near-0% to ~86% (Direct) and ~96% (stacked-DR), where naive intervals severely under-cover." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/CausalJudgeEvaluationCalibratedSurrogateMetricsforLLMSystems.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/CausalJudgeEvaluationCalibratedSurrogateMetricsforLLMSystems.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Causal Judge Evaluation: Calibrated Surrogate Metrics for LLM Systems" />
+<script type="application/ld+json">
+{"description":"LLM-as-judge evaluation has become the de facto standard for scaling model assessment, but the practice is statistically unsound: uncalibrated scores can invert preferences, naive confidence intervals on uncalibrated scores achieve near-0% coverage, and importance-weighted estimators collapse under limited overlap despite high effective sample size (ESS). We introduce Causal Judge Evaluation (CJE), a framework that fixes all three failures. On n=4,961 Chatbot Arena prompts (after filtering from 5k), CJE achieves 99% pairwise ranking accuracy at full sample size (94% averaged across configurations), matching oracle quality, at 14x lower cost (for ranking 5 policies) by calibrating a 16x cheaper judge on just 5% oracle labels (~250 labels). CJE combines three components: (i) AutoCal-R, reward calibration via mean-preserving isotonic regression; (ii) SIMCal-W, weight stabilization via stacking of S-monotone candidates; and (iii) Oracle-Uncertainty Aware (OUA) inference that propagates calibration uncertainty into confidence intervals. We formalize the Coverage-Limited Efficiency (CLE) diagnostic, which explains why IPS-style estimators fail even when ESS exceeds 90%: the logger rarely visits regions where target policies concentrate. Key findings: SNIPS inverts rankings even with reward calibration (38% pairwise, negative Kendall’s tau) due to weight instability; calibrated IPS remains near-random (47%) despite weight stabilization, consistent with CLE; OUA improves coverage from near-0% to ~86% (Direct) and ~96% (stacked-DR), where naive intervals severely under-cover.","headline":"Causal Judge Evaluation: Calibrated Surrogate Metrics for LLM Systems","dateModified":"2025-12-15T00:00:00+00:00","datePublished":"2025-12-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/CausalJudgeEvaluationCalibratedSurrogateMetricsforLLMSystems.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/CausalJudgeEvaluationCalibratedSurrogateMetricsforLLMSystems.html","author":{"@type":"Person","name":"Eddie Landesberg"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-15 00:00:00 +0000">12-15</time>
+  </p>
+  
+  <h1>Causal Judge Evaluation: Calibrated Surrogate Metrics for LLM Systems</h1>
+  <br>Eddie Landesberg</h3>
+  <br> [stat.ME,stat.AP,stat.ML]
+
+  <p>LLM-as-judge evaluation has become the de facto standard for scaling model assessment, but the practice is statistically unsound: uncalibrated scores can invert preferences, naive confidence intervals on uncalibrated scores achieve near-0% coverage, and importance-weighted estimators collapse under limited overlap despite high effective sample size (ESS). We introduce Causal Judge Evaluation (CJE), a framework that fixes all three failures. On n=4,961 Chatbot Arena prompts (after filtering from 5k), CJE achieves 99% pairwise ranking accuracy at full sample size (94% averaged across configurations), matching oracle quality, at 14x lower cost (for ranking 5 policies) by calibrating a 16x cheaper judge on just 5% oracle labels (~250 labels). CJE combines three components: (i) AutoCal-R, reward calibration via mean-preserving isotonic regression; (ii) SIMCal-W, weight stabilization via stacking of S-monotone candidates; and (iii) Oracle-Uncertainty Aware (OUA) inference that propagates calibration uncertainty into confidence intervals. We formalize the Coverage-Limited Efficiency (CLE) diagnostic, which explains why IPS-style estimators fail even when ESS exceeds 90%: the logger rarely visits regions where target policies concentrate. Key findings: SNIPS inverts rankings even with reward calibration (38% pairwise, negative Kendall’s tau) due to weight instability; calibrated IPS remains near-random (47%) despite weight stabilization, consistent with CLE; OUA improves coverage from near-0% to ~86% (Direct) and ~96% (stacked-DR), where naive intervals severely under-cover.</p>
+
+<p><a href="https://arxiv.org/abs/2512.11150">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

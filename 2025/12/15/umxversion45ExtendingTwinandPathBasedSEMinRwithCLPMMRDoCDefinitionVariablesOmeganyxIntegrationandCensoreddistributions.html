@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>umx version 4.5: Extending Twin and Path-Based SEM in R with CLPM, MR-DoC, Definition Variables, $\Omega$nyx Integration, and Censored distributions</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="umx version 4.5: Extending Twin and Path-Based SEM in R with CLPM, MR-DoC, Definition Variables, $\Omega$nyx Integration, and Censored distributions" />
+<meta name="author" content="Luis FS Castro-de-Araujo, Nathan Gillespie, Michael C Neale, Timothy Bates" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Structural Equation Modeling (SEM) provides a powerful and flexible framework widely used in behavioral genetics and social sciences. Building on the original design of the umx package, which enhanced accessibility to OpenMx using concise syntax and helpful defaults, umx v4.5 significantly extends functionality for longitudinal and causal twin designs while improving interoperability with graphical modelling tools such as Onyx. New capabilities include: classic and modern cross-lagged panel model; Mendelian Randomization Direction-of-Causation (MR-DoC) twin models incorporating polygenic scores as instruments; expanded support for definition variables directly in umxRAM(); streamlined workflows for importing paths from $\Omega$nyx; a dedicated tool for analyzing censored variables, particularly valuable in biomarker research; improved covariate placeholder handling for definition variables; umxSexLim() for simplified sex-limitation modelling across five twin groups, accommodating quantitative and qualitative sex differences; and umx_residualize() for efficient covariate residualization in wide- or long-format data. These advances accelerate reproducible, reliable, publication-ready twin and family modelling using intelligent defaults, and integrated journal-quality reporting, thereby lowering barriers to genetic epidemiological analyzes." />
+<meta property="og:description" content="Structural Equation Modeling (SEM) provides a powerful and flexible framework widely used in behavioral genetics and social sciences. Building on the original design of the umx package, which enhanced accessibility to OpenMx using concise syntax and helpful defaults, umx v4.5 significantly extends functionality for longitudinal and causal twin designs while improving interoperability with graphical modelling tools such as Onyx. New capabilities include: classic and modern cross-lagged panel model; Mendelian Randomization Direction-of-Causation (MR-DoC) twin models incorporating polygenic scores as instruments; expanded support for definition variables directly in umxRAM(); streamlined workflows for importing paths from $\Omega$nyx; a dedicated tool for analyzing censored variables, particularly valuable in biomarker research; improved covariate placeholder handling for definition variables; umxSexLim() for simplified sex-limitation modelling across five twin groups, accommodating quantitative and qualitative sex differences; and umx_residualize() for efficient covariate residualization in wide- or long-format data. These advances accelerate reproducible, reliable, publication-ready twin and family modelling using intelligent defaults, and integrated journal-quality reporting, thereby lowering barriers to genetic epidemiological analyzes." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/umxversion45ExtendingTwinandPathBasedSEMinRwithCLPMMRDoCDefinitionVariablesOmeganyxIntegrationandCensoreddistributions.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/umxversion45ExtendingTwinandPathBasedSEMinRwithCLPMMRDoCDefinitionVariablesOmeganyxIntegrationandCensoreddistributions.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="umx version 4.5: Extending Twin and Path-Based SEM in R with CLPM, MR-DoC, Definition Variables, $\Omega$nyx Integration, and Censored distributions" />
+<script type="application/ld+json">
+{"description":"Structural Equation Modeling (SEM) provides a powerful and flexible framework widely used in behavioral genetics and social sciences. Building on the original design of the umx package, which enhanced accessibility to OpenMx using concise syntax and helpful defaults, umx v4.5 significantly extends functionality for longitudinal and causal twin designs while improving interoperability with graphical modelling tools such as Onyx. New capabilities include: classic and modern cross-lagged panel model; Mendelian Randomization Direction-of-Causation (MR-DoC) twin models incorporating polygenic scores as instruments; expanded support for definition variables directly in umxRAM(); streamlined workflows for importing paths from $\\Omega$nyx; a dedicated tool for analyzing censored variables, particularly valuable in biomarker research; improved covariate placeholder handling for definition variables; umxSexLim() for simplified sex-limitation modelling across five twin groups, accommodating quantitative and qualitative sex differences; and umx_residualize() for efficient covariate residualization in wide- or long-format data. These advances accelerate reproducible, reliable, publication-ready twin and family modelling using intelligent defaults, and integrated journal-quality reporting, thereby lowering barriers to genetic epidemiological analyzes.","headline":"umx version 4.5: Extending Twin and Path-Based SEM in R with CLPM, MR-DoC, Definition Variables, $\\Omega$nyx Integration, and Censored distributions","dateModified":"2025-12-15T00:00:00+00:00","datePublished":"2025-12-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/umxversion45ExtendingTwinandPathBasedSEMinRwithCLPMMRDoCDefinitionVariablesOmeganyxIntegrationandCensoreddistributions.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/umxversion45ExtendingTwinandPathBasedSEMinRwithCLPMMRDoCDefinitionVariablesOmeganyxIntegrationandCensoreddistributions.html","author":{"@type":"Person","name":"Luis FS Castro-de-Araujo, Nathan Gillespie, Michael C Neale, Timothy Bates"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-15 00:00:00 +0000">12-15</time>
+  </p>
+  
+  <h1>umx version 4.5: Extending Twin and Path-Based SEM in R with CLPM, MR-DoC, Definition Variables, $\Omega$nyx Integration, and Censored distributions</h1>
+  <br>Luis FS Castro-de-Araujo, Nathan Gillespie, Michael C Neale, Timothy Bates</h3>
+  <br> [stat.AP]
+
+  <p>Structural Equation Modeling (SEM) provides a powerful and flexible framework widely used in behavioral genetics and social sciences. Building on the original design of the umx package, which enhanced accessibility to OpenMx using concise syntax and helpful defaults, umx v4.5 significantly extends functionality for longitudinal and causal twin designs while improving interoperability with graphical modelling tools such as Onyx. New capabilities include: classic and modern cross-lagged panel model; Mendelian Randomization Direction-of-Causation (MR-DoC) twin models incorporating polygenic scores as instruments; expanded support for definition variables directly in umxRAM(); streamlined workflows for importing paths from $\Omega$nyx; a dedicated tool for analyzing censored variables, particularly valuable in biomarker research; improved covariate placeholder handling for definition variables; umxSexLim() for simplified sex-limitation modelling across five twin groups, accommodating quantitative and qualitative sex differences; and umx_residualize() for efficient covariate residualization in wide- or long-format data. These advances accelerate reproducible, reliable, publication-ready twin and family modelling using intelligent defaults, and integrated journal-quality reporting, thereby lowering barriers to genetic epidemiological analyzes.</p>
+
+<p><a href="https://arxiv.org/abs/2512.11063">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

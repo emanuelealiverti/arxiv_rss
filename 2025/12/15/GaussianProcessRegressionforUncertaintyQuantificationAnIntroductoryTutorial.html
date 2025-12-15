@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Gaussian Process Regression for Uncertainty Quantification: An Introductory Tutorial</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Gaussian Process Regression for Uncertainty Quantification: An Introductory Tutorial" />
+<meta name="author" content="Jinglai Li, Hongqiao Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Uncertainty Quantification (UQ) is essential for the reliable application of computational models in engineering and science. Among surrogate modeling techniques, Gaussian Process Regression (GPR) is particularly valuable for its non-parametric flexibility and inherent probabilistic output. This paper presents an introductory review of GPR-based methodologies within the context of UQ. We begin with an introduction to UQ and outline its key tasks, including uncertainty propagation, risk estimation, optimization under uncertainty, parameter estimation, and sensitivity analysis. We then introduce Gaussian Processes as a surrogate modeling technique, detailing their formulation, choice of covariance kernels, hyperparameter estimation, and active learning strategies for efficient data acquisition. The tutorial further explores how GPR can be applied to different UQ tasks, including Bayesian quadrature for uncertainty propagation, active learning-based risk estimation, Bayesian optimization for optimization under uncertainty, and surrogate-based sensitivity analysis. Throughout, we emphasize how to leverage the unique formulation of GP for these UQ tasks, rather than simply using it as a standard surrogate model. This work offers a comprehensive guide and unified framework for researchers seeking to rigorously apply probabilistic modeling to complex computational systems." />
+<meta property="og:description" content="Uncertainty Quantification (UQ) is essential for the reliable application of computational models in engineering and science. Among surrogate modeling techniques, Gaussian Process Regression (GPR) is particularly valuable for its non-parametric flexibility and inherent probabilistic output. This paper presents an introductory review of GPR-based methodologies within the context of UQ. We begin with an introduction to UQ and outline its key tasks, including uncertainty propagation, risk estimation, optimization under uncertainty, parameter estimation, and sensitivity analysis. We then introduce Gaussian Processes as a surrogate modeling technique, detailing their formulation, choice of covariance kernels, hyperparameter estimation, and active learning strategies for efficient data acquisition. The tutorial further explores how GPR can be applied to different UQ tasks, including Bayesian quadrature for uncertainty propagation, active learning-based risk estimation, Bayesian optimization for optimization under uncertainty, and surrogate-based sensitivity analysis. Throughout, we emphasize how to leverage the unique formulation of GP for these UQ tasks, rather than simply using it as a standard surrogate model. This work offers a comprehensive guide and unified framework for researchers seeking to rigorously apply probabilistic modeling to complex computational systems." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/GaussianProcessRegressionforUncertaintyQuantificationAnIntroductoryTutorial.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/GaussianProcessRegressionforUncertaintyQuantificationAnIntroductoryTutorial.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Gaussian Process Regression for Uncertainty Quantification: An Introductory Tutorial" />
+<script type="application/ld+json">
+{"description":"Uncertainty Quantification (UQ) is essential for the reliable application of computational models in engineering and science. Among surrogate modeling techniques, Gaussian Process Regression (GPR) is particularly valuable for its non-parametric flexibility and inherent probabilistic output. This paper presents an introductory review of GPR-based methodologies within the context of UQ. We begin with an introduction to UQ and outline its key tasks, including uncertainty propagation, risk estimation, optimization under uncertainty, parameter estimation, and sensitivity analysis. We then introduce Gaussian Processes as a surrogate modeling technique, detailing their formulation, choice of covariance kernels, hyperparameter estimation, and active learning strategies for efficient data acquisition. The tutorial further explores how GPR can be applied to different UQ tasks, including Bayesian quadrature for uncertainty propagation, active learning-based risk estimation, Bayesian optimization for optimization under uncertainty, and surrogate-based sensitivity analysis. Throughout, we emphasize how to leverage the unique formulation of GP for these UQ tasks, rather than simply using it as a standard surrogate model. This work offers a comprehensive guide and unified framework for researchers seeking to rigorously apply probabilistic modeling to complex computational systems.","headline":"Gaussian Process Regression for Uncertainty Quantification: An Introductory Tutorial","dateModified":"2025-12-15T00:00:00+00:00","datePublished":"2025-12-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/GaussianProcessRegressionforUncertaintyQuantificationAnIntroductoryTutorial.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/15/GaussianProcessRegressionforUncertaintyQuantificationAnIntroductoryTutorial.html","author":{"@type":"Person","name":"Jinglai Li, Hongqiao Wang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-15 00:00:00 +0000">12-15</time>
+  </p>
+  
+  <h1>Gaussian Process Regression for Uncertainty Quantification: An Introductory Tutorial</h1>
+  <br>Jinglai Li, Hongqiao Wang</h3>
+  <br> [stat.CO]
+
+  <p>Uncertainty Quantification (UQ) is essential for the reliable application of computational models in engineering and science. Among surrogate modeling techniques, Gaussian Process Regression (GPR) is particularly valuable for its non-parametric flexibility and inherent probabilistic output. This paper presents an introductory review of GPR-based methodologies within the context of UQ. We begin with an introduction to UQ and outline its key tasks, including uncertainty propagation, risk estimation, optimization under uncertainty, parameter estimation, and sensitivity analysis. We then introduce Gaussian Processes as a surrogate modeling technique, detailing their formulation, choice of covariance kernels, hyperparameter estimation, and active learning strategies for efficient data acquisition. The tutorial further explores how GPR can be applied to different UQ tasks, including Bayesian quadrature for uncertainty propagation, active learning-based risk estimation, Bayesian optimization for optimization under uncertainty, and surrogate-based sensitivity analysis. Throughout, we emphasize how to leverage the unique formulation of GP for these UQ tasks, rather than simply using it as a standard surrogate model. This work offers a comprehensive guide and unified framework for researchers seeking to rigorously apply probabilistic modeling to complex computational systems.</p>
+
+<p><a href="https://arxiv.org/abs/2502.03090">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
