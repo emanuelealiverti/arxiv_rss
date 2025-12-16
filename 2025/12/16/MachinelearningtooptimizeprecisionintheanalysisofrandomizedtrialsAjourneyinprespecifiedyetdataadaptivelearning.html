@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Machine learning to optimize precision in the analysis of randomized trials: A journey in pre-specified, yet data-adaptive learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Machine learning to optimize precision in the analysis of randomized trials: A journey in pre-specified, yet data-adaptive learning" />
+<meta name="author" content="Laura B. Balzer, Mark J. van der Laan, Maya L. Petersen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Covariate adjustment is an approach to improve the precision of trial analyses by adjusting for baseline variables that are prognostic of the primary endpoint. Motivated by the SEARCH Universal HIV Test-and-Treat Trial (2013-2017), we tell our story of developing, evaluating, and implementing a machine learning-based approach for covariate adjustment. We provide the rationale for as well as the practical concerns with such an approach for estimating marginal effects. Using schematics, we illustrate our procedure: targeted machine learning estimation (TMLE) with Adaptive Pre-specification. Briefly, sample-splitting is used to data-adaptively select the combination of estimators of the outcome regression (i.e., the conditional expectation of the outcome given the trial arm and covariates) and known propensity score (i.e., the conditional probability of being randomized to the intervention given the covariates) that minimizes the cross-validated variance estimate and, thereby, maximizes empirical efficiency. We discuss our approach for evaluating finite sample performance with parametric and plasmode simulations, pre-specifying the Statistical Analysis Plan, and unblinding in real-time on video conference with our colleagues from around the world. We present the results from applying our approach in the primary, pre-specified analysis of 8 recently published trials (2022-2024). We conclude with practical recommendations and an invitation to implement our approach in the primary analysis of your next trial." />
+<meta property="og:description" content="Covariate adjustment is an approach to improve the precision of trial analyses by adjusting for baseline variables that are prognostic of the primary endpoint. Motivated by the SEARCH Universal HIV Test-and-Treat Trial (2013-2017), we tell our story of developing, evaluating, and implementing a machine learning-based approach for covariate adjustment. We provide the rationale for as well as the practical concerns with such an approach for estimating marginal effects. Using schematics, we illustrate our procedure: targeted machine learning estimation (TMLE) with Adaptive Pre-specification. Briefly, sample-splitting is used to data-adaptively select the combination of estimators of the outcome regression (i.e., the conditional expectation of the outcome given the trial arm and covariates) and known propensity score (i.e., the conditional probability of being randomized to the intervention given the covariates) that minimizes the cross-validated variance estimate and, thereby, maximizes empirical efficiency. We discuss our approach for evaluating finite sample performance with parametric and plasmode simulations, pre-specifying the Statistical Analysis Plan, and unblinding in real-time on video conference with our colleagues from around the world. We present the results from applying our approach in the primary, pre-specified analysis of 8 recently published trials (2022-2024). We conclude with practical recommendations and an invitation to implement our approach in the primary analysis of your next trial." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/MachinelearningtooptimizeprecisionintheanalysisofrandomizedtrialsAjourneyinprespecifiedyetdataadaptivelearning.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/MachinelearningtooptimizeprecisionintheanalysisofrandomizedtrialsAjourneyinprespecifiedyetdataadaptivelearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Machine learning to optimize precision in the analysis of randomized trials: A journey in pre-specified, yet data-adaptive learning" />
+<script type="application/ld+json">
+{"description":"Covariate adjustment is an approach to improve the precision of trial analyses by adjusting for baseline variables that are prognostic of the primary endpoint. Motivated by the SEARCH Universal HIV Test-and-Treat Trial (2013-2017), we tell our story of developing, evaluating, and implementing a machine learning-based approach for covariate adjustment. We provide the rationale for as well as the practical concerns with such an approach for estimating marginal effects. Using schematics, we illustrate our procedure: targeted machine learning estimation (TMLE) with Adaptive Pre-specification. Briefly, sample-splitting is used to data-adaptively select the combination of estimators of the outcome regression (i.e., the conditional expectation of the outcome given the trial arm and covariates) and known propensity score (i.e., the conditional probability of being randomized to the intervention given the covariates) that minimizes the cross-validated variance estimate and, thereby, maximizes empirical efficiency. We discuss our approach for evaluating finite sample performance with parametric and plasmode simulations, pre-specifying the Statistical Analysis Plan, and unblinding in real-time on video conference with our colleagues from around the world. We present the results from applying our approach in the primary, pre-specified analysis of 8 recently published trials (2022-2024). We conclude with practical recommendations and an invitation to implement our approach in the primary analysis of your next trial.","headline":"Machine learning to optimize precision in the analysis of randomized trials: A journey in pre-specified, yet data-adaptive learning","dateModified":"2025-12-16T00:00:00+00:00","datePublished":"2025-12-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/MachinelearningtooptimizeprecisionintheanalysisofrandomizedtrialsAjourneyinprespecifiedyetdataadaptivelearning.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/MachinelearningtooptimizeprecisionintheanalysisofrandomizedtrialsAjourneyinprespecifiedyetdataadaptivelearning.html","author":{"@type":"Person","name":"Laura B. Balzer, Mark J. van der Laan, Maya L. Petersen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-16 00:00:00 +0000">12-16</time>
+  </p>
+  
+  <h1>Machine learning to optimize precision in the analysis of randomized trials: A journey in pre-specified, yet data-adaptive learning</h1>
+  <br>Laura B. Balzer, Mark J. van der Laan, Maya L. Petersen</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Covariate adjustment is an approach to improve the precision of trial analyses by adjusting for baseline variables that are prognostic of the primary endpoint. Motivated by the SEARCH Universal HIV Test-and-Treat Trial (2013-2017), we tell our story of developing, evaluating, and implementing a machine learning-based approach for covariate adjustment. We provide the rationale for as well as the practical concerns with such an approach for estimating marginal effects. Using schematics, we illustrate our procedure: targeted machine learning estimation (TMLE) with Adaptive Pre-specification. Briefly, sample-splitting is used to data-adaptively select the combination of estimators of the outcome regression (i.e., the conditional expectation of the outcome given the trial arm and covariates) and known propensity score (i.e., the conditional probability of being randomized to the intervention given the covariates) that minimizes the cross-validated variance estimate and, thereby, maximizes empirical efficiency. We discuss our approach for evaluating finite sample performance with parametric and plasmode simulations, pre-specifying the Statistical Analysis Plan, and unblinding in real-time on video conference with our colleagues from around the world. We present the results from applying our approach in the primary, pre-specified analysis of 8 recently published trials (2022-2024). We conclude with practical recommendations and an invitation to implement our approach in the primary analysis of your next trial.</p>
+
+<p><a href="https://arxiv.org/abs/2512.13610">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

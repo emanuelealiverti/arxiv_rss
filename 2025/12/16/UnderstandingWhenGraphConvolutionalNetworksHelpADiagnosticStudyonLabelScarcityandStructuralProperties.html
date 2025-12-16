@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Understanding When Graph Convolutional Networks Help: A Diagnostic Study on Label Scarcity and Structural Properties</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Understanding When Graph Convolutional Networks Help: A Diagnostic Study on Label Scarcity and Structural Properties" />
+<meta name="author" content="Nischal Subedi, Ember Kerstetter, Winnie Li, Silo Murphy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Graph Convolutional Networks (GCNs) have become a standard approach for semi-supervised node classification, yet practitioners lack clear guidance on when GCNs provide meaningful improvements over simpler baselines. We present a diagnostic study using the Amazon Computers co-purchase data to understand when and why GCNs help. Through systematic experiments with simulated label scarcity, feature ablation, and per-class analysis, we find that GCN performance depends critically on the interaction between graph homophily and feature quality. GCNs provide the largest gains under extreme label scarcity, where they leverage neighborhood structure to compensate for limited supervision. Surprisingly, GCNs can match their original performance even when node features are replaced with random noise, suggesting that structure alone carries sufficient signal on highly homophilous graphs. However, GCNs hurt performance when homophily is low and features are already strong, as noisy neighbors corrupt good predictions. Our quadrant analysis reveals that GCNs help in three of four conditions and only hurt when low homophily meets strong features. These findings offer practical guidance for practitioners deciding whether to adopt graph-based methods." />
+<meta property="og:description" content="Graph Convolutional Networks (GCNs) have become a standard approach for semi-supervised node classification, yet practitioners lack clear guidance on when GCNs provide meaningful improvements over simpler baselines. We present a diagnostic study using the Amazon Computers co-purchase data to understand when and why GCNs help. Through systematic experiments with simulated label scarcity, feature ablation, and per-class analysis, we find that GCN performance depends critically on the interaction between graph homophily and feature quality. GCNs provide the largest gains under extreme label scarcity, where they leverage neighborhood structure to compensate for limited supervision. Surprisingly, GCNs can match their original performance even when node features are replaced with random noise, suggesting that structure alone carries sufficient signal on highly homophilous graphs. However, GCNs hurt performance when homophily is low and features are already strong, as noisy neighbors corrupt good predictions. Our quadrant analysis reveals that GCNs help in three of four conditions and only hurt when low homophily meets strong features. These findings offer practical guidance for practitioners deciding whether to adopt graph-based methods." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/UnderstandingWhenGraphConvolutionalNetworksHelpADiagnosticStudyonLabelScarcityandStructuralProperties.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/UnderstandingWhenGraphConvolutionalNetworksHelpADiagnosticStudyonLabelScarcityandStructuralProperties.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Understanding When Graph Convolutional Networks Help: A Diagnostic Study on Label Scarcity and Structural Properties" />
+<script type="application/ld+json">
+{"description":"Graph Convolutional Networks (GCNs) have become a standard approach for semi-supervised node classification, yet practitioners lack clear guidance on when GCNs provide meaningful improvements over simpler baselines. We present a diagnostic study using the Amazon Computers co-purchase data to understand when and why GCNs help. Through systematic experiments with simulated label scarcity, feature ablation, and per-class analysis, we find that GCN performance depends critically on the interaction between graph homophily and feature quality. GCNs provide the largest gains under extreme label scarcity, where they leverage neighborhood structure to compensate for limited supervision. Surprisingly, GCNs can match their original performance even when node features are replaced with random noise, suggesting that structure alone carries sufficient signal on highly homophilous graphs. However, GCNs hurt performance when homophily is low and features are already strong, as noisy neighbors corrupt good predictions. Our quadrant analysis reveals that GCNs help in three of four conditions and only hurt when low homophily meets strong features. These findings offer practical guidance for practitioners deciding whether to adopt graph-based methods.","headline":"Understanding When Graph Convolutional Networks Help: A Diagnostic Study on Label Scarcity and Structural Properties","dateModified":"2025-12-16T00:00:00+00:00","datePublished":"2025-12-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/UnderstandingWhenGraphConvolutionalNetworksHelpADiagnosticStudyonLabelScarcityandStructuralProperties.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/UnderstandingWhenGraphConvolutionalNetworksHelpADiagnosticStudyonLabelScarcityandStructuralProperties.html","author":{"@type":"Person","name":"Nischal Subedi, Ember Kerstetter, Winnie Li, Silo Murphy"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-16 00:00:00 +0000">12-16</time>
+  </p>
+  
+  <h1>Understanding When Graph Convolutional Networks Help: A Diagnostic Study on Label Scarcity and Structural Properties</h1>
+  <br>Nischal Subedi, Ember Kerstetter, Winnie Li, Silo Murphy</h3>
+  <br> [stat.AP,stat.ML]
+
+  <p>Graph Convolutional Networks (GCNs) have become a standard approach for semi-supervised node classification, yet practitioners lack clear guidance on when GCNs provide meaningful improvements over simpler baselines. We present a diagnostic study using the Amazon Computers co-purchase data to understand when and why GCNs help. Through systematic experiments with simulated label scarcity, feature ablation, and per-class analysis, we find that GCN performance depends critically on the interaction between graph homophily and feature quality. GCNs provide the largest gains under extreme label scarcity, where they leverage neighborhood structure to compensate for limited supervision. Surprisingly, GCNs can match their original performance even when node features are replaced with random noise, suggesting that structure alone carries sufficient signal on highly homophilous graphs. However, GCNs hurt performance when homophily is low and features are already strong, as noisy neighbors corrupt good predictions. Our quadrant analysis reveals that GCNs help in three of four conditions and only hurt when low homophily meets strong features. These findings offer practical guidance for practitioners deciding whether to adopt graph-based methods.</p>
+
+<p><a href="https://arxiv.org/abs/2512.12947">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

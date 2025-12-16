@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Incorporating Interventional Independence Improves Robustness against Interventional Distribution Shift</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Incorporating Interventional Independence Improves Robustness against Interventional Distribution Shift" />
+<meta name="author" content="Gautam Sreekumar, Vishnu Naresh Boddeti" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study the problem of learning robust discriminative representations of causally related latent variables given the underlying causal graph and a training set comprising passively collected observational data and interventional data obtained through targeted interventions on some of these latent variables. We desire to learn representations that are robust against the resulting interventional distribution shifts. Existing approaches treat observational and interventional data alike, ignoring the independence relations arising from these interventions, even with known underlying causal models. As a result, their representations lead to large predictive performance disparities between observational and interventional data. This performance disparity worsens when interventional training data is scarce. In this paper, (1) we first identify a strong correlation between this performance disparity and the representations’ violation of statistical independence induced during interventions. (2) For linear models, we derive sufficient conditions on the proportion of interventional training data, for which enforcing statistical independence between representations of the intervened node and its non-descendants during interventions lowers the test-time error on interventional data. Combining these insights, (3) we propose RepLIn, a training algorithm that explicitly enforces this statistical independence between interventional representations. We demonstrate the utility of RepLIn on a synthetic dataset, and on real image and text datasets on facial attribute classification and toxicity detection, respectively, with semi-synthetic causal structures. Our experiments show that RepLIn is scalable with the number of nodes in the causal graph and is suitable to improve robustness against interventional distribution shifts of both continuous and discrete latent variables compared to the ERM baselines." />
+<meta property="og:description" content="We study the problem of learning robust discriminative representations of causally related latent variables given the underlying causal graph and a training set comprising passively collected observational data and interventional data obtained through targeted interventions on some of these latent variables. We desire to learn representations that are robust against the resulting interventional distribution shifts. Existing approaches treat observational and interventional data alike, ignoring the independence relations arising from these interventions, even with known underlying causal models. As a result, their representations lead to large predictive performance disparities between observational and interventional data. This performance disparity worsens when interventional training data is scarce. In this paper, (1) we first identify a strong correlation between this performance disparity and the representations’ violation of statistical independence induced during interventions. (2) For linear models, we derive sufficient conditions on the proportion of interventional training data, for which enforcing statistical independence between representations of the intervened node and its non-descendants during interventions lowers the test-time error on interventional data. Combining these insights, (3) we propose RepLIn, a training algorithm that explicitly enforces this statistical independence between interventional representations. We demonstrate the utility of RepLIn on a synthetic dataset, and on real image and text datasets on facial attribute classification and toxicity detection, respectively, with semi-synthetic causal structures. Our experiments show that RepLIn is scalable with the number of nodes in the causal graph and is suitable to improve robustness against interventional distribution shifts of both continuous and discrete latent variables compared to the ERM baselines." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/IncorporatingInterventionalIndependenceImprovesRobustnessagainstInterventionalDistributionShift.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/IncorporatingInterventionalIndependenceImprovesRobustnessagainstInterventionalDistributionShift.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Incorporating Interventional Independence Improves Robustness against Interventional Distribution Shift" />
+<script type="application/ld+json">
+{"description":"We study the problem of learning robust discriminative representations of causally related latent variables given the underlying causal graph and a training set comprising passively collected observational data and interventional data obtained through targeted interventions on some of these latent variables. We desire to learn representations that are robust against the resulting interventional distribution shifts. Existing approaches treat observational and interventional data alike, ignoring the independence relations arising from these interventions, even with known underlying causal models. As a result, their representations lead to large predictive performance disparities between observational and interventional data. This performance disparity worsens when interventional training data is scarce. In this paper, (1) we first identify a strong correlation between this performance disparity and the representations’ violation of statistical independence induced during interventions. (2) For linear models, we derive sufficient conditions on the proportion of interventional training data, for which enforcing statistical independence between representations of the intervened node and its non-descendants during interventions lowers the test-time error on interventional data. Combining these insights, (3) we propose RepLIn, a training algorithm that explicitly enforces this statistical independence between interventional representations. We demonstrate the utility of RepLIn on a synthetic dataset, and on real image and text datasets on facial attribute classification and toxicity detection, respectively, with semi-synthetic causal structures. Our experiments show that RepLIn is scalable with the number of nodes in the causal graph and is suitable to improve robustness against interventional distribution shifts of both continuous and discrete latent variables compared to the ERM baselines.","headline":"Incorporating Interventional Independence Improves Robustness against Interventional Distribution Shift","dateModified":"2025-12-16T00:00:00+00:00","datePublished":"2025-12-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/IncorporatingInterventionalIndependenceImprovesRobustnessagainstInterventionalDistributionShift.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2025/12/16/IncorporatingInterventionalIndependenceImprovesRobustnessagainstInterventionalDistributionShift.html","author":{"@type":"Person","name":"Gautam Sreekumar, Vishnu Naresh Boddeti"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-16 00:00:00 +0000">12-16</time>
+  </p>
+  
+  <h1>Incorporating Interventional Independence Improves Robustness against Interventional Distribution Shift</h1>
+  <br>Gautam Sreekumar, Vishnu Naresh Boddeti</h3>
+  <br> [stat.ME]
+
+  <p>We study the problem of learning robust discriminative representations of causally related latent variables given the underlying causal graph and a training set comprising passively collected observational data and interventional data obtained through targeted interventions on some of these latent variables. We desire to learn representations that are robust against the resulting interventional distribution shifts. Existing approaches treat observational and interventional data alike, ignoring the independence relations arising from these interventions, even with known underlying causal models. As a result, their representations lead to large predictive performance disparities between observational and interventional data. This performance disparity worsens when interventional training data is scarce. In this paper, (1) we first identify a strong correlation between this performance disparity and the representations’ violation of statistical independence induced during interventions. (2) For linear models, we derive sufficient conditions on the proportion of interventional training data, for which enforcing statistical independence between representations of the intervened node and its non-descendants during interventions lowers the test-time error on interventional data. Combining these insights, (3) we propose RepLIn, a training algorithm that explicitly enforces this statistical independence between interventional representations. We demonstrate the utility of RepLIn on a synthetic dataset, and on real image and text datasets on facial attribute classification and toxicity detection, respectively, with semi-synthetic causal structures. Our experiments show that RepLIn is scalable with the number of nodes in the causal graph and is suitable to improve robustness against interventional distribution shifts of both continuous and discrete latent variables compared to the ERM baselines.</p>
+
+<p><a href="https://arxiv.org/abs/2507.05412">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
