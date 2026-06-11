@@ -1,14 +1,70 @@
 {%-if include.category-%}
-  {%-assign posts = site.categories[include.category]-%}  
+  {%-assign posts = site.categories[include.category]-%}
 {%-else-%}
   {%-assign posts = site.posts-%}
 {%-endif-%}
 
-<ul>
-	{%- for post in posts -%}
-	<li>
-		<a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a> {{ post.author }}
-		<br> [{{ post.tags }}]
-	</li>
-	{%- endfor -%}
+<div class="sort-bar">
+  sorted by <strong id="sort-label">score</strong>
+  &nbsp;&middot;&nbsp;
+  <button class="sort-btn" id="sort-toggle" onclick="toggleSort()">switch to date</button>
+</div>
+
+<ul class="post-list" id="post-list">
+  {%- for post in posts -%}
+  <li class="post-item"
+      data-score="{{ post.score | default: 0 }}"
+      data-date="{{ post.date | date: '%Y-%m-%d' }}">
+    <div class="post-tags-col">
+      {%- for tag in post.tags -%}
+        <span class="tag">{{ tag }}</span>
+      {%- endfor -%}
+    </div>
+    <div class="post-content-col">
+      <div class="post-title-line">
+        <span class="badge badge-{{ post.badge }}">{{ post.badge }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </div>
+      <div class="post-meta-line">
+        {{ post.author_display | default: post.author }}<span class="sep">&middot;</span>{{ post.date | date: "%-d %b %Y" }}
+      </div>
+      {%- if post.summary and post.summary != '' -%}
+      <p class="post-summary">{{ post.summary }}</p>
+      {%- endif -%}
+    </div>
+  </li>
+  {%- endfor -%}
 </ul>
+
+<script>
+(function () {
+  var mode = 'score';
+
+  function sort() {
+    var list = document.getElementById('post-list');
+    var items = Array.from(list.querySelectorAll('.post-item'));
+    items.sort(function (a, b) {
+      var sa = parseFloat(a.dataset.score) || 0;
+      var sb = parseFloat(b.dataset.score) || 0;
+      var da = a.dataset.date;
+      var db = b.dataset.date;
+      if (mode === 'score') {
+        return sb !== sa ? sb - sa : db.localeCompare(da);
+      } else {
+        return da !== db ? db.localeCompare(da) : sb - sa;
+      }
+    });
+    items.forEach(function (item) { list.appendChild(item); });
+  }
+
+  function toggleSort() {
+    mode = (mode === 'score') ? 'date' : 'score';
+    document.getElementById('sort-label').textContent = mode;
+    document.getElementById('sort-toggle').textContent =
+      mode === 'score' ? 'switch to date' : 'switch to score';
+    sort();
+  }
+
+  window.toggleSort = toggleSort;
+  sort();
+})();
+</script>

@@ -1,12 +1,8 @@
 ---
 layout: default
 ---
-<header>
-  <h1>{{ site.title }} - {{ site.time | date: "%-d %b"}}</h1>
-  {%-if site.theme_config.show_description-%}
-    <p>{{ site.description }}</p>
-  {%-endif-%}
-</header>
+<div class="site-header">
+  <h1>{{ site.title }} &mdash; {{ site.time | date: "%-d %b %Y" }}</h1>
+</div>
 
-{%-include post_list.html -%}
-
+{%- include post_list.html -%}
