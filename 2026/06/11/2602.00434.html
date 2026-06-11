@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>How should covariates be handled in randomized trials? Empirical evidence from 50 trials and recommendations for practice</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="How should covariates be handled in randomized trials? Empirical evidence from 50 trials and recommendations for practice" />
+<meta name="author" content="Yulin Shao, Liangbo Lyu, Menggang Yu, Bingkai Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Background and Objective: Covariate adjustment can improve precision and power in randomized clinical trials and is recommended by major regulatory agencies. However, there is limited empirical evidence on how different adjustment strategies perform across diverse real-world trials, leaving uncertainty about which methods and covariates should be prespecified in statistical analysis plans. We aim to address this gap and provide practical recommendations. Methods: We conducted a large-scale empirical study using individual-level data from 50 publicly available randomized trials (29,094 participants; 574 treatment-outcome comparisons). We compared commonly used covariate-adjusted estimators, including analysis of covariance, inverse-probability weighting, g-computation, and machine-learning-based approaches, combined with…" />
+<meta name="twitter:description" property="og:description" content="Background and Objective: Covariate adjustment can improve precision and power in randomized clinical trials and is recommended by major regulatory agencies. However, there is limited empirical evidence on how different adjustment strategies perform across diverse real-world trials, leaving uncertainty about which methods and covariates should be prespecified in statistical analysis plans. We aim to address this gap and provide practical recommendations. Methods: We conducted a large-scale empirical study using individual-level data from 50 publicly available randomized trials (29,094 participants; 574 treatment-outcome comparisons). We compared commonly used covariate-adjusted estimators, including analysis of covariance, inverse-probability weighting, g-computation, and machine-learning-based approaches, combined with…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2602.00434.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2602.00434.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How should covariates be handled in randomized trials? Empirical evidence from 50 trials and recommendations for practice" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yulin Shao, Liangbo Lyu, Menggang Yu, Bingkai Wang"},"dateModified":"2026-06-11T00:00:00+00:00","datePublished":"2026-06-11T00:00:00+00:00","description":"Background and Objective: Covariate adjustment can improve precision and power in randomized clinical trials and is recommended by major regulatory agencies. However, there is limited empirical evidence on how different adjustment strategies perform across diverse real-world trials, leaving uncertainty about which methods and covariates should be prespecified in statistical analysis plans. We aim to address this gap and provide practical recommendations. Methods: We conducted a large-scale empirical study using individual-level data from 50 publicly available randomized trials (29,094 participants; 574 treatment-outcome comparisons). We compared commonly used covariate-adjusted estimators, including analysis of covariance, inverse-probability weighting, g-computation, and machine-learning-based approaches, combined with…","headline":"How should covariates be handled in randomized trials? Empirical evidence from 50 trials and recommendations for practice","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2602.00434.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2602.00434.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+
+<article>
+  <div class="post-header">
+    <h1>How should covariates be handled in randomized trials? Empirical evidence from 50 trials and recommendations for practice</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Yulin Shao, Liangbo Lyu, Menggang Yu, Bingkai Wang
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      11 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper provides empirical evidence on how different covariate adjustment strategies perform in randomized clinical trials, but it does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>Background and Objective: Covariate adjustment can improve precision and power in randomized clinical trials and is recommended by major regulatory agencies. However, there is limited empirical evidence on how different adjustment strategies perform across diverse real-world trials, leaving uncertainty about which methods and covariates should be prespecified in statistical analysis plans. We aim to address this gap and provide practical recommendations. Methods: We conducted a large-scale empirical study using individual-level data from 50 publicly available randomized trials (29,094 participants; 574 treatment-outcome comparisons). We compared commonly used covariate-adjusted estimators, including analysis of covariance, inverse-probability weighting, g-computation, and machine-learning-based approaches, combined with three covariate-selection strategies. Performance was evaluated using precision gains, changes in point estimates, computational reliability, and the probability that covariate adjustment altered statistical significance relative to an unadjusted analysis. Results: Covariate adjustment improved precision in most settings, with a median variance reduction of 13.3\% for continuous outcomes and 4.6\% for binary outcomes. Parsimonious regression approaches using a small prespecified set of prognostic covariates performed as well as or better than more complex methods, particularly in small to medium samples. Machine-learning-based estimators did not provide additional precision and were more prone to computational failure for binary outcomes. Conclusions: Across trials, parsimonious covariate adjustment provided consistent efficiency gains without introducing systematic bias. These findings support routine covariate adjustment in primary trial analyses. All curated datasets and analysis code are openly released to support future clinical research.</p>
+
+<p><a href="https://arxiv.org/abs/2602.00434">Read full paper</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

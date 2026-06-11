@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Compound Selection Decisions: An Almost SURE Approach</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Compound Selection Decisions: An Almost SURE Approach" />
+<meta name="author" content="Jiafeng Chen, Lihua Lei, Timothy Sudijono, Liyang Sun, Tian Xie" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper proposes methods for producing compound selection decisions in a Gaussian sequence model. Given unknown, fixed parameters $\mu_ {1:n}$ and known $\sigma_{1:n}$ with observations $Y_i \sim \textsf{N}(\mu_i, \sigma_i^2)$, the decision maker would like to select a subset of indices $S$ so as to maximize utility $\frac{1}{n}\sum_{i\in S} (\mu_i - K_i)$, for known costs $K_i$. Inspired by Stein’s unbiased risk estimate (SURE), we introduce an almost unbiased estimator, called ASSURE, for the expected utility of a proposed decision rule. ASSURE allows a user to choose a welfare-maximizing rule from a pre-specified class by optimizing the estimated welfare, thereby producing selection…" />
+<meta name="twitter:description" property="og:description" content="This paper proposes methods for producing compound selection decisions in a Gaussian sequence model. Given unknown, fixed parameters $\mu_ {1:n}$ and known $\sigma_{1:n}$ with observations $Y_i \sim \textsf{N}(\mu_i, \sigma_i^2)$, the decision maker would like to select a subset of indices $S$ so as to maximize utility $\frac{1}{n}\sum_{i\in S} (\mu_i - K_i)$, for known costs $K_i$. Inspired by Stein’s unbiased risk estimate (SURE), we introduce an almost unbiased estimator, called ASSURE, for the expected utility of a proposed decision rule. ASSURE allows a user to choose a welfare-maximizing rule from a pre-specified class by optimizing the estimated welfare, thereby producing selection…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2511.11862.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2511.11862.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Compound Selection Decisions: An Almost SURE Approach" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jiafeng Chen, Lihua Lei, Timothy Sudijono, Liyang Sun, Tian Xie"},"dateModified":"2026-06-11T00:00:00+00:00","datePublished":"2026-06-11T00:00:00+00:00","description":"This paper proposes methods for producing compound selection decisions in a Gaussian sequence model. Given unknown, fixed parameters $\\mu_ {1:n}$ and known $\\sigma_{1:n}$ with observations $Y_i \\sim \\textsf{N}(\\mu_i, \\sigma_i^2)$, the decision maker would like to select a subset of indices $S$ so as to maximize utility $\\frac{1}{n}\\sum_{i\\in S} (\\mu_i - K_i)$, for known costs $K_i$. Inspired by Stein’s unbiased risk estimate (SURE), we introduce an almost unbiased estimator, called ASSURE, for the expected utility of a proposed decision rule. ASSURE allows a user to choose a welfare-maximizing rule from a pre-specified class by optimizing the estimated welfare, thereby producing selection…","headline":"Compound Selection Decisions: An Almost SURE Approach","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2511.11862.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2511.11862.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+
+<article>
+  <div class="post-header">
+    <h1>Compound Selection Decisions: An Almost SURE Approach</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Jiafeng Chen, Lihua Lei, Timothy Sudijono, Liyang Sun, Tian Xie
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      11 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper proposes a method, ASSURE, for producing compound selection decisions in a Gaussian sequence model, which borrows strength across noisy estimates to maximize utility.</div><h3>Abstract</h3>
+  <p>This paper proposes methods for producing compound selection decisions in a Gaussian sequence model. Given unknown, fixed parameters $\mu_ {1:n}$ and known $\sigma_{1:n}$ with observations $Y_i \sim \textsf{N}(\mu_i, \sigma_i^2)$, the decision maker would like to select a subset of indices $S$ so as to maximize utility $\frac{1}{n}\sum_{i\in S} (\mu_i - K_i)$, for known costs $K_i$. Inspired by Stein’s unbiased risk estimate (SURE), we introduce an almost unbiased estimator, called ASSURE, for the expected utility of a proposed decision rule. ASSURE allows a user to choose a welfare-maximizing rule from a pre-specified class by optimizing the estimated welfare, thereby producing selection decisions that borrow strength across noisy estimates. We show that ASSURE produces decision rules that are asymptotically no worse than the optimal but infeasible decision rule in the pre-specified class. We apply ASSURE to the selection of Census tracts for economic opportunity, the identification of discriminating firms, and the analysis of $p$-value decision procedures in A/B testing.</p>
+
+<p><a href="https://arxiv.org/abs/2511.11862">Read full paper</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

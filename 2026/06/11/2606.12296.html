@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Triangulation Splines: Spatial Adaptation on Irregular Domains</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian Triangulation Splines: Spatial Adaptation on Irregular Domains" />
+<meta name="author" content="Sihyeon Pyeon, Sunwoo Lim, Seonghyun Jeong" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Conventional nonparametric regression methods for two-dimensional non-rectangular domains often overlook domain geometry and allow smoothing across boundaries. In spatial and geostatistical applications, this assumption is frequently invalid because domain boundaries typically constrain interactions among observations. Accommodating spatially varying smoothness is also substantially more challenging than in the univariate setting, and most existing methods do not adequately capture this local structure of the target function. To address these challenges, we propose Bayesian triangulation splines, which constructs locally adaptive splines over a polygonal domain. The method employs constrained Delaunay triangulations to respect boundary geometry and adapt to heterogeneous smoothness. A carefully designed…" />
+<meta name="twitter:description" property="og:description" content="Conventional nonparametric regression methods for two-dimensional non-rectangular domains often overlook domain geometry and allow smoothing across boundaries. In spatial and geostatistical applications, this assumption is frequently invalid because domain boundaries typically constrain interactions among observations. Accommodating spatially varying smoothness is also substantially more challenging than in the univariate setting, and most existing methods do not adequately capture this local structure of the target function. To address these challenges, we propose Bayesian triangulation splines, which constructs locally adaptive splines over a polygonal domain. The method employs constrained Delaunay triangulations to respect boundary geometry and adapt to heterogeneous smoothness. A carefully designed…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2606.12296.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2606.12296.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian Triangulation Splines: Spatial Adaptation on Irregular Domains" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sihyeon Pyeon, Sunwoo Lim, Seonghyun Jeong"},"dateModified":"2026-06-11T00:00:00+00:00","datePublished":"2026-06-11T00:00:00+00:00","description":"Conventional nonparametric regression methods for two-dimensional non-rectangular domains often overlook domain geometry and allow smoothing across boundaries. In spatial and geostatistical applications, this assumption is frequently invalid because domain boundaries typically constrain interactions among observations. Accommodating spatially varying smoothness is also substantially more challenging than in the univariate setting, and most existing methods do not adequately capture this local structure of the target function. To address these challenges, we propose Bayesian triangulation splines, which constructs locally adaptive splines over a polygonal domain. The method employs constrained Delaunay triangulations to respect boundary geometry and adapt to heterogeneous smoothness. A carefully designed…","headline":"Bayesian Triangulation Splines: Spatial Adaptation on Irregular Domains","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2606.12296.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2606.12296.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian Triangulation Splines: Spatial Adaptation on Irregular Domains</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Sihyeon Pyeon, Sunwoo Lim, Seonghyun Jeong
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      11 Jun 2026
+    </div>
+  </div><div class="summary-box">The paper proposes Bayesian triangulation splines for spatial adaptation on irregular domains, achieving optimal posterior contraction rates and adapting to unknown smoothness.</div><h3>Abstract</h3>
+  <p>Conventional nonparametric regression methods for two-dimensional non-rectangular domains often overlook domain geometry and allow smoothing across boundaries. In spatial and geostatistical applications, this assumption is frequently invalid because domain boundaries typically constrain interactions among observations. Accommodating spatially varying smoothness is also substantially more challenging than in the univariate setting, and most existing methods do not adequately capture this local structure of the target function. To address these challenges, we propose Bayesian triangulation splines, which constructs locally adaptive splines over a polygonal domain. The method employs constrained Delaunay triangulations to respect boundary geometry and adapt to heterogeneous smoothness. A carefully designed prior further improves empirical performance. Under a global Sobolev smoothness assumption, we show that the proposed method achieves the optimal posterior contraction rate and adapts to unknown smoothness. We also show that the method exhibits ideal spatial adaptation in the sense that it achieves the oracle rate for inhomogeneous or locally varying structural features. Crucially, this oracle guarantee is not specific to constrained Delaunay triangulations, but holds over any triangulation satisfying weak shape-regularity conditions. Simulation studies confirm that the proposed method outperforms existing approaches by achieving higher estimation accuracy while maintaining low model complexity.</p>
+
+<p><a href="https://arxiv.org/abs/2606.12296">Read full paper</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

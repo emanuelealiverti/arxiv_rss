@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Empirical Bayes Estimation and Inference via Smooth Nonparametric Maximum Likelihood</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Empirical Bayes Estimation and Inference via Smooth Nonparametric Maximum Likelihood" />
+<meta name="author" content="Taehyun Kim, Bodhisattva Sen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The empirical Bayes $g$-modeling approach based on the nonparametric maximum likelihood estimator (NPMLE) has been central to large-scale estimation and inference in the normal means problem. However, theoretical guarantees for uncertainty quantification remain scarce. A key obstacle is that the NPMLE is necessarily discrete, which yields discrete posterior credible sets and a slow logarithmic deconvolution rate. We address both limitations by introducing a hierarchical Gaussian smoothing layer that restricts the mixing distribution to a Gaussian location mixture. Our smooth NPMLE inherits the favorable properties of the classical NPMLE: it is computable via convex optimization and achieves nearly parametric denoising performance.…" />
+<meta name="twitter:description" property="og:description" content="The empirical Bayes $g$-modeling approach based on the nonparametric maximum likelihood estimator (NPMLE) has been central to large-scale estimation and inference in the normal means problem. However, theoretical guarantees for uncertainty quantification remain scarce. A key obstacle is that the NPMLE is necessarily discrete, which yields discrete posterior credible sets and a slow logarithmic deconvolution rate. We address both limitations by introducing a hierarchical Gaussian smoothing layer that restricts the mixing distribution to a Gaussian location mixture. Our smooth NPMLE inherits the favorable properties of the classical NPMLE: it is computable via convex optimization and achieves nearly parametric denoising performance.…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2603.27843.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2603.27843.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Empirical Bayes Estimation and Inference via Smooth Nonparametric Maximum Likelihood" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Taehyun Kim, Bodhisattva Sen"},"dateModified":"2026-06-11T00:00:00+00:00","datePublished":"2026-06-11T00:00:00+00:00","description":"The empirical Bayes $g$-modeling approach based on the nonparametric maximum likelihood estimator (NPMLE) has been central to large-scale estimation and inference in the normal means problem. However, theoretical guarantees for uncertainty quantification remain scarce. A key obstacle is that the NPMLE is necessarily discrete, which yields discrete posterior credible sets and a slow logarithmic deconvolution rate. We address both limitations by introducing a hierarchical Gaussian smoothing layer that restricts the mixing distribution to a Gaussian location mixture. Our smooth NPMLE inherits the favorable properties of the classical NPMLE: it is computable via convex optimization and achieves nearly parametric denoising performance.…","headline":"Empirical Bayes Estimation and Inference via Smooth Nonparametric Maximum Likelihood","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2603.27843.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2603.27843.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+
+<article>
+  <div class="post-header">
+    <h1>Empirical Bayes Estimation and Inference via Smooth Nonparametric Maximum Likelihood</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Taehyun Kim, Bodhisattva Sen
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      11 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper introduces a hierarchical Gaussian smoothing layer to address limitations of the nonparametric maximum likelihood estimator in empirical Bayes estimation and inference.</div><h3>Abstract</h3>
+  <p>The empirical Bayes $g$-modeling approach based on the nonparametric maximum likelihood estimator (NPMLE) has been central to large-scale estimation and inference in the normal means problem. However, theoretical guarantees for uncertainty quantification remain scarce. A key obstacle is that the NPMLE is necessarily discrete, which yields discrete posterior credible sets and a slow logarithmic deconvolution rate. We address both limitations by introducing a hierarchical Gaussian smoothing layer that restricts the mixing distribution to a Gaussian location mixture. Our smooth NPMLE inherits the favorable properties of the classical NPMLE: it is computable via convex optimization and achieves nearly parametric denoising performance. Moreover, it achieves a polynomial deconvolution rate that is asymptotically minimax over the corresponding class. Our procedure also leads to estimated smooth posteriors that converge to the true posteriors at a polynomial rate. Further, we characterize marginal coverage sets that are optimal in expected length, construct plug-in estimators of these sets, and establish theoretical guarantees for the estimated sets in terms of both coverage probability and expected length. We also extend the theory to settings with model misspecification and heteroscedastic Gaussian observations, and study identifiability of the proposed hierarchical model.</p>
+
+<p><a href="https://arxiv.org/abs/2603.27843">Read full paper</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

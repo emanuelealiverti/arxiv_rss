@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>GraphGP: Scalable Gaussian Processes with Vecchia's Approximation</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="GraphGP: Scalable Gaussian Processes with Vecchia’s Approximation" />
+<meta name="author" content="Benjamin Dodge, Philipp Frank, Susan E. Clark" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gaussian processes are a powerful tool for modeling continuous fields, but their naive $\mathcal{O}(N^3)$ computational cost and $\mathcal{O}(N^2)$ memory requirement often limit their practical use. Vecchia’s approximation is a sparse precision matrix approximation for stationary, decaying kernels that conditions each point only on its $k$ nearest neighbors. We present GraphGP, a GPU algorithm for Vecchia’s approximation that scales to nearly a billion parameters with linear time and memory requirements, handling arbitrary point distributions over a large dynamic range. Our key contributions are (1) a bit-reversed k-d tree ordering that allows efficient neighbor searches while also maximizing batch parallelism, and (2)…" />
+<meta name="twitter:description" property="og:description" content="Gaussian processes are a powerful tool for modeling continuous fields, but their naive $\mathcal{O}(N^3)$ computational cost and $\mathcal{O}(N^2)$ memory requirement often limit their practical use. Vecchia’s approximation is a sparse precision matrix approximation for stationary, decaying kernels that conditions each point only on its $k$ nearest neighbors. We present GraphGP, a GPU algorithm for Vecchia’s approximation that scales to nearly a billion parameters with linear time and memory requirements, handling arbitrary point distributions over a large dynamic range. Our key contributions are (1) a bit-reversed k-d tree ordering that allows efficient neighbor searches while also maximizing batch parallelism, and (2)…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2606.11402.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2606.11402.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="GraphGP: Scalable Gaussian Processes with Vecchia’s Approximation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Benjamin Dodge, Philipp Frank, Susan E. Clark"},"dateModified":"2026-06-11T00:00:00+00:00","datePublished":"2026-06-11T00:00:00+00:00","description":"Gaussian processes are a powerful tool for modeling continuous fields, but their naive $\\mathcal{O}(N^3)$ computational cost and $\\mathcal{O}(N^2)$ memory requirement often limit their practical use. Vecchia’s approximation is a sparse precision matrix approximation for stationary, decaying kernels that conditions each point only on its $k$ nearest neighbors. We present GraphGP, a GPU algorithm for Vecchia’s approximation that scales to nearly a billion parameters with linear time and memory requirements, handling arbitrary point distributions over a large dynamic range. Our key contributions are (1) a bit-reversed k-d tree ordering that allows efficient neighbor searches while also maximizing batch parallelism, and (2)…","headline":"GraphGP: Scalable Gaussian Processes with Vecchia’s Approximation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2606.11402.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2606.11402.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+
+<article>
+  <div class="post-header">
+    <h1>GraphGP: Scalable Gaussian Processes with Vecchia's Approximation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Benjamin Dodge, Philipp Frank, Susan E. Clark
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ML
+      <span class="sep">&middot;</span>
+      11 Jun 2026
+    </div>
+  </div><div class="summary-box">GraphGP presents a GPU algorithm for Vecchia's approximation of Gaussian processes, improving scalability and efficiency, but its focus on computational methods for a specific application may not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>Gaussian processes are a powerful tool for modeling continuous fields, but their naive $\mathcal{O}(N^3)$ computational cost and $\mathcal{O}(N^2)$ memory requirement often limit their practical use. Vecchia’s approximation is a sparse precision matrix approximation for stationary, decaying kernels that conditions each point only on its $k$ nearest neighbors. We present GraphGP, a GPU algorithm for Vecchia’s approximation that scales to nearly a billion parameters with linear time and memory requirements, handling arbitrary point distributions over a large dynamic range. Our key contributions are (1) a bit-reversed k-d tree ordering that allows efficient neighbor searches while also maximizing batch parallelism, and (2) a differentiable CUDA implementation, which is substantially faster and more memory efficient than our pure JAX baseline. GraphGP provides the building blocks for inference, including forward generation, inverse application, log-determinant, and kernel parameter derivatives.</p>
+
+<p><a href="https://arxiv.org/abs/2606.11402">Read full paper</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
