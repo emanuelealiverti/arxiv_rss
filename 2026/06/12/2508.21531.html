@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper introduces an adaptive bandwidth selection procedure for generative moment matching networks, improving their training performance, but its focus on machine learning and copula models is not directly aligned with the researcher's core interests in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper introduces an adaptive bandwidth selection procedure for generative moment matching networks, improving their learning of dependence structures, but does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
   <p>An adaptive bandwidth selection procedure for the mixture kernel in the maximum mean discrepancy (MMD) for fitting generative moment matching networks (GMMNs) is introduced, and improved learning of copula random number generators is demonstrated. Based on the relative error of the training loss, the number of kernels is increased during training; additionally, the relative error of the validation loss is used as an early stopping criterion. While training time remains similar, adaptively training GMMNs (AGMMNs) significantly increases training performance, which is shown based on validation MMD trajectories, samples and validation MMD values. Superiority of AGMMNs over GMMNs and parametric copula models is also demonstrated in terms of three applications. First, convergence rates of estimators based on quasi-random versus pseudo-random samples from copulas are investigated in dimensions as large as 100 for the first time. Second, replicated validation MMDs, as well as Monte Carlo and quasi-Monte Carlo applications demonstrate the improved training of AGMMNs for a copula model implied by the 50 constituents of the S&amp;P 500 index after deGARCHing. Last, both the latter dataset and 50 constituents of the FTSE 100 are used to demonstrate that the improved training of AGMMNs indeed translates to an improved model prediction.</p>
 
 <p><a href="https://arxiv.org/abs/2508.21531">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper proposes a framework called Jeffrey guidance to control diffusion models, but its relevance to the researcher's core topics of Bayesian methodology and computation is limited.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper proposes a framework called Jeffrey guidance to extend diffusion-model control, but its application to Bayesian methodology and computation is indirect and not immediately relevant to the researcher's core topics.</div><h3>Abstract</h3>
   <p>A key strength of diffusion models lies in their flexibility, since their outputs can be controlled at sampling time through guidance. However, beyond simple cases such as conditional sampling, the target distribution is often left implicit, defined only through a sampling rule or a heuristic energy function. To address this, we propose Jeffrey guidance, a principled framework that extends diffusion-model control to applications beyond what standard guidance can express. It leverages Jeffrey’s rule of conditioning to update marginal distributions towards a prescribed target, preserving the conditional structure and minimally perturbing the joint distribution. We first demonstrate Jeffrey guidance by targeting a prescribed embedding distribution. With Inception embeddings as the target, this leads to substantial reductions in FID on both CIFAR-10 and FFHQ. We further apply Jeffrey guidance to fairness on CelebA-HQ, updating an unconditional diffusion model to enforce independence between attributes.</p>
 
 <p><a href="https://arxiv.org/abs/2606.13240">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

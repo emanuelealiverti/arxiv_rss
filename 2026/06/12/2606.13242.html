@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -66,6 +69,19 @@ MathJax = {
 <p><a href="https://arxiv.org/abs/2606.13242">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

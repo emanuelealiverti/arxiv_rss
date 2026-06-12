@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper explores causal invariance in graphical models with latent variables, but does not appear to directly relate to the researcher's core topics of Bayesian methodology and computation for complex data.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper explores causal invariance in graphical models with latent variables, but does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
   <p>Causal discovery aims to identify causal relationships among variables from observational or interventional data, typically represented by a directed acyclic graph (DAG). The causal invariance principle enables the identification of the causal parents of target variables by exploiting the stability of causal effects across different experimental settings. When some parents are unobserved, however, the induced graph over the observed variables may no longer be a DAG, and it may not be unique, complicating causal inference. For relevant configurations of latent parents, we characterize the induced graph and formalize the conditions under which causal invariance is preserved for the identification of the observed parents. Necessary and sufficient conditions for testing such invariance are formally established for a multivariate Gaussian target.</p>
 
 <p><a href="https://arxiv.org/abs/2606.13281">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

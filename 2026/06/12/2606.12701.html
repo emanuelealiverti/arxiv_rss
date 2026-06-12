@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper introduces a nonparametric Bayesian method, Soft Bayesian Additive Regression Trees (SBART), for analyzing recurrent event data, which combines multiple soft decision trees to achieve high predictive accuracy and a smooth estimator of the underlying intensity of the recurrent events.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper introduces a nonparametric Bayesian method, Soft Bayesian Additive Regression Trees (SBART), for modeling recurrent events data, achieving superior accuracy in estimating cumulative intensity compared to existing approaches.</div><h3>Abstract</h3>
   <p>Recurrent event data frequently arise in biomedical studies, where individuals may experience multiple recurrences of the same type of events, such as recurrent hospitalizations. This article introduces a nonparametric method for recurrent events under a Bayesian ensemble learning framework, called Soft Bayesian Additive Regression Trees (SBART), which combines multiple soft decision trees to achieve high predictive accuracy and a smooth estimator of the underlying intensity of the recurrent events. The proposed model represents the conditional intensity function of the non-homogeneous Poisson process as the product of a time-constant baseline, a subject-specific frailty random effect, and a nonparametric component capturing potentially nonlinear covariate effects and unknown interactions among covariates and time. A two-layer data augmentation scheme is employed to efficiently incorporate the SBART component within our computational algorithm. Simulation studies demonstrate that our method, called RecSBART in short, achieves superior accuracy in estimating cumulative intensity compared to existing approaches, even when our modeling assumptions are not true. With the Bayesian analysis of a study of recurrent hospitalizations of colorectal cancer patients, we further demonstrate our RecSBART method’s ability to reveal and interpret the underlying complex relationships among covariates in a recurrent events study.</p>
 
 <p><a href="https://arxiv.org/abs/2606.12701">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

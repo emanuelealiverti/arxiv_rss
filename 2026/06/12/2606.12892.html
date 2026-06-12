@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper proposes a method for prediction-powered causal inference using debiased machine learning and semi-supervised Riesz regression, but it does not appear to directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper proposes a method for causal inference using semi-supervised learning, but it does not appear to be directly related to the researcher's core topics of Bayesian methodology and computation for complex data.</div><h3>Abstract</h3>
   <p>This study investigates semiparametric efficient estimation of causal and structural parameters in a semi-supervised setting. In our setting, unlabeled auxiliary regressors are available in addition to labeled observations consisting of outcomes and regressors. Our goal is to construct estimators of causal and structural parameters whose asymptotic variances are smaller than those of estimators constructed using only labeled data. We refer to this framework as prediction-powered causal inference (PPCI). We first derive the efficient influence function and the efficiency bound, which imply that the use of auxiliary regressors can attain a smaller asymptotic variance than the efficiency bound attainable from labeled observations alone. Then, by combining the efficient influence function with the debiased machine learning (DML) framework, we propose methods that we call DML-PPCI. If we construct an estimating-equation estimator, we refer to the method as EE-DML-PPCI; if we construct a targeted-learning estimator, we refer to the method as TMLE-DML-PPCI. The asymptotic variances of both estimators match our derived efficiency bound. In the construction of the estimators, estimation of the efficient influence function plays an important role. In our study, the efficient influence function is also a Neyman orthogonal score, which depends on the Riesz representer and the regression function. For Riesz representer estimation, we develop semi-supervised generalized Riesz regression with convergence rate guarantees.</p>
 
 <p><a href="https://arxiv.org/abs/2606.12892">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">The paper presents Neural Posterior Estimation, a novel technique for simulation-based inference, and applies it to a stochastic infectious disease model to estimate infection rates with greater sample efficiency.</div><h3>Abstract</h3>
+  </div><div class="summary-box">The authors propose Neural Posterior Estimation (NPE) for calibrating complex epidemiological models, demonstrating its application to a stochastic SI model for healthcare-associated infections.</div><h3>Abstract</h3>
   <p>Stochastic infectious disease models capture uncertainty in public health outcomes and have become increasingly popular in epidemiological practice. However, calibrating these models to observed data is challenging with existing methods for parameter estimation. Stochastic epidemic models are nonlinear dynamical systems with potentially large latent state spaces, resulting in computationally intractable likelihood densities. We develop an approach to calibrating complex epidemiological models to high-dimensional data using Neural Posterior Estimation, a novel technique for simulation-based inference. In NPE, a neural conditional density estimator trained on simulated data learns to “invert” a stochastic simulator, returning a parametric approximation to the posterior distribution. We introduce a stochastic, discrete-time Susceptible Infected (SI) model with heterogeneous transmission for healthcare-associated infections (HAIs). HAIs are a major burden on healthcare systems. They exhibit high rates of asymptotic carriage, making it difficult to estimate infection rates. Through extensive simulation experiments, we show that NPE produces accurate posterior estimates of infection rates with greater sample efficiency compared to Approximate Bayesian Computation (ABC). We then use NPE to fit our SI model to an outbreak of carbapenem-resistant Klebsiella pneumoniae in a long-term acute care facility, finding evidence of location-based heterogeneity in patient-to-patient transmission risk. We argue that our methodology can be fruitfully applied to a wide range of mechanistic transmission models and problems in the epidemiology of infectious disease.</p>
 
 <p><a href="https://arxiv.org/abs/2412.12967">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

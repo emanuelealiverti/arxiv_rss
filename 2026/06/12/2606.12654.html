@@ -47,25 +47,41 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
     <h1>Computationally tractable robust differentially private mean estimation</h1>
     <div class="post-meta-block">
-      <span class="badge badge-medium">medium</span>
+      <span class="badge badge-low">low</span>
       Kelly Ramsay
       <span class="sep">&middot;</span>
       stat.ME, stat.ML
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper presents a differentially private mean estimator called the balloon mean, which is computationally tractable and robust to outlying observations, but does not directly advance the researcher's core topics of Bayesian methodology and computation for complex data.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper proposes a differentially private mean estimator called the balloon mean, which is computationally tractable and robust to outlying observations, but does not directly relate to the researcher's core topics of Bayesian methodology and computation.</div><h3>Abstract</h3>
   <p>We develop a new, differentially private mean estimator called the balloon mean. The main features of the balloon mean are that it is computationally tractable and enjoys robustness to outlying observations. It is based on an iterative clipping procedure over expanding Mahalanobis balls, or ``balloons.’’ The method satisfies zero-concentrated differential privacy and depends on a small number of interpretable tuning parameters. We provide theoretical guarantees under heavy-tailed and contaminated elliptical models, characterizing its statistical performance and robustness to outliers. Extensive simulations demonstrate that the balloon mean is robust to heavy-tailed and contaminated data, and outperforms existing differentially private mean estimators in contaminated settings.</p>
 
 <p><a href="https://arxiv.org/abs/2606.12654">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

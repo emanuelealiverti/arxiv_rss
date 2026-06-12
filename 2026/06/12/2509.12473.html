@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">The paper proposes two novel extensions to the Cox proportional hazards model for bivariate survival data, providing a semiparametric framework for assessing covariate effects.</div><h3>Abstract</h3>
+  </div><div class="summary-box">The paper proposes two novel extensions to the Cox proportional hazards model for bivariate survival data, but it does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
   <p>The Cox proportional hazards model is the most widely used regression model in univariate survival analysis, yet extensions to bivariate survival data remain scarce. We propose two novel extensions based on a Lehmann-type representation of the survival function. The first, the simple Lehmann model, is a direct extension that retains a straightforward structure. The second, the generalized Lehmann model, allows greater flexibility by incorporating three distinct regression parameters and includes the simple Lehmann model as a special case. The models admit a direct interpretation in terms of survival probabilities, providing a transparent, fully semiparametric framework for assessing covariate effects on both marginal survival probabilities and their dependence, without requiring specification of a copula or frailty distribution. To estimate the regression parameters, we build on a pseudo-observation-based approach for bivariate survival data and extend it to the generalized model via a two-step procedure. We establish consistency and asymptotic normality of the resulting estimators. The proposed approach is illustrated through simulation studies and an application to data from the Global Retinoblastoma Outcome Study.</p>
 
 <p><a href="https://arxiv.org/abs/2509.12473">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

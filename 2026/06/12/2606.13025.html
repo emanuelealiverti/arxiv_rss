@@ -47,25 +47,41 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
     <h1>Diagnostics-guided variance-inflated Fay-Herriot estimation from non-probability samples</h1>
     <div class="post-meta-block">
-      <span class="badge badge-low">low</span>
+      <span class="badge badge-medium">medium</span>
       Andrius Čiginas
       <span class="sep">&middot;</span>
       stat.ME
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">The paper proposes a diagnostics-guided variance-inflated Fay-Herriot estimator for small area estimation from non-probability samples, addressing issues with inverse probability weighting and variance estimation.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper proposes a diagnostics-guided variance-inflated Fay-Herriot estimator for small area estimation from non-probability samples, addressing issues with inverse probability weighting and variance estimates.</div><h3>Abstract</h3>
   <p>Non-probability data sources are increasingly considered in small area estimation, but inverse probability weighting (IPW) gives model-dependent domain estimators whose reliability may vary substantially across domains. Standard Fay-Herriot (FH) smoothing borrows strength across domains, yet it uses the supplied area-level variance estimates as if they fully described the uncertainty of the input estimators. This can be misleading when some domains have weak coverage, unstable weights, or poor auxiliary balance, since these features may indicate selection-bias risk not captured by the estimated variance alone. We propose a diagnostics-guided variance-inflated FH estimator for finite-population domain totals. The method starts from calibrated IPW domain estimators, summarizes their reliability through a small set of domain diagnostics, and introduces a mixture variance-inflation component in the FH observation equation. Domains whose diagnostics indicate weaker IPW information are thereby smoothed more strongly toward the area-level regression mean. A truth-known validation based on a pseudo-real population of Lithuanian business enterprises shows a substantial reduction in estimation error relative to calibrated IPW.</p>
 
 <p><a href="https://arxiv.org/abs/2606.13025">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

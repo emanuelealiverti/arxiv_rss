@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper reviews and synthesizes connections between network psychometrics and statistical models, highlighting methodological commonalities and opportunities for collaboration and advancement in psychometric research.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper reviews and synthesizes connections between network psychometrics and statistical models, highlighting methodological commonalities and opportunities for collaboration and methodological development.</div><h3>Abstract</h3>
   <p>Since the introduction of network psychometrics, several connections to statistical models in “classical” psychometrics (i.e., IRT, SEM, GLM) as well as to approaches from other research fields have been established. In this paper, these developments have been reviewed and synthesized and, based on an exploratory literature search, further advanced and presented in an accessible visual format. This perspective opens up promising opportunities to extend the psychometric-toolbox by incorporating and learning from statistical methodologies developed in other research domains, which often address similar or even identical problems. Highlighting these methodological commonalities may also foster collaboration across research fields that have traditionally remained largely independent. Moreover, awareness of these connections may render methodological development more systematic and goal-directed and may enable a meaningful division of labor, for example between the development of statistical methodology and its practical implementation for empirical research through software tools. Finally, these methodological advances provide new opportunities for empirical research and may contribute to a reconciliation with longstanding conceptual issues concerning psychometric constructs and, more broadly, psychological phenomena.</p>
 
 <p><a href="https://arxiv.org/abs/2603.26116">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

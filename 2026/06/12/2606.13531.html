@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper challenges the conventional wisdom that representative samples are always superior in small-budget RCTs, showing that the optimal pilot design depends on the budget size and can be non-representative in certain cases.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper challenges the conventional wisdom that representative samples are always superior in small-budget randomized controlled trials, and instead shows that the optimal pilot design depends on the budget size and can be non-representative.</div><h3>Abstract</h3>
   <p>Small randomized controlled trials are often used to screen interventions before running larger follow-up studies. This is a critical phase of experimentation, as missing effective interventions or scaling up harmful ones can be very costly. A common proposal to mitigate these errors is to recruit samples that are representative of the target population, but this is often challenging in resource-constrained pilots. We challenge the narrative that representative samples are always superior by showing that when statistical significance testing determines whether interventions receive further study, the pilot trial composition that maximizes the downstream expected improvement in outcomes depends critically on its budget size. In the large-budget limit, the optimal pilot design converges to a sample that is representative of the target population. However, in the small-budget regime, the pilot designer maximizes expected impact by sampling only from a single homogeneous sub-population, chosen in a manner that depends on sampling costs and the designer’s prior beliefs about heterogeneous treatment effects. Our proof of the small-budget result applies more generally when an RCT and significance test are used to decide whether to receive any non-adaptive downstream payoff, a result that may be applicable to other settings with constrained experimentation budgets.</p>
 
 <p><a href="https://arxiv.org/abs/2606.13531">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

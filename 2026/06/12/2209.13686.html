@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper explores false discovery rate adjustments for tests that control the average significance level, but may not control it for each individual test, and finds that certain procedures still yield FDR control in finite samples.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper explores false discovery rate adjustments for tests with a weaker notion of significance level control, but its focus on multiple testing and FDR control doesn't directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
   <p>Multiple testing adjustments, such as the Benjamini &amp; Hochberg (1995) step-up procedure for controlling the false discovery rate (FDR), are typically applied to families of tests that control significance level in the classical sense: for each individual test, the probability of false rejection is no greater than the nominal level. In this paper, we consider tests that satisfy only a weaker notion of significance level control, in which the probability of false rejection need only be controlled on average over the hypotheses. We find that the Benjamini &amp; Hochberg (1995) step-up procedure still controls FDR in the asymptotic regime with many weakly dependent p-values and an increasing number of rejections, and that certain adjustments for dependent p-values such as the Benjamini &amp; Yekutieli (2001) procedure continue to yield FDR control in finite samples. Our results open the door to FDR controlling procedures in nonparametric and high dimensional settings where weakening the notion of inference may allow for power improvements.</p>
 
 <p><a href="https://arxiv.org/abs/2209.13686">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

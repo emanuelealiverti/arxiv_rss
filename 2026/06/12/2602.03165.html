@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">The paper proposes an adaptive scheme for constructing efficient proposal distributions in importance sampling, but its focus on Monte Carlo methods and lack of direct connection to the researcher's core topics in Bayesian statistics and computation lead to a moderate relevance score.</div><h3>Abstract</h3>
+  </div><div class="summary-box">The paper proposes an adaptive scheme for constructing efficient proposal distributions in importance sampling, but its focus on Monte Carlo methods and geometric convergence may not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
   <p>Importance sampling is a Monte Carlo method which designs estimators of expectations under a target distribution using weighted samples from a proposal distribution. When the target distribution is complex, such as multimodal distributions in highdimensional spaces, the efficiency of importance sampling critically depends on the choice of the proposal distribution. In this paper, we propose a novel adaptive scheme for the construction of efficient proposal distributions. Our algorithm promotes efficient exploration of the target distribution by combining global sampling mechanisms with a delayed weighting procedure. The proposed weighting mechanism plays a key role by enabling rapid resampling in regions where the proposal distribution is poorly adapted to the target. Our sampling algorithm is shown to be geometrically convergent under mild assumptions and is illustrated through various numerical experiments.</p>
 
 <p><a href="https://arxiv.org/abs/2602.03165">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

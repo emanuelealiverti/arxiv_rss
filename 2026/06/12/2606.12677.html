@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper proposes a framework to measure and control the informativeness of multivariate spatial models, specifically the multivariate CAR model, to prevent oversmoothing and ensure comparable contributions from each subgroup.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper proposes a framework to measure and control the informativeness of multivariate CAR models, reducing oversmoothing in health event modeling.</div><h3>Abstract</h3>
   <p>When modeling health events in small areas, the conditional autoregressive (CAR) framework of Besag, York, and Molli'{e} (BYM) is widely used. For multiple outcomes, the multivariate CAR (MCAR) extension accommodates dependence among diseases that share risk factors, in addition to spatial dependence, and can also jointly model demographic subgroups for a single disease, allowing information to be borrowed across related populations. However, recent studies have shown that the BYM CAR model can be overly informative, leading to excessively precise estimates. While the MCAR model is expected to be more informative due to additional information shared across subgroups, its level of informativeness has not been previously quantified. We propose a framework to measure MCAR model informativeness as an extension of prior work and introduce a method to control it, ensuring the model contributes comparably to each subgroup. We achieve this through a reparameterization of the MCAR model within a computationally efficient framework. We demonstrate how the MCAR model compares with the BYM CAR model in terms of informativeness and oversmoothing and highlight the advantages of the restricted MCAR model using county-level heart disease death data stratified by race and sex.</p>
 
 <p><a href="https://arxiv.org/abs/2606.12677">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper extends the Prais-Winsten regression to panel data with higher-order autoregressive errors and compares its performance with another estimator in a simulation study.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper extends the Prais-Winsten regression method to panel data with higher-order autoregressive errors, but does not contribute to the researcher's core topics of Bayesian methodology and computation.</div><h3>Abstract</h3>
   <p>We extend the Prais-Winsten AR(k) generalized least squares (GLS) transformation to panel data within the Beck-Katz panel-corrected standard error (PCSE) framework and implement the method in the community-contributed Stata package xtpraisk. As the panel extension of Prais-Winsten, xtpraisk is the natural comparator to xtscc, the panel extension of Newey-West and implementation of the Driscoll-Kraay estimator. We conduct a Monte Carlo simulation to validate the statistical properties of xtpraisk and compare its finite-sample performance with xtscc. The simulation spans autoregressive orders 1-3, three autocorrelation scenarios, three panel sizes, six series lengths, and five effect sizes, with 2,000 replications per condition. Across all conditions, xtpraisk achieved higher power than xtscc while maintaining near-nominal Type I error rates, confidence interval coverage, and standard error calibration. In contrast, xtscc exhibited systematic standard error underestimation and inflated Type I error at short series lengths, with both deficiencies worsening as autoregressive order increased. Both estimators were essentially unbiased. Misspecification of the autoregressive order did not degrade xtpraisk’s inferential performance, and cross-panel correlation and panel size had negligible effects on the relative performance of either estimator. The results indicate that xtpraisk is preferable when both statistical efficiency and valid inference are priorities, particularly under persistent higher-order autocorrelation and short to moderate series lengths.</p>
 
 <p><a href="https://arxiv.org/abs/2606.12596">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

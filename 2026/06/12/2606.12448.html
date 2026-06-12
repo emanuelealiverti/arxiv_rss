@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper proposes a generalized framework for performance-based earthquake engineering that integrates structural reliability and resilience, but it does not appear to be directly related to the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper proposes a generalized framework for performance-based earthquake engineering, but it does not appear to be directly related to the researcher's core topics in statistics, Bayesian methodology, and computation.</div><h3>Abstract</h3>
   <p>Assessing structural performance under seismic hazard requires accounting for both damage accumulation and post-event recovery. In current performance-based earthquake engineering (PBEE), recovery is generally treated as a post-processing attribute, while structural performance is modeled using Poissonian exceedance assumptions that imply renewability and memorylessness. These assumptions hinder a unified treatment of reliability and resilience under repeated seismic loading. This study proposes a generalized PBEE framework in which damage and recovery are embedded directly into the system dynamics through a continuous-time Markov chain. A single generator matrix governs state-dependent transitions, providing a unified description of structural reliability and resilience while remaining compatible with standard PBEE metrics. Time-dependent failure probabilities and reliability indices are derived from the transient system dynamics, whereas resilience is quantified through the expected fraction of operational time before collapse. The framework exploits the spectral properties of the generator matrix to compute both metrics efficiently and transparently. The methodology is illustrated on a three-state example and applied to two structural archetypes: a braced frame and a base-isolated system. Results show that recovery dynamics can strongly affect long-term resilience even when conventional reliability measures exhibit limited sensitivity, emphasizing the need to explicitly account for recovery in life-cycle seismic performance assessment.</p>
 
 <p><a href="https://arxiv.org/abs/2606.12448">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

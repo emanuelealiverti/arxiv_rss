@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper provides explicit non-asymptotic bounds on the mixing times of data-augmentation Gibbs samplers for Bayesian probit regression, with implications for the choice of prior distributions that lead to fast mixing.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper provides explicit non-asymptotic bounds on the mixing times of data-augmentation Gibbs samplers for Bayesian probit regression, with implications for the choice of prior distributions to achieve fast mixing.</div><h3>Abstract</h3>
   <p>We investigate the convergence properties of popular data-augmentation samplers for Baye-sian probit regression. Leveraging recent results on Gibbs samplers for log-concave targets, we provide simple and explicit non-asymptotic bounds on the associated mixing times (in Kullback-Leibler divergence). The bounds depend explicitly on the design matrix and the prior precision, while they hold uniformly over the vector of responses. We specialize the results for different regimes of statistical interest, when both the number of data points $n$ and parameters $p$ are large: in particular we identify scenarios where the mixing times remain bounded as $n,p\to\infty$, and ones where they do not. The results are shown to be tight (in the worst case with respect to the responses) and provide guidance on choices of prior distributions that provably lead to fast mixing. An empirical analysis based on coupling techniques suggests that the bounds are effective in predicting practically observed behaviours.</p>
 
 <p><a href="https://arxiv.org/abs/2505.14343">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

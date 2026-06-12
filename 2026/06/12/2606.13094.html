@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">This paper proposes a methodology for estimating conservative design quantiles under mixed aleatory-epistemic uncertainty using importance sampling and control variates, but it does not appear to directly advance the researcher's core topics in Bayesian statistics and computation.</div><h3>Abstract</h3>
+  </div><div class="summary-box">This paper proposes a methodology for estimating conservative design quantiles under mixed aleatory-epistemic uncertainty using importance sampling and control variates, but it does not appear to directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
   <p>In aerospace certification and other safety-critical domains, conservative quantile estimation such as A- and B-basis values is essential to guarantee reliability. While these metrics are traditionally derived from experimental campaigns, this work focuses on their estimation using a validated deterministic numerical model. The problem is formulated under mixed aleatory-epistemic uncertainty, accounting for limited material data, finite sampling effects, and surrogate modeling errors. We propose a methodology for estimating conservative design quantiles with statistical guarantees under mixed uncertainties. The proposed method leverages importance sampling and control variates to achieve accurate and efficient estimates within a fixed computational budget. One key point is the surrogate model’s role solely as a variance reduction device, which guarantees unbiased and consistent quantile estimation. By explicitly integrating all sources of uncertainty, the proposed framework provides a numerical alternative to estimate A-basis and B-Basis. Furthermore, Sobol-based sensitivity indices are obtained at no additional cost, offering insight into the dominant epistemic sources. Numerical experiments on structural models demonstrate the method’s reliability and computational efficiency. In particular, the application to large-scale industrial simulations confirms its suitability for aerospace certification workflows and highlights its relevance for real world engineering environments.</p>
 
 <p><a href="https://arxiv.org/abs/2606.13094">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>

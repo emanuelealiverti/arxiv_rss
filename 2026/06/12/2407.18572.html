@@ -47,7 +47,10 @@ MathJax = {
 <body>
     <main aria-label="Content">
       <div class="w">
-        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -60,12 +63,25 @@ MathJax = {
       <span class="sep">&middot;</span>
       12 Jun 2026
     </div>
-  </div><div class="summary-box">The paper presents a novel approach to introducing missing values to a complete dataset, but it does not appear to be directly related to the researcher's core topics of Bayesian methodology and computation for complex data.</div><h3>Abstract</h3>
+  </div><div class="summary-box">The paper presents a novel approach to introducing missing values to a complete dataset, allowing for the construction of various missingness patterns via copulas and Bernoulli margins, but it does not appear to directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
   <p>A novel, stochastic approach to amputation, the process of introducing missing values to a complete dataset, is presented. It allows one to construct a wide variety of missingness patterns by only having to specify distributions of missingness indicators as opposed to specifying each missingness pattern manually. Missingness indicators are modeled in a principled way via copulas and Bernoulli margins, thus allowing one to incorporate dependence in missingness patterns. Besides more classical missingness mechanisms such as missing completely at random, missing at random, and missing not at random, the approach is able to model structured missingness such as block missingness and, via mixtures, monotone missingness, which are patterns of missing data frequently found in real-life datasets. Properties such as joint missingness probabilities or missingness correlation are derived mathematically. The flexibility of the approach in capturing different missingness patterns while only requiring to specify distributional assumptions on missingness indicators is demonstrated with mathematical examples and empirical illustrations in terms of a well-known example dataset of sufficiently small sample size that allows to identify each missing data point visually. Finally, an example application to multivariate financial time series is provided.</p>
 
 <p><a href="https://arxiv.org/abs/2407.18572">Read full paper</a></p>
 
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
 
       </div>
     </main>
