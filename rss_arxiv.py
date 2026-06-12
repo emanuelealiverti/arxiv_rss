@@ -110,6 +110,10 @@ def badge(score):
     return 'low'
 
 
+def post_exists(arxiv_id):
+    return bool(list(POSTS_DIR.glob(f"*-{arxiv_id}.md")))
+
+
 def write_post(article):
     filename = POSTS_DIR / f"{today}-{article['arxiv_id']}.md"
     frontmatter = {
@@ -125,7 +129,7 @@ def write_post(article):
         'summary': article.get('summary', ''),
     }
     fm = yaml.dump(frontmatter, default_flow_style=False, allow_unicode=True, sort_keys=False)
-    body = f"---\n{fm}---\n\n{article['abstract']}\n\n[Read full paper]({article['link']})\n"
+    body = f"---\n{fm}---\n\n{article['abstract']}\n"
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(body)
 
@@ -150,6 +154,13 @@ def main():
 
     if not articles:
         print("No articles found — keeping existing posts", flush=True)
+        return
+
+    articles = [a for a in articles if not post_exists(a['arxiv_id'])]
+    print(f"{len(articles)} new articles after dedup against existing posts", flush=True)
+
+    if not articles:
+        print("All articles already posted — nothing to do", flush=True)
         return
 
     interest_profile = build_interest_profile(preferences)
