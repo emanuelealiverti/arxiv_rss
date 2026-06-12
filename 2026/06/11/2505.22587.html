@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Non-Parametric Inference for Lévy Measures in State-Space Models</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian Non-Parametric Inference for Lévy Measures in State-Space Models" />
+<meta name="author" content="Bill Z. Lin, Simon Godsill" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="L&#39;evy processes, known for their ability to model complex dynamics with skewness, heavy tails, and discontinuities, play a critical role in stochastic modeling across various domains. However, inference for most L&#39;evy processes, whether in parametric or non-parametric settings, remains a significant challenge. In this work, we present a novel Bayesian non-parametric inference framework for inferring the L&#39;evy measures of subordinators and normal variance-mean (NVM) processes within a linear state space model. A flexible random measure, the Independent Gamma-scaled Dirichlet Process (IGSDP), is introduced, for which the well-known Gamma process is a special case, leading to tractable conditional distributions for inference…" />
+<meta name="twitter:description" property="og:description" content="L&#39;evy processes, known for their ability to model complex dynamics with skewness, heavy tails, and discontinuities, play a critical role in stochastic modeling across various domains. However, inference for most L&#39;evy processes, whether in parametric or non-parametric settings, remains a significant challenge. In this work, we present a novel Bayesian non-parametric inference framework for inferring the L&#39;evy measures of subordinators and normal variance-mean (NVM) processes within a linear state space model. A flexible random measure, the Independent Gamma-scaled Dirichlet Process (IGSDP), is introduced, for which the well-known Gamma process is a special case, leading to tractable conditional distributions for inference…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2505.22587.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2505.22587.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian Non-Parametric Inference for Lévy Measures in State-Space Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Bill Z. Lin, Simon Godsill"},"dateModified":"2026-06-11T00:00:00+00:00","datePublished":"2026-06-11T00:00:00+00:00","description":"L&#39;evy processes, known for their ability to model complex dynamics with skewness, heavy tails, and discontinuities, play a critical role in stochastic modeling across various domains. However, inference for most L&#39;evy processes, whether in parametric or non-parametric settings, remains a significant challenge. In this work, we present a novel Bayesian non-parametric inference framework for inferring the L&#39;evy measures of subordinators and normal variance-mean (NVM) processes within a linear state space model. A flexible random measure, the Independent Gamma-scaled Dirichlet Process (IGSDP), is introduced, for which the well-known Gamma process is a special case, leading to tractable conditional distributions for inference…","headline":"Bayesian Non-Parametric Inference for Lévy Measures in State-Space Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2505.22587.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/11/2505.22587.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian Non-Parametric Inference for Lévy Measures in State-Space Models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Bill Z. Lin, Simon Godsill
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      11 Jun 2026
+    </div>
+  </div><div class="summary-box">The paper presents a novel Bayesian non-parametric inference framework for inferring Lévy measures in state-space models using a flexible random measure, the Independent Gamma-scaled Dirichlet Process.</div><h3>Abstract</h3>
+  <p>L'evy processes, known for their ability to model complex dynamics with skewness, heavy tails, and discontinuities, play a critical role in stochastic modeling across various domains. However, inference for most L'evy processes, whether in parametric or non-parametric settings, remains a significant challenge. In this work, we present a novel Bayesian non-parametric inference framework for inferring the L'evy measures of subordinators and normal variance-mean (NVM) processes within a linear state space model. A flexible random measure, the Independent Gamma-scaled Dirichlet Process (IGSDP), is introduced, for which the well-known Gamma process is a special case, leading to tractable conditional distributions for inference about both L'evy measures. We further show that in the Gamma process special case, conjugacy can be achieved for hyper-parameter inference. An explicit characterization of the parameter contour for NVM processes is provided, enabling an identifiable parameterization of the model for effective Markov Chain Monte Carlo algorithms in posterior inference. The method is demonstrated on both synthetic and tick-level (high-frequency) financial datasets.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2505.22587" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2505.22587" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

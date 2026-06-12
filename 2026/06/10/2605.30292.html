@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Leave a Window Out: Modifying the Jackknife for Predictive Inference in Time Series</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Leave a Window Out: Modifying the Jackknife for Predictive Inference in Time Series" />
+<meta name="author" content="Hanyang Jiang, Rina Foygel Barber, Ashwin Pananjady, Yao Xie" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Conformal prediction methods enjoy strong theoretical and empirical predictive inference performance, provided the data is exchangeable and is treated symmetrically during training. However, these assumptions are impractical in many settings, such as time series, where temporal dependence violates exchangeability and it is preferable to use predictors that leverage dependence by treating data asymmetrically. Recent work shows that split conformal prediction is robust to these issues, but sample splitting can reduce accuracy, motivating the study of methods that do not rely on data splitting in the time series setting. In this work, we show that the vanilla leave-one-out jackknife can suffer…" />
+<meta name="twitter:description" property="og:description" content="Conformal prediction methods enjoy strong theoretical and empirical predictive inference performance, provided the data is exchangeable and is treated symmetrically during training. However, these assumptions are impractical in many settings, such as time series, where temporal dependence violates exchangeability and it is preferable to use predictors that leverage dependence by treating data asymmetrically. Recent work shows that split conformal prediction is robust to these issues, but sample splitting can reduce accuracy, motivating the study of methods that do not rely on data splitting in the time series setting. In this work, we show that the vanilla leave-one-out jackknife can suffer…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2605.30292.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2605.30292.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Leave a Window Out: Modifying the Jackknife for Predictive Inference in Time Series" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanyang Jiang, Rina Foygel Barber, Ashwin Pananjady, Yao Xie"},"dateModified":"2026-06-10T00:00:00+00:00","datePublished":"2026-06-10T00:00:00+00:00","description":"Conformal prediction methods enjoy strong theoretical and empirical predictive inference performance, provided the data is exchangeable and is treated symmetrically during training. However, these assumptions are impractical in many settings, such as time series, where temporal dependence violates exchangeability and it is preferable to use predictors that leverage dependence by treating data asymmetrically. Recent work shows that split conformal prediction is robust to these issues, but sample splitting can reduce accuracy, motivating the study of methods that do not rely on data splitting in the time series setting. In this work, we show that the vanilla leave-one-out jackknife can suffer…","headline":"Leave a Window Out: Modifying the Jackknife for Predictive Inference in Time Series","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2605.30292.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2605.30292.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Leave a Window Out: Modifying the Jackknife for Predictive Inference in Time Series</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Hanyang Jiang, Rina Foygel Barber, Ashwin Pananjady, Yao Xie
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      10 Jun 2026
+    </div>
+  </div><div class="summary-box">The paper proposes a modification to the leave-one-out jackknife method for predictive inference in time series, introducing a new measure of cyclic exchangeability and demonstrating its effectiveness in achieving valid coverage.</div><h3>Abstract</h3>
+  <p>Conformal prediction methods enjoy strong theoretical and empirical predictive inference performance, provided the data is exchangeable and is treated symmetrically during training. However, these assumptions are impractical in many settings, such as time series, where temporal dependence violates exchangeability and it is preferable to use predictors that leverage dependence by treating data asymmetrically. Recent work shows that split conformal prediction is robust to these issues, but sample splitting can reduce accuracy, motivating the study of methods that do not rely on data splitting in the time series setting. In this work, we show that the vanilla leave-one-out jackknife can suffer arbitrary loss of coverage even in canonical time series models with mild temporal dependence. As a remedy, we propose a modification tailored to such settings, which we term the leave-a-window-out (LWO) method, and show that it can achieve valid coverage provided that the model-fitting procedure satisfies mild stability properties. Our proofs are based on quantifying the degree to which the data departs from cyclic exchangeability, which we introduce new coefficients to measure. Experiments on time series demonstrate that our method often enjoys valid coverage when the vanilla jackknife fails to cover, while producing much narrower intervals than split conformal prediction.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.30292" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.30292" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

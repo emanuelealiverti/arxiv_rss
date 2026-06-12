@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Diffusion Monte Carlo algorithm employing depth first traversal and a stack instead of a swarm</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Diffusion Monte Carlo algorithm employing depth first traversal and a stack instead of a swarm" />
+<meta name="author" content="Bastiaan J. Braams" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Diffusion Monte Carlo (DMC) and Monte Carlo for particle transport with importance sampling both involve simulations of weighted walkers that undergo birth and death processes (splitting and Russian Roulette). The established implementations of these methods are quite different: Particle simulation Monte Carlo employs a stack to handle the splitting history whereas in traditional DMC one follows a swarm of walkers. The particle simulation Monte Carlo approach involves a depth first traversal of the visited configurations whereas the traditional DMC approach may be seen as a breadth first traversal. In the present work the implementation of a depth first, stack based…" />
+<meta name="twitter:description" property="og:description" content="Diffusion Monte Carlo (DMC) and Monte Carlo for particle transport with importance sampling both involve simulations of weighted walkers that undergo birth and death processes (splitting and Russian Roulette). The established implementations of these methods are quite different: Particle simulation Monte Carlo employs a stack to handle the splitting history whereas in traditional DMC one follows a swarm of walkers. The particle simulation Monte Carlo approach involves a depth first traversal of the visited configurations whereas the traditional DMC approach may be seen as a breadth first traversal. In the present work the implementation of a depth first, stack based…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/08/2606.08946.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/08/2606.08946.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-08T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Diffusion Monte Carlo algorithm employing depth first traversal and a stack instead of a swarm" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Bastiaan J. Braams"},"dateModified":"2026-06-08T00:00:00+00:00","datePublished":"2026-06-08T00:00:00+00:00","description":"Diffusion Monte Carlo (DMC) and Monte Carlo for particle transport with importance sampling both involve simulations of weighted walkers that undergo birth and death processes (splitting and Russian Roulette). The established implementations of these methods are quite different: Particle simulation Monte Carlo employs a stack to handle the splitting history whereas in traditional DMC one follows a swarm of walkers. The particle simulation Monte Carlo approach involves a depth first traversal of the visited configurations whereas the traditional DMC approach may be seen as a breadth first traversal. In the present work the implementation of a depth first, stack based…","headline":"A Diffusion Monte Carlo algorithm employing depth first traversal and a stack instead of a swarm","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/08/2606.08946.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/08/2606.08946.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Diffusion Monte Carlo algorithm employing depth first traversal and a stack instead of a swarm</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Bastiaan J. Braams
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      8 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper presents a new implementation of the Diffusion Monte Carlo algorithm using a depth-first traversal and a stack, which can be more memory efficient than the traditional breadth-first approach.</div><h3>Abstract</h3>
+  <p>Diffusion Monte Carlo (DMC) and Monte Carlo for particle transport with importance sampling both involve simulations of weighted walkers that undergo birth and death processes (splitting and Russian Roulette). The established implementations of these methods are quite different: Particle simulation Monte Carlo employs a stack to handle the splitting history whereas in traditional DMC one follows a swarm of walkers. The particle simulation Monte Carlo approach involves a depth first traversal of the visited configurations whereas the traditional DMC approach may be seen as a breadth first traversal. In the present work the implementation of a depth first, stack based approach to DMC is described and a complete code is presented. The depth first approach, called DMCD here, can be more memory efficient than the breadth first approach, both for total memory and for use of a memory hierarchy and of co-processors. The implementation appears very natural for population control and for descendant weighting and it unifies algorithmic treatment of the eigenvalue problem (DMC) with the linear equation problem (particle transport). A concern with DMCD that is not present in the breadth first approach, and that is successfully addressed here, is the need to maintain a pool of starters for use when a new walker is required and the stack is empty. The DMCD approach appears to have the potential to become the preferred implementation for many DMC applications.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.08946" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.08946" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Progression to the mean: A comparison of Bayesian clinical prediction models outputting the posterior mean versus conventional plug-in predictions</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Progression to the mean: A comparison of Bayesian clinical prediction models outputting the posterior mean versus conventional plug-in predictions" />
+<meta name="author" content="Mohsen Sadatsafavi, Richard D. Riley" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Clinical prediction models provide predictions for individuals, typically expressed as point estimates derived from a deterministic function, such as a logistic regression equation. Such ‘plug-in’ predictions hide inherent uncertainty. In contrast, Bayesian methods offer a coherent mechanism for uncertainty propagation, and allow the computation of the posterior mean as the measure of centrality of choice for clinical decision-making. However, Bayesian methods are not widely utilised in predictive analytics for healthcare. We investigated the feasibility and performance of a Bayesian adaptation of the commonly used frequentist framework for risk prediction modelling. We assessed (i) the use of shrinkage priors with complementary…" />
+<meta name="twitter:description" property="og:description" content="Clinical prediction models provide predictions for individuals, typically expressed as point estimates derived from a deterministic function, such as a logistic regression equation. Such ‘plug-in’ predictions hide inherent uncertainty. In contrast, Bayesian methods offer a coherent mechanism for uncertainty propagation, and allow the computation of the posterior mean as the measure of centrality of choice for clinical decision-making. However, Bayesian methods are not widely utilised in predictive analytics for healthcare. We investigated the feasibility and performance of a Bayesian adaptation of the commonly used frequentist framework for risk prediction modelling. We assessed (i) the use of shrinkage priors with complementary…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2605.19163.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2605.19163.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Progression to the mean: A comparison of Bayesian clinical prediction models outputting the posterior mean versus conventional plug-in predictions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mohsen Sadatsafavi, Richard D. Riley"},"dateModified":"2026-06-10T00:00:00+00:00","datePublished":"2026-06-10T00:00:00+00:00","description":"Clinical prediction models provide predictions for individuals, typically expressed as point estimates derived from a deterministic function, such as a logistic regression equation. Such ‘plug-in’ predictions hide inherent uncertainty. In contrast, Bayesian methods offer a coherent mechanism for uncertainty propagation, and allow the computation of the posterior mean as the measure of centrality of choice for clinical decision-making. However, Bayesian methods are not widely utilised in predictive analytics for healthcare. We investigated the feasibility and performance of a Bayesian adaptation of the commonly used frequentist framework for risk prediction modelling. We assessed (i) the use of shrinkage priors with complementary…","headline":"Progression to the mean: A comparison of Bayesian clinical prediction models outputting the posterior mean versus conventional plug-in predictions","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2605.19163.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2605.19163.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Progression to the mean: A comparison of Bayesian clinical prediction models outputting the posterior mean versus conventional plug-in predictions</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Mohsen Sadatsafavi, Richard D. Riley
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      10 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper compares Bayesian clinical prediction models using posterior mean versus conventional plug-in predictions, demonstrating improved predictive performance and uncertainty quantification.</div><h3>Abstract</h3>
+  <p>Clinical prediction models provide predictions for individuals, typically expressed as point estimates derived from a deterministic function, such as a logistic regression equation. Such ‘plug-in’ predictions hide inherent uncertainty. In contrast, Bayesian methods offer a coherent mechanism for uncertainty propagation, and allow the computation of the posterior mean as the measure of centrality of choice for clinical decision-making. However, Bayesian methods are not widely utilised in predictive analytics for healthcare. We investigated the feasibility and performance of a Bayesian adaptation of the commonly used frequentist framework for risk prediction modelling. We assessed (i) the use of shrinkage priors with complementary features (simplicity, user input, and automatic shrinkage) that enable Laplace/normal approximation of the posterior, and (ii) exact and approximate methods for efficient computation of the posterior mean. Using examples and simulations, we demonstrate that this Bayesian approach is feasible and improves predictive performance, while enabling uncertainty quantification with suitable coverage. In small-to-medium sample sizes, the gain in clinical utility by using the posterior mean over plug-in predictions was equivalent to the gain from using a noticeably larger sample size. Adapting the widely used parametric regression methods to an approximate Bayesian framework for prediction modelling is both pragmatic and clinically advantageous.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.19163" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.19163" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Extending Prais-Winsten Regression to Panel Data with Higher-Order Autoregressive Errors: A Simulation Study</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Extending Prais-Winsten Regression to Panel Data with Higher-Order Autoregressive Errors: A Simulation Study" />
+<meta name="author" content="Ariel Linden" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We extend the Prais-Winsten AR(k) generalized least squares (GLS) transformation to panel data within the Beck-Katz panel-corrected standard error (PCSE) framework and implement the method in the community-contributed Stata package xtpraisk. As the panel extension of Prais-Winsten, xtpraisk is the natural comparator to xtscc, the panel extension of Newey-West and implementation of the Driscoll-Kraay estimator. We conduct a Monte Carlo simulation to validate the statistical properties of xtpraisk and compare its finite-sample performance with xtscc. The simulation spans autoregressive orders 1-3, three autocorrelation scenarios, three panel sizes, six series lengths, and five effect sizes, with 2,000 replications per condition. Across…" />
+<meta name="twitter:description" property="og:description" content="We extend the Prais-Winsten AR(k) generalized least squares (GLS) transformation to panel data within the Beck-Katz panel-corrected standard error (PCSE) framework and implement the method in the community-contributed Stata package xtpraisk. As the panel extension of Prais-Winsten, xtpraisk is the natural comparator to xtscc, the panel extension of Newey-West and implementation of the Driscoll-Kraay estimator. We conduct a Monte Carlo simulation to validate the statistical properties of xtpraisk and compare its finite-sample performance with xtscc. The simulation spans autoregressive orders 1-3, three autocorrelation scenarios, three panel sizes, six series lengths, and five effect sizes, with 2,000 replications per condition. Across…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2606.12596.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2606.12596.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Extending Prais-Winsten Regression to Panel Data with Higher-Order Autoregressive Errors: A Simulation Study" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ariel Linden"},"dateModified":"2026-06-10T00:00:00+00:00","datePublished":"2026-06-10T00:00:00+00:00","description":"We extend the Prais-Winsten AR(k) generalized least squares (GLS) transformation to panel data within the Beck-Katz panel-corrected standard error (PCSE) framework and implement the method in the community-contributed Stata package xtpraisk. As the panel extension of Prais-Winsten, xtpraisk is the natural comparator to xtscc, the panel extension of Newey-West and implementation of the Driscoll-Kraay estimator. We conduct a Monte Carlo simulation to validate the statistical properties of xtpraisk and compare its finite-sample performance with xtscc. The simulation spans autoregressive orders 1-3, three autocorrelation scenarios, three panel sizes, six series lengths, and five effect sizes, with 2,000 replications per condition. Across…","headline":"Extending Prais-Winsten Regression to Panel Data with Higher-Order Autoregressive Errors: A Simulation Study","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2606.12596.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2606.12596.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Extending Prais-Winsten Regression to Panel Data with Higher-Order Autoregressive Errors: A Simulation Study</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Ariel Linden
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      10 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper extends the Prais-Winsten regression to panel data with higher-order autoregressive errors and presents a simulation study comparing its performance with another estimator.</div><h3>Abstract</h3>
+  <p>We extend the Prais-Winsten AR(k) generalized least squares (GLS) transformation to panel data within the Beck-Katz panel-corrected standard error (PCSE) framework and implement the method in the community-contributed Stata package xtpraisk. As the panel extension of Prais-Winsten, xtpraisk is the natural comparator to xtscc, the panel extension of Newey-West and implementation of the Driscoll-Kraay estimator. We conduct a Monte Carlo simulation to validate the statistical properties of xtpraisk and compare its finite-sample performance with xtscc. The simulation spans autoregressive orders 1-3, three autocorrelation scenarios, three panel sizes, six series lengths, and five effect sizes, with 2,000 replications per condition. Across all conditions, xtpraisk achieved higher power than xtscc while maintaining near-nominal Type I error rates, confidence interval coverage, and standard error calibration. In contrast, xtscc exhibited systematic standard error underestimation and inflated Type I error at short series lengths, with both deficiencies worsening as autoregressive order increased. Both estimators were essentially unbiased. Misspecification of the autoregressive order did not degrade xtpraisk’s inferential performance, and cross-panel correlation and panel size had negligible effects on the relative performance of either estimator. The results indicate that xtpraisk is preferable when both statistical efficiency and valid inference are priorities, particularly under persistent higher-order autocorrelation and short to moderate series lengths.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.12596" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.12596" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

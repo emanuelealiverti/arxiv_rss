@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Robust Design-Based Estimation and Inference for Stratified Randomized Trials with Varying Cluster Sizes</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Robust Design-Based Estimation and Inference for Stratified Randomized Trials with Varying Cluster Sizes" />
+<meta name="author" content="Xinhe Wang, Ben B. Hansen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Clustered randomized controlled trials are often stratified or pair-matched to improve covariate balance and efficiency. Sample average treatment effects (SATEs) are commonly estimated by averaging stratum-level treatment-control mean contrasts – an approach that is natural and widely used. We show that, in stratified clustered trials with heterogeneous cluster sizes, such estimators need not be consistent for the SATE. They can converge to the wrong limit even under correct randomization and without model misspecification. The source is a covariance between cluster sizes and treatment effects: stratumwise averaging mis-weights clusters in a way that produces bias of constant order, regardless of sample…" />
+<meta name="twitter:description" property="og:description" content="Clustered randomized controlled trials are often stratified or pair-matched to improve covariate balance and efficiency. Sample average treatment effects (SATEs) are commonly estimated by averaging stratum-level treatment-control mean contrasts – an approach that is natural and widely used. We show that, in stratified clustered trials with heterogeneous cluster sizes, such estimators need not be consistent for the SATE. They can converge to the wrong limit even under correct randomization and without model misspecification. The source is a covariance between cluster sizes and treatment effects: stratumwise averaging mis-weights clusters in a way that produces bias of constant order, regardless of sample…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2406.10473.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2406.10473.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Robust Design-Based Estimation and Inference for Stratified Randomized Trials with Varying Cluster Sizes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xinhe Wang, Ben B. Hansen"},"dateModified":"2026-06-10T00:00:00+00:00","datePublished":"2026-06-10T00:00:00+00:00","description":"Clustered randomized controlled trials are often stratified or pair-matched to improve covariate balance and efficiency. Sample average treatment effects (SATEs) are commonly estimated by averaging stratum-level treatment-control mean contrasts – an approach that is natural and widely used. We show that, in stratified clustered trials with heterogeneous cluster sizes, such estimators need not be consistent for the SATE. They can converge to the wrong limit even under correct randomization and without model misspecification. The source is a covariance between cluster sizes and treatment effects: stratumwise averaging mis-weights clusters in a way that produces bias of constant order, regardless of sample…","headline":"Robust Design-Based Estimation and Inference for Stratified Randomized Trials with Varying Cluster Sizes","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2406.10473.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/10/2406.10473.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Robust Design-Based Estimation and Inference for Stratified Randomized Trials with Varying Cluster Sizes</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Xinhe Wang, Ben B. Hansen
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      10 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper presents a robust design-based estimation method for stratified randomized trials with varying cluster sizes, improving upon existing estimators and providing a variance estimator for the Hajek ratio estimator.</div><h3>Abstract</h3>
+  <p>Clustered randomized controlled trials are often stratified or pair-matched to improve covariate balance and efficiency. Sample average treatment effects (SATEs) are commonly estimated by averaging stratum-level treatment-control mean contrasts – an approach that is natural and widely used. We show that, in stratified clustered trials with heterogeneous cluster sizes, such estimators need not be consistent for the SATE. They can converge to the wrong limit even under correct randomization and without model misspecification. The source is a covariance between cluster sizes and treatment effects: stratumwise averaging mis-weights clusters in a way that produces bias of constant order, regardless of sample size. We study the H'ajek (ratio) estimator as a robust alternative. By aggregating outcomes within treatment groups before taking their difference, it remains consistent in clustered trials that grow by increasing strata sizes or the number of strata. Despite that, its use in design-based analyses of clustered trials has been limited by the lack of variance estimators. We develop a design-based variance estimator that applies to any number of strata of any size, and show that it is asymptotically conservative, a property that holds even when some strata contain only a single treated or control unit. We also present tests improving the coverage of Wald tests when the number of clusters is moderate. The framework extends naturally to covariate-adjusted estimators via a variance orthogonality property.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2406.10473" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2406.10473" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
