@@ -1,13 +1,24 @@
-# Stat RSS
+# Stat arXiv
 
-I read arxiv every day, and sometimes I want to read on a cleaner page.
-Also, I wanted to learn Github actions in practice
+A personalized arXiv RSS reader built with Jekyll and deployed on GitHub Pages.
 
-- The branch `main` contains the infrastracture for updating the page and building the website via jekyll; the branch `gh-pages` the depolyed website.
+## How it works
 
-The website is rendered at [https://emanuelealiverti.github.io/arxiv_rss/](https://emanuelealiverti.github.io/arxiv_rss/) and updated every day at 9 via Github Actions.
+A GitHub Actions workflow runs every weekday at 8:30 Rome time:
 
-Ref:
+1. **Scraping** — fetches RSS feeds from arXiv (stat.ME, stat.CO, stat.AP) via `feedparser`
+2. **Ranking** — each paper is scored by an LLM (via the [NVIDIA NIM API](https://integrate.api.nvidia.com), model `meta/llama-3.1-8b-instruct`) against a research interest profile defined in `preferences.yml`; the score is further boosted by keyword and author matches
+3. **Publishing** — scored papers are written as Jekyll posts, the site is rebuilt and deployed to GitHub Pages; posts are kept for a rolling 7-day window
 
-- Jekyll Theme [no-style-please](https://github.com/riggraz/no-style-please?tab=readme-ov-file)
+The rendered website lives at [https://emanuelealiverti.github.io/arxiv_rss/](https://emanuelealiverti.github.io/arxiv_rss/).
 
+## Customization
+
+Edit `preferences.yml` to update your research context, keywords, and followed authors. Push to `main` and the next scheduled run will pick up the changes.
+
+## Notes
+
+- The `main` branch holds the infrastructure; `gh-pages` holds the deployed site
+- If the NVIDIA API is unavailable, scoring falls back to keyword/author matching only
+
+This project started from a personal first draft and was then vibe coded with [Claude Code](https://claude.ai/claude-code).

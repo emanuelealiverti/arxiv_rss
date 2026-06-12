@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mixing times of data-augmentation Gibbs samplers for high-dimensional probit regression</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Mixing times of data-augmentation Gibbs samplers for high-dimensional probit regression" />
+<meta name="author" content="Filippo Ascolani, Giacomo Zanella" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We investigate the convergence properties of popular data-augmentation samplers for Baye-sian probit regression. Leveraging recent results on Gibbs samplers for log-concave targets, we provide simple and explicit non-asymptotic bounds on the associated mixing times (in Kullback-Leibler divergence). The bounds depend explicitly on the design matrix and the prior precision, while they hold uniformly over the vector of responses. We specialize the results for different regimes of statistical interest, when both the number of data points $n$ and parameters $p$ are large: in particular we identify scenarios where the mixing times remain bounded as $n,p\to\infty$, and ones where they do not.…" />
+<meta name="twitter:description" property="og:description" content="We investigate the convergence properties of popular data-augmentation samplers for Baye-sian probit regression. Leveraging recent results on Gibbs samplers for log-concave targets, we provide simple and explicit non-asymptotic bounds on the associated mixing times (in Kullback-Leibler divergence). The bounds depend explicitly on the design matrix and the prior precision, while they hold uniformly over the vector of responses. We specialize the results for different regimes of statistical interest, when both the number of data points $n$ and parameters $p$ are large: in particular we identify scenarios where the mixing times remain bounded as $n,p\to\infty$, and ones where they do not.…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2505.14343.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2505.14343.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Mixing times of data-augmentation Gibbs samplers for high-dimensional probit regression" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Filippo Ascolani, Giacomo Zanella"},"dateModified":"2026-06-12T00:00:00+00:00","datePublished":"2026-06-12T00:00:00+00:00","description":"We investigate the convergence properties of popular data-augmentation samplers for Baye-sian probit regression. Leveraging recent results on Gibbs samplers for log-concave targets, we provide simple and explicit non-asymptotic bounds on the associated mixing times (in Kullback-Leibler divergence). The bounds depend explicitly on the design matrix and the prior precision, while they hold uniformly over the vector of responses. We specialize the results for different regimes of statistical interest, when both the number of data points $n$ and parameters $p$ are large: in particular we identify scenarios where the mixing times remain bounded as $n,p\\to\\infty$, and ones where they do not.…","headline":"Mixing times of data-augmentation Gibbs samplers for high-dimensional probit regression","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2505.14343.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2505.14343.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+
+<article>
+  <div class="post-header">
+    <h1>Mixing times of data-augmentation Gibbs samplers for high-dimensional probit regression</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Filippo Ascolani, Giacomo Zanella
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      12 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper provides explicit non-asymptotic bounds on the mixing times of data-augmentation Gibbs samplers for Bayesian probit regression, with implications for the choice of prior distributions to achieve fast mixing.</div><h3>Abstract</h3>
+  <p>We investigate the convergence properties of popular data-augmentation samplers for Baye-sian probit regression. Leveraging recent results on Gibbs samplers for log-concave targets, we provide simple and explicit non-asymptotic bounds on the associated mixing times (in Kullback-Leibler divergence). The bounds depend explicitly on the design matrix and the prior precision, while they hold uniformly over the vector of responses. We specialize the results for different regimes of statistical interest, when both the number of data points $n$ and parameters $p$ are large: in particular we identify scenarios where the mixing times remain bounded as $n,p\to\infty$, and ones where they do not. The results are shown to be tight (in the worst case with respect to the responses) and provide guidance on choices of prior distributions that provably lead to fast mixing. An empirical analysis based on coupling techniques suggests that the bounds are effective in predicting practically observed behaviours.</p>
+
+<p><a href="https://arxiv.org/abs/2505.14343">Read full paper</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

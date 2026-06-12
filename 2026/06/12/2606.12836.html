@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Interpretable model-free inference of parametric variation across time-series data through large-scale feature extraction</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Interpretable model-free inference of parametric variation across time-series data through large-scale feature extraction" />
+<meta name="author" content="Ben D. Fulcher, Carl H. Lubba, Giorgio F. Gilestro, Simon R. Schultz, Nick S. Jones" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Here we address the problem of estimating the dimensionality and nature of parametric variation in an unknown generative process directly from time-series data, without specifying or fitting a model. In particular we suppose that inter-instance variation in collections of time series is caused by parametric variation in the generating model. We hypothesize that, given a sufficiently large library of time-series features, low-dimensional parametric variation will manifest as low-dimensional structure in feature space, enabling interpretable estimators of the underlying degrees of freedom to be constructed. We test our hypothesis using a library of over 7000 diverse and interpretable time-series statistics and…" />
+<meta name="twitter:description" property="og:description" content="Here we address the problem of estimating the dimensionality and nature of parametric variation in an unknown generative process directly from time-series data, without specifying or fitting a model. In particular we suppose that inter-instance variation in collections of time series is caused by parametric variation in the generating model. We hypothesize that, given a sufficiently large library of time-series features, low-dimensional parametric variation will manifest as low-dimensional structure in feature space, enabling interpretable estimators of the underlying degrees of freedom to be constructed. We test our hypothesis using a library of over 7000 diverse and interpretable time-series statistics and…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2606.12836.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2606.12836.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Interpretable model-free inference of parametric variation across time-series data through large-scale feature extraction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ben D. Fulcher, Carl H. Lubba, Giorgio F. Gilestro, Simon R. Schultz, Nick S. Jones"},"dateModified":"2026-06-12T00:00:00+00:00","datePublished":"2026-06-12T00:00:00+00:00","description":"Here we address the problem of estimating the dimensionality and nature of parametric variation in an unknown generative process directly from time-series data, without specifying or fitting a model. In particular we suppose that inter-instance variation in collections of time series is caused by parametric variation in the generating model. We hypothesize that, given a sufficiently large library of time-series features, low-dimensional parametric variation will manifest as low-dimensional structure in feature space, enabling interpretable estimators of the underlying degrees of freedom to be constructed. We test our hypothesis using a library of over 7000 diverse and interpretable time-series statistics and…","headline":"Interpretable model-free inference of parametric variation across time-series data through large-scale feature extraction","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2606.12836.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2606.12836.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+
+<article>
+  <div class="post-header">
+    <h1>Interpretable model-free inference of parametric variation across time-series data through large-scale feature extraction</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Ben D. Fulcher, Carl H. Lubba, Giorgio F. Gilestro, Simon R. Schultz, Nick S. Jones
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      12 Jun 2026
+    </div>
+  </div><div class="summary-box">The paper presents a model-free approach to estimating parametric variation in time-series data, using a large library of features to reconstruct underlying degrees of freedom.</div><h3>Abstract</h3>
+  <p>Here we address the problem of estimating the dimensionality and nature of parametric variation in an unknown generative process directly from time-series data, without specifying or fitting a model. In particular we suppose that inter-instance variation in collections of time series is caused by parametric variation in the generating model. We hypothesize that, given a sufficiently large library of time-series features, low-dimensional parametric variation will manifest as low-dimensional structure in feature space, enabling interpretable estimators of the underlying degrees of freedom to be constructed. We test our hypothesis using a library of over 7000 diverse and interpretable time-series statistics and thirteen simulated systems with known parametric variation, spanning linear stochastic processes, nonlinear oscillators, and chaotic dynamics. Our unsupervised, data-driven approach often reconstructs the underlying parametric variation across this extensive range of simulated dynamical systems while also yielding interpretable estimators for each underlying dimension. Applied to the movement dynamics of 1143 fruit flies, we use this method to extract biologically meaningful components corresponding to sex and circadian rhythmicity. Our results pave the way for much-needed data-driven methods to bridge the gap between interpretable theoretical understanding of dynamics and the large and complex datasets that characterize modern scientific problems.</p>
+
+<p><a href="https://arxiv.org/abs/2606.12836">Read full paper</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On Nonparanormal Likelihoods</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="On Nonparanormal Likelihoods" />
+<meta name="author" content="Torsten Hothorn" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Nonparanormal models describe the joint distribution of multivariate responses via latent Gaussian, and thus parametric, copulae while allowing flexible nonparametric marginals. Some aspects of such distributions, for example conditional independence, are formulated parametrically. Other features, such as marginal distributions, can be formulated non- or semiparametrically. Such models are attractive when multivariate normality is questionable but interpretability paramount. Most estimation procedures perform two steps, first estimating the nonparametric part. The copula parameters come second, treating the marginal estimates as known. This is sufficient for some applications. For other applications, e.g. when a semiparametric margin features parameters of interest or when standard…" />
+<meta name="twitter:description" property="og:description" content="Nonparanormal models describe the joint distribution of multivariate responses via latent Gaussian, and thus parametric, copulae while allowing flexible nonparametric marginals. Some aspects of such distributions, for example conditional independence, are formulated parametrically. Other features, such as marginal distributions, can be formulated non- or semiparametrically. Such models are attractive when multivariate normality is questionable but interpretability paramount. Most estimation procedures perform two steps, first estimating the nonparametric part. The copula parameters come second, treating the marginal estimates as known. This is sufficient for some applications. For other applications, e.g. when a semiparametric margin features parameters of interest or when standard…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2408.17346.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2408.17346.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="On Nonparanormal Likelihoods" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Torsten Hothorn"},"dateModified":"2026-06-12T00:00:00+00:00","datePublished":"2026-06-12T00:00:00+00:00","description":"Nonparanormal models describe the joint distribution of multivariate responses via latent Gaussian, and thus parametric, copulae while allowing flexible nonparametric marginals. Some aspects of such distributions, for example conditional independence, are formulated parametrically. Other features, such as marginal distributions, can be formulated non- or semiparametrically. Such models are attractive when multivariate normality is questionable but interpretability paramount. Most estimation procedures perform two steps, first estimating the nonparametric part. The copula parameters come second, treating the marginal estimates as known. This is sufficient for some applications. For other applications, e.g. when a semiparametric margin features parameters of interest or when standard…","headline":"On Nonparanormal Likelihoods","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2408.17346.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/12/2408.17346.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+
+<article>
+  <div class="post-header">
+    <h1>On Nonparanormal Likelihoods</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Torsten Hothorn
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      12 Jun 2026
+    </div>
+  </div><div class="summary-box">The paper presents novel nonparanormal log-likelihood functions and score functions for multivariate normal log-probabilities, with applications to transformation discriminant analysis and semiparametric efficient polychoric correlation analysis.</div><h3>Abstract</h3>
+  <p>Nonparanormal models describe the joint distribution of multivariate responses via latent Gaussian, and thus parametric, copulae while allowing flexible nonparametric marginals. Some aspects of such distributions, for example conditional independence, are formulated parametrically. Other features, such as marginal distributions, can be formulated non- or semiparametrically. Such models are attractive when multivariate normality is questionable but interpretability paramount. Most estimation procedures perform two steps, first estimating the nonparametric part. The copula parameters come second, treating the marginal estimates as known. This is sufficient for some applications. For other applications, e.g. when a semiparametric margin features parameters of interest or when standard errors are important, a simultaneous estimation of all parameters might be more advantageous. We present suitable parameterisations of nonparanormal models, possibly including semiparametric effects, and define four novel nonparanormal log-likelihood functions. In general, the corresponding one-step optimisation problems are shown to be non-convex. In some cases, however, biconvex problems emerge. Several convex approximations are discussed. From a low-level computational point of view, the core contribution is the score function for multivariate normal log-probabilities computed via Genz procedure. As a demonstration for the versatility of the theoretical and computational framework, we present a series of nonparanormal models for transformation discriminant analysis when some biomarkers are subject to limit-of-detection problems. Possible empirical gains of full maximum likelihood estimation compared to two-step approaches are illustrated in a simulation study targeting semiparametric efficient polychoric correlation analysis where a theoretical benchmark is available.</p>
+
+<p><a href="https://arxiv.org/abs/2408.17346">Read full paper</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
