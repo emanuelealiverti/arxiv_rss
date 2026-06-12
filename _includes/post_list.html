@@ -8,13 +8,16 @@
   sorted by <strong id="sort-label">score</strong>
   &nbsp;&middot;&nbsp;
   <button class="sort-btn" id="sort-toggle" onclick="toggleSort()">switch to date</button>
+  &nbsp;&middot;&nbsp;
+  <button class="sort-btn" id="read-toggle" onclick="toggleHideRead()">show read</button>
 </div>
 
 <ul class="post-list" id="post-list">
   {%- for post in posts -%}
   <li class="post-item"
       data-score="{{ post.score | default: 0 }}"
-      data-date="{{ post.date | date: '%Y-%m-%d' }}">
+      data-date="{{ post.date | date: '%Y-%m-%d' }}"
+      data-url="{{ post.url | relative_url }}">
     <div class="post-tags-col">
       {%- if post.badge and post.badge != '' -%}
         <span class="badge badge-{{ post.badge }}">{{ post.badge }}</span>
@@ -41,10 +44,22 @@
 <script>
 (function () {
   var mode = 'score';
+  var hideRead = true;
+
+  function getItems() {
+    return Array.from(document.getElementById('post-list').querySelectorAll('.post-item'));
+  }
+
+  function applyFilter(items) {
+    items.forEach(function (item) {
+      var read = localStorage.getItem('read:' + item.dataset.url) === '1';
+      item.style.display = (hideRead && read) ? 'none' : '';
+    });
+  }
 
   function sort() {
     var list = document.getElementById('post-list');
-    var items = Array.from(list.querySelectorAll('.post-item'));
+    var items = getItems();
     items.sort(function (a, b) {
       var sa = parseFloat(a.dataset.score) || 0;
       var sb = parseFloat(b.dataset.score) || 0;
@@ -57,6 +72,7 @@
       }
     });
     items.forEach(function (item) { list.appendChild(item); });
+    applyFilter(items);
   }
 
   function toggleSort() {
@@ -67,7 +83,15 @@
     sort();
   }
 
+  function toggleHideRead() {
+    hideRead = !hideRead;
+    document.getElementById('read-toggle').textContent =
+      hideRead ? 'show read' : 'hide read';
+    applyFilter(getItems());
+  }
+
   window.toggleSort = toggleSort;
+  window.toggleHideRead = toggleHideRead;
   sort();
 })();
 </script>

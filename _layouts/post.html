@@ -2,7 +2,10 @@
 layout: default
 ---
 
-<a class="back-link" href="{{ '/' | relative_url }}">&larr; back</a>
+<div class="post-nav">
+  <a class="back-link" href="{{ '/' | relative_url }}">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
 
 <article>
   <div class="post-header">
@@ -24,3 +27,16 @@ layout: default
   <h3>Abstract</h3>
   {{ content }}
 </article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>

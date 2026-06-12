@@ -84,13 +84,30 @@ img { max-width: 100%; display: block; margin: 0 auto; }
 }
 .site-header h1 { font-size: 1.1em; color: #333; margin: 0; }
 
-/* ── Back link ────────────────────────────────── */
+/* ── Back link / post nav ─────────────────────── */
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
 .back-link {
   display: inline-block;
   font-size: 0.85em;
   color: #888;
-  margin-bottom: 1.5rem;
 }
+.unmark-btn {
+  background: none;
+  border: 1px solid #d0cbbf;
+  border-radius: 3px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 0.78em;
+  padding: 0.15rem 0.6rem;
+  cursor: pointer;
+  color: #999;
+}
+.unmark-btn:hover:not(:disabled) { border-color: #999; color: #555; }
+.unmark-btn:disabled { opacity: 0.5; cursor: default; }
 
 /* ── Relevance badges ─────────────────────────── */
 .badge {
