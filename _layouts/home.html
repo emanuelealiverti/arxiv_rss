@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
+{% assign from_ts = site.time | date: "%s" | minus: 604800 %}
 <div class="site-header">
-  <h1>{{ site.title }} &mdash; {{ site.time | date: "%-d %b %Y" }}</h1>
+  <h1>{{ site.title }} &mdash; {{ from_ts | date: "%-d %b" }}–{{ site.time | date: "%-d %b %Y" }}</h1>
 </div>
 
 {%- include post_list.html -%}
