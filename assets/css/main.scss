@@ -142,6 +142,12 @@ img { max-width: 100%; display: block; margin: 0 auto; }
 .post-item:first-child { padding-top: 0; }
 
 .post-tags-col { padding-top: 0.15rem; }
+.post-tags-col .badge {
+  display: block;
+  width: fit-content;
+  margin-right: 0;
+  margin-bottom: 0.45rem;
+}
 .post-tags-col .tag {
   display: block;
   font-size: 0.7em;
@@ -193,4 +199,16 @@ img { max-width: 100%; display: block; margin: 0 auto; }
   font-size: 0.9em;
   line-height: 1.55;
   color: #2a4a2e;
+}
+
+/* ── Mobile ───────────────────────────────────── */
+@media (max-width: 540px) {
+  .w { padding: 1.5rem 1rem; }
+
+  .post-item {
+    grid-template-columns: 1fr 3fr;
+    gap: 0 0.75rem;
+  }
+
+  .post-tags-col .badge { font-size: 0.6em; }
 }
