@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A General Framework for Decision Trees via Bregman Divergences</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A General Framework for Decision Trees via Bregman Divergences" />
+<meta name="author" content="Mathias Bourel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Decision trees are one of the fundamental tools in statistical learning due to their interpretability, flexibility, and their ability to adapt to nonlinear structures. Among them, the Classification and Regression Trees, introduced by Breiman, Friedman, Olshen, and Stone in 1984, became one of the most influential algorithms and remains one of the most widely used methods for classification and regression problems. On the other hand, Bregman divergences, introduced by Lev Bregman in 1967 in the context of convex optimization, provide a broad family of loss functions that naturally generalize the squared Euclidean distance. This family includes, among others, the Kullback-Leibler…" />
+<meta name="twitter:description" property="og:description" content="Decision trees are one of the fundamental tools in statistical learning due to their interpretability, flexibility, and their ability to adapt to nonlinear structures. Among them, the Classification and Regression Trees, introduced by Breiman, Friedman, Olshen, and Stone in 1984, became one of the most influential algorithms and remains one of the most widely used methods for classification and regression problems. On the other hand, Bregman divergences, introduced by Lev Bregman in 1967 in the context of convex optimization, provide a broad family of loss functions that naturally generalize the squared Euclidean distance. This family includes, among others, the Kullback-Leibler…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/15/2606.13984.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/15/2606.13984.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A General Framework for Decision Trees via Bregman Divergences" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mathias Bourel"},"dateModified":"2026-06-15T00:00:00+00:00","datePublished":"2026-06-15T00:00:00+00:00","description":"Decision trees are one of the fundamental tools in statistical learning due to their interpretability, flexibility, and their ability to adapt to nonlinear structures. Among them, the Classification and Regression Trees, introduced by Breiman, Friedman, Olshen, and Stone in 1984, became one of the most influential algorithms and remains one of the most widely used methods for classification and regression problems. On the other hand, Bregman divergences, introduced by Lev Bregman in 1967 in the context of convex optimization, provide a broad family of loss functions that naturally generalize the squared Euclidean distance. This family includes, among others, the Kullback-Leibler…","headline":"A General Framework for Decision Trees via Bregman Divergences","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/15/2606.13984.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/15/2606.13984.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A General Framework for Decision Trees via Bregman Divergences</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Mathias Bourel
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME
+      <span class="sep">&middot;</span>
+      15 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper proposes a generalization of the CART paradigm using Bregman divergences, providing a unified framework for decision trees, but it does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>Decision trees are one of the fundamental tools in statistical learning due to their interpretability, flexibility, and their ability to adapt to nonlinear structures. Among them, the Classification and Regression Trees, introduced by Breiman, Friedman, Olshen, and Stone in 1984, became one of the most influential algorithms and remains one of the most widely used methods for classification and regression problems. On the other hand, Bregman divergences, introduced by Lev Bregman in 1967 in the context of convex optimization, provide a broad family of loss functions that naturally generalize the squared Euclidean distance. This family includes, among others, the Kullback-Leibler divergence, the Poisson divergence, and the Itakura-Saito divergence, as well as several losses associated with distributions belonging to the exponential family. Moreover, Bregman divergences possess a rich geometric structure and deep connections with convex analysis and information geometry. In this work, we propose a generalization of the CART paradigm based on Bregman divergences, thereby obtaining a broader family of decision trees adapted to different statistical models and underlying geometries. Although algorithms such as CART or classical implementations such as rpart incorporate different impurity criteria, these are usually introduced in an ad hoc manner for each specific model. In contrast, the Bregman divergence approach provides a unified framework that allows these criteria to be derived and interpreted from common convex and geometric principles. Beyond the algorithmic construction, we also investigate theoretical properties of these trees. In particular, we study how properties of the generating convex function – such as strong convexity or smoothness – influence impurity gains between parent and child nodes, as well as stability and consistency properties of the estimator.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.13984" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.13984" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

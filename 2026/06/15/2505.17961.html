@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Federated Causal Inference from Multi-Site Observational Data via Propensity Score Aggregation</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Federated Causal Inference from Multi-Site Observational Data via Propensity Score Aggregation" />
+<meta name="author" content="Rémi Khellaf, Aurélien Bellet, Julie Josse" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Causal inference typically assumes centralized access to individual-level data. Yet, in practice, data are often decentralized across multiple sites, making centralization infeasible due to privacy, logistical, or legal constraints. We address this problem by estimating the Average Treatment Effect (ATE) from decentralized observational data via a Federated Learning (FL) approach, allowing inference through the exchange of aggregate statistics rather than individual-level data. We propose a novel method to estimate propensity scores via a federated weighted average of local scores using Membership Weights (MW), defined as probabilities of site membership conditional on covariates. MW can be flexibly estimated with parametric or…" />
+<meta name="twitter:description" property="og:description" content="Causal inference typically assumes centralized access to individual-level data. Yet, in practice, data are often decentralized across multiple sites, making centralization infeasible due to privacy, logistical, or legal constraints. We address this problem by estimating the Average Treatment Effect (ATE) from decentralized observational data via a Federated Learning (FL) approach, allowing inference through the exchange of aggregate statistics rather than individual-level data. We propose a novel method to estimate propensity scores via a federated weighted average of local scores using Membership Weights (MW), defined as probabilities of site membership conditional on covariates. MW can be flexibly estimated with parametric or…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/15/2505.17961.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/15/2505.17961.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Federated Causal Inference from Multi-Site Observational Data via Propensity Score Aggregation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rémi Khellaf, Aurélien Bellet, Julie Josse"},"dateModified":"2026-06-15T00:00:00+00:00","datePublished":"2026-06-15T00:00:00+00:00","description":"Causal inference typically assumes centralized access to individual-level data. Yet, in practice, data are often decentralized across multiple sites, making centralization infeasible due to privacy, logistical, or legal constraints. We address this problem by estimating the Average Treatment Effect (ATE) from decentralized observational data via a Federated Learning (FL) approach, allowing inference through the exchange of aggregate statistics rather than individual-level data. We propose a novel method to estimate propensity scores via a federated weighted average of local scores using Membership Weights (MW), defined as probabilities of site membership conditional on covariates. MW can be flexibly estimated with parametric or…","headline":"Federated Causal Inference from Multi-Site Observational Data via Propensity Score Aggregation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/15/2505.17961.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/15/2505.17961.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Federated Causal Inference from Multi-Site Observational Data via Propensity Score Aggregation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Rémi Khellaf, Aurélien Bellet, Julie Josse
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP, stat.TH
+      <span class="sep">&middot;</span>
+      15 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper proposes a federated learning approach for estimating the Average Treatment Effect from decentralized observational data, but it does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>Causal inference typically assumes centralized access to individual-level data. Yet, in practice, data are often decentralized across multiple sites, making centralization infeasible due to privacy, logistical, or legal constraints. We address this problem by estimating the Average Treatment Effect (ATE) from decentralized observational data via a Federated Learning (FL) approach, allowing inference through the exchange of aggregate statistics rather than individual-level data. We propose a novel method to estimate propensity scores via a federated weighted average of local scores using Membership Weights (MW), defined as probabilities of site membership conditional on covariates. MW can be flexibly estimated with parametric or non-parametric classification models using standard FL algorithms. The resulting propensity scores are used to construct Federated Inverse Propensity Weighting (Fed-IPW) and Augmented IPW (Fed-AIPW) estimators. In contrast to meta-analysis methods, which fail when any site violates positivity, our approach exploits heterogeneity in treatment assignment across sites to improve overlap. We show that Fed-IPW and Fed-AIPW perform well under site-level heterogeneity in sample sizes, treatment mechanisms, and covariate distributions. Theoretical analysis and experiments on simulated and real-world data demonstrate clear advantages over meta-analysis and related approaches.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2505.17961" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2505.17961" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
