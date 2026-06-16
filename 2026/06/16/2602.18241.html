@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Online FDR Controlling procedures for statistical SIS Model and its application to COVID19 data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Online FDR Controlling procedures for statistical SIS Model and its application to COVID19 data" />
+<meta name="author" content="Seohwa Hwang, Junyong Park" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose an online false discovery rate (FDR) controlling method based on conditional local FDR (LIS), designed for infectious disease datasets that are discrete and exhibit complex dependencies. Unlike existing online FDR methods, which often assume independence or suffer from low statistical power in dependent settings, our approach effectively controls FDR while maintaining high detection power in realistic epidemic scenarios. For disease modeling, we establish a Dynamic Bayesian Network (DBN) structure within the Susceptible-Infected-Susceptible (SIS) model, a widely used epidemiological framework for infectious diseases. Our method requires no additional tuning parameters apart from the width of the sliding window, making…" />
+<meta name="twitter:description" property="og:description" content="We propose an online false discovery rate (FDR) controlling method based on conditional local FDR (LIS), designed for infectious disease datasets that are discrete and exhibit complex dependencies. Unlike existing online FDR methods, which often assume independence or suffer from low statistical power in dependent settings, our approach effectively controls FDR while maintaining high detection power in realistic epidemic scenarios. For disease modeling, we establish a Dynamic Bayesian Network (DBN) structure within the Susceptible-Infected-Susceptible (SIS) model, a widely used epidemiological framework for infectious diseases. Our method requires no additional tuning parameters apart from the width of the sliding window, making…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2602.18241.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2602.18241.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Online FDR Controlling procedures for statistical SIS Model and its application to COVID19 data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Seohwa Hwang, Junyong Park"},"dateModified":"2026-06-16T00:00:00+00:00","datePublished":"2026-06-16T00:00:00+00:00","description":"We propose an online false discovery rate (FDR) controlling method based on conditional local FDR (LIS), designed for infectious disease datasets that are discrete and exhibit complex dependencies. Unlike existing online FDR methods, which often assume independence or suffer from low statistical power in dependent settings, our approach effectively controls FDR while maintaining high detection power in realistic epidemic scenarios. For disease modeling, we establish a Dynamic Bayesian Network (DBN) structure within the Susceptible-Infected-Susceptible (SIS) model, a widely used epidemiological framework for infectious diseases. Our method requires no additional tuning parameters apart from the width of the sliding window, making…","headline":"Online FDR Controlling procedures for statistical SIS Model and its application to COVID19 data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2602.18241.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2602.18241.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Online FDR Controlling procedures for statistical SIS Model and its application to COVID19 data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Seohwa Hwang, Junyong Park
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      16 Jun 2026
+    </div>
+  </div><div class="summary-box">The paper proposes an online false discovery rate controlling method for statistical SIS models, specifically designed for infectious disease datasets with complex dependencies, and demonstrates its application to COVID-19 data.</div><h3>Abstract</h3>
+  <p>We propose an online false discovery rate (FDR) controlling method based on conditional local FDR (LIS), designed for infectious disease datasets that are discrete and exhibit complex dependencies. Unlike existing online FDR methods, which often assume independence or suffer from low statistical power in dependent settings, our approach effectively controls FDR while maintaining high detection power in realistic epidemic scenarios. For disease modeling, we establish a Dynamic Bayesian Network (DBN) structure within the Susceptible-Infected-Susceptible (SIS) model, a widely used epidemiological framework for infectious diseases. Our method requires no additional tuning parameters apart from the width of the sliding window, making it practical for real-time disease monitoring. From a statistical perspective, we prove that our method ensures valid FDR control under stationary and ergodic dependencies, extending online hypothesis testing to a broader range of dependent and discrete datasets. Additionally, our method achieves higher statistical power than existing approaches by leveraging LIS, which has been shown to be more powerful than traditional $p$-value-based methods. We validate our method through extensive simulations and real-world applications, including the analysis of infectious disease incidence data. Our results demonstrate that the proposed approach outperforms existing methods by achieving higher detection power while maintaining rigorous FDR control.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2602.18241" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2602.18241" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

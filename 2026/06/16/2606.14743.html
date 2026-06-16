@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Delayed acceptance sampling with Hamiltonian proposal subchains for random field materials inference</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Delayed acceptance sampling with Hamiltonian proposal subchains for random field materials inference" />
+<meta name="author" content="Simona Bérešová, Michal Béreš, Tomáš Luber, Stanislav Sysala" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper focuses on accelerating Markov chain Monte Carlo sampling in Bayesian inverse problems in which forward model evaluations dominate the computational cost. It builds on several established ingredients previously used in related scenarios: delayed acceptance, neural network surrogate models, Hamiltonian proposals, and proposal subchains. The main framework is the delayed-acceptance Metropolis-Hastings algorithm of Christen and Fox (2005). The first-stage proposal distribution is constructed from a subchain of Hamiltonian trajectories targeting the surrogate posterior. For each fixed surrogate model, the Hamiltonian subchain and delayed-acceptance correction define a kernel invariant with respect to the exact posterior. In the present work, the…" />
+<meta name="twitter:description" property="og:description" content="This paper focuses on accelerating Markov chain Monte Carlo sampling in Bayesian inverse problems in which forward model evaluations dominate the computational cost. It builds on several established ingredients previously used in related scenarios: delayed acceptance, neural network surrogate models, Hamiltonian proposals, and proposal subchains. The main framework is the delayed-acceptance Metropolis-Hastings algorithm of Christen and Fox (2005). The first-stage proposal distribution is constructed from a subchain of Hamiltonian trajectories targeting the surrogate posterior. For each fixed surrogate model, the Hamiltonian subchain and delayed-acceptance correction define a kernel invariant with respect to the exact posterior. In the present work, the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2606.14743.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2606.14743.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Delayed acceptance sampling with Hamiltonian proposal subchains for random field materials inference" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Simona Bérešová, Michal Béreš, Tomáš Luber, Stanislav Sysala"},"dateModified":"2026-06-16T00:00:00+00:00","datePublished":"2026-06-16T00:00:00+00:00","description":"This paper focuses on accelerating Markov chain Monte Carlo sampling in Bayesian inverse problems in which forward model evaluations dominate the computational cost. It builds on several established ingredients previously used in related scenarios: delayed acceptance, neural network surrogate models, Hamiltonian proposals, and proposal subchains. The main framework is the delayed-acceptance Metropolis-Hastings algorithm of Christen and Fox (2005). The first-stage proposal distribution is constructed from a subchain of Hamiltonian trajectories targeting the surrogate posterior. For each fixed surrogate model, the Hamiltonian subchain and delayed-acceptance correction define a kernel invariant with respect to the exact posterior. In the present work, the…","headline":"Delayed acceptance sampling with Hamiltonian proposal subchains for random field materials inference","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2606.14743.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2606.14743.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Delayed acceptance sampling with Hamiltonian proposal subchains for random field materials inference</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Simona Bérešová, Michal Béreš, Tomáš Luber, Stanislav Sysala
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      16 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper presents a method for accelerating Markov chain Monte Carlo sampling in Bayesian inverse problems using delayed acceptance and Hamiltonian proposal subchains, with a focus on geotechnical inverse problems.</div><h3>Abstract</h3>
+  <p>This paper focuses on accelerating Markov chain Monte Carlo sampling in Bayesian inverse problems in which forward model evaluations dominate the computational cost. It builds on several established ingredients previously used in related scenarios: delayed acceptance, neural network surrogate models, Hamiltonian proposals, and proposal subchains. The main framework is the delayed-acceptance Metropolis-Hastings algorithm of Christen and Fox (2005). The first-stage proposal distribution is constructed from a subchain of Hamiltonian trajectories targeting the surrogate posterior. For each fixed surrogate model, the Hamiltonian subchain and delayed-acceptance correction define a kernel invariant with respect to the exact posterior. In the present work, the surrogate is updated only during a burn-in phase, after which the production run uses a fixed surrogate model. The sampling framework is implemented in Python using parallel processes. Several chains are generated in parallel and share a single surrogate model trained during burn-in on all collected data. The forward model is treated as a black box; therefore, the application area is broad. However, the main motivation is efficient solution of geotechnical inverse problems with material properties represented by Gaussian random fields. In this study, the sampling framework is applied to a geotechnical inverse problem in which hydraulic conductivity and porosity are modeled as non-stationary Gaussian random fields approximated using truncated Karhunen-Loeve expansions. Based on a precomputation, the truncation dimensions are chosen separately for hydraulic conductivity and porosity. The forward model outputs are pore pressure values at control points and selected observation times. These are compared with in situ pore pressure measurements collected over one year during the Tunnel Sealing Experiment in an underground laboratory in Canada.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.14743" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.14743" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Multiplex Network Hawkes Model for Systemic Risk Measurement</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Multiplex Network Hawkes Model for Systemic Risk Measurement" />
+<meta name="author" content="Mante Zelvyte, Jim E. Griffin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce the Multiplex Network Hawkes model, which extends the network Hawkes framework of Linderman &amp; Adams (2014) by allowing multiple excitation layers whose weights depend on observed edge and node covariates. We use the model to investigate how contagion in financial networks is affected by different transmission channels. The multiplex structure separates channel-specific contributions within a single inferred transmission network, allowing candidate propagation mechanisms to be compared directly rather than being absorbed into one homogeneous excitation layer. Covariate-dependent excitation allows us to investigate sources of transmission. We make posterior inference about the inferred directed network and its excitation dynamics…" />
+<meta name="twitter:description" property="og:description" content="We introduce the Multiplex Network Hawkes model, which extends the network Hawkes framework of Linderman &amp; Adams (2014) by allowing multiple excitation layers whose weights depend on observed edge and node covariates. We use the model to investigate how contagion in financial networks is affected by different transmission channels. The multiplex structure separates channel-specific contributions within a single inferred transmission network, allowing candidate propagation mechanisms to be compared directly rather than being absorbed into one homogeneous excitation layer. Covariate-dependent excitation allows us to investigate sources of transmission. We make posterior inference about the inferred directed network and its excitation dynamics…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2606.15755.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2606.15755.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Multiplex Network Hawkes Model for Systemic Risk Measurement" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mante Zelvyte, Jim E. Griffin"},"dateModified":"2026-06-16T00:00:00+00:00","datePublished":"2026-06-16T00:00:00+00:00","description":"We introduce the Multiplex Network Hawkes model, which extends the network Hawkes framework of Linderman &amp; Adams (2014) by allowing multiple excitation layers whose weights depend on observed edge and node covariates. We use the model to investigate how contagion in financial networks is affected by different transmission channels. The multiplex structure separates channel-specific contributions within a single inferred transmission network, allowing candidate propagation mechanisms to be compared directly rather than being absorbed into one homogeneous excitation layer. Covariate-dependent excitation allows us to investigate sources of transmission. We make posterior inference about the inferred directed network and its excitation dynamics…","headline":"A Multiplex Network Hawkes Model for Systemic Risk Measurement","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2606.15755.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/16/2606.15755.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Multiplex Network Hawkes Model for Systemic Risk Measurement</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Mante Zelvyte, Jim E. Griffin
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      16 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper introduces a multiplex network Hawkes model to investigate systemic risk measurement in financial networks, making posterior inference about the inferred directed network and its excitation dynamics using MCMC.</div><h3>Abstract</h3>
+  <p>We introduce the Multiplex Network Hawkes model, which extends the network Hawkes framework of Linderman &amp; Adams (2014) by allowing multiple excitation layers whose weights depend on observed edge and node covariates. We use the model to investigate how contagion in financial networks is affected by different transmission channels. The multiplex structure separates channel-specific contributions within a single inferred transmission network, allowing candidate propagation mechanisms to be compared directly rather than being absorbed into one homogeneous excitation layer. Covariate-dependent excitation allows us to investigate sources of transmission. We make posterior inference about the inferred directed network and its excitation dynamics using an MCMC sampler. The application uses a broad cross-industry credit default swap (CDS) dataset of 99 North American and European firms, including banks, insurers and non-financial firms over 2004-2022. We evaluate three candidate contagion channels associated with asset similarity, solvency and profitability. The results indicate sparse contagion pathways, with systemic-risk transmission concentrated in outward flows from a small number of influential institutions rather than in mutual feedback between institutions. The channel results show that industry similarity is the most consistently supported asset-similarity effect, while aggregate layer contributions indicate that asset-similarity, solvency and profitability channels all contribute to inferred excitation.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.15755" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.15755" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
