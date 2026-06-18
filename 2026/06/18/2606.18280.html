@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>IOAH3: Importance-Driven Adaptive Spatial Partitioning</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="IOAH3: Importance-Driven Adaptive Spatial Partitioning" />
+<meta name="author" content="Ehsaneddin Jalilian" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We present IOAH3 (Importance-Oriented Adaptive H3 partitioning), a computational method for constructing data-driven spatial partitions of geo-referenced observation domains. Standard approaches to spatial aggregation adopt fixed areal units, such as administrative boundaries or uniform hexagonal grids at a single resolution, without regard to the informational content of the underlying observations in each region. This leads to the well-known modifiable areal unit problem: statistical and inferential results depend on the arbitrary choice of partition, and spatially concentrated phenomena are averaged out in coarse cells that obscure fine-scale structure. IOAH3 addresses this by constructing an adaptive partition in three stages: multi-source feature…" />
+<meta name="twitter:description" property="og:description" content="We present IOAH3 (Importance-Oriented Adaptive H3 partitioning), a computational method for constructing data-driven spatial partitions of geo-referenced observation domains. Standard approaches to spatial aggregation adopt fixed areal units, such as administrative boundaries or uniform hexagonal grids at a single resolution, without regard to the informational content of the underlying observations in each region. This leads to the well-known modifiable areal unit problem: statistical and inferential results depend on the arbitrary choice of partition, and spatially concentrated phenomena are averaged out in coarse cells that obscure fine-scale structure. IOAH3 addresses this by constructing an adaptive partition in three stages: multi-source feature…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/18/2606.18280.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/18/2606.18280.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="IOAH3: Importance-Driven Adaptive Spatial Partitioning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ehsaneddin Jalilian"},"dateModified":"2026-06-18T00:00:00+00:00","datePublished":"2026-06-18T00:00:00+00:00","description":"We present IOAH3 (Importance-Oriented Adaptive H3 partitioning), a computational method for constructing data-driven spatial partitions of geo-referenced observation domains. Standard approaches to spatial aggregation adopt fixed areal units, such as administrative boundaries or uniform hexagonal grids at a single resolution, without regard to the informational content of the underlying observations in each region. This leads to the well-known modifiable areal unit problem: statistical and inferential results depend on the arbitrary choice of partition, and spatially concentrated phenomena are averaged out in coarse cells that obscure fine-scale structure. IOAH3 addresses this by constructing an adaptive partition in three stages: multi-source feature…","headline":"IOAH3: Importance-Driven Adaptive Spatial Partitioning","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/18/2606.18280.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/18/2606.18280.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>IOAH3: Importance-Driven Adaptive Spatial Partitioning</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Ehsaneddin Jalilian
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      18 Jun 2026
+    </div>
+  </div><div class="summary-box">The paper presents a computational method for constructing adaptive spatial partitions of geo-referenced observation domains, addressing the modifiable areal unit problem in spatial aggregation.</div><h3>Abstract</h3>
+  <p>We present IOAH3 (Importance-Oriented Adaptive H3 partitioning), a computational method for constructing data-driven spatial partitions of geo-referenced observation domains. Standard approaches to spatial aggregation adopt fixed areal units, such as administrative boundaries or uniform hexagonal grids at a single resolution, without regard to the informational content of the underlying observations in each region. This leads to the well-known modifiable areal unit problem: statistical and inferential results depend on the arbitrary choice of partition, and spatially concentrated phenomena are averaged out in coarse cells that obscure fine-scale structure. IOAH3 addresses this by constructing an adaptive partition in three stages: multi-source feature extraction and importance scoring via principal component analysis over road density, POI density, building density, and terrain roughness signals, with population and flood-hazard data entering as auxiliary inputs to cell filtering and spatial smoothness; spatial cell selection via Markov Random Field graph-cut optimisation, which jointly maximises per-cell importance while enforcing spatial contiguity; and data-driven hierarchical refinement of high-importance regions to finer H3 resolution levels, with neighbour-propagated support to avoid isolated fine-resolution islands. The resulting partitions serve as input to spatial inference pipelines and provide a principled resolution of the partition-sensitivity problem prior to any modelling step.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.18280" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.18280" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

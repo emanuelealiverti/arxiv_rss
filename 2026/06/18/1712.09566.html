@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mixture model fitting using conditional models and modal Gibbs sampling</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Mixture model fitting using conditional models and modal Gibbs sampling" />
+<meta name="author" content="Héctor Gómez-López, Virgilio Gómez-Rubio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Mixture models are a convenient way of modeling data using a convex combination of different parametric distributions. A new algorithm based on Gibbs sampling is used to approximate the posterior distribution of the auxiliary variables, that assign each observation to a group in the mixture, without sampling any other parameter in the model. In particular, the modes of an approximation to the full conditional distributions of the parameters of the densities in the mixture are computed using the Integrated Nested Laplace Approximation. These are plugged-in to the full conditional distribution of the auxiliary variables to draw samples. The posterior distributions…" />
+<meta name="twitter:description" property="og:description" content="Mixture models are a convenient way of modeling data using a convex combination of different parametric distributions. A new algorithm based on Gibbs sampling is used to approximate the posterior distribution of the auxiliary variables, that assign each observation to a group in the mixture, without sampling any other parameter in the model. In particular, the modes of an approximation to the full conditional distributions of the parameters of the densities in the mixture are computed using the Integrated Nested Laplace Approximation. These are plugged-in to the full conditional distribution of the auxiliary variables to draw samples. The posterior distributions…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/18/1712.09566.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/18/1712.09566.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-06-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Mixture model fitting using conditional models and modal Gibbs sampling" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Héctor Gómez-López, Virgilio Gómez-Rubio"},"dateModified":"2026-06-18T00:00:00+00:00","datePublished":"2026-06-18T00:00:00+00:00","description":"Mixture models are a convenient way of modeling data using a convex combination of different parametric distributions. A new algorithm based on Gibbs sampling is used to approximate the posterior distribution of the auxiliary variables, that assign each observation to a group in the mixture, without sampling any other parameter in the model. In particular, the modes of an approximation to the full conditional distributions of the parameters of the densities in the mixture are computed using the Integrated Nested Laplace Approximation. These are plugged-in to the full conditional distribution of the auxiliary variables to draw samples. The posterior distributions…","headline":"Mixture model fitting using conditional models and modal Gibbs sampling","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/18/1712.09566.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/18/1712.09566.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Mixture model fitting using conditional models and modal Gibbs sampling</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Héctor Gómez-López, Virgilio Gómez-Rubio
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ME
+      <span class="sep">&middot;</span>
+      18 Jun 2026
+    </div>
+  </div><div class="summary-box">The paper presents a novel algorithm called 'modal' Gibbs sampling for approximating the posterior distribution of auxiliary variables in mixture models, which reduces the computational burden of traditional Gibbs sampling.</div><h3>Abstract</h3>
+  <p>Mixture models are a convenient way of modeling data using a convex combination of different parametric distributions. A new algorithm based on Gibbs sampling is used to approximate the posterior distribution of the auxiliary variables, that assign each observation to a group in the mixture, without sampling any other parameter in the model. In particular, the modes of an approximation to the full conditional distributions of the parameters of the densities in the mixture are computed using the Integrated Nested Laplace Approximation. These are plugged-in to the full conditional distribution of the auxiliary variables to draw samples. The posterior distributions of the remainder of the parameters in the mixture are obtained by averaging over their conditional posterior marginals on the auxiliary variables using Bayesian model averaging. This approximation, ‘modal’ Gibbs sampling, reduces the computational burden in the Gibbs sampling algorithm and provides very good estimates of the posterior distribution of the auxiliary variables. A simulation study supports the validity of ‘modal’ Gibbs sampling and two examples on well-known datasets are discussed using a mixture of Gaussian and Poisson distributions, respectively.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/1712.09566" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/1712.09566" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
