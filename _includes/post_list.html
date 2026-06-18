@@ -5,11 +5,21 @@
 {%-endif-%}
 
 <div class="sort-bar">
-  sorted by <strong id="sort-label">score</strong>
-  &nbsp;&middot;&nbsp;
-  <button class="sort-btn" id="sort-toggle" onclick="toggleSort()">switch to date</button>
-  &nbsp;&middot;&nbsp;
-  <button class="sort-btn" id="read-toggle" onclick="toggleHideRead()">show read</button>
+  <div class="sort-bar-left">
+    sorted by <strong id="sort-label">score</strong>
+    &nbsp;&middot;&nbsp;
+    <button class="sort-btn" id="sort-toggle" onclick="toggleSort()">switch to date</button>
+    &nbsp;&middot;&nbsp;
+    <button class="sort-btn" id="read-toggle" onclick="toggleHideRead()">show read</button>
+  </div>
+  <div class="sort-bar-right">
+    <span class="mark-label">mark as read</span>
+    <button class="sort-btn mark-btn" onclick="markAsRead(-1)">none</button>
+    <button class="sort-btn mark-btn" onclick="markAsRead(0)">all</button>
+    <button class="sort-btn mark-btn" onclick="markAsRead(1)">&lt;1d</button>
+    <button class="sort-btn mark-btn" onclick="markAsRead(2)">&lt;2d</button>
+    <button class="sort-btn mark-btn" onclick="markAsRead(3)">&lt;3d</button>
+  </div>
 </div>
 
 <ul class="post-list" id="post-list">
@@ -90,8 +100,35 @@
     applyFilter(getItems());
   }
 
+  function markAsRead(keepDays) {
+    var items = getItems();
+    if (keepDays < 0) {
+      items.forEach(function (item) {
+        localStorage.removeItem('read:' + item.dataset.url);
+      });
+    } else {
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
+      items.forEach(function (item) {
+        if (keepDays === 0) {
+          localStorage.setItem('read:' + item.dataset.url, '1');
+        } else {
+          var cutoff = new Date(today);
+          cutoff.setDate(cutoff.getDate() - keepDays + 1);
+          var parts = item.dataset.date.split('-');
+          var postDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+          if (postDate < cutoff) {
+            localStorage.setItem('read:' + item.dataset.url, '1');
+          }
+        }
+      });
+    }
+    applyFilter(items);
+  }
+
   window.toggleSort = toggleSort;
   window.toggleHideRead = toggleHideRead;
+  window.markAsRead = markAsRead;
   sort();
 })();
 </script>
