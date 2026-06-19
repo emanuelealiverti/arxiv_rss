@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Ghosh-Lin and Fine-Gray models for a mix of administrative and random censoring</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="The Ghosh-Lin and Fine-Gray models for a mix of administrative and random censoring" />
+<meta name="author" content="Thomas H. Scheike, Christian Mirian, Isao Yokota, Giuliana Cortese" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recurrent events or competing risks regression models are often applied in the bio-medical setting and both can be considered as marginal models. In presence of right-censoring, such models need to be adjusted to give consistent estimators. When censoring is administrative, marginal regression models are particularly easy to estimate. However, when censoring is instead acting randomly, inverse probability of censoring weighting (IPCW) adjustments are typically considered to obtain parameter estimates. This technique relies on a censoring-weights adjustment via a correct censoring model, but for administrative censoring the adjustment is done correctly simply by modifying the risk-set. In practice for large central…" />
+<meta name="twitter:description" property="og:description" content="Recurrent events or competing risks regression models are often applied in the bio-medical setting and both can be considered as marginal models. In presence of right-censoring, such models need to be adjusted to give consistent estimators. When censoring is administrative, marginal regression models are particularly easy to estimate. However, when censoring is instead acting randomly, inverse probability of censoring weighting (IPCW) adjustments are typically considered to obtain parameter estimates. This technique relies on a censoring-weights adjustment via a correct censoring model, but for administrative censoring the adjustment is done correctly simply by modifying the risk-set. In practice for large central…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2606.19892.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2606.19892.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-19T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-19T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="The Ghosh-Lin and Fine-Gray models for a mix of administrative and random censoring" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Thomas H. Scheike, Christian Mirian, Isao Yokota, Giuliana Cortese"},"dateModified":"2026-06-19T00:00:00+02:00","datePublished":"2026-06-19T00:00:00+02:00","description":"Recurrent events or competing risks regression models are often applied in the bio-medical setting and both can be considered as marginal models. In presence of right-censoring, such models need to be adjusted to give consistent estimators. When censoring is administrative, marginal regression models are particularly easy to estimate. However, when censoring is instead acting randomly, inverse probability of censoring weighting (IPCW) adjustments are typically considered to obtain parameter estimates. This technique relies on a censoring-weights adjustment via a correct censoring model, but for administrative censoring the adjustment is done correctly simply by modifying the risk-set. In practice for large central…","headline":"The Ghosh-Lin and Fine-Gray models for a mix of administrative and random censoring","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2606.19892.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2606.19892.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>The Ghosh-Lin and Fine-Gray models for a mix of administrative and random censoring</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Thomas H. Scheike, Christian Mirian, Isao Yokota, Giuliana Cortese
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      19 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper proposes methods for estimating regression models in the presence of both administrative and random censoring, but it does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>Recurrent events or competing risks regression models are often applied in the bio-medical setting and both can be considered as marginal models. In presence of right-censoring, such models need to be adjusted to give consistent estimators. When censoring is administrative, marginal regression models are particularly easy to estimate. However, when censoring is instead acting randomly, inverse probability of censoring weighting (IPCW) adjustments are typically considered to obtain parameter estimates. This technique relies on a censoring-weights adjustment via a correct censoring model, but for administrative censoring the adjustment is done correctly simply by modifying the risk-set. In practice for large central registries or some clinical trials, the administrative censoring time will be known for all subjects, but there will typically also be a proportion of subjects that are censored at random. In this work, we consider two frequently used regression approaches, the Ghosh-Lin model for recurrent events with terminal events and the Fine-Gray model for competing events. For these two settings, when both administrative and random censoring are present, we demonstrate how to obtain correct estimation by dealing with the combination of the two different types of censoring relying on a minimum of modeling assumptions.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.19892" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.19892" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

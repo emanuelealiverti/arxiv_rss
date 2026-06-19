@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Invariant quantile regression for heterogeneous environments</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Invariant quantile regression for heterogeneous environments" />
+<meta name="author" content="Bo Fu, Dandan Jiang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this paper, we propose an invariant quantile regression (IQR) framework specifically designed for multi-environment datasets, which captures the invariance across different environments. This framework is closely related to transfer learning, causal inference, and fair machine learning, and is motivated by scenarios in which the conditional probability of the response given covariates varies, while certain key variables remain invariant. This perspective differs notably from previous works that restrict attention to the conditional mean, which is often insufficient to capture the full causal relationships between covariates and the response in heterogeneous environments. In contrast, quantile-based invariance naturally accommodates heterogeneity, and aligns…" />
+<meta name="twitter:description" property="og:description" content="In this paper, we propose an invariant quantile regression (IQR) framework specifically designed for multi-environment datasets, which captures the invariance across different environments. This framework is closely related to transfer learning, causal inference, and fair machine learning, and is motivated by scenarios in which the conditional probability of the response given covariates varies, while certain key variables remain invariant. This perspective differs notably from previous works that restrict attention to the conditional mean, which is often insufficient to capture the full causal relationships between covariates and the response in heterogeneous environments. In contrast, quantile-based invariance naturally accommodates heterogeneity, and aligns…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2603.19745.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2603.19745.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-19T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-19T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Invariant quantile regression for heterogeneous environments" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Bo Fu, Dandan Jiang"},"dateModified":"2026-06-19T00:00:00+02:00","datePublished":"2026-06-19T00:00:00+02:00","description":"In this paper, we propose an invariant quantile regression (IQR) framework specifically designed for multi-environment datasets, which captures the invariance across different environments. This framework is closely related to transfer learning, causal inference, and fair machine learning, and is motivated by scenarios in which the conditional probability of the response given covariates varies, while certain key variables remain invariant. This perspective differs notably from previous works that restrict attention to the conditional mean, which is often insufficient to capture the full causal relationships between covariates and the response in heterogeneous environments. In contrast, quantile-based invariance naturally accommodates heterogeneity, and aligns…","headline":"Invariant quantile regression for heterogeneous environments","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2603.19745.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2603.19745.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Invariant quantile regression for heterogeneous environments</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Bo Fu, Dandan Jiang
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      19 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper proposes an invariant quantile regression framework for multi-environment datasets, which captures invariance across different environments and has applications in transfer learning, causal inference, and fair machine learning.</div><h3>Abstract</h3>
+  <p>In this paper, we propose an invariant quantile regression (IQR) framework specifically designed for multi-environment datasets, which captures the invariance across different environments. This framework is closely related to transfer learning, causal inference, and fair machine learning, and is motivated by scenarios in which the conditional probability of the response given covariates varies, while certain key variables remain invariant. This perspective differs notably from previous works that restrict attention to the conditional mean, which is often insufficient to capture the full causal relationships between covariates and the response in heterogeneous environments. In contrast, quantile-based invariance naturally accommodates heterogeneity, and aligns more closely with structural causal models, in which variables invariant across environments at one or multiple quantile levels directly indicate potential and stable causal variables. Moreover, we show that IQR may yield a larger set of endogenous variables compared to the conditional mean framework, which in turn promotes more effective exclusion of spurious (non-causal) variables. To achieve this, we introduce a Kernel-Smoothed Invariant Quantile Regression (KS-IQR) estimator, which leverages the underlying invariance structure and heterogeneity among environments, ensuring stable estimation across multiple environments. We establish the causal discovery properties of our method, demonstrate its ability to overcome the ``curse of endogeneity’’, and derive an $\ell_2$ error bound for our estimator, all in a non-asymptotic framework. We apply our method to real data for causal discovery and obtain biologically meaningful relationships, recovering known signaling pathways and revealing additional quantile-specific effects.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2603.19745" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2603.19745" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

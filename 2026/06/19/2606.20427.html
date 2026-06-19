@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Private Rate-Double-Robust Inference</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Private Rate-Double-Robust Inference" />
+<meta name="author" content="Máté Kormos, Aad van der Vaart" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We reconcile privacy protection and rate-double-robust inference. The privacy of individuals is protected by a local privacy mechanism: injecting noise into their sensitive data, revealing only the noisy data for inference. Hence, privacy protection hinders inference. In contrast, the inference of a target parameter is rate-double-robust when the large-sample bias of an estimator of the parameter is characterised by a trade-off between the estimation errors of two other, nuisance, parameters. Hence, rate-double-robustness facilitates inference. Our starting point of reconciliation is a class of rate-double-robust target parameters indexed linearly by an infinite-dimensional and nonlinearly by a low-dimensional regression. Among others, this…" />
+<meta name="twitter:description" property="og:description" content="We reconcile privacy protection and rate-double-robust inference. The privacy of individuals is protected by a local privacy mechanism: injecting noise into their sensitive data, revealing only the noisy data for inference. Hence, privacy protection hinders inference. In contrast, the inference of a target parameter is rate-double-robust when the large-sample bias of an estimator of the parameter is characterised by a trade-off between the estimation errors of two other, nuisance, parameters. Hence, rate-double-robustness facilitates inference. Our starting point of reconciliation is a class of rate-double-robust target parameters indexed linearly by an infinite-dimensional and nonlinearly by a low-dimensional regression. Among others, this…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2606.20427.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2606.20427.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-19T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-19T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Private Rate-Double-Robust Inference" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Máté Kormos, Aad van der Vaart"},"dateModified":"2026-06-19T00:00:00+02:00","datePublished":"2026-06-19T00:00:00+02:00","description":"We reconcile privacy protection and rate-double-robust inference. The privacy of individuals is protected by a local privacy mechanism: injecting noise into their sensitive data, revealing only the noisy data for inference. Hence, privacy protection hinders inference. In contrast, the inference of a target parameter is rate-double-robust when the large-sample bias of an estimator of the parameter is characterised by a trade-off between the estimation errors of two other, nuisance, parameters. Hence, rate-double-robustness facilitates inference. Our starting point of reconciliation is a class of rate-double-robust target parameters indexed linearly by an infinite-dimensional and nonlinearly by a low-dimensional regression. Among others, this…","headline":"Private Rate-Double-Robust Inference","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2606.20427.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/19/2606.20427.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Private Rate-Double-Robust Inference</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Máté Kormos, Aad van der Vaart
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      19 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper reconciles privacy protection and rate-double-robust inference, but its focus on statistical inference for sensitive data and its use of semiparametric properties does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>We reconcile privacy protection and rate-double-robust inference. The privacy of individuals is protected by a local privacy mechanism: injecting noise into their sensitive data, revealing only the noisy data for inference. Hence, privacy protection hinders inference. In contrast, the inference of a target parameter is rate-double-robust when the large-sample bias of an estimator of the parameter is characterised by a trade-off between the estimation errors of two other, nuisance, parameters. Hence, rate-double-robustness facilitates inference. Our starting point of reconciliation is a class of rate-double-robust target parameters indexed linearly by an infinite-dimensional and nonlinearly by a low-dimensional regression. Among others, this includes causal parameters. To infer these targets privately, we show how suitable privacy mechanisms transfer the semiparametric properties of the sensitive-data model to the private setting. Rate-double-robustness is transferred, enabling locally-private, unbiased and semiparametrically efficient inference of our target parameters. Finally, we transform general nonparametric nuisance estimators into private ones, which inherit convergence properties of their nonprivate counterparts. For parametric nuisance models, we develop a private method-of-moments estimator and its large-sample inference theory.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.20427" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.20427" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
