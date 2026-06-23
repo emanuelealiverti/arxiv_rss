@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Topological summaries of fingerprint ridge patterns carry identity information</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Topological summaries of fingerprint ridge patterns carry identity information" />
+<meta name="author" content="Chad M. Topaz, Niny Arcila-Maya, Elizabeth Munch, Zofia Stanley, Lori Ziegelmeier" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Fingerprints are the most widely deployed biometric. Verifying whether two impressions come from the same finger typically relies on minutiae, small landmarks such as skin ridge endings and bifurcations. These landmarks are extracted through a multi-stage pipeline of image enhancement, skeletonization, minutiae detection, and alignment. We investigate an alternative: using topological data analysis to represent the full pattern of skin ridges and valleys directly, bypassing minutiae detection and the downstream matching pipeline. We apply persistent homology, a topological tool that tracks how loops in the ridge pattern form and fill in across spatial scales, producing multi-scale summaries of ridge geometry.…" />
+<meta name="twitter:description" property="og:description" content="Fingerprints are the most widely deployed biometric. Verifying whether two impressions come from the same finger typically relies on minutiae, small landmarks such as skin ridge endings and bifurcations. These landmarks are extracted through a multi-stage pipeline of image enhancement, skeletonization, minutiae detection, and alignment. We investigate an alternative: using topological data analysis to represent the full pattern of skin ridges and valleys directly, bypassing minutiae detection and the downstream matching pipeline. We apply persistent homology, a topological tool that tracks how loops in the ridge pattern form and fill in across spatial scales, producing multi-scale summaries of ridge geometry.…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2606.22029.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2606.22029.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-23T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-23T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Topological summaries of fingerprint ridge patterns carry identity information" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Chad M. Topaz, Niny Arcila-Maya, Elizabeth Munch, Zofia Stanley, Lori Ziegelmeier"},"dateModified":"2026-06-23T00:00:00+02:00","datePublished":"2026-06-23T00:00:00+02:00","description":"Fingerprints are the most widely deployed biometric. Verifying whether two impressions come from the same finger typically relies on minutiae, small landmarks such as skin ridge endings and bifurcations. These landmarks are extracted through a multi-stage pipeline of image enhancement, skeletonization, minutiae detection, and alignment. We investigate an alternative: using topological data analysis to represent the full pattern of skin ridges and valleys directly, bypassing minutiae detection and the downstream matching pipeline. We apply persistent homology, a topological tool that tracks how loops in the ridge pattern form and fill in across spatial scales, producing multi-scale summaries of ridge geometry.…","headline":"Topological summaries of fingerprint ridge patterns carry identity information","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2606.22029.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2606.22029.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Topological summaries of fingerprint ridge patterns carry identity information</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Chad M. Topaz, Niny Arcila-Maya, Elizabeth Munch, Zofia Stanley, Lori Ziegelmeier
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      23 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper explores the use of topological data analysis to represent fingerprint patterns for biometric verification, achieving high accuracy without relying on minutiae detection.</div><h3>Abstract</h3>
+  <p>Fingerprints are the most widely deployed biometric. Verifying whether two impressions come from the same finger typically relies on minutiae, small landmarks such as skin ridge endings and bifurcations. These landmarks are extracted through a multi-stage pipeline of image enhancement, skeletonization, minutiae detection, and alignment. We investigate an alternative: using topological data analysis to represent the full pattern of skin ridges and valleys directly, bypassing minutiae detection and the downstream matching pipeline. We apply persistent homology, a topological tool that tracks how loops in the ridge pattern form and fill in across spatial scales, producing multi-scale summaries of ridge geometry. We develop and compare a range of verification methods on a standard benchmark dataset, FVC2000 DB1. Even the simplest topological summaries, with no trained parameters, substantially outperform geometry-only baselines. A trained method achieves an AUC of 0.91, while an optimal-transport method excels at the strictest false-accept thresholds, suggesting they capture different aspects of the ridge pattern. Fusing these two approaches yields the best performance at every low false-accept threshold we examine. Our results establish that these topological summaries capture substantial fingerprint identity information, far more effective for verification than raw pixel-level geometry. Because the entire pipeline is openly specified, it offers a transparent complement to minutiae-based systems, and we provide a modular framework for constructing, evaluating, and combining topological verification methods.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.22029" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.22029" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

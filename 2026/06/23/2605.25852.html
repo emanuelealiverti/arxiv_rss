@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Post-Processing Conformal Prediction Approach for Conditional Coverage via Pivotal Scores</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Post-Processing Conformal Prediction Approach for Conditional Coverage via Pivotal Scores" />
+<meta name="author" content="Félix Laplante" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="While Conformal Prediction (CP) has proven to be a powerful framework for uncertainty quantification, guaranteeing conditional coverage remains a central challenge. Although finite-sample, distribution-free conditional validity is known to be impossible without structural assumptions, we show that for i.i.d. data, it is fundamentally equivalent to constructing a nonconformity score whose distribution is independent of the features. This theoretical characterization motivates PIT-CP, a new post-processing correction that maps any base nonconformity score to an approximately invariant one while preserving its geometry, interpretability, and marginal coverage. This perspective is particularly appealing in practice, since it may be neither economical nor time-effective to…" />
+<meta name="twitter:description" property="og:description" content="While Conformal Prediction (CP) has proven to be a powerful framework for uncertainty quantification, guaranteeing conditional coverage remains a central challenge. Although finite-sample, distribution-free conditional validity is known to be impossible without structural assumptions, we show that for i.i.d. data, it is fundamentally equivalent to constructing a nonconformity score whose distribution is independent of the features. This theoretical characterization motivates PIT-CP, a new post-processing correction that maps any base nonconformity score to an approximately invariant one while preserving its geometry, interpretability, and marginal coverage. This perspective is particularly appealing in practice, since it may be neither economical nor time-effective to…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2605.25852.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2605.25852.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-23T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-23T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Post-Processing Conformal Prediction Approach for Conditional Coverage via Pivotal Scores" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Félix Laplante"},"dateModified":"2026-06-23T00:00:00+02:00","datePublished":"2026-06-23T00:00:00+02:00","description":"While Conformal Prediction (CP) has proven to be a powerful framework for uncertainty quantification, guaranteeing conditional coverage remains a central challenge. Although finite-sample, distribution-free conditional validity is known to be impossible without structural assumptions, we show that for i.i.d. data, it is fundamentally equivalent to constructing a nonconformity score whose distribution is independent of the features. This theoretical characterization motivates PIT-CP, a new post-processing correction that maps any base nonconformity score to an approximately invariant one while preserving its geometry, interpretability, and marginal coverage. This perspective is particularly appealing in practice, since it may be neither economical nor time-effective to…","headline":"A Post-Processing Conformal Prediction Approach for Conditional Coverage via Pivotal Scores","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2605.25852.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2605.25852.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Post-Processing Conformal Prediction Approach for Conditional Coverage via Pivotal Scores</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Félix Laplante
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      23 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper proposes a post-processing correction for Conformal Prediction to achieve conditional coverage, but it does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>While Conformal Prediction (CP) has proven to be a powerful framework for uncertainty quantification, guaranteeing conditional coverage remains a central challenge. Although finite-sample, distribution-free conditional validity is known to be impossible without structural assumptions, we show that for i.i.d. data, it is fundamentally equivalent to constructing a nonconformity score whose distribution is independent of the features. This theoretical characterization motivates PIT-CP, a new post-processing correction that maps any base nonconformity score to an approximately invariant one while preserving its geometry, interpretability, and marginal coverage. This perspective is particularly appealing in practice, since it may be neither economical nor time-effective to retrain a full generative model when a strong prediction-driven model already provides highly accurate point estimates. Our procedure reduces the problem to one-dimensional conditional density estimation on the induced score, rather than full conditional density estimation on the original outcome space. We show how to estimate this transform in practice and derive bounds on the conditional coverage gap, alongside volumetric and symmetric-difference bounds. We present known minimax-optimal conditional estimation techniques while also motivating the use of modern conditional density estimators, including Mixture Density Networks and Conditional Normalizing Flows. Finally, we empirically demonstrate on various datasets that our PIT-CP procedure matches or outperforms many state-of-the-art conformal prediction strategies with minimal effort and computational cost.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.25852" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.25852" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

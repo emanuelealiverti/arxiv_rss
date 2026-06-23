@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Conformal and kNN Predictive Uncertainty Quantification Algorithms in Metric Spaces</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Conformal and kNN Predictive Uncertainty Quantification Algorithms in Metric Spaces" />
+<meta name="author" content="Gábor Lugosi, Marcos Matabuena" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper introduces a framework for uncertainty quantification in regression models defined on metric spaces. Using a proposed notion of homoscedasticity, we define a conformal prediction algorithm that provides finite-sample marginal coverage guarantees and fast convergence rates to the oracle prediction region. For heteroscedastic settings, we introduce a kNN procedure that yields locally adaptive prediction radii in general metric spaces. Although this procedure does not provide the same finite-sample guarantees as the conformal algorithm, it is designed to improve local coverage calibration without imposing smoothing assumptions. Both procedures are compatible with a broad range of regression algorithms and scale to…" />
+<meta name="twitter:description" property="og:description" content="This paper introduces a framework for uncertainty quantification in regression models defined on metric spaces. Using a proposed notion of homoscedasticity, we define a conformal prediction algorithm that provides finite-sample marginal coverage guarantees and fast convergence rates to the oracle prediction region. For heteroscedastic settings, we introduce a kNN procedure that yields locally adaptive prediction radii in general metric spaces. Although this procedure does not provide the same finite-sample guarantees as the conformal algorithm, it is designed to improve local coverage calibration without imposing smoothing assumptions. Both procedures are compatible with a broad range of regression algorithms and scale to…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2507.15741.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2507.15741.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-23T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-23T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Conformal and kNN Predictive Uncertainty Quantification Algorithms in Metric Spaces" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gábor Lugosi, Marcos Matabuena"},"dateModified":"2026-06-23T00:00:00+02:00","datePublished":"2026-06-23T00:00:00+02:00","description":"This paper introduces a framework for uncertainty quantification in regression models defined on metric spaces. Using a proposed notion of homoscedasticity, we define a conformal prediction algorithm that provides finite-sample marginal coverage guarantees and fast convergence rates to the oracle prediction region. For heteroscedastic settings, we introduce a kNN procedure that yields locally adaptive prediction radii in general metric spaces. Although this procedure does not provide the same finite-sample guarantees as the conformal algorithm, it is designed to improve local coverage calibration without imposing smoothing assumptions. Both procedures are compatible with a broad range of regression algorithms and scale to…","headline":"Conformal and kNN Predictive Uncertainty Quantification Algorithms in Metric Spaces","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2507.15741.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/23/2507.15741.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Conformal and kNN Predictive Uncertainty Quantification Algorithms in Metric Spaces</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Gábor Lugosi, Marcos Matabuena
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      23 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper introduces two uncertainty quantification algorithms for regression models in metric spaces, but they do not directly advance the researcher's core topics of Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>This paper introduces a framework for uncertainty quantification in regression models defined on metric spaces. Using a proposed notion of homoscedasticity, we define a conformal prediction algorithm that provides finite-sample marginal coverage guarantees and fast convergence rates to the oracle prediction region. For heteroscedastic settings, we introduce a kNN procedure that yields locally adaptive prediction radii in general metric spaces. Although this procedure does not provide the same finite-sample guarantees as the conformal algorithm, it is designed to improve local coverage calibration without imposing smoothing assumptions. Both procedures are compatible with a broad range of regression algorithms and scale to large datasets, allowing practitioners to use their preferred models and incorporate domain-specific knowledge. Building on the heteroscedastic $k$NN approach, we also develop a flexible sequential extension for metric-space-valued time series based on nearest-neighbor expert aggregation. We establish the consistency of the proposed estimators under minimal conditions. Finally, we illustrate the practical utility of our framework in personalized medicine applications involving random objects such as probability distributions and graph Laplacians.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2507.15741" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2507.15741" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
