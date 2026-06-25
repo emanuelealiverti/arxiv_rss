@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the entropic convergence for piecewise deterministic samplers: speedup and obstruction</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="On the entropic convergence for piecewise deterministic samplers: speedup and obstruction" />
+<meta name="author" content="Pierre Monmarché, Lihan Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For piecewise deterministic samplers such as Randomized Hamiltonian Monte Carlo (RHMC), Bouncy Particle Sampler (BPS) or Zig-Zag Process (ZZP), long-time exponential convergence rates have been established in previous works using Harris or $L^2$ hypocoercivity approaches. In particular, in the $L^2$ framework, a so-called \emph{diffusive-to-ballistic} speedup was known for log-concave targets, according to which the convergence rates of these samplers, with suitable parameters, are quadratically improved with respect to the standard overdamped Langevin diffusion process. A recent work by Jianfeng Lu showed that this speedup also holds for the kinetic Langevin diffusion process when the convergence is stated in terms of…" />
+<meta name="twitter:description" property="og:description" content="For piecewise deterministic samplers such as Randomized Hamiltonian Monte Carlo (RHMC), Bouncy Particle Sampler (BPS) or Zig-Zag Process (ZZP), long-time exponential convergence rates have been established in previous works using Harris or $L^2$ hypocoercivity approaches. In particular, in the $L^2$ framework, a so-called \emph{diffusive-to-ballistic} speedup was known for log-concave targets, according to which the convergence rates of these samplers, with suitable parameters, are quadratically improved with respect to the standard overdamped Langevin diffusion process. A recent work by Jianfeng Lu showed that this speedup also holds for the kinetic Langevin diffusion process when the convergence is stated in terms of…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/25/2606.26086.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/25/2606.26086.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-25T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-25T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="On the entropic convergence for piecewise deterministic samplers: speedup and obstruction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pierre Monmarché, Lihan Wang"},"dateModified":"2026-06-25T00:00:00+02:00","datePublished":"2026-06-25T00:00:00+02:00","description":"For piecewise deterministic samplers such as Randomized Hamiltonian Monte Carlo (RHMC), Bouncy Particle Sampler (BPS) or Zig-Zag Process (ZZP), long-time exponential convergence rates have been established in previous works using Harris or $L^2$ hypocoercivity approaches. In particular, in the $L^2$ framework, a so-called \\emph{diffusive-to-ballistic} speedup was known for log-concave targets, according to which the convergence rates of these samplers, with suitable parameters, are quadratically improved with respect to the standard overdamped Langevin diffusion process. A recent work by Jianfeng Lu showed that this speedup also holds for the kinetic Langevin diffusion process when the convergence is stated in terms of…","headline":"On the entropic convergence for piecewise deterministic samplers: speedup and obstruction","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/25/2606.26086.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/25/2606.26086.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>On the entropic convergence for piecewise deterministic samplers: speedup and obstruction</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Pierre Monmarché, Lihan Wang
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      25 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper investigates the entropic convergence rates of piecewise deterministic samplers, providing a positive answer for Randomized Hamiltonian Monte Carlo but a negative answer for Bouncy Particle Sampler and Zig-Zag Process.</div><h3>Abstract</h3>
+  <p>For piecewise deterministic samplers such as Randomized Hamiltonian Monte Carlo (RHMC), Bouncy Particle Sampler (BPS) or Zig-Zag Process (ZZP), long-time exponential convergence rates have been established in previous works using Harris or $L^2$ hypocoercivity approaches. In particular, in the $L^2$ framework, a so-called \emph{diffusive-to-ballistic} speedup was known for log-concave targets, according to which the convergence rates of these samplers, with suitable parameters, are quadratically improved with respect to the standard overdamped Langevin diffusion process. A recent work by Jianfeng Lu showed that this speedup also holds for the kinetic Langevin diffusion process when the convergence is stated in terms of relative entropy, raising the question whether this also holds for piecewise deterministic samplers. The present work provides a positive and a negative answer to this: first, we show that the speedup holds in entropy for RHMC; second, we show that for BPS or ZZS, even for a standard Gaussian target, a similar result cannot hold, and even that exponential convergence (at any rate) in entropy fails.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.26086" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.26086" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Exploring Pareto smoothing in sequential Monte Carlo</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Exploring Pareto smoothing in sequential Monte Carlo" />
+<meta name="author" content="Jia Le Tan, Nicola D. Walker, Richard G. Everitt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A popular technique for reducing the variance of importance sampling (IS) estimators is to modify the weights of some importance points. One approach is to truncate the largest weights, which reduces variance but can introduce substantial bias. Pareto smoothed importance sampling (PSIS), by contrast, reduces the variance of the weights by fitting a generalised Pareto distribution to the upper tail of the weight distribution and replacing the weights in this tail with the corresponding expected quantiles from the fitted distribution. PSIS can therefore also reduce variance, but typically with less bias, and has been used successfully in IS-based approximations for…" />
+<meta name="twitter:description" property="og:description" content="A popular technique for reducing the variance of importance sampling (IS) estimators is to modify the weights of some importance points. One approach is to truncate the largest weights, which reduces variance but can introduce substantial bias. Pareto smoothed importance sampling (PSIS), by contrast, reduces the variance of the weights by fitting a generalised Pareto distribution to the upper tail of the weight distribution and replacing the weights in this tail with the corresponding expected quantiles from the fitted distribution. PSIS can therefore also reduce variance, but typically with less bias, and has been used successfully in IS-based approximations for…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/25/2606.25983.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/25/2606.25983.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-25T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-25T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Exploring Pareto smoothing in sequential Monte Carlo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jia Le Tan, Nicola D. Walker, Richard G. Everitt"},"dateModified":"2026-06-25T00:00:00+02:00","datePublished":"2026-06-25T00:00:00+02:00","description":"A popular technique for reducing the variance of importance sampling (IS) estimators is to modify the weights of some importance points. One approach is to truncate the largest weights, which reduces variance but can introduce substantial bias. Pareto smoothed importance sampling (PSIS), by contrast, reduces the variance of the weights by fitting a generalised Pareto distribution to the upper tail of the weight distribution and replacing the weights in this tail with the corresponding expected quantiles from the fitted distribution. PSIS can therefore also reduce variance, but typically with less bias, and has been used successfully in IS-based approximations for…","headline":"Exploring Pareto smoothing in sequential Monte Carlo","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/25/2606.25983.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/25/2606.25983.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Exploring Pareto smoothing in sequential Monte Carlo</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Jia Le Tan, Nicola D. Walker, Richard G. Everitt
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ME
+      <span class="sep">&middot;</span>
+      25 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper explores the application of Pareto smoothing in sequential Monte Carlo samplers, but finds minimal benefits in variance reduction.</div><h3>Abstract</h3>
+  <p>A popular technique for reducing the variance of importance sampling (IS) estimators is to modify the weights of some importance points. One approach is to truncate the largest weights, which reduces variance but can introduce substantial bias. Pareto smoothed importance sampling (PSIS), by contrast, reduces the variance of the weights by fitting a generalised Pareto distribution to the upper tail of the weight distribution and replacing the weights in this tail with the corresponding expected quantiles from the fitted distribution. PSIS can therefore also reduce variance, but typically with less bias, and has been used successfully in IS-based approximations for Bayesian cross-validation. This paper explores the use of PSIS steps within sequential Monte Carlo (SMC) samplers, with a particular focus on approximate Bayesian computation (ABC)-SMC algorithms, where we aim to use Pareto smoothing to reduce the use of Markov chain Monte Carlo (MCMC) moves, each of which requires simulation from a model that is often computationally expensive. Our empirical investigation suggests that there are only minimal benefits to using Pareto smoothing in SMC, since the variance reduction through using a sequence of targets dominates the impact of the weight adjustment.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.25983" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.25983" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
