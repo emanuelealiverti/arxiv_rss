@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Cumulative Ordered Spike-and-Slab Prior for Adaptive Dimension Selection in Joint Latent Space Models</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Cumulative Ordered Spike-and-Slab Prior for Adaptive Dimension Selection in Joint Latent Space Models" />
+<meta name="author" content="Bin Lv, Yincai Tang, Siliang Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Network models are increasingly vital in psychometrics for analyzing relational data, which are often accompanied by high-dimensional node attributes. Joint latent space models (JLSM) provide an elegant framework for integrating these data sources by assuming a shared underlying latent representation; however, a persistent methodological challenge is determining the dimension of the latent space, as existing methods typically require pre-specification or rely on computationally intensive post-hoc procedures. The key innovation of this work is a cumulative ordered spike-and-slab (COSS) prior, which we incorporate within a Bayesian joint latent space modeling framework. This prior enables the latent dimension to be inferred automatically…" />
+<meta name="twitter:description" property="og:description" content="Network models are increasingly vital in psychometrics for analyzing relational data, which are often accompanied by high-dimensional node attributes. Joint latent space models (JLSM) provide an elegant framework for integrating these data sources by assuming a shared underlying latent representation; however, a persistent methodological challenge is determining the dimension of the latent space, as existing methods typically require pre-specification or rely on computationally intensive post-hoc procedures. The key innovation of this work is a cumulative ordered spike-and-slab (COSS) prior, which we incorporate within a Bayesian joint latent space modeling framework. This prior enables the latent dimension to be inferred automatically…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/29/2509.18580.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/29/2509.18580.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-29T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-29T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Cumulative Ordered Spike-and-Slab Prior for Adaptive Dimension Selection in Joint Latent Space Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Bin Lv, Yincai Tang, Siliang Zhang"},"dateModified":"2026-06-29T00:00:00+02:00","datePublished":"2026-06-29T00:00:00+02:00","description":"Network models are increasingly vital in psychometrics for analyzing relational data, which are often accompanied by high-dimensional node attributes. Joint latent space models (JLSM) provide an elegant framework for integrating these data sources by assuming a shared underlying latent representation; however, a persistent methodological challenge is determining the dimension of the latent space, as existing methods typically require pre-specification or rely on computationally intensive post-hoc procedures. The key innovation of this work is a cumulative ordered spike-and-slab (COSS) prior, which we incorporate within a Bayesian joint latent space modeling framework. This prior enables the latent dimension to be inferred automatically…","headline":"A Cumulative Ordered Spike-and-Slab Prior for Adaptive Dimension Selection in Joint Latent Space Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/29/2509.18580.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/29/2509.18580.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Cumulative Ordered Spike-and-Slab Prior for Adaptive Dimension Selection in Joint Latent Space Models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Bin Lv, Yincai Tang, Siliang Zhang
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      29 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper introduces a cumulative ordered spike-and-slab prior for adaptive dimension selection in joint latent space models, enabling automatic and simultaneous inference of the latent dimension and model parameters.</div><h3>Abstract</h3>
+  <p>Network models are increasingly vital in psychometrics for analyzing relational data, which are often accompanied by high-dimensional node attributes. Joint latent space models (JLSM) provide an elegant framework for integrating these data sources by assuming a shared underlying latent representation; however, a persistent methodological challenge is determining the dimension of the latent space, as existing methods typically require pre-specification or rely on computationally intensive post-hoc procedures. The key innovation of this work is a cumulative ordered spike-and-slab (COSS) prior, which we incorporate within a Bayesian joint latent space modeling framework. This prior enables the latent dimension to be inferred automatically and simultaneously with all model parameters. We develop an efficient Markov Chain Monte Carlo (MCMC) algorithm for posterior computation. Theoretically, we establish that the posterior distribution concentrates on the true latent dimension and that parameter estimates achieve Hellinger consistency at a near-optimal rate that adapts to the unknown dimensionality. Through extensive simulations and three real-data applications, we demonstrate the method’s superior performance in both dimension recovery and parameter estimation. Our work offers a principled, computationally efficient, and theoretically grounded solution for adaptive dimension selection in psychometric network models.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2509.18580" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2509.18580" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
