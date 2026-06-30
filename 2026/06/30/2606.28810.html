@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Methods to address measurement error in both Outcome and Covariates</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Methods to address measurement error in both Outcome and Covariates" />
+<meta name="author" content="Pamela A. Shaw, Bryan E. Shepherd" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Biomedical research is increasingly relying on readily available routine data, such as electronic health records. Routinely collected data, as well as datasets from large cohorts, are often prone to measurement error which, if not addressed in analyses, can bias study results and ultimately mislead clinical decision-making and potentially harm patients. For this setting, methods that address errors in the outcome and multiple covariates are needed. In this tutorial, we will review available methods to address for errors in both outcomes and covariates. We will illustrate methods with use of a running example in order to compare the methods directly. Both…" />
+<meta name="twitter:description" property="og:description" content="Biomedical research is increasingly relying on readily available routine data, such as electronic health records. Routinely collected data, as well as datasets from large cohorts, are often prone to measurement error which, if not addressed in analyses, can bias study results and ultimately mislead clinical decision-making and potentially harm patients. For this setting, methods that address errors in the outcome and multiple covariates are needed. In this tutorial, we will review available methods to address for errors in both outcomes and covariates. We will illustrate methods with use of a running example in order to compare the methods directly. Both…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.28810.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.28810.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-30T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-30T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Methods to address measurement error in both Outcome and Covariates" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pamela A. Shaw, Bryan E. Shepherd"},"dateModified":"2026-06-30T00:00:00+02:00","datePublished":"2026-06-30T00:00:00+02:00","description":"Biomedical research is increasingly relying on readily available routine data, such as electronic health records. Routinely collected data, as well as datasets from large cohorts, are often prone to measurement error which, if not addressed in analyses, can bias study results and ultimately mislead clinical decision-making and potentially harm patients. For this setting, methods that address errors in the outcome and multiple covariates are needed. In this tutorial, we will review available methods to address for errors in both outcomes and covariates. We will illustrate methods with use of a running example in order to compare the methods directly. Both…","headline":"Methods to address measurement error in both Outcome and Covariates","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.28810.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.28810.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Methods to address measurement error in both Outcome and Covariates</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Pamela A. Shaw, Bryan E. Shepherd
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      30 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper reviews methods for addressing measurement error in both outcome and covariates in routine data, but does not appear to advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>Biomedical research is increasingly relying on readily available routine data, such as electronic health records. Routinely collected data, as well as datasets from large cohorts, are often prone to measurement error which, if not addressed in analyses, can bias study results and ultimately mislead clinical decision-making and potentially harm patients. For this setting, methods that address errors in the outcome and multiple covariates are needed. In this tutorial, we will review available methods to address for errors in both outcomes and covariates. We will illustrate methods with use of a running example in order to compare the methods directly. Both the data and analytic code are provided for the user so that they may easily reproduce results in each example. We conclude the tutorial with a discussion of the different approaches and highlight areas of future work needed for this setting.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.28810" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.28810" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

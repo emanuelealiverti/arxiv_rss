@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Focused median bias reduction</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Focused median bias reduction" />
+<meta name="author" content="Davide Benussi, Ioannis Kosmidis, Alessandra Salvan, Nicola Sartori" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Median bias reduction of maximum likelihood estimators can substantially improve estimation and inference. Existing generally applicable methods are, however, typically implicit, requiring the solution of nonlinear systems of estimating equations, which is computationally demanding. They also require a fully specified nuisance parameterization, and their application to transformations of parameters involves tedious algebra and bespoke implementations. We develop an explicit median bias-corrected estimator for focus parameters that are smooth scalar transformations of a chosen reference parameterization. The estimator is obtained by solving, to the required order, an equation based on the Cornish-Fisher expansion of the centred and scaled maximum likelihood estimator…" />
+<meta name="twitter:description" property="og:description" content="Median bias reduction of maximum likelihood estimators can substantially improve estimation and inference. Existing generally applicable methods are, however, typically implicit, requiring the solution of nonlinear systems of estimating equations, which is computationally demanding. They also require a fully specified nuisance parameterization, and their application to transformations of parameters involves tedious algebra and bespoke implementations. We develop an explicit median bias-corrected estimator for focus parameters that are smooth scalar transformations of a chosen reference parameterization. The estimator is obtained by solving, to the required order, an equation based on the Cornish-Fisher expansion of the centred and scaled maximum likelihood estimator…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.28597.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.28597.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-30T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-30T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Focused median bias reduction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Davide Benussi, Ioannis Kosmidis, Alessandra Salvan, Nicola Sartori"},"dateModified":"2026-06-30T00:00:00+02:00","datePublished":"2026-06-30T00:00:00+02:00","description":"Median bias reduction of maximum likelihood estimators can substantially improve estimation and inference. Existing generally applicable methods are, however, typically implicit, requiring the solution of nonlinear systems of estimating equations, which is computationally demanding. They also require a fully specified nuisance parameterization, and their application to transformations of parameters involves tedious algebra and bespoke implementations. We develop an explicit median bias-corrected estimator for focus parameters that are smooth scalar transformations of a chosen reference parameterization. The estimator is obtained by solving, to the required order, an equation based on the Cornish-Fisher expansion of the centred and scaled maximum likelihood estimator…","headline":"Focused median bias reduction","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.28597.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.28597.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Focused median bias reduction</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Davide Benussi, Ioannis Kosmidis, Alessandra Salvan, Nicola Sartori
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      30 Jun 2026
+    </div>
+  </div><div class="summary-box">The paper presents an explicit median bias-corrected estimator for focus parameters, improving estimation and inference in certain models, but does not directly advance the researcher's core topics of Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>Median bias reduction of maximum likelihood estimators can substantially improve estimation and inference. Existing generally applicable methods are, however, typically implicit, requiring the solution of nonlinear systems of estimating equations, which is computationally demanding. They also require a fully specified nuisance parameterization, and their application to transformations of parameters involves tedious algebra and bespoke implementations. We develop an explicit median bias-corrected estimator for focus parameters that are smooth scalar transformations of a chosen reference parameterization. The estimator is obtained by solving, to the required order, an equation based on the Cornish-Fisher expansion of the centred and scaled maximum likelihood estimator of the focus parameter. It requires only the maximum likelihood or an asymptotically equivalent estimator at the reference parameterization, the gradient and Hessian of the transformation, and expectations of products of log-likelihood derivatives. These expectations are available for many models from the existing bias reduction literature and can also be estimated by Monte Carlo simulation. The resulting estimators are third-order median unbiased and provide one-step approximations to estimators from implicit median bias reduction when the focus parameter is included in the reference parameterization. The method improves standard asymptotic inference and integrates naturally with hull-based confidence procedures, yielding intervals with near nominal finite-sample coverage under median bias control. We demonstrate the framework through post-selection inference using the Focused Information Criterion, Mahalanobis distances, quantiles, and other scalar focus parameters in regression, circular, and stratified models.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.28597" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.28597" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

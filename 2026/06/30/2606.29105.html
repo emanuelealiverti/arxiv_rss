@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Panel Flow Matching: A Generative Approach to Learning Distributions of Longitudinal Data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Panel Flow Matching: A Generative Approach to Learning Distributions of Longitudinal Data" />
+<meta name="author" content="Jianbin Tan, Pixu Shi, Anru R. Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Learning distributions of longitudinal data is central to tasks such as visualization, completion, classification, and synthetic data generation, but it remains statistically challenging because longitudinal observations are often irregular, sparse, and collected from only a limited number of subjects. To address this, we develop a novel generative framework, termed panel flow matching (PFM), for learning longitudinal distributions by pooling information across time via a continuous panel flow model. PFM combines a forward flow-matching step with a backward kernel-fitting step, yielding a flexible and data-adaptive approach for capturing complex distributional structures. We apply PFM to estimate panel densities, namely the cross-sectional…" />
+<meta name="twitter:description" property="og:description" content="Learning distributions of longitudinal data is central to tasks such as visualization, completion, classification, and synthetic data generation, but it remains statistically challenging because longitudinal observations are often irregular, sparse, and collected from only a limited number of subjects. To address this, we develop a novel generative framework, termed panel flow matching (PFM), for learning longitudinal distributions by pooling information across time via a continuous panel flow model. PFM combines a forward flow-matching step with a backward kernel-fitting step, yielding a flexible and data-adaptive approach for capturing complex distributional structures. We apply PFM to estimate panel densities, namely the cross-sectional…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.29105.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.29105.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-30T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-30T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Panel Flow Matching: A Generative Approach to Learning Distributions of Longitudinal Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jianbin Tan, Pixu Shi, Anru R. Zhang"},"dateModified":"2026-06-30T00:00:00+02:00","datePublished":"2026-06-30T00:00:00+02:00","description":"Learning distributions of longitudinal data is central to tasks such as visualization, completion, classification, and synthetic data generation, but it remains statistically challenging because longitudinal observations are often irregular, sparse, and collected from only a limited number of subjects. To address this, we develop a novel generative framework, termed panel flow matching (PFM), for learning longitudinal distributions by pooling information across time via a continuous panel flow model. PFM combines a forward flow-matching step with a backward kernel-fitting step, yielding a flexible and data-adaptive approach for capturing complex distributional structures. We apply PFM to estimate panel densities, namely the cross-sectional…","headline":"Panel Flow Matching: A Generative Approach to Learning Distributions of Longitudinal Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.29105.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.29105.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Panel Flow Matching: A Generative Approach to Learning Distributions of Longitudinal Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Jianbin Tan, Pixu Shi, Anru R. Zhang
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      30 Jun 2026
+    </div>
+  </div><div class="summary-box">The paper presents a novel generative framework, panel flow matching, for learning distributions of longitudinal data, but it does not directly advance the researcher's core topics of Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>Learning distributions of longitudinal data is central to tasks such as visualization, completion, classification, and synthetic data generation, but it remains statistically challenging because longitudinal observations are often irregular, sparse, and collected from only a limited number of subjects. To address this, we develop a novel generative framework, termed panel flow matching (PFM), for learning longitudinal distributions by pooling information across time via a continuous panel flow model. PFM combines a forward flow-matching step with a backward kernel-fitting step, yielding a flexible and data-adaptive approach for capturing complex distributional structures. We apply PFM to estimate panel densities, namely the cross-sectional densities of longitudinal data, and establish statistical guarantees under irregular and sparse sampling designs. Under this, PFM naturally supports tasks including longitudinal completion, synthetic data generation, and classification, without requiring a preliminary dimension-reduction step to handle data irregularity. Extensive simulations demonstrate that PFM outperforms existing methods across these tasks. We further apply PFM to a vaginal microbiome longitudinal dataset from 188 pregnancies labeled as term or preterm, where it improves classification accuracy and reveals time-varying distributional differences between the two groups.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.29105" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.29105" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

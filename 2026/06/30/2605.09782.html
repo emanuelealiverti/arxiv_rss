@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Near-Linear Time Generalized Sinkhorn Algorithms for Bounded Genus Graphs</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Near-Linear Time Generalized Sinkhorn Algorithms for Bounded Genus Graphs" />
+<meta name="author" content="Krzysztof Choromanski, Derek Long, Ananya Parashar, Dwaipayan Saha" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We present GenusSink, a new class of approximate generalized Sinkhorn algorithms with shortest-path-distance costs for bounded genus (e.g. planar) graphs, providing near-linear time: (1) pre-processing, (2) iteration step, (3) final transport plan matrix querying and near-linear memory. Graphs handled by GenusSink include in particular planar graphs and bounded-genus meshes approximating 3D objects. GenusSink addresses total quadratic time complexity of its brute-force counterpart by leveraging separator-based decomposition of graphs, computational geometry techniques, and new results on fast matrix-vector multiplications with generalized distance matrices, using, in particular, Fourier analysis and low displacement rank theory. It is inspired by recent breakthroughs in graph…" />
+<meta name="twitter:description" property="og:description" content="We present GenusSink, a new class of approximate generalized Sinkhorn algorithms with shortest-path-distance costs for bounded genus (e.g. planar) graphs, providing near-linear time: (1) pre-processing, (2) iteration step, (3) final transport plan matrix querying and near-linear memory. Graphs handled by GenusSink include in particular planar graphs and bounded-genus meshes approximating 3D objects. GenusSink addresses total quadratic time complexity of its brute-force counterpart by leveraging separator-based decomposition of graphs, computational geometry techniques, and new results on fast matrix-vector multiplications with generalized distance matrices, using, in particular, Fourier analysis and low displacement rank theory. It is inspired by recent breakthroughs in graph…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2605.09782.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2605.09782.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-30T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-30T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Near-Linear Time Generalized Sinkhorn Algorithms for Bounded Genus Graphs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Krzysztof Choromanski, Derek Long, Ananya Parashar, Dwaipayan Saha"},"dateModified":"2026-06-30T00:00:00+02:00","datePublished":"2026-06-30T00:00:00+02:00","description":"We present GenusSink, a new class of approximate generalized Sinkhorn algorithms with shortest-path-distance costs for bounded genus (e.g. planar) graphs, providing near-linear time: (1) pre-processing, (2) iteration step, (3) final transport plan matrix querying and near-linear memory. Graphs handled by GenusSink include in particular planar graphs and bounded-genus meshes approximating 3D objects. GenusSink addresses total quadratic time complexity of its brute-force counterpart by leveraging separator-based decomposition of graphs, computational geometry techniques, and new results on fast matrix-vector multiplications with generalized distance matrices, using, in particular, Fourier analysis and low displacement rank theory. It is inspired by recent breakthroughs in graph…","headline":"Near-Linear Time Generalized Sinkhorn Algorithms for Bounded Genus Graphs","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2605.09782.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2605.09782.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Near-Linear Time Generalized Sinkhorn Algorithms for Bounded Genus Graphs</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Krzysztof Choromanski, Derek Long, Ananya Parashar, Dwaipayan Saha
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      30 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper presents a new class of approximate generalized Sinkhorn algorithms for bounded genus graphs, providing near-linear time complexity, but it does not appear to be directly related to the researcher's core topics in Bayesian statistics and computational methods.</div><h3>Abstract</h3>
+  <p>We present GenusSink, a new class of approximate generalized Sinkhorn algorithms with shortest-path-distance costs for bounded genus (e.g. planar) graphs, providing near-linear time: (1) pre-processing, (2) iteration step, (3) final transport plan matrix querying and near-linear memory. Graphs handled by GenusSink include in particular planar graphs and bounded-genus meshes approximating 3D objects. GenusSink addresses total quadratic time complexity of its brute-force counterpart by leveraging separator-based decomposition of graphs, computational geometry techniques, and new results on fast matrix-vector multiplications with generalized distance matrices, using, in particular, Fourier analysis and low displacement rank theory. It is inspired by recent breakthroughs in graph theory on approximating bounded genus metrics with small treewidth metrics \citep{minor-free-paper}. The graph-centric approach enables us to target optimal transport problem with the corresponding distributions defined on the manifolds approximated by weighted graphs and with cost functions given by geodesic distances. We conduct rigorous theoretical analysis of GenusSink, provide practical implementations, leveraging newly introduced in this paper \textit{separation graph field integrators} (S-GFIs) data structures and present empirical verification. GenusSink provides orders of magnitude more accurate computations than other efficient Sinkhorn algorithms, while still guaranteeing significant computational improvements, as compared to the baseline. As a by-product of the developed methods, we show that GenusSink is \textbf{numerically equivalent} to the brute-force geodesic Sinkhorn algorithm on $n$-vertex graphs with treewidth $O(\log \log (n))$ (e.g. on trees).</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.09782" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.09782" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

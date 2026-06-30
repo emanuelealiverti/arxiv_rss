@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Tuning-Free Efficient Estimation for Multi-Source Data via Covariance-Aware Shrinkage</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Tuning-Free Efficient Estimation for Multi-Source Data via Covariance-Aware Shrinkage" />
+<meta name="author" content="Wenbo Jing, Xi Chen, Yaqi Duan, Kaizheng Wang, Yichen Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern statistical learning problems often involve multiple related data sets, where learning efficiency on a target set can be improved by utilizing related source sets, while heterogeneity among the source sets may introduce bias. Existing approaches are limited by suboptimal performance in multi-source settings, insufficient use of covariance information, or the computational burden of tuning procedures. We propose a tuning-free and covariance-aware shrinkage framework that constructs shrinkage directions using covariance information to improve efficiency. We establish finite-sample risk bounds that yield an explicit risk-improving interval for the shrinkage size, making the procedure fully data-driven and tuning-free. When multiple source sets…" />
+<meta name="twitter:description" property="og:description" content="Modern statistical learning problems often involve multiple related data sets, where learning efficiency on a target set can be improved by utilizing related source sets, while heterogeneity among the source sets may introduce bias. Existing approaches are limited by suboptimal performance in multi-source settings, insufficient use of covariance information, or the computational burden of tuning procedures. We propose a tuning-free and covariance-aware shrinkage framework that constructs shrinkage directions using covariance information to improve efficiency. We establish finite-sample risk bounds that yield an explicit risk-improving interval for the shrinkage size, making the procedure fully data-driven and tuning-free. When multiple source sets…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.30615.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.30615.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-30T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-06-30T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Tuning-Free Efficient Estimation for Multi-Source Data via Covariance-Aware Shrinkage" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wenbo Jing, Xi Chen, Yaqi Duan, Kaizheng Wang, Yichen Zhang"},"dateModified":"2026-06-30T00:00:00+02:00","datePublished":"2026-06-30T00:00:00+02:00","description":"Modern statistical learning problems often involve multiple related data sets, where learning efficiency on a target set can be improved by utilizing related source sets, while heterogeneity among the source sets may introduce bias. Existing approaches are limited by suboptimal performance in multi-source settings, insufficient use of covariance information, or the computational burden of tuning procedures. We propose a tuning-free and covariance-aware shrinkage framework that constructs shrinkage directions using covariance information to improve efficiency. We establish finite-sample risk bounds that yield an explicit risk-improving interval for the shrinkage size, making the procedure fully data-driven and tuning-free. When multiple source sets…","headline":"Tuning-Free Efficient Estimation for Multi-Source Data via Covariance-Aware Shrinkage","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.30615.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/06/30/2606.30615.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Tuning-Free Efficient Estimation for Multi-Source Data via Covariance-Aware Shrinkage</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Wenbo Jing, Xi Chen, Yaqi Duan, Kaizheng Wang, Yichen Zhang
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      30 Jun 2026
+    </div>
+  </div><div class="summary-box">This paper proposes a tuning-free and covariance-aware shrinkage framework for multi-source data, which can improve estimation efficiency and is applicable to general smooth M-estimation problems.</div><h3>Abstract</h3>
+  <p>Modern statistical learning problems often involve multiple related data sets, where learning efficiency on a target set can be improved by utilizing related source sets, while heterogeneity among the source sets may introduce bias. Existing approaches are limited by suboptimal performance in multi-source settings, insufficient use of covariance information, or the computational burden of tuning procedures. We propose a tuning-free and covariance-aware shrinkage framework that constructs shrinkage directions using covariance information to improve efficiency. We establish finite-sample risk bounds that yield an explicit risk-improving interval for the shrinkage size, making the procedure fully data-driven and tuning-free. When multiple source sets are available, we further propose a novel sequential algorithm that shrinks the estimator toward the sources one at a time according to their estimated risk reduction. The proposed algorithm asymptotically attains the oracle risk under mild conditions and is guaranteed to improve over the single-step shrinkage method in the literature. The framework is further extended to general smooth (M)-estimation problems via a local quadratic approximation. Numerical studies show substantial gains over competing methods, especially when the source data sets are highly heterogeneous.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.30615" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.30615" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
