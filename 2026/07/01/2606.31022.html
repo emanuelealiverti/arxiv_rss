@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Uncertainty Quantification for Ranked Choice Voting Polls</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian Uncertainty Quantification for Ranked Choice Voting Polls" />
+<meta name="author" content="Evan T. R. Rosenman, Jason Liang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ranked choice voting (RCV) is a popular alternative voting method in which voters are asked to list their favored candidates in preference order, rather than vote for a single candidate. When these ballots are tabulated, candidates are successively eliminated, and their votes are reallocated to each voter’s next-preferred choice. The process continues until a candidate commands a majority of the active ballots and is declared the winner. As RCV gains wider adoption, the method poses novel challenges for pollsters. Unlike plurality elections, the event that a candidate wins cannot be expressed in terms of a single population parameter. Hence, the…" />
+<meta name="twitter:description" property="og:description" content="Ranked choice voting (RCV) is a popular alternative voting method in which voters are asked to list their favored candidates in preference order, rather than vote for a single candidate. When these ballots are tabulated, candidates are successively eliminated, and their votes are reallocated to each voter’s next-preferred choice. The process continues until a candidate commands a majority of the active ballots and is declared the winner. As RCV gains wider adoption, the method poses novel challenges for pollsters. Unlike plurality elections, the event that a candidate wins cannot be expressed in terms of a single population parameter. Hence, the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/01/2606.31022.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/01/2606.31022.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian Uncertainty Quantification for Ranked Choice Voting Polls" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Evan T. R. Rosenman, Jason Liang"},"dateModified":"2026-07-01T00:00:00+02:00","datePublished":"2026-07-01T00:00:00+02:00","description":"Ranked choice voting (RCV) is a popular alternative voting method in which voters are asked to list their favored candidates in preference order, rather than vote for a single candidate. When these ballots are tabulated, candidates are successively eliminated, and their votes are reallocated to each voter’s next-preferred choice. The process continues until a candidate commands a majority of the active ballots and is declared the winner. As RCV gains wider adoption, the method poses novel challenges for pollsters. Unlike plurality elections, the event that a candidate wins cannot be expressed in terms of a single population parameter. Hence, the…","headline":"Bayesian Uncertainty Quantification for Ranked Choice Voting Polls","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/01/2606.31022.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/01/2606.31022.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian Uncertainty Quantification for Ranked Choice Voting Polls</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Evan T. R. Rosenman, Jason Liang
+      <span class="sep">&middot;</span>
+      stat.AP, stat.ME
+      <span class="sep">&middot;</span>
+      1 Jul 2026
+    </div>
+  </div><div class="summary-box">This paper proposes a Bayesian framework to quantify uncertainty in polls of ranked choice voting elections, addressing challenges in traditional frequentist uncertainty quantification.</div><h3>Abstract</h3>
+  <p>Ranked choice voting (RCV) is a popular alternative voting method in which voters are asked to list their favored candidates in preference order, rather than vote for a single candidate. When these ballots are tabulated, candidates are successively eliminated, and their votes are reallocated to each voter’s next-preferred choice. The process continues until a candidate commands a majority of the active ballots and is declared the winner. As RCV gains wider adoption, the method poses novel challenges for pollsters. Unlike plurality elections, the event that a candidate wins cannot be expressed in terms of a single population parameter. Hence, the basic concept of a margin-of-error is not straightforward to define. Moreover, a candidate’s ability to win may depend on both their support across the ballot and the order in which other candidates are eliminated. Existing measures of sampling uncertainty for polls of RCV elections do not clearly quantify these path-dependent outcomes. Here, we propose a simple, Bayesian framework to quantify uncertainty in polls of RCV elections. We cast the problem as one of estimating win probabilities for each leading candidate, and leverage a simple conjugacy relationship to estimate these probabilities conditional on the poll results. We include applied analyses involving two prominent ranked choice voting elections: the 2021 New York City Democratic mayoral primary, in which Eric Adams narrowly defeated Kathryn Garcia in the final round; and the 2022 special election to Alaska’s U.S. House seat, in which Mary Peltola was elected despite not being a Condorcet winner. Using the cast vote records from both elections, we demonstrate some challenges of traditional frequentist uncertainty quantification in RCV polls. We also demonstrate the utility of our approach using a poll of the NYC primary obtained from the polling firm Data for Progress.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.31022" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.31022" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Prior-informed conditional Gaussian graphical models: an application to protein interaction network reconstruction</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Prior-informed conditional Gaussian graphical models: an application to protein interaction network reconstruction" />
+<meta name="author" content="Alessia Mapelli, Michela Carlotta Massi, Gianmauro Cuccuru, Emanuele Di Angelantonio, Francesca Ieva" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Protein-protein interaction (PPI) networks, estimated from high-throughput omics data, foster biomarker discovery and precision medicine. Gaussian graphical models (GGMs) offer a principled reconstruction framework. Yet, existing applications face two limitations: they overlook the rich existing knowledge encoded in curated biological databases, and they assume a homogeneous network structure across all individuals, neglecting the influence of covariates or confounding factors on these interactions and preventing personalised representations. Even though these limitations have been addressed separately in previous work, no current approach resolves them simultaneously. We introduce a prior-informed conditional Gaussian graphical model that integrates database-derived interaction priors with covariate-dependent network modeling…" />
+<meta name="twitter:description" property="og:description" content="Protein-protein interaction (PPI) networks, estimated from high-throughput omics data, foster biomarker discovery and precision medicine. Gaussian graphical models (GGMs) offer a principled reconstruction framework. Yet, existing applications face two limitations: they overlook the rich existing knowledge encoded in curated biological databases, and they assume a homogeneous network structure across all individuals, neglecting the influence of covariates or confounding factors on these interactions and preventing personalised representations. Even though these limitations have been addressed separately in previous work, no current approach resolves them simultaneously. We introduce a prior-informed conditional Gaussian graphical model that integrates database-derived interaction priors with covariate-dependent network modeling…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/01/2606.31805.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/01/2606.31805.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Prior-informed conditional Gaussian graphical models: an application to protein interaction network reconstruction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alessia Mapelli, Michela Carlotta Massi, Gianmauro Cuccuru, Emanuele Di Angelantonio, Francesca Ieva"},"dateModified":"2026-07-01T00:00:00+02:00","datePublished":"2026-07-01T00:00:00+02:00","description":"Protein-protein interaction (PPI) networks, estimated from high-throughput omics data, foster biomarker discovery and precision medicine. Gaussian graphical models (GGMs) offer a principled reconstruction framework. Yet, existing applications face two limitations: they overlook the rich existing knowledge encoded in curated biological databases, and they assume a homogeneous network structure across all individuals, neglecting the influence of covariates or confounding factors on these interactions and preventing personalised representations. Even though these limitations have been addressed separately in previous work, no current approach resolves them simultaneously. We introduce a prior-informed conditional Gaussian graphical model that integrates database-derived interaction priors with covariate-dependent network modeling…","headline":"Prior-informed conditional Gaussian graphical models: an application to protein interaction network reconstruction","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/01/2606.31805.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/01/2606.31805.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Prior-informed conditional Gaussian graphical models: an application to protein interaction network reconstruction</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Alessia Mapelli, Michela Carlotta Massi, Gianmauro Cuccuru, Emanuele Di Angelantonio, Francesca Ieva
+      <span class="sep">&middot;</span>
+      stat.AP, stat.CO
+      <span class="sep">&middot;</span>
+      1 Jul 2026
+    </div>
+  </div><div class="summary-box">This paper introduces a prior-informed conditional Gaussian graphical model that integrates database-derived interaction priors with covariate-dependent network modeling for protein-protein interaction network reconstruction.</div><h3>Abstract</h3>
+  <p>Protein-protein interaction (PPI) networks, estimated from high-throughput omics data, foster biomarker discovery and precision medicine. Gaussian graphical models (GGMs) offer a principled reconstruction framework. Yet, existing applications face two limitations: they overlook the rich existing knowledge encoded in curated biological databases, and they assume a homogeneous network structure across all individuals, neglecting the influence of covariates or confounding factors on these interactions and preventing personalised representations. Even though these limitations have been addressed separately in previous work, no current approach resolves them simultaneously. We introduce a prior-informed conditional Gaussian graphical model that integrates database-derived interaction priors with covariate-dependent network modeling in a unified, scalable framework. The key methodological innovation is a structured, weighted penalty that selectively incorporates priors into population-level network estimation, while leaving context-specific perturbations entirely data-driven, as curated databases capture canonical interactions rather than disease-specific signals. Simulation studies demonstrate consistent and robust improvements in population-level network reconstruction across diverse settings, even when prior knowledge is imperfect. Applied to UK Biobank cardiometabolic proteomics (n = 49,129, p = 366 proteins), the method recovers T2D-associated network perturbations, identifying 34 network-central candidate biomarkers, several detectable only through their connectivity, not differential expression, and revealing six biologically coherent protein communities with distinct pathway enrichments spanning metabolic, cardiovascular, and cancer-related processes. Code is available at https://github.com/AlessiaMapelli/Prior-informed-conditional-GGMs.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.31805" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.31805" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
