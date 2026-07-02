@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Goal-oriented learning of stochastic differential equations using error bounds on path-space observables</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Goal-oriented learning of stochastic differential equations using error bounds on path-space observables" />
+<meta name="author" content="Joanna Zou, Han Cheng Lie, Youssef Marzouk" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Stochastic differential equations (SDEs), which serve as the governing equations for dynamical systems in a broad range of applications, can become cost-prohibitive for numerical simulation at scales necessary for quantifying key properties. Surrogate models of the drift function of an SDE, learned from data of the high-fidelity system, are routinely used to increase the efficiency of simulation and prediction of properties. However, standard choices of loss function for learning the surrogate model fail to provide error guarantees in certain path-dependent observables, such as transition times. This paper introduces an error bound for path-space observables and employs it as a novel…" />
+<meta name="twitter:description" property="og:description" content="Stochastic differential equations (SDEs), which serve as the governing equations for dynamical systems in a broad range of applications, can become cost-prohibitive for numerical simulation at scales necessary for quantifying key properties. Surrogate models of the drift function of an SDE, learned from data of the high-fidelity system, are routinely used to increase the efficiency of simulation and prediction of properties. However, standard choices of loss function for learning the surrogate model fail to provide error guarantees in certain path-dependent observables, such as transition times. This paper introduces an error bound for path-space observables and employs it as a novel…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/02/2603.20467.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/02/2603.20467.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Goal-oriented learning of stochastic differential equations using error bounds on path-space observables" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joanna Zou, Han Cheng Lie, Youssef Marzouk"},"dateModified":"2026-07-02T00:00:00+02:00","datePublished":"2026-07-02T00:00:00+02:00","description":"Stochastic differential equations (SDEs), which serve as the governing equations for dynamical systems in a broad range of applications, can become cost-prohibitive for numerical simulation at scales necessary for quantifying key properties. Surrogate models of the drift function of an SDE, learned from data of the high-fidelity system, are routinely used to increase the efficiency of simulation and prediction of properties. However, standard choices of loss function for learning the surrogate model fail to provide error guarantees in certain path-dependent observables, such as transition times. This paper introduces an error bound for path-space observables and employs it as a novel…","headline":"Goal-oriented learning of stochastic differential equations using error bounds on path-space observables","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/02/2603.20467.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/02/2603.20467.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Goal-oriented learning of stochastic differential equations using error bounds on path-space observables</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Joanna Zou, Han Cheng Lie, Youssef Marzouk
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      2 Jul 2026
+    </div>
+  </div><div class="summary-box">This paper introduces an error bound for path-space observables and employs it as a novel variational loss for the goal-oriented learning of the drift function of a stochastic differential equation, but it does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>Stochastic differential equations (SDEs), which serve as the governing equations for dynamical systems in a broad range of applications, can become cost-prohibitive for numerical simulation at scales necessary for quantifying key properties. Surrogate models of the drift function of an SDE, learned from data of the high-fidelity system, are routinely used to increase the efficiency of simulation and prediction of properties. However, standard choices of loss function for learning the surrogate model fail to provide error guarantees in certain path-dependent observables, such as transition times. This paper introduces an error bound for path-space observables and employs it as a novel variational loss for the goal-oriented learning of the drift function of a SDE. We show the error bound holds for a broad class of observables, including mean first hitting times on unbounded time domains. We derive an analytical gradient of the goal-oriented loss by leveraging the formula for Fr'echet derivatives of expected path functionals, which remains tractable for implementation in stochastic gradient descent schemes. We demonstrate that surrogate models of overdamped Langevin systems developed via goal-oriented learning achieve improved accuracy in predicting the statistics of a first hitting time observable and robustness to distributional shift in the data.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2603.20467" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2603.20467" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

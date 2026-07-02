@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Deep learning with missing data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Deep learning with missing data" />
+<meta name="author" content="Tianyi Ma, Tengyao Wang, Richard J. Samworth" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In the context of multivariate nonparametric regression with missing covariates, we propose Pattern Embedded Neural Networks (PENNs), which can be applied in conjunction with any existing imputation technique. In addition to a neural network trained on the imputed data, PENNs pass the vectors of observation indicators through a second neural network to provide a compact representation. The outputs are then combined in a third neural network to produce final predictions. Our main theoretical result exploits an assumption that the observation patterns can be partitioned into cells on which the Bayes regression function behaves similarly, and belongs to a compositional H&quot;older…" />
+<meta name="twitter:description" property="og:description" content="In the context of multivariate nonparametric regression with missing covariates, we propose Pattern Embedded Neural Networks (PENNs), which can be applied in conjunction with any existing imputation technique. In addition to a neural network trained on the imputed data, PENNs pass the vectors of observation indicators through a second neural network to provide a compact representation. The outputs are then combined in a third neural network to produce final predictions. Our main theoretical result exploits an assumption that the observation patterns can be partitioned into cells on which the Bayes regression function behaves similarly, and belongs to a compositional H&quot;older…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/02/2504.15388.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/02/2504.15388.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Deep learning with missing data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tianyi Ma, Tengyao Wang, Richard J. Samworth"},"dateModified":"2026-07-02T00:00:00+02:00","datePublished":"2026-07-02T00:00:00+02:00","description":"In the context of multivariate nonparametric regression with missing covariates, we propose Pattern Embedded Neural Networks (PENNs), which can be applied in conjunction with any existing imputation technique. In addition to a neural network trained on the imputed data, PENNs pass the vectors of observation indicators through a second neural network to provide a compact representation. The outputs are then combined in a third neural network to produce final predictions. Our main theoretical result exploits an assumption that the observation patterns can be partitioned into cells on which the Bayes regression function behaves similarly, and belongs to a compositional H&quot;older…","headline":"Deep learning with missing data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/02/2504.15388.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/02/2504.15388.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Deep learning with missing data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Tianyi Ma, Tengyao Wang, Richard J. Samworth
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML, stat.TH
+      <span class="sep">&middot;</span>
+      2 Jul 2026
+    </div>
+  </div><div class="summary-box">This paper proposes a method for handling missing data in multivariate nonparametric regression using Pattern Embedded Neural Networks, but it does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>In the context of multivariate nonparametric regression with missing covariates, we propose Pattern Embedded Neural Networks (PENNs), which can be applied in conjunction with any existing imputation technique. In addition to a neural network trained on the imputed data, PENNs pass the vectors of observation indicators through a second neural network to provide a compact representation. The outputs are then combined in a third neural network to produce final predictions. Our main theoretical result exploits an assumption that the observation patterns can be partitioned into cells on which the Bayes regression function behaves similarly, and belongs to a compositional H"older class. It provides a finite-sample excess risk bound that holds for an arbitrary missingness mechanism, and in combination with a complementary minimax lower bound, demonstrates that our PENN estimator attains in typical cases the minimax rate of convergence as if the cells of the partition were known in advance, up to a poly-logarithmic factor in the sample size. Numerical experiments on simulated, semi-synthetic and real data confirm that the PENN estimator consistently improves, often dramatically, on standard neural networks without pattern embedding. Code to reproduce our experiments, as well as a tutorial on how to apply our method, is publicly available.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2504.15388" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2504.15388" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
