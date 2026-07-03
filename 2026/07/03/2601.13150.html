@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Propensity Score Propagation: A General Framework for Design-Based Inference with Unknown Propensity Scores</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Propensity Score Propagation: A General Framework for Design-Based Inference with Unknown Propensity Scores" />
+<meta name="author" content="Siyu Heng, Yanxin Shen, Zijian Guo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Design-based inference, also known as randomization-based or finite-population inference, provides a principled framework for trustworthy statistical inference. It attributes randomness solely to the design mechanism, such as treatment assignment, survey sampling, or missingness, without imposing super-population distributional or modeling assumptions on the outcome data. From the seminal work of Fisher and Neyman to its recent resurgence, design-based inference has played a central role in causal inference, survey sampling, and missing data analysis. However, its use in many modern applications has been limited by a fundamental obstacle: existing design-based inference theory typically assumes that propensity scores (i.e., design probabilities) are known,…" />
+<meta name="twitter:description" property="og:description" content="Design-based inference, also known as randomization-based or finite-population inference, provides a principled framework for trustworthy statistical inference. It attributes randomness solely to the design mechanism, such as treatment assignment, survey sampling, or missingness, without imposing super-population distributional or modeling assumptions on the outcome data. From the seminal work of Fisher and Neyman to its recent resurgence, design-based inference has played a central role in causal inference, survey sampling, and missing data analysis. However, its use in many modern applications has been limited by a fundamental obstacle: existing design-based inference theory typically assumes that propensity scores (i.e., design probabilities) are known,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/03/2601.13150.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/03/2601.13150.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-03T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-03T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Propensity Score Propagation: A General Framework for Design-Based Inference with Unknown Propensity Scores" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Siyu Heng, Yanxin Shen, Zijian Guo"},"dateModified":"2026-07-03T00:00:00+02:00","datePublished":"2026-07-03T00:00:00+02:00","description":"Design-based inference, also known as randomization-based or finite-population inference, provides a principled framework for trustworthy statistical inference. It attributes randomness solely to the design mechanism, such as treatment assignment, survey sampling, or missingness, without imposing super-population distributional or modeling assumptions on the outcome data. From the seminal work of Fisher and Neyman to its recent resurgence, design-based inference has played a central role in causal inference, survey sampling, and missing data analysis. However, its use in many modern applications has been limited by a fundamental obstacle: existing design-based inference theory typically assumes that propensity scores (i.e., design probabilities) are known,…","headline":"Propensity Score Propagation: A General Framework for Design-Based Inference with Unknown Propensity Scores","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/03/2601.13150.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/03/2601.13150.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Propensity Score Propagation: A General Framework for Design-Based Inference with Unknown Propensity Scores</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Siyu Heng, Yanxin Shen, Zijian Guo
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      3 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper proposes a framework for design-based inference with unknown propensity scores, which is a different area of research from the statistician's core topics.</div><h3>Abstract</h3>
+  <p>Design-based inference, also known as randomization-based or finite-population inference, provides a principled framework for trustworthy statistical inference. It attributes randomness solely to the design mechanism, such as treatment assignment, survey sampling, or missingness, without imposing super-population distributional or modeling assumptions on the outcome data. From the seminal work of Fisher and Neyman to its recent resurgence, design-based inference has played a central role in causal inference, survey sampling, and missing data analysis. However, its use in many modern applications has been limited by a fundamental obstacle: existing design-based inference theory typically assumes that propensity scores (i.e., design probabilities) are known, whereas they are usually unknown in observational studies, real-world surveys, and missing data problems. We propose propensity score propagation, a general framework for valid design-based inference with unknown propensity scores. The framework uses a regeneration-and-union procedure to propagate uncertainty from propensity score estimation into downstream design-based inference, without introducing super-population assumptions about the outcomes. It accommodates both parametric and nonparametric propensity score settings, integrates seamlessly with existing design-based methods developed for known propensity scores, and applies broadly across design-based problems. Theoretical and simulation results show that the proposed framework achieves nominal coverage, even when existing approaches exhibit substantial under-coverage.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2601.13150" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2601.13150" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

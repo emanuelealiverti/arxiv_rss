@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Convergence fragility in probit Bayesian kernel machine regression implemented in the bkmr R package for binary-outcome environmental mixture analyses: a simulation study</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Convergence fragility in probit Bayesian kernel machine regression implemented in the bkmr R package for binary-outcome environmental mixture analyses: a simulation study" />
+<meta name="author" content="Akifumi Eguchi, Takayuki Kawashima, Tomotaka Momozaki, Tomoyuki Nakagawa" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Background. Bayesian kernel machine regression (BKMR) is widely used for exposure-mixture analyses with binary outcomes through a probit extension. Because a bkmr fit can complete without providing adequate effective posterior information, simulation studies should separate execution success from MCMC convergence diagnostics. Methods. We evaluated the public bkmr probit workflow using bkmr::SimData() for data generation, bkmr::kmbayes() for model fitting, and posterior for convergence diagnostics. The balanced generator used family = “binomial”, hfun = 2, beta.true = 0.5, ind = 1:2, and M = 4. SimData() generated the covariate as X = 3cos(z1) + 2rnorm(n). Four chains were initialized with chain-specific randomized…" />
+<meta name="twitter:description" property="og:description" content="Background. Bayesian kernel machine regression (BKMR) is widely used for exposure-mixture analyses with binary outcomes through a probit extension. Because a bkmr fit can complete without providing adequate effective posterior information, simulation studies should separate execution success from MCMC convergence diagnostics. Methods. We evaluated the public bkmr probit workflow using bkmr::SimData() for data generation, bkmr::kmbayes() for model fitting, and posterior for convergence diagnostics. The balanced generator used family = “binomial”, hfun = 2, beta.true = 0.5, ind = 1:2, and M = 4. SimData() generated the covariate as X = 3cos(z1) + 2rnorm(n). Four chains were initialized with chain-specific randomized…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/03/2607.02000.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/03/2607.02000.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-03T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-03T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Convergence fragility in probit Bayesian kernel machine regression implemented in the bkmr R package for binary-outcome environmental mixture analyses: a simulation study" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Akifumi Eguchi, Takayuki Kawashima, Tomotaka Momozaki, Tomoyuki Nakagawa"},"dateModified":"2026-07-03T00:00:00+02:00","datePublished":"2026-07-03T00:00:00+02:00","description":"Background. Bayesian kernel machine regression (BKMR) is widely used for exposure-mixture analyses with binary outcomes through a probit extension. Because a bkmr fit can complete without providing adequate effective posterior information, simulation studies should separate execution success from MCMC convergence diagnostics. Methods. We evaluated the public bkmr probit workflow using bkmr::SimData() for data generation, bkmr::kmbayes() for model fitting, and posterior for convergence diagnostics. The balanced generator used family = “binomial”, hfun = 2, beta.true = 0.5, ind = 1:2, and M = 4. SimData() generated the covariate as X = 3cos(z1) + 2rnorm(n). Four chains were initialized with chain-specific randomized…","headline":"Convergence fragility in probit Bayesian kernel machine regression implemented in the bkmr R package for binary-outcome environmental mixture analyses: a simulation study","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/03/2607.02000.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/03/2607.02000.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Convergence fragility in probit Bayesian kernel machine regression implemented in the bkmr R package for binary-outcome environmental mixture analyses: a simulation study</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Akifumi Eguchi, Takayuki Kawashima, Tomotaka Momozaki, Tomoyuki Nakagawa
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      3 Jul 2026
+    </div>
+  </div><div class="summary-box">This paper highlights the importance of convergence diagnostics in Bayesian kernel machine regression, specifically in the bkmr R package, and suggests that completion of fits should not be equated with convergence of MCMC draws.</div><h3>Abstract</h3>
+  <p>Background. Bayesian kernel machine regression (BKMR) is widely used for exposure-mixture analyses with binary outcomes through a probit extension. Because a bkmr fit can complete without providing adequate effective posterior information, simulation studies should separate execution success from MCMC convergence diagnostics. Methods. We evaluated the public bkmr probit workflow using bkmr::SimData() for data generation, bkmr::kmbayes() for model fitting, and posterior for convergence diagnostics. The balanced generator used family = “binomial”, hfun = 2, beta.true = 0.5, ind = 1:2, and M = 4. SimData() generated the covariate as X = 3<em>cos(z1) + 2</em>rnorm(n). Four chains were initialized with chain-specific randomized starting values generated reproducibly from the fixed initial-value base seed 20260621. These values affected only the initial state of the sampler and did not alter the BKMR model, default priors, or Metropolis-Hastings proposals. Results. Of 431 prespecified tasks, 430 returned fitted objects and one task had a numerical non-completion. Diagnostic adequacy was limited: rank-normalized R-hat = 400 in 85/431, tail-ESS &gt;= 400 in 44/431, and both ESS criteria in 44/431. The primary diagnostic criterion, R-hat at or below the 1.01 threshold with both bulk-ESS and tail-ESS &gt;= 400, was met in 30/431 prespecified tasks, corresponding to 30/430 completed fits. Conclusions. Completion of probit BKMR fits in bkmr should not be equated with convergence of the retained MCMC draws. Applied analyses should report the number of chains, warmup and retained iterations, rank-normalized R-hat, bulk-ESS, and tail-ESS rather than rely on a fixed iteration count or on fit completion alone.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.02000" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.02000" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
