@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sequential Correlations Change In-Context Learning: Effective Context Length and Architectural Mismatch</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Sequential Correlations Change In-Context Learning: Effective Context Length and Architectural Mismatch" />
+<meta name="author" content="Mary Letey, Yue M. Lu, Cengiz Pehlevan, Jacob Zavatone-Veth" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern sequence models have a striking capacity for in-context learning (ICL); they can perform new tasks based only on examples given in the prompt. Understanding how this ability emerges requires theory that captures important properties of natural data. Linear regression has served as a useful sandbox for ICL theory, but existing work has largely focused on prompts with independent examples. In this work, we extend this setting to sequentially correlated data, a basic feature of real sequences. We present a solvable model based on linear attention and test our predictions on realistic transformer architectures. We identify two distinct effects: First,…" />
+<meta name="twitter:description" property="og:description" content="Modern sequence models have a striking capacity for in-context learning (ICL); they can perform new tasks based only on examples given in the prompt. Understanding how this ability emerges requires theory that captures important properties of natural data. Linear regression has served as a useful sandbox for ICL theory, but existing work has largely focused on prompts with independent examples. In this work, we extend this setting to sequentially correlated data, a basic feature of real sequences. We present a solvable model based on linear attention and test our predictions on realistic transformer architectures. We identify two distinct effects: First,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/07/2607.03660.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/07/2607.03660.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-07T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-07T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sequential Correlations Change In-Context Learning: Effective Context Length and Architectural Mismatch" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mary Letey, Yue M. Lu, Cengiz Pehlevan, Jacob Zavatone-Veth"},"dateModified":"2026-07-07T00:00:00+02:00","datePublished":"2026-07-07T00:00:00+02:00","description":"Modern sequence models have a striking capacity for in-context learning (ICL); they can perform new tasks based only on examples given in the prompt. Understanding how this ability emerges requires theory that captures important properties of natural data. Linear regression has served as a useful sandbox for ICL theory, but existing work has largely focused on prompts with independent examples. In this work, we extend this setting to sequentially correlated data, a basic feature of real sequences. We present a solvable model based on linear attention and test our predictions on realistic transformer architectures. We identify two distinct effects: First,…","headline":"Sequential Correlations Change In-Context Learning: Effective Context Length and Architectural Mismatch","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/07/2607.03660.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/07/2607.03660.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Sequential Correlations Change In-Context Learning: Effective Context Length and Architectural Mismatch</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Mary Letey, Yue M. Lu, Cengiz Pehlevan, Jacob Zavatone-Veth
+      <span class="sep">&middot;</span>
+      stat.ML, stat.CO
+      <span class="sep">&middot;</span>
+      7 Jul 2026
+    </div>
+  </div><div class="summary-box">This paper explores the effects of sequential correlations on in-context learning in sequence models, but its focus on machine learning and deep learning architectures makes it less relevant to the researcher's interests in Bayesian statistics and computational methods.</div><h3>Abstract</h3>
+  <p>Modern sequence models have a striking capacity for in-context learning (ICL); they can perform new tasks based only on examples given in the prompt. Understanding how this ability emerges requires theory that captures important properties of natural data. Linear regression has served as a useful sandbox for ICL theory, but existing work has largely focused on prompts with independent examples. In this work, we extend this setting to sequentially correlated data, a basic feature of real sequences. We present a solvable model based on linear attention and test our predictions on realistic transformer architectures. We identify two distinct effects: First, when the query token is independent of the context, within-context correlations induce an effective context length: correlated prompts behave like shorter i.i.d. prompts. Second, when the query is also correlated with its context, test error is reduced, particularly for softmax attention when compared to linear attention. These results suggest that correlated prompts alter not only the effective sample size of in-context learning, but also which attention architectures are best matched to the task.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.03660" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.03660" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

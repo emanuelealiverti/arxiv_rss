@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dissecting Spectral Granger Causality through Partial Information Decomposition</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Dissecting Spectral Granger Causality through Partial Information Decomposition" />
+<meta name="author" content="Luca Faes, Gorana Mijatovic, Riccardo Pernice, Daniele Marinazzo, Sebastiano Stramaglia, Yuri Antonacci" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Granger causality (GC), a popular statistical method for the inference of directional influences between time series measured from a complex network, is sensitive to high-order (non-pairwise) interactions which fundamentally shape the collective network dynamics. This work introduces Partial Decomposition of Granger Causality (PDGC), a tool eliciting redundant and synergistic causal interactions in the pattern of information flow between the subsystems of physiological networks. The tool exploits the framework of partial information decomposition to dissect the multivariate GC from a set of driver random processes to a target process into unique effects carried exclusively by each driver, redundant effects carried identically…" />
+<meta name="twitter:description" property="og:description" content="Granger causality (GC), a popular statistical method for the inference of directional influences between time series measured from a complex network, is sensitive to high-order (non-pairwise) interactions which fundamentally shape the collective network dynamics. This work introduces Partial Decomposition of Granger Causality (PDGC), a tool eliciting redundant and synergistic causal interactions in the pattern of information flow between the subsystems of physiological networks. The tool exploits the framework of partial information decomposition to dissect the multivariate GC from a set of driver random processes to a target process into unique effects carried exclusively by each driver, redundant effects carried identically…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/07/2603.07634.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/07/2603.07634.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-07T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-07T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Dissecting Spectral Granger Causality through Partial Information Decomposition" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Luca Faes, Gorana Mijatovic, Riccardo Pernice, Daniele Marinazzo, Sebastiano Stramaglia, Yuri Antonacci"},"dateModified":"2026-07-07T00:00:00+02:00","datePublished":"2026-07-07T00:00:00+02:00","description":"Granger causality (GC), a popular statistical method for the inference of directional influences between time series measured from a complex network, is sensitive to high-order (non-pairwise) interactions which fundamentally shape the collective network dynamics. This work introduces Partial Decomposition of Granger Causality (PDGC), a tool eliciting redundant and synergistic causal interactions in the pattern of information flow between the subsystems of physiological networks. The tool exploits the framework of partial information decomposition to dissect the multivariate GC from a set of driver random processes to a target process into unique effects carried exclusively by each driver, redundant effects carried identically…","headline":"Dissecting Spectral Granger Causality through Partial Information Decomposition","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/07/2603.07634.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/07/2603.07634.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Dissecting Spectral Granger Causality through Partial Information Decomposition</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Luca Faes, Gorana Mijatovic, Riccardo Pernice, Daniele Marinazzo, Sebastiano Stramaglia, Yuri Antonacci
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      7 Jul 2026
+    </div>
+  </div><div class="summary-box">This paper introduces a new method, Partial Decomposition of Granger Causality (PDGC), to dissect high-order interactions in Granger causality analysis, but it does not directly advance the researcher's core topics in Bayesian methodology and computation.</div><h3>Abstract</h3>
+  <p>Granger causality (GC), a popular statistical method for the inference of directional influences between time series measured from a complex network, is sensitive to high-order (non-pairwise) interactions which fundamentally shape the collective network dynamics. This work introduces Partial Decomposition of Granger Causality (PDGC), a tool eliciting redundant and synergistic causal interactions in the pattern of information flow between the subsystems of physiological networks. The tool exploits the framework of partial information decomposition to dissect the multivariate GC from a set of driver random processes to a target process into unique effects carried exclusively by each driver, redundant effects carried identically by more drivers, and synergistic effects carried jointly by some drivers but not by any of them individually. Computation is based on multivariate state-space models expanded in the frequency domain to assess PDGC both in specific bands of physiological interest and in the time domain after whole-band integration. The validation on benchmark simulations demonstrates that the measures of unique, redundant, and synergistic GC reflect the underlying causal mechanisms and are computationally reliable. The application to arterial pressure, respiration, cerebral blood velocity and heart period variability reveals striking differences in the response to postural stress of patients prone to neurally-mediated syncope compared to healthy controls. The extraction of high-order causality patterns from the spectral GC favors dissecting the mechanisms of causal influence underlying multivariate interactions among oscillatory processes in many data-driven applications of network science.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2603.07634" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2603.07634" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
