@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Do Stationarity Transformations Actually Improve Time Series Forecasts? A Controlled Experimental Evaluation</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Do Stationarity Transformations Actually Improve Time Series Forecasts? A Controlled Experimental Evaluation" />
+<meta name="author" content="Bhanu Suraj Malla, Yuqing Hu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Stationarity transformations, such as differencing, are a common preprocessing step in forecasting, motivated by the idea that modifying a series to achieve stationarity improves accuracy. Whether this is true, and for which processes, has rarely been evaluated in controlled experiments. We study the decision to transform as the object of inquiry. We cross eighteen synthetic data-generating processes, most of them stochastic-trend processes spanning exact and near unit roots, fractional integration, seasonal unit roots, structural breaks, and heteroscedasticity, with ten transformations, five models, and three horizons, replicated by Monte Carlo, for 35,099 evaluations. Each forecast is inverted to the original scale,…" />
+<meta name="twitter:description" property="og:description" content="Stationarity transformations, such as differencing, are a common preprocessing step in forecasting, motivated by the idea that modifying a series to achieve stationarity improves accuracy. Whether this is true, and for which processes, has rarely been evaluated in controlled experiments. We study the decision to transform as the object of inquiry. We cross eighteen synthetic data-generating processes, most of them stochastic-trend processes spanning exact and near unit roots, fractional integration, seasonal unit roots, structural breaks, and heteroscedasticity, with ten transformations, five models, and three horizons, replicated by Monte Carlo, for 35,099 evaluations. Each forecast is inverted to the original scale,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/08/2605.17689.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/08/2605.17689.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-08T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-08T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Do Stationarity Transformations Actually Improve Time Series Forecasts? A Controlled Experimental Evaluation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Bhanu Suraj Malla, Yuqing Hu"},"dateModified":"2026-07-08T00:00:00+02:00","datePublished":"2026-07-08T00:00:00+02:00","description":"Stationarity transformations, such as differencing, are a common preprocessing step in forecasting, motivated by the idea that modifying a series to achieve stationarity improves accuracy. Whether this is true, and for which processes, has rarely been evaluated in controlled experiments. We study the decision to transform as the object of inquiry. We cross eighteen synthetic data-generating processes, most of them stochastic-trend processes spanning exact and near unit roots, fractional integration, seasonal unit roots, structural breaks, and heteroscedasticity, with ten transformations, five models, and three horizons, replicated by Monte Carlo, for 35,099 evaluations. Each forecast is inverted to the original scale,…","headline":"Do Stationarity Transformations Actually Improve Time Series Forecasts? A Controlled Experimental Evaluation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/08/2605.17689.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/08/2605.17689.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Do Stationarity Transformations Actually Improve Time Series Forecasts? A Controlled Experimental Evaluation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Bhanu Suraj Malla, Yuqing Hu
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      8 Jul 2026
+    </div>
+  </div><div class="summary-box">This paper conducts a controlled experimental evaluation of the effectiveness of stationarity transformations in improving time series forecasts, finding that indiscriminate differencing can degrade accuracy and that choosing the transformation by out-of-sample validation yields better results.</div><h3>Abstract</h3>
+  <p>Stationarity transformations, such as differencing, are a common preprocessing step in forecasting, motivated by the idea that modifying a series to achieve stationarity improves accuracy. Whether this is true, and for which processes, has rarely been evaluated in controlled experiments. We study the decision to transform as the object of inquiry. We cross eighteen synthetic data-generating processes, most of them stochastic-trend processes spanning exact and near unit roots, fractional integration, seasonal unit roots, structural breaks, and heteroscedasticity, with ten transformations, five models, and three horizons, replicated by Monte Carlo, for 35,099 evaluations. Each forecast is inverted to the original scale, with the differencing inverse anchored at the forecast origin, and scored by the mean absolute scaled error. Signal-preserving transforms, namely deterministic detrending and seasonal differencing matched to series structure, improve accuracy, whereas indiscriminate differencing degrades it. A mediation analysis shows that differencing achieves trend stationarity, but trend stationarity is only weakly associated with accuracy, and transforms differ in their effects on predictable structure. Choosing the transformation by out-of-sample validation yields lower regret than unit-root pretesting or any fixed rule, with blanket differencing performing the worst. The findings are confirmed by real-world validation on nine series from two domains.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.17689" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.17689" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
