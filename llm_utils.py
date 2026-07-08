@@ -30,7 +30,7 @@ Tags: {', '.join(article['tags'])}
 
 Return ONLY a valid JSON object with exactly these two fields:
 - "score": relevance from 1.0 to 10.0 (float). Be discriminating: reserve 8-10 for papers directly advancing the researcher's core topics, 5-7 for related work, 1-4 for tangential or irrelevant.
-- "summary": one sentence describing the paper's main contribution.
+- "summary": ONE short sentence (max ~20 words) stating the paper's main contribution or method, in plain factual terms. Do NOT mention the researcher, their interests, relevance, or why the paper matters — just say what the paper does.
 
 JSON:"""
 
