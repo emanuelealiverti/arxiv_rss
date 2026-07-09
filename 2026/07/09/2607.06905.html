@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning Item Embeddings and Hyperparameters for IRT Calibration via Monte Carlo EM</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Learning Item Embeddings and Hyperparameters for IRT Calibration via Monte Carlo EM" />
+<meta name="author" content="James Sharpnack, Kai-Ling Lo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="High-stakes computerized adaptive tests (CATs) must continually calibrate new items in their item bank. When an item is new, few responses are available, so item parameter estimates – and thus test scores – are poor. Item features and explanatory item response theory (IRT) models mitigate this by folding item content into calibration. Neural IRT models, whose item parameters are neural-net outputs, are powerful, but tuning hyperparameters and architectures in real time while a CAT is scoring is impractical and threatens validity. We propose a pre-launch step that fits a neural net to produce low-dimensional item embeddings, so the production system…" />
+<meta name="twitter:description" property="og:description" content="High-stakes computerized adaptive tests (CATs) must continually calibrate new items in their item bank. When an item is new, few responses are available, so item parameter estimates – and thus test scores – are poor. Item features and explanatory item response theory (IRT) models mitigate this by folding item content into calibration. Neural IRT models, whose item parameters are neural-net outputs, are powerful, but tuning hyperparameters and architectures in real time while a CAT is scoring is impractical and threatens validity. We propose a pre-launch step that fits a neural net to produce low-dimensional item embeddings, so the production system…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.06905.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.06905.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Learning Item Embeddings and Hyperparameters for IRT Calibration via Monte Carlo EM" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"James Sharpnack, Kai-Ling Lo"},"dateModified":"2026-07-09T00:00:00+02:00","datePublished":"2026-07-09T00:00:00+02:00","description":"High-stakes computerized adaptive tests (CATs) must continually calibrate new items in their item bank. When an item is new, few responses are available, so item parameter estimates – and thus test scores – are poor. Item features and explanatory item response theory (IRT) models mitigate this by folding item content into calibration. Neural IRT models, whose item parameters are neural-net outputs, are powerful, but tuning hyperparameters and architectures in real time while a CAT is scoring is impractical and threatens validity. We propose a pre-launch step that fits a neural net to produce low-dimensional item embeddings, so the production system…","headline":"Learning Item Embeddings and Hyperparameters for IRT Calibration via Monte Carlo EM","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.06905.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.06905.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Learning Item Embeddings and Hyperparameters for IRT Calibration via Monte Carlo EM</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      James Sharpnack, Kai-Ling Lo
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      9 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper proposes a neural IRT model with item embeddings for CAT calibration via Monte Carlo EM.</div><h3>Abstract</h3>
+  <p>High-stakes computerized adaptive tests (CATs) must continually calibrate new items in their item bank. When an item is new, few responses are available, so item parameter estimates – and thus test scores – are poor. Item features and explanatory item response theory (IRT) models mitigate this by folding item content into calibration. Neural IRT models, whose item parameters are neural-net outputs, are powerful, but tuning hyperparameters and architectures in real time while a CAT is scoring is impractical and threatens validity. We propose a pre-launch step that fits a neural net to produce low-dimensional item embeddings, so the production system can use a simple linear explanatory IRT model on top of them. We use a neural parameterization of the 3-parameter logistic (3PL) model in which a feature network maps each item’s content features to a representation $h_j = z(x_j) \in \mathbb{R}^d$, from which the discrimination and difficulty $(a,b)$ follow generalized linear forms; the guessing parameter $c$ is fixed to a global constant to avoid identifiability issues. The feature network and latent abilities $\theta$ are fit jointly via Monte Carlo Expectation-Maximization (MCEM), with no separate ability-estimation or pre-calibration stage. Using an item-split protocol that holds out entire items to simulate feature-only evaluation, we apply this to two Duolingo English Test practice task types – yes/no vocabulary and vocabulary-in-context – searching over feature sets, architectures, and dimensions $d$. A shallow two-layer ReLU network with $d=6$ and hand-engineered scalar features matches or beats larger architectures on held-out items for both. This is a first step toward a compact, content-derived item embedding for the Scalable Parametric Item Calibration Engine (SPICE), the fully Bayesian engine at the core of the S2A3 adaptive-testing system.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.06905" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.06905" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

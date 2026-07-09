@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Pic2Spec: Generative Modeling Reconstructs Single Cell Raman Fingerprints from Brightfield Images</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Pic2Spec: Generative Modeling Reconstructs Single Cell Raman Fingerprints from Brightfield Images" />
+<meta name="author" content="Srilakshmi Premachandran, Amit Kumar Bhuyan, Loza F. Tadesse" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Single-cell molecular characterization remains a bottleneck in scalable biological analysis because of labeling requirements, limited multiplexing, and reagents that perturb physiology. Raman spectroscopy addresses these limits by providing chemically specific, label-free vibrational fingerprints, but long acquisition times and specialized instruments restrict high-throughput use. Here, we overcome this barrier by showing that spectral fingerprints can be reconstructed from brightfield microscopy using generative modeling. We introduce Pic2Spec, a framework that learns a shared latent biochemical representation linking image morphology to vibrational spectral structure, enabling virtual Raman spectroscopy without hardware. We validate Pic2Spec across mammalian and bacterial cells, generating high-fidelity spectra that reproduce…" />
+<meta name="twitter:description" property="og:description" content="Single-cell molecular characterization remains a bottleneck in scalable biological analysis because of labeling requirements, limited multiplexing, and reagents that perturb physiology. Raman spectroscopy addresses these limits by providing chemically specific, label-free vibrational fingerprints, but long acquisition times and specialized instruments restrict high-throughput use. Here, we overcome this barrier by showing that spectral fingerprints can be reconstructed from brightfield microscopy using generative modeling. We introduce Pic2Spec, a framework that learns a shared latent biochemical representation linking image morphology to vibrational spectral structure, enabling virtual Raman spectroscopy without hardware. We validate Pic2Spec across mammalian and bacterial cells, generating high-fidelity spectra that reproduce…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07651.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07651.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Pic2Spec: Generative Modeling Reconstructs Single Cell Raman Fingerprints from Brightfield Images" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Srilakshmi Premachandran, Amit Kumar Bhuyan, Loza F. Tadesse"},"dateModified":"2026-07-09T00:00:00+02:00","datePublished":"2026-07-09T00:00:00+02:00","description":"Single-cell molecular characterization remains a bottleneck in scalable biological analysis because of labeling requirements, limited multiplexing, and reagents that perturb physiology. Raman spectroscopy addresses these limits by providing chemically specific, label-free vibrational fingerprints, but long acquisition times and specialized instruments restrict high-throughput use. Here, we overcome this barrier by showing that spectral fingerprints can be reconstructed from brightfield microscopy using generative modeling. We introduce Pic2Spec, a framework that learns a shared latent biochemical representation linking image morphology to vibrational spectral structure, enabling virtual Raman spectroscopy without hardware. We validate Pic2Spec across mammalian and bacterial cells, generating high-fidelity spectra that reproduce…","headline":"Pic2Spec: Generative Modeling Reconstructs Single Cell Raman Fingerprints from Brightfield Images","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07651.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07651.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Pic2Spec: Generative Modeling Reconstructs Single Cell Raman Fingerprints from Brightfield Images</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Srilakshmi Premachandran, Amit Kumar Bhuyan, Loza F. Tadesse
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      9 Jul 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Single-cell molecular characterization remains a bottleneck in scalable biological analysis because of labeling requirements, limited multiplexing, and reagents that perturb physiology. Raman spectroscopy addresses these limits by providing chemically specific, label-free vibrational fingerprints, but long acquisition times and specialized instruments restrict high-throughput use. Here, we overcome this barrier by showing that spectral fingerprints can be reconstructed from brightfield microscopy using generative modeling. We introduce Pic2Spec, a framework that learns a shared latent biochemical representation linking image morphology to vibrational spectral structure, enabling virtual Raman spectroscopy without hardware. We validate Pic2Spec across mammalian and bacterial cells, generating high-fidelity spectra that reproduce measured Raman fingerprints with 98% cosine similarity and Pearson correlations of ~95%, while preserving biochemical peaks and population distributions. Beyond spectral similarity, Pic2Spec provides molecular-level resolution in bacterial systems: generated spectra discriminate mutation-driven transgenic states and predict GFP expression with accuracy approaching true Raman measurements, outperforming conventional image analysis by 20%. These findings establish Pic2Spec as a first demonstration of chemically informative virtual molecular fingerprinting from brightfield images, complementing slow, hardware-intensive spectroscopy with computational inference. By redefining microscopy as an inference-enabled molecular profiling platform, Pic2Spec democratizes label-free biochemical phenotyping and overcomes the hardware and time constraints that have confined spectroscopy to specialized laboratories. This enables high-throughput molecular analysis for clinical diagnostics, screening, and monitoring at the scale and accessibility of standard microscopy.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.07651" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.07651" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

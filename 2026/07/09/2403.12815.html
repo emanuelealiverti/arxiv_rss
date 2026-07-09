@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Unified Framework for Rerandomization using Quadratic Forms</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Unified Framework for Rerandomization using Quadratic Forms" />
+<meta name="author" content="Kyle Schindl, Zach Branson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When designing a randomized experiment, one way to ensure treatment and control groups exhibit similar covariate distributions is to randomize treatment until some prespecified level of covariate balance is satisfied; this strategy is known as rerandomization. Most rerandomization methods utilize balance metrics based on a quadratic form $\mathbf{v}^T \mathbf{A} \mathbf{v}$, where $\mathbf{v}$ is a vector of covariate mean differences and $\mathbf{A}$ is a positive semi-definite matrix. In this work, we derive general results for treatment-versus-control rerandomization schemes that employ quadratic forms for covariate balance. In addition to allowing researchers to quickly derive properties of rerandomization schemes not previously considered, our…" />
+<meta name="twitter:description" property="og:description" content="When designing a randomized experiment, one way to ensure treatment and control groups exhibit similar covariate distributions is to randomize treatment until some prespecified level of covariate balance is satisfied; this strategy is known as rerandomization. Most rerandomization methods utilize balance metrics based on a quadratic form $\mathbf{v}^T \mathbf{A} \mathbf{v}$, where $\mathbf{v}$ is a vector of covariate mean differences and $\mathbf{A}$ is a positive semi-definite matrix. In this work, we derive general results for treatment-versus-control rerandomization schemes that employ quadratic forms for covariate balance. In addition to allowing researchers to quickly derive properties of rerandomization schemes not previously considered, our…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2403.12815.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2403.12815.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Unified Framework for Rerandomization using Quadratic Forms" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kyle Schindl, Zach Branson"},"dateModified":"2026-07-09T00:00:00+02:00","datePublished":"2026-07-09T00:00:00+02:00","description":"When designing a randomized experiment, one way to ensure treatment and control groups exhibit similar covariate distributions is to randomize treatment until some prespecified level of covariate balance is satisfied; this strategy is known as rerandomization. Most rerandomization methods utilize balance metrics based on a quadratic form $\\mathbf{v}^T \\mathbf{A} \\mathbf{v}$, where $\\mathbf{v}$ is a vector of covariate mean differences and $\\mathbf{A}$ is a positive semi-definite matrix. In this work, we derive general results for treatment-versus-control rerandomization schemes that employ quadratic forms for covariate balance. In addition to allowing researchers to quickly derive properties of rerandomization schemes not previously considered, our…","headline":"A Unified Framework for Rerandomization using Quadratic Forms","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2403.12815.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2403.12815.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Unified Framework for Rerandomization using Quadratic Forms</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Kyle Schindl, Zach Branson
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      9 Jul 2026
+    </div>
+  </div><div class="summary-box">Derives general results for treatment-versus-control rerandomization schemes using quadratic forms.</div><h3>Abstract</h3>
+  <p>When designing a randomized experiment, one way to ensure treatment and control groups exhibit similar covariate distributions is to randomize treatment until some prespecified level of covariate balance is satisfied; this strategy is known as rerandomization. Most rerandomization methods utilize balance metrics based on a quadratic form $\mathbf{v}^T \mathbf{A} \mathbf{v}$, where $\mathbf{v}$ is a vector of covariate mean differences and $\mathbf{A}$ is a positive semi-definite matrix. In this work, we derive general results for treatment-versus-control rerandomization schemes that employ quadratic forms for covariate balance. In addition to allowing researchers to quickly derive properties of rerandomization schemes not previously considered, our theoretical results provide guidance on how to choose $\mathbf{A}$ in practice. We find the Mahalanobis and Euclidean distances optimize different measures of covariate balance. Furthermore, we establish how the covariates’ eigenstructure and their relationship to the outcomes dictate which matrix $\mathbf{A}$ yields the most precise difference-in-means estimator for the average treatment effect. We find the Euclidean distance is minimax optimal, in the sense that the difference-in-means estimator’s precision is never too far from the optimal choice. We verify our theoretical results via simulation and a real data application, and demonstrate how the choice of $\mathbf{A}$ impacts the variance reduction of rerandomized experiments.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2403.12815" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2403.12815" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

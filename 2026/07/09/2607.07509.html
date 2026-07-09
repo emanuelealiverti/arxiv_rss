@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adjusting for Outcome Reporting Bias in Meta-analysis: A Multiple Imputation Approach</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Adjusting for Outcome Reporting Bias in Meta-analysis: A Multiple Imputation Approach" />
+<meta name="author" content="Cora Burgwinkel, Saverio Fontana, Leonhard Held" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Background: Outcome reporting bias (ORB) occurs when study outcomes are selectively reported based on their results. ORB potentially undermines the credibility and validity of meta-analyses and contributes to research waste by distorting overall treatment effects. ORB can be viewed as a missing data problem in which unreported study outcomes introduce bias. Despite the serious implications ORB poses, it remains an underrecognized issue, with only a few adjustment methods available. Methods: We propose an approach that addresses unreported study outcomes in meta-analyses through multiple imputation for univariate and multivariate meta-analysis. To assess the impact of ORB in meta-analyses, we apply our…" />
+<meta name="twitter:description" property="og:description" content="Background: Outcome reporting bias (ORB) occurs when study outcomes are selectively reported based on their results. ORB potentially undermines the credibility and validity of meta-analyses and contributes to research waste by distorting overall treatment effects. ORB can be viewed as a missing data problem in which unreported study outcomes introduce bias. Despite the serious implications ORB poses, it remains an underrecognized issue, with only a few adjustment methods available. Methods: We propose an approach that addresses unreported study outcomes in meta-analyses through multiple imputation for univariate and multivariate meta-analysis. To assess the impact of ORB in meta-analyses, we apply our…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07509.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07509.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Adjusting for Outcome Reporting Bias in Meta-analysis: A Multiple Imputation Approach" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Cora Burgwinkel, Saverio Fontana, Leonhard Held"},"dateModified":"2026-07-09T00:00:00+02:00","datePublished":"2026-07-09T00:00:00+02:00","description":"Background: Outcome reporting bias (ORB) occurs when study outcomes are selectively reported based on their results. ORB potentially undermines the credibility and validity of meta-analyses and contributes to research waste by distorting overall treatment effects. ORB can be viewed as a missing data problem in which unreported study outcomes introduce bias. Despite the serious implications ORB poses, it remains an underrecognized issue, with only a few adjustment methods available. Methods: We propose an approach that addresses unreported study outcomes in meta-analyses through multiple imputation for univariate and multivariate meta-analysis. To assess the impact of ORB in meta-analyses, we apply our…","headline":"Adjusting for Outcome Reporting Bias in Meta-analysis: A Multiple Imputation Approach","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07509.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07509.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Adjusting for Outcome Reporting Bias in Meta-analysis: A Multiple Imputation Approach</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Cora Burgwinkel, Saverio Fontana, Leonhard Held
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      9 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper proposes a multiple imputation approach to adjust for outcome reporting bias in meta-analysis.</div><h3>Abstract</h3>
+  <p>Background: Outcome reporting bias (ORB) occurs when study outcomes are selectively reported based on their results. ORB potentially undermines the credibility and validity of meta-analyses and contributes to research waste by distorting overall treatment effects. ORB can be viewed as a missing data problem in which unreported study outcomes introduce bias. Despite the serious implications ORB poses, it remains an underrecognized issue, with only a few adjustment methods available. Methods: We propose an approach that addresses unreported study outcomes in meta-analyses through multiple imputation for univariate and multivariate meta-analysis. To assess the impact of ORB in meta-analyses, we apply our proposed methodology to real clinical data affected by ORB, and conduct a simulation study to evaluate the method’s performance under a range of scenarios. Results: The proposed method provides bias-adjusted estimates under assumed selective non-reporting mechanisms. In the application to clinical data, ORB-adjusted estimates were systematically shifted towards less extreme treatment effects compared with naive analyses, highlighting the potential magnitude of ORB in practice. The simulation study shows that the extent of adjustment depends on the assumed selection mechanism and the degree of heterogeneity, with stronger selection leading to larger adjustment. Conclusions: Imputing unreported study outcomes provides a promising approach to address ORB in meta-analyses. The multivariate approach extends ORB adjustment to jointly model correlated outcomes, allowing borrowing of strength across outcomes. Overall, we propose a practical and flexible approach for evaluating the sensitivity of univariate and multivariate meta-analytic conclusions to ORB.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.07509" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.07509" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

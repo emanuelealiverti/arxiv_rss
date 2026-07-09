@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Which Regularized Propensity-Score and Doubly Robust Methods Are Best Calibrated When Exposures or Outcomes Are Rare? A Plasmode Study of Proxy-Based Confounding Adjustment</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Which Regularized Propensity-Score and Doubly Robust Methods Are Best Calibrated When Exposures or Outcomes Are Rare? A Plasmode Study of Proxy-Based Confounding Adjustment" />
+<meta name="author" content="M. Ehsan Karim, Wanqing Hu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Purpose. Confounding adjustment in health-care database studies screens large proxy libraries where events per variable are low, straining standard propensity score (PS) methods, and many regularized variable-selection strategies exist (outcome-adaptive LASSO [OAL], group LASSO/GLiDeR, highly adaptive LASSO [HAL]). Yet few comparisons have varied exposure prevalence within such a selection menu, and none pairs it with doubly robust estimation, compute accounting, and a null-RD truth anchor. Methods. We conducted a plasmode simulation anchored on National Health and Nutrition Examination Survey data (2013-2018; 25 investigator-specified covariates, 142 prescription-derived proxies), comparing ten pipelines combining these strategies with inverse probability of treatment weighting (IPTW)…" />
+<meta name="twitter:description" property="og:description" content="Purpose. Confounding adjustment in health-care database studies screens large proxy libraries where events per variable are low, straining standard propensity score (PS) methods, and many regularized variable-selection strategies exist (outcome-adaptive LASSO [OAL], group LASSO/GLiDeR, highly adaptive LASSO [HAL]). Yet few comparisons have varied exposure prevalence within such a selection menu, and none pairs it with doubly robust estimation, compute accounting, and a null-RD truth anchor. Methods. We conducted a plasmode simulation anchored on National Health and Nutrition Examination Survey data (2013-2018; 25 investigator-specified covariates, 142 prescription-derived proxies), comparing ten pipelines combining these strategies with inverse probability of treatment weighting (IPTW)…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07065.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07065.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Which Regularized Propensity-Score and Doubly Robust Methods Are Best Calibrated When Exposures or Outcomes Are Rare? A Plasmode Study of Proxy-Based Confounding Adjustment" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Ehsan Karim, Wanqing Hu"},"dateModified":"2026-07-09T00:00:00+02:00","datePublished":"2026-07-09T00:00:00+02:00","description":"Purpose. Confounding adjustment in health-care database studies screens large proxy libraries where events per variable are low, straining standard propensity score (PS) methods, and many regularized variable-selection strategies exist (outcome-adaptive LASSO [OAL], group LASSO/GLiDeR, highly adaptive LASSO [HAL]). Yet few comparisons have varied exposure prevalence within such a selection menu, and none pairs it with doubly robust estimation, compute accounting, and a null-RD truth anchor. Methods. We conducted a plasmode simulation anchored on National Health and Nutrition Examination Survey data (2013-2018; 25 investigator-specified covariates, 142 prescription-derived proxies), comparing ten pipelines combining these strategies with inverse probability of treatment weighting (IPTW)…","headline":"Which Regularized Propensity-Score and Doubly Robust Methods Are Best Calibrated When Exposures or Outcomes Are Rare? A Plasmode Study of Proxy-Based Confounding Adjustment","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07065.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2607.07065.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Which Regularized Propensity-Score and Doubly Robust Methods Are Best Calibrated When Exposures or Outcomes Are Rare? A Plasmode Study of Proxy-Based Confounding Adjustment</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      M. Ehsan Karim, Wanqing Hu
+      <span class="sep">&middot;</span>
+      stat.AP, stat.CO, stat.ME
+      <span class="sep">&middot;</span>
+      9 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper compares the performance of various propensity-score and doubly robust methods under rare exposure and outcome scenarios.</div><h3>Abstract</h3>
+  <p>Purpose. Confounding adjustment in health-care database studies screens large proxy libraries where events per variable are low, straining standard propensity score (PS) methods, and many regularized variable-selection strategies exist (outcome-adaptive LASSO [OAL], group LASSO/GLiDeR, highly adaptive LASSO [HAL]). Yet few comparisons have varied exposure prevalence within such a selection menu, and none pairs it with doubly robust estimation, compute accounting, and a null-RD truth anchor. Methods. We conducted a plasmode simulation anchored on National Health and Nutrition Examination Survey data (2013-2018; 25 investigator-specified covariates, 142 prescription-derived proxies), comparing ten pipelines combining these strategies with inverse probability of treatment weighting (IPTW) and targeted maximum likelihood estimation (TMLE). Three scenarios were evaluated under a known null (true risk difference, RD = 0): frequent, rare-exposure, and rare-outcome. We report bias, standard error (SE), relative error, 95% coverage, and runtime. Results. HAL (G-Computation) had near-zero bias but highly concentrated estimates, giving near-unity coverage and large relative error (106-186%). OAL (IPTW), GLiDeR, and HAL (TMLE) were best calibrated, whereas the regularized-LASSO TMLE pipelines under-covered modestly (91-93%) in the rare scenarios. Under rare exposure, LASSO-IPTW had the largest bias and inflated SE and over-covered (conservatively), problems that TMLE removed. On real data, methods agreed (RD approximately 0.07-0.085). Runtimes spanned 16 h. Conclusions. Under a null benchmark, pairing outcome-aware selection (OAL, GLiDeR) or doubly robust estimation (TMLE) with regularized models best balanced bias, calibration, and robustness to rarity. The rare-exposure arm exposed the largest gaps; method choice should weigh the prioritized metric against compute.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.07065" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.07065" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Model-robust standardization in stepped wedge cluster randomized trials</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Model-robust standardization in stepped wedge cluster randomized trials" />
+<meta name="author" content="Xi Fang, Xueqi Wang, Patrick J. Heagerty, Bingkai Wang, Fan Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Stepped-wedge cluster-randomized trials (SW-CRTs) are widely used in healthcare and implementation science, enabling all clusters to receive the intervention through a staggered rollout. Traditional model-based methods, including generalized estimating equations and mixed models, yield estimates that depend on implicit weighting schemes and parametric assumptions, and therefore may target ambiguous estimands under model misspecification. In this article, we propose a model-robust standardization framework for SW-CRTs that generalizes existing methods from parallel-arm CRTs to address informative sizes. We define causal estimands including horizontal-individual, horizontal-cluster, vertical-individual, and vertical-cluster average treatment effects under a super population framework and introduce a simple procedure that standardizes…" />
+<meta name="twitter:description" property="og:description" content="Stepped-wedge cluster-randomized trials (SW-CRTs) are widely used in healthcare and implementation science, enabling all clusters to receive the intervention through a staggered rollout. Traditional model-based methods, including generalized estimating equations and mixed models, yield estimates that depend on implicit weighting schemes and parametric assumptions, and therefore may target ambiguous estimands under model misspecification. In this article, we propose a model-robust standardization framework for SW-CRTs that generalizes existing methods from parallel-arm CRTs to address informative sizes. We define causal estimands including horizontal-individual, horizontal-cluster, vertical-individual, and vertical-cluster average treatment effects under a super population framework and introduce a simple procedure that standardizes…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2507.17190.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2507.17190.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Model-robust standardization in stepped wedge cluster randomized trials" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xi Fang, Xueqi Wang, Patrick J. Heagerty, Bingkai Wang, Fan Li"},"dateModified":"2026-07-09T00:00:00+02:00","datePublished":"2026-07-09T00:00:00+02:00","description":"Stepped-wedge cluster-randomized trials (SW-CRTs) are widely used in healthcare and implementation science, enabling all clusters to receive the intervention through a staggered rollout. Traditional model-based methods, including generalized estimating equations and mixed models, yield estimates that depend on implicit weighting schemes and parametric assumptions, and therefore may target ambiguous estimands under model misspecification. In this article, we propose a model-robust standardization framework for SW-CRTs that generalizes existing methods from parallel-arm CRTs to address informative sizes. We define causal estimands including horizontal-individual, horizontal-cluster, vertical-individual, and vertical-cluster average treatment effects under a super population framework and introduce a simple procedure that standardizes…","headline":"Model-robust standardization in stepped wedge cluster randomized trials","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2507.17190.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/09/2507.17190.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Model-robust standardization in stepped wedge cluster randomized trials</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Xi Fang, Xueqi Wang, Patrick J. Heagerty, Bingkai Wang, Fan Li
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      9 Jul 2026
+    </div>
+  </div><div class="summary-box">Proposes a model-robust standardization framework for stepped wedge cluster randomized trials.</div><h3>Abstract</h3>
+  <p>Stepped-wedge cluster-randomized trials (SW-CRTs) are widely used in healthcare and implementation science, enabling all clusters to receive the intervention through a staggered rollout. Traditional model-based methods, including generalized estimating equations and mixed models, yield estimates that depend on implicit weighting schemes and parametric assumptions, and therefore may target ambiguous estimands under model misspecification. In this article, we propose a model-robust standardization framework for SW-CRTs that generalizes existing methods from parallel-arm CRTs to address informative sizes. We define causal estimands including horizontal-individual, horizontal-cluster, vertical-individual, and vertical-cluster average treatment effects under a super population framework and introduce a simple procedure that standardizes parametric and semiparametric working models for estimand-aligned analysis. For any specified working model, the resulting estimators remain consistent for their target estimands even if the working regression model is misspecified; moreover, their efficiency improves as the working model more closely approximates the true data-generating process. We evaluate the finite-sample properties of our proposed estimators through extensive simulations. Finally, we illustrate the application of our methods through reanalyses of two real-world SW-CRTs.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2507.17190" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2507.17190" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
