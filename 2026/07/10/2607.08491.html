@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>weightflow: declarative, recipe-aware survey weighting in R</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="weightflow: declarative, recipe-aware survey weighting in R" />
+<meta name="author" content="Juan Pablo Ferreira" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Producing analysis weights for a complex survey requires a sequence of hierarchical adjustments (resolving unknown eligibility, dropping out-of-scope units, restoring within-household selection, correcting for nonresponse, and calibrating to known population totals), after which design-consistent variances must account for the fact that several adjustments were themselves estimated from the sample. Existing R tools cover parts of this workflow, but none expresses the whole cascade as a single auditable object, nor propagates the variability of every stage into the replicate weights. We present weightflow, a dependency-free (base R) package that builds survey weights through a declarative, pipeable, tidymodels-style API: a recipe is…" />
+<meta name="twitter:description" property="og:description" content="Producing analysis weights for a complex survey requires a sequence of hierarchical adjustments (resolving unknown eligibility, dropping out-of-scope units, restoring within-household selection, correcting for nonresponse, and calibrating to known population totals), after which design-consistent variances must account for the fact that several adjustments were themselves estimated from the sample. Existing R tools cover parts of this workflow, but none expresses the whole cascade as a single auditable object, nor propagates the variability of every stage into the replicate weights. We present weightflow, a dependency-free (base R) package that builds survey weights through a declarative, pipeable, tidymodels-style API: a recipe is…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/10/2607.08491.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/10/2607.08491.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-10T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-10T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="weightflow: declarative, recipe-aware survey weighting in R" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Juan Pablo Ferreira"},"dateModified":"2026-07-10T00:00:00+02:00","datePublished":"2026-07-10T00:00:00+02:00","description":"Producing analysis weights for a complex survey requires a sequence of hierarchical adjustments (resolving unknown eligibility, dropping out-of-scope units, restoring within-household selection, correcting for nonresponse, and calibrating to known population totals), after which design-consistent variances must account for the fact that several adjustments were themselves estimated from the sample. Existing R tools cover parts of this workflow, but none expresses the whole cascade as a single auditable object, nor propagates the variability of every stage into the replicate weights. We present weightflow, a dependency-free (base R) package that builds survey weights through a declarative, pipeable, tidymodels-style API: a recipe is…","headline":"weightflow: declarative, recipe-aware survey weighting in R","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/10/2607.08491.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/10/2607.08491.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>weightflow: declarative, recipe-aware survey weighting in R</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Juan Pablo Ferreira
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      10 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper presents the weightflow package for survey weighting in R, implementing various calibration methods.</div><h3>Abstract</h3>
+  <p>Producing analysis weights for a complex survey requires a sequence of hierarchical adjustments (resolving unknown eligibility, dropping out-of-scope units, restoring within-household selection, correcting for nonresponse, and calibrating to known population totals), after which design-consistent variances must account for the fact that several adjustments were themselves estimated from the sample. Existing R tools cover parts of this workflow, but none expresses the whole cascade as a single auditable object, nor propagates the variability of every stage into the replicate weights. We present weightflow, a dependency-free (base R) package that builds survey weights through a declarative, pipeable, tidymodels-style API: a recipe is defined lazily as a chain of step_*() adjustments and estimated with prep(). Separating definition from application makes the process reproducible and auditable, and lets a rescaling bootstrap and a delete-a-PSU jackknife re-apply the entire recipe on each replicate, so the replicate weights carry the uncertainty of every estimated stage, not only of the final calibration. The package implements raking, post-stratification and linear/GREG calibration (with bounds, ridge penalisation, and domain-partitioned and integrative variants), model-assisted (Wu-Sitter) calibration, weighting-class and machine-learning response-propensity adjustments with cross-fitting, and representativity (R-)indicators. Weights and replicate weights bridge to the survey and srvyr packages for design-based inference. We validate the calibration and variance results against survey, and illustrate the full cascade on a bundled sample and on real household-survey microdata (the Uruguayan ECH), where it recovers a known poverty rate with design-based uncertainty.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.08491" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.08491" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
