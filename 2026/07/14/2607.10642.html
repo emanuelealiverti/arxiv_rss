@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Inferring Inventory Dynamics from Supply Chain Networks: A Graph Learning Approach with Autonomous Validation</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Inferring Inventory Dynamics from Supply Chain Networks: A Graph Learning Approach with Autonomous Validation" />
+<meta name="author" content="Tiancheng Gao, Xiang Zhang, Wei Lan, Bin Liu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Supply-demand mismatch represents a fundamental challenge in supply chain management, yet its direct measurement remains particularly elusive for small and medium-sized enterprises (SMEs).These firms typically lack systematic inventory records, leaving labeled training data critically scarce. Conventional supervised learning methods rely heavily on labeled samples, rendering them ill-equipped to reliably validate firm-level predictions under such data-scarce conditions. To resolve this unlabeled-data dilemma, we develop a multi-agent semi-supervised inference framework that reframes the label-scarcity problem as a structured, collaborative task distributed across specialized agents. We first construct a production-function-constrained graph machine learning model that infers firm-level inventory changes directly from supply chain…" />
+<meta name="twitter:description" property="og:description" content="Supply-demand mismatch represents a fundamental challenge in supply chain management, yet its direct measurement remains particularly elusive for small and medium-sized enterprises (SMEs).These firms typically lack systematic inventory records, leaving labeled training data critically scarce. Conventional supervised learning methods rely heavily on labeled samples, rendering them ill-equipped to reliably validate firm-level predictions under such data-scarce conditions. To resolve this unlabeled-data dilemma, we develop a multi-agent semi-supervised inference framework that reframes the label-scarcity problem as a structured, collaborative task distributed across specialized agents. We first construct a production-function-constrained graph machine learning model that infers firm-level inventory changes directly from supply chain…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/14/2607.10642.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/14/2607.10642.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-14T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-14T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Inferring Inventory Dynamics from Supply Chain Networks: A Graph Learning Approach with Autonomous Validation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tiancheng Gao, Xiang Zhang, Wei Lan, Bin Liu"},"dateModified":"2026-07-14T00:00:00+02:00","datePublished":"2026-07-14T00:00:00+02:00","description":"Supply-demand mismatch represents a fundamental challenge in supply chain management, yet its direct measurement remains particularly elusive for small and medium-sized enterprises (SMEs).These firms typically lack systematic inventory records, leaving labeled training data critically scarce. Conventional supervised learning methods rely heavily on labeled samples, rendering them ill-equipped to reliably validate firm-level predictions under such data-scarce conditions. To resolve this unlabeled-data dilemma, we develop a multi-agent semi-supervised inference framework that reframes the label-scarcity problem as a structured, collaborative task distributed across specialized agents. We first construct a production-function-constrained graph machine learning model that infers firm-level inventory changes directly from supply chain…","headline":"Inferring Inventory Dynamics from Supply Chain Networks: A Graph Learning Approach with Autonomous Validation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/14/2607.10642.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/14/2607.10642.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Inferring Inventory Dynamics from Supply Chain Networks: A Graph Learning Approach with Autonomous Validation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Tiancheng Gao, Xiang Zhang, Wei Lan, Bin Liu
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      14 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper develops a multi-agent semi-supervised inference framework for inventory dynamics from supply chain networks.</div><h3>Abstract</h3>
+  <p>Supply-demand mismatch represents a fundamental challenge in supply chain management, yet its direct measurement remains particularly elusive for small and medium-sized enterprises (SMEs).These firms typically lack systematic inventory records, leaving labeled training data critically scarce. Conventional supervised learning methods rely heavily on labeled samples, rendering them ill-equipped to reliably validate firm-level predictions under such data-scarce conditions. To resolve this unlabeled-data dilemma, we develop a multi-agent semi-supervised inference framework that reframes the label-scarcity problem as a structured, collaborative task distributed across specialized agents. We first construct a production-function-constrained graph machine learning model that infers firm-level inventory changes directly from supply chain network topology. A dedicated econometric validation agent then concurrently loads five econometric models (spanning spatial spillovers, dynamic persistence, causal direction, shock transmission, and supply-demand forecasting) to generates structured economic evidence from complementary dimensions. An expert review agent synthesizes the structured econometric evidence and produces a unified consistency assessment by resolving cross-agent inconsistencies. Empirical results demonstrate stable predictive performance on inventory-change forecasting tasks. Multi-agent econometric validation further confirms that predicted inventory dynamics align closely with established economic theory in terms of causal structure and network transmission mechanisms. Critically, the proposed agent framework enables effective prediction verification even when ground-truth observations are unavailable.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.10642" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.10642" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

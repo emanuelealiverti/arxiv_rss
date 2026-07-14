@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Posterior Mode-Guided Dimension Reduction for Bayesian Model Averaging in Heavy-Tailed Linear Regression</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Posterior Mode-Guided Dimension Reduction for Bayesian Model Averaging in Heavy-Tailed Linear Regression" />
+<meta name="author" content="Shamriddha De, Joyee Ghosh" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For large model spaces in linear regression with spike-and-slab priors, the potential entrapment of Markov chain Monte Carlo (MCMC)-based methods poses significant challenges in posterior computation. Existing maximum a posteriori (MAP)-based methods provide more computationally viable alternatives, but fail to perform tail heaviness estimation and uncertainty quantification. To address these problems, we propose a method that blends MAP estimation with MCMC-based stochastic search algorithms within an error framework comprising a combination of the hyperbolic and Student-t distributions. The hyperbolic distribution has the light-tailed normal and heavy-tailed Laplace distributions as limiting cases, but is thinner-tailed than the Student-t family. Including the…" />
+<meta name="twitter:description" property="og:description" content="For large model spaces in linear regression with spike-and-slab priors, the potential entrapment of Markov chain Monte Carlo (MCMC)-based methods poses significant challenges in posterior computation. Existing maximum a posteriori (MAP)-based methods provide more computationally viable alternatives, but fail to perform tail heaviness estimation and uncertainty quantification. To address these problems, we propose a method that blends MAP estimation with MCMC-based stochastic search algorithms within an error framework comprising a combination of the hyperbolic and Student-t distributions. The hyperbolic distribution has the light-tailed normal and heavy-tailed Laplace distributions as limiting cases, but is thinner-tailed than the Student-t family. Including the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/14/2602.20448.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/14/2602.20448.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-14T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-14T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Posterior Mode-Guided Dimension Reduction for Bayesian Model Averaging in Heavy-Tailed Linear Regression" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shamriddha De, Joyee Ghosh"},"dateModified":"2026-07-14T00:00:00+02:00","datePublished":"2026-07-14T00:00:00+02:00","description":"For large model spaces in linear regression with spike-and-slab priors, the potential entrapment of Markov chain Monte Carlo (MCMC)-based methods poses significant challenges in posterior computation. Existing maximum a posteriori (MAP)-based methods provide more computationally viable alternatives, but fail to perform tail heaviness estimation and uncertainty quantification. To address these problems, we propose a method that blends MAP estimation with MCMC-based stochastic search algorithms within an error framework comprising a combination of the hyperbolic and Student-t distributions. The hyperbolic distribution has the light-tailed normal and heavy-tailed Laplace distributions as limiting cases, but is thinner-tailed than the Student-t family. Including the…","headline":"Posterior Mode-Guided Dimension Reduction for Bayesian Model Averaging in Heavy-Tailed Linear Regression","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/14/2602.20448.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/14/2602.20448.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Posterior Mode-Guided Dimension Reduction for Bayesian Model Averaging in Heavy-Tailed Linear Regression</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Shamriddha De, Joyee Ghosh
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      14 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper proposes a two-step expectation conditional maximization algorithm for Bayesian model averaging in heavy-tailed linear regression.</div><h3>Abstract</h3>
+  <p>For large model spaces in linear regression with spike-and-slab priors, the potential entrapment of Markov chain Monte Carlo (MCMC)-based methods poses significant challenges in posterior computation. Existing maximum a posteriori (MAP)-based methods provide more computationally viable alternatives, but fail to perform tail heaviness estimation and uncertainty quantification. To address these problems, we propose a method that blends MAP estimation with MCMC-based stochastic search algorithms within an error framework comprising a combination of the hyperbolic and Student-t distributions. The hyperbolic distribution has the light-tailed normal and heavy-tailed Laplace distributions as limiting cases, but is thinner-tailed than the Student-t family. Including the Student-t distribution in the error density enables better adaptation to heavier tails. Amalgamating the two error densities thus ensures a model with more flexible tail behavior when faced with unknown tail thickness in the data, compared to MAP estimators with fixed levels of tail heaviness that assume the errors have a normal or Laplace distribution. Under this proposed error model, the current work develops a two-step expectation conditional maximization (ECM)-guided MCMC algorithm. First, we conduct an ECM-based posterior maximization to guide variable selection. We then execute a Gibbs sampler on the resulting ECM-guided model space for tail heaviness estimation and uncertainty quantification. Through simulation studies and benchmark real datasets, our proposed method is shown to exhibit several advantages in variable selection and uncertainty quantification over state-of-the-art MAP-based methods. To implement our proposed method, we developed the R package FlexBayesReg, available at https://github.com/shamriddha1998/FlexBayesReg.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2602.20448" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2602.20448" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
