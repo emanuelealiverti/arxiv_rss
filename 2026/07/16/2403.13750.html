@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Data integration of non-probability and probability samples with deterministic predictive mean matching</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Data integration of non-probability and probability samples with deterministic predictive mean matching" />
+<meta name="author" content="Aniela Czerniawska, Piotr Chlebicki, {\L}ukasz Chrostowski, Maciej Beręsewicz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study deterministic predictive mean matching mass imputation estimators to integrate data from probability and non-probability samples. We consider two approaches: predicted-to-predicted (PMM~A) and predicted-to-observed (PMM~B) matching. We prove the consistency of mean estimators, derive a variance decomposition, and propose estimators of variance. We establish consistency of the PMM~A estimator under model misspecification and underline key differences from the nearest neighbour method. Our PMM~B approach can be employed with non-parametric regression techniques, such as kernel regression, and the analytical expression for variance applies to nearest neighbour matching for non-probability samples. Extensive simulation studies compare properties of the proposed estimators with…" />
+<meta name="twitter:description" property="og:description" content="We study deterministic predictive mean matching mass imputation estimators to integrate data from probability and non-probability samples. We consider two approaches: predicted-to-predicted (PMM~A) and predicted-to-observed (PMM~B) matching. We prove the consistency of mean estimators, derive a variance decomposition, and propose estimators of variance. We establish consistency of the PMM~A estimator under model misspecification and underline key differences from the nearest neighbour method. Our PMM~B approach can be employed with non-parametric regression techniques, such as kernel regression, and the analytical expression for variance applies to nearest neighbour matching for non-probability samples. Extensive simulation studies compare properties of the proposed estimators with…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/16/2403.13750.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/16/2403.13750.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-16T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-16T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Data integration of non-probability and probability samples with deterministic predictive mean matching" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aniela Czerniawska, Piotr Chlebicki, {\\L}ukasz Chrostowski, Maciej Beręsewicz"},"dateModified":"2026-07-16T00:00:00+02:00","datePublished":"2026-07-16T00:00:00+02:00","description":"We study deterministic predictive mean matching mass imputation estimators to integrate data from probability and non-probability samples. We consider two approaches: predicted-to-predicted (PMM~A) and predicted-to-observed (PMM~B) matching. We prove the consistency of mean estimators, derive a variance decomposition, and propose estimators of variance. We establish consistency of the PMM~A estimator under model misspecification and underline key differences from the nearest neighbour method. Our PMM~B approach can be employed with non-parametric regression techniques, such as kernel regression, and the analytical expression for variance applies to nearest neighbour matching for non-probability samples. Extensive simulation studies compare properties of the proposed estimators with…","headline":"Data integration of non-probability and probability samples with deterministic predictive mean matching","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/16/2403.13750.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/16/2403.13750.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Data integration of non-probability and probability samples with deterministic predictive mean matching</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Aniela Czerniawska, Piotr Chlebicki, {\L}ukasz Chrostowski, Maciej Beręsewicz
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      16 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper proposes deterministic predictive mean matching estimators for integrating probability and non-probability samples.</div><h3>Abstract</h3>
+  <p>We study deterministic predictive mean matching mass imputation estimators to integrate data from probability and non-probability samples. We consider two approaches: predicted-to-predicted (PMM~A) and predicted-to-observed (PMM~B) matching. We prove the consistency of mean estimators, derive a variance decomposition, and propose estimators of variance. We establish consistency of the PMM~A estimator under model misspecification and underline key differences from the nearest neighbour method. Our PMM~B approach can be employed with non-parametric regression techniques, such as kernel regression, and the analytical expression for variance applies to nearest neighbour matching for non-probability samples. Extensive simulation studies compare properties of the proposed estimators with existing alternatives and examine the effects of model misspecification. The paper concludes with an empirical study on the integration of job vacancy survey and vacancies submitted to public employment offices (admin and online data). Open-source software is available.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2403.13750" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2403.13750" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
