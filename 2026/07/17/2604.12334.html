@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On additive averaging kernels for finite Markov chains</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="On additive averaging kernels for finite Markov chains" />
+<meta name="author" content="Ryan J. Y. Lim, Michael C. H. Choi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study additive mixtures of Markov kernels of the form $A_\alpha = \alpha P + (1-\alpha)G$, where $\alpha \in [0,1]$, $P$ is a baseline sampler and $G$ is a Gibbs kernel induced by a partition of the state space. We first motivate the study of $A_\alpha$, which can be interpreted as the projection of a lifted Markov chain. We then consider the minimisation of distance to stationarity under two objectives: the squared Frobenius norm and the Kullback-Leibler (KL) divergence. For the Frobenius objective, we derive explicit trace formulae and identify a Cheeger-type functional that characterises optimal two-block partitions. This yields…" />
+<meta name="twitter:description" property="og:description" content="We study additive mixtures of Markov kernels of the form $A_\alpha = \alpha P + (1-\alpha)G$, where $\alpha \in [0,1]$, $P$ is a baseline sampler and $G$ is a Gibbs kernel induced by a partition of the state space. We first motivate the study of $A_\alpha$, which can be interpreted as the projection of a lifted Markov chain. We then consider the minimisation of distance to stationarity under two objectives: the squared Frobenius norm and the Kullback-Leibler (KL) divergence. For the Frobenius objective, we derive explicit trace formulae and identify a Cheeger-type functional that characterises optimal two-block partitions. This yields…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/17/2604.12334.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/17/2604.12334.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-17T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-17T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="On additive averaging kernels for finite Markov chains" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ryan J. Y. Lim, Michael C. H. Choi"},"dateModified":"2026-07-17T00:00:00+02:00","datePublished":"2026-07-17T00:00:00+02:00","description":"We study additive mixtures of Markov kernels of the form $A_\\alpha = \\alpha P + (1-\\alpha)G$, where $\\alpha \\in [0,1]$, $P$ is a baseline sampler and $G$ is a Gibbs kernel induced by a partition of the state space. We first motivate the study of $A_\\alpha$, which can be interpreted as the projection of a lifted Markov chain. We then consider the minimisation of distance to stationarity under two objectives: the squared Frobenius norm and the Kullback-Leibler (KL) divergence. For the Frobenius objective, we derive explicit trace formulae and identify a Cheeger-type functional that characterises optimal two-block partitions. This yields…","headline":"On additive averaging kernels for finite Markov chains","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/17/2604.12334.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/17/2604.12334.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>On additive averaging kernels for finite Markov chains</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Ryan J. Y. Lim, Michael C. H. Choi
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      17 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper introduces additive mixtures of Markov kernels for finite Markov chains.</div><h3>Abstract</h3>
+  <p>We study additive mixtures of Markov kernels of the form $A_\alpha = \alpha P + (1-\alpha)G$, where $\alpha \in [0,1]$, $P$ is a baseline sampler and $G$ is a Gibbs kernel induced by a partition of the state space. We first motivate the study of $A_\alpha$, which can be interpreted as the projection of a lifted Markov chain. We then consider the minimisation of distance to stationarity under two objectives: the squared Frobenius norm and the Kullback-Leibler (KL) divergence. For the Frobenius objective, we derive explicit trace formulae and identify a Cheeger-type functional that characterises optimal two-block partitions. This yields a structured combinatorial optimisation problem admitting a difference-of-submodular decomposition, enabling efficient approximation via majorisation-minimisation. We also obtain geometric decay rates governed by the absolute spectral gap of $P$. For the KL divergence, we establish convexity-based bounds showing that the divergence of $A_\alpha$ is controlled by those of both $P$ and $G$, thereby reducing partition selection to the Gibbs component. Numerical experiments on the Curie-Weiss model demonstrate that suitable choice of both the partition and the parameter $\alpha$ can significantly accelerate convergence in total variation distance. We observe a consistent trade-off between local exploration and global averaging, with intermediate values of $\alpha$ achieving the best performance across regimes.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2604.12334" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2604.12334" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Generative Synthetic Data for Causal Inference: Pitfalls, Remedies, and Opportunities</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Generative Synthetic Data for Causal Inference: Pitfalls, Remedies, and Opportunities" />
+<meta name="author" content="Yichen Xu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Synthetic tabular data are often evaluated by distributional similarity, privacy distance, or train-on-synthetic-test-on-real predictive performance, but these criteria do not ensure validity for causal inference. We show that fully generative tabular synthesizers, including GAN- and LLM-based models, can preserve predictive utility while distorting average treatment effect (ATE) estimates. The failure is structural: ATE preservation requires both a realistic covariate law and an accurate treatment-effect contrast, whereas prediction loss penalizes treatment-effect error only through an overlap-weighted term. Thus, under imbalance or limited overlap, a generator may reproduce dominant observed outcomes while underlearning intervention-relevant contrasts. We formalize this mismatch through sensitivity and…" />
+<meta name="twitter:description" property="og:description" content="Synthetic tabular data are often evaluated by distributional similarity, privacy distance, or train-on-synthetic-test-on-real predictive performance, but these criteria do not ensure validity for causal inference. We show that fully generative tabular synthesizers, including GAN- and LLM-based models, can preserve predictive utility while distorting average treatment effect (ATE) estimates. The failure is structural: ATE preservation requires both a realistic covariate law and an accurate treatment-effect contrast, whereas prediction loss penalizes treatment-effect error only through an overlap-weighted term. Thus, under imbalance or limited overlap, a generator may reproduce dominant observed outcomes while underlearning intervention-relevant contrasts. We formalize this mismatch through sensitivity and…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/17/2604.23904.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/17/2604.23904.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-17T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-17T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Generative Synthetic Data for Causal Inference: Pitfalls, Remedies, and Opportunities" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yichen Xu"},"dateModified":"2026-07-17T00:00:00+02:00","datePublished":"2026-07-17T00:00:00+02:00","description":"Synthetic tabular data are often evaluated by distributional similarity, privacy distance, or train-on-synthetic-test-on-real predictive performance, but these criteria do not ensure validity for causal inference. We show that fully generative tabular synthesizers, including GAN- and LLM-based models, can preserve predictive utility while distorting average treatment effect (ATE) estimates. The failure is structural: ATE preservation requires both a realistic covariate law and an accurate treatment-effect contrast, whereas prediction loss penalizes treatment-effect error only through an overlap-weighted term. Thus, under imbalance or limited overlap, a generator may reproduce dominant observed outcomes while underlearning intervention-relevant contrasts. We formalize this mismatch through sensitivity and…","headline":"Generative Synthetic Data for Causal Inference: Pitfalls, Remedies, and Opportunities","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/17/2604.23904.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/17/2604.23904.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Generative Synthetic Data for Causal Inference: Pitfalls, Remedies, and Opportunities</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Yichen Xu
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      17 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper proposes a hybrid synthetic-data framework for causal inference with improved ATE preservation.</div><h3>Abstract</h3>
+  <p>Synthetic tabular data are often evaluated by distributional similarity, privacy distance, or train-on-synthetic-test-on-real predictive performance, but these criteria do not ensure validity for causal inference. We show that fully generative tabular synthesizers, including GAN- and LLM-based models, can preserve predictive utility while distorting average treatment effect (ATE) estimates. The failure is structural: ATE preservation requires both a realistic covariate law and an accurate treatment-effect contrast, whereas prediction loss penalizes treatment-effect error only through an overlap-weighted term. Thus, under imbalance or limited overlap, a generator may reproduce dominant observed outcomes while underlearning intervention-relevant contrasts. We formalize this mismatch through sensitivity and loss-decomposition results. Motivated by this causal analysis and intuition, we propose a hybrid synthetic-data framework for causal inference that generates covariates while modeling treatment and outcome mechanisms separately. We evaluate the framework in three settings: ATE preservation under fully generative versus hybrid synthesis, augmentation for practical positivity problems, and diagnostic simulation engines for comparing OR, IPW, AIPW, and TMLE before real-data analysis. We also stress-test the hybrid construction across settings that vary overlap, covariate dimension, seed sample size, and treatment-effect complexity, including a logistic outcome-model misspecification check. Across controlled simulation experiments, hybrid synthesis improves causal fidelity relative to fully generative baselines; the ACTG application shows improved predictive fidelity and potential for finite-sample estimator benchmarking. LLM-based hybrid synthesis is often more faithful than CTGAN in settings where causal fidelity can be assessed.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2604.23904" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2604.23904" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
