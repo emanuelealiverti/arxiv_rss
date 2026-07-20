@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>B-CALM: Bias-Limited Bayesian Borrowing for RCT-Anchored Treatment Effects under Covariate Mismatch</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="B-CALM: Bias-Limited Bayesian Borrowing for RCT-Anchored Treatment Effects under Covariate Mismatch" />
+<meta name="author" content="Amir Asiaee, Samhita Pal" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Randomized controlled trials (RCTs) identify treatment effects in the randomized trial population but are often too small for reliable heterogeneity estimation; observational studies (OS) are larger but confounded and measured on only partially overlapping covariates. We develop Bayesian Calibrated ALignment under covariate Mismatch (B-CALM), a Bayesian borrowing method for RCT-defined conditional average treatment effect (CATE) estimation. B-CALM maps source-specific covariates into a shared latent state, jointly models trial and observational outcome surfaces, and uses baseline-bias and comparative-bias functions to represent how the OS departs from the trial estimand. The comparative-bias prior becomes an explicit sensitivity knob: we prove a finite-feature…" />
+<meta name="twitter:description" property="og:description" content="Randomized controlled trials (RCTs) identify treatment effects in the randomized trial population but are often too small for reliable heterogeneity estimation; observational studies (OS) are larger but confounded and measured on only partially overlapping covariates. We develop Bayesian Calibrated ALignment under covariate Mismatch (B-CALM), a Bayesian borrowing method for RCT-defined conditional average treatment effect (CATE) estimation. B-CALM maps source-specific covariates into a shared latent state, jointly models trial and observational outcome surfaces, and uses baseline-bias and comparative-bias functions to represent how the OS departs from the trial estimand. The comparative-bias prior becomes an explicit sensitivity knob: we prove a finite-feature…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2607.04036.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2607.04036.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-20T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-20T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="B-CALM: Bias-Limited Bayesian Borrowing for RCT-Anchored Treatment Effects under Covariate Mismatch" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Amir Asiaee, Samhita Pal"},"dateModified":"2026-07-20T00:00:00+02:00","datePublished":"2026-07-20T00:00:00+02:00","description":"Randomized controlled trials (RCTs) identify treatment effects in the randomized trial population but are often too small for reliable heterogeneity estimation; observational studies (OS) are larger but confounded and measured on only partially overlapping covariates. We develop Bayesian Calibrated ALignment under covariate Mismatch (B-CALM), a Bayesian borrowing method for RCT-defined conditional average treatment effect (CATE) estimation. B-CALM maps source-specific covariates into a shared latent state, jointly models trial and observational outcome surfaces, and uses baseline-bias and comparative-bias functions to represent how the OS departs from the trial estimand. The comparative-bias prior becomes an explicit sensitivity knob: we prove a finite-feature…","headline":"B-CALM: Bias-Limited Bayesian Borrowing for RCT-Anchored Treatment Effects under Covariate Mismatch","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2607.04036.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2607.04036.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>B-CALM: Bias-Limited Bayesian Borrowing for RCT-Anchored Treatment Effects under Covariate Mismatch</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Amir Asiaee, Samhita Pal
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      20 Jul 2026
+    </div>
+  </div><div class="summary-box">Develops B-CALM, a Bayesian borrowing method for RCT-defined CATE estimation under covariate mismatch.</div><h3>Abstract</h3>
+  <p>Randomized controlled trials (RCTs) identify treatment effects in the randomized trial population but are often too small for reliable heterogeneity estimation; observational studies (OS) are larger but confounded and measured on only partially overlapping covariates. We develop Bayesian Calibrated ALignment under covariate Mismatch (B-CALM), a Bayesian borrowing method for RCT-defined conditional average treatment effect (CATE) estimation. B-CALM maps source-specific covariates into a shared latent state, jointly models trial and observational outcome surfaces, and uses baseline-bias and comparative-bias functions to represent how the OS departs from the trial estimand. The comparative-bias prior becomes an explicit sensitivity knob: we prove a finite-feature bias-limited information bound showing that observational contrast information about the trial treatment-effect function is capped by the prior precision of this bias function, and derive an effective-sample-size formula showing that the RCT-equivalent information contributed by the OS saturates as OS sample size grows. The theory also combines a PAC-Bayes trial-risk bound with an integral-probability-metric (IPM) alignment and calibration decomposition that separates RCT empirical risk, latent alignment, and residual calibration of the debiased OS surface. In synthetic, semi-synthetic, and pediatric-obesity external-control studies, B-CALM maintains near-nominal average coverage and low negative transfer while pooled and causal-forest baselines can become overconfident under comparative bias.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.04036" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.04036" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

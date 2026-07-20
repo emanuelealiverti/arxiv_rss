@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Spectrally Robust Covariance Shrinkage for Hotelling's $T^2$ in High Dimensions</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Spectrally Robust Covariance Shrinkage for Hotelling’s $T^2$ in High Dimensions" />
+<meta name="author" content="Benjamin D. Robinson, Van Latimer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We investigate covariance shrinkage for Hotelling’s $T^2$ in the regime where the data dimension $p$ and the sample size $n$ grow in a fixed ratio – without assuming that the population covariance matrix is spiked or well-conditioned. When $p/n\to\phi \in (0,1)$, we propose a practical finite-sample shrinker that, for any maximum-entropy signal prior and any fixed significance level, (a) asymptotically maximizes power under Gaussian data, and (b) asymptotically saturates the Hanson–Wright lower bound on power in the more general sub-Gaussian case. Our approach is to formulate and solve a variational problem characterizing the optimal limiting shrinker, and to show that…" />
+<meta name="twitter:description" property="og:description" content="We investigate covariance shrinkage for Hotelling’s $T^2$ in the regime where the data dimension $p$ and the sample size $n$ grow in a fixed ratio – without assuming that the population covariance matrix is spiked or well-conditioned. When $p/n\to\phi \in (0,1)$, we propose a practical finite-sample shrinker that, for any maximum-entropy signal prior and any fixed significance level, (a) asymptotically maximizes power under Gaussian data, and (b) asymptotically saturates the Hanson–Wright lower bound on power in the more general sub-Gaussian case. Our approach is to formulate and solve a variational problem characterizing the optimal limiting shrinker, and to show that…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2502.02006.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2502.02006.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-20T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-20T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Spectrally Robust Covariance Shrinkage for Hotelling’s $T^2$ in High Dimensions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Benjamin D. Robinson, Van Latimer"},"dateModified":"2026-07-20T00:00:00+02:00","datePublished":"2026-07-20T00:00:00+02:00","description":"We investigate covariance shrinkage for Hotelling’s $T^2$ in the regime where the data dimension $p$ and the sample size $n$ grow in a fixed ratio – without assuming that the population covariance matrix is spiked or well-conditioned. When $p/n\\to\\phi \\in (0,1)$, we propose a practical finite-sample shrinker that, for any maximum-entropy signal prior and any fixed significance level, (a) asymptotically maximizes power under Gaussian data, and (b) asymptotically saturates the Hanson–Wright lower bound on power in the more general sub-Gaussian case. Our approach is to formulate and solve a variational problem characterizing the optimal limiting shrinker, and to show that…","headline":"Spectrally Robust Covariance Shrinkage for Hotelling’s $T^2$ in High Dimensions","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2502.02006.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2502.02006.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Spectrally Robust Covariance Shrinkage for Hotelling's $T^2$ in High Dimensions</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Benjamin D. Robinson, Van Latimer
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      20 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper proposes a spectrally robust covariance shrinkage method for Hotelling's T^2 in high dimensions.</div><h3>Abstract</h3>
+  <p>We investigate covariance shrinkage for Hotelling’s $T^2$ in the regime where the data dimension $p$ and the sample size $n$ grow in a fixed ratio – without assuming that the population covariance matrix is spiked or well-conditioned. When $p/n\to\phi \in (0,1)$, we propose a practical finite-sample shrinker that, for any maximum-entropy signal prior and any fixed significance level, (a) asymptotically maximizes power under Gaussian data, and (b) asymptotically saturates the Hanson–Wright lower bound on power in the more general sub-Gaussian case. Our approach is to formulate and solve a variational problem characterizing the optimal limiting shrinker, and to show that our finite-sample method consistently approximates this limit by extending recent local random matrix laws. Empirical studies on simulated and real-world data, including the Crawdad UMich/RSS data set, demonstrate up to a $50\%$ gain in power over leading linear and nonlinear competitors at a significance level of $10^{-4}$.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2502.02006" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2502.02006" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

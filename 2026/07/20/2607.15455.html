@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Design-Based Supervised Learning with Noisy Human Labels</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Design-Based Supervised Learning with Noisy Human Labels" />
+<meta name="author" content="Robert Chew, Matthew R. Williams" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Researchers increasingly use automated classifiers to label unstructured data for statistical analysis. Existing rectification methods can correct errors in these automated labels using a probability-sampled audit set, but they usually treat the audit labels as correct. In practice, human audit labels are often noisy, and only some audited items are reviewed by an expert or adjudicator. We propose Partially Adjudicated Design-Based Supervised Learning (PA-DSL), a method for this setting. It uses adjudicated cases to correct noisy human labels and then uses the corrected audit information to debias analyses based on the full set of automated labels. The estimator is valid…" />
+<meta name="twitter:description" property="og:description" content="Researchers increasingly use automated classifiers to label unstructured data for statistical analysis. Existing rectification methods can correct errors in these automated labels using a probability-sampled audit set, but they usually treat the audit labels as correct. In practice, human audit labels are often noisy, and only some audited items are reviewed by an expert or adjudicator. We propose Partially Adjudicated Design-Based Supervised Learning (PA-DSL), a method for this setting. It uses adjudicated cases to correct noisy human labels and then uses the corrected audit information to debias analyses based on the full set of automated labels. The estimator is valid…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2607.15455.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2607.15455.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-20T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-20T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Design-Based Supervised Learning with Noisy Human Labels" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Chew, Matthew R. Williams"},"dateModified":"2026-07-20T00:00:00+02:00","datePublished":"2026-07-20T00:00:00+02:00","description":"Researchers increasingly use automated classifiers to label unstructured data for statistical analysis. Existing rectification methods can correct errors in these automated labels using a probability-sampled audit set, but they usually treat the audit labels as correct. In practice, human audit labels are often noisy, and only some audited items are reviewed by an expert or adjudicator. We propose Partially Adjudicated Design-Based Supervised Learning (PA-DSL), a method for this setting. It uses adjudicated cases to correct noisy human labels and then uses the corrected audit information to debias analyses based on the full set of automated labels. The estimator is valid…","headline":"Design-Based Supervised Learning with Noisy Human Labels","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2607.15455.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/20/2607.15455.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Design-Based Supervised Learning with Noisy Human Labels</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Robert Chew, Matthew R. Williams
+      <span class="sep">&middot;</span>
+      stat.ML, stat.AP
+      <span class="sep">&middot;</span>
+      20 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper proposes a method for correcting noisy human labels in automated classification using adjudicated cases.</div><h3>Abstract</h3>
+  <p>Researchers increasingly use automated classifiers to label unstructured data for statistical analysis. Existing rectification methods can correct errors in these automated labels using a probability-sampled audit set, but they usually treat the audit labels as correct. In practice, human audit labels are often noisy, and only some audited items are reviewed by an expert or adjudicator. We propose Partially Adjudicated Design-Based Supervised Learning (PA-DSL), a method for this setting. It uses adjudicated cases to correct noisy human labels and then uses the corrected audit information to debias analyses based on the full set of automated labels. The estimator is valid for a broad class of downstream analyses when the audit and adjudication probabilities are known. In synthetic and Wikipedia Detox semi-synthetic experiments, PA-DSL maintains nominal coverage and reduces RMSE by 10-17% relative to using only adjudicated labels when noisy human labels contain recoverable signal.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.15455" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.15455" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
