@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Pathwise skew-symmetric discretisation for SDEs with superlinear drift</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Pathwise skew-symmetric discretisation for SDEs with superlinear drift" />
+<meta name="author" content="Yuga Iguchi, Samuel Livingstone, Giorgos Vasdekis, Rui-Yang Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The skew-symmetric discretisation has recently been proposed as a new robust simulation method for weakly approximating stochastic differential equations (SDEs) with non-globally Lipschitz drift. This work develops a pathwise version of the scheme by representing the noise increment as a skew-normal distribution and coupling it with the driving Brownian increments, thereby enabling its use in the multilevel Monte Carlo (MLMC) framework. Under suitable conditions, we establish strong convergence of order 1/2 in $L^2$. Subsequently, the associated MLMC estimator is shown to have computational complexity $\mathcal{O} \bigl(\varepsilon^{-2} (\log (1/\varepsilon))^2 \bigr)$ to achieve a mean-squared error $\varepsilon^2$. We then analytically compare the…" />
+<meta name="twitter:description" property="og:description" content="The skew-symmetric discretisation has recently been proposed as a new robust simulation method for weakly approximating stochastic differential equations (SDEs) with non-globally Lipschitz drift. This work develops a pathwise version of the scheme by representing the noise increment as a skew-normal distribution and coupling it with the driving Brownian increments, thereby enabling its use in the multilevel Monte Carlo (MLMC) framework. Under suitable conditions, we establish strong convergence of order 1/2 in $L^2$. Subsequently, the associated MLMC estimator is shown to have computational complexity $\mathcal{O} \bigl(\varepsilon^{-2} (\log (1/\varepsilon))^2 \bigr)$ to achieve a mean-squared error $\varepsilon^2$. We then analytically compare the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17735.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17735.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Pathwise skew-symmetric discretisation for SDEs with superlinear drift" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yuga Iguchi, Samuel Livingstone, Giorgos Vasdekis, Rui-Yang Zhang"},"dateModified":"2026-07-21T00:00:00+02:00","datePublished":"2026-07-21T00:00:00+02:00","description":"The skew-symmetric discretisation has recently been proposed as a new robust simulation method for weakly approximating stochastic differential equations (SDEs) with non-globally Lipschitz drift. This work develops a pathwise version of the scheme by representing the noise increment as a skew-normal distribution and coupling it with the driving Brownian increments, thereby enabling its use in the multilevel Monte Carlo (MLMC) framework. Under suitable conditions, we establish strong convergence of order 1/2 in $L^2$. Subsequently, the associated MLMC estimator is shown to have computational complexity $\\mathcal{O} \\bigl(\\varepsilon^{-2} (\\log (1/\\varepsilon))^2 \\bigr)$ to achieve a mean-squared error $\\varepsilon^2$. We then analytically compare the…","headline":"Pathwise skew-symmetric discretisation for SDEs with superlinear drift","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17735.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17735.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Pathwise skew-symmetric discretisation for SDEs with superlinear drift</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Yuga Iguchi, Samuel Livingstone, Giorgos Vasdekis, Rui-Yang Zhang
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      21 Jul 2026
+    </div>
+  </div><div class="summary-box">Develops a pathwise skew-symmetric discretisation method for SDEs with superlinear drift.</div><h3>Abstract</h3>
+  <p>The skew-symmetric discretisation has recently been proposed as a new robust simulation method for weakly approximating stochastic differential equations (SDEs) with non-globally Lipschitz drift. This work develops a pathwise version of the scheme by representing the noise increment as a skew-normal distribution and coupling it with the driving Brownian increments, thereby enabling its use in the multilevel Monte Carlo (MLMC) framework. Under suitable conditions, we establish strong convergence of order 1/2 in $L^2$. Subsequently, the associated MLMC estimator is shown to have computational complexity $\mathcal{O} \bigl(\varepsilon^{-2} (\log (1/\varepsilon))^2 \bigr)$ to achieve a mean-squared error $\varepsilon^2$. We then analytically compare the proposed scheme with the tamed Euler scheme, another benchmark for robust discretisation. Under a strong inward-drift regime with the current state being far from the stable region, we show that the probability of moving in the wrong direction tends to vanish in the skew-symmetric scheme, whereas the tamed Euler scheme makes such moves with a non-trivial probability. Furthermore, in the MLMC setting, employing a one-dimensional stochastic Ginzburg-Landau model, we specify the range of step sizes for which the asymptotic variance of the coupled level difference obtained via the pathwise skew-symmetric scheme is lower than that obtained via the tamed Euler scheme. Numerical experiments on several model examples support the theoretical rate of strong convergence and demonstrate the stability and effectiveness of the resulting MLMC in the superlinear drift setting.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.17735" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.17735" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

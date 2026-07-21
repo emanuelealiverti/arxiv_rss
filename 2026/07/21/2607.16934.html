@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Optimizing Clinical Trial Protocols Using EHR-Derived Heterogeneous Treatment Effects</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Optimizing Clinical Trial Protocols Using EHR-Derived Heterogeneous Treatment Effects" />
+<meta name="author" content="Xiaodi Li, Munhuwan Lee, Pengyang Li, Xiaoke Liu, Jose K. James, Patricia A. Pellikka, Cui Tao, Nansu Zong" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Traditional randomized trials often obscure clinically meaningful heterogeneity in treatment response by focusing on average effects. Leveraging real-world data to emulate clinical trials and estimate heterogeneous treatment effects (HTEs) offers a promising path toward more precise and efficient trial design. In this study, we emulate the DAPA-HF trial using electronic health records from the Mayo Clinic Cloud (MCC) to investigate whether HTE-guided stratification can identify patient subgroups with distinct treatment responses to dapagliflozin versus placebo in patients with heart failure with reduced ejection fraction. All-cause mortality was evaluated using Cox proportional hazards models, with HTEs estimated using a Meta-S learner…" />
+<meta name="twitter:description" property="og:description" content="Traditional randomized trials often obscure clinically meaningful heterogeneity in treatment response by focusing on average effects. Leveraging real-world data to emulate clinical trials and estimate heterogeneous treatment effects (HTEs) offers a promising path toward more precise and efficient trial design. In this study, we emulate the DAPA-HF trial using electronic health records from the Mayo Clinic Cloud (MCC) to investigate whether HTE-guided stratification can identify patient subgroups with distinct treatment responses to dapagliflozin versus placebo in patients with heart failure with reduced ejection fraction. All-cause mortality was evaluated using Cox proportional hazards models, with HTEs estimated using a Meta-S learner…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.16934.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.16934.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Optimizing Clinical Trial Protocols Using EHR-Derived Heterogeneous Treatment Effects" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xiaodi Li, Munhuwan Lee, Pengyang Li, Xiaoke Liu, Jose K. James, Patricia A. Pellikka, Cui Tao, Nansu Zong"},"dateModified":"2026-07-21T00:00:00+02:00","datePublished":"2026-07-21T00:00:00+02:00","description":"Traditional randomized trials often obscure clinically meaningful heterogeneity in treatment response by focusing on average effects. Leveraging real-world data to emulate clinical trials and estimate heterogeneous treatment effects (HTEs) offers a promising path toward more precise and efficient trial design. In this study, we emulate the DAPA-HF trial using electronic health records from the Mayo Clinic Cloud (MCC) to investigate whether HTE-guided stratification can identify patient subgroups with distinct treatment responses to dapagliflozin versus placebo in patients with heart failure with reduced ejection fraction. All-cause mortality was evaluated using Cox proportional hazards models, with HTEs estimated using a Meta-S learner…","headline":"Optimizing Clinical Trial Protocols Using EHR-Derived Heterogeneous Treatment Effects","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.16934.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.16934.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Optimizing Clinical Trial Protocols Using EHR-Derived Heterogeneous Treatment Effects</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Xiaodi Li, Munhuwan Lee, Pengyang Li, Xiaoke Liu, Jose K. James, Patricia A. Pellikka, Cui Tao, Nansu Zong
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      21 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper estimates heterogeneous treatment effects using real-world data and Cox proportional hazards models.</div><h3>Abstract</h3>
+  <p>Traditional randomized trials often obscure clinically meaningful heterogeneity in treatment response by focusing on average effects. Leveraging real-world data to emulate clinical trials and estimate heterogeneous treatment effects (HTEs) offers a promising path toward more precise and efficient trial design. In this study, we emulate the DAPA-HF trial using electronic health records from the Mayo Clinic Cloud (MCC) to investigate whether HTE-guided stratification can identify patient subgroups with distinct treatment responses to dapagliflozin versus placebo in patients with heart failure with reduced ejection fraction. All-cause mortality was evaluated using Cox proportional hazards models, with HTEs estimated using a Meta-S learner and subgroups defined using a decision tree-based thresholding approach. In the overall cohort of the emulation, no significant treatment difference was observed (HR, 1.681; 95% CI, 0.828-3.413; p = 0.1507). However, compared with the overall emulated cohort, in which dapagliflozin showed no statistically significant survival benefit, HTE-driven stratification identified subgroups with significant and directionally distinct treatment effects. The beneficial (low-HTE) subgroup showed a significant survival benefit from dapagliflozin (HR = 0.203, 95% CI, 0.087-0.476, p = 0.0002), whereas the harmful (high-HTE) subgroup showed a significant harmful association with markedly increased mortality risk (HR = 6.680, 95% CI, 2.759-16.171, p &lt; 0.0001). These findings indicate that HTE-guided stratification can uncover clinically meaningful beneficial and harmful treatment-effect patterns that are masked in the full-cohort emulation.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.16934" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.16934" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

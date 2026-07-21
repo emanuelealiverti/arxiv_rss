@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An Upper Bound on the Probability That a User Encounters an Undiscovered Defect</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="An Upper Bound on the Probability That a User Encounters an Undiscovered Defect" />
+<meta name="author" content="Carlos M. Hernández-Suárez, Karla Hernández-Cuevas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Before releasing software to a general population, a developer must weigh a single question: if we ship now, what fraction of users will still hit a defect? This is not a question about how many defects remain, nor whether any particular defect is present – the quantities the reliability literature has long estimated – but about a different and, for a release decision, more consequential one: the probability that a user encounters a defect at all. We give a direct, distribution-free answer. Reading each beta-test report as a draw from the user population and each distinct defect as a class,…" />
+<meta name="twitter:description" property="og:description" content="Before releasing software to a general population, a developer must weigh a single question: if we ship now, what fraction of users will still hit a defect? This is not a question about how many defects remain, nor whether any particular defect is present – the quantities the reliability literature has long estimated – but about a different and, for a release decision, more consequential one: the probability that a user encounters a defect at all. We give a direct, distribution-free answer. Reading each beta-test report as a draw from the user population and each distinct defect as a class,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17061.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17061.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="An Upper Bound on the Probability That a User Encounters an Undiscovered Defect" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Carlos M. Hernández-Suárez, Karla Hernández-Cuevas"},"dateModified":"2026-07-21T00:00:00+02:00","datePublished":"2026-07-21T00:00:00+02:00","description":"Before releasing software to a general population, a developer must weigh a single question: if we ship now, what fraction of users will still hit a defect? This is not a question about how many defects remain, nor whether any particular defect is present – the quantities the reliability literature has long estimated – but about a different and, for a release decision, more consequential one: the probability that a user encounters a defect at all. We give a direct, distribution-free answer. Reading each beta-test report as a draw from the user population and each distinct defect as a class,…","headline":"An Upper Bound on the Probability That a User Encounters an Undiscovered Defect","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17061.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17061.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>An Upper Bound on the Probability That a User Encounters an Undiscovered Defect</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Carlos M. Hernández-Suárez, Karla Hernández-Cuevas
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      21 Jul 2026
+    </div>
+  </div><div class="summary-box">Provides a distribution-free upper bound on the probability of encountering an undiscovered defect.</div><h3>Abstract</h3>
+  <p>Before releasing software to a general population, a developer must weigh a single question: if we ship now, what fraction of users will still hit a defect? This is not a question about how many defects remain, nor whether any particular defect is present – the quantities the reliability literature has long estimated – but about a different and, for a release decision, more consequential one: the probability that a user encounters a defect at all. We give a direct, distribution-free answer. Reading each beta-test report as a draw from the user population and each distinct defect as a class, we show that the fraction of defects reported exactly once, $s/n$, is a conservative upper bound on the probability that a user encounters a defect unseen in testing. This bound is the exact maximum-likelihood estimate of the mass of unseen defects under a general urn construction – the canonical form – into which any population of classes embeds; because that construction charges every singleton to the unseen reservoir, $s/n$ overstates the user’s risk rather than understating it, the direction a release decision requires. The estimate needs no operational profile, no assumption on the number or frequency of defects, and no model of the program’s internal structure – since a defect’s report count already reflects how many users reach it, the estimate is invariant to whether the reachability graph is a tree or a directed acyclic graph, and defects hidden behind other defects are bounded automatically. We validate the estimator against synthetic populations with known ground truth, and discuss the encounter-level data – beta or crash telemetry – under which the user-facing reading holds.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.17061" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.17061" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

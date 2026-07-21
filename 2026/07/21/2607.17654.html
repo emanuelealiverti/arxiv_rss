@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An efficient adaptive dimension selection algorithm for multidimensional probit graded response models</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="An efficient adaptive dimension selection algorithm for multidimensional probit graded response models" />
+<meta name="author" content="Yu Zhou, Yincai Tang, Bin Lv, Meng Gao" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Multidimensional graded response models (MGRMs) are widely used for analyzing ordinal questionnaire data in psychological and educational assessments. A central challenge in applying these models is determining the number of latent dimensions. Conventional approaches usually fit multiple fixed-dimensional models and select among them using post-hoc criteria such as AIC, BIC, or cross-validation, which can be computationally demanding and ignore uncertainty in dimensionality during estimation. We develop an adaptive Bayesian dimension selection framework for probit MGRMs. Building on the cumulative shrinkage process, we assign a cumulative ordered spike-and-slab (COSS) prior to the column-specific variances of the item loading matrix. This prior…" />
+<meta name="twitter:description" property="og:description" content="Multidimensional graded response models (MGRMs) are widely used for analyzing ordinal questionnaire data in psychological and educational assessments. A central challenge in applying these models is determining the number of latent dimensions. Conventional approaches usually fit multiple fixed-dimensional models and select among them using post-hoc criteria such as AIC, BIC, or cross-validation, which can be computationally demanding and ignore uncertainty in dimensionality during estimation. We develop an adaptive Bayesian dimension selection framework for probit MGRMs. Building on the cumulative shrinkage process, we assign a cumulative ordered spike-and-slab (COSS) prior to the column-specific variances of the item loading matrix. This prior…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17654.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17654.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="An efficient adaptive dimension selection algorithm for multidimensional probit graded response models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yu Zhou, Yincai Tang, Bin Lv, Meng Gao"},"dateModified":"2026-07-21T00:00:00+02:00","datePublished":"2026-07-21T00:00:00+02:00","description":"Multidimensional graded response models (MGRMs) are widely used for analyzing ordinal questionnaire data in psychological and educational assessments. A central challenge in applying these models is determining the number of latent dimensions. Conventional approaches usually fit multiple fixed-dimensional models and select among them using post-hoc criteria such as AIC, BIC, or cross-validation, which can be computationally demanding and ignore uncertainty in dimensionality during estimation. We develop an adaptive Bayesian dimension selection framework for probit MGRMs. Building on the cumulative shrinkage process, we assign a cumulative ordered spike-and-slab (COSS) prior to the column-specific variances of the item loading matrix. This prior…","headline":"An efficient adaptive dimension selection algorithm for multidimensional probit graded response models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17654.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/21/2607.17654.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>An efficient adaptive dimension selection algorithm for multidimensional probit graded response models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Yu Zhou, Yincai Tang, Bin Lv, Meng Gao
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME
+      <span class="sep">&middot;</span>
+      21 Jul 2026
+    </div>
+  </div><div class="summary-box">Develops an adaptive Bayesian dimension selection framework for probit graded response models.</div><h3>Abstract</h3>
+  <p>Multidimensional graded response models (MGRMs) are widely used for analyzing ordinal questionnaire data in psychological and educational assessments. A central challenge in applying these models is determining the number of latent dimensions. Conventional approaches usually fit multiple fixed-dimensional models and select among them using post-hoc criteria such as AIC, BIC, or cross-validation, which can be computationally demanding and ignore uncertainty in dimensionality during estimation. We develop an adaptive Bayesian dimension selection framework for probit MGRMs. Building on the cumulative shrinkage process, we assign a cumulative ordered spike-and-slab (COSS) prior to the column-specific variances of the item loading matrix. This prior induces increasing shrinkage across latent dimensions, allowing redundant dimensions to be shrunk toward zero while preserving flexibility for active dimensions. Albert–Chib latent response augmentation is used to handle the ordinal probit likelihood, yielding conditionally Gaussian updates for item loadings and latent traits. These updates are combined with Gibbs updates for threshold and shrinkage parameters in an efficient adaptive sampler. Simulation studies evaluate the proposed method in terms of dimension recovery, parameter estimation accuracy, and computational efficiency, with comparisons to conventional fixed-dimensional estimation and model selection procedures. The results show that the proposed approach accurately recovers the latent structure while avoiding repeated model fitting over multiple candidate dimensions. We further illustrate the method using real psychological assessment data, demonstrating its practical utility for uncovering interpretable latent structures in ordinal item responses.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.17654" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.17654" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
