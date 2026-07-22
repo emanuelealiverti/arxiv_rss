@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Partial pooling predicts cross-validation reliability: a closed-form triage and Rao-Blackwellised cure for hierarchical LOO</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Partial pooling predicts cross-validation reliability: a closed-form triage and Rao-Blackwellised cure for hierarchical LOO" />
+<meta name="author" content="Aidan D Bindoff" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For hierarchical models, Pareto-smoothed importance-sampling leave-one-out cross-validation (PSIS-LOO) fails on the folds where a random-effect coordinate is data-driven and its group is small. We show that the Gelman-Pardoe pooling factor and structural leverage predict these folds from model structure and group sizes, without forming importance weights. In Gaussian linear mixed models the leverage reduces to group size, giving a design-time map that separates the failing ($\hat{k}&gt;0.7$) folds with AUC 0.96; across replicated logistic GLMMs the post-fit, weight-free predictor reaches AUC 0.81. The cure is integrated importance sampling: marginalise the random-effect block and importance-sample only the base parameters. This is not…" />
+<meta name="twitter:description" property="og:description" content="For hierarchical models, Pareto-smoothed importance-sampling leave-one-out cross-validation (PSIS-LOO) fails on the folds where a random-effect coordinate is data-driven and its group is small. We show that the Gelman-Pardoe pooling factor and structural leverage predict these folds from model structure and group sizes, without forming importance weights. In Gaussian linear mixed models the leverage reduces to group size, giving a design-time map that separates the failing ($\hat{k}&gt;0.7$) folds with AUC 0.96; across replicated logistic GLMMs the post-fit, weight-free predictor reaches AUC 0.81. The cure is integrated importance sampling: marginalise the random-effect block and importance-sample only the base parameters. This is not…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/22/2607.18836.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/22/2607.18836.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-22T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-22T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Partial pooling predicts cross-validation reliability: a closed-form triage and Rao-Blackwellised cure for hierarchical LOO" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aidan D Bindoff"},"dateModified":"2026-07-22T00:00:00+02:00","datePublished":"2026-07-22T00:00:00+02:00","description":"For hierarchical models, Pareto-smoothed importance-sampling leave-one-out cross-validation (PSIS-LOO) fails on the folds where a random-effect coordinate is data-driven and its group is small. We show that the Gelman-Pardoe pooling factor and structural leverage predict these folds from model structure and group sizes, without forming importance weights. In Gaussian linear mixed models the leverage reduces to group size, giving a design-time map that separates the failing ($\\hat{k}&gt;0.7$) folds with AUC 0.96; across replicated logistic GLMMs the post-fit, weight-free predictor reaches AUC 0.81. The cure is integrated importance sampling: marginalise the random-effect block and importance-sample only the base parameters. This is not…","headline":"Partial pooling predicts cross-validation reliability: a closed-form triage and Rao-Blackwellised cure for hierarchical LOO","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/22/2607.18836.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/22/2607.18836.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Partial pooling predicts cross-validation reliability: a closed-form triage and Rao-Blackwellised cure for hierarchical LOO</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Aidan D Bindoff
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      22 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper presents a method to predict and correct cross-validation failures in hierarchical models using a closed-form triage and Rao-Blackwellised cure.</div><h3>Abstract</h3>
+  <p>For hierarchical models, Pareto-smoothed importance-sampling leave-one-out cross-validation (PSIS-LOO) fails on the folds where a random-effect coordinate is data-driven and its group is small. We show that the Gelman-Pardoe pooling factor and structural leverage predict these folds from model structure and group sizes, without forming importance weights. In Gaussian linear mixed models the leverage reduces to group size, giving a design-time map that separates the failing ($\hat{k}&gt;0.7$) folds with AUC 0.96; across replicated logistic GLMMs the post-fit, weight-free predictor reaches AUC 0.81. The cure is integrated importance sampling: marginalise the random-effect block and importance-sample only the base parameters. This is not new, but we contribute its observation-level specialisation for random-intercept GLMMs: an analytic Gaussian downdate and a 1-D quadrature for Bernoulli, binomial and Poisson responses, packaged as a drop-in rb_loo(fit). Against exact refits, this marginalised estimator (RB-LOO) is $3\times$ more accurate than moment matching on singleton-heavy logistic GLMMs. On overdispersed count data with 97 failing folds, moment matching leaves 37 uncorrected and is no more accurate than raw PSIS-LOO, while RB-LOO reproduces the 82-minute exact refit (elpd RMSE 0.04) at no cost. The error changes decisions: against a negative-binomial model, PSIS-LOO reports decisive evidence ($z=4.9$) and reloo reports significant evidence ($z=3.4$) for the more complex model, where an exact analysis, reproduced by RB-LOO, finds the two indistinguishable ($z=1.0$). A base-fiber Schur decomposition splits case-deletion influence into a vertical (pooling) term that governs where PSIS-LOO fails and a horizontal (variance-component) term that governs where RB-LOO is itself strained, giving a two-level triage that recovers the exact answer while refitting only the few folds that need it.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.18836" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.18836" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
