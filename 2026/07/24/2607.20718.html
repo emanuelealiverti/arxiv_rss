@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Well-Tempered Likelihood: Honest Confidence Intervals for Misspecified Models</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="The Well-Tempered Likelihood: Honest Confidence Intervals for Misspecified Models" />
+<meta name="author" content="Benjamin Nachman, Jesse Thaler" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Likelihood-based inference in particle physics, and in the physical sciences more broadly, relies on the assumption that the model accurately describes the data. When the model is misspecified, though, standard confidence intervals shrink to zero width with increasing data, producing overconfident and potentially misleading constraints. We propose the well-tempered likelihood, which divides the likelihood-ratio test statistic by a goodness-of-fit (GOF) statistic evaluated at the best-fit point. Under correct specification, the GOF is $\mathcal{O}(1)$ and standard inference is recovered. Under misspecification, both the likelihood and the GOF scale as $\mathcal{O}(N)$ for $N$ data points, so their ratio remains $\mathcal{O}(1)$ and the…" />
+<meta name="twitter:description" property="og:description" content="Likelihood-based inference in particle physics, and in the physical sciences more broadly, relies on the assumption that the model accurately describes the data. When the model is misspecified, though, standard confidence intervals shrink to zero width with increasing data, producing overconfident and potentially misleading constraints. We propose the well-tempered likelihood, which divides the likelihood-ratio test statistic by a goodness-of-fit (GOF) statistic evaluated at the best-fit point. Under correct specification, the GOF is $\mathcal{O}(1)$ and standard inference is recovered. Under misspecification, both the likelihood and the GOF scale as $\mathcal{O}(N)$ for $N$ data points, so their ratio remains $\mathcal{O}(1)$ and the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/24/2607.20718.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/24/2607.20718.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-24T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-24T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="The Well-Tempered Likelihood: Honest Confidence Intervals for Misspecified Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Benjamin Nachman, Jesse Thaler"},"dateModified":"2026-07-24T00:00:00+02:00","datePublished":"2026-07-24T00:00:00+02:00","description":"Likelihood-based inference in particle physics, and in the physical sciences more broadly, relies on the assumption that the model accurately describes the data. When the model is misspecified, though, standard confidence intervals shrink to zero width with increasing data, producing overconfident and potentially misleading constraints. We propose the well-tempered likelihood, which divides the likelihood-ratio test statistic by a goodness-of-fit (GOF) statistic evaluated at the best-fit point. Under correct specification, the GOF is $\\mathcal{O}(1)$ and standard inference is recovered. Under misspecification, both the likelihood and the GOF scale as $\\mathcal{O}(N)$ for $N$ data points, so their ratio remains $\\mathcal{O}(1)$ and the…","headline":"The Well-Tempered Likelihood: Honest Confidence Intervals for Misspecified Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/24/2607.20718.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/24/2607.20718.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>The Well-Tempered Likelihood: Honest Confidence Intervals for Misspecified Models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Benjamin Nachman, Jesse Thaler
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      24 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper proposes the well-tempered likelihood for honest confidence intervals in misspecified models.</div><h3>Abstract</h3>
+  <p>Likelihood-based inference in particle physics, and in the physical sciences more broadly, relies on the assumption that the model accurately describes the data. When the model is misspecified, though, standard confidence intervals shrink to zero width with increasing data, producing overconfident and potentially misleading constraints. We propose the well-tempered likelihood, which divides the likelihood-ratio test statistic by a goodness-of-fit (GOF) statistic evaluated at the best-fit point. Under correct specification, the GOF is $\mathcal{O}(1)$ and standard inference is recovered. Under misspecification, both the likelihood and the GOF scale as $\mathcal{O}(N)$ for $N$ data points, so their ratio remains $\mathcal{O}(1)$ and the resulting well-tempered confidence interval self-limits at a floor determined by the model’s inadequacy, essentially reducing the effective sample size. In other words, \textit{all models are correct, as long as your dataset is small enough}. We present binned and unbinned formulations of the well-tempered likelihood—the latter based on a classifier two-sample test—and demonstrate our method on a Gaussian example and on a measurement of the strong coupling constant using synthetic electron-positron collisions.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.20718" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.20718" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
