@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian decomposition using Besov priors</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian decomposition using Besov priors" />
+<meta name="author" content="Andreas Horst, Babak Maboudi Afkham, Yiqiu Dong, Jakob Lemvig" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In many inverse problems, the unknown is composed of multiple components with different regularities, for example, in imaging problems, where the unknown can have both rough and smooth features. We investigate linear Bayesian inverse problems, where the unknown consists of two components: one smooth and one piecewise constant. We model the unknown as a sum of two components and assign individual priors on each component to impose the assumed behavior. We propose and compare two prior models: (i) a combination of a Haar wavelet-based Besov prior and a smoothing Besov prior, and (ii) a hierarchical Gaussian prior on the gradient…" />
+<meta name="twitter:description" property="og:description" content="In many inverse problems, the unknown is composed of multiple components with different regularities, for example, in imaging problems, where the unknown can have both rough and smooth features. We investigate linear Bayesian inverse problems, where the unknown consists of two components: one smooth and one piecewise constant. We model the unknown as a sum of two components and assign individual priors on each component to impose the assumed behavior. We propose and compare two prior models: (i) a combination of a Haar wavelet-based Besov prior and a smoothing Besov prior, and (ii) a hierarchical Gaussian prior on the gradient…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/27/2506.18846.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/27/2506.18846.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-27T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-27T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian decomposition using Besov priors" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Andreas Horst, Babak Maboudi Afkham, Yiqiu Dong, Jakob Lemvig"},"dateModified":"2026-07-27T00:00:00+02:00","datePublished":"2026-07-27T00:00:00+02:00","description":"In many inverse problems, the unknown is composed of multiple components with different regularities, for example, in imaging problems, where the unknown can have both rough and smooth features. We investigate linear Bayesian inverse problems, where the unknown consists of two components: one smooth and one piecewise constant. We model the unknown as a sum of two components and assign individual priors on each component to impose the assumed behavior. We propose and compare two prior models: (i) a combination of a Haar wavelet-based Besov prior and a smoothing Besov prior, and (ii) a hierarchical Gaussian prior on the gradient…","headline":"Bayesian decomposition using Besov priors","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/27/2506.18846.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/27/2506.18846.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian decomposition using Besov priors</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Andreas Horst, Babak Maboudi Afkham, Yiqiu Dong, Jakob Lemvig
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      27 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper proposes Bayesian decomposition methods using Besov priors for inverse problems with multiple components.</div><h3>Abstract</h3>
+  <p>In many inverse problems, the unknown is composed of multiple components with different regularities, for example, in imaging problems, where the unknown can have both rough and smooth features. We investigate linear Bayesian inverse problems, where the unknown consists of two components: one smooth and one piecewise constant. We model the unknown as a sum of two components and assign individual priors on each component to impose the assumed behavior. We propose and compare two prior models: (i) a combination of a Haar wavelet-based Besov prior and a smoothing Besov prior, and (ii) a hierarchical Gaussian prior on the gradient coupled with a smoothing Besov prior. To achieve a balanced reconstruction, we place hyperpriors on the prior parameters and jointly infer both the components and the hyperparameters. We propose Gibbs sampling schemes for posterior inference in both prior models. We demonstrate the capabilities of our approach on 1D and 2D deconvolution problems, where the unknown consists of smooth parts with jumps. The numerical results indicate that our methods improve the reconstruction quality compared to single-prior approaches and that the prior parameters can be successfully estimated to yield a balanced decomposition.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2506.18846" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2506.18846" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
