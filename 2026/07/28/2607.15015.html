@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Priority-preserving augmentation of goodness-of-fit tests by conditional calibration</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Priority-preserving augmentation of goodness-of-fit tests by conditional calibration" />
+<meta name="author" content="Roman Guchenko" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An omnibus goodness-of-fit statistic can fail to exploit simple diagnostic evidence efficiently. For example, under a standard normal null, an exceptionally large observation is direct evidence of a scale or tail departure even when the primary omnibus statistic does not cross its critical value. This motivates a simple augmentation principle: retain an established primary test, but reserve a small part of its null rejection budget for secondary statistics that encode natural features such as variation, asymmetry, or tail behavior. We implement this principle by calibrating each secondary acceptance region under the null conditional on acceptance at all preceding stages. Once…" />
+<meta name="twitter:description" property="og:description" content="An omnibus goodness-of-fit statistic can fail to exploit simple diagnostic evidence efficiently. For example, under a standard normal null, an exceptionally large observation is direct evidence of a scale or tail departure even when the primary omnibus statistic does not cross its critical value. This motivates a simple augmentation principle: retain an established primary test, but reserve a small part of its null rejection budget for secondary statistics that encode natural features such as variation, asymmetry, or tail behavior. We implement this principle by calibrating each secondary acceptance region under the null conditional on acceptance at all preceding stages. Once…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/28/2607.15015.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/28/2607.15015.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-28T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-28T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Priority-preserving augmentation of goodness-of-fit tests by conditional calibration" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Roman Guchenko"},"dateModified":"2026-07-28T00:00:00+02:00","datePublished":"2026-07-28T00:00:00+02:00","description":"An omnibus goodness-of-fit statistic can fail to exploit simple diagnostic evidence efficiently. For example, under a standard normal null, an exceptionally large observation is direct evidence of a scale or tail departure even when the primary omnibus statistic does not cross its critical value. This motivates a simple augmentation principle: retain an established primary test, but reserve a small part of its null rejection budget for secondary statistics that encode natural features such as variation, asymmetry, or tail behavior. We implement this principle by calibrating each secondary acceptance region under the null conditional on acceptance at all preceding stages. Once…","headline":"Priority-preserving augmentation of goodness-of-fit tests by conditional calibration","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/28/2607.15015.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/28/2607.15015.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Priority-preserving augmentation of goodness-of-fit tests by conditional calibration</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Roman Guchenko
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      28 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper proposes a method to augment goodness-of-fit tests with secondary statistics for improved power.</div><h3>Abstract</h3>
+  <p>An omnibus goodness-of-fit statistic can fail to exploit simple diagnostic evidence efficiently. For example, under a standard normal null, an exceptionally large observation is direct evidence of a scale or tail departure even when the primary omnibus statistic does not cross its critical value. This motivates a simple augmentation principle: retain an established primary test, but reserve a small part of its null rejection budget for secondary statistics that encode natural features such as variation, asymmetry, or tail behavior. We implement this principle by calibrating each secondary acceptance region under the null conditional on acceptance at all preceding stages. Once calibrated, the resulting test is a fixed rectangular acceptance rule; the ordering is a mechanism for choosing its boundaries and assigning ordered first-rejection contributions, not a sequential-sampling scheme. An unconditional stage-budget parameterization makes the central trade-off explicit: additional sensitivity is purchased by removing a prespecified, usually small, amount of rejection probability from the primary stage. We establish strong consistency of the quantile-based Monte Carlo calibration and give an observation-specific pooled-rank version with exact randomized finite-m null size. In an experiment under a standard normal null with n=10, we augment the Kolmogorov–Smirnov statistic with sample variance and sample skewness. Assigning only 0.75% of the total Type I error budget to the two secondary statistics changes power against N(0.5,1) from 0.2742 to 0.2733, while increasing power against N(0,0.2^2) from 0.4693 to 0.9827. This focused experiment is a proof of principle rather than an exhaustive comparison of normality tests: a small unconditional allocation to prespecified diagnostics can greatly broaden power while preserving almost all of the primary test’s power.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.15015" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.15015" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

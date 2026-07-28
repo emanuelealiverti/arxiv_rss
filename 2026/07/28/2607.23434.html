@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Two-Timescale Hierarchical Reinforcement Learning for Resilient Operations</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Two-Timescale Hierarchical Reinforcement Learning for Resilient Operations" />
+<meta name="author" content="Young Hyun Cho, Franz Stoll, Will Wei Sun, Guang Lin, Stephan Biller" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Unexpected shocks recur in global operations, requiring decision rules that adapt as market and operating conditions change. Many operational systems also have hierarchical structures in which long-term and short-term decisions pursue a shared objective. We study how hierarchical reinforcement learning can strengthen resilience by adapting these interdependent rules jointly. We develop a two-timescale hierarchical reinforcement learning framework that adapts long-term and short-term policies at their respective time scales. Because the policies are interdependent, we synchronize their updates and prove, to our knowledge, the first convergence guarantees for coupled two-timescale learning. Over $T$ periods, our policies’ average gap from an optimal…" />
+<meta name="twitter:description" property="og:description" content="Unexpected shocks recur in global operations, requiring decision rules that adapt as market and operating conditions change. Many operational systems also have hierarchical structures in which long-term and short-term decisions pursue a shared objective. We study how hierarchical reinforcement learning can strengthen resilience by adapting these interdependent rules jointly. We develop a two-timescale hierarchical reinforcement learning framework that adapts long-term and short-term policies at their respective time scales. Because the policies are interdependent, we synchronize their updates and prove, to our knowledge, the first convergence guarantees for coupled two-timescale learning. Over $T$ periods, our policies’ average gap from an optimal…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/28/2607.23434.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/28/2607.23434.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-28T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-28T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Two-Timescale Hierarchical Reinforcement Learning for Resilient Operations" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Young Hyun Cho, Franz Stoll, Will Wei Sun, Guang Lin, Stephan Biller"},"dateModified":"2026-07-28T00:00:00+02:00","datePublished":"2026-07-28T00:00:00+02:00","description":"Unexpected shocks recur in global operations, requiring decision rules that adapt as market and operating conditions change. Many operational systems also have hierarchical structures in which long-term and short-term decisions pursue a shared objective. We study how hierarchical reinforcement learning can strengthen resilience by adapting these interdependent rules jointly. We develop a two-timescale hierarchical reinforcement learning framework that adapts long-term and short-term policies at their respective time scales. Because the policies are interdependent, we synchronize their updates and prove, to our knowledge, the first convergence guarantees for coupled two-timescale learning. Over $T$ periods, our policies’ average gap from an optimal…","headline":"Two-Timescale Hierarchical Reinforcement Learning for Resilient Operations","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/28/2607.23434.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/28/2607.23434.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Two-Timescale Hierarchical Reinforcement Learning for Resilient Operations</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Young Hyun Cho, Franz Stoll, Will Wei Sun, Guang Lin, Stephan Biller
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME
+      <span class="sep">&middot;</span>
+      28 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper develops a two-timescale hierarchical reinforcement learning framework for adapting long-term and short-term policies in operational systems.</div><h3>Abstract</h3>
+  <p>Unexpected shocks recur in global operations, requiring decision rules that adapt as market and operating conditions change. Many operational systems also have hierarchical structures in which long-term and short-term decisions pursue a shared objective. We study how hierarchical reinforcement learning can strengthen resilience by adapting these interdependent rules jointly. We develop a two-timescale hierarchical reinforcement learning framework that adapts long-term and short-term policies at their respective time scales. Because the policies are interdependent, we synchronize their updates and prove, to our knowledge, the first convergence guarantees for coupled two-timescale learning. Over $T$ periods, our policies’ average gap from an optimal policy pair is $O(T^{-1/2})$, improving to $O(\log T/T)$ when poor decisions produce clearer profit losses. In a used-car case study, inventory replenishment is the long-term decision and customer-arrival pricing the short-term decision. Relative to the strongest partially adaptive benchmark, the framework increases mean profit by $9.2\%$ under joint demand-supply shocks and by $11.8\%$ under a prolonged shock scenario, while maintaining a more stable profit trajectory over time. Short-term adaptation addresses routine seasonality and one-sided disruptions by responding immediately to changing conditions. Under joint demand-supply shocks, however, it is insufficient alone; long-term adaptation is also needed to create favorable conditions for short-term decisions. Joint adaptation thus yields higher and more stable profits through disruption and recovery. Because many organizations already use hierarchical planning, the framework strengthens operational resilience without altering existing decision structures.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.23434" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.23434" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
