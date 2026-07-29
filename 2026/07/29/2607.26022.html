@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Testing Microbiome Community Differences in High Dimensions: A Bootstrap Approach for Compositional Data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Testing Microbiome Community Differences in High Dimensions: A Bootstrap Approach for Compositional Data" />
+<meta name="author" content="Monika Bhattacharjee, Nilanjan Chakraborty, Sayan Das, Sounak Chakraborty, Lei Liu, Yiming Shi, Kristine M. Wylie, Todd N. Wylie, Molly J. Stout" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understanding differences in microbial community structure is critical for uncovering risk factors and mechanisms underlying diseases such as colorectal cancer and preterm birth. Microbiome data present unique statistical challenges because they are compositional in nature, violating assumptions of many classical inference procedures. We propose an empirical bootstrap framework that enables robust hypothesis testing for equality of microbial community means across groups, including two-sample, paired, and multi-sample settings. The method accounts for the simplex structure of microbiome data and provides valid inference even in high-dimensional regimes. Through applications to two large-scale studies, fecal microbiota in colorectal adenoma and cancer patients, and…" />
+<meta name="twitter:description" property="og:description" content="Understanding differences in microbial community structure is critical for uncovering risk factors and mechanisms underlying diseases such as colorectal cancer and preterm birth. Microbiome data present unique statistical challenges because they are compositional in nature, violating assumptions of many classical inference procedures. We propose an empirical bootstrap framework that enables robust hypothesis testing for equality of microbial community means across groups, including two-sample, paired, and multi-sample settings. The method accounts for the simplex structure of microbiome data and provides valid inference even in high-dimensional regimes. Through applications to two large-scale studies, fecal microbiota in colorectal adenoma and cancer patients, and…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/29/2607.26022.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/29/2607.26022.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-29T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-29T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Testing Microbiome Community Differences in High Dimensions: A Bootstrap Approach for Compositional Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Monika Bhattacharjee, Nilanjan Chakraborty, Sayan Das, Sounak Chakraborty, Lei Liu, Yiming Shi, Kristine M. Wylie, Todd N. Wylie, Molly J. Stout"},"dateModified":"2026-07-29T00:00:00+02:00","datePublished":"2026-07-29T00:00:00+02:00","description":"Understanding differences in microbial community structure is critical for uncovering risk factors and mechanisms underlying diseases such as colorectal cancer and preterm birth. Microbiome data present unique statistical challenges because they are compositional in nature, violating assumptions of many classical inference procedures. We propose an empirical bootstrap framework that enables robust hypothesis testing for equality of microbial community means across groups, including two-sample, paired, and multi-sample settings. The method accounts for the simplex structure of microbiome data and provides valid inference even in high-dimensional regimes. Through applications to two large-scale studies, fecal microbiota in colorectal adenoma and cancer patients, and…","headline":"Testing Microbiome Community Differences in High Dimensions: A Bootstrap Approach for Compositional Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/29/2607.26022.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/29/2607.26022.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Testing Microbiome Community Differences in High Dimensions: A Bootstrap Approach for Compositional Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Monika Bhattacharjee, Nilanjan Chakraborty, Sayan Das, Sounak Chakraborty, Lei Liu, Yiming Shi, Kristine M. Wylie, Todd N. Wylie, Molly J. Stout
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      29 Jul 2026
+    </div>
+  </div><div class="summary-box">Proposes a bootstrap framework for hypothesis testing in compositional microbiome data.</div><h3>Abstract</h3>
+  <p>Understanding differences in microbial community structure is critical for uncovering risk factors and mechanisms underlying diseases such as colorectal cancer and preterm birth. Microbiome data present unique statistical challenges because they are compositional in nature, violating assumptions of many classical inference procedures. We propose an empirical bootstrap framework that enables robust hypothesis testing for equality of microbial community means across groups, including two-sample, paired, and multi-sample settings. The method accounts for the simplex structure of microbiome data and provides valid inference even in high-dimensional regimes. Through applications to two large-scale studies, fecal microbiota in colorectal adenoma and cancer patients, and vaginal microbiota in pregnancy with preterm birth outcomes-we demonstrate that our approach identifies clinically meaningful differences that conventional methods fail to detect, such as age-related differences in adenoma prevalence and race-associated disparities in vaginal microbiome composition. These results highlight the potential of resampling-based inference for advancing microbiome research, improving reproducibility, and uncovering clinically relevant microbial signatures.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.26022" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.26022" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
