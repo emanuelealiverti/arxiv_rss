@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Calibrate Globally, Measure Everywhere: Scaling LLM-Based Prevalence Measurement Across A/B Experiments</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Calibrate Globally, Measure Everywhere: Scaling LLM-Based Prevalence Measurement Across A/B Experiments" />
+<meta name="author" content="Zehao Xu, Tony Paek, Kevin O'Sullivan, Attila Dobi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Online media platforms track the share of impressions associated with content attributes, or prevalence, to evaluate trade-offs and set guardrails in A/B experiments. LLM-based labeling provides a high-fidelity reference measurement, but is cost-prohibitive to run per experiment, per arm, per segment, and per day on a platform with hundreds of concurrent experiments. We describe a surrogate-based prevalence measurement system deployed in Pinterest’s experimentation platform. The contribution is system-level rather than estimator-level: the system maintains a single global calibration of ML score buckets, continuously refreshed from a recurring LLM-labeled stream, and reuses the resulting bucket-level prevalences across every experiment via a…" />
+<meta name="twitter:description" property="og:description" content="Online media platforms track the share of impressions associated with content attributes, or prevalence, to evaluate trade-offs and set guardrails in A/B experiments. LLM-based labeling provides a high-fidelity reference measurement, but is cost-prohibitive to run per experiment, per arm, per segment, and per day on a platform with hundreds of concurrent experiments. We describe a surrogate-based prevalence measurement system deployed in Pinterest’s experimentation platform. The contribution is system-level rather than estimator-level: the system maintains a single global calibration of ML score buckets, continuously refreshed from a recurring LLM-labeled stream, and reuses the resulting bucket-level prevalences across every experiment via a…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/30/2602.16111.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/30/2602.16111.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-30T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-30T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Calibrate Globally, Measure Everywhere: Scaling LLM-Based Prevalence Measurement Across A/B Experiments" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zehao Xu, Tony Paek, Kevin O'Sullivan, Attila Dobi"},"dateModified":"2026-07-30T00:00:00+02:00","datePublished":"2026-07-30T00:00:00+02:00","description":"Online media platforms track the share of impressions associated with content attributes, or prevalence, to evaluate trade-offs and set guardrails in A/B experiments. LLM-based labeling provides a high-fidelity reference measurement, but is cost-prohibitive to run per experiment, per arm, per segment, and per day on a platform with hundreds of concurrent experiments. We describe a surrogate-based prevalence measurement system deployed in Pinterest’s experimentation platform. The contribution is system-level rather than estimator-level: the system maintains a single global calibration of ML score buckets, continuously refreshed from a recurring LLM-labeled stream, and reuses the resulting bucket-level prevalences across every experiment via a…","headline":"Calibrate Globally, Measure Everywhere: Scaling LLM-Based Prevalence Measurement Across A/B Experiments","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/30/2602.16111.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/30/2602.16111.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Calibrate Globally, Measure Everywhere: Scaling LLM-Based Prevalence Measurement Across A/B Experiments</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Zehao Xu, Tony Paek, Kevin O'Sullivan, Attila Dobi
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      30 Jul 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Online media platforms track the share of impressions associated with content attributes, or prevalence, to evaluate trade-offs and set guardrails in A/B experiments. LLM-based labeling provides a high-fidelity reference measurement, but is cost-prohibitive to run per experiment, per arm, per segment, and per day on a platform with hundreds of concurrent experiments. We describe a surrogate-based prevalence measurement system deployed in Pinterest’s experimentation platform. The contribution is system-level rather than estimator-level: the system maintains a single global calibration of ML score buckets, continuously refreshed from a recurring LLM-labeled stream, and reuses the resulting bucket-level prevalences across every experiment via a per-experiment SQL metric and a delta-focused dashboard. Because the calibration is derived from the platform’s daily-batch prevalence samples, it remains representative of production traffic as distributions drift, and in Pinterest’s deployment it incurs zero incremental labeling cost. Teams without such infrastructure can instantiate the same pattern with a recurring calibration-labeling workflow whose cost is amortized across all downstream experiments rather than paid per experiment, arm, segment, and day. The system serves ~100 experiments and ~250 arms per day across six calibrated content categories, including a holdout program. Relative to per-experiment LLM labeling, which in practice yields a one-shot read per arm on a small subset of experiments, the surrogate provides daily per-arm prevalence on over 20$\times$ as many concurrent arms under the same labeling budget. Across roughly 300 production audits, the surrogate’s 95\% confidence interval contains the LLM-based reference point estimate in 92\% of evaluations, and day-level delta aggregation recovers 2–5\% relative shifts that no single per-arm LLM measurement can detect.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2602.16111" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2602.16111" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
