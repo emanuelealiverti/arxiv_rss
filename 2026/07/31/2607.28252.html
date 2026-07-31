@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Improving Discrepancy Measures for Global Sensitivity Analysis</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Improving Discrepancy Measures for Global Sensitivity Analysis" />
+<meta name="author" content="Samuele Lo Piano, Alessio Lachi, Razi Sheikholeslami, Arnald Puy, Pamphile Tupui Roy, Andrea Saltelli" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sensitivity analysis methods based on Sobol’ total-order indices ($T_i$) are well-founded but computationally demanding. A recently proposed ersatz discrepancy measure offers a cheaper alternative by quantifying deviations from uniformity in input–output scatterplots, yet lacks theoretical grounding and has not been benchmarked against other data-given estimators. We introduce an adjusted ersatz discrepancy that rank-transforms the output before gridding and imputes isolated empty cells via a Moore-neighbourhood rule, substantially improving agreement with $T_i$. We prove, via a copula-theoretic argument, that the adjustment is a consistent screening statistic with a zero condition, an explicit full-support ceiling bounding its use as a magnitude estimator,…" />
+<meta name="twitter:description" property="og:description" content="Sensitivity analysis methods based on Sobol’ total-order indices ($T_i$) are well-founded but computationally demanding. A recently proposed ersatz discrepancy measure offers a cheaper alternative by quantifying deviations from uniformity in input–output scatterplots, yet lacks theoretical grounding and has not been benchmarked against other data-given estimators. We introduce an adjusted ersatz discrepancy that rank-transforms the output before gridding and imputes isolated empty cells via a Moore-neighbourhood rule, substantially improving agreement with $T_i$. We prove, via a copula-theoretic argument, that the adjustment is a consistent screening statistic with a zero condition, an explicit full-support ceiling bounding its use as a magnitude estimator,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/31/2607.28252.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/31/2607.28252.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-31T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-31T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Improving Discrepancy Measures for Global Sensitivity Analysis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Samuele Lo Piano, Alessio Lachi, Razi Sheikholeslami, Arnald Puy, Pamphile Tupui Roy, Andrea Saltelli"},"dateModified":"2026-07-31T00:00:00+02:00","datePublished":"2026-07-31T00:00:00+02:00","description":"Sensitivity analysis methods based on Sobol’ total-order indices ($T_i$) are well-founded but computationally demanding. A recently proposed ersatz discrepancy measure offers a cheaper alternative by quantifying deviations from uniformity in input–output scatterplots, yet lacks theoretical grounding and has not been benchmarked against other data-given estimators. We introduce an adjusted ersatz discrepancy that rank-transforms the output before gridding and imputes isolated empty cells via a Moore-neighbourhood rule, substantially improving agreement with $T_i$. We prove, via a copula-theoretic argument, that the adjustment is a consistent screening statistic with a zero condition, an explicit full-support ceiling bounding its use as a magnitude estimator,…","headline":"Improving Discrepancy Measures for Global Sensitivity Analysis","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/31/2607.28252.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/31/2607.28252.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Improving Discrepancy Measures for Global Sensitivity Analysis</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Samuele Lo Piano, Alessio Lachi, Razi Sheikholeslami, Arnald Puy, Pamphile Tupui Roy, Andrea Saltelli
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      31 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper introduces an adjusted ersatz discrepancy measure for global sensitivity analysis.</div><h3>Abstract</h3>
+  <p>Sensitivity analysis methods based on Sobol’ total-order indices ($T_i$) are well-founded but computationally demanding. A recently proposed ersatz discrepancy measure offers a cheaper alternative by quantifying deviations from uniformity in input–output scatterplots, yet lacks theoretical grounding and has not been benchmarked against other data-given estimators. We introduce an adjusted ersatz discrepancy that rank-transforms the output before gridding and imputes isolated empty cells via a Moore-neighbourhood rule, substantially improving agreement with $T_i$. We prove, via a copula-theoretic argument, that the adjustment is a consistent screening statistic with a zero condition, an explicit full-support ceiling bounding its use as a magnitude estimator, and a documented failure mode for purely interaction-mediated dependencies. We benchmark the adjusted ersatz against three zero-extra-cost comparators – polynomial chaos expansion (PCE), PCE-derived Shapley effects, and a PAWN-type maximum Kolmogorov–Smirnov index – across seven benchmark functions and a real-world hydrological model. The adjusted ersatz is the only estimator achieving perfect rank agreement on a non-smooth hydrological output where PCE is misspecified. A joint sensitivity analysis of five algorithmic parameters shows grid resolution, not the imputation threshold or sampling method, drives performance variability.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.28252" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.28252" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

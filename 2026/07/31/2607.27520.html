@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Continuous Latent Ornstein-Uhlenbeck Dynamics Framework: A Scalable Latent Process Model for Multivariate Longitudinal Categorical Data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="The Continuous Latent Ornstein-Uhlenbeck Dynamics Framework: A Scalable Latent Process Model for Multivariate Longitudinal Categorical Data" />
+<meta name="author" content="Zhennan Wu, Yijie Wang, Xiaoqing Huang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Longitudinal biomedical studies increasingly collect irregularly sampled, multivariate categorical data that imperfectly reflect disease progression. This presents three key analytical challenges: highly heterogeneous disease progression across subjects; the presence of unobserved, co-evolving latent variables driving multiple measurements; and highly irregular sampling intervals both within and across patients. To address those challenges, we present the Continuous Latent Ornstein-Uhlenbeck Dynamics (CLOUD) framework for modeling complex disease trajectories from multivariate longitudinal categorical data. CLOUD links multivariate categorical observations to underlying latent functional domains and characterizes their coupled temporal evolution via the integration of a measurement component adjusted from item response theory (IRT) with…" />
+<meta name="twitter:description" property="og:description" content="Longitudinal biomedical studies increasingly collect irregularly sampled, multivariate categorical data that imperfectly reflect disease progression. This presents three key analytical challenges: highly heterogeneous disease progression across subjects; the presence of unobserved, co-evolving latent variables driving multiple measurements; and highly irregular sampling intervals both within and across patients. To address those challenges, we present the Continuous Latent Ornstein-Uhlenbeck Dynamics (CLOUD) framework for modeling complex disease trajectories from multivariate longitudinal categorical data. CLOUD links multivariate categorical observations to underlying latent functional domains and characterizes their coupled temporal evolution via the integration of a measurement component adjusted from item response theory (IRT) with…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/07/31/2607.27520.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/07/31/2607.27520.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-31T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-07-31T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="The Continuous Latent Ornstein-Uhlenbeck Dynamics Framework: A Scalable Latent Process Model for Multivariate Longitudinal Categorical Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zhennan Wu, Yijie Wang, Xiaoqing Huang"},"dateModified":"2026-07-31T00:00:00+02:00","datePublished":"2026-07-31T00:00:00+02:00","description":"Longitudinal biomedical studies increasingly collect irregularly sampled, multivariate categorical data that imperfectly reflect disease progression. This presents three key analytical challenges: highly heterogeneous disease progression across subjects; the presence of unobserved, co-evolving latent variables driving multiple measurements; and highly irregular sampling intervals both within and across patients. To address those challenges, we present the Continuous Latent Ornstein-Uhlenbeck Dynamics (CLOUD) framework for modeling complex disease trajectories from multivariate longitudinal categorical data. CLOUD links multivariate categorical observations to underlying latent functional domains and characterizes their coupled temporal evolution via the integration of a measurement component adjusted from item response theory (IRT) with…","headline":"The Continuous Latent Ornstein-Uhlenbeck Dynamics Framework: A Scalable Latent Process Model for Multivariate Longitudinal Categorical Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/31/2607.27520.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/07/31/2607.27520.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>The Continuous Latent Ornstein-Uhlenbeck Dynamics Framework: A Scalable Latent Process Model for Multivariate Longitudinal Categorical Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Zhennan Wu, Yijie Wang, Xiaoqing Huang
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      31 Jul 2026
+    </div>
+  </div><div class="summary-box">The paper presents the Continuous Latent Ornstein-Uhlenbeck Dynamics framework for modeling complex disease trajectories.</div><h3>Abstract</h3>
+  <p>Longitudinal biomedical studies increasingly collect irregularly sampled, multivariate categorical data that imperfectly reflect disease progression. This presents three key analytical challenges: highly heterogeneous disease progression across subjects; the presence of unobserved, co-evolving latent variables driving multiple measurements; and highly irregular sampling intervals both within and across patients. To address those challenges, we present the Continuous Latent Ornstein-Uhlenbeck Dynamics (CLOUD) framework for modeling complex disease trajectories from multivariate longitudinal categorical data. CLOUD links multivariate categorical observations to underlying latent functional domains and characterizes their coupled temporal evolution via the integration of a measurement component adjusted from item response theory (IRT) with a dynamic component based on multivariate Ornstein-Uhlenbeck (OU) processes. Methodologically, we introduce a time-inhomogeneous OU process that incorporated covariate-dependent components into the shifting mean function of the latent dynamics, allowing baseline biomarkers to modulate individual-level disease trajectories. We further propose a scalable parameterization of the OU drift matrix that enabled valid interaction modeling without restricting the number of latent functional domains. We establish theoretical properties of the proposed framework, including the analytical tractability of the model, the generality of the drift matrix reparameterization, and the identifiability of the entire model. Through simulation studies and an application to longitudinal amyotrophic lateral sclerosis (ALS) clinical data, we demonstrate that CLOUD provided a principled and flexible tool for characterizing subject-specific disease evolution across multiple interacting functional domains.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.27520" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.27520" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
