@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Conditioning-Depth Diagnostics for Hidden Memory in Temporal Causal Discovery</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Conditioning-Depth Diagnostics for Hidden Memory in Temporal Causal Discovery" />
+<meta name="author" content="S. A. Adedayo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reliable causal discovery in timeseries requires conditioning sets that capture the system state. When predictive history is omitted, residual dependence can appear as direct causal links. We test state adequacy by measuring how inferred graphs change as conditioning depth increases while the reported causal lag stays fixed. Under an adequate finite-order Markov representation, graphs should stabilize once enough observed history is conditioned on; latent common drive, omitted lags, nonstationarity, and measurement dynamics can instead produce depth sensitivity. We formalize this idea with graph instability statistics and evaluate c-GC and c-GC, the two learners whose depth parameter implements a matched fixed-horizon…" />
+<meta name="twitter:description" property="og:description" content="Reliable causal discovery in timeseries requires conditioning sets that capture the system state. When predictive history is omitted, residual dependence can appear as direct causal links. We test state adequacy by measuring how inferred graphs change as conditioning depth increases while the reported causal lag stays fixed. Under an adequate finite-order Markov representation, graphs should stabilize once enough observed history is conditioned on; latent common drive, omitted lags, nonstationarity, and measurement dynamics can instead produce depth sensitivity. We formalize this idea with graph instability statistics and evaluate c-GC and c-GC, the two learners whose depth parameter implements a matched fixed-horizon…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/03/2606.01214.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/03/2606.01214.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-03T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-03T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Conditioning-Depth Diagnostics for Hidden Memory in Temporal Causal Discovery" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"S. A. Adedayo"},"dateModified":"2026-08-03T00:00:00+02:00","datePublished":"2026-08-03T00:00:00+02:00","description":"Reliable causal discovery in timeseries requires conditioning sets that capture the system state. When predictive history is omitted, residual dependence can appear as direct causal links. We test state adequacy by measuring how inferred graphs change as conditioning depth increases while the reported causal lag stays fixed. Under an adequate finite-order Markov representation, graphs should stabilize once enough observed history is conditioned on; latent common drive, omitted lags, nonstationarity, and measurement dynamics can instead produce depth sensitivity. We formalize this idea with graph instability statistics and evaluate c-GC and c-GC, the two learners whose depth parameter implements a matched fixed-horizon…","headline":"Conditioning-Depth Diagnostics for Hidden Memory in Temporal Causal Discovery","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/03/2606.01214.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/03/2606.01214.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Conditioning-Depth Diagnostics for Hidden Memory in Temporal Causal Discovery</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      S. A. Adedayo
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      3 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper proposes conditioning-depth diagnostics for detecting hidden memory in temporal causal discovery.</div><h3>Abstract</h3>
+  <p>Reliable causal discovery in timeseries requires conditioning sets that capture the system state. When predictive history is omitted, residual dependence can appear as direct causal links. We test state adequacy by measuring how inferred graphs change as conditioning depth increases while the reported causal lag stays fixed. Under an adequate finite-order Markov representation, graphs should stabilize once enough observed history is conditioned on; latent common drive, omitted lags, nonstationarity, and measurement dynamics can instead produce depth sensitivity. We formalize this idea with graph instability statistics and evaluate c-GC and c-GC<em>, the two learners whose depth parameter implements a matched fixed-horizon history intervention. PCMCI+ and JPCMCI+ are excluded from the primary comparison because adaptive parent selection makes nominal depth edge-specific. In paired simulations, a clean order-1 process was stable in every repeat, whereas an AR(1) latent common driver produced positive instability in all c-GC repeats and eight of ten c-GC</em> repeats. In calcium imaging recordings, connectivity drops at the first transition beyond the one-lag baseline and then levels off, but B=200 bootstrap calibration does not reject the fitted order-1 null. The workflow therefore flags hidden memory or observed-state inadequacy without identifying the generating mechanism or recovering a latent graph.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.01214" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.01214" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

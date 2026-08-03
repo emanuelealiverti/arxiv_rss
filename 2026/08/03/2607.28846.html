@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Upper Confidence Bounds for the Prediction Error of Kernel Ridge Regression via Gaussian Refitting</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Upper Confidence Bounds for the Prediction Error of Kernel Ridge Regression via Gaussian Refitting" />
+<meta name="author" content="Yijin Ni, Xiaoming Huo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Assessing a single model fit requires a computable upper confidence bound for the gap between the fit and the unknown truth, as mean estimates ignore realization variance. Standard cross-validation margins are bottlenecked at order $n^{-1/2}$ by noise fluctuations, even when the true error shrinks faster. While wild refitting cancels this noise level, existing Rademacher sign methods degenerate for kernel ridge regression and rely on unobservable quantities. We propose a Gaussian refit for kernel ridge regression. By Anderson’s inequality, the fit movement is monotone in the noise sizes, yielding a computable tail bound. Assuming only symmetric noise, the bound requires no…" />
+<meta name="twitter:description" property="og:description" content="Assessing a single model fit requires a computable upper confidence bound for the gap between the fit and the unknown truth, as mean estimates ignore realization variance. Standard cross-validation margins are bottlenecked at order $n^{-1/2}$ by noise fluctuations, even when the true error shrinks faster. While wild refitting cancels this noise level, existing Rademacher sign methods degenerate for kernel ridge regression and rely on unobservable quantities. We propose a Gaussian refit for kernel ridge regression. By Anderson’s inequality, the fit movement is monotone in the noise sizes, yielding a computable tail bound. Assuming only symmetric noise, the bound requires no…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/03/2607.28846.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/03/2607.28846.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-03T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-03T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Upper Confidence Bounds for the Prediction Error of Kernel Ridge Regression via Gaussian Refitting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yijin Ni, Xiaoming Huo"},"dateModified":"2026-08-03T00:00:00+02:00","datePublished":"2026-08-03T00:00:00+02:00","description":"Assessing a single model fit requires a computable upper confidence bound for the gap between the fit and the unknown truth, as mean estimates ignore realization variance. Standard cross-validation margins are bottlenecked at order $n^{-1/2}$ by noise fluctuations, even when the true error shrinks faster. While wild refitting cancels this noise level, existing Rademacher sign methods degenerate for kernel ridge regression and rely on unobservable quantities. We propose a Gaussian refit for kernel ridge regression. By Anderson’s inequality, the fit movement is monotone in the noise sizes, yielding a computable tail bound. Assuming only symmetric noise, the bound requires no…","headline":"Upper Confidence Bounds for the Prediction Error of Kernel Ridge Regression via Gaussian Refitting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/03/2607.28846.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/03/2607.28846.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Upper Confidence Bounds for the Prediction Error of Kernel Ridge Regression via Gaussian Refitting</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Yijin Ni, Xiaoming Huo
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      3 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper proposes a Gaussian refit method for kernel ridge regression with a computable upper confidence bound.</div><h3>Abstract</h3>
+  <p>Assessing a single model fit requires a computable upper confidence bound for the gap between the fit and the unknown truth, as mean estimates ignore realization variance. Standard cross-validation margins are bottlenecked at order $n^{-1/2}$ by noise fluctuations, even when the true error shrinks faster. While wild refitting cancels this noise level, existing Rademacher sign methods degenerate for kernel ridge regression and rely on unobservable quantities. We propose a Gaussian refit for kernel ridge regression. By Anderson’s inequality, the fit movement is monotone in the noise sizes, yielding a computable tail bound. Assuming only symmetric noise, the bound requires no moment assumptions and is calibrated at any confidence level via order statistics. Theoretically, using a worst-case envelope, the bound contracts at the minimax rate $O_P(n^{-2s/(2s+1)})$, correctly matching the prediction error. Empirically, using a practical data-driven envelope, the bound maintains full coverage within twice the true $95\%$ error quantile. By contrast, cross-validation exceeds this quantile by factors up to $51$, and by hundreds under infinite-variance noise. The procedure extends empirically to nonlinear constrained estimators and real spatial data.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.28846" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.28846" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
