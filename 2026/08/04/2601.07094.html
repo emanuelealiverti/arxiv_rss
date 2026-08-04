@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Robust Bayesian Optimization via Tempered Posteriors</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Robust Bayesian Optimization via Tempered Posteriors" />
+<meta name="author" content="Jiguang Li, Hengrui Luo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian optimization (BO) iteratively fits a Gaussian process (GP) surrogate to accumulated evaluations and selects new queries via an acquisition function. Under local misspecification, this feedback loop can produce overconfidence precisely in the region guiding subsequent decisions. We develop a tempered GP-based BO framework that raises the likelihood to a power $\alpha\in(0,1]$. For a generalized family of improvement acquisitions indexed by $g$, including probability of improvement (PI, $g=0$) and expected improvement (EI, $g=1$), we derive finite-time cumulative regret bounds with adaptively learned kernel hyperparameters. The analysis shows that tempering reduces the noise-driven confidence and information-gain contributions to regret, while a…" />
+<meta name="twitter:description" property="og:description" content="Bayesian optimization (BO) iteratively fits a Gaussian process (GP) surrogate to accumulated evaluations and selects new queries via an acquisition function. Under local misspecification, this feedback loop can produce overconfidence precisely in the region guiding subsequent decisions. We develop a tempered GP-based BO framework that raises the likelihood to a power $\alpha\in(0,1]$. For a generalized family of improvement acquisitions indexed by $g$, including probability of improvement (PI, $g=0$) and expected improvement (EI, $g=1$), we derive finite-time cumulative regret bounds with adaptively learned kernel hyperparameters. The analysis shows that tempering reduces the noise-driven confidence and information-gain contributions to regret, while a…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/04/2601.07094.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/04/2601.07094.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-04T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-04T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Robust Bayesian Optimization via Tempered Posteriors" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jiguang Li, Hengrui Luo"},"dateModified":"2026-08-04T00:00:00+02:00","datePublished":"2026-08-04T00:00:00+02:00","description":"Bayesian optimization (BO) iteratively fits a Gaussian process (GP) surrogate to accumulated evaluations and selects new queries via an acquisition function. Under local misspecification, this feedback loop can produce overconfidence precisely in the region guiding subsequent decisions. We develop a tempered GP-based BO framework that raises the likelihood to a power $\\alpha\\in(0,1]$. For a generalized family of improvement acquisitions indexed by $g$, including probability of improvement (PI, $g=0$) and expected improvement (EI, $g=1$), we derive finite-time cumulative regret bounds with adaptively learned kernel hyperparameters. The analysis shows that tempering reduces the noise-driven confidence and information-gain contributions to regret, while a…","headline":"Robust Bayesian Optimization via Tempered Posteriors","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/04/2601.07094.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/04/2601.07094.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Robust Bayesian Optimization via Tempered Posteriors</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Jiguang Li, Hengrui Luo
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      4 Aug 2026
+    </div>
+  </div><div class="summary-box">Develops a tempered GP-based Bayesian optimization framework to reduce overconfidence under local misspecification.</div><h3>Abstract</h3>
+  <p>Bayesian optimization (BO) iteratively fits a Gaussian process (GP) surrogate to accumulated evaluations and selects new queries via an acquisition function. Under local misspecification, this feedback loop can produce overconfidence precisely in the region guiding subsequent decisions. We develop a tempered GP-based BO framework that raises the likelihood to a power $\alpha\in(0,1]$. For a generalized family of improvement acquisitions indexed by $g$, including probability of improvement (PI, $g=0$) and expected improvement (EI, $g=1$), we derive finite-time cumulative regret bounds with adaptively learned kernel hyperparameters. The analysis shows that tempering reduces the noise-driven confidence and information-gain contributions to regret, while a deterministic RKHS term prevents arbitrarily aggressive tempering from being uniformly beneficial. It also clarifies the role of the acquisition function: positive-order $g$-EI rules preserve the usual information-gain regret behavior, whereas zero-jitter PI is more exploitative and admits a weaker worst-case guarantee. Motivated by our theoretic findings, we propose a prequential procedure for selecting $\alpha$ online: it decreases $\alpha$ when realized prediction errors exceed model-implied uncertainty and returns $\alpha$ toward one as calibration improves. Empirical results demonstrate that tempering provides a practical yet theoretically grounded tool for stabilizing BO surrogates under localized sampling.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2601.07094" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2601.07094" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
