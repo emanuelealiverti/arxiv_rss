@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Estimating the Conditional Forecast-Revision Scale in Sequential Models: Local-Smoothing Limits, Matched Models, and Cost--Accuracy Trade-offs</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Estimating the Conditional Forecast-Revision Scale in Sequential Models: Local-Smoothing Limits, Matched Models, and Cost–Accuracy Trade-offs" />
+<meta name="author" content="Hui-Mean Foo, Yuan-chin Ivan Chang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The \emph{conditional forecast-revision scale} $\It={\Var(\E[X_{t+1}\mid\F_t]\mid\F_{t-1})}^{1/2}$ measures the history-specific size of the forecast update induced by observing $X_t$. Because it is a conditional second moment built from two unknown conditional means, it is not directly observed. We study which estimator of $\It$ should be used under different structural assumptions and computational budgets. The comparison includes a block bootstrap, a conditional-variance model, a fitted state-space model, two $O(1)$ streaming smoothers, and the forget gate of an already-trained recurrent network. An error decomposition separates one-step-prediction error from conditional-second-moment tracking error. We show that externally tuned lag-only smoothers can be inconsistent when $\It$ changes…" />
+<meta name="twitter:description" property="og:description" content="The \emph{conditional forecast-revision scale} $\It={\Var(\E[X_{t+1}\mid\F_t]\mid\F_{t-1})}^{1/2}$ measures the history-specific size of the forecast update induced by observing $X_t$. Because it is a conditional second moment built from two unknown conditional means, it is not directly observed. We study which estimator of $\It$ should be used under different structural assumptions and computational budgets. The comparison includes a block bootstrap, a conditional-variance model, a fitted state-space model, two $O(1)$ streaming smoothers, and the forget gate of an already-trained recurrent network. An error decomposition separates one-step-prediction error from conditional-second-moment tracking error. We show that externally tuned lag-only smoothers can be inconsistent when $\It$ changes…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/05/2608.03163.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/05/2608.03163.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-05T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-05T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Estimating the Conditional Forecast-Revision Scale in Sequential Models: Local-Smoothing Limits, Matched Models, and Cost–Accuracy Trade-offs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hui-Mean Foo, Yuan-chin Ivan Chang"},"dateModified":"2026-08-05T00:00:00+02:00","datePublished":"2026-08-05T00:00:00+02:00","description":"The \\emph{conditional forecast-revision scale} $\\It={\\Var(\\E[X_{t+1}\\mid\\F_t]\\mid\\F_{t-1})}^{1/2}$ measures the history-specific size of the forecast update induced by observing $X_t$. Because it is a conditional second moment built from two unknown conditional means, it is not directly observed. We study which estimator of $\\It$ should be used under different structural assumptions and computational budgets. The comparison includes a block bootstrap, a conditional-variance model, a fitted state-space model, two $O(1)$ streaming smoothers, and the forget gate of an already-trained recurrent network. An error decomposition separates one-step-prediction error from conditional-second-moment tracking error. We show that externally tuned lag-only smoothers can be inconsistent when $\\It$ changes…","headline":"Estimating the Conditional Forecast-Revision Scale in Sequential Models: Local-Smoothing Limits, Matched Models, and Cost–Accuracy Trade-offs","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/05/2608.03163.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/05/2608.03163.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Estimating the Conditional Forecast-Revision Scale in Sequential Models: Local-Smoothing Limits, Matched Models, and Cost--Accuracy Trade-offs</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Hui-Mean Foo, Yuan-chin Ivan Chang
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      5 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper compares estimators for the conditional forecast-revision scale in sequential models.</div><h3>Abstract</h3>
+  <p>The \emph{conditional forecast-revision scale} $\It={\Var(\E[X_{t+1}\mid\F_t]\mid\F_{t-1})}^{1/2}$ measures the history-specific size of the forecast update induced by observing $X_t$. Because it is a conditional second moment built from two unknown conditional means, it is not directly observed. We study which estimator of $\It$ should be used under different structural assumptions and computational budgets. The comparison includes a block bootstrap, a conditional-variance model, a fitted state-space model, two $O(1)$ streaming smoothers, and the forget gate of an already-trained recurrent network. An error decomposition separates one-step-prediction error from conditional-second-moment tracking error. We show that externally tuned lag-only smoothers can be inconsistent when $\It$ changes at the sampling scale, although they attain the usual $T^{-2/3}$ mean-squared-error rate ($T^{-1/3}$ for $\It$) under slow variation; a correctly specified state-space estimator escapes this limit by using the current state. In volatility-driven designs, a cheap conditional-variance model is more accurate and over one hundred times cheaper \emph{as a point estimator} than the implemented block bootstrap, whose value lies in the sampling distribution it provides rather than in point tracking. In state-driven designs, only the structurally matched filter recovers the fast variation. Read directly, a trained network’s forget gate does not track $\It$ — though a supervised linear probe on the full gate vector does, so $\It$ is linearly decodable but not available for free. These results yield a practical rule: identify the conditional-second-moment structure, match the estimator to it, and then choose the least costly adequate method.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.03163" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.03163" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
