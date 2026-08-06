@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Diffeomorphic Markov Chain Monte Carlo: fast mixing for heavy-tailed distributions</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Diffeomorphic Markov Chain Monte Carlo: fast mixing for heavy-tailed distributions" />
+<meta name="author" content="Miha Brešar, Aleksandar Mijatović" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce a new class of uniformly ergodic MCMC algorithms, termed Diffeomorphic Contraction Sampler (DCS), and provide fast non-asymptotic mixing guarantees for DCS targeting distributions on $\R^d$ with arbitrarily heavy polynomial tails. DCS provides a solution to a well-known problem for MCMC samplers, which typically struggle with the combination of unbounded high-dimensional state space and vanishing gradients. The DCS pulls back a target on $\R^d$ onto a Euclidean ball $B(R)\subset\R^d$ and then samples from the transformed density on the convex set $B(R)$ via algorithms such as the Ball Walk, Hit-and-Run and others. A radial diffeomorphic contraction is chosen so that…" />
+<meta name="twitter:description" property="og:description" content="We introduce a new class of uniformly ergodic MCMC algorithms, termed Diffeomorphic Contraction Sampler (DCS), and provide fast non-asymptotic mixing guarantees for DCS targeting distributions on $\R^d$ with arbitrarily heavy polynomial tails. DCS provides a solution to a well-known problem for MCMC samplers, which typically struggle with the combination of unbounded high-dimensional state space and vanishing gradients. The DCS pulls back a target on $\R^d$ onto a Euclidean ball $B(R)\subset\R^d$ and then samples from the transformed density on the convex set $B(R)$ via algorithms such as the Ball Walk, Hit-and-Run and others. A radial diffeomorphic contraction is chosen so that…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/06/2608.04284.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/06/2608.04284.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-06T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-06T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Diffeomorphic Markov Chain Monte Carlo: fast mixing for heavy-tailed distributions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Miha Brešar, Aleksandar Mijatović"},"dateModified":"2026-08-06T00:00:00+02:00","datePublished":"2026-08-06T00:00:00+02:00","description":"We introduce a new class of uniformly ergodic MCMC algorithms, termed Diffeomorphic Contraction Sampler (DCS), and provide fast non-asymptotic mixing guarantees for DCS targeting distributions on $\\R^d$ with arbitrarily heavy polynomial tails. DCS provides a solution to a well-known problem for MCMC samplers, which typically struggle with the combination of unbounded high-dimensional state space and vanishing gradients. The DCS pulls back a target on $\\R^d$ onto a Euclidean ball $B(R)\\subset\\R^d$ and then samples from the transformed density on the convex set $B(R)$ via algorithms such as the Ball Walk, Hit-and-Run and others. A radial diffeomorphic contraction is chosen so that…","headline":"Diffeomorphic Markov Chain Monte Carlo: fast mixing for heavy-tailed distributions","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/06/2608.04284.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/06/2608.04284.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Diffeomorphic Markov Chain Monte Carlo: fast mixing for heavy-tailed distributions</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Miha Brešar, Aleksandar Mijatović
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      6 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper introduces a new MCMC algorithm, Diffeomorphic Contraction Sampler, for heavy-tailed distributions.</div><h3>Abstract</h3>
+  <p>We introduce a new class of uniformly ergodic MCMC algorithms, termed Diffeomorphic Contraction Sampler (DCS), and provide fast non-asymptotic mixing guarantees for DCS targeting distributions on $\R^d$ with arbitrarily heavy polynomial tails. DCS provides a solution to a well-known problem for MCMC samplers, which typically struggle with the combination of unbounded high-dimensional state space and vanishing gradients. The DCS pulls back a target on $\R^d$ onto a Euclidean ball $B(R)\subset\R^d$ and then samples from the transformed density on the convex set $B(R)$ via algorithms such as the Ball Walk, Hit-and-Run and others. A radial diffeomorphic contraction is chosen so that the pull-back density on $B(R)$ is bounded, implying uniform ergodicity for \textit{all} targets with a finite polynomial moment. Non-asymptotic bounds for DCS require stronger assumptions such as log-concavity of the pull-back density. In practice, this is achieved approximately by a preconditioned automorphism of the ball $B(R)$, tuned via Variational Inference. Numerical simulation tests demonstrate that the DCS outperforms significantly the No-U-Turns sampler on multi-dimensional heavy-tailed targets arising as real-world posteriors in PosteriorDB benchmark. DCS also numerically outperforms in high-dimensional examples recently developed spherical projection samplers for heavy-tailed target distributions.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.04284" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.04284" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
