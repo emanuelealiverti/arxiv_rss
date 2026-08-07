@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Improving the efficiency of infectious disease prevention trials using negative control outcome event times</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Improving the efficiency of infectious disease prevention trials using negative control outcome event times" />
+<meta name="author" content="Ethan Ashby, Zhewei Zhang, Tanya P. Garcia, Ting Ye, Holly Janes, Bo Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Baseline covariate adjustment can enhance the efficiency of randomized trials by improving precision of treatment effect estimates. However, the precision gain depends on how strongly the baseline covariates are prognostic for the primary outcome. In randomized trials of infectious disease prevention interventions (e.g., vaccines or passively administered antibodies), an individual’s exposure to the pathogen is a leading prognostic factor but is rarely measurable at baseline. Hence, conventional covariate adjustment offers limited precision gain in prevention trials. We propose adjusting for a negative control outcome (NCO) event time, which is causally unaffected by the intervention but shares overlapping exposure mechanisms with…" />
+<meta name="twitter:description" property="og:description" content="Baseline covariate adjustment can enhance the efficiency of randomized trials by improving precision of treatment effect estimates. However, the precision gain depends on how strongly the baseline covariates are prognostic for the primary outcome. In randomized trials of infectious disease prevention interventions (e.g., vaccines or passively administered antibodies), an individual’s exposure to the pathogen is a leading prognostic factor but is rarely measurable at baseline. Hence, conventional covariate adjustment offers limited precision gain in prevention trials. We propose adjusting for a negative control outcome (NCO) event time, which is causally unaffected by the intervention but shares overlapping exposure mechanisms with…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/07/2608.05261.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/07/2608.05261.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-07T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-07T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Improving the efficiency of infectious disease prevention trials using negative control outcome event times" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ethan Ashby, Zhewei Zhang, Tanya P. Garcia, Ting Ye, Holly Janes, Bo Zhang"},"dateModified":"2026-08-07T00:00:00+02:00","datePublished":"2026-08-07T00:00:00+02:00","description":"Baseline covariate adjustment can enhance the efficiency of randomized trials by improving precision of treatment effect estimates. However, the precision gain depends on how strongly the baseline covariates are prognostic for the primary outcome. In randomized trials of infectious disease prevention interventions (e.g., vaccines or passively administered antibodies), an individual’s exposure to the pathogen is a leading prognostic factor but is rarely measurable at baseline. Hence, conventional covariate adjustment offers limited precision gain in prevention trials. We propose adjusting for a negative control outcome (NCO) event time, which is causally unaffected by the intervention but shares overlapping exposure mechanisms with…","headline":"Improving the efficiency of infectious disease prevention trials using negative control outcome event times","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/07/2608.05261.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/07/2608.05261.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Improving the efficiency of infectious disease prevention trials using negative control outcome event times</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Ethan Ashby, Zhewei Zhang, Tanya P. Garcia, Ting Ye, Holly Janes, Bo Zhang
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      7 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper proposes adjusting for a negative control outcome event time to enhance efficiency in infectious disease prevention trials.</div><h3>Abstract</h3>
+  <p>Baseline covariate adjustment can enhance the efficiency of randomized trials by improving precision of treatment effect estimates. However, the precision gain depends on how strongly the baseline covariates are prognostic for the primary outcome. In randomized trials of infectious disease prevention interventions (e.g., vaccines or passively administered antibodies), an individual’s exposure to the pathogen is a leading prognostic factor but is rarely measurable at baseline. Hence, conventional covariate adjustment offers limited precision gain in prevention trials. We propose adjusting for a negative control outcome (NCO) event time, which is causally unaffected by the intervention but shares overlapping exposure mechanisms with the primary outcome. We formalize assumptions under which adjustment for the NCO event time is valid, and show that right-censoring of the NCO event time further complicates adjustment. We derive the efficient influence function for the treatment-arm-specific survivor function of the primary outcome when both the primary outcome and the NCO event time are right-censored, and use it to construct a cross-fitted, one-step estimator that is multiply robust to nuisance misspecification and asymptotically efficient when the nuisances are estimated accurately. In numerical experiments, our estimator compares comparably to benchmarks when the NCO event time is uninformative, and gains precision as the NCO event time is more prognostic for the primary outcome. We apply our method to HVTN 704/HPTN 085, a randomized, double-blinded trial of VRC01, a broadly neutralizing antibody against HIV-1. Adjusting for the time to a bacterial sexually transmitted infection — a negative control outcome for HIV-1 acquisition — reduced the estimated variance of the prevention efficacy estimate by approximately 27%, compared to roughly 2.5% for baseline covariate adjustment.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.05261" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.05261" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adaptive-precision computation of custom Gauss quadrature for statistical applications</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Adaptive-precision computation of custom Gauss quadrature for statistical applications" />
+<meta name="author" content="Paul Kabaila" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An $n$-point Gauss quadrature rule approximates the weighted integral of a function by a weighted sum of $n$ evaluations of this function and is exact for polynomials of degree at most $2n-1$. Such rules can be highly accurate with relatively few evaluations of this function. For weight functions associated with classical orthogonal polynomials of a continuous variable (such as Legendre, Hermite and Laguerre), these quadrature rules are readily available. We suppose that this is not the case, so that these rules must be custom-made. We present CustomGaussQuadrature, a Julia package that implements two approaches for computing the Gauss quadrature nodes…" />
+<meta name="twitter:description" property="og:description" content="An $n$-point Gauss quadrature rule approximates the weighted integral of a function by a weighted sum of $n$ evaluations of this function and is exact for polynomials of degree at most $2n-1$. Such rules can be highly accurate with relatively few evaluations of this function. For weight functions associated with classical orthogonal polynomials of a continuous variable (such as Legendre, Hermite and Laguerre), these quadrature rules are readily available. We suppose that this is not the case, so that these rules must be custom-made. We present CustomGaussQuadrature, a Julia package that implements two approaches for computing the Gauss quadrature nodes…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/07/2607.14511.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/07/2607.14511.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-07T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-07T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Adaptive-precision computation of custom Gauss quadrature for statistical applications" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Paul Kabaila"},"dateModified":"2026-08-07T00:00:00+02:00","datePublished":"2026-08-07T00:00:00+02:00","description":"An $n$-point Gauss quadrature rule approximates the weighted integral of a function by a weighted sum of $n$ evaluations of this function and is exact for polynomials of degree at most $2n-1$. Such rules can be highly accurate with relatively few evaluations of this function. For weight functions associated with classical orthogonal polynomials of a continuous variable (such as Legendre, Hermite and Laguerre), these quadrature rules are readily available. We suppose that this is not the case, so that these rules must be custom-made. We present CustomGaussQuadrature, a Julia package that implements two approaches for computing the Gauss quadrature nodes…","headline":"Adaptive-precision computation of custom Gauss quadrature for statistical applications","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/07/2607.14511.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/07/2607.14511.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Adaptive-precision computation of custom Gauss quadrature for statistical applications</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Paul Kabaila
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      7 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper presents a Julia package for computing custom Gauss quadrature nodes and weights.</div><h3>Abstract</h3>
+  <p>An $n$-point Gauss quadrature rule approximates the weighted integral of a function by a weighted sum of $n$ evaluations of this function and is exact for polynomials of degree at most $2n-1$. Such rules can be highly accurate with relatively few evaluations of this function. For weight functions associated with classical orthogonal polynomials of a continuous variable (such as Legendre, Hermite and Laguerre), these quadrature rules are readily available. We suppose that this is not the case, so that these rules must be custom-made. We present CustomGaussQuadrature, a Julia package that implements two approaches for computing the Gauss quadrature nodes and weights: the moment determinants method and the Stieltjes procedure. The principal contribution is an implementation of the ill-conditioned moment determinants method with adaptively chosen working precision. Comparisons between computations at increasing precisions provide practical error indicators used to target absolute and relative errors in the Gauss rule nodes and weights, respectively, of about $10^{-16}$. The package also adapts the working precision and number of auxiliary quadrature nodes used for the Stieltjes procedure. Numerical examples using scaled chi and Weibull probability density functions as weight functions show close agreement between the results obtained by the two approaches. The package is intended particularly for statistical applications in which a single custom Gauss rule is computed once and then reused to approximate many weighted integrals having the same weight function but different computationally expensive integrands.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.14511" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.14511" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
