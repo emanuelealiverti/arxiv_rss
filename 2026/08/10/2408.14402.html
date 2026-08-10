@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Quasi-Bayesian sequential deconvolution</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Quasi-Bayesian sequential deconvolution" />
+<meta name="author" content="Stefano Favaro, Sandra Fortini" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Density deconvolution is the inverse problem of estimating a probability density from observations contaminated by additive noise. Traditionally studied in static or batch settings, it increasingly arises with streaming data, where existing frequentist and Bayesian procedures face substantial computational bottlenecks. We develop a quasi-Bayesian nonparametric method for sequential density deconvolution based on Newton’s recursive algorithm. The resulting estimate is straightforward to evaluate and scalable to massive datasets, as its per-observation computational cost remains constant as new data arrive. The quasi-Bayesian interpretation enables uncertainty quantification: local and uniform central limit theorems yield asymptotic credible intervals and bands, respectively. Under a frequentist…" />
+<meta name="twitter:description" property="og:description" content="Density deconvolution is the inverse problem of estimating a probability density from observations contaminated by additive noise. Traditionally studied in static or batch settings, it increasingly arises with streaming data, where existing frequentist and Bayesian procedures face substantial computational bottlenecks. We develop a quasi-Bayesian nonparametric method for sequential density deconvolution based on Newton’s recursive algorithm. The resulting estimate is straightforward to evaluate and scalable to massive datasets, as its per-observation computational cost remains constant as new data arrive. The quasi-Bayesian interpretation enables uncertainty quantification: local and uniform central limit theorems yield asymptotic credible intervals and bands, respectively. Under a frequentist…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/10/2408.14402.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/10/2408.14402.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-10T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-10T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Quasi-Bayesian sequential deconvolution" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Stefano Favaro, Sandra Fortini"},"dateModified":"2026-08-10T00:00:00+02:00","datePublished":"2026-08-10T00:00:00+02:00","description":"Density deconvolution is the inverse problem of estimating a probability density from observations contaminated by additive noise. Traditionally studied in static or batch settings, it increasingly arises with streaming data, where existing frequentist and Bayesian procedures face substantial computational bottlenecks. We develop a quasi-Bayesian nonparametric method for sequential density deconvolution based on Newton’s recursive algorithm. The resulting estimate is straightforward to evaluate and scalable to massive datasets, as its per-observation computational cost remains constant as new data arrive. The quasi-Bayesian interpretation enables uncertainty quantification: local and uniform central limit theorems yield asymptotic credible intervals and bands, respectively. Under a frequentist…","headline":"Quasi-Bayesian sequential deconvolution","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/10/2408.14402.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/10/2408.14402.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Quasi-Bayesian sequential deconvolution</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Stefano Favaro, Sandra Fortini
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      10 Aug 2026
+    </div>
+  </div><div class="summary-box">Develops a quasi-Bayesian nonparametric method for sequential density deconvolution using Newton's recursive algorithm.</div><h3>Abstract</h3>
+  <p>Density deconvolution is the inverse problem of estimating a probability density from observations contaminated by additive noise. Traditionally studied in static or batch settings, it increasingly arises with streaming data, where existing frequentist and Bayesian procedures face substantial computational bottlenecks. We develop a quasi-Bayesian nonparametric method for sequential density deconvolution based on Newton’s recursive algorithm. The resulting estimate is straightforward to evaluate and scalable to massive datasets, as its per-observation computational cost remains constant as new data arrive. The quasi-Bayesian interpretation enables uncertainty quantification: local and uniform central limit theorems yield asymptotic credible intervals and bands, respectively. Under a frequentist data-generating model, we establish $L^1$-consistency for the proposed estimate and show that it asymptotically agrees with the estimate that would be obtained if the uncontaminated variables were directly observed. Further, under additional regularity conditions, we derive an $L^1$-Wasserstein convergence rate and establish merging, at an explicit rate, with the Bayesian nonparametric posterior mean estimate under a Dirichlet process mixture model. Synthetic-data experiments, together with an acquisition-ordered flow-cytometry application, demonstrate accuracy comparable to Bayesian nonparametric and Fourier deconvolution methods, while offering a substantial computational advantage.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2408.14402" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2408.14402" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
