@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When Should Forecasting Models Be Re-Specified? A Cost-Sensitive Trigger for Adaptive Model-Form Updating</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="When Should Forecasting Models Be Re-Specified? A Cost-Sensitive Trigger for Adaptive Model-Form Updating" />
+<meta name="author" content="Harrison Katz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Routine refresh bundles two operations that need not travel together: estimating parameters and selecting the model form. The second is often unnecessary. Under a reduced-update policy the maintenance question is a stopping problem: when has enough evidence accumulated against the deployed form to justify re-specifying it? We define specification debt as that evidence, derive a cost-sensitive rule that re-specifies when expected avoidable loss exceeds re-specification cost, and recover fixed update frequencies as the constant-accumulation case. The rule then raises its own question: how much machinery the monitor needs. We take this to all 47,982 monthly M4 series over an exponential…" />
+<meta name="twitter:description" property="og:description" content="Routine refresh bundles two operations that need not travel together: estimating parameters and selecting the model form. The second is often unnecessary. Under a reduced-update policy the maintenance question is a stopping problem: when has enough evidence accumulated against the deployed form to justify re-specifying it? We define specification debt as that evidence, derive a cost-sensitive rule that re-specifies when expected avoidable loss exceeds re-specification cost, and recover fixed update frequencies as the constant-accumulation case. The rule then raises its own question: how much machinery the monitor needs. We take this to all 47,982 monthly M4 series over an exponential…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2606.06670.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2606.06670.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-11T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-11T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="When Should Forecasting Models Be Re-Specified? A Cost-Sensitive Trigger for Adaptive Model-Form Updating" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Harrison Katz"},"dateModified":"2026-08-11T00:00:00+02:00","datePublished":"2026-08-11T00:00:00+02:00","description":"Routine refresh bundles two operations that need not travel together: estimating parameters and selecting the model form. The second is often unnecessary. Under a reduced-update policy the maintenance question is a stopping problem: when has enough evidence accumulated against the deployed form to justify re-specifying it? We define specification debt as that evidence, derive a cost-sensitive rule that re-specifies when expected avoidable loss exceeds re-specification cost, and recover fixed update frequencies as the constant-accumulation case. The rule then raises its own question: how much machinery the monitor needs. We take this to all 47,982 monthly M4 series over an exponential…","headline":"When Should Forecasting Models Be Re-Specified? A Cost-Sensitive Trigger for Adaptive Model-Form Updating","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2606.06670.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2606.06670.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>When Should Forecasting Models Be Re-Specified? A Cost-Sensitive Trigger for Adaptive Model-Form Updating</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Harrison Katz
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      11 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper proposes a cost-sensitive rule for updating forecasting models based on accumulated evidence against the deployed form.</div><h3>Abstract</h3>
+  <p>Routine refresh bundles two operations that need not travel together: estimating parameters and selecting the model form. The second is often unnecessary. Under a reduced-update policy the maintenance question is a stopping problem: when has enough evidence accumulated against the deployed form to justify re-specifying it? We define specification debt as that evidence, derive a cost-sensitive rule that re-specifies when expected avoidable loss exceeds re-specification cost, and recover fixed update frequencies as the constant-accumulation case. The rule then raises its own question: how much machinery the monitor needs. We take this to all 47,982 monthly M4 series over an exponential smoothing grid and field three rules ordered by machinery: a fixed cadence with no monitoring, a one-parameter tracking signal after Trigg and Brown on the deployed model’s one-step errors, and an evidence-gated trigger that fits a twelve-candidate grid for a validation score gap. Model form matters little on average here, so a cheap cadence matches full updating. The ordering within that band is informative. The tracking signal matches full updating at the three-step benchmark, but that edge dies under rate matching: against a cadence making the same nine searches, the gap is null at every horizon. What survives is the detector, once separated from the selector. The score-gap signal loses to its cap-matched cadence when a fire deploys the validation winner, but beats it at all five horizons when a fire re-selects by AICc, never worse at any lead; the validation-winner selector trades the first lead for the largest long-horizon gains, beating the cadence at horizon 18 by 0.4 percent (t of -9.0). Whether a gate repays its compute reduces to a break-even weight the evaluation reports. Everything rests on realized out-of-sample loss; the in-sample analogue does not predict degradation.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.06670" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.06670" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

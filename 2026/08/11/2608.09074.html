@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Personalized Federated Learning via Variance-Aware Nonparametric Empirical Bayes</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Personalized Federated Learning via Variance-Aware Nonparametric Empirical Bayes" />
+<meta name="author" content="Jae Ho Chang, Arnab Auddy, Subhadeep Paul" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a new approach to Personalized Federated Learning across heterogeneous clients using Nonparametric Empirical Bayes (NPEB). Leveraging the asymptotic normality of local parameter estimates obtained from Empirical Risk Minimization or M-estimation, our method formulates these estimates as noisy observations to estimate an unknown shared prior via Nonparametric Maximum Likelihood. A key challenge in applying NPEB in this setting is that existing approaches assume known fixed variances, which is not true in practice. To address this, we introduce a Variance-Aware Nonparametric Empirical Bayes (VANEB) framework that leverages the parameter-dependent asymptotic variance of local M-estimators. A key technical contribution is a…" />
+<meta name="twitter:description" property="og:description" content="We develop a new approach to Personalized Federated Learning across heterogeneous clients using Nonparametric Empirical Bayes (NPEB). Leveraging the asymptotic normality of local parameter estimates obtained from Empirical Risk Minimization or M-estimation, our method formulates these estimates as noisy observations to estimate an unknown shared prior via Nonparametric Maximum Likelihood. A key challenge in applying NPEB in this setting is that existing approaches assume known fixed variances, which is not true in practice. To address this, we introduce a Variance-Aware Nonparametric Empirical Bayes (VANEB) framework that leverages the parameter-dependent asymptotic variance of local M-estimators. A key technical contribution is a…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2608.09074.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2608.09074.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-11T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-11T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Personalized Federated Learning via Variance-Aware Nonparametric Empirical Bayes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jae Ho Chang, Arnab Auddy, Subhadeep Paul"},"dateModified":"2026-08-11T00:00:00+02:00","datePublished":"2026-08-11T00:00:00+02:00","description":"We develop a new approach to Personalized Federated Learning across heterogeneous clients using Nonparametric Empirical Bayes (NPEB). Leveraging the asymptotic normality of local parameter estimates obtained from Empirical Risk Minimization or M-estimation, our method formulates these estimates as noisy observations to estimate an unknown shared prior via Nonparametric Maximum Likelihood. A key challenge in applying NPEB in this setting is that existing approaches assume known fixed variances, which is not true in practice. To address this, we introduce a Variance-Aware Nonparametric Empirical Bayes (VANEB) framework that leverages the parameter-dependent asymptotic variance of local M-estimators. A key technical contribution is a…","headline":"Personalized Federated Learning via Variance-Aware Nonparametric Empirical Bayes","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2608.09074.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2608.09074.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Personalized Federated Learning via Variance-Aware Nonparametric Empirical Bayes</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Jae Ho Chang, Arnab Auddy, Subhadeep Paul
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME
+      <span class="sep">&middot;</span>
+      11 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper develops a Variance-Aware Nonparametric Empirical Bayes framework for personalized federated learning.</div><h3>Abstract</h3>
+  <p>We develop a new approach to Personalized Federated Learning across heterogeneous clients using Nonparametric Empirical Bayes (NPEB). Leveraging the asymptotic normality of local parameter estimates obtained from Empirical Risk Minimization or M-estimation, our method formulates these estimates as noisy observations to estimate an unknown shared prior via Nonparametric Maximum Likelihood. A key challenge in applying NPEB in this setting is that existing approaches assume known fixed variances, which is not true in practice. To address this, we introduce a Variance-Aware Nonparametric Empirical Bayes (VANEB) framework that leverages the parameter-dependent asymptotic variance of local M-estimators. A key technical contribution is a generalized Tweedie’s formula for this heteroskedastic setting. We then establish non-asymptotic error rates for density estimation in the average squared Hellinger distance and derive an oracle denoising inequality that provides error bounds for our estimator. While our theoretical guarantees are rooted in the asymptotic regime of M-estimators, we empirically explore heuristic extensions of VANEB to modern federated learning settings involving Deep Neural Networks (DNNs). For DNNs, we propose VANEB-head and VANEB-FT, which personalize the last fully connected layer via an NPEB step using an approximate diagonal variance estimator. We show that our method has strong performance on popular vision datasets MNIST and CIFAR-10, using a convolutional neural network architecture.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.09074" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.09074" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

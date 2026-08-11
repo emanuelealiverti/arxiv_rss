@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Extreme Value Alpha and Crash Risk: Separating Structural Tails from Lottery Tails with LLM-Extracted Disclosure Networks</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Extreme Value Alpha and Crash Risk: Separating Structural Tails from Lottery Tails with LLM-Extracted Disclosure Networks" />
+<meta name="author" content="Lin Zhang, Fan Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A heavy upper tail in a stock’s returns is ambiguous: it can be a lottery tail, transient jump risk that investors overpay for (the MAX discount), or a structural tail, the statistical shadow of an economic reconfiguration that precedes extreme winners. Returns alone cannot separate them, so tail heat alone is not an alpha signal. Our discriminator is the firm’s disclosure-measured network: a directed, span-grounded graph from 10-K filings via an auditable LLM pipeline, whose rewiring decomposes into edge birth, death, and drift. The central sign pattern: tail heat with network death is the crash side; tail heat with an…" />
+<meta name="twitter:description" property="og:description" content="A heavy upper tail in a stock’s returns is ambiguous: it can be a lottery tail, transient jump risk that investors overpay for (the MAX discount), or a structural tail, the statistical shadow of an economic reconfiguration that precedes extreme winners. Returns alone cannot separate them, so tail heat alone is not an alpha signal. Our discriminator is the firm’s disclosure-measured network: a directed, span-grounded graph from 10-K filings via an auditable LLM pipeline, whose rewiring decomposes into edge birth, death, and drift. The central sign pattern: tail heat with network death is the crash side; tail heat with an…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2608.09089.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2608.09089.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-11T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-11T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Extreme Value Alpha and Crash Risk: Separating Structural Tails from Lottery Tails with LLM-Extracted Disclosure Networks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lin Zhang, Fan Yang"},"dateModified":"2026-08-11T00:00:00+02:00","datePublished":"2026-08-11T00:00:00+02:00","description":"A heavy upper tail in a stock’s returns is ambiguous: it can be a lottery tail, transient jump risk that investors overpay for (the MAX discount), or a structural tail, the statistical shadow of an economic reconfiguration that precedes extreme winners. Returns alone cannot separate them, so tail heat alone is not an alpha signal. Our discriminator is the firm’s disclosure-measured network: a directed, span-grounded graph from 10-K filings via an auditable LLM pipeline, whose rewiring decomposes into edge birth, death, and drift. The central sign pattern: tail heat with network death is the crash side; tail heat with an…","headline":"Extreme Value Alpha and Crash Risk: Separating Structural Tails from Lottery Tails with LLM-Extracted Disclosure Networks","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2608.09089.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/11/2608.09089.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Extreme Value Alpha and Crash Risk: Separating Structural Tails from Lottery Tails with LLM-Extracted Disclosure Networks</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Lin Zhang, Fan Yang
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      11 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper develops a method to separate structural tails from lottery tails in stock returns using disclosure networks.</div><h3>Abstract</h3>
+  <p>A heavy upper tail in a stock’s returns is ambiguous: it can be a lottery tail, transient jump risk that investors overpay for (the MAX discount), or a structural tail, the statistical shadow of an economic reconfiguration that precedes extreme winners. Returns alone cannot separate them, so tail heat alone is not an alpha signal. Our discriminator is the firm’s disclosure-measured network: a directed, span-grounded graph from 10-K filings via an auditable LLM pipeline, whose rewiring decomposes into edge birth, death, and drift. The central sign pattern: tail heat with network death is the crash side; tail heat with an intact or forming network is where structural tails and historical winners live. Pilot evidence from 24 technology firms (2014-2025) supports the crash side: upper-tail heat interacted with death mass predicts negative forward abnormal returns (monthly t = -2.9; firm-vintage t = -3.9; wild-cluster p = 0.04; robust to two-way clustering and controls), and the same configuration preceded NVIDIA’s 2018 and 2022 drawdowns. This death-side signal is immediately useful as a risk-monitoring danger flag. The alpha side is directionally positive but not significant in the pilot and awaits the confirmatory test. A pre-registered replication on 50 random S&amp;P 500 firms failed, defining the boundary: outside coherent ecosystems the disclosure graph nearly vanishes (83% of firm-vintages have zero death mass), so the discriminator exists only where firms densely document counterparties. The confirmatory design is fully pre-specified, with a gatekept primary pair, archived power simulations, positive-only winner labels, selection-corrected benchmarks, and a frozen ecosystem-coherent universe with a density gate; it activates only if the gate passes. If confirmed, tail heat becomes a conditional signal separating crash risk from structural winners.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.09089" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.09089" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
