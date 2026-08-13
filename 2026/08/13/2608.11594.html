@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Process-fracture mapping of a DLP-printed photopolymer using Bayesian active learning and surrogate-based sensitivity analysis</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Process-fracture mapping of a DLP-printed photopolymer using Bayesian active learning and surrogate-based sensitivity analysis" />
+<meta name="author" content="Ethan Blackwell, Yogesh C. Chandrashekar, Guoqiang Li, Kshitiz Upadhyay" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Digital light processing (DLP) enables rapid fabrication of polymer structures, but fracture performance depends on multiple interacting processing variables, making exhaustive experimental characterization impractical. This work presents a data-efficient framework for process-fracture mapping of a DLP-printed photopolymer using Bayesian active learning and digital image correlation (DIC)-assisted Mode I fracture experiments. Four processing parameters were considered: layer angle, UV exposure time, layer height, and print temperature. Fracture resistance was quantified by the critical J-integral, $J_c$, obtained from three-point-bending tests with DIC-based evaluation of crack-mouth opening displacement and hinge-point kinematics. Beginning with two randomly selected conditions, Gaussian process regression (GPR) and a…" />
+<meta name="twitter:description" property="og:description" content="Digital light processing (DLP) enables rapid fabrication of polymer structures, but fracture performance depends on multiple interacting processing variables, making exhaustive experimental characterization impractical. This work presents a data-efficient framework for process-fracture mapping of a DLP-printed photopolymer using Bayesian active learning and digital image correlation (DIC)-assisted Mode I fracture experiments. Four processing parameters were considered: layer angle, UV exposure time, layer height, and print temperature. Fracture resistance was quantified by the critical J-integral, $J_c$, obtained from three-point-bending tests with DIC-based evaluation of crack-mouth opening displacement and hinge-point kinematics. Beginning with two randomly selected conditions, Gaussian process regression (GPR) and a…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/13/2608.11594.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/13/2608.11594.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-13T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-13T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Process-fracture mapping of a DLP-printed photopolymer using Bayesian active learning and surrogate-based sensitivity analysis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ethan Blackwell, Yogesh C. Chandrashekar, Guoqiang Li, Kshitiz Upadhyay"},"dateModified":"2026-08-13T00:00:00+02:00","datePublished":"2026-08-13T00:00:00+02:00","description":"Digital light processing (DLP) enables rapid fabrication of polymer structures, but fracture performance depends on multiple interacting processing variables, making exhaustive experimental characterization impractical. This work presents a data-efficient framework for process-fracture mapping of a DLP-printed photopolymer using Bayesian active learning and digital image correlation (DIC)-assisted Mode I fracture experiments. Four processing parameters were considered: layer angle, UV exposure time, layer height, and print temperature. Fracture resistance was quantified by the critical J-integral, $J_c$, obtained from three-point-bending tests with DIC-based evaluation of crack-mouth opening displacement and hinge-point kinematics. Beginning with two randomly selected conditions, Gaussian process regression (GPR) and a…","headline":"Process-fracture mapping of a DLP-printed photopolymer using Bayesian active learning and surrogate-based sensitivity analysis","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/13/2608.11594.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/13/2608.11594.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Process-fracture mapping of a DLP-printed photopolymer using Bayesian active learning and surrogate-based sensitivity analysis</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Ethan Blackwell, Yogesh C. Chandrashekar, Guoqiang Li, Kshitiz Upadhyay
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      13 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper presents a Bayesian active learning framework for process-fracture mapping of a DLP-printed photopolymer.</div><h3>Abstract</h3>
+  <p>Digital light processing (DLP) enables rapid fabrication of polymer structures, but fracture performance depends on multiple interacting processing variables, making exhaustive experimental characterization impractical. This work presents a data-efficient framework for process-fracture mapping of a DLP-printed photopolymer using Bayesian active learning and digital image correlation (DIC)-assisted Mode I fracture experiments. Four processing parameters were considered: layer angle, UV exposure time, layer height, and print temperature. Fracture resistance was quantified by the critical J-integral, $J_c$, obtained from three-point-bending tests with DIC-based evaluation of crack-mouth opening displacement and hinge-point kinematics. Beginning with two randomly selected conditions, Gaussian process regression (GPR) and a modified upper confidence bound (UCB)-style acquisition function selected 26 additional experiments, yielding 28 processing conditions with three replicates each. The final GPR surrogate reproduced the training data with $R^2=0.99$ and achieved leave-one-out cross-validation performance of $R^2=0.63$ and Pearson $r=0.81$. Surrogate-based sensitivity analysis quantified parameter effects and global contributions. One-at-a-time response curves revealed nonlinear conditional trends, while global Sobol analysis identified UV exposure time as the dominant processing variable, with first-order and total-order indices of 0.6780 and 0.7581, respectively. Based on total-order influence, the parameters ranked as UV exposure time, layer angle, print temperature, and layer height. The first-order Sobol indices summed to 0.8058, indicating non-negligible interaction and higher-order effects. These results demonstrate that Bayesian-active-learning-guided experimentation can efficiently recover process-fracture relationships and parameter interactions from a sparse experimental campaign.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.11594" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.11594" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
