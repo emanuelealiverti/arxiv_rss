@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>FastJM: An R Package for Efficient Implementation of Semiparametric Joint Models for Longitudinal and Survival Data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="FastJM: An R Package for Efficient Implementation of Semiparametric Joint Models for Longitudinal and Survival Data" />
+<meta name="author" content="Shanpeng Li, Emily Ouyang, Ace Isabel Mejia-Sanchez, Xinping Cui, Gang Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Joint models provide a flexible framework for characterizing the association between longitudinal and time-to-event processes and have been widely applied in biomedical research. However, fitting joint models can be computationally challenging for large-scale and complex biomedical data. This paper introduces the \proglang{R} package \pkg{FastJM}, which provides computationally efficient frequentist estimation for three classes of semiparametric joint models: joint models with a single longitudinal biomarker, joint models with multiple longitudinal biomarkers, and joint models with a single longitudinal biomarker with heterogeneous within-subject (WS) variability. Within an expectation–maximization framework, \pkg{FastJM} employs customized linear-scan algorithms to efficiently update the nonparametric baseline hazards, thereby…" />
+<meta name="twitter:description" property="og:description" content="Joint models provide a flexible framework for characterizing the association between longitudinal and time-to-event processes and have been widely applied in biomedical research. However, fitting joint models can be computationally challenging for large-scale and complex biomedical data. This paper introduces the \proglang{R} package \pkg{FastJM}, which provides computationally efficient frequentist estimation for three classes of semiparametric joint models: joint models with a single longitudinal biomarker, joint models with multiple longitudinal biomarkers, and joint models with a single longitudinal biomarker with heterogeneous within-subject (WS) variability. Within an expectation–maximization framework, \pkg{FastJM} employs customized linear-scan algorithms to efficiently update the nonparametric baseline hazards, thereby…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/17/2608.14127.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/17/2608.14127.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-17T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-17T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="FastJM: An R Package for Efficient Implementation of Semiparametric Joint Models for Longitudinal and Survival Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shanpeng Li, Emily Ouyang, Ace Isabel Mejia-Sanchez, Xinping Cui, Gang Li"},"dateModified":"2026-08-17T00:00:00+02:00","datePublished":"2026-08-17T00:00:00+02:00","description":"Joint models provide a flexible framework for characterizing the association between longitudinal and time-to-event processes and have been widely applied in biomedical research. However, fitting joint models can be computationally challenging for large-scale and complex biomedical data. This paper introduces the \\proglang{R} package \\pkg{FastJM}, which provides computationally efficient frequentist estimation for three classes of semiparametric joint models: joint models with a single longitudinal biomarker, joint models with multiple longitudinal biomarkers, and joint models with a single longitudinal biomarker with heterogeneous within-subject (WS) variability. Within an expectation–maximization framework, \\pkg{FastJM} employs customized linear-scan algorithms to efficiently update the nonparametric baseline hazards, thereby…","headline":"FastJM: An R Package for Efficient Implementation of Semiparametric Joint Models for Longitudinal and Survival Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/17/2608.14127.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/17/2608.14127.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>FastJM: An R Package for Efficient Implementation of Semiparametric Joint Models for Longitudinal and Survival Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Shanpeng Li, Emily Ouyang, Ace Isabel Mejia-Sanchez, Xinping Cui, Gang Li
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      17 Aug 2026
+    </div>
+  </div><div class="summary-box">Introduces the R package FastJM for efficient frequentist estimation of semiparametric joint models.</div><h3>Abstract</h3>
+  <p>Joint models provide a flexible framework for characterizing the association between longitudinal and time-to-event processes and have been widely applied in biomedical research. However, fitting joint models can be computationally challenging for large-scale and complex biomedical data. This paper introduces the \proglang{R} package \pkg{FastJM}, which provides computationally efficient frequentist estimation for three classes of semiparametric joint models: joint models with a single longitudinal biomarker, joint models with multiple longitudinal biomarkers, and joint models with a single longitudinal biomarker with heterogeneous within-subject (WS) variability. Within an expectation–maximization framework, \pkg{FastJM} employs customized linear-scan algorithms to efficiently update the nonparametric baseline hazards, thereby addressing a major computational bottleneck in semiparametric joint modeling. The package also supports commonly used time-dependent latent association structures by integrating these algorithms with a landmark multivariate joint modeling framework. \pkg{FastJM} provides a unified interface for model specification, estimation, inference, visualization, dynamic prediction, and prediction performance assessment, including cross-validated time-dependent accuracy measures and time-independent concordance statistics. We describe the underlying methodology and software implementation and demonstrate the main functionality of \pkg{FastJM} through reproducible examples.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.14127" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.14127" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
