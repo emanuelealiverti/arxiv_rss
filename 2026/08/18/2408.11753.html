@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Wasserstein Projection Tests: Higher-Order Asymptotics and Connections to Empirical Likelihood</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Wasserstein Projection Tests: Higher-Order Asymptotics and Connections to Empirical Likelihood" />
+<meta name="author" content="Sirui Lin, Jose Blanchet, Peter Glynn, Viet Anh Nguyen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tests of moment restrictions can be constructed by projecting the empirical distribution onto the set of laws satisfying the null. Wasserstein projection (WP) performs this projection by transporting mass in the sample space, rather than only reweighting observed atoms as in empirical likelihood (EL), and therefore incorporates both the ground geometry and the local variation of the moment function. Existing WP theory provides a first-order null limit but does not quantify finite-sample calibration or distinguish tests with the same limiting local power. We derive stochastic expansions of the rescaled WP statistic under the null and under Pitman-type local alternatives, identifying…" />
+<meta name="twitter:description" property="og:description" content="Tests of moment restrictions can be constructed by projecting the empirical distribution onto the set of laws satisfying the null. Wasserstein projection (WP) performs this projection by transporting mass in the sample space, rather than only reweighting observed atoms as in empirical likelihood (EL), and therefore incorporates both the ground geometry and the local variation of the moment function. Existing WP theory provides a first-order null limit but does not quantify finite-sample calibration or distinguish tests with the same limiting local power. We derive stochastic expansions of the rescaled WP statistic under the null and under Pitman-type local alternatives, identifying…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/18/2408.11753.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/18/2408.11753.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-18T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-18T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Wasserstein Projection Tests: Higher-Order Asymptotics and Connections to Empirical Likelihood" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sirui Lin, Jose Blanchet, Peter Glynn, Viet Anh Nguyen"},"dateModified":"2026-08-18T00:00:00+02:00","datePublished":"2026-08-18T00:00:00+02:00","description":"Tests of moment restrictions can be constructed by projecting the empirical distribution onto the set of laws satisfying the null. Wasserstein projection (WP) performs this projection by transporting mass in the sample space, rather than only reweighting observed atoms as in empirical likelihood (EL), and therefore incorporates both the ground geometry and the local variation of the moment function. Existing WP theory provides a first-order null limit but does not quantify finite-sample calibration or distinguish tests with the same limiting local power. We derive stochastic expansions of the rescaled WP statistic under the null and under Pitman-type local alternatives, identifying…","headline":"Wasserstein Projection Tests: Higher-Order Asymptotics and Connections to Empirical Likelihood","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/18/2408.11753.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/18/2408.11753.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Wasserstein Projection Tests: Higher-Order Asymptotics and Connections to Empirical Likelihood</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Sirui Lin, Jose Blanchet, Peter Glynn, Viet Anh Nguyen
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      18 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper derives higher-order asymptotics for Wasserstein projection tests and compares them to empirical likelihood.</div><h3>Abstract</h3>
+  <p>Tests of moment restrictions can be constructed by projecting the empirical distribution onto the set of laws satisfying the null. Wasserstein projection (WP) performs this projection by transporting mass in the sample space, rather than only reweighting observed atoms as in empirical likelihood (EL), and therefore incorporates both the ground geometry and the local variation of the moment function. Existing WP theory provides a first-order null limit but does not quantify finite-sample calibration or distinguish tests with the same limiting local power. We derive stochastic expansions of the rescaled WP statistic under the null and under Pitman-type local alternatives, identifying its order-$n^{-1/2}$ correction with a uniform remainder of order $\widetilde{O}_p(n^{-1})$. The resulting Edgeworth theory gives an order-$\widetilde{O}(n^{-1})$ size error for the plug-in WP test and an explicit order-$n^{-1/2}$ correction to local power. For scalar moments under local location shifts, WP, EL, and Hotelling’s $T^2$ have the same first-order power, whereas their second-order ranking is determined by derivative-based curvature for WP and value-based skewness for EL. Extending the expansion by one further order, we construct two Bartlett-type corrections that improve coverage accuracy to $\widetilde{O}(n^{-3/2})$. Finally, we develop a certified localized dual algorithm that controls numerical error in the test decision. A theory-guided smooth fairness experiment using a common asymptotic chi-square reference quantile finds WP power gains over the corresponding EL and $T^2$ tests in the derivative-curvature regime predicted by the comparison theory.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2408.11753" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2408.11753" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

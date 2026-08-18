@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian epidemic alignment for causal evaluation of seasonal infectious-disease interventions</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian epidemic alignment for causal evaluation of seasonal infectious-disease interventions" />
+<meta name="author" content="David Moriña" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Seasonal infectious-disease interventions are commonly evaluated with interrupted time-series or pre–post designs that align epidemics by calendar week. When epidemic onset, speed or peak timing differs between seasons, such comparisons confound a shift in epidemic phase with a change in disease burden. We propose a Bayesian causal count model in which season-specific affine transformations map calendar time to a latent epidemic clock, and intervention effects are estimated on that clock rather than on the calendar. The alignment is a model component rather than a preprocessing step, so uncertainty about epidemic timing propagates into every causal contrast. The model uses a…" />
+<meta name="twitter:description" property="og:description" content="Seasonal infectious-disease interventions are commonly evaluated with interrupted time-series or pre–post designs that align epidemics by calendar week. When epidemic onset, speed or peak timing differs between seasons, such comparisons confound a shift in epidemic phase with a change in disease burden. We propose a Bayesian causal count model in which season-specific affine transformations map calendar time to a latent epidemic clock, and intervention effects are estimated on that clock rather than on the calendar. The alignment is a model component rather than a preprocessing step, so uncertainty about epidemic timing propagates into every causal contrast. The model uses a…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/18/2608.16537.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/18/2608.16537.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-18T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-18T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian epidemic alignment for causal evaluation of seasonal infectious-disease interventions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"David Moriña"},"dateModified":"2026-08-18T00:00:00+02:00","datePublished":"2026-08-18T00:00:00+02:00","description":"Seasonal infectious-disease interventions are commonly evaluated with interrupted time-series or pre–post designs that align epidemics by calendar week. When epidemic onset, speed or peak timing differs between seasons, such comparisons confound a shift in epidemic phase with a change in disease burden. We propose a Bayesian causal count model in which season-specific affine transformations map calendar time to a latent epidemic clock, and intervention effects are estimated on that clock rather than on the calendar. The alignment is a model component rather than a preprocessing step, so uncertainty about epidemic timing propagates into every causal contrast. The model uses a…","headline":"Bayesian epidemic alignment for causal evaluation of seasonal infectious-disease interventions","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/18/2608.16537.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/18/2608.16537.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian epidemic alignment for causal evaluation of seasonal infectious-disease interventions</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      David Moriña
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      18 Aug 2026
+    </div>
+  </div><div class="summary-box">A Bayesian model aligns epidemics by a latent epidemic clock for causal evaluation of seasonal infectious-disease interventions.</div><h3>Abstract</h3>
+  <p>Seasonal infectious-disease interventions are commonly evaluated with interrupted time-series or pre–post designs that align epidemics by calendar week. When epidemic onset, speed or peak timing differs between seasons, such comparisons confound a shift in epidemic phase with a change in disease burden. We propose a Bayesian causal count model in which season-specific affine transformations map calendar time to a latent epidemic clock, and intervention effects are estimated on that clock rather than on the calendar. The alignment is a model component rather than a preprocessing step, so uncertainty about epidemic timing propagates into every causal contrast. The model uses a negative-binomial observation distribution, hierarchical area, season and area-season effects, a shrunk Fourier epidemic curve, and a continuous programme-intensity exposure. Posterior g-computation yields prevented cases, prevented fractions, peak attenuation and epidemic displacement, under both a controlled contrast and a dynamic contrast that propagates disease history within each arm. A two-tier simulation study evaluates bias, root mean squared error, interval coverage and parameter recovery under stable timing, epidemic-clock variation, intensity-dependent ascertainment and area-level confounding. We illustrate the framework using open Catalan primary-care surveillance and respiratory syncytial virus immunisation data, with explicit attention to the overlap in programme intensity that identifies the effect.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.16537" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.16537" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
