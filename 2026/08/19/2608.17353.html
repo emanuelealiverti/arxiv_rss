@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>SDR Variance Estimates in Small Domains</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="SDR Variance Estimates in Small Domains" />
+<meta name="author" content="Eric Slud, Tim Trudell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Successive Difference Replication (SDR) is a replication based method of variance estimation introduced by Fay and Train (1995) for estimators based on complex multistage surveys, especially those including a final systematic sampling stage. The method has been used for many years as the primary variance-estimation methodology in large national household surveys administered by the Census Bureau, including the American Community Survey and also the Current Population Survey’s monthly estimates based on self-representing strata. In settings where it is applied, generally no second method of variance estimation has been available, so the performance of SDR has been studied via simulation by…" />
+<meta name="twitter:description" property="og:description" content="Successive Difference Replication (SDR) is a replication based method of variance estimation introduced by Fay and Train (1995) for estimators based on complex multistage surveys, especially those including a final systematic sampling stage. The method has been used for many years as the primary variance-estimation methodology in large national household surveys administered by the Census Bureau, including the American Community Survey and also the Current Population Survey’s monthly estimates based on self-representing strata. In settings where it is applied, generally no second method of variance estimation has been available, so the performance of SDR has been studied via simulation by…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/19/2608.17353.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/19/2608.17353.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-19T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-19T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="SDR Variance Estimates in Small Domains" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eric Slud, Tim Trudell"},"dateModified":"2026-08-19T00:00:00+02:00","datePublished":"2026-08-19T00:00:00+02:00","description":"Successive Difference Replication (SDR) is a replication based method of variance estimation introduced by Fay and Train (1995) for estimators based on complex multistage surveys, especially those including a final systematic sampling stage. The method has been used for many years as the primary variance-estimation methodology in large national household surveys administered by the Census Bureau, including the American Community Survey and also the Current Population Survey’s monthly estimates based on self-representing strata. In settings where it is applied, generally no second method of variance estimation has been available, so the performance of SDR has been studied via simulation by…","headline":"SDR Variance Estimates in Small Domains","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/19/2608.17353.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/19/2608.17353.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>SDR Variance Estimates in Small Domains</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Eric Slud, Tim Trudell
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      19 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper presents a thorough exposition of the Successive Difference Replication (SDR) method for variance estimation in complex surveys.</div><h3>Abstract</h3>
+  <p>Successive Difference Replication (SDR) is a replication based method of variance estimation introduced by Fay and Train (1995) for estimators based on complex multistage surveys, especially those including a final systematic sampling stage. The method has been used for many years as the primary variance-estimation methodology in large national household surveys administered by the Census Bureau, including the American Community Survey and also the Current Population Survey’s monthly estimates based on self-representing strata. In settings where it is applied, generally no second method of variance estimation has been available, so the performance of SDR has been studied via simulation by various authors, for variances of survey totals and of nonlinear survey estimators. This paper begins with a thorough exposition of the SDR method and review of previously published results on the small-domain biases of SDR variance estimation. It is shown that the number D of cycles used in implementing SDR should be 3 or larger, in order to control the variability of SDR estimates, but need not be larger than 5. Beyond that, the value of D is virtually irrelevant to the occurrence of small-domain bias in SDR. The SDR method is shown via theoretical formulas and simulation to inflate average estimated variances in small domains by amounts that vary systematically with the patterns of attribute means and variances and survey weights in consecutively enumerated strata. The degree of average variance inflation is generally moderate, no more than 15 percent in domains with sample size 20, but can be larger in special settings. Moreover, SDR estimates are extremely variable in small domains, with standard deviations often far larger than any biases.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.17353" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.17353" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

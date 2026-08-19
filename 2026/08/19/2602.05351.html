@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Flexible Modeling of Extremes in the Presence of Inliers</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Flexible Modeling of Extremes in the Presence of Inliers" />
+<meta name="author" content="Shivshankar Nila, Ishapathik Das, N. Balakrishna" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many random phenomena, including life-testing and environmental data, show positive values and excess zeros, which pose modeling challenges. In life testing, immediate failures result in zero lifetimes, often due to defects or poor quality, especially in electronics and clinical trials. These failures, called inliers at zero, are difficult to model using standard approaches. The presence and proportion of inliers may influence the accuracy of extreme value analysis, bias parameter estimates, or even lead to severe events or extreme effects, such as drought or crop failure. In such scenarios, a key issue in extreme value analysis is determining a suitable threshold…" />
+<meta name="twitter:description" property="og:description" content="Many random phenomena, including life-testing and environmental data, show positive values and excess zeros, which pose modeling challenges. In life testing, immediate failures result in zero lifetimes, often due to defects or poor quality, especially in electronics and clinical trials. These failures, called inliers at zero, are difficult to model using standard approaches. The presence and proportion of inliers may influence the accuracy of extreme value analysis, bias parameter estimates, or even lead to severe events or extreme effects, such as drought or crop failure. In such scenarios, a key issue in extreme value analysis is determining a suitable threshold…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/19/2602.05351.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/19/2602.05351.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-19T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-19T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Flexible Modeling of Extremes in the Presence of Inliers" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shivshankar Nila, Ishapathik Das, N. Balakrishna"},"dateModified":"2026-08-19T00:00:00+02:00","datePublished":"2026-08-19T00:00:00+02:00","description":"Many random phenomena, including life-testing and environmental data, show positive values and excess zeros, which pose modeling challenges. In life testing, immediate failures result in zero lifetimes, often due to defects or poor quality, especially in electronics and clinical trials. These failures, called inliers at zero, are difficult to model using standard approaches. The presence and proportion of inliers may influence the accuracy of extreme value analysis, bias parameter estimates, or even lead to severe events or extreme effects, such as drought or crop failure. In such scenarios, a key issue in extreme value analysis is determining a suitable threshold…","headline":"A Flexible Modeling of Extremes in the Presence of Inliers","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/19/2602.05351.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/19/2602.05351.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Flexible Modeling of Extremes in the Presence of Inliers</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Shivshankar Nila, Ishapathik Das, N. Balakrishna
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      19 Aug 2026
+    </div>
+  </div><div class="summary-box">A flexible model is proposed to handle extremes, inliers, and tail proportion in life-testing and environmental data.</div><h3>Abstract</h3>
+  <p>Many random phenomena, including life-testing and environmental data, show positive values and excess zeros, which pose modeling challenges. In life testing, immediate failures result in zero lifetimes, often due to defects or poor quality, especially in electronics and clinical trials. These failures, called inliers at zero, are difficult to model using standard approaches. The presence and proportion of inliers may influence the accuracy of extreme value analysis, bias parameter estimates, or even lead to severe events or extreme effects, such as drought or crop failure. In such scenarios, a key issue in extreme value analysis is determining a suitable threshold to capture tail behaviour accurately. Although some extreme value mixture models address threshold and tail estimation, they often inadequately handle inliers, resulting in suboptimal results. Bulk model misspecification can affect the threshold, extreme value estimates, and, in particular, the tail proportion. There is no unified framework for defining extreme value mixture models, especially the tail proportion. This paper proposes a flexible model that handles extremes, inliers, and the tail proportion. Parameters are estimated using maximum likelihood estimation. Compared the proposed model estimates with the classical mean excess plot, parameter stability plot, and Pickands plot estimates. Theoretical results are established, and the proposed model outperforms traditional methods in both simulation studies and real data analysis.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2602.05351" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2602.05351" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
