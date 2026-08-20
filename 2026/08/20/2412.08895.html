@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Wideband Signal Detection via Source Signal Marginalization and RJMCMC</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian Wideband Signal Detection via Source Signal Marginalization and RJMCMC" />
+<meta name="author" content="Kyurae Kim, Philip T. Clemson, James P. Reilly, Jason F. Ralph, Simon Maskell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Consider an array receiving unknown wideband signals from an unknown number of sources $k$. Wideband signals can occupy arbitrarily wide bandwidths, rendering demodulation-based approaches inapplicable, a common situation in settings involving acoustic signals. Here, we aim to determine $k$ given $N$ noisy array-valued measurements, a task known as the “detection problem,” for which Bayesian model comparison is a common approach. To render Bayesian inference tractable, it is typically necessary to marginalize the source signals. Unfortunately, for wideband signals, naive marginalization has an unaffordable time complexity of $\mathcal{O}(N^3 k^3)$. As a result, fully Bayesian signal detection has yet to be demonstrated…" />
+<meta name="twitter:description" property="og:description" content="Consider an array receiving unknown wideband signals from an unknown number of sources $k$. Wideband signals can occupy arbitrarily wide bandwidths, rendering demodulation-based approaches inapplicable, a common situation in settings involving acoustic signals. Here, we aim to determine $k$ given $N$ noisy array-valued measurements, a task known as the “detection problem,” for which Bayesian model comparison is a common approach. To render Bayesian inference tractable, it is typically necessary to marginalize the source signals. Unfortunately, for wideband signals, naive marginalization has an unaffordable time complexity of $\mathcal{O}(N^3 k^3)$. As a result, fully Bayesian signal detection has yet to be demonstrated…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/20/2412.08895.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/20/2412.08895.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-20T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-20T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian Wideband Signal Detection via Source Signal Marginalization and RJMCMC" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kyurae Kim, Philip T. Clemson, James P. Reilly, Jason F. Ralph, Simon Maskell"},"dateModified":"2026-08-20T00:00:00+02:00","datePublished":"2026-08-20T00:00:00+02:00","description":"Consider an array receiving unknown wideband signals from an unknown number of sources $k$. Wideband signals can occupy arbitrarily wide bandwidths, rendering demodulation-based approaches inapplicable, a common situation in settings involving acoustic signals. Here, we aim to determine $k$ given $N$ noisy array-valued measurements, a task known as the “detection problem,” for which Bayesian model comparison is a common approach. To render Bayesian inference tractable, it is typically necessary to marginalize the source signals. Unfortunately, for wideband signals, naive marginalization has an unaffordable time complexity of $\\mathcal{O}(N^3 k^3)$. As a result, fully Bayesian signal detection has yet to be demonstrated…","headline":"Bayesian Wideband Signal Detection via Source Signal Marginalization and RJMCMC","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/20/2412.08895.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/20/2412.08895.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian Wideband Signal Detection via Source Signal Marginalization and RJMCMC</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Kyurae Kim, Philip T. Clemson, James P. Reilly, Jason F. Ralph, Simon Maskell
+      <span class="sep">&middot;</span>
+      stat.AP, stat.CO
+      <span class="sep">&middot;</span>
+      20 Aug 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Consider an array receiving unknown wideband signals from an unknown number of sources $k$. Wideband signals can occupy arbitrarily wide bandwidths, rendering demodulation-based approaches inapplicable, a common situation in settings involving acoustic signals. Here, we aim to determine $k$ given $N$ noisy array-valued measurements, a task known as the “detection problem,” for which Bayesian model comparison is a common approach. To render Bayesian inference tractable, it is typically necessary to marginalize the source signals. Unfortunately, for wideband signals, naive marginalization has an unaffordable time complexity of $\mathcal{O}(N^3 k^3)$. As a result, fully Bayesian signal detection has yet to be demonstrated in wideband settings. In this work, we propose a wideband signal model that allows for computationally tractable marginalization of the source signals. We begin from the canonical model of linear time-invariant (LTI) signal propagation, which is then augmented into a circular convolution, all without loss of generality. This allows for efficient computation in the frequency domain, where the resulting linear system admits a decomposition into a sparse matrix we refer to as a \textit{stripe matrix decomposition}. Exploiting this sparsity pattern reduces the time complexity of computing the marginal likelihood to $\mathcal{O}(N k^3)$. These computational improvements enable efficient posterior inference via reversible-jump Markov chain Monte Carlo (RJMCMC). In this work, we use the non-reversible extension of RJMCMC (NRJMCMC), which often achieves lower autocorrelation and faster convergence than RJMCMC. Detection of the latent source signals can then be performed in a fully Bayesian manner using samples drawn by NRJMCMC. We evaluate our procedure by comparing it against generalized likelihood ratio testing (GLRT) and information criteria.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2412.08895" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2412.08895" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

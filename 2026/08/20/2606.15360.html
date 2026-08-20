@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Matched generating elements in maximum entropy density reconstruction</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Matched generating elements in maximum entropy density reconstruction" />
+<meta name="author" content="Serhii Zabolotnii" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Moment-constrained maximum entropy (MaxEnt) reconstructs a density from a few generalized moments as the exponential family whose sufficient statistics are the constraint functions. The classical choice of monomials x^i is only one generating element of the underlying decomposition space, and we show that this choice, more than the solver, governs which densities are representable, whether the dual problem is feasible, and how well-conditioned it is. Three results organize the paper. First, a parity obstruction: any element consisting of odd functions on a symmetric support forces f(x)f(-x) to be constant, so the only attainable symmetric density is uniform; parity matching is…" />
+<meta name="twitter:description" property="og:description" content="Moment-constrained maximum entropy (MaxEnt) reconstructs a density from a few generalized moments as the exponential family whose sufficient statistics are the constraint functions. The classical choice of monomials x^i is only one generating element of the underlying decomposition space, and we show that this choice, more than the solver, governs which densities are representable, whether the dual problem is feasible, and how well-conditioned it is. Three results organize the paper. First, a parity obstruction: any element consisting of odd functions on a symmetric support forces f(x)f(-x) to be constant, so the only attainable symmetric density is uniform; parity matching is…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/20/2606.15360.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/20/2606.15360.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-20T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-20T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Matched generating elements in maximum entropy density reconstruction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Serhii Zabolotnii"},"dateModified":"2026-08-20T00:00:00+02:00","datePublished":"2026-08-20T00:00:00+02:00","description":"Moment-constrained maximum entropy (MaxEnt) reconstructs a density from a few generalized moments as the exponential family whose sufficient statistics are the constraint functions. The classical choice of monomials x^i is only one generating element of the underlying decomposition space, and we show that this choice, more than the solver, governs which densities are representable, whether the dual problem is feasible, and how well-conditioned it is. Three results organize the paper. First, a parity obstruction: any element consisting of odd functions on a symmetric support forces f(x)f(-x) to be constant, so the only attainable symmetric density is uniform; parity matching is…","headline":"Matched generating elements in maximum entropy density reconstruction","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/20/2606.15360.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/20/2606.15360.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Matched generating elements in maximum entropy density reconstruction</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Serhii Zabolotnii
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      20 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper develops a new approach to maximum entropy density reconstruction using matched generating elements.</div><h3>Abstract</h3>
+  <p>Moment-constrained maximum entropy (MaxEnt) reconstructs a density from a few generalized moments as the exponential family whose sufficient statistics are the constraint functions. The classical choice of monomials x^i is only one generating element of the underlying decomposition space, and we show that this choice, more than the solver, governs which densities are representable, whether the dual problem is feasible, and how well-conditioned it is. Three results organize the paper. First, a parity obstruction: any element consisting of odd functions on a symmetric support forces f(x)f(-x) to be constant, so the only attainable symmetric density is uniform; parity matching is therefore a necessary condition on every element. Second, an exact tail-slope identity: the single constraint log(1+(x/s)^2) makes the MaxEnt family the Student/Cauchy family, its log-density slope equals 2*lambda, and its expectation is finite for the Cauchy law although no power moment of order one or more exists, so one matched constraint recovers an algebraic tail index that fractional-power and trigonometric elements cannot represent. Third, a one-dimensional exponent path: tying all fractional exponents to a single scalar reduces the multi-dimensional non-convex exponent search of fractional-moment MaxEnt to a deterministic scan, and free-exponent and genetic-search controls buy no realizable accuracy at ten times the solver cost. Seeded experiments on Cauchy, Student, stable, mixture and Gaussian targets, replicated over twenty seeds, and a comparison with the Pearson system and monomial MaxEnt on heavy-tailed laws and stock-index returns support a design map that matches the element to the target’s tail class.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.15360" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.15360" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
