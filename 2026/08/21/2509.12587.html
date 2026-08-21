@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Inverse regression for causal inference with multiple outcomes</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Inverse regression for causal inference with multiple outcomes" />
+<meta name="author" content="Wei Zhang, Qizhai Li, Peng Ding" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="With multiple outcomes in empirical research, a common strategy is to define a composite outcome as a weighted average of the original outcomes. However, the choices of weights are often subjective and can be controversial. We propose an inverse regression strategy for causal inference with multiple outcomes. The key idea is to regress the treatment on the outcomes, which is the inverse of the standard regression of the outcomes on the treatment. Although this strategy is simple and even counterintuitive, it has several advantages. First, testing for zero coefficients of the outcomes is equivalent to testing for zero treatment effects,…" />
+<meta name="twitter:description" property="og:description" content="With multiple outcomes in empirical research, a common strategy is to define a composite outcome as a weighted average of the original outcomes. However, the choices of weights are often subjective and can be controversial. We propose an inverse regression strategy for causal inference with multiple outcomes. The key idea is to regress the treatment on the outcomes, which is the inverse of the standard regression of the outcomes on the treatment. Although this strategy is simple and even counterintuitive, it has several advantages. First, testing for zero coefficients of the outcomes is equivalent to testing for zero treatment effects,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/21/2509.12587.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/21/2509.12587.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Inverse regression for causal inference with multiple outcomes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wei Zhang, Qizhai Li, Peng Ding"},"dateModified":"2026-08-21T00:00:00+02:00","datePublished":"2026-08-21T00:00:00+02:00","description":"With multiple outcomes in empirical research, a common strategy is to define a composite outcome as a weighted average of the original outcomes. However, the choices of weights are often subjective and can be controversial. We propose an inverse regression strategy for causal inference with multiple outcomes. The key idea is to regress the treatment on the outcomes, which is the inverse of the standard regression of the outcomes on the treatment. Although this strategy is simple and even counterintuitive, it has several advantages. First, testing for zero coefficients of the outcomes is equivalent to testing for zero treatment effects,…","headline":"Inverse regression for causal inference with multiple outcomes","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/21/2509.12587.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/21/2509.12587.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Inverse regression for causal inference with multiple outcomes</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Wei Zhang, Qizhai Li, Peng Ding
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      21 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper proposes an inverse regression strategy for causal inference with multiple outcomes.</div><h3>Abstract</h3>
+  <p>With multiple outcomes in empirical research, a common strategy is to define a composite outcome as a weighted average of the original outcomes. However, the choices of weights are often subjective and can be controversial. We propose an inverse regression strategy for causal inference with multiple outcomes. The key idea is to regress the treatment on the outcomes, which is the inverse of the standard regression of the outcomes on the treatment. Although this strategy is simple and even counterintuitive, it has several advantages. First, testing for zero coefficients of the outcomes is equivalent to testing for zero treatment effects, even though the inverse regression is deemed misspecified. Second, the coefficients of the outcomes provide data-driven weights for defining a composite outcome. Interestingly, these weights maximize the standardized effect size, a measure commonly used for univariate outcomes in empirical studies. We also discuss the associated inference issues. Third, this strategy is applicable to general study designs. We illustrate the theory in both randomized experiments and observational studies. We implement the proposed method in our R package invreg, available at https://github.com/zhangwei0125/invreg.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2509.12587" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2509.12587" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Good, the Bad, and the Ugly of Markov Boundary for Tabular Prediction</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="The Good, the Bad, and the Ugly of Markov Boundary for Tabular Prediction" />
+<meta name="author" content="Shu Wan, Abhinav Gorantla, Huan Liu, K. Selçuk Candan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Under standard graphical assumptions, the Markov boundary of a target variable is the smallest set of features that renders every other feature redundant. Once the boundary is observed, the target is conditionally independent of the rest of the table. This is a tempting object for tabular prediction, since it names exactly the columns a model should need. Yet modern regressors are still trained on the full feature set. We ask whether the Markov boundary is genuinely useful for prediction on SCM3K, a 3,450-task synthetic SCM benchmark with feature counts from 40 to 1000 and six SCM families, evaluated with six…" />
+<meta name="twitter:description" property="og:description" content="Under standard graphical assumptions, the Markov boundary of a target variable is the smallest set of features that renders every other feature redundant. Once the boundary is observed, the target is conditionally independent of the rest of the table. This is a tempting object for tabular prediction, since it names exactly the columns a model should need. Yet modern regressors are still trained on the full feature set. We ask whether the Markov boundary is genuinely useful for prediction on SCM3K, a 3,450-task synthetic SCM benchmark with feature counts from 40 to 1000 and six SCM families, evaluated with six…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/21/2605.29411.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/21/2605.29411.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="The Good, the Bad, and the Ugly of Markov Boundary for Tabular Prediction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shu Wan, Abhinav Gorantla, Huan Liu, K. Selçuk Candan"},"dateModified":"2026-08-21T00:00:00+02:00","datePublished":"2026-08-21T00:00:00+02:00","description":"Under standard graphical assumptions, the Markov boundary of a target variable is the smallest set of features that renders every other feature redundant. Once the boundary is observed, the target is conditionally independent of the rest of the table. This is a tempting object for tabular prediction, since it names exactly the columns a model should need. Yet modern regressors are still trained on the full feature set. We ask whether the Markov boundary is genuinely useful for prediction on SCM3K, a 3,450-task synthetic SCM benchmark with feature counts from 40 to 1000 and six SCM families, evaluated with six…","headline":"The Good, the Bad, and the Ugly of Markov Boundary for Tabular Prediction","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/21/2605.29411.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/21/2605.29411.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>The Good, the Bad, and the Ugly of Markov Boundary for Tabular Prediction</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Shu Wan, Abhinav Gorantla, Huan Liu, K. Selçuk Candan
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      21 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper investigates the usefulness of Markov boundary for tabular prediction and identifies its limitations.</div><h3>Abstract</h3>
+  <p>Under standard graphical assumptions, the Markov boundary of a target variable is the smallest set of features that renders every other feature redundant. Once the boundary is observed, the target is conditionally independent of the rest of the table. This is a tempting object for tabular prediction, since it names exactly the columns a model should need. Yet modern regressors are still trained on the full feature set. We ask whether the Markov boundary is genuinely useful for prediction on SCM3K, a 3,450-task synthetic SCM benchmark with feature counts from 40 to 1000 and six SCM families, evaluated with six regressors. The answer is more nuanced than the theory suggests. Restricting a regressor to the oracle boundary often improves prediction substantially, and the improvement grows as the feature space becomes larger and sparser. But the natural pipeline of recovering the boundary with causal discovery and training on the recovered mask does not deliver. Existing estimators exhaust the compute budget before reaching the regime where the boundary helps most, and even where they run they rarely beat the full feature set. We trace this to three causes. Discovery optimizes structural recovery rather than prediction. False negatives and false positives carry sharply asymmetric predictive cost. The exact boundary is only one of many feature sets that beat all features. We then develop what these facts imply for prediction-aligned feature selection and for tabular models that learn to use causal structure.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.29411" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.29411" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
