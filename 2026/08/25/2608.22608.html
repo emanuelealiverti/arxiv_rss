@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Estimating Pathway Treatment Effects in the Presence of Intermediate Events with Multi-State Data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Estimating Pathway Treatment Effects in the Presence of Intermediate Events with Multi-State Data" />
+<meta name="author" content="Yuhao Deng, Haoyu Wei, Donglin Zeng, Rui Song, Xiao-Hua Zhou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="During clinical trials evaluating a drug’s effect on a survival endpoint, intermediate events often occur in addition to the primary event. The treatment can exert its effect on the primary endpoint along multiple pathways through intermediate events. Assumptions for identifying mediation effects, such as sequential ignorability in natural effects or the dismissible components condition in separable effects, fail because intermediate events act as treatment-induced confounding. To understand the effect along each pathway, we consider hypothetical interventions in transitions between event statuses to mimic the treatment mechanism. The hypothetical interventions adjust for effects through intermediate events and marginalize over unobserved treatment-induced…" />
+<meta name="twitter:description" property="og:description" content="During clinical trials evaluating a drug’s effect on a survival endpoint, intermediate events often occur in addition to the primary event. The treatment can exert its effect on the primary endpoint along multiple pathways through intermediate events. Assumptions for identifying mediation effects, such as sequential ignorability in natural effects or the dismissible components condition in separable effects, fail because intermediate events act as treatment-induced confounding. To understand the effect along each pathway, we consider hypothetical interventions in transitions between event statuses to mimic the treatment mechanism. The hypothetical interventions adjust for effects through intermediate events and marginalize over unobserved treatment-induced…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/25/2608.22608.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/25/2608.22608.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-25T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-25T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Estimating Pathway Treatment Effects in the Presence of Intermediate Events with Multi-State Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yuhao Deng, Haoyu Wei, Donglin Zeng, Rui Song, Xiao-Hua Zhou"},"dateModified":"2026-08-25T00:00:00+02:00","datePublished":"2026-08-25T00:00:00+02:00","description":"During clinical trials evaluating a drug’s effect on a survival endpoint, intermediate events often occur in addition to the primary event. The treatment can exert its effect on the primary endpoint along multiple pathways through intermediate events. Assumptions for identifying mediation effects, such as sequential ignorability in natural effects or the dismissible components condition in separable effects, fail because intermediate events act as treatment-induced confounding. To understand the effect along each pathway, we consider hypothetical interventions in transitions between event statuses to mimic the treatment mechanism. The hypothetical interventions adjust for effects through intermediate events and marginalize over unobserved treatment-induced…","headline":"Estimating Pathway Treatment Effects in the Presence of Intermediate Events with Multi-State Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/25/2608.22608.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/25/2608.22608.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Estimating Pathway Treatment Effects in the Presence of Intermediate Events with Multi-State Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Yuhao Deng, Haoyu Wei, Donglin Zeng, Rui Song, Xiao-Hua Zhou
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      25 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper develops estimators for pathway treatment effects in multi-state data with intermediate events.</div><h3>Abstract</h3>
+  <p>During clinical trials evaluating a drug’s effect on a survival endpoint, intermediate events often occur in addition to the primary event. The treatment can exert its effect on the primary endpoint along multiple pathways through intermediate events. Assumptions for identifying mediation effects, such as sequential ignorability in natural effects or the dismissible components condition in separable effects, fail because intermediate events act as treatment-induced confounding. To understand the effect along each pathway, we consider hypothetical interventions in transitions between event statuses to mimic the treatment mechanism. The hypothetical interventions adjust for effects through intermediate events and marginalize over unobserved treatment-induced confounding, if any. Based on the derived efficient influence functions for the counterfactual cumulative incidences under hypothetical interventions, we construct multiply robust and semiparametrically efficient estimators for pathway treatment effects. Our proposed framework enables the examination of treatment effects through each transition, on each event, and along each path. By analyzing data from the LEADER Trial, we find that liraglutide significantly reduces the risk of cardiovascular and microvascular events. The reduction in all-cause mortality is primarily mediated by its effects on expanded major adverse cardiovascular events.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.22608" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.22608" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

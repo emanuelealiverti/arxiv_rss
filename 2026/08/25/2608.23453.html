@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Transporting Randomized Trial Effects to Real-World Populations via Riesz-Calibrated Optimal Transport</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Transporting Randomized Trial Effects to Real-World Populations via Riesz-Calibrated Optimal Transport" />
+<meta name="author" content="Anik Burman, Margaret Gamalo, Promit Ghosal, Prosenjit Kundu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Randomized trials support causal inference, but differences between trial and target populations can limit the transportability of treatment effects to real-world settings. Many existing approaches model the propensity of trial participation and can therefore be sensitive to model misspecification and weak overlap of the covariate distributions. Optimal Transport (OT) offers a different route by comparing the trial and target populations directly in covariate space. We develop RICOT, a Riesz-calibrated OT procedure transporting treatment effects to a treated target population. We consider a semi-unbalanced OT with entropic regularization where the source marginals are relaxed. We show that the uncalibrated OT introduces…" />
+<meta name="twitter:description" property="og:description" content="Randomized trials support causal inference, but differences between trial and target populations can limit the transportability of treatment effects to real-world settings. Many existing approaches model the propensity of trial participation and can therefore be sensitive to model misspecification and weak overlap of the covariate distributions. Optimal Transport (OT) offers a different route by comparing the trial and target populations directly in covariate space. We develop RICOT, a Riesz-calibrated OT procedure transporting treatment effects to a treated target population. We consider a semi-unbalanced OT with entropic regularization where the source marginals are relaxed. We show that the uncalibrated OT introduces…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/25/2608.23453.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/25/2608.23453.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-25T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-25T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Transporting Randomized Trial Effects to Real-World Populations via Riesz-Calibrated Optimal Transport" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anik Burman, Margaret Gamalo, Promit Ghosal, Prosenjit Kundu"},"dateModified":"2026-08-25T00:00:00+02:00","datePublished":"2026-08-25T00:00:00+02:00","description":"Randomized trials support causal inference, but differences between trial and target populations can limit the transportability of treatment effects to real-world settings. Many existing approaches model the propensity of trial participation and can therefore be sensitive to model misspecification and weak overlap of the covariate distributions. Optimal Transport (OT) offers a different route by comparing the trial and target populations directly in covariate space. We develop RICOT, a Riesz-calibrated OT procedure transporting treatment effects to a treated target population. We consider a semi-unbalanced OT with entropic regularization where the source marginals are relaxed. We show that the uncalibrated OT introduces…","headline":"Transporting Randomized Trial Effects to Real-World Populations via Riesz-Calibrated Optimal Transport","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/25/2608.23453.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/25/2608.23453.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Transporting Randomized Trial Effects to Real-World Populations via Riesz-Calibrated Optimal Transport</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Anik Burman, Margaret Gamalo, Promit Ghosal, Prosenjit Kundu
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      25 Aug 2026
+    </div>
+  </div><div class="summary-box">The paper develops RICOT, a Riesz-calibrated Optimal Transport procedure for transporting treatment effects to real-world populations.</div><h3>Abstract</h3>
+  <p>Randomized trials support causal inference, but differences between trial and target populations can limit the transportability of treatment effects to real-world settings. Many existing approaches model the propensity of trial participation and can therefore be sensitive to model misspecification and weak overlap of the covariate distributions. Optimal Transport (OT) offers a different route by comparing the trial and target populations directly in covariate space. We develop RICOT, a Riesz-calibrated OT procedure transporting treatment effects to a treated target population. We consider a semi-unbalanced OT with entropic regularization where the source marginals are relaxed. We show that the uncalibrated OT introduces a bias which does not shrink with increasing sample size. RICOT removes this bias by imposing calibration equations directly within the transport problem. With a growing calibration sieve, the calibrated weight consistently estimates the target-to-trial density ratio, equivalently the Riesz representer of the target expectation functional, even when the entropic and source-relaxation parameters remain fixed and positive. Combined with outcome regression, the resulting estimator is doubly robust and attains the semiparametric efficiency bound under suitable rate conditions. Its variance is estimated directly from the influence function, without resampling or repeated OT optimization. Simulations show low bias and near-nominal coverage across a range of overlap and misspecification settings, including settings in which sampling-score methods perform poorly. We illustrate RICOT in a real-world application involving a rare progressive cardiomyopathy, comparing conventional IPW and AIPW estimators with our OT-based IPW and doubly robust estimators for transporting the randomized treatment effect to a real-world population receiving the same treatment.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.23453" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.23453" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
