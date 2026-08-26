@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Average Treatment Effect Estimation with Non-binary Instrumental Variables</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Average Treatment Effect Estimation with Non-binary Instrumental Variables" />
+<meta name="author" content="Mei Dong, Lin Liu, Dingke Tang, Geoffrey Liu, Wei Xu, Linbo Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Non-binary instrumental variables, especially continuous ones, are common in practice. A binary recoding induces a Wald ratio but may discard useful variation and reduce efficiency. Although fully nonparametric approaches can in principle use the entire instrument, they often require high-dimensional nuisance estimation which can be unstable with rich covariates. We address this problem by developing a generalized Wald estimand for binary treatments that uses the full variation in a non-binary instrument. Under standard instrumental-variable assumptions and a homogeneity condition, the estimand yields a common identification formula for categorical and continuous instruments. We further develop its semiparametric efficiency theory and construct…" />
+<meta name="twitter:description" property="og:description" content="Non-binary instrumental variables, especially continuous ones, are common in practice. A binary recoding induces a Wald ratio but may discard useful variation and reduce efficiency. Although fully nonparametric approaches can in principle use the entire instrument, they often require high-dimensional nuisance estimation which can be unstable with rich covariates. We address this problem by developing a generalized Wald estimand for binary treatments that uses the full variation in a non-binary instrument. Under standard instrumental-variable assumptions and a homogeneity condition, the estimand yields a common identification formula for categorical and continuous instruments. We further develop its semiparametric efficiency theory and construct…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/26/2510.14368.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/26/2510.14368.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-26T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-26T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Average Treatment Effect Estimation with Non-binary Instrumental Variables" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mei Dong, Lin Liu, Dingke Tang, Geoffrey Liu, Wei Xu, Linbo Wang"},"dateModified":"2026-08-26T00:00:00+02:00","datePublished":"2026-08-26T00:00:00+02:00","description":"Non-binary instrumental variables, especially continuous ones, are common in practice. A binary recoding induces a Wald ratio but may discard useful variation and reduce efficiency. Although fully nonparametric approaches can in principle use the entire instrument, they often require high-dimensional nuisance estimation which can be unstable with rich covariates. We address this problem by developing a generalized Wald estimand for binary treatments that uses the full variation in a non-binary instrument. Under standard instrumental-variable assumptions and a homogeneity condition, the estimand yields a common identification formula for categorical and continuous instruments. We further develop its semiparametric efficiency theory and construct…","headline":"Average Treatment Effect Estimation with Non-binary Instrumental Variables","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/26/2510.14368.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/26/2510.14368.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Average Treatment Effect Estimation with Non-binary Instrumental Variables</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Mei Dong, Lin Liu, Dingke Tang, Geoffrey Liu, Wei Xu, Linbo Wang
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      26 Aug 2026
+    </div>
+  </div><div class="summary-box">Develops a generalized Wald estimand for binary treatments using non-binary instrumental variables.</div><h3>Abstract</h3>
+  <p>Non-binary instrumental variables, especially continuous ones, are common in practice. A binary recoding induces a Wald ratio but may discard useful variation and reduce efficiency. Although fully nonparametric approaches can in principle use the entire instrument, they often require high-dimensional nuisance estimation which can be unstable with rich covariates. We address this problem by developing a generalized Wald estimand for binary treatments that uses the full variation in a non-binary instrument. Under standard instrumental-variable assumptions and a homogeneity condition, the estimand yields a common identification formula for categorical and continuous instruments. We further develop its semiparametric efficiency theory and construct a locally efficient debiased estimator using risk-minimization reparameterizations and double cross-fitting to accommodate flexible machine learning while improving numerical stability. The central technical challenge is that the many Wald ratios generated by a non-binary instrument must agree, thereby imposing overidentifying restrictions on the observed-data law. In this setting, characterizing the tangent space is nonstandard: it requires a second-order parametric submodel, a construction that, to our knowledge, has not been standard in semiparametric efficiency theory. Simulations show stable performance across sample sizes and greater efficiency than estimators based on dichotomized instruments. In an application to the Princess Margaret Cancer Centre lung cancer cohort, associational analyses link excess body weight to lower two-year mortality, a seemingly protective pattern often called the obesity paradox. The proposed instrumental-variable analysis instead suggests increased mortality, pointing to residual confounding behind this paradox.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2510.14368" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2510.14368" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
