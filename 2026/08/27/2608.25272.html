@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Valid test for multi-arm trials with generalized linear models under covariate-adaptive randomization</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Valid test for multi-arm trials with generalized linear models under covariate-adaptive randomization" />
+<meta name="author" content="Guannan Zhai, Feifang Hu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern medical research, such as dose-finding studies, seamless trials, and shared control designs, often involves comparing multiple treatments simultaneously. Despite its wide applications, most research focuses on continuous endpoints, leaving the inference for general outcome types in high demand. In this article, we propose a new inference method for conducting multiple-treatment comparisons involving endpoints within the generalized linear model (GLM) framework under covariate-adaptive randomization (CAR). First, we investigate the asymptotic properties of the standard Wald z-statistics (z-scores) in multi-arm trials, highlighting issues when the working model is misspecified, particularly through omitted covariates. Our theoretical findings reveal that these \textcolor{black}{z-scores} do…" />
+<meta name="twitter:description" property="og:description" content="Modern medical research, such as dose-finding studies, seamless trials, and shared control designs, often involves comparing multiple treatments simultaneously. Despite its wide applications, most research focuses on continuous endpoints, leaving the inference for general outcome types in high demand. In this article, we propose a new inference method for conducting multiple-treatment comparisons involving endpoints within the generalized linear model (GLM) framework under covariate-adaptive randomization (CAR). First, we investigate the asymptotic properties of the standard Wald z-statistics (z-scores) in multi-arm trials, highlighting issues when the working model is misspecified, particularly through omitted covariates. Our theoretical findings reveal that these \textcolor{black}{z-scores} do…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/27/2608.25272.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/27/2608.25272.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-27T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-27T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Valid test for multi-arm trials with generalized linear models under covariate-adaptive randomization" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Guannan Zhai, Feifang Hu"},"dateModified":"2026-08-27T00:00:00+02:00","datePublished":"2026-08-27T00:00:00+02:00","description":"Modern medical research, such as dose-finding studies, seamless trials, and shared control designs, often involves comparing multiple treatments simultaneously. Despite its wide applications, most research focuses on continuous endpoints, leaving the inference for general outcome types in high demand. In this article, we propose a new inference method for conducting multiple-treatment comparisons involving endpoints within the generalized linear model (GLM) framework under covariate-adaptive randomization (CAR). First, we investigate the asymptotic properties of the standard Wald z-statistics (z-scores) in multi-arm trials, highlighting issues when the working model is misspecified, particularly through omitted covariates. Our theoretical findings reveal that these \\textcolor{black}{z-scores} do…","headline":"Valid test for multi-arm trials with generalized linear models under covariate-adaptive randomization","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/27/2608.25272.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/27/2608.25272.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Valid test for multi-arm trials with generalized linear models under covariate-adaptive randomization</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Guannan Zhai, Feifang Hu
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      27 Aug 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Modern medical research, such as dose-finding studies, seamless trials, and shared control designs, often involves comparing multiple treatments simultaneously. Despite its wide applications, most research focuses on continuous endpoints, leaving the inference for general outcome types in high demand. In this article, we propose a new inference method for conducting multiple-treatment comparisons involving endpoints within the generalized linear model (GLM) framework under covariate-adaptive randomization (CAR). First, we investigate the asymptotic properties of the standard Wald z-statistics (z-scores) in multi-arm trials, highlighting issues when the working model is misspecified, particularly through omitted covariates. Our theoretical findings reveal that these \textcolor{black}{z-scores} do not consistently converge to a standard multivariate normal distribution, leading to either conservative or inflated Type I error rates, depending on the specific GLM endpoint. Second, based on these theoretical results, we develop adjusted test statistics to correct the distributional problems. To appropriately control the family-wise Type I error rate inherent in multi-arm comparisons, we incorporate our adjusted statistics with Simes-type multiple-testing procedures. This robust inference method can effectively control Type I error while potentially improving power. Extensive simulation studies and a real-world application to a metastatic breast cancer trial confirm the effectiveness and practicality of our approach.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.25272" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.25272" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
