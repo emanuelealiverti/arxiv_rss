@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Modeling Spatially Obfuscated Street-Crime Data using Log-Gaussian Cox Processes on Metric Graphs</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Modeling Spatially Obfuscated Street-Crime Data using Log-Gaussian Cox Processes on Metric Graphs" />
+<meta name="author" content="Lulu Jiang, David Bolin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a log-Gaussian Cox process framework for modelling street-level crime data observed on a road network when the released event locations are spatially obfuscated. Motivated by UK Police street-level crime data, where published coordinates are anonymised proxy locations rather than exact event locations, we address the resulting support mismatch by representing each observation through an aggregated support on the street network. The latent log-intensity is modelled as a Whittle–Mat&#39;ern Gaussian field defined on a metric graph through an SPDE representation, allowing the crime intensity to vary continuously along streets while respecting the geometry of the road network. We compare…" />
+<meta name="twitter:description" property="og:description" content="We develop a log-Gaussian Cox process framework for modelling street-level crime data observed on a road network when the released event locations are spatially obfuscated. Motivated by UK Police street-level crime data, where published coordinates are anonymised proxy locations rather than exact event locations, we address the resulting support mismatch by representing each observation through an aggregated support on the street network. The latent log-intensity is modelled as a Whittle–Mat&#39;ern Gaussian field defined on a metric graph through an SPDE representation, allowing the crime intensity to vary continuously along streets while respecting the geometry of the road network. We compare…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.27117.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.27117.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-28T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-28T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Modeling Spatially Obfuscated Street-Crime Data using Log-Gaussian Cox Processes on Metric Graphs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lulu Jiang, David Bolin"},"dateModified":"2026-08-28T00:00:00+02:00","datePublished":"2026-08-28T00:00:00+02:00","description":"We develop a log-Gaussian Cox process framework for modelling street-level crime data observed on a road network when the released event locations are spatially obfuscated. Motivated by UK Police street-level crime data, where published coordinates are anonymised proxy locations rather than exact event locations, we address the resulting support mismatch by representing each observation through an aggregated support on the street network. The latent log-intensity is modelled as a Whittle–Mat&#39;ern Gaussian field defined on a metric graph through an SPDE representation, allowing the crime intensity to vary continuously along streets while respecting the geometry of the road network. We compare…","headline":"Modeling Spatially Obfuscated Street-Crime Data using Log-Gaussian Cox Processes on Metric Graphs","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.27117.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.27117.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Modeling Spatially Obfuscated Street-Crime Data using Log-Gaussian Cox Processes on Metric Graphs</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Lulu Jiang, David Bolin
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      28 Aug 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>We develop a log-Gaussian Cox process framework for modelling street-level crime data observed on a road network when the released event locations are spatially obfuscated. Motivated by UK Police street-level crime data, where published coordinates are anonymised proxy locations rather than exact event locations, we address the resulting support mismatch by representing each observation through an aggregated support on the street network. The latent log-intensity is modelled as a Whittle–Mat'ern Gaussian field defined on a metric graph through an SPDE representation, allowing the crime intensity to vary continuously along streets while respecting the geometry of the road network. We compare the proposed metric-graph aggregated model with two alternatives: a planar point model that treats the released locations as exact points, and a planar aggregated model that accounts for spatial aggregation but ignores the network support. In a simulation study where data are generated on a street network, the metric-graph model provides more accurate parameter recovery and better overall fit than the planar alternative. In the City of London application, the metric-graph model also achieves the best fit across several crime types, including theft from the person, robbery, drugs, and bicycle theft. The results further suggest that the relationship between environmental amenities and crime risk varies by crime type, with supermarkets showing the most consistent positive associations. The proposed framework provides a principled approach for analysing network-constrained spatial event data with privacy-protected and imprecise locations.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.27117" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.27117" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

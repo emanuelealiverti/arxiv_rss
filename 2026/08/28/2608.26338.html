@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>FLEX-CP-DT: A Flexible Conditional Power Framework for Interim Futility Analysis in Clinical Trials with Count Endpoints and Temporal Trends</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="FLEX-CP-DT: A Flexible Conditional Power Framework for Interim Futility Analysis in Clinical Trials with Count Endpoints and Temporal Trends" />
+<meta name="author" content="Yanzhao Wang, Dateng Li, Ningya Wang, Haitao Gao, Chenguang Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many large-scale phase III trials with recurrent event endpoints include a pre-planned interim analysis to evaluate early futility. Conditional power (CP), which quantifies the probability of achieving statistical significance at the final analysis given the interim data, is a commonly used tool to support such decisions. The standard negative binomial model with an offset term, widely adopted for analyzing recurrent events, implicitly assumes that event rates and treatment effects remain constant over the study period. At the interim analysis, however, a substantial proportion of patients have incomplete follow-up, and when the treatment effect is delayed in onset or diminishes over…" />
+<meta name="twitter:description" property="og:description" content="Many large-scale phase III trials with recurrent event endpoints include a pre-planned interim analysis to evaluate early futility. Conditional power (CP), which quantifies the probability of achieving statistical significance at the final analysis given the interim data, is a commonly used tool to support such decisions. The standard negative binomial model with an offset term, widely adopted for analyzing recurrent events, implicitly assumes that event rates and treatment effects remain constant over the study period. At the interim analysis, however, a substantial proportion of patients have incomplete follow-up, and when the treatment effect is delayed in onset or diminishes over…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26338.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26338.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-28T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-28T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="FLEX-CP-DT: A Flexible Conditional Power Framework for Interim Futility Analysis in Clinical Trials with Count Endpoints and Temporal Trends" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yanzhao Wang, Dateng Li, Ningya Wang, Haitao Gao, Chenguang Wang"},"dateModified":"2026-08-28T00:00:00+02:00","datePublished":"2026-08-28T00:00:00+02:00","description":"Many large-scale phase III trials with recurrent event endpoints include a pre-planned interim analysis to evaluate early futility. Conditional power (CP), which quantifies the probability of achieving statistical significance at the final analysis given the interim data, is a commonly used tool to support such decisions. The standard negative binomial model with an offset term, widely adopted for analyzing recurrent events, implicitly assumes that event rates and treatment effects remain constant over the study period. At the interim analysis, however, a substantial proportion of patients have incomplete follow-up, and when the treatment effect is delayed in onset or diminishes over…","headline":"FLEX-CP-DT: A Flexible Conditional Power Framework for Interim Futility Analysis in Clinical Trials with Count Endpoints and Temporal Trends","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26338.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26338.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>FLEX-CP-DT: A Flexible Conditional Power Framework for Interim Futility Analysis in Clinical Trials with Count Endpoints and Temporal Trends</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Yanzhao Wang, Dateng Li, Ningya Wang, Haitao Gao, Chenguang Wang
+      <span class="sep">&middot;</span>
+      stat.AP, stat.ME
+      <span class="sep">&middot;</span>
+      28 Aug 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Many large-scale phase III trials with recurrent event endpoints include a pre-planned interim analysis to evaluate early futility. Conditional power (CP), which quantifies the probability of achieving statistical significance at the final analysis given the interim data, is a commonly used tool to support such decisions. The standard negative binomial model with an offset term, widely adopted for analyzing recurrent events, implicitly assumes that event rates and treatment effects remain constant over the study period. At the interim analysis, however, a substantial proportion of patients have incomplete follow-up, and when the treatment effect is delayed in onset or diminishes over time, the constant-rate assumption introduces systematic bias into the interim estimate and can lead to incorrect futility decisions. In this paper, we propose FLEX-CP-DT, a piecewise negative binomial framework that captures temporal trends in both event rates and treatment effects without imposing the constant-rate assumption. The framework yields a formula-based conditional power calculation that does not require resampling or trial simulation at the interim stage. Through extensive simulations spanning constant-effect and delayed-onset scenarios, we demonstrate that FLEX-CP-DT performs comparably to the standard approach when the constant-rate assumption holds and improves interim futility decision-making when it is violated. A case study calibrated to a published phase 3 bronchiectasis trial further illustrates the practical advantage of the proposed method in reducing the probability of falsely terminating an efficacious drug with delayed treatment onset.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.26338" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.26338" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

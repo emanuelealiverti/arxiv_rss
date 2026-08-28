@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An Augmented Rating System for Test cricket: adapting the Glicko rating system</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="An Augmented Rating System for Test cricket: adapting the Glicko rating system" />
+<meta name="author" content="Rhitankar Bandyopadhyay, Diganta Mukherjee" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The International Cricket Council’s (ICC) Test cricket ratings use match and series results alone, stating no allowance about the precision of a rating, or about home advantage and toss. We fold both into the Glicko rating system, which gives a probabilistic expected score, and recalibrate its scale for Test cricket. The two enter as covariates whose significance and weights are estimated from match data. Home advantage is worth approximately 13 rating points and the toss roughly 8. They add, with no significant interaction. Over the two completed World Test Championship cycles (2021-23 and 2023-25) the model predicts 77.6% of decisive…" />
+<meta name="twitter:description" property="og:description" content="The International Cricket Council’s (ICC) Test cricket ratings use match and series results alone, stating no allowance about the precision of a rating, or about home advantage and toss. We fold both into the Glicko rating system, which gives a probabilistic expected score, and recalibrate its scale for Test cricket. The two enter as covariates whose significance and weights are estimated from match data. Home advantage is worth approximately 13 rating points and the toss roughly 8. They add, with no significant interaction. Over the two completed World Test Championship cycles (2021-23 and 2023-25) the model predicts 77.6% of decisive…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2603.02574.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2603.02574.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-28T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-28T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="An Augmented Rating System for Test cricket: adapting the Glicko rating system" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rhitankar Bandyopadhyay, Diganta Mukherjee"},"dateModified":"2026-08-28T00:00:00+02:00","datePublished":"2026-08-28T00:00:00+02:00","description":"The International Cricket Council’s (ICC) Test cricket ratings use match and series results alone, stating no allowance about the precision of a rating, or about home advantage and toss. We fold both into the Glicko rating system, which gives a probabilistic expected score, and recalibrate its scale for Test cricket. The two enter as covariates whose significance and weights are estimated from match data. Home advantage is worth approximately 13 rating points and the toss roughly 8. They add, with no significant interaction. Over the two completed World Test Championship cycles (2021-23 and 2023-25) the model predicts 77.6% of decisive…","headline":"An Augmented Rating System for Test cricket: adapting the Glicko rating system","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2603.02574.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2603.02574.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>An Augmented Rating System for Test cricket: adapting the Glicko rating system</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Rhitankar Bandyopadhyay, Diganta Mukherjee
+      <span class="sep">&middot;</span>
+      stat.AP, stat.CO
+      <span class="sep">&middot;</span>
+      28 Aug 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>The International Cricket Council’s (ICC) Test cricket ratings use match and series results alone, stating no allowance about the precision of a rating, or about home advantage and toss. We fold both into the Glicko rating system, which gives a probabilistic expected score, and recalibrate its scale for Test cricket. The two enter as covariates whose significance and weights are estimated from match data. Home advantage is worth approximately 13 rating points and the toss roughly 8. They add, with no significant interaction. Over the two completed World Test Championship cycles (2021-23 and 2023-25) the model predicts 77.6% of decisive matches correctly in the first, and matches whichever of standard Elo and unmodified Glicko rating system is more accurate, at a lower Brier score and log loss in both. Permuting each cycle’s match order 1000 times leaves every final rating unchanged. The model shows robustness to ordering, not fairness towards the fixture list, which the unbalanced calendar prevents judging. Our ordering follows the ICC’s (Spearman 0.979 and 0.983). We add not a different ranking but a calibrated win probability per match, a deviation on every rating, and home and toss adjustments of estimated size, none of which the ICC supplies.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2603.02574" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2603.02574" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Wavelet-Based Bayesian Hierarchical Modeling with Regularized Horseshoe Priors for Spatially Correlated Functional Data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Wavelet-Based Bayesian Hierarchical Modeling with Regularized Horseshoe Priors for Spatially Correlated Functional Data" />
+<meta name="author" content="Alvaro Alexander Burbano-Moreno, Alex Rodrigo dos Santos Sousa, Luiz Koodi Hotta" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Environmental monitoring networks increasingly record pollutant levels as curves observed over time at fixed stations. Yet, exposure and risk assessment often require predicting these curves, with their uncertainty, at unmonitored locations. Conventional smooth-basis methods for such spatially correlated functional data, including spline-based kriging, tend to over-smooth acute, high-frequency episodes such as pollution peaks. We propose a parsimonious wavelet-based Bayesian hierarchical model that anchors a single, shared Mat&#39;ern correlation matrix at each resolution level, avoiding the parameter inflation of coefficient-specific spatial processes. Adaptive sparsity is enforced through a spatially informed regularized horseshoe prior, allowing the model to borrow strength across neighboring…" />
+<meta name="twitter:description" property="og:description" content="Environmental monitoring networks increasingly record pollutant levels as curves observed over time at fixed stations. Yet, exposure and risk assessment often require predicting these curves, with their uncertainty, at unmonitored locations. Conventional smooth-basis methods for such spatially correlated functional data, including spline-based kriging, tend to over-smooth acute, high-frequency episodes such as pollution peaks. We propose a parsimonious wavelet-based Bayesian hierarchical model that anchors a single, shared Mat&#39;ern correlation matrix at each resolution level, avoiding the parameter inflation of coefficient-specific spatial processes. Adaptive sparsity is enforced through a spatially informed regularized horseshoe prior, allowing the model to borrow strength across neighboring…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26510.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26510.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-28T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-28T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Wavelet-Based Bayesian Hierarchical Modeling with Regularized Horseshoe Priors for Spatially Correlated Functional Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alvaro Alexander Burbano-Moreno, Alex Rodrigo dos Santos Sousa, Luiz Koodi Hotta"},"dateModified":"2026-08-28T00:00:00+02:00","datePublished":"2026-08-28T00:00:00+02:00","description":"Environmental monitoring networks increasingly record pollutant levels as curves observed over time at fixed stations. Yet, exposure and risk assessment often require predicting these curves, with their uncertainty, at unmonitored locations. Conventional smooth-basis methods for such spatially correlated functional data, including spline-based kriging, tend to over-smooth acute, high-frequency episodes such as pollution peaks. We propose a parsimonious wavelet-based Bayesian hierarchical model that anchors a single, shared Mat&#39;ern correlation matrix at each resolution level, avoiding the parameter inflation of coefficient-specific spatial processes. Adaptive sparsity is enforced through a spatially informed regularized horseshoe prior, allowing the model to borrow strength across neighboring…","headline":"Wavelet-Based Bayesian Hierarchical Modeling with Regularized Horseshoe Priors for Spatially Correlated Functional Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26510.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26510.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Wavelet-Based Bayesian Hierarchical Modeling with Regularized Horseshoe Priors for Spatially Correlated Functional Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Alvaro Alexander Burbano-Moreno, Alex Rodrigo dos Santos Sousa, Luiz Koodi Hotta
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      28 Aug 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Environmental monitoring networks increasingly record pollutant levels as curves observed over time at fixed stations. Yet, exposure and risk assessment often require predicting these curves, with their uncertainty, at unmonitored locations. Conventional smooth-basis methods for such spatially correlated functional data, including spline-based kriging, tend to over-smooth acute, high-frequency episodes such as pollution peaks. We propose a parsimonious wavelet-based Bayesian hierarchical model that anchors a single, shared Mat'ern correlation matrix at each resolution level, avoiding the parameter inflation of coefficient-specific spatial processes. Adaptive sparsity is enforced through a spatially informed regularized horseshoe prior, allowing the model to borrow strength across neighboring locations. At the same time, a non-centered parameterization ensures stable inference under the No-U-Turn Sampler. In simulation studies across distinct signal-to-noise regimes, incorporating spatial dependence substantially stabilizes reconstruction under severe noise relative to strictly independent models. Applied to PM$_{10}$ concentrations from Mexico City and benchmarked against ordinary kriging for functional data and a hierarchical Bayesian wavelet alternative, the model captures acute pollution events and, beyond improving point prediction, delivers sharper and better-calibrated credible intervals at unobserved locations.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.26510" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.26510" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Marginal Structural Models for Electricity Demand under Treatment-Confounder Feedback: A Continuous-Treatment Outcome-Adaptive and Fused LASSO Approach</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Marginal Structural Models for Electricity Demand under Treatment-Confounder Feedback: A Continuous-Treatment Outcome-Adaptive and Fused LASSO Approach" />
+<meta name="author" content="Shalini Jayanetti, Sumeet Kalia" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Temperature is the most important meteorological driver of electricity demand, but its causal effect has not been estimated under the time-varying confounding that characterizes weather processes. Current temperature is associated with weather conditions, including precipitation, snow cover, and cloud cover, that also influence electricity demand, and past temperature shapes future weather, producing treatment-confounder feedback under which standard regression adjustment is biased, due to conditioning on a time-varying confounder. We estimate the causal effect of temperature on daily Ontario electricity demand from 2018 to 2019 using a marginal structural model with inverse-probability weighting, formulated for a single observed time series rather…" />
+<meta name="twitter:description" property="og:description" content="Temperature is the most important meteorological driver of electricity demand, but its causal effect has not been estimated under the time-varying confounding that characterizes weather processes. Current temperature is associated with weather conditions, including precipitation, snow cover, and cloud cover, that also influence electricity demand, and past temperature shapes future weather, producing treatment-confounder feedback under which standard regression adjustment is biased, due to conditioning on a time-varying confounder. We estimate the causal effect of temperature on daily Ontario electricity demand from 2018 to 2019 using a marginal structural model with inverse-probability weighting, formulated for a single observed time series rather…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26411.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26411.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-28T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-28T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Marginal Structural Models for Electricity Demand under Treatment-Confounder Feedback: A Continuous-Treatment Outcome-Adaptive and Fused LASSO Approach" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shalini Jayanetti, Sumeet Kalia"},"dateModified":"2026-08-28T00:00:00+02:00","datePublished":"2026-08-28T00:00:00+02:00","description":"Temperature is the most important meteorological driver of electricity demand, but its causal effect has not been estimated under the time-varying confounding that characterizes weather processes. Current temperature is associated with weather conditions, including precipitation, snow cover, and cloud cover, that also influence electricity demand, and past temperature shapes future weather, producing treatment-confounder feedback under which standard regression adjustment is biased, due to conditioning on a time-varying confounder. We estimate the causal effect of temperature on daily Ontario electricity demand from 2018 to 2019 using a marginal structural model with inverse-probability weighting, formulated for a single observed time series rather…","headline":"Marginal Structural Models for Electricity Demand under Treatment-Confounder Feedback: A Continuous-Treatment Outcome-Adaptive and Fused LASSO Approach","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26411.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26411.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Marginal Structural Models for Electricity Demand under Treatment-Confounder Feedback: A Continuous-Treatment Outcome-Adaptive and Fused LASSO Approach</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Shalini Jayanetti, Sumeet Kalia
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      28 Aug 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Temperature is the most important meteorological driver of electricity demand, but its causal effect has not been estimated under the time-varying confounding that characterizes weather processes. Current temperature is associated with weather conditions, including precipitation, snow cover, and cloud cover, that also influence electricity demand, and past temperature shapes future weather, producing treatment-confounder feedback under which standard regression adjustment is biased, due to conditioning on a time-varying confounder. We estimate the causal effect of temperature on daily Ontario electricity demand from 2018 to 2019 using a marginal structural model with inverse-probability weighting, formulated for a single observed time series rather than a panel of independent subjects, and we extend the longitudinal outcome-adaptive LASSO and adaptive fused LASSO, previously developed for binary treatments, to a continuous treatment using density-ratio weights and a weighted-covariance balance criterion. In a Monte Carlo study, unadjusted regression is biased toward the null with coverage of $0.12$ to $0.15$, whereas the stabilized outcome-adaptive estimators are nearly unbiased with coverage near $0.92$, and the cumulative three-day estimators are approximately unbiased but less efficient. In the Ontario data all estimators identify a positive and highly significant quadratic temperature effect; the unadjusted estimate is $9.34$, the stabilized and outcome-adaptive single-lag estimators give $9.8$ to $10.1$, and the cumulative estimators give smaller values that coincide with a sharp fall in effective sample size and near-unit air-density collinearity. The temperature effect on demand is therefore large and robust to single-lag confounding adjustment, while the cumulative estimates are compromised by positivity limitation that outcome-adaptive selection cannot remove.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.26411" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.26411" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Beyond Participant-Level Cross-Validation: Reliable Inference for Longitudinal Machine Learning</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Beyond Participant-Level Cross-Validation: Reliable Inference for Longitudinal Machine Learning" />
+<meta name="author" content="Shahran Rahman Alve" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Longitudinal sensing studies routinely collect thousands of windows from a few dozen participants. The records are numerous; the independent scientific units are not. When the outcome is defined per participant, this mismatch makes apparently precise findings vulnerable to pseudo-replication, to partition choice, and to the ordinary analytic flexibility of comparing several pipelines before reporting one. Splitting on participants prevents a person’s records from straddling a split, but it does not calibrate the label-dependent workflow fold construction, preprocessing, tuning, calibration, and candidate selection that produced the reported number. We define a participant-level estimand and obtain an analysis-matched null by permuting participant…" />
+<meta name="twitter:description" property="og:description" content="Longitudinal sensing studies routinely collect thousands of windows from a few dozen participants. The records are numerous; the independent scientific units are not. When the outcome is defined per participant, this mismatch makes apparently precise findings vulnerable to pseudo-replication, to partition choice, and to the ordinary analytic flexibility of comparing several pipelines before reporting one. Splitting on participants prevents a person’s records from straddling a split, but it does not calibrate the label-dependent workflow fold construction, preprocessing, tuning, calibration, and candidate selection that produced the reported number. We define a participant-level estimand and obtain an analysis-matched null by permuting participant…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26205.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26205.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-28T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-28T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Beyond Participant-Level Cross-Validation: Reliable Inference for Longitudinal Machine Learning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shahran Rahman Alve"},"dateModified":"2026-08-28T00:00:00+02:00","datePublished":"2026-08-28T00:00:00+02:00","description":"Longitudinal sensing studies routinely collect thousands of windows from a few dozen participants. The records are numerous; the independent scientific units are not. When the outcome is defined per participant, this mismatch makes apparently precise findings vulnerable to pseudo-replication, to partition choice, and to the ordinary analytic flexibility of comparing several pipelines before reporting one. Splitting on participants prevents a person’s records from straddling a split, but it does not calibrate the label-dependent workflow fold construction, preprocessing, tuning, calibration, and candidate selection that produced the reported number. We define a participant-level estimand and obtain an analysis-matched null by permuting participant…","headline":"Beyond Participant-Level Cross-Validation: Reliable Inference for Longitudinal Machine Learning","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26205.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/28/2608.26205.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Beyond Participant-Level Cross-Validation: Reliable Inference for Longitudinal Machine Learning</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Shahran Rahman Alve
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      28 Aug 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Longitudinal sensing studies routinely collect thousands of windows from a few dozen participants. The records are numerous; the independent scientific units are not. When the outcome is defined per participant, this mismatch makes apparently precise findings vulnerable to pseudo-replication, to partition choice, and to the ordinary analytic flexibility of comparing several pipelines before reporting one. Splitting on participants prevents a person’s records from straddling a split, but it does not calibrate the label-dependent workflow fold construction, preprocessing, tuning, calibration, and candidate selection that produced the reported number. We define a participant-level estimand and obtain an analysis-matched null by permuting participant labels and rerunning that entire workflow. In controlled simulation, window-level inference rejects in 70-80% of replicates when no effect exists and a window bootstrap rejects at the same rate; a participant bootstrap still rejects at 10-17%; the analysis-matched test holds 0.025-0.100 across cohorts of 20 to 80 participants. Freezing the selected pipeline instead of repeating the search inflates Type-I error to 0.240 with eight candidates, where repeating it holds 0.040. Applied to two public cohorts, wrist actigraphy (n=55) yields participant AUROC 0.928 with p=0.0050, a conclusion that persists under a scale-robust rank-pooled statistic and under a matched permutation null computed after excluding hospitalized participants (p=0.0089). Smartphone sensing (n=38, 7 positives) yields 0.636 and does not reject (p=0.1724) despite sufficient resolution, with sensitivity 0.143. The practical rule is narrow: every step that reads labels belongs inside the permuted analysis, and repeated records do not create additional independent participants.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.26205" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.26205" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
