@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bivariate geostatistical latent variable models for the analysis of antibody density data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bivariate geostatistical latent variable models for the analysis of antibody density data" />
+<meta name="author" content="Emanuele Giorgi, Jonas Wallin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The increasing availability of serosurveys that measure antibody responses to multiple antigens requires the development of methods that can exploit the full information content of such data, both biological and spatial. However, the non-Gaussian and potentially multimodal distributional behaviour of antibody responses makes the development of such methods inherently complex, especially in a multivariate setting. Here, we extend the latent variable framework of Giorgi and Wallin (2026), in which continuous antibody concentrations are modelled through an individual-level latent seroreactivity process that represents the level of immune activation to a given antigen. We focus primarily on the bivariate setting and set…" />
+<meta name="twitter:description" property="og:description" content="The increasing availability of serosurveys that measure antibody responses to multiple antigens requires the development of methods that can exploit the full information content of such data, both biological and spatial. However, the non-Gaussian and potentially multimodal distributional behaviour of antibody responses makes the development of such methods inherently complex, especially in a multivariate setting. Here, we extend the latent variable framework of Giorgi and Wallin (2026), in which continuous antibody concentrations are modelled through an individual-level latent seroreactivity process that represents the level of immune activation to a given antigen. We focus primarily on the bivariate setting and set…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2608.27534.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2608.27534.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-31T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-31T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bivariate geostatistical latent variable models for the analysis of antibody density data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emanuele Giorgi, Jonas Wallin"},"dateModified":"2026-08-31T00:00:00+02:00","datePublished":"2026-08-31T00:00:00+02:00","description":"The increasing availability of serosurveys that measure antibody responses to multiple antigens requires the development of methods that can exploit the full information content of such data, both biological and spatial. However, the non-Gaussian and potentially multimodal distributional behaviour of antibody responses makes the development of such methods inherently complex, especially in a multivariate setting. Here, we extend the latent variable framework of Giorgi and Wallin (2026), in which continuous antibody concentrations are modelled through an individual-level latent seroreactivity process that represents the level of immune activation to a given antigen. We focus primarily on the bivariate setting and set…","headline":"Bivariate geostatistical latent variable models for the analysis of antibody density data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2608.27534.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2608.27534.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bivariate geostatistical latent variable models for the analysis of antibody density data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Emanuele Giorgi, Jonas Wallin
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      31 Aug 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>The increasing availability of serosurveys that measure antibody responses to multiple antigens requires the development of methods that can exploit the full information content of such data, both biological and spatial. However, the non-Gaussian and potentially multimodal distributional behaviour of antibody responses makes the development of such methods inherently complex, especially in a multivariate setting. Here, we extend the latent variable framework of Giorgi and Wallin (2026), in which continuous antibody concentrations are modelled through an individual-level latent seroreactivity process that represents the level of immune activation to a given antigen. We focus primarily on the bivariate setting and set out a series of guiding principles that justify the resulting joint modelling structure. The proposed model captures distinct sources of correlation between antibody responses, arising both from shared exposure to the same environment and from biological processes occurring within the same host. Spatial dependence is introduced through a novel bivariate Mat'ern random field, which we use to construct a parsimonious class of cross-covariance functions between antigen-specific spatial processes. We illustrate the application of the framework to analyse data on bivariate antibody measurements from a malaria serosurvey in the Kenyan highlands. Results from the application and a simulation study show that ignoring this correlation substantially degrades inference on joint properties of the antibody distributions and on individual-level seroreactivity, but matters less when interest lies exclusively in each antibody’s marginal distribution. Finally, we discuss how the framework could be extended to settings with more than two antigens, and highlight the modelling challenges that arise as the number of antigens grows.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.27534" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.27534" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

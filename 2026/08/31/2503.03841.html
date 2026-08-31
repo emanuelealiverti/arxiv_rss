@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>In-sample calibration yields conformal calibration guarantees</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="In-sample calibration yields conformal calibration guarantees" />
+<meta name="author" content="Sam Allen, Georgios Gavrilopoulos, Alexander Henzi, Gian-Reto Kleger, Johanna Ziegel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Conformal prediction produces a set of predictions that has out-of-sample calibration guarantees by construction, under the assumption of exchangeability. In this work, we study the calibration properties of conformal predictive systems, which issue sets of predictive distributions for real-valued outcomes. We demonstrate that conformal predictive systems implicitly exploit prediction methods that are in-sample calibrated to construct sets that are guaranteed to contain a calibrated predictive distribution out-of-sample. This allows us to take any prediction method that is in-sample calibrated, and conformalize it to obtain a predictive system with out-of-sample calibration guarantees. While the satisfied notion of calibration is typically that…" />
+<meta name="twitter:description" property="og:description" content="Conformal prediction produces a set of predictions that has out-of-sample calibration guarantees by construction, under the assumption of exchangeability. In this work, we study the calibration properties of conformal predictive systems, which issue sets of predictive distributions for real-valued outcomes. We demonstrate that conformal predictive systems implicitly exploit prediction methods that are in-sample calibrated to construct sets that are guaranteed to contain a calibrated predictive distribution out-of-sample. This allows us to take any prediction method that is in-sample calibrated, and conformalize it to obtain a predictive system with out-of-sample calibration guarantees. While the satisfied notion of calibration is typically that…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2503.03841.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2503.03841.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-31T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-31T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="In-sample calibration yields conformal calibration guarantees" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sam Allen, Georgios Gavrilopoulos, Alexander Henzi, Gian-Reto Kleger, Johanna Ziegel"},"dateModified":"2026-08-31T00:00:00+02:00","datePublished":"2026-08-31T00:00:00+02:00","description":"Conformal prediction produces a set of predictions that has out-of-sample calibration guarantees by construction, under the assumption of exchangeability. In this work, we study the calibration properties of conformal predictive systems, which issue sets of predictive distributions for real-valued outcomes. We demonstrate that conformal predictive systems implicitly exploit prediction methods that are in-sample calibrated to construct sets that are guaranteed to contain a calibrated predictive distribution out-of-sample. This allows us to take any prediction method that is in-sample calibrated, and conformalize it to obtain a predictive system with out-of-sample calibration guarantees. While the satisfied notion of calibration is typically that…","headline":"In-sample calibration yields conformal calibration guarantees","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2503.03841.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2503.03841.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>In-sample calibration yields conformal calibration guarantees</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Sam Allen, Georgios Gavrilopoulos, Alexander Henzi, Gian-Reto Kleger, Johanna Ziegel
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      31 Aug 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Conformal prediction produces a set of predictions that has out-of-sample calibration guarantees by construction, under the assumption of exchangeability. In this work, we study the calibration properties of conformal predictive systems, which issue sets of predictive distributions for real-valued outcomes. We demonstrate that conformal predictive systems implicitly exploit prediction methods that are in-sample calibrated to construct sets that are guaranteed to contain a calibrated predictive distribution out-of-sample. This allows us to take any prediction method that is in-sample calibrated, and conformalize it to obtain a predictive system with out-of-sample calibration guarantees. While the satisfied notion of calibration is typically that prediction intervals derived from the predictive distribution have the correct marginal coverage, we show that this line of reasoning can be extended to stronger conditional notions of calibration that are common in statistical forecasting theory. Using this, we introduce two predictive systems that satisfy stronger out-of-sample calibration guarantees than existing conformal predictive systems. The first method corresponds to a binning of the data, while the second leverages isotonic distributional regression (IDR), a non-parametric distributional regression method under order constraints. We study the theoretical properties of these new predictive systems, and compare their performance in a simulation experiment. They are then applied to two case studies on European temperature forecasts and on predictions for the length of patient stay in Swiss intensive care units. Both approaches are found to outperform existing conformal predictive systems, while conformal IDR additionally provides a natural method for quantifying epistemic uncertainty of the predictions.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2503.03841" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2503.03841" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

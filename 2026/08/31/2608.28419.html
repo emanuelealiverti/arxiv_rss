@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Refining Relational Event Models: Bayesian Penalization and Variable Selection in REMs</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Refining Relational Event Models: Bayesian Penalization and Variable Selection in REMs" />
+<meta name="author" content="Jonathan Koop, Sara van Erp, Mahdi Shafiee Kamalabad" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Relational Event Models (REMs) provide valuable insights into the dynamics of longitudinal social networks. Yet, the vast availability of potential predictors for a dyad’s event rate poses the risk of selecting irrelevant variables and specifying an overfitted model that does not generalize to new data. Despite the recent popularity of Bayesian regularization methods to address this, there has not been a systematic evaluation of the performance of Exact Bayesian Regularization (EBR) and Approximate Bayesian Regularization (ABR) against standard Maximum Likelihood (ML) procedures commonly used for REMs. To address this, we conduct a simulation study in which directed Relational Event History…" />
+<meta name="twitter:description" property="og:description" content="Relational Event Models (REMs) provide valuable insights into the dynamics of longitudinal social networks. Yet, the vast availability of potential predictors for a dyad’s event rate poses the risk of selecting irrelevant variables and specifying an overfitted model that does not generalize to new data. Despite the recent popularity of Bayesian regularization methods to address this, there has not been a systematic evaluation of the performance of Exact Bayesian Regularization (EBR) and Approximate Bayesian Regularization (ABR) against standard Maximum Likelihood (ML) procedures commonly used for REMs. To address this, we conduct a simulation study in which directed Relational Event History…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2608.28419.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2608.28419.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-31T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-08-31T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Refining Relational Event Models: Bayesian Penalization and Variable Selection in REMs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jonathan Koop, Sara van Erp, Mahdi Shafiee Kamalabad"},"dateModified":"2026-08-31T00:00:00+02:00","datePublished":"2026-08-31T00:00:00+02:00","description":"Relational Event Models (REMs) provide valuable insights into the dynamics of longitudinal social networks. Yet, the vast availability of potential predictors for a dyad’s event rate poses the risk of selecting irrelevant variables and specifying an overfitted model that does not generalize to new data. Despite the recent popularity of Bayesian regularization methods to address this, there has not been a systematic evaluation of the performance of Exact Bayesian Regularization (EBR) and Approximate Bayesian Regularization (ABR) against standard Maximum Likelihood (ML) procedures commonly used for REMs. To address this, we conduct a simulation study in which directed Relational Event History…","headline":"Refining Relational Event Models: Bayesian Penalization and Variable Selection in REMs","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2608.28419.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/08/31/2608.28419.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Refining Relational Event Models: Bayesian Penalization and Variable Selection in REMs</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Jonathan Koop, Sara van Erp, Mahdi Shafiee Kamalabad
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      31 Aug 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Relational Event Models (REMs) provide valuable insights into the dynamics of longitudinal social networks. Yet, the vast availability of potential predictors for a dyad’s event rate poses the risk of selecting irrelevant variables and specifying an overfitted model that does not generalize to new data. Despite the recent popularity of Bayesian regularization methods to address this, there has not been a systematic evaluation of the performance of Exact Bayesian Regularization (EBR) and Approximate Bayesian Regularization (ABR) against standard Maximum Likelihood (ML) procedures commonly used for REMs. To address this, we conduct a simulation study in which directed Relational Event History (REH) data is generated with endogenous and exogenous effects of varying strength and compare the performance of (a) unregularized ML estimation, (b) ABR through normal approximations of the likelihood with Ridge and Horseshoe priors, and (c) EBR with Horseshoe priors. We find that threshold-based criteria applied to ABR and EBR with Horseshoe priors outperform univariate selection using p-values from ML estimation in variable selection accuracy. Regarding predictive performance, ABR with Ridge priors and EBR with Horseshoe priors outperform ML REMs, particularly for small sample sizes. Given only small gains with large computational burdens when using EBR, we therefore advise researchers to use ABR with a suitable prior.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.28419" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.28419" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
