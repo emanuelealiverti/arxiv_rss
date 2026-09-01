@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Posterior Geometry and Identifiability in Multi-Response Bayesian Calibration</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Posterior Geometry and Identifiability in Multi-Response Bayesian Calibration" />
+<meta name="author" content="Anton van Beek, Adam. M Boyce, Will J. Dawson, James B. Robinson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Calibration under model misspecification is inherently ill-posed because calibration parameters and structural discrepancy are statistically confounded without additional assumptions. Bayesian formulations address this ambiguity through prior and covariance modeling choices, including multi-response observations and cross-source alignment. However, how these choices, together with output-dependent uncertainty, shape posterior geometry and practical parameter identifiability remains poorly understood. We present a latent-variable multi-response calibration model that combines empirical Bayes estimation of nuisance hyperparameters with a Fisher-information-based local Gaussian approximation of the calibration-parameter posterior. Closed-form expressions are derived for squared-exponential and Mat&#39;ern covariance functions, revealing how multi-response correlations, latent alignment, and output-specific uncertainty influence local…" />
+<meta name="twitter:description" property="og:description" content="Calibration under model misspecification is inherently ill-posed because calibration parameters and structural discrepancy are statistically confounded without additional assumptions. Bayesian formulations address this ambiguity through prior and covariance modeling choices, including multi-response observations and cross-source alignment. However, how these choices, together with output-dependent uncertainty, shape posterior geometry and practical parameter identifiability remains poorly understood. We present a latent-variable multi-response calibration model that combines empirical Bayes estimation of nuisance hyperparameters with a Fisher-information-based local Gaussian approximation of the calibration-parameter posterior. Closed-form expressions are derived for squared-exponential and Mat&#39;ern covariance functions, revealing how multi-response correlations, latent alignment, and output-specific uncertainty influence local…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.31047.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.31047.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Posterior Geometry and Identifiability in Multi-Response Bayesian Calibration" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anton van Beek, Adam. M Boyce, Will J. Dawson, James B. Robinson"},"dateModified":"2026-09-01T00:00:00+02:00","datePublished":"2026-09-01T00:00:00+02:00","description":"Calibration under model misspecification is inherently ill-posed because calibration parameters and structural discrepancy are statistically confounded without additional assumptions. Bayesian formulations address this ambiguity through prior and covariance modeling choices, including multi-response observations and cross-source alignment. However, how these choices, together with output-dependent uncertainty, shape posterior geometry and practical parameter identifiability remains poorly understood. We present a latent-variable multi-response calibration model that combines empirical Bayes estimation of nuisance hyperparameters with a Fisher-information-based local Gaussian approximation of the calibration-parameter posterior. Closed-form expressions are derived for squared-exponential and Mat&#39;ern covariance functions, revealing how multi-response correlations, latent alignment, and output-specific uncertainty influence local…","headline":"Posterior Geometry and Identifiability in Multi-Response Bayesian Calibration","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.31047.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.31047.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Posterior Geometry and Identifiability in Multi-Response Bayesian Calibration</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Anton van Beek, Adam. M Boyce, Will J. Dawson, James B. Robinson
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      1 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Calibration under model misspecification is inherently ill-posed because calibration parameters and structural discrepancy are statistically confounded without additional assumptions. Bayesian formulations address this ambiguity through prior and covariance modeling choices, including multi-response observations and cross-source alignment. However, how these choices, together with output-dependent uncertainty, shape posterior geometry and practical parameter identifiability remains poorly understood. We present a latent-variable multi-response calibration model that combines empirical Bayes estimation of nuisance hyperparameters with a Fisher-information-based local Gaussian approximation of the calibration-parameter posterior. Closed-form expressions are derived for squared-exponential and Mat'ern covariance functions, revealing how multi-response correlations, latent alignment, and output-specific uncertainty influence local posterior geometry. Controlled numerical experiments show that additional responses provide complementary geometric constraints on calibration parameters, while noise modeling can improve uncertainty quantification by reducing overconfidence without necessarily improving parameter localization. A lithium-ion battery study further illustrates how the model distinguishes strongly from weakly constrained parameters. Together, these results establish expected-Fisher posterior geometry as a scalable diagnostic of local parameter identifiability in multi-response calibration.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.31047" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.31047" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

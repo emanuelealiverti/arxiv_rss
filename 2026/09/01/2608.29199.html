@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Burn-in-Free Simulation of VARMA Time Series</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Burn-in-Free Simulation of VARMA Time Series" />
+<meta name="author" content="Kristján Jónasson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Varmapack is a software package for efficient, exact simulation of VARMA time series without a burn-in period. For stationary models, Varmapack can generate initial states and innovations from their joint stationary distribution. Alternatively, the user can supply initial states, in which case innovations are generated from their conditional distribution. The core C library has interfaces to R, Python, and Matlab. It also offers VARMAX simulation and computation of autocovariances and correlations, spectral radii, and impulse responses. Varmapack automatically selects between vector-Yule-Walker and state-space methods for covariance computation and uses level-3 BLAS operations for efficient generation of multiple replicates. Benchmarks on…" />
+<meta name="twitter:description" property="og:description" content="Varmapack is a software package for efficient, exact simulation of VARMA time series without a burn-in period. For stationary models, Varmapack can generate initial states and innovations from their joint stationary distribution. Alternatively, the user can supply initial states, in which case innovations are generated from their conditional distribution. The core C library has interfaces to R, Python, and Matlab. It also offers VARMAX simulation and computation of autocovariances and correlations, spectral radii, and impulse responses. Varmapack automatically selects between vector-Yule-Walker and state-space methods for covariance computation and uses level-3 BLAS operations for efficient generation of multiple replicates. Benchmarks on…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.29199.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.29199.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Burn-in-Free Simulation of VARMA Time Series" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kristján Jónasson"},"dateModified":"2026-09-01T00:00:00+02:00","datePublished":"2026-09-01T00:00:00+02:00","description":"Varmapack is a software package for efficient, exact simulation of VARMA time series without a burn-in period. For stationary models, Varmapack can generate initial states and innovations from their joint stationary distribution. Alternatively, the user can supply initial states, in which case innovations are generated from their conditional distribution. The core C library has interfaces to R, Python, and Matlab. It also offers VARMAX simulation and computation of autocovariances and correlations, spectral radii, and impulse responses. Varmapack automatically selects between vector-Yule-Walker and state-space methods for covariance computation and uses level-3 BLAS operations for efficient generation of multiple replicates. Benchmarks on…","headline":"Burn-in-Free Simulation of VARMA Time Series","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.29199.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.29199.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Burn-in-Free Simulation of VARMA Time Series</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Kristján Jónasson
+      <span class="sep">&middot;</span>
+      stat.AP, stat.CO, stat.ME
+      <span class="sep">&middot;</span>
+      1 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Varmapack is a software package for efficient, exact simulation of VARMA time series without a burn-in period. For stationary models, Varmapack can generate initial states and innovations from their joint stationary distribution. Alternatively, the user can supply initial states, in which case innovations are generated from their conditional distribution. The core C library has interfaces to R, Python, and Matlab. It also offers VARMAX simulation and computation of autocovariances and correlations, spectral radii, and impulse responses. Varmapack automatically selects between vector-Yule-Walker and state-space methods for covariance computation and uses level-3 BLAS operations for efficient generation of multiple replicates. Benchmarks on several platforms show substantial performance gains over existing simulation software, ranging from several-fold to more than three orders of magnitude for the packages and models considered. Varmapack is open source and publicly available through GitHub.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.29199" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.29199" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

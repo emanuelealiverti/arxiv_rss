@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>GPU-Parallelization of Markov Chain Pool Decoding with Unbiased MCMC</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="GPU-Parallelization of Markov Chain Pool Decoding with Unbiased MCMC" />
+<meta name="author" content="Takato Ueno, Shuji Kijima" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Markov chain pool decoding (MCPD) devised by Knill et al. (1996) identifies likely positive clones from noisy pooled-test results. The standard MCPD estimates clone-wise posterior probabilities using Gibbs sampling, but it may allocate excessive computational effort to low-scoring clones. This paper focuses on parallelizing MCPD on GPU architectures. Whereas the standard MCPD employs systematic-scan updates, we propose a score-weighted update scheme that updates high-scoring clones more frequently. We prove that the stationary distribution of the proposed Markov chain coincides with the target posterior distribution. To enable efficient GPU parallelization, we further incorporate the unbiased MCMC framework of Jacob et al.…" />
+<meta name="twitter:description" property="og:description" content="Markov chain pool decoding (MCPD) devised by Knill et al. (1996) identifies likely positive clones from noisy pooled-test results. The standard MCPD estimates clone-wise posterior probabilities using Gibbs sampling, but it may allocate excessive computational effort to low-scoring clones. This paper focuses on parallelizing MCPD on GPU architectures. Whereas the standard MCPD employs systematic-scan updates, we propose a score-weighted update scheme that updates high-scoring clones more frequently. We prove that the stationary distribution of the proposed Markov chain coincides with the target posterior distribution. To enable efficient GPU parallelization, we further incorporate the unbiased MCMC framework of Jacob et al.…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.30239.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.30239.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="GPU-Parallelization of Markov Chain Pool Decoding with Unbiased MCMC" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Takato Ueno, Shuji Kijima"},"dateModified":"2026-09-01T00:00:00+02:00","datePublished":"2026-09-01T00:00:00+02:00","description":"Markov chain pool decoding (MCPD) devised by Knill et al. (1996) identifies likely positive clones from noisy pooled-test results. The standard MCPD estimates clone-wise posterior probabilities using Gibbs sampling, but it may allocate excessive computational effort to low-scoring clones. This paper focuses on parallelizing MCPD on GPU architectures. Whereas the standard MCPD employs systematic-scan updates, we propose a score-weighted update scheme that updates high-scoring clones more frequently. We prove that the stationary distribution of the proposed Markov chain coincides with the target posterior distribution. To enable efficient GPU parallelization, we further incorporate the unbiased MCMC framework of Jacob et al.…","headline":"GPU-Parallelization of Markov Chain Pool Decoding with Unbiased MCMC","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.30239.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.30239.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>GPU-Parallelization of Markov Chain Pool Decoding with Unbiased MCMC</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Takato Ueno, Shuji Kijima
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      1 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Markov chain pool decoding (MCPD) devised by Knill et al. (1996) identifies likely positive clones from noisy pooled-test results. The standard MCPD estimates clone-wise posterior probabilities using Gibbs sampling, but it may allocate excessive computational effort to low-scoring clones. This paper focuses on parallelizing MCPD on GPU architectures. Whereas the standard MCPD employs systematic-scan updates, we propose a score-weighted update scheme that updates high-scoring clones more frequently. We prove that the stationary distribution of the proposed Markov chain coincides with the target posterior distribution. To enable efficient GPU parallelization, we further incorporate the unbiased MCMC framework of Jacob et al. (2020) and employ a slot-refilling technique based on the arguments by Glynn and Heidelberger (1991) about the coupling of Markov chains. Experiments involving 1,298 clones, 97 pools, and three true positives demonstrate improved recovery compared with uniform decoders, while maintaining high overlap under high-noise conditions.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.30239" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.30239" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Spatial-sign-based multilinear principal component analysis for tensor data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Spatial-sign-based multilinear principal component analysis for tensor data" />
+<meta name="author" content="Dongxu Yang, Wanfeng Liang, Le Zhou, Long Feng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Multilinear principal component analysis (MPCA) reduces the dimension of tensor-valued data while preserving their mode-specific structure, but its quadratic scatter criterion can be unstable under heavy-tailed distributions and contamination. We propose spatial-sign-based multilinear principal component analysis (SMPCA), a robust dimension-reduction method that centers the observations by their spatial median, removes radial magnitude through spatial-sign normalization, and estimates the mode-wise loading spaces by alternating eigendecompositions. Under a separable tensor elliptical model, we show that the target mode-wise loading spaces uniquely maximize the population criterion and that one complete sweep of exact population block updates recovers them from any initialization. We also…" />
+<meta name="twitter:description" property="og:description" content="Multilinear principal component analysis (MPCA) reduces the dimension of tensor-valued data while preserving their mode-specific structure, but its quadratic scatter criterion can be unstable under heavy-tailed distributions and contamination. We propose spatial-sign-based multilinear principal component analysis (SMPCA), a robust dimension-reduction method that centers the observations by their spatial median, removes radial magnitude through spatial-sign normalization, and estimates the mode-wise loading spaces by alternating eigendecompositions. Under a separable tensor elliptical model, we show that the target mode-wise loading spaces uniquely maximize the population criterion and that one complete sweep of exact population block updates recovers them from any initialization. We also…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.29862.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.29862.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Spatial-sign-based multilinear principal component analysis for tensor data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Dongxu Yang, Wanfeng Liang, Le Zhou, Long Feng"},"dateModified":"2026-09-01T00:00:00+02:00","datePublished":"2026-09-01T00:00:00+02:00","description":"Multilinear principal component analysis (MPCA) reduces the dimension of tensor-valued data while preserving their mode-specific structure, but its quadratic scatter criterion can be unstable under heavy-tailed distributions and contamination. We propose spatial-sign-based multilinear principal component analysis (SMPCA), a robust dimension-reduction method that centers the observations by their spatial median, removes radial magnitude through spatial-sign normalization, and estimates the mode-wise loading spaces by alternating eigendecompositions. Under a separable tensor elliptical model, we show that the target mode-wise loading spaces uniquely maximize the population criterion and that one complete sweep of exact population block updates recovers them from any initialization. We also…","headline":"Spatial-sign-based multilinear principal component analysis for tensor data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.29862.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.29862.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Spatial-sign-based multilinear principal component analysis for tensor data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Dongxu Yang, Wanfeng Liang, Le Zhou, Long Feng
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      1 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Multilinear principal component analysis (MPCA) reduces the dimension of tensor-valued data while preserving their mode-specific structure, but its quadratic scatter criterion can be unstable under heavy-tailed distributions and contamination. We propose spatial-sign-based multilinear principal component analysis (SMPCA), a robust dimension-reduction method that centers the observations by their spatial median, removes radial magnitude through spatial-sign normalization, and estimates the mode-wise loading spaces by alternating eigendecompositions. Under a separable tensor elliptical model, we show that the target mode-wise loading spaces uniquely maximize the population criterion and that one complete sweep of exact population block updates recovers them from any initialization. We also characterize exactly when their tensor-product subspace coincides with a leading unrestricted subspace of vectorized spatial-sign PCA and, when finite second moments exist, ordinary vectorized PCA. At the sample level, we derive explicit statistical rates for the mode-wise subspaces and the joint multilinear projector, obtain corresponding reconstruction guarantees, establish consistency of the cumulative-contribution dimension selector, and prove that the objective values generated by exact cyclic updates are nondecreasing and convergent. Simulations and an empirical application show that SMPCA is more accurate and stable than competitors under heavy-tailed distributions and outlier contamination, while retaining competitive performance under light-tailed settings.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.29862" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.29862" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

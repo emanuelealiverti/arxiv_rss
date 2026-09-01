@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Structural Packing and Dyadic Factorization of Sparse Positive Definite Matrices</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Structural Packing and Dyadic Factorization of Sparse Positive Definite Matrices" />
+<meta name="author" content="Micha{\l} Kos, Krzysztof Podgórski, Hanqing Wu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Efficient inversion of large sparse positive definite matrices requires exploiting sparsity patterns beyond those captured by conventional bandwidth reduction. In this work, we recast nested dissection, a prominent alternative, as a two-stage framework. The matrix was first packed into block-tridiagonal or dyadic form, followed by sparse Gram-Schmidt orthogonalization. This decomposition provided a unified perspective on sparse matrix factorization and inversion and identified dyadic structure as a fundamental component of sparse Cholesky factorization. For the first stage, we introduced a packing algorithm that recovered block-tridiagonal and dyadic patterns using a novel $\ell_1$ criterion. Using approximate distances obtained through classical multidimensional scaling,…" />
+<meta name="twitter:description" property="og:description" content="Efficient inversion of large sparse positive definite matrices requires exploiting sparsity patterns beyond those captured by conventional bandwidth reduction. In this work, we recast nested dissection, a prominent alternative, as a two-stage framework. The matrix was first packed into block-tridiagonal or dyadic form, followed by sparse Gram-Schmidt orthogonalization. This decomposition provided a unified perspective on sparse matrix factorization and inversion and identified dyadic structure as a fundamental component of sparse Cholesky factorization. For the first stage, we introduced a packing algorithm that recovered block-tridiagonal and dyadic patterns using a novel $\ell_1$ criterion. Using approximate distances obtained through classical multidimensional scaling,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2505.08144.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2505.08144.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Structural Packing and Dyadic Factorization of Sparse Positive Definite Matrices" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Micha{\\l} Kos, Krzysztof Podgórski, Hanqing Wu"},"dateModified":"2026-09-01T00:00:00+02:00","datePublished":"2026-09-01T00:00:00+02:00","description":"Efficient inversion of large sparse positive definite matrices requires exploiting sparsity patterns beyond those captured by conventional bandwidth reduction. In this work, we recast nested dissection, a prominent alternative, as a two-stage framework. The matrix was first packed into block-tridiagonal or dyadic form, followed by sparse Gram-Schmidt orthogonalization. This decomposition provided a unified perspective on sparse matrix factorization and inversion and identified dyadic structure as a fundamental component of sparse Cholesky factorization. For the first stage, we introduced a packing algorithm that recovered block-tridiagonal and dyadic patterns using a novel $\\ell_1$ criterion. Using approximate distances obtained through classical multidimensional scaling,…","headline":"Structural Packing and Dyadic Factorization of Sparse Positive Definite Matrices","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2505.08144.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2505.08144.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Structural Packing and Dyadic Factorization of Sparse Positive Definite Matrices</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Micha{\l} Kos, Krzysztof Podgórski, Hanqing Wu
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      1 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Efficient inversion of large sparse positive definite matrices requires exploiting sparsity patterns beyond those captured by conventional bandwidth reduction. In this work, we recast nested dissection, a prominent alternative, as a two-stage framework. The matrix was first packed into block-tridiagonal or dyadic form, followed by sparse Gram-Schmidt orthogonalization. This decomposition provided a unified perspective on sparse matrix factorization and inversion and identified dyadic structure as a fundamental component of sparse Cholesky factorization. For the first stage, we introduced a packing algorithm that recovered block-tridiagonal and dyadic patterns using a novel $\ell_1$ criterion. Using approximate distances obtained through classical multidimensional scaling, the method was effective when the target structure was sufficiently represented among the nonzero entries. Iterative application could also remove structural noise and reveal hidden dyadic organization, corresponding to separator identification in nested dissection. For the second stage, we developed the theory of dyadically structured matrices. We derived sparse factorization and inversion procedures, analyzed their computational complexity, and obtained an efficient inversion algorithm. A modified version reduced the cost of inverting block-tridiagonal matrices, demonstrating the benefit of exploiting their structure directly rather than treating them as generic band matrices.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2505.08144" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2505.08144" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

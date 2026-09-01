@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Tool for Reconstructing Transit Vehicle Trajectories: A Case Study at IndyGo</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Tool for Reconstructing Transit Vehicle Trajectories: A Case Study at IndyGo" />
+<meta name="author" content="Ben O'Brien, Lewis J. Lehe" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Automatic vehicle location (AVL) data produced by transit vehicles is invaluable in performance studies, but turning raw AVL points into a detailed view of vehicle stop-and-gos is burdensome: the datasets are sparse, noisy, and prone to blunders. While recent research has explored methods of reconstructing trajectories describing the position of vehicles over time, the common techniques can be complex, and no open-source tools exist to help practitioners process the raw AVL. We fill this gap by proposing a thorough methodology for cleaning transit AVL data and providing an open-source R package, built on open data standards, to implement the workflow…" />
+<meta name="twitter:description" property="og:description" content="Automatic vehicle location (AVL) data produced by transit vehicles is invaluable in performance studies, but turning raw AVL points into a detailed view of vehicle stop-and-gos is burdensome: the datasets are sparse, noisy, and prone to blunders. While recent research has explored methods of reconstructing trajectories describing the position of vehicles over time, the common techniques can be complex, and no open-source tools exist to help practitioners process the raw AVL. We fill this gap by proposing a thorough methodology for cleaning transit AVL data and providing an open-source R package, built on open data standards, to implement the workflow…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.31078.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.31078.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Tool for Reconstructing Transit Vehicle Trajectories: A Case Study at IndyGo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ben O'Brien, Lewis J. Lehe"},"dateModified":"2026-09-01T00:00:00+02:00","datePublished":"2026-09-01T00:00:00+02:00","description":"Automatic vehicle location (AVL) data produced by transit vehicles is invaluable in performance studies, but turning raw AVL points into a detailed view of vehicle stop-and-gos is burdensome: the datasets are sparse, noisy, and prone to blunders. While recent research has explored methods of reconstructing trajectories describing the position of vehicles over time, the common techniques can be complex, and no open-source tools exist to help practitioners process the raw AVL. We fill this gap by proposing a thorough methodology for cleaning transit AVL data and providing an open-source R package, built on open data standards, to implement the workflow…","headline":"A Tool for Reconstructing Transit Vehicle Trajectories: A Case Study at IndyGo","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.31078.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.31078.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Tool for Reconstructing Transit Vehicle Trajectories: A Case Study at IndyGo</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Ben O'Brien, Lewis J. Lehe
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      1 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Automatic vehicle location (AVL) data produced by transit vehicles is invaluable in performance studies, but turning raw AVL points into a detailed view of vehicle stop-and-gos is burdensome: the datasets are sparse, noisy, and prone to blunders. While recent research has explored methods of reconstructing trajectories describing the position of vehicles over time, the common techniques can be complex, and no open-source tools exist to help practitioners process the raw AVL. We fill this gap by proposing a thorough methodology for cleaning transit AVL data and providing an open-source R package, built on open data standards, to implement the workflow and reconstruct vehicle trajectories, allowing practitioners to easily formulate custom microscopic performance metrics. Using a large AVL dataset with over 3,000 trips from Indianapolis, Indiana, we demonstrate the workflow, evaluate the package’s efficiency, and demonstrate the utility of the trajectories by estimating various traffic signal performance metrics. Finally, we use cross-validation to quantify the error in reconstructed trajectories at various polling frequencies. We find that the proposed data processing methodology and tool are efficient, requiring roughly 3 minutes of processing time on the large dataset, and error in position estimates is low (root mean square error under 10 meters at polling frequencies of 15 seconds). The estimated signal performance metrics can inform future evaluations of signal programming along the corridor. In sum, this paper serves as a practical guide and complementary toolbox for practitioners seeking to use transit AVL data to build a detailed view of vehicle stop-and-go cycles.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.31078" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.31078" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

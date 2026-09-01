@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Reference-Distribution Dependence in LLM-Based Synthetic Persona Data: Diagnosis and Post Hoc Adjustment of Demographic Distributions</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Reference-Distribution Dependence in LLM-Based Synthetic Persona Data: Diagnosis and Post Hoc Adjustment of Demographic Distributions" />
+<meta name="author" content="Eunjeong Song, Sehee Hong" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We diagnose how closely the demographic distributions in LLM-based synthetic persona data match external reference distributions. For the three variables examined, we show that most of the observed error is attributable to the choice of reference rather than to the generator. Using total variation distance (TVD), we compare the sex x age group x province joint distribution of 1,000,000 records from Nemotron-Personas-Korea (NPK) with Korean official statistics. Against resident-registration figures for April 2026, the time of use, the bias bound, defined as the largest possible difference in the share of any subgroup formed from the three variables, is 1.81 percentage…" />
+<meta name="twitter:description" property="og:description" content="We diagnose how closely the demographic distributions in LLM-based synthetic persona data match external reference distributions. For the three variables examined, we show that most of the observed error is attributable to the choice of reference rather than to the generator. Using total variation distance (TVD), we compare the sex x age group x province joint distribution of 1,000,000 records from Nemotron-Personas-Korea (NPK) with Korean official statistics. Against resident-registration figures for April 2026, the time of use, the bias bound, defined as the largest possible difference in the share of any subgroup formed from the three variables, is 1.81 percentage…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28668.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28668.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Reference-Distribution Dependence in LLM-Based Synthetic Persona Data: Diagnosis and Post Hoc Adjustment of Demographic Distributions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eunjeong Song, Sehee Hong"},"dateModified":"2026-09-01T00:00:00+02:00","datePublished":"2026-09-01T00:00:00+02:00","description":"We diagnose how closely the demographic distributions in LLM-based synthetic persona data match external reference distributions. For the three variables examined, we show that most of the observed error is attributable to the choice of reference rather than to the generator. Using total variation distance (TVD), we compare the sex x age group x province joint distribution of 1,000,000 records from Nemotron-Personas-Korea (NPK) with Korean official statistics. Against resident-registration figures for April 2026, the time of use, the bias bound, defined as the largest possible difference in the share of any subgroup formed from the three variables, is 1.81 percentage…","headline":"Reference-Distribution Dependence in LLM-Based Synthetic Persona Data: Diagnosis and Post Hoc Adjustment of Demographic Distributions","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28668.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28668.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Reference-Distribution Dependence in LLM-Based Synthetic Persona Data: Diagnosis and Post Hoc Adjustment of Demographic Distributions</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Eunjeong Song, Sehee Hong
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      1 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>We diagnose how closely the demographic distributions in LLM-based synthetic persona data match external reference distributions. For the three variables examined, we show that most of the observed error is attributable to the choice of reference rather than to the generator. Using total variation distance (TVD), we compare the sex x age group x province joint distribution of 1,000,000 records from Nemotron-Personas-Korea (NPK) with Korean official statistics. Against resident-registration figures for April 2026, the time of use, the bias bound, defined as the largest possible difference in the share of any subgroup formed from the three variables, is 1.81 percentage points. This is comparable to the margin of error of a survey of roughly 2,900 respondents. This value is not a fixed property of the data. Matching the reference period and series to the generating reference identified here, the 2024 register-based census restricted to Korean nationals, lowers it to 0.56 percentage points. Over the 15 months between the best-matching month (January 2025) and the time of use, the resident-registration population structure itself moves more than twice the distance of NPK’s minimum error. Raking and cell post-stratification, the two weighting schemes used in Korean survey practice, remove most of the reference-period dependence at a variance inflation of about 0.2% in both cases. After raking against the generating reference, the residual joint discrepancy lies at, and marginally above, the upper bound of what a perfect generator would produce when realizing 1,000,000 records (97.6th percentile of the Monte Carlo distribution). We recommend treating synthetic persona data as auxiliary material for small-scale survey design rather than as a substitute for survey data, and re-running both diagnosis and adjustment against official statistics current at the time of use.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.28668" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.28668" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

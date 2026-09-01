@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>From crown candidates to neighborhood screening: integrating optical GeoAI and spatial modeling for urban-canopy assessment in Davis, California</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="From crown candidates to neighborhood screening: integrating optical GeoAI and spatial modeling for urban-canopy assessment in Davis, California" />
+<meta name="author" content="Mohammadreza Narimani, Shreyan Mitra, Parastoo Farajpoor" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Timely urban-canopy information is essential for linking remote sensing with heat, mobility, and neighborhood planning. We developed an optical GeoAI workflow for Davis, California, using 2022 National Agriculture Imagery Program imagery (0.6 m RGB+NIR). DeepForest generated crown candidates; an NDVI threshold, non-maximum suppression, and box-prompted Segment Anything Model (ViT-B) produced a crown-anchored canopy surface. Analyses used the 25.92 km2 Census TIGER municipal boundary and a 100 m grid. The workflow retained 11,741 candidate crowns and mapped 7.71 km2 of canopy (29.8% of the city). On the identical extent, pixel precision was 0.804, pixel recall was 0.873, and 97.4% of candidate…" />
+<meta name="twitter:description" property="og:description" content="Timely urban-canopy information is essential for linking remote sensing with heat, mobility, and neighborhood planning. We developed an optical GeoAI workflow for Davis, California, using 2022 National Agriculture Imagery Program imagery (0.6 m RGB+NIR). DeepForest generated crown candidates; an NDVI threshold, non-maximum suppression, and box-prompted Segment Anything Model (ViT-B) produced a crown-anchored canopy surface. Analyses used the 25.92 km2 Census TIGER municipal boundary and a 100 m grid. The workflow retained 11,741 candidate crowns and mapped 7.71 km2 of canopy (29.8% of the city). On the identical extent, pixel precision was 0.804, pixel recall was 0.873, and 97.4% of candidate…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.13856.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.13856.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="From crown candidates to neighborhood screening: integrating optical GeoAI and spatial modeling for urban-canopy assessment in Davis, California" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mohammadreza Narimani, Shreyan Mitra, Parastoo Farajpoor"},"dateModified":"2026-09-01T00:00:00+02:00","datePublished":"2026-09-01T00:00:00+02:00","description":"Timely urban-canopy information is essential for linking remote sensing with heat, mobility, and neighborhood planning. We developed an optical GeoAI workflow for Davis, California, using 2022 National Agriculture Imagery Program imagery (0.6 m RGB+NIR). DeepForest generated crown candidates; an NDVI threshold, non-maximum suppression, and box-prompted Segment Anything Model (ViT-B) produced a crown-anchored canopy surface. Analyses used the 25.92 km2 Census TIGER municipal boundary and a 100 m grid. The workflow retained 11,741 candidate crowns and mapped 7.71 km2 of canopy (29.8% of the city). On the identical extent, pixel precision was 0.804, pixel recall was 0.873, and 97.4% of candidate…","headline":"From crown candidates to neighborhood screening: integrating optical GeoAI and spatial modeling for urban-canopy assessment in Davis, California","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.13856.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.13856.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>From crown candidates to neighborhood screening: integrating optical GeoAI and spatial modeling for urban-canopy assessment in Davis, California</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Mohammadreza Narimani, Shreyan Mitra, Parastoo Farajpoor
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      1 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Timely urban-canopy information is essential for linking remote sensing with heat, mobility, and neighborhood planning. We developed an optical GeoAI workflow for Davis, California, using 2022 National Agriculture Imagery Program imagery (0.6 m RGB+NIR). DeepForest generated crown candidates; an NDVI threshold, non-maximum suppression, and box-prompted Segment Anything Model (ViT-B) produced a crown-anchored canopy surface. Analyses used the 25.92 km2 Census TIGER municipal boundary and a 100 m grid. The workflow retained 11,741 candidate crowns and mapped 7.71 km2 of canopy (29.8% of the city). On the identical extent, pixel precision was 0.804, pixel recall was 0.873, and 97.4% of candidate centers agreed with the 2022 USDA/CAL FIRE LiDAR-assisted canopy product (IoU 0.719; Dice 0.837; area recovery 108.5%). Approximately 49% of candidates occurred within 15 m of a road. Canopy was inversely associated with Landsat land-surface temperature (Spearman rho = -0.477; partial rho = -0.551 controlling for built probability), and spatial-lag modeling confirmed clear neighborhood structure. Two transparent attention surfaces combined canopy need with thermal and contextual indicators. The framework provides a reproducible, updateable screening layer that complements structural canopy products and municipal inventories while retaining assumptions, data provenance, and spatial diagnostics for planning interpretation.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.13856" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.13856" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

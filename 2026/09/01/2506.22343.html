@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Optimal Estimation of Watermark Proportions in Hybrid AI-Human Texts</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Optimal Estimation of Watermark Proportions in Hybrid AI-Human Texts" />
+<meta name="author" content="Xiang Li, Garrett Wen, Weiqing He, Jiayuan Wu, Qi Long, Weijie J. Su" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Text watermarks in large language models (LLMs) are an increasingly important tool for detecting synthetic text and distinguishing human-written content from LLM-generated text. While most existing studies focus on determining whether entire texts are watermarked, many real-world scenarios involve mixed-source texts, which blend human-written and watermarked content. In this paper, we address the problem of optimally estimating the watermark proportion in mixed-source texts. We cast this problem as estimating the proportion parameter in a mixture model based on \emph{pivotal statistics}. First, we show that this parameter is not even identifiable in certain watermarking schemes, let alone consistently estimable. In stark…" />
+<meta name="twitter:description" property="og:description" content="Text watermarks in large language models (LLMs) are an increasingly important tool for detecting synthetic text and distinguishing human-written content from LLM-generated text. While most existing studies focus on determining whether entire texts are watermarked, many real-world scenarios involve mixed-source texts, which blend human-written and watermarked content. In this paper, we address the problem of optimally estimating the watermark proportion in mixed-source texts. We cast this problem as estimating the proportion parameter in a mixture model based on \emph{pivotal statistics}. First, we show that this parameter is not even identifiable in certain watermarking schemes, let alone consistently estimable. In stark…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2506.22343.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2506.22343.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Optimal Estimation of Watermark Proportions in Hybrid AI-Human Texts" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xiang Li, Garrett Wen, Weiqing He, Jiayuan Wu, Qi Long, Weijie J. Su"},"dateModified":"2026-09-01T00:00:00+02:00","datePublished":"2026-09-01T00:00:00+02:00","description":"Text watermarks in large language models (LLMs) are an increasingly important tool for detecting synthetic text and distinguishing human-written content from LLM-generated text. While most existing studies focus on determining whether entire texts are watermarked, many real-world scenarios involve mixed-source texts, which blend human-written and watermarked content. In this paper, we address the problem of optimally estimating the watermark proportion in mixed-source texts. We cast this problem as estimating the proportion parameter in a mixture model based on \\emph{pivotal statistics}. First, we show that this parameter is not even identifiable in certain watermarking schemes, let alone consistently estimable. In stark…","headline":"Optimal Estimation of Watermark Proportions in Hybrid AI-Human Texts","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2506.22343.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2506.22343.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Optimal Estimation of Watermark Proportions in Hybrid AI-Human Texts</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Xiang Li, Garrett Wen, Weiqing He, Jiayuan Wu, Qi Long, Weijie J. Su
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME
+      <span class="sep">&middot;</span>
+      1 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Text watermarks in large language models (LLMs) are an increasingly important tool for detecting synthetic text and distinguishing human-written content from LLM-generated text. While most existing studies focus on determining whether entire texts are watermarked, many real-world scenarios involve mixed-source texts, which blend human-written and watermarked content. In this paper, we address the problem of optimally estimating the watermark proportion in mixed-source texts. We cast this problem as estimating the proportion parameter in a mixture model based on \emph{pivotal statistics}. First, we show that this parameter is not even identifiable in certain watermarking schemes, let alone consistently estimable. In stark contrast, for watermarking methods that employ continuous pivotal statistics for detection, we demonstrate that the proportion parameter is identifiable under mild conditions. We propose efficient estimators for this class of methods, which include several popular unbiased watermarks as examples, and derive minimax lower bounds for any measurable estimator based on pivotal statistics, showing that our estimators achieve these lower bounds. Through evaluations on both synthetic data and mixed-source text generated by open-source models, we demonstrate that our proposed estimators consistently achieve high estimation accuracy.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2506.22343" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2506.22343" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

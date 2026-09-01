@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>CARB: A Covariate-Assessed Robust Borrowing Strategy with Literature-Informed Prior Weights for External Data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="CARB: A Covariate-Assessed Robust Borrowing Strategy with Literature-Informed Prior Weights for External Data" />
+<meta name="author" content="Jinping Liang, Guannan Gong, Satrajit Roychoudhury, Wei Wei" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Borrowing external control data can improve the efficiency of clinical trials, particularly when patient accrual is difficult. A persistent challenge is how to prespecify the degree of borrowing systematically and transparently. In practice, prior weights are often selected heuristically or calibrated through simulation to achieve desired operating characteristics, making them difficult to justify scientifically. Moreover, patient-level covariate data from external sources are rarely available when the new trial is designed, precluding patient-level adjustment methods. We propose CARB (Covariate-Assessed Robust Borrowing), a framework that formalizes prior-weight specification as a design-stage assessment of baseline compatibility. Using only aggregate information, CARB quantifies discrepancies…" />
+<meta name="twitter:description" property="og:description" content="Borrowing external control data can improve the efficiency of clinical trials, particularly when patient accrual is difficult. A persistent challenge is how to prespecify the degree of borrowing systematically and transparently. In practice, prior weights are often selected heuristically or calibrated through simulation to achieve desired operating characteristics, making them difficult to justify scientifically. Moreover, patient-level covariate data from external sources are rarely available when the new trial is designed, precluding patient-level adjustment methods. We propose CARB (Covariate-Assessed Robust Borrowing), a framework that formalizes prior-weight specification as a design-stage assessment of baseline compatibility. Using only aggregate information, CARB quantifies discrepancies…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28810.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28810.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="CARB: A Covariate-Assessed Robust Borrowing Strategy with Literature-Informed Prior Weights for External Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jinping Liang, Guannan Gong, Satrajit Roychoudhury, Wei Wei"},"dateModified":"2026-09-01T00:00:00+02:00","datePublished":"2026-09-01T00:00:00+02:00","description":"Borrowing external control data can improve the efficiency of clinical trials, particularly when patient accrual is difficult. A persistent challenge is how to prespecify the degree of borrowing systematically and transparently. In practice, prior weights are often selected heuristically or calibrated through simulation to achieve desired operating characteristics, making them difficult to justify scientifically. Moreover, patient-level covariate data from external sources are rarely available when the new trial is designed, precluding patient-level adjustment methods. We propose CARB (Covariate-Assessed Robust Borrowing), a framework that formalizes prior-weight specification as a design-stage assessment of baseline compatibility. Using only aggregate information, CARB quantifies discrepancies…","headline":"CARB: A Covariate-Assessed Robust Borrowing Strategy with Literature-Informed Prior Weights for External Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28810.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28810.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>CARB: A Covariate-Assessed Robust Borrowing Strategy with Literature-Informed Prior Weights for External Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Jinping Liang, Guannan Gong, Satrajit Roychoudhury, Wei Wei
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      1 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Borrowing external control data can improve the efficiency of clinical trials, particularly when patient accrual is difficult. A persistent challenge is how to prespecify the degree of borrowing systematically and transparently. In practice, prior weights are often selected heuristically or calibrated through simulation to achieve desired operating characteristics, making them difficult to justify scientifically. Moreover, patient-level covariate data from external sources are rarely available when the new trial is designed, precluding patient-level adjustment methods. We propose CARB (Covariate-Assessed Robust Borrowing), a framework that formalizes prior-weight specification as a design-stage assessment of baseline compatibility. Using only aggregate information, CARB quantifies discrepancies in prespecified baseline covariates between the new trial and each external source, without using outcome data from the new trial. A prespecified mapping translates the resulting dissimilarity measure into a source-specific prior weight on the exchangeable component of a robust borrowing model. Simulation studies show that CARB reduces bias and type I error inflation relative to fixed borrowing under observed and unobserved incompatibility, while improving efficiency when external controls are compatible. An application to advanced melanoma trials illustrates covariate-informed borrowing from multiple historical sources. An apparent discrepancy in reported baseline characteristics serves as a warning signal that reduces borrowing. CARB provides a transparent and reproducible way to borrow cautiously when patient-level covariate data from external sources are unavailable.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.28810" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.28810" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Saturation in G: simple & robust causal inference in cluster randomized trials with informative cluster sizes</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Saturation in G: simple &amp; robust causal inference in cluster randomized trials with informative cluster sizes" />
+<meta name="author" content="Kenneth M. Lee, Michael O. Harhay, Fan Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cluster randomized trials (CRTs) can exhibit informative cluster sizes (ICS) where cluster size is associated with outcomes and/or treatment effects. Under ICS, the individual and cluster-average treatment effects (iATE, cATE) can diverge, and the conventional linear mixed-effects model (LMM) and generalized estimating equation (GEE) with an exchangeable working correlation can produce data-dependent weighted contrasts that are not consistent for either estimand. In these settings with ICS, we propose easy to implement “cluster-size saturated models with g-computation” (CS-g), which employ a simple two-step adjustment to standard practice: (1.) augment the appropriately weighted working LMM or GEE with a saturated continuous cluster-size…" />
+<meta name="twitter:description" property="og:description" content="Cluster randomized trials (CRTs) can exhibit informative cluster sizes (ICS) where cluster size is associated with outcomes and/or treatment effects. Under ICS, the individual and cluster-average treatment effects (iATE, cATE) can diverge, and the conventional linear mixed-effects model (LMM) and generalized estimating equation (GEE) with an exchangeable working correlation can produce data-dependent weighted contrasts that are not consistent for either estimand. In these settings with ICS, we propose easy to implement “cluster-size saturated models with g-computation” (CS-g), which employ a simple two-step adjustment to standard practice: (1.) augment the appropriately weighted working LMM or GEE with a saturated continuous cluster-size…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28943.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28943.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Saturation in G: simple &amp; robust causal inference in cluster randomized trials with informative cluster sizes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kenneth M. Lee, Michael O. Harhay, Fan Li"},"dateModified":"2026-09-01T00:00:00+02:00","datePublished":"2026-09-01T00:00:00+02:00","description":"Cluster randomized trials (CRTs) can exhibit informative cluster sizes (ICS) where cluster size is associated with outcomes and/or treatment effects. Under ICS, the individual and cluster-average treatment effects (iATE, cATE) can diverge, and the conventional linear mixed-effects model (LMM) and generalized estimating equation (GEE) with an exchangeable working correlation can produce data-dependent weighted contrasts that are not consistent for either estimand. In these settings with ICS, we propose easy to implement “cluster-size saturated models with g-computation” (CS-g), which employ a simple two-step adjustment to standard practice: (1.) augment the appropriately weighted working LMM or GEE with a saturated continuous cluster-size…","headline":"Saturation in G: simple &amp; robust causal inference in cluster randomized trials with informative cluster sizes","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28943.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/01/2608.28943.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Saturation in G: simple & robust causal inference in cluster randomized trials with informative cluster sizes</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Kenneth M. Lee, Michael O. Harhay, Fan Li
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      1 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Cluster randomized trials (CRTs) can exhibit informative cluster sizes (ICS) where cluster size is associated with outcomes and/or treatment effects. Under ICS, the individual and cluster-average treatment effects (iATE, cATE) can diverge, and the conventional linear mixed-effects model (LMM) and generalized estimating equation (GEE) with an exchangeable working correlation can produce data-dependent weighted contrasts that are not consistent for either estimand. In these settings with ICS, we propose easy to implement “cluster-size saturated models with g-computation” (CS-g), which employ a simple two-step adjustment to standard practice: (1.) augment the appropriately weighted working LMM or GEE with a saturated continuous cluster-size main effect and treatment x cluster-size interaction, and (2.) apply g-computation to target an interpretable marginal estimand. We prove that the appropriately weighted cluster-size saturated LMM with g-computation and more general cluster-size saturated GEE with g-computation can consistently target the iATE and cATE, among a broad class of interpretable estimands, while allowing for ICS. Crucially, this consistency holds under arbitrary misspecification of other model components, including the functional form of the saturated cluster-size terms. Furthermore, we demonstrate exact finite-sample equivalence between these consistent CS-g estimators and their model-robust standardization counterparts. Across simulations with continuous and binary outcomes, the proposed CS-g estimators were unbiased, more efficient than other consistent estimators, and returned greater power to detect ICS. A re-analysis of the PPACT P-CRT further illustrates the approach. Altogether, CS-g offers a simple, robust, and efficient route to target interpretable marginal effects in P-CRTs with ICS.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.28943" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.28943" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
