@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When Metropolis and Hastings Meet Bradley and Terry: Exact MCMC From Preference Voting</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="When Metropolis and Hastings Meet Bradley and Terry: Exact MCMC From Preference Voting" />
+<meta name="author" content="Ariel Smogorghevski, Nir Rosenfeld, Yaniv Romano" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sampling from distributions conditioned on desired semantic properties is an emerging challenge in modern generative modeling. Metropolis-Hastings (MH) provides a principled route to conditional sampling, but requires access to exact pointwise target-density evaluations, which are not available in generative settings. Meanwhile, pairwise comparisons by humans or model “judge” are highly accessible and have proved valuable across diverse applications. We introduce Pref-MH, a general exact MH sampler for judge-induced conditional distributions using only stochastic binary pairwise comparisons. Our key observation is that the MH unnormalized density ratio matches the preference odds of the Bradley-Terry (BT) choice model. The central challenge is…" />
+<meta name="twitter:description" property="og:description" content="Sampling from distributions conditioned on desired semantic properties is an emerging challenge in modern generative modeling. Metropolis-Hastings (MH) provides a principled route to conditional sampling, but requires access to exact pointwise target-density evaluations, which are not available in generative settings. Meanwhile, pairwise comparisons by humans or model “judge” are highly accessible and have proved valuable across diverse applications. We introduce Pref-MH, a general exact MH sampler for judge-induced conditional distributions using only stochastic binary pairwise comparisons. Our key observation is that the MH unnormalized density ratio matches the preference odds of the Bradley-Terry (BT) choice model. The central challenge is…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00905.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00905.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="When Metropolis and Hastings Meet Bradley and Terry: Exact MCMC From Preference Voting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ariel Smogorghevski, Nir Rosenfeld, Yaniv Romano"},"dateModified":"2026-09-02T00:00:00+02:00","datePublished":"2026-09-02T00:00:00+02:00","description":"Sampling from distributions conditioned on desired semantic properties is an emerging challenge in modern generative modeling. Metropolis-Hastings (MH) provides a principled route to conditional sampling, but requires access to exact pointwise target-density evaluations, which are not available in generative settings. Meanwhile, pairwise comparisons by humans or model “judge” are highly accessible and have proved valuable across diverse applications. We introduce Pref-MH, a general exact MH sampler for judge-induced conditional distributions using only stochastic binary pairwise comparisons. Our key observation is that the MH unnormalized density ratio matches the preference odds of the Bradley-Terry (BT) choice model. The central challenge is…","headline":"When Metropolis and Hastings Meet Bradley and Terry: Exact MCMC From Preference Voting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00905.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00905.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>When Metropolis and Hastings Meet Bradley and Terry: Exact MCMC From Preference Voting</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Ariel Smogorghevski, Nir Rosenfeld, Yaniv Romano
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ML
+      <span class="sep">&middot;</span>
+      2 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Sampling from distributions conditioned on desired semantic properties is an emerging challenge in modern generative modeling. Metropolis-Hastings (MH) provides a principled route to conditional sampling, but requires access to exact pointwise target-density evaluations, which are not available in generative settings. Meanwhile, pairwise comparisons by humans or model “judge” are highly accessible and have proved valuable across diverse applications. We introduce Pref-MH, a general exact MH sampler for judge-induced conditional distributions using only stochastic binary pairwise comparisons. Our key observation is that the MH unnormalized density ratio matches the preference odds of the Bradley-Terry (BT) choice model. The central challenge is that while MH requires precise ratio computation, BT judges provide only sampled binary feedback. To this end, we develop a valid accept/reject rule whose resulting Markov chain provably converges to the target distribution. We further show that, for a fixed proposal kernel and budget, Pref-MH is optimal in the Peskun-Tierney sense among this class of exact reversible acceptance rules. Experiments on text generation and molecular design with LLM judges, as well as image generation with VLM judges, demonstrate that Pref-MH provides a practical and flexible approach to conditional sampling when comparative feedback is relatively easy to obtain.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.00905" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.00905" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

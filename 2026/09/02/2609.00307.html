@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Generalized Bayesian Clustering with Regression for Unaligned Longitudinal Binary Data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Generalized Bayesian Clustering with Regression for Unaligned Longitudinal Binary Data" />
+<meta name="author" content="Khai Nguyen, Elizabeth Juarez-Colunga, Peter Mueller" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose a generalized Bayesian clustering with regression model for unaligned longitudinal binary outcomes, motivated by seizure diary data from the Human Epilepsy Project. Seizure diaries are sparse, irregularly observed, and vary enormously across patients. A single fully-specified generative model tends to be either misspecified or computationally inefficient. We address the challenge by two strategies. We set up a regression by way of clustering as model-based clustering using a mixture model. For the latter, we take a generalized Bayesian perspective which replaces the full likelihood with a loss-based update using a generalized likelihood. We combine a trajectory similarity loss and…" />
+<meta name="twitter:description" property="og:description" content="We propose a generalized Bayesian clustering with regression model for unaligned longitudinal binary outcomes, motivated by seizure diary data from the Human Epilepsy Project. Seizure diaries are sparse, irregularly observed, and vary enormously across patients. A single fully-specified generative model tends to be either misspecified or computationally inefficient. We address the challenge by two strategies. We set up a regression by way of clustering as model-based clustering using a mixture model. For the latter, we take a generalized Bayesian perspective which replaces the full likelihood with a loss-based update using a generalized likelihood. We combine a trajectory similarity loss and…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00307.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00307.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Generalized Bayesian Clustering with Regression for Unaligned Longitudinal Binary Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Khai Nguyen, Elizabeth Juarez-Colunga, Peter Mueller"},"dateModified":"2026-09-02T00:00:00+02:00","datePublished":"2026-09-02T00:00:00+02:00","description":"We propose a generalized Bayesian clustering with regression model for unaligned longitudinal binary outcomes, motivated by seizure diary data from the Human Epilepsy Project. Seizure diaries are sparse, irregularly observed, and vary enormously across patients. A single fully-specified generative model tends to be either misspecified or computationally inefficient. We address the challenge by two strategies. We set up a regression by way of clustering as model-based clustering using a mixture model. For the latter, we take a generalized Bayesian perspective which replaces the full likelihood with a loss-based update using a generalized likelihood. We combine a trajectory similarity loss and…","headline":"Generalized Bayesian Clustering with Regression for Unaligned Longitudinal Binary Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00307.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00307.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Generalized Bayesian Clustering with Regression for Unaligned Longitudinal Binary Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Khai Nguyen, Elizabeth Juarez-Colunga, Peter Mueller
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP, stat.CO
+      <span class="sep">&middot;</span>
+      2 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>We propose a generalized Bayesian clustering with regression model for unaligned longitudinal binary outcomes, motivated by seizure diary data from the Human Epilepsy Project. Seizure diaries are sparse, irregularly observed, and vary enormously across patients. A single fully-specified generative model tends to be either misspecified or computationally inefficient. We address the challenge by two strategies. We set up a regression by way of clustering as model-based clustering using a mixture model. For the latter, we take a generalized Bayesian perspective which replaces the full likelihood with a loss-based update using a generalized likelihood. We combine a trajectory similarity loss and a regression loss, so that clustering is informed by both trajectory similarity and the prediction of outcomes The trajectory similarity loss is constructed by representing each trajectory as an (empirical) distribution of subsequences, called reads, and then is defined based on the sliced Wasserstein distance between these empirical distributions. This loss allows alignment-free comparison of sequences that are irregularly observed or temporally misaligned, and it scales quasi-linearly in trajectory length. The regression loss is the negative log-likelihood of a probit regression. A prior on the cluster-specific parameters is defined by way of a Dirichlet process prior on the mixing measure.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.00307" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.00307" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

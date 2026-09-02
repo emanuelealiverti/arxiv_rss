@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Anytime-Valid Distribution Shift Detection via Predictive Rank Martingales</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Anytime-Valid Distribution Shift Detection via Predictive Rank Martingales" />
+<meta name="author" content="Qi Kuang, Yin Xia" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many sequential distribution shift detectors update a growing reference set with incoming observations. After a change, this update contaminates the reference set with post-change observations and can weaken subsequent evidence. Keeping the calibration sample fixed mitigates this contamination, but repeated reuse induces dependence among fixed-reference ranks, so arguments based on independent conformal (p)-values do not apply. We derive the exact conditional null distribution of the next rank given the preceding ranks and use it to construct a predictive rank martingale (PRM). Thresholding a PRM gives distribution-free, finite-sample anytime marginal type I error control. To target specific departures, we apply a…" />
+<meta name="twitter:description" property="og:description" content="Many sequential distribution shift detectors update a growing reference set with incoming observations. After a change, this update contaminates the reference set with post-change observations and can weaken subsequent evidence. Keeping the calibration sample fixed mitigates this contamination, but repeated reuse induces dependence among fixed-reference ranks, so arguments based on independent conformal (p)-values do not apply. We derive the exact conditional null distribution of the next rank given the preceding ranks and use it to construct a predictive rank martingale (PRM). Thresholding a PRM gives distribution-free, finite-sample anytime marginal type I error control. To target specific departures, we apply a…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00536.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00536.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Anytime-Valid Distribution Shift Detection via Predictive Rank Martingales" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Qi Kuang, Yin Xia"},"dateModified":"2026-09-02T00:00:00+02:00","datePublished":"2026-09-02T00:00:00+02:00","description":"Many sequential distribution shift detectors update a growing reference set with incoming observations. After a change, this update contaminates the reference set with post-change observations and can weaken subsequent evidence. Keeping the calibration sample fixed mitigates this contamination, but repeated reuse induces dependence among fixed-reference ranks, so arguments based on independent conformal (p)-values do not apply. We derive the exact conditional null distribution of the next rank given the preceding ranks and use it to construct a predictive rank martingale (PRM). Thresholding a PRM gives distribution-free, finite-sample anytime marginal type I error control. To target specific departures, we apply a…","headline":"Anytime-Valid Distribution Shift Detection via Predictive Rank Martingales","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00536.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00536.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Anytime-Valid Distribution Shift Detection via Predictive Rank Martingales</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Qi Kuang, Yin Xia
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      2 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Many sequential distribution shift detectors update a growing reference set with incoming observations. After a change, this update contaminates the reference set with post-change observations and can weaken subsequent evidence. Keeping the calibration sample fixed mitigates this contamination, but repeated reuse induces dependence among fixed-reference ranks, so arguments based on independent conformal (p)-values do not apply. We derive the exact conditional null distribution of the next rank given the preceding ranks and use it to construct a predictive rank martingale (PRM). Thresholding a PRM gives distribution-free, finite-sample anytime marginal type I error control. To target specific departures, we apply a pre-specified feature to each rank, center the resulting payoff under the predictive null law, and use Online Newton Step (ONS) to adapt the bet. Order and dispersion features target directional and center-versus-tail changes, respectively. For any Lipschitz feature with nonzero induced contrast under the alternative, we establish a finite-window detection guarantee and show that the test is consistent as the initial calibration size increases. At a fixed calibration size, however, we derive a power ceiling for every distribution-free detection procedure. Across synthetic and real data, our PRM methods achieve better detection performance than conditional conformal test martingale (CCTM).</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.00536" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.00536" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

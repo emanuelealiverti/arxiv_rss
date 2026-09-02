@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An efficient EM algorithm for both element-wise and structural missingness in matrix-variate normal mixture models</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="An efficient EM algorithm for both element-wise and structural missingness in matrix-variate normal mixture models" />
+<meta name="author" content="Hanzhang Lu, Jeffrey L. Andrews, Ryan P. Browne" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Matrix-variate data with missing entries arise frequently in applications where observations are naturally organized as two-dimensional arrays. Although the matrix normal distribution provides a parsimonious model through its Kronecker covariance structure, standard EM estimation can be computationally expensive because arbitrary missingness patterns typically destroy this separability in the E-step. In this paper, we propose an efficient partial EM algorithm for matrix-variate normal data with missing entries. The proposed method updates the conditional mean and covariance of the missing component through coordinate-wise approximations, avoiding repeated inversion of pattern-specific covariance matrices and avoiding construction of the full vectorized covariance matrix. We further…" />
+<meta name="twitter:description" property="og:description" content="Matrix-variate data with missing entries arise frequently in applications where observations are naturally organized as two-dimensional arrays. Although the matrix normal distribution provides a parsimonious model through its Kronecker covariance structure, standard EM estimation can be computationally expensive because arbitrary missingness patterns typically destroy this separability in the E-step. In this paper, we propose an efficient partial EM algorithm for matrix-variate normal data with missing entries. The proposed method updates the conditional mean and covariance of the missing component through coordinate-wise approximations, avoiding repeated inversion of pattern-specific covariance matrices and avoiding construction of the full vectorized covariance matrix. We further…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00616.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00616.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="An efficient EM algorithm for both element-wise and structural missingness in matrix-variate normal mixture models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanzhang Lu, Jeffrey L. Andrews, Ryan P. Browne"},"dateModified":"2026-09-02T00:00:00+02:00","datePublished":"2026-09-02T00:00:00+02:00","description":"Matrix-variate data with missing entries arise frequently in applications where observations are naturally organized as two-dimensional arrays. Although the matrix normal distribution provides a parsimonious model through its Kronecker covariance structure, standard EM estimation can be computationally expensive because arbitrary missingness patterns typically destroy this separability in the E-step. In this paper, we propose an efficient partial EM algorithm for matrix-variate normal data with missing entries. The proposed method updates the conditional mean and covariance of the missing component through coordinate-wise approximations, avoiding repeated inversion of pattern-specific covariance matrices and avoiding construction of the full vectorized covariance matrix. We further…","headline":"An efficient EM algorithm for both element-wise and structural missingness in matrix-variate normal mixture models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00616.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00616.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>An efficient EM algorithm for both element-wise and structural missingness in matrix-variate normal mixture models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Hanzhang Lu, Jeffrey L. Andrews, Ryan P. Browne
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO, stat.ML
+      <span class="sep">&middot;</span>
+      2 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Matrix-variate data with missing entries arise frequently in applications where observations are naturally organized as two-dimensional arrays. Although the matrix normal distribution provides a parsimonious model through its Kronecker covariance structure, standard EM estimation can be computationally expensive because arbitrary missingness patterns typically destroy this separability in the E-step. In this paper, we propose an efficient partial EM algorithm for matrix-variate normal data with missing entries. The proposed method updates the conditional mean and covariance of the missing component through coordinate-wise approximations, avoiding repeated inversion of pattern-specific covariance matrices and avoiding construction of the full vectorized covariance matrix. We further develop a specialized update for submatrix missingness, where the missing-block precision retains a Kronecker product structure, and the covariance update can be carried out independently in the row and column directions. Simulation studies show that the proposed methods substantially reduce computation time compared with exact EM while preserving nearly identical observed-data likelihood across a range of dimensions and missing proportions. A real-data application to hyperspectral image patches demonstrates that the proposed imputation strategy can be embedded within a matrix-variate mixture model for simultaneous imputation and clustering.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.00616" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.00616" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

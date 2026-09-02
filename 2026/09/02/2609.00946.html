@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Embedded Conditional Independence Tests for Large Language Model Generated Text with an Application to German Parliament Speeches</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Embedded Conditional Independence Tests for Large Language Model Generated Text with an Application to German Parliament Speeches" />
+<meta name="author" content="Marco Simnacher, Georg Keilbar, Benjamin König, Christoph Lippert, Sonja Greven" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Conditional independence tests (CITs) test for conditional dependence between two random objects $X$ and $Y$ given a third random object $Z$. Existing CITs have limited applicability to high-dimensional data, especially multimodal data like text. However, we show that such tests are of interest for large language model (LLM) outputs, where we test whether an output $X$ generated from a source text $Z$ carries information about an attribute $Y$ beyond $Z$ itself. For this purpose, we propose embedded CITs (eCITs), which embed $X$ and $Z$ and apply an existing CIT to the resulting representations and to $Y$. We show that, provided…" />
+<meta name="twitter:description" property="og:description" content="Conditional independence tests (CITs) test for conditional dependence between two random objects $X$ and $Y$ given a third random object $Z$. Existing CITs have limited applicability to high-dimensional data, especially multimodal data like text. However, we show that such tests are of interest for large language model (LLM) outputs, where we test whether an output $X$ generated from a source text $Z$ carries information about an attribute $Y$ beyond $Z$ itself. For this purpose, we propose embedded CITs (eCITs), which embed $X$ and $Z$ and apply an existing CIT to the resulting representations and to $Y$. We show that, provided…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00946.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00946.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Embedded Conditional Independence Tests for Large Language Model Generated Text with an Application to German Parliament Speeches" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Marco Simnacher, Georg Keilbar, Benjamin König, Christoph Lippert, Sonja Greven"},"dateModified":"2026-09-02T00:00:00+02:00","datePublished":"2026-09-02T00:00:00+02:00","description":"Conditional independence tests (CITs) test for conditional dependence between two random objects $X$ and $Y$ given a third random object $Z$. Existing CITs have limited applicability to high-dimensional data, especially multimodal data like text. However, we show that such tests are of interest for large language model (LLM) outputs, where we test whether an output $X$ generated from a source text $Z$ carries information about an attribute $Y$ beyond $Z$ itself. For this purpose, we propose embedded CITs (eCITs), which embed $X$ and $Z$ and apply an existing CIT to the resulting representations and to $Y$. We show that, provided…","headline":"Embedded Conditional Independence Tests for Large Language Model Generated Text with an Application to German Parliament Speeches","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00946.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00946.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Embedded Conditional Independence Tests for Large Language Model Generated Text with an Application to German Parliament Speeches</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Marco Simnacher, Georg Keilbar, Benjamin König, Christoph Lippert, Sonja Greven
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      2 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Conditional independence tests (CITs) test for conditional dependence between two random objects $X$ and $Y$ given a third random object $Z$. Existing CITs have limited applicability to high-dimensional data, especially multimodal data like text. However, we show that such tests are of interest for large language model (LLM) outputs, where we test whether an output $X$ generated from a source text $Z$ carries information about an attribute $Y$ beyond $Z$ itself. For this purpose, we propose embedded CITs (eCITs), which embed $X$ and $Z$ and apply an existing CIT to the resulting representations and to $Y$. We show that, provided the embedding of $Z$ is sufficient, i.e. retains the information $Z$ carries about either $Y$ or the representation of $X$, the null hypothesis transfers from $X$ and $Z$ to their representations, so that a CIT valid for the embedded hypothesis is valid for the original one. We further give conditions for equivalence of the two hypotheses, and show that sufficiency weakens to mean sufficiency when the embedded test targets conditional mean independence. We propose a semi-synthetic simulation design to assess type I error (T1E) control and power of the eCITs for given embedding maps on a specific dataset and task, and use it to evaluate them on our application. Applying the eCITs to German Parliament speeches, we find for all combinations of embedding maps considered that the summaries of two LLMs contain information about the speaker’s faction and gender beyond the speech they were generated from.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.00946" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.00946" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

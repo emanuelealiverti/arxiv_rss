@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Deep Skew-t Mixture Models</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Deep Skew-t Mixture Models" />
+<meta name="author" content="Jinran Wu, You-Gan Wang, Geoffrey J. McLachlan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="High-dimensional clustering is challenging when component distributions are both heavy-tailed and directionally asymmetric. We propose a deep skew-$t$ mixture model (DStMM), a hierarchical factor-analytic mixture based on the generalised-hyperbolic skew-$t$ normal mean–variance representation. A shared inverse-gamma mixing variable is propagated along each complete latent pathway, allowing heavy tails and directional asymmetry to be modelled jointly while preserving conditional Gaussianity. Each complete pathway therefore admits an exact GHST marginal representation. We formalise the reductions to symmetric deep $t$, Gaussian deep-mixture, and single-layer GHST factor-analytic models, discuss local non-identifiability and the implementation-level parameter-counting convention, and derive the conditional generalised inverse Gaussian law…" />
+<meta name="twitter:description" property="og:description" content="High-dimensional clustering is challenging when component distributions are both heavy-tailed and directionally asymmetric. We propose a deep skew-$t$ mixture model (DStMM), a hierarchical factor-analytic mixture based on the generalised-hyperbolic skew-$t$ normal mean–variance representation. A shared inverse-gamma mixing variable is propagated along each complete latent pathway, allowing heavy tails and directional asymmetry to be modelled jointly while preserving conditional Gaussianity. Each complete pathway therefore admits an exact GHST marginal representation. We formalise the reductions to symmetric deep $t$, Gaussian deep-mixture, and single-layer GHST factor-analytic models, discuss local non-identifiability and the implementation-level parameter-counting convention, and derive the conditional generalised inverse Gaussian law…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00773.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00773.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Deep Skew-t Mixture Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jinran Wu, You-Gan Wang, Geoffrey J. McLachlan"},"dateModified":"2026-09-02T00:00:00+02:00","datePublished":"2026-09-02T00:00:00+02:00","description":"High-dimensional clustering is challenging when component distributions are both heavy-tailed and directionally asymmetric. We propose a deep skew-$t$ mixture model (DStMM), a hierarchical factor-analytic mixture based on the generalised-hyperbolic skew-$t$ normal mean–variance representation. A shared inverse-gamma mixing variable is propagated along each complete latent pathway, allowing heavy tails and directional asymmetry to be modelled jointly while preserving conditional Gaussianity. Each complete pathway therefore admits an exact GHST marginal representation. We formalise the reductions to symmetric deep $t$, Gaussian deep-mixture, and single-layer GHST factor-analytic models, discuss local non-identifiability and the implementation-level parameter-counting convention, and derive the conditional generalised inverse Gaussian law…","headline":"Deep Skew-t Mixture Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00773.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00773.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Deep Skew-t Mixture Models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Jinran Wu, You-Gan Wang, Geoffrey J. McLachlan
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO, stat.ML
+      <span class="sep">&middot;</span>
+      2 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>High-dimensional clustering is challenging when component distributions are both heavy-tailed and directionally asymmetric. We propose a deep skew-$t$ mixture model (DStMM), a hierarchical factor-analytic mixture based on the generalised-hyperbolic skew-$t$ normal mean–variance representation. A shared inverse-gamma mixing variable is propagated along each complete latent pathway, allowing heavy tails and directional asymmetry to be modelled jointly while preserving conditional Gaussianity. Each complete pathway therefore admits an exact GHST marginal representation. We formalise the reductions to symmetric deep $t$, Gaussian deep-mixture, and single-layer GHST factor-analytic models, discuss local non-identifiability and the implementation-level parameter-counting convention, and derive the conditional generalised inverse Gaussian law used for estimation. Estimation is carried out by a stochastic/Monte Carlo EM algorithm, with an explicit implementation-based parameter count for BIC architecture comparison. Simulation studies show that DStMM performs similarly to the symmetric robust model when skewness is absent but provides increasing gains as directional asymmetry becomes stronger, particularly under heavier tails; the same qualitative behaviour persists under smaller samples and unequal mixture proportions. Two real-data applications provide complementary evidence. On the UCI handwritten-digit benchmark, DStMM gives the strongest clustering performance under a common deep architecture, while on the Gas Sensor Array Drift data, DStMM improves on both deep Gaussian and deep $t$ alternatives and, under the implemented BIC criterion, selects a non-trivial second mixture layer. Together, these results support the value of propagating skewness and heavy-tail variation through a deep latent mixture while retaining an exact pathway-level likelihood.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.00773" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.00773" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

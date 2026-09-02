@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Parameterising Gaussian Graphical Models</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Parameterising Gaussian Graphical Models" />
+<meta name="author" content="Jack Storror Carter" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gaussian graphical models (GGMs) describe the dependence structure among jointly Gaussian random variables. However, the most common parameterisation of GGMs, the precision matrix, describes both the dependence and scale of the variables. This has been shown to lead to model selection methods that depend on the scale of the variables, despite graphical models being scale invariant. Even after standardising data to have unit sample variances, entries of the precision matrix can be on different scales leading to poor model selection. This paper decomposes the precision matrix into marginal variances and interpretable scale-invariant parameters - the partial correlations and variance inflation…" />
+<meta name="twitter:description" property="og:description" content="Gaussian graphical models (GGMs) describe the dependence structure among jointly Gaussian random variables. However, the most common parameterisation of GGMs, the precision matrix, describes both the dependence and scale of the variables. This has been shown to lead to model selection methods that depend on the scale of the variables, despite graphical models being scale invariant. Even after standardising data to have unit sample variances, entries of the precision matrix can be on different scales leading to poor model selection. This paper decomposes the precision matrix into marginal variances and interpretable scale-invariant parameters - the partial correlations and variance inflation…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00288.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00288.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Parameterising Gaussian Graphical Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jack Storror Carter"},"dateModified":"2026-09-02T00:00:00+02:00","datePublished":"2026-09-02T00:00:00+02:00","description":"Gaussian graphical models (GGMs) describe the dependence structure among jointly Gaussian random variables. However, the most common parameterisation of GGMs, the precision matrix, describes both the dependence and scale of the variables. This has been shown to lead to model selection methods that depend on the scale of the variables, despite graphical models being scale invariant. Even after standardising data to have unit sample variances, entries of the precision matrix can be on different scales leading to poor model selection. This paper decomposes the precision matrix into marginal variances and interpretable scale-invariant parameters - the partial correlations and variance inflation…","headline":"Parameterising Gaussian Graphical Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00288.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/02/2609.00288.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Parameterising Gaussian Graphical Models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Jack Storror Carter
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      2 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Gaussian graphical models (GGMs) describe the dependence structure among jointly Gaussian random variables. However, the most common parameterisation of GGMs, the precision matrix, describes both the dependence and scale of the variables. This has been shown to lead to model selection methods that depend on the scale of the variables, despite graphical models being scale invariant. Even after standardising data to have unit sample variances, entries of the precision matrix can be on different scales leading to poor model selection. This paper decomposes the precision matrix into marginal variances and interpretable scale-invariant parameters - the partial correlations and variance inflation factors. This decomposition gives new insights into the precision matrix entries and the dynamics of model selection methods such as penalised likelihoods. In particular, it explains the observed phenomenon that penalties on the precision matrix perform poorly at selecting hub variables and motivates the necessity of data standardisation. It also shows why methods based on partial correlations have better hub detection properties. The effect of penalisation of different quantities on the estimation of marginal variances is then investigated and an interesting simplification of the log-likelihood is shown when using maximum likelihood estimation of the marginal variances.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.00288" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.00288" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
