@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Reconciling Interpretability with Covariate-Dependent Shape Flexibility in Penalized Transformation Models for Distributional Regression</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Reconciling Interpretability with Covariate-Dependent Shape Flexibility in Penalized Transformation Models for Distributional Regression" />
+<meta name="author" content="Johannes Brachem, Thomas Kneib" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A central challenge in distributional regression is to allow the shape of the conditional distribution of the response variable to vary flexibly with covariates while retaining directly interpretable effects on its mean and standard deviation. We extend the penalized transformation model (PTM) family into a conditional-shape PTM, which assigns separate structured additive predictors to the conditional mean, standard deviation, and standardized distributional shape beyond location and scale. A covariate-dependent monotone transformation maps the standardized response to a fixed reference distribution, while affine standardization enforces mean zero and variance one for the induced standardized distribution. Thus, the first two predictors remain…" />
+<meta name="twitter:description" property="og:description" content="A central challenge in distributional regression is to allow the shape of the conditional distribution of the response variable to vary flexibly with covariates while retaining directly interpretable effects on its mean and standard deviation. We extend the penalized transformation model (PTM) family into a conditional-shape PTM, which assigns separate structured additive predictors to the conditional mean, standard deviation, and standardized distributional shape beyond location and scale. A covariate-dependent monotone transformation maps the standardized response to a fixed reference distribution, while affine standardization enforces mean zero and variance one for the induced standardized distribution. Thus, the first two predictors remain…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/03/2609.02662.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/03/2609.02662.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-03T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-03T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Reconciling Interpretability with Covariate-Dependent Shape Flexibility in Penalized Transformation Models for Distributional Regression" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Johannes Brachem, Thomas Kneib"},"dateModified":"2026-09-03T00:00:00+02:00","datePublished":"2026-09-03T00:00:00+02:00","description":"A central challenge in distributional regression is to allow the shape of the conditional distribution of the response variable to vary flexibly with covariates while retaining directly interpretable effects on its mean and standard deviation. We extend the penalized transformation model (PTM) family into a conditional-shape PTM, which assigns separate structured additive predictors to the conditional mean, standard deviation, and standardized distributional shape beyond location and scale. A covariate-dependent monotone transformation maps the standardized response to a fixed reference distribution, while affine standardization enforces mean zero and variance one for the induced standardized distribution. Thus, the first two predictors remain…","headline":"Reconciling Interpretability with Covariate-Dependent Shape Flexibility in Penalized Transformation Models for Distributional Regression","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/03/2609.02662.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/03/2609.02662.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Reconciling Interpretability with Covariate-Dependent Shape Flexibility in Penalized Transformation Models for Distributional Regression</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Johannes Brachem, Thomas Kneib
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      3 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>A central challenge in distributional regression is to allow the shape of the conditional distribution of the response variable to vary flexibly with covariates while retaining directly interpretable effects on its mean and standard deviation. We extend the penalized transformation model (PTM) family into a conditional-shape PTM, which assigns separate structured additive predictors to the conditional mean, standard deviation, and standardized distributional shape beyond location and scale. A covariate-dependent monotone transformation maps the standardized response to a fixed reference distribution, while affine standardization enforces mean zero and variance one for the induced standardized distribution. Thus, the first two predictors remain exactly the conditional mean and standard deviation. The shape predictor accommodates selected linear, nonlinear, group-specific, spatial, and interaction effects; regularization shrinks unsupported departures toward a reference-family location-scale model. We fit the PTM using mini-batched stochastic variational inference with model-aligned Gaussian blocks and staged optimization. In simulations, the PTM recovers smooth mean and standard-deviation effects and a covariate-dependent transition from skewness to bimodality while suppressing unnecessary shape effects. Under a deliberately misspecified design, it remains competitive with a structured additive Dirichlet-process mixture in test-set density and distribution-function accuracy, although all models show undercoverage and both flexible methods miss fine features. Applications to $13{,}425$ Norwegian water-conductivity observations and $1{,}182{,}514$ German daily-temperature observations demonstrate selective group-specific, seasonal, and spatial shape variation. Predictive performance criteria favor the conditional-shape PTM over a fixed-shape PTM and a Gaussian location-scale model.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.02662" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.02662" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
