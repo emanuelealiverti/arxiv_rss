@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Regularity-informed data assimilation: A hierarchical Bayesian approach to ensemble Kalman filtering for hyperbolic conservation laws</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Regularity-informed data assimilation: A hierarchical Bayesian approach to ensemble Kalman filtering for hyperbolic conservation laws" />
+<meta name="author" content="Jan Glaubitz, Daniel Sharp, Mathieu le Provost, Youssef M. Marzouk" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose a novel regularity-informed filtering framework for data assimilation in the context of hyperbolic conservation laws and other time-dependent partial differential equations. We focus on systems whose states exhibit steep gradients and jump discontinuities. While filtering is widely used to improve numerical simulations by incorporating observational data, traditional filtering methods lack awareness of the spatial regularity of states produced in these systems. As a result, data assimilation often produces unphysical state estimates, introducing spurious oscillations in smooth regions and smearing sharp features. To address this limitation, we introduce a filtering framework that incorporates edge-preserving regularization into the filter’s analysis…" />
+<meta name="twitter:description" property="og:description" content="We propose a novel regularity-informed filtering framework for data assimilation in the context of hyperbolic conservation laws and other time-dependent partial differential equations. We focus on systems whose states exhibit steep gradients and jump discontinuities. While filtering is widely used to improve numerical simulations by incorporating observational data, traditional filtering methods lack awareness of the spatial regularity of states produced in these systems. As a result, data assimilation often produces unphysical state estimates, introducing spurious oscillations in smooth regions and smearing sharp features. To address this limitation, we introduce a filtering framework that incorporates edge-preserving regularization into the filter’s analysis…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/04/2608.14840.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/04/2608.14840.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-04T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-04T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Regularity-informed data assimilation: A hierarchical Bayesian approach to ensemble Kalman filtering for hyperbolic conservation laws" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jan Glaubitz, Daniel Sharp, Mathieu le Provost, Youssef M. Marzouk"},"dateModified":"2026-09-04T00:00:00+02:00","datePublished":"2026-09-04T00:00:00+02:00","description":"We propose a novel regularity-informed filtering framework for data assimilation in the context of hyperbolic conservation laws and other time-dependent partial differential equations. We focus on systems whose states exhibit steep gradients and jump discontinuities. While filtering is widely used to improve numerical simulations by incorporating observational data, traditional filtering methods lack awareness of the spatial regularity of states produced in these systems. As a result, data assimilation often produces unphysical state estimates, introducing spurious oscillations in smooth regions and smearing sharp features. To address this limitation, we introduce a filtering framework that incorporates edge-preserving regularization into the filter’s analysis…","headline":"Regularity-informed data assimilation: A hierarchical Bayesian approach to ensemble Kalman filtering for hyperbolic conservation laws","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/04/2608.14840.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/04/2608.14840.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Regularity-informed data assimilation: A hierarchical Bayesian approach to ensemble Kalman filtering for hyperbolic conservation laws</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Jan Glaubitz, Daniel Sharp, Mathieu le Provost, Youssef M. Marzouk
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      4 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>We propose a novel regularity-informed filtering framework for data assimilation in the context of hyperbolic conservation laws and other time-dependent partial differential equations. We focus on systems whose states exhibit steep gradients and jump discontinuities. While filtering is widely used to improve numerical simulations by incorporating observational data, traditional filtering methods lack awareness of the spatial regularity of states produced in these systems. As a result, data assimilation often produces unphysical state estimates, introducing spurious oscillations in smooth regions and smearing sharp features. To address this limitation, we introduce a filtering framework that incorporates edge-preserving regularization into the filter’s analysis step; this framework balances simulation forecasts, observational data, and structural prior knowledge. We formalize this approach using the ensemble Kalman filter (EnKF) and a class of hierarchical generalized sparse Bayesian learning (GSBL) priors, which adaptively infer spatially varying hyperparameters to promote non-oscillatory behavior in smooth regions while preserving discontinuities. We demonstrate the effectiveness of the resulting GSBL-EnKF method on challenging benchmark problems governed by hyperbolic conservation laws. Our results show that enforcing regularity in the analysis step yields sharper, less oscillatory state estimates and lower errors of the ensemble mean. This sometimes comes at the cost of ensemble spread, which we quantify and discuss.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.14840" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.14840" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

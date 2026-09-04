@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fast Computation of Nested Cross-Validation for Penalized Regression</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Fast Computation of Nested Cross-Validation for Penalized Regression" />
+<meta name="author" content="Shuyang Cao, Alex Stringer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cross-validation is a resampling procedure that provides a point estimate of generalization error for any predictive model. Cross-validation is widely used for model selection and evaluation. Uncertainty in the cross-validation estimate is challenging to quantify, and estimation of its variance is known to require multiple runs of the entire resampling procedure. Nested cross-validation computes a prediction interval for the generalization error for a given model and training dataset by resampling the entire cross-validation procedure but incurs extraordinary computational cost. We provide an efficient method for computing the nested cross-validation prediction interval using only a single model fit for some penalized…" />
+<meta name="twitter:description" property="og:description" content="Cross-validation is a resampling procedure that provides a point estimate of generalization error for any predictive model. Cross-validation is widely used for model selection and evaluation. Uncertainty in the cross-validation estimate is challenging to quantify, and estimation of its variance is known to require multiple runs of the entire resampling procedure. Nested cross-validation computes a prediction interval for the generalization error for a given model and training dataset by resampling the entire cross-validation procedure but incurs extraordinary computational cost. We provide an efficient method for computing the nested cross-validation prediction interval using only a single model fit for some penalized…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/04/2609.04126.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/04/2609.04126.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-04T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-04T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Fast Computation of Nested Cross-Validation for Penalized Regression" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shuyang Cao, Alex Stringer"},"dateModified":"2026-09-04T00:00:00+02:00","datePublished":"2026-09-04T00:00:00+02:00","description":"Cross-validation is a resampling procedure that provides a point estimate of generalization error for any predictive model. Cross-validation is widely used for model selection and evaluation. Uncertainty in the cross-validation estimate is challenging to quantify, and estimation of its variance is known to require multiple runs of the entire resampling procedure. Nested cross-validation computes a prediction interval for the generalization error for a given model and training dataset by resampling the entire cross-validation procedure but incurs extraordinary computational cost. We provide an efficient method for computing the nested cross-validation prediction interval using only a single model fit for some penalized…","headline":"Fast Computation of Nested Cross-Validation for Penalized Regression","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/04/2609.04126.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/04/2609.04126.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Fast Computation of Nested Cross-Validation for Penalized Regression</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Shuyang Cao, Alex Stringer
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      4 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Cross-validation is a resampling procedure that provides a point estimate of generalization error for any predictive model. Cross-validation is widely used for model selection and evaluation. Uncertainty in the cross-validation estimate is challenging to quantify, and estimation of its variance is known to require multiple runs of the entire resampling procedure. Nested cross-validation computes a prediction interval for the generalization error for a given model and training dataset by resampling the entire cross-validation procedure but incurs extraordinary computational cost. We provide an efficient method for computing the nested cross-validation prediction interval using only a single model fit for some penalized regression models including ridge regression, spline smoothing, and some functional regression models. We characterize when our proposed method should be expected to out-perform resampling-based nested cross-validation in various scaling regimes as well as in finite samples. Experiments for functional principle components regression demonstrate non-trivial cases in which our proposed method improves run times substantially.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.04126" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.04126" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
