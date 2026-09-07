@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Strictly Proper Scoring-Rule Theory for Calibrating Stochastic Car-Following Models</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Strictly Proper Scoring-Rule Theory for Calibrating Stochastic Car-Following Models" />
+<meta name="author" content="Shirui Zhou, Shiteng Zheng, Junzhe Ding, Rui Jiang, Junfang Tian" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Problem definition: Fixed parameters and inputs in a stochastic simulator induce a distribution over complete trajectories, not one trajectory. Calibration must assess this distribution, including variability and temporal dependence, against observations. Yet stochastic car-following models are commonly calibrated with trajectory-error objectives inherited from deterministic modelling. Methodology/results: We establish a scoring-rule theory of stochastic calibration. Strict propriety requires the data-generating distribution to uniquely minimise expected score. MRMean-I, the average run-wise error, drives separable stochastic spread to zero; MRMean-II, the error of the ensemble-mean trajectory, cannot identify a parameter that changes only spread; and MRMin, the error of the closest simulated run,…" />
+<meta name="twitter:description" property="og:description" content="Problem definition: Fixed parameters and inputs in a stochastic simulator induce a distribution over complete trajectories, not one trajectory. Calibration must assess this distribution, including variability and temporal dependence, against observations. Yet stochastic car-following models are commonly calibrated with trajectory-error objectives inherited from deterministic modelling. Methodology/results: We establish a scoring-rule theory of stochastic calibration. Strict propriety requires the data-generating distribution to uniquely minimise expected score. MRMean-I, the average run-wise error, drives separable stochastic spread to zero; MRMean-II, the error of the ensemble-mean trajectory, cannot identify a parameter that changes only spread; and MRMin, the error of the closest simulated run,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/07/2609.04988.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/07/2609.04988.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-07T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-07T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Strictly Proper Scoring-Rule Theory for Calibrating Stochastic Car-Following Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shirui Zhou, Shiteng Zheng, Junzhe Ding, Rui Jiang, Junfang Tian"},"dateModified":"2026-09-07T00:00:00+02:00","datePublished":"2026-09-07T00:00:00+02:00","description":"Problem definition: Fixed parameters and inputs in a stochastic simulator induce a distribution over complete trajectories, not one trajectory. Calibration must assess this distribution, including variability and temporal dependence, against observations. Yet stochastic car-following models are commonly calibrated with trajectory-error objectives inherited from deterministic modelling. Methodology/results: We establish a scoring-rule theory of stochastic calibration. Strict propriety requires the data-generating distribution to uniquely minimise expected score. MRMean-I, the average run-wise error, drives separable stochastic spread to zero; MRMean-II, the error of the ensemble-mean trajectory, cannot identify a parameter that changes only spread; and MRMin, the error of the closest simulated run,…","headline":"A Strictly Proper Scoring-Rule Theory for Calibrating Stochastic Car-Following Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/07/2609.04988.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/07/2609.04988.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Strictly Proper Scoring-Rule Theory for Calibrating Stochastic Car-Following Models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Shirui Zhou, Shiteng Zheng, Junzhe Ding, Rui Jiang, Junfang Tian
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      7 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Problem definition: Fixed parameters and inputs in a stochastic simulator induce a distribution over complete trajectories, not one trajectory. Calibration must assess this distribution, including variability and temporal dependence, against observations. Yet stochastic car-following models are commonly calibrated with trajectory-error objectives inherited from deterministic modelling. Methodology/results: We establish a scoring-rule theory of stochastic calibration. Strict propriety requires the data-generating distribution to uniquely minimise expected score. MRMean-I, the average run-wise error, drives separable stochastic spread to zero; MRMean-II, the error of the ensemble-mean trajectory, cannot identify a parameter that changes only spread; and MRMin, the error of the closest simulated run, has a population target that changes with ensemble size. These results are confirmed for stochastic Intelligent Driver Model extensions with additive acceleration noise and random desired headway. We recommend exact maximum likelihood when the correct transition density is available; otherwise, an unbiased simulation-based estimator of a strictly proper score. The energy score meets this requirement and gives the best held-out distributional prediction among the evaluated simulation-based objectives, although both models retain too-narrow bands and miss persistent disturbances. Implications:Strict propriety separates a valid calibration target from parameter identifiability and model adequacy. The theory applies to vector-valued outputs from stochastic transportation simulators; the car-following experiments illustrate its scope.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.04988" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.04988" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

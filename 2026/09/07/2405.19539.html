@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Canonical Correlation Analysis as Reduced Rank Regression in High Dimensions</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Canonical Correlation Analysis as Reduced Rank Regression in High Dimensions" />
+<meta name="author" content="Claire Donnat, Elena Tuzhilina" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Canonical correlation analysis is a widespread technique for discovering linear relationships between two sets of variables. In high dimensions, however, standard estimates of the canonical directions cease to be consistent without assuming further structure. In this setting, a possible solution consists in leveraging the presumed sparsity of the solution: only a subset of the covariates span the canonical directions. While the last decade has seen a proliferation of sparse canonical correlation analysis methods, practical challenges regarding the scalability and adaptability of these methods still persist. To circumvent these issues, this paper suggests an alternative strategy that uses reduced rank regression…" />
+<meta name="twitter:description" property="og:description" content="Canonical correlation analysis is a widespread technique for discovering linear relationships between two sets of variables. In high dimensions, however, standard estimates of the canonical directions cease to be consistent without assuming further structure. In this setting, a possible solution consists in leveraging the presumed sparsity of the solution: only a subset of the covariates span the canonical directions. While the last decade has seen a proliferation of sparse canonical correlation analysis methods, practical challenges regarding the scalability and adaptability of these methods still persist. To circumvent these issues, this paper suggests an alternative strategy that uses reduced rank regression…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/07/2405.19539.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/07/2405.19539.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-07T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-07T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Canonical Correlation Analysis as Reduced Rank Regression in High Dimensions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Claire Donnat, Elena Tuzhilina"},"dateModified":"2026-09-07T00:00:00+02:00","datePublished":"2026-09-07T00:00:00+02:00","description":"Canonical correlation analysis is a widespread technique for discovering linear relationships between two sets of variables. In high dimensions, however, standard estimates of the canonical directions cease to be consistent without assuming further structure. In this setting, a possible solution consists in leveraging the presumed sparsity of the solution: only a subset of the covariates span the canonical directions. While the last decade has seen a proliferation of sparse canonical correlation analysis methods, practical challenges regarding the scalability and adaptability of these methods still persist. To circumvent these issues, this paper suggests an alternative strategy that uses reduced rank regression…","headline":"Canonical Correlation Analysis as Reduced Rank Regression in High Dimensions","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/07/2405.19539.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/07/2405.19539.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Canonical Correlation Analysis as Reduced Rank Regression in High Dimensions</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Claire Donnat, Elena Tuzhilina
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      7 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Canonical correlation analysis is a widespread technique for discovering linear relationships between two sets of variables. In high dimensions, however, standard estimates of the canonical directions cease to be consistent without assuming further structure. In this setting, a possible solution consists in leveraging the presumed sparsity of the solution: only a subset of the covariates span the canonical directions. While the last decade has seen a proliferation of sparse canonical correlation analysis methods, practical challenges regarding the scalability and adaptability of these methods still persist. To circumvent these issues, this paper suggests an alternative strategy that uses reduced rank regression to estimate the canonical directions when one of the datasets is high-dimensional while the other remains low-dimensional. By casting the problem of estimating the canonical direction as a regression problem, our estimator is able to leverage the rich statistics literature on high-dimensional regression and is easily adaptable to accommodate a wider range of structural priors. Our proposed solution maintains computational efficiency and accuracy, even in the presence of very high-dimensional data. We demonstrate the advantages of our approach through a series of simulated experiments, achieving a substantial increase in accuracy compared to existing methods. Additionally, we highlight its practical utility by applying it to three real-world datasets, where we show that our method is able to uncover scientifically meaningful associations between variables.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2405.19539" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2405.19539" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
