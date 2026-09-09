@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Network-Structured Bayesian Hierarchical Model for Sparse Mutation-Drug Response Associations: Application to Cancer Pharmacogenomics</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Network-Structured Bayesian Hierarchical Model for Sparse Mutation-Drug Response Associations: Application to Cancer Pharmacogenomics" />
+<meta name="author" content="Hammed A. Olayinka, Saheed O. Olayemi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a network-structured Bayesian hierarchical model for sparse association mapping between genomic alterations and quantitative treatment-response phenotypes. The framework combines a Gaussian Markov random field prior that borrows strength across pathway-connected genes, a global-local horseshoe prior inducing sparsity, and a conjugate Gibbs sampler requiring no Metropolis-Hastings steps. Though broadly applicable to high-dimensional settings with known predictor networks, we validate it using cancer cell-line drug-sensitivity data. Applied to GDSC2 ($N=951$ cell lines, $G=219$ driver genes, $D=295$ drugs), the model identifies 126 gene-drug associations (0.195\% of 64{,}605 pairs), concentrated in EZH2 (45 drugs, all sensitivity-direction, mean effect $-0.911$ $\ln$IC50) and KMT2D…" />
+<meta name="twitter:description" property="og:description" content="We develop a network-structured Bayesian hierarchical model for sparse association mapping between genomic alterations and quantitative treatment-response phenotypes. The framework combines a Gaussian Markov random field prior that borrows strength across pathway-connected genes, a global-local horseshoe prior inducing sparsity, and a conjugate Gibbs sampler requiring no Metropolis-Hastings steps. Though broadly applicable to high-dimensional settings with known predictor networks, we validate it using cancer cell-line drug-sensitivity data. Applied to GDSC2 ($N=951$ cell lines, $G=219$ driver genes, $D=295$ drugs), the model identifies 126 gene-drug associations (0.195\% of 64{,}605 pairs), concentrated in EZH2 (45 drugs, all sensitivity-direction, mean effect $-0.911$ $\ln$IC50) and KMT2D…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05784.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05784.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Network-Structured Bayesian Hierarchical Model for Sparse Mutation-Drug Response Associations: Application to Cancer Pharmacogenomics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hammed A. Olayinka, Saheed O. Olayemi"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"We develop a network-structured Bayesian hierarchical model for sparse association mapping between genomic alterations and quantitative treatment-response phenotypes. The framework combines a Gaussian Markov random field prior that borrows strength across pathway-connected genes, a global-local horseshoe prior inducing sparsity, and a conjugate Gibbs sampler requiring no Metropolis-Hastings steps. Though broadly applicable to high-dimensional settings with known predictor networks, we validate it using cancer cell-line drug-sensitivity data. Applied to GDSC2 ($N=951$ cell lines, $G=219$ driver genes, $D=295$ drugs), the model identifies 126 gene-drug associations (0.195\\% of 64{,}605 pairs), concentrated in EZH2 (45 drugs, all sensitivity-direction, mean effect $-0.911$ $\\ln$IC50) and KMT2D…","headline":"A Network-Structured Bayesian Hierarchical Model for Sparse Mutation-Drug Response Associations: Application to Cancer Pharmacogenomics","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05784.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05784.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Network-Structured Bayesian Hierarchical Model for Sparse Mutation-Drug Response Associations: Application to Cancer Pharmacogenomics</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Hammed A. Olayinka, Saheed O. Olayemi
+      <span class="sep">&middot;</span>
+      stat.AP, stat.ME
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>We develop a network-structured Bayesian hierarchical model for sparse association mapping between genomic alterations and quantitative treatment-response phenotypes. The framework combines a Gaussian Markov random field prior that borrows strength across pathway-connected genes, a global-local horseshoe prior inducing sparsity, and a conjugate Gibbs sampler requiring no Metropolis-Hastings steps. Though broadly applicable to high-dimensional settings with known predictor networks, we validate it using cancer cell-line drug-sensitivity data. Applied to GDSC2 ($N=951$ cell lines, $G=219$ driver genes, $D=295$ drugs), the model identifies 126 gene-drug associations (0.195\% of 64{,}605 pairs), concentrated in EZH2 (45 drugs, all sensitivity-direction, mean effect $-0.911$ $\ln$IC50) and KMT2D (36 drugs, all sensitivity-direction, mean effect $-0.496$ $\ln$IC50). These markers show external support in an independent PRISM screen (1{,}518 compounds), with KMT2D achieving complete directional replication (36/36) and EZH2 partial replication (8/12). Five-fold cross-validated predictive log-likelihood confirms each prior layer’s value: the full model outperforms the no-network ablation by $+3{,}109$ log-units per fold and the no-horseshoe ablation by $+14{,}039$ log-units, consistently across folds. Simulations under three scenarios show the full model achieves the highest precision and lowest false-discovery rate throughout, while the network prior improves sensitivity recovery under network-structured signal. A tissue-stratified extension identifies coherent subgroup refinements, including lung-specific EGFR-inhibitor sensitivity and skin-specific BRAF-Dabrafenib sensitivity. These results show the framework identifies sparse, interpretable, externally supported drug-sensitivity markers while enabling principled investigation of tissue-specific departures from shared effects.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.05784" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.05784" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

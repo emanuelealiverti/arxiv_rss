@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bias-Corrected Subspace Intersection: Minimax-Optimal Shared Subspace Estimation in Multi-View Data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bias-Corrected Subspace Intersection: Minimax-Optimal Shared Subspace Estimation in Multi-View Data" />
+<meta name="author" content="Xianwen Song, Yuepeng Yang, Cong Ma" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Estimating a low-dimensional subspace shared across noisy data matrices is a fundamental problem in multi-view matrix estimation. We study this problem under the two-view JIVE model, where each data matrix contains shared and view-specific low-rank components. We demonstrate that standard plug-in subspace intersection, including AJIVE, suffers from a second-order bias caused by direction-dependent leakage of the empirical singular vectors. We propose bias-corrected subspace intersection (BCSI), which removes this bias before estimating the shared subspace. We establish finite-sample risk bounds for BCSI that accommodate unequal view dimensions, signal strengths, and view-specific ranks and require no condition-number assumptions on the signal matrices.…" />
+<meta name="twitter:description" property="og:description" content="Estimating a low-dimensional subspace shared across noisy data matrices is a fundamental problem in multi-view matrix estimation. We study this problem under the two-view JIVE model, where each data matrix contains shared and view-specific low-rank components. We demonstrate that standard plug-in subspace intersection, including AJIVE, suffers from a second-order bias caused by direction-dependent leakage of the empirical singular vectors. We propose bias-corrected subspace intersection (BCSI), which removes this bias before estimating the shared subspace. We establish finite-sample risk bounds for BCSI that accommodate unequal view dimensions, signal strengths, and view-specific ranks and require no condition-number assumptions on the signal matrices.…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05617.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05617.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bias-Corrected Subspace Intersection: Minimax-Optimal Shared Subspace Estimation in Multi-View Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xianwen Song, Yuepeng Yang, Cong Ma"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"Estimating a low-dimensional subspace shared across noisy data matrices is a fundamental problem in multi-view matrix estimation. We study this problem under the two-view JIVE model, where each data matrix contains shared and view-specific low-rank components. We demonstrate that standard plug-in subspace intersection, including AJIVE, suffers from a second-order bias caused by direction-dependent leakage of the empirical singular vectors. We propose bias-corrected subspace intersection (BCSI), which removes this bias before estimating the shared subspace. We establish finite-sample risk bounds for BCSI that accommodate unequal view dimensions, signal strengths, and view-specific ranks and require no condition-number assumptions on the signal matrices.…","headline":"Bias-Corrected Subspace Intersection: Minimax-Optimal Shared Subspace Estimation in Multi-View Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05617.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05617.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bias-Corrected Subspace Intersection: Minimax-Optimal Shared Subspace Estimation in Multi-View Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Xianwen Song, Yuepeng Yang, Cong Ma
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML, stat.TH
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Estimating a low-dimensional subspace shared across noisy data matrices is a fundamental problem in multi-view matrix estimation. We study this problem under the two-view JIVE model, where each data matrix contains shared and view-specific low-rank components. We demonstrate that standard plug-in subspace intersection, including AJIVE, suffers from a second-order bias caused by direction-dependent leakage of the empirical singular vectors. We propose bias-corrected subspace intersection (BCSI), which removes this bias before estimating the shared subspace. We establish finite-sample risk bounds for BCSI that accommodate unequal view dimensions, signal strengths, and view-specific ranks and require no condition-number assumptions on the signal matrices. When the shared and view-specific ranks are comparable, these bounds match our minimax lower bounds up to universal constants. The resulting minimax rate contains a new second-order term, arising from quadratic leakage perturbations relative to the shrinking spectral gap when the view-specific subspaces are nearly aligned. This term is absent from previous JIVE minimax lower bounds. Numerical experiments demonstrate the advantage of BCSI over AJIVE when the leakage bias is pronounced. Along the way, we establish a nonasymptotic concentration result for the bias-corrected leakage Gram matrix of a rectangular spiked matrix, which may be of independent interest.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.05617" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.05617" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

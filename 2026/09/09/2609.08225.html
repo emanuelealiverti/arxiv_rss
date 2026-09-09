@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Multi-Objective Composite Longitudinal Biomarker Scores for Improved Cancer Risk Assessment</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Multi-Objective Composite Longitudinal Biomarker Scores for Improved Cancer Risk Assessment" />
+<meta name="author" content="Bitan Sarkar, Ana Maria Kenney, James P. Long, Johannes F. Fahrmann, Samir Hanash, Kim-Anh Do, Ehsan Irajizad" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Repeated blood-based biomarker measurements can improve cancer risk assessment by capturing longitudinal changes missed by single-time-point analyses. Parametric Empirical Bayes (PEB) incorporates prior measurements to estimate individualized reference values, but existing implementations do not account for the time between measurements and rely on predefined panels with fixed combination rules. We developed improved Parametric Empirical Bayes (iPEB), which accounts for the intervals between serial measurements, adjusts for covariates, and performs feature selection and optimized biomarker combination. iPEB optimizes biomarker weights for specific clinical objectives, such as maximizing sensitivity at a prespecified specificity or diagnostic lead time. We evaluated iPEB through simulations…" />
+<meta name="twitter:description" property="og:description" content="Repeated blood-based biomarker measurements can improve cancer risk assessment by capturing longitudinal changes missed by single-time-point analyses. Parametric Empirical Bayes (PEB) incorporates prior measurements to estimate individualized reference values, but existing implementations do not account for the time between measurements and rely on predefined panels with fixed combination rules. We developed improved Parametric Empirical Bayes (iPEB), which accounts for the intervals between serial measurements, adjusts for covariates, and performs feature selection and optimized biomarker combination. iPEB optimizes biomarker weights for specific clinical objectives, such as maximizing sensitivity at a prespecified specificity or diagnostic lead time. We evaluated iPEB through simulations…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08225.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08225.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Multi-Objective Composite Longitudinal Biomarker Scores for Improved Cancer Risk Assessment" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Bitan Sarkar, Ana Maria Kenney, James P. Long, Johannes F. Fahrmann, Samir Hanash, Kim-Anh Do, Ehsan Irajizad"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"Repeated blood-based biomarker measurements can improve cancer risk assessment by capturing longitudinal changes missed by single-time-point analyses. Parametric Empirical Bayes (PEB) incorporates prior measurements to estimate individualized reference values, but existing implementations do not account for the time between measurements and rely on predefined panels with fixed combination rules. We developed improved Parametric Empirical Bayes (iPEB), which accounts for the intervals between serial measurements, adjusts for covariates, and performs feature selection and optimized biomarker combination. iPEB optimizes biomarker weights for specific clinical objectives, such as maximizing sensitivity at a prespecified specificity or diagnostic lead time. We evaluated iPEB through simulations…","headline":"Multi-Objective Composite Longitudinal Biomarker Scores for Improved Cancer Risk Assessment","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08225.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08225.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Multi-Objective Composite Longitudinal Biomarker Scores for Improved Cancer Risk Assessment</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Bitan Sarkar, Ana Maria Kenney, James P. Long, Johannes F. Fahrmann, Samir Hanash, Kim-Anh Do, Ehsan Irajizad
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Repeated blood-based biomarker measurements can improve cancer risk assessment by capturing longitudinal changes missed by single-time-point analyses. Parametric Empirical Bayes (PEB) incorporates prior measurements to estimate individualized reference values, but existing implementations do not account for the time between measurements and rely on predefined panels with fixed combination rules. We developed improved Parametric Empirical Bayes (iPEB), which accounts for the intervals between serial measurements, adjusts for covariates, and performs feature selection and optimized biomarker combination. iPEB optimizes biomarker weights for specific clinical objectives, such as maximizing sensitivity at a prespecified specificity or diagnostic lead time. We evaluated iPEB through simulations and a real-world application using six protein biomarkers (pro-SFTPB, CEA, CA125, CYFRA 21-1, osteopontin, and HE4) from a case-control study nested within the Prostate, Lung, Colorectal, and Ovarian (PLCO) Cancer Screening Trial. The analysis included 324 lung cancer cases and 1,674 controls with at least two serial measurements; six centers were used for model development and four for independent validation. Optimized for sensitivity at 99% specificity, iPEB achieved 24.2% sensitivity in the independent test set, compared with 18.2% for conventional PEB applied to the same four-marker panel. Optimized instead for lead time, iPEB added approximately 50 days of lead time at that stringent operating point. iPEB improved lung cancer risk assessment in independent PLCO data, supporting objective-driven optimization of longitudinal biomarkers for early detection.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.08225" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.08225" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

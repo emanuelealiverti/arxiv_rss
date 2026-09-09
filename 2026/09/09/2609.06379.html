@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Robust and Sparse Group Dynamic Causal Modeling via Student-t Parametric Empirical Bayes and Nonlocal Priors</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Robust and Sparse Group Dynamic Causal Modeling via Student-t Parametric Empirical Bayes and Nonlocal Priors" />
+<meta name="author" content="Godfred Arhin, Nilotpal Sanyal" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Dynamic causal modeling (DCM) estimates directed effective connectivity, while parametric empirical Bayes (PEB) supports group inference using subject-specific posterior summaries. Standard PEB relies on Gaussian models and continuous shrinkage, making it sensitive to atypical estimates and unable to distinguish negligible from nonzero effects. We develop a robust and sparse group-DCM extension combining a Student-t likelihood with a spike-and-slab prior using a nonlocal product-moment (pMOM) slab. A normal–gamma representation of the Student-t distribution yields weights that downweight atypical subject–parameter combinations. The pMOM slab vanishes at zero, sharpening coefficient selection and yielding inclusion probabilities. We propagate first-level posterior uncertainty through block-covariance pre-whitening…" />
+<meta name="twitter:description" property="og:description" content="Dynamic causal modeling (DCM) estimates directed effective connectivity, while parametric empirical Bayes (PEB) supports group inference using subject-specific posterior summaries. Standard PEB relies on Gaussian models and continuous shrinkage, making it sensitive to atypical estimates and unable to distinguish negligible from nonzero effects. We develop a robust and sparse group-DCM extension combining a Student-t likelihood with a spike-and-slab prior using a nonlocal product-moment (pMOM) slab. A normal–gamma representation of the Student-t distribution yields weights that downweight atypical subject–parameter combinations. The pMOM slab vanishes at zero, sharpening coefficient selection and yielding inclusion probabilities. We propagate first-level posterior uncertainty through block-covariance pre-whitening…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.06379.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.06379.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Robust and Sparse Group Dynamic Causal Modeling via Student-t Parametric Empirical Bayes and Nonlocal Priors" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Godfred Arhin, Nilotpal Sanyal"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"Dynamic causal modeling (DCM) estimates directed effective connectivity, while parametric empirical Bayes (PEB) supports group inference using subject-specific posterior summaries. Standard PEB relies on Gaussian models and continuous shrinkage, making it sensitive to atypical estimates and unable to distinguish negligible from nonzero effects. We develop a robust and sparse group-DCM extension combining a Student-t likelihood with a spike-and-slab prior using a nonlocal product-moment (pMOM) slab. A normal–gamma representation of the Student-t distribution yields weights that downweight atypical subject–parameter combinations. The pMOM slab vanishes at zero, sharpening coefficient selection and yielding inclusion probabilities. We propagate first-level posterior uncertainty through block-covariance pre-whitening…","headline":"Robust and Sparse Group Dynamic Causal Modeling via Student-t Parametric Empirical Bayes and Nonlocal Priors","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.06379.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.06379.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Robust and Sparse Group Dynamic Causal Modeling via Student-t Parametric Empirical Bayes and Nonlocal Priors</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Godfred Arhin, Nilotpal Sanyal
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Dynamic causal modeling (DCM) estimates directed effective connectivity, while parametric empirical Bayes (PEB) supports group inference using subject-specific posterior summaries. Standard PEB relies on Gaussian models and continuous shrinkage, making it sensitive to atypical estimates and unable to distinguish negligible from nonzero effects. We develop a robust and sparse group-DCM extension combining a Student-t likelihood with a spike-and-slab prior using a nonlocal product-moment (pMOM) slab. A normal–gamma representation of the Student-t distribution yields weights that downweight atypical subject–parameter combinations. The pMOM slab vanishes at zero, sharpening coefficient selection and yielding inclusion probabilities. We propagate first-level posterior uncertainty through block-covariance pre-whitening and estimate the model using an EM–ReML algorithm that updates weights, inclusion probabilities, effects, and variance components. A simulation study showed that Student-t weighting provided the main protection against contamination, the nonlocal prior contributed most under strong sparsity, and their combination was most beneficial when contamination and sparsity occurred together. In an openly shared mixed-gambles fMRI application, we found mild heterogeneity, concentrated inclusion support on three intrinsic self-connections, and close directional agreement with standard SPM-PEB. Our framework therefore adds interpretable element-level robustness diagnostics and sparse coefficient selection to hierarchical DCM while retaining first-level uncertainty.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.06379" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.06379" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

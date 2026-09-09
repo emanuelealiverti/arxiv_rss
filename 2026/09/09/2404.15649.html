@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Exact Sampling of Gibbs Measures with Estimated Losses</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Exact Sampling of Gibbs Measures with Estimated Losses" />
+<meta name="author" content="David T. Frazier, Jeremias Knoblauch, Jack Jewson, Christopher Drovandi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A popular strategy for ameliorating some of the shortcomings of Bayesian posterior inference is to instead target a Gibbs measure based on losses that connect a parameter of interest to observed data, and which are known to be robust to misspecification. Existing theory for these procedures treats these losses as being analytically available, but in many situations these losses must be stochastically estimated using pseudo-observations. In these settings, and even under strong assumptions, we show that posteriors based on standard Markov chain Monte Carlo (MCMC) algorithms exhibit strong dependence on the number of these pseudo-observations, and require utilizing a diverging…" />
+<meta name="twitter:description" property="og:description" content="A popular strategy for ameliorating some of the shortcomings of Bayesian posterior inference is to instead target a Gibbs measure based on losses that connect a parameter of interest to observed data, and which are known to be robust to misspecification. Existing theory for these procedures treats these losses as being analytically available, but in many situations these losses must be stochastically estimated using pseudo-observations. In these settings, and even under strong assumptions, we show that posteriors based on standard Markov chain Monte Carlo (MCMC) algorithms exhibit strong dependence on the number of these pseudo-observations, and require utilizing a diverging…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2404.15649.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2404.15649.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Exact Sampling of Gibbs Measures with Estimated Losses" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"David T. Frazier, Jeremias Knoblauch, Jack Jewson, Christopher Drovandi"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"A popular strategy for ameliorating some of the shortcomings of Bayesian posterior inference is to instead target a Gibbs measure based on losses that connect a parameter of interest to observed data, and which are known to be robust to misspecification. Existing theory for these procedures treats these losses as being analytically available, but in many situations these losses must be stochastically estimated using pseudo-observations. In these settings, and even under strong assumptions, we show that posteriors based on standard Markov chain Monte Carlo (MCMC) algorithms exhibit strong dependence on the number of these pseudo-observations, and require utilizing a diverging…","headline":"Exact Sampling of Gibbs Measures with Estimated Losses","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2404.15649.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2404.15649.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Exact Sampling of Gibbs Measures with Estimated Losses</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      David T. Frazier, Jeremias Knoblauch, Jack Jewson, Christopher Drovandi
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>A popular strategy for ameliorating some of the shortcomings of Bayesian posterior inference is to instead target a Gibbs measure based on losses that connect a parameter of interest to observed data, and which are known to be robust to misspecification. Existing theory for these procedures treats these losses as being analytically available, but in many situations these losses must be stochastically estimated using pseudo-observations. In these settings, and even under strong assumptions, we show that posteriors based on standard Markov chain Monte Carlo (MCMC) algorithms exhibit strong dependence on the number of these pseudo-observations, and require utilizing a diverging number of pseudo-observations to ensure posterior concentration. To remedy this issue, we introduce a modified piecewise deterministic Markov process (PDMP) sampler, and formally show that its posterior draws have no dependence on the number of pseudo-observations used to estimate the loss within a Gibbs measure. We verify the practical utility of this approach on five examples spanning intractable likelihoods and intractable losses.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2404.15649" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2404.15649" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

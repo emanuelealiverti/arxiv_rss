@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Optimal Slice-Adaptive Tuning of Hybrid Slice Sampling</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Optimal Slice-Adaptive Tuning of Hybrid Slice Sampling" />
+<meta name="author" content="Trevor Campbell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Slice sampling is a Markov chain Monte Carlo algorithm that draws its next state uniformly from a “slice”—a super-level set of the target density function—at each iteration, thereby providing automatic local adaptivity to the scale of the target. In practice the exact slice is not known, so general-purpose implementations use an approximate slice that is grown from a starting interval of length $w&gt;0$, with a computational cost that depends on $w$. This work presents an analysis of the average per-iteration number of target density evaluations, as a function of $w$, of hybrid slice sampling with various slice-finding schemes for targets…" />
+<meta name="twitter:description" property="og:description" content="Slice sampling is a Markov chain Monte Carlo algorithm that draws its next state uniformly from a “slice”—a super-level set of the target density function—at each iteration, thereby providing automatic local adaptivity to the scale of the target. In practice the exact slice is not known, so general-purpose implementations use an approximate slice that is grown from a starting interval of length $w&gt;0$, with a computational cost that depends on $w$. This work presents an analysis of the average per-iteration number of target density evaluations, as a function of $w$, of hybrid slice sampling with various slice-finding schemes for targets…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08172.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08172.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Optimal Slice-Adaptive Tuning of Hybrid Slice Sampling" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Trevor Campbell"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"Slice sampling is a Markov chain Monte Carlo algorithm that draws its next state uniformly from a “slice”—a super-level set of the target density function—at each iteration, thereby providing automatic local adaptivity to the scale of the target. In practice the exact slice is not known, so general-purpose implementations use an approximate slice that is grown from a starting interval of length $w&gt;0$, with a computational cost that depends on $w$. This work presents an analysis of the average per-iteration number of target density evaluations, as a function of $w$, of hybrid slice sampling with various slice-finding schemes for targets…","headline":"Optimal Slice-Adaptive Tuning of Hybrid Slice Sampling","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08172.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08172.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Optimal Slice-Adaptive Tuning of Hybrid Slice Sampling</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Trevor Campbell
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ML
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Slice sampling is a Markov chain Monte Carlo algorithm that draws its next state uniformly from a “slice”—a super-level set of the target density function—at each iteration, thereby providing automatic local adaptivity to the scale of the target. In practice the exact slice is not known, so general-purpose implementations use an approximate slice that is grown from a starting interval of length $w&gt;0$, with a computational cost that depends on $w$. This work presents an analysis of the average per-iteration number of target density evaluations, as a function of $w$, of hybrid slice sampling with various slice-finding schemes for targets with contiguous slices. The paper uses the results of the analysis to develop automated, slice-adaptive tuning schemes along with suboptimality bounds and asymptotic convergence guarantees. Simulations demonstrate that the tuning schemes reliably yield near-optimal slice-adaptive tuning with essentially no dependence on the initial setting of $w$.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.08172" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.08172" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

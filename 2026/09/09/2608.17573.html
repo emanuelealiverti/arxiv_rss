@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Feature Priming in Online Linear Regression: Sparse-Regret Lower Bounds and Tight Coordinatewise Rates</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Feature Priming in Online Linear Regression: Sparse-Regret Lower Bounds and Tight Coordinatewise Rates" />
+<meta name="author" content="Huibo Xu, Shi Fu, Qixin Zhang, Dacheng Tao" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In high-dimensional online prediction, sparse comparators motivate regret bounds that depend on sparsity rather than ambient dimension. Feature priming seeks such adaptation by reweighting features using past data and refitting a minimum-norm predictor. At COLT 2023, Warmuth and Amid posed the open problem of whether the univariate, Pearson, or multivariate priming rules admit competitive online regret guarantees. Under the natural past-only Moore–Penrose protocol, we establish sparse-regret lower bounds that refute the corresponding sparse-logarithmic guarantee. The key obstruction is cheap nuisance interpolation, which permits exact interpolation of the history while assigning insufficient weight to the truly predictive coordinate. An exact target-mass…" />
+<meta name="twitter:description" property="og:description" content="In high-dimensional online prediction, sparse comparators motivate regret bounds that depend on sparsity rather than ambient dimension. Feature priming seeks such adaptation by reweighting features using past data and refitting a minimum-norm predictor. At COLT 2023, Warmuth and Amid posed the open problem of whether the univariate, Pearson, or multivariate priming rules admit competitive online regret guarantees. Under the natural past-only Moore–Penrose protocol, we establish sparse-regret lower bounds that refute the corresponding sparse-logarithmic guarantee. The key obstruction is cheap nuisance interpolation, which permits exact interpolation of the history while assigning insufficient weight to the truly predictive coordinate. An exact target-mass…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2608.17573.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2608.17573.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Feature Priming in Online Linear Regression: Sparse-Regret Lower Bounds and Tight Coordinatewise Rates" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Huibo Xu, Shi Fu, Qixin Zhang, Dacheng Tao"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"In high-dimensional online prediction, sparse comparators motivate regret bounds that depend on sparsity rather than ambient dimension. Feature priming seeks such adaptation by reweighting features using past data and refitting a minimum-norm predictor. At COLT 2023, Warmuth and Amid posed the open problem of whether the univariate, Pearson, or multivariate priming rules admit competitive online regret guarantees. Under the natural past-only Moore–Penrose protocol, we establish sparse-regret lower bounds that refute the corresponding sparse-logarithmic guarantee. The key obstruction is cheap nuisance interpolation, which permits exact interpolation of the history while assigning insufficient weight to the truly predictive coordinate. An exact target-mass…","headline":"Feature Priming in Online Linear Regression: Sparse-Regret Lower Bounds and Tight Coordinatewise Rates","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2608.17573.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2608.17573.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Feature Priming in Online Linear Regression: Sparse-Regret Lower Bounds and Tight Coordinatewise Rates</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Huibo Xu, Shi Fu, Qixin Zhang, Dacheng Tao
+      <span class="sep">&middot;</span>
+      stat.ML, stat.AP
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>In high-dimensional online prediction, sparse comparators motivate regret bounds that depend on sparsity rather than ambient dimension. Feature priming seeks such adaptation by reweighting features using past data and refitting a minimum-norm predictor. At COLT 2023, Warmuth and Amid posed the open problem of whether the univariate, Pearson, or multivariate priming rules admit competitive online regret guarantees. Under the natural past-only Moore–Penrose protocol, we establish sparse-regret lower bounds that refute the corresponding sparse-logarithmic guarantee. The key obstruction is cheap nuisance interpolation, which permits exact interpolation of the history while assigning insufficient weight to the truly predictive coordinate. An exact target-mass identity and a two-sign argument convert this obstruction into clipped prediction loss. Hadamard constructions yield $\Omega(\min{T,\sqrt d})$ clipped regret for each of the three unit-power rules against a zero-loss one-sparse comparator. For every fixed power $\alpha\ge1$, one shared paired construction further yields linear regret simultaneously for all three powered rules and selectors among them in sufficiently high dimension. A rank upper bound is tight for powered univariate priming, even with Euclidean-unit inputs, and for unit-power Pearson priming with coordinatewise bounded inputs and target-preserving totalization. A separate algebraic construction gives $\Omega(\min{T,d^{1/4}})$ regret for unit-power multivariate priming under Euclidean-unit inputs. The univariate lower bound persists under any nonnegative second-stage ridge schedule, while a paired ridge construction yields linear lower bounds for all three powered rules. Exploratory diagnostics on frozen language-model activations are consistent with the same qualitative mechanism. The exact multivariate frontier remains open.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.17573" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.17573" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

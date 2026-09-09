@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayes Estimators with Performance Comparable to Empirical Bayes Estimators and Improved Local Robustness</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayes Estimators with Performance Comparable to Empirical Bayes Estimators and Improved Local Robustness" />
+<meta name="author" content="Yue Ju, Ying Wang, Jiabao He, Bo Wahlberg, H{\aa}kan Hjalmarsson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayes estimation has been extensively studied and widely used in statistics, decision theory, signal processing, machine learning, and system identification. Among its variants, empirical Bayes (EB) estimation has attracted considerable attention due to its favorable estimation performance and computational tractability. However, the direct plug-in dependence of an EB estimator on hyperparameters can make it locally sensitive to hyper-parameter perturbations. This paper considers the linear regression model and focuses on the EB estimator by employing the marginal maximum likelihood hyper-parameter estimator. For conciseness, this estimator is simply referred to as the EB estimator. Given a family of EB weighting functions, a…" />
+<meta name="twitter:description" property="og:description" content="Bayes estimation has been extensively studied and widely used in statistics, decision theory, signal processing, machine learning, and system identification. Among its variants, empirical Bayes (EB) estimation has attracted considerable attention due to its favorable estimation performance and computational tractability. However, the direct plug-in dependence of an EB estimator on hyperparameters can make it locally sensitive to hyper-parameter perturbations. This paper considers the linear regression model and focuses on the EB estimator by employing the marginal maximum likelihood hyper-parameter estimator. For conciseness, this estimator is simply referred to as the EB estimator. Given a family of EB weighting functions, a…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.06696.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.06696.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayes Estimators with Performance Comparable to Empirical Bayes Estimators and Improved Local Robustness" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yue Ju, Ying Wang, Jiabao He, Bo Wahlberg, H{\\aa}kan Hjalmarsson"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"Bayes estimation has been extensively studied and widely used in statistics, decision theory, signal processing, machine learning, and system identification. Among its variants, empirical Bayes (EB) estimation has attracted considerable attention due to its favorable estimation performance and computational tractability. However, the direct plug-in dependence of an EB estimator on hyperparameters can make it locally sensitive to hyper-parameter perturbations. This paper considers the linear regression model and focuses on the EB estimator by employing the marginal maximum likelihood hyper-parameter estimator. For conciseness, this estimator is simply referred to as the EB estimator. Given a family of EB weighting functions, a…","headline":"Bayes Estimators with Performance Comparable to Empirical Bayes Estimators and Improved Local Robustness","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.06696.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.06696.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayes Estimators with Performance Comparable to Empirical Bayes Estimators and Improved Local Robustness</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Yue Ju, Ying Wang, Jiabao He, Bo Wahlberg, H{\aa}kan Hjalmarsson
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Bayes estimation has been extensively studied and widely used in statistics, decision theory, signal processing, machine learning, and system identification. Among its variants, empirical Bayes (EB) estimation has attracted considerable attention due to its favorable estimation performance and computational tractability. However, the direct plug-in dependence of an EB estimator on hyperparameters can make it locally sensitive to hyper-parameter perturbations. This paper considers the linear regression model and focuses on the EB estimator by employing the marginal maximum likelihood hyper-parameter estimator. For conciseness, this estimator is simply referred to as the EB estimator. Given a family of EB weighting functions, a generalized Bayes estimator is constructed with the same excess mean squared error (XMSE) as the corresponding EB estimator. Here, the XMSE is a second-order asymptotic measure of the mean squared error difference between the estimator of interest and the maximum likelihood estimator. Furthermore, the EB estimator is shown to be at most firstorder sensitive to hyper-parameter perturbations, whereas the constructed Bayes estimator is at most second-order sensitive, making it locally more robust. The computational complexities of these two estimators are also analyzed. In some cases, the constructed Bayes estimator can be computationally comparable to, or more efficient than, the EB estimator. These theoretical results are further supported by numerical simulations.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.06696" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.06696" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

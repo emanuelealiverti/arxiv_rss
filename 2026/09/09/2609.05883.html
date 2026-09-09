@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fixed-smoothing Uniform Inference for Quantile Regression</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Fixed-smoothing Uniform Inference for Quantile Regression" />
+<meta name="author" content="Kaicheng Chen, Antonio F. Galvao, Seunghwa Rho, Timothy J. Vogelsang, Jungmo Yoon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper develops fixed-smoothing (fixed-b, fixed-K) inference methods for time-series quantile regression that are robust to heteroskedasticity and autocorrelation. Our approach is uniformly valid over quantile levels and accounts for dependence both over time and across quantiles. It enables the construction of uniform confidence bands, Wald, and Sup-t tests for joint hypotheses, and tests of shape restrictions, providing a unified framework for assessing heterogeneity in quantile effects. A key challenge is that, under weak dependence, uniform inference for quantile regression processes is generally non-pivotal because the limiting distributions depend on the long-run covariance structure across quantiles. To address this issue,…" />
+<meta name="twitter:description" property="og:description" content="This paper develops fixed-smoothing (fixed-b, fixed-K) inference methods for time-series quantile regression that are robust to heteroskedasticity and autocorrelation. Our approach is uniformly valid over quantile levels and accounts for dependence both over time and across quantiles. It enables the construction of uniform confidence bands, Wald, and Sup-t tests for joint hypotheses, and tests of shape restrictions, providing a unified framework for assessing heterogeneity in quantile effects. A key challenge is that, under weak dependence, uniform inference for quantile regression processes is generally non-pivotal because the limiting distributions depend on the long-run covariance structure across quantiles. To address this issue,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05883.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05883.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Fixed-smoothing Uniform Inference for Quantile Regression" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kaicheng Chen, Antonio F. Galvao, Seunghwa Rho, Timothy J. Vogelsang, Jungmo Yoon"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"This paper develops fixed-smoothing (fixed-b, fixed-K) inference methods for time-series quantile regression that are robust to heteroskedasticity and autocorrelation. Our approach is uniformly valid over quantile levels and accounts for dependence both over time and across quantiles. It enables the construction of uniform confidence bands, Wald, and Sup-t tests for joint hypotheses, and tests of shape restrictions, providing a unified framework for assessing heterogeneity in quantile effects. A key challenge is that, under weak dependence, uniform inference for quantile regression processes is generally non-pivotal because the limiting distributions depend on the long-run covariance structure across quantiles. To address this issue,…","headline":"Fixed-smoothing Uniform Inference for Quantile Regression","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05883.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05883.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Fixed-smoothing Uniform Inference for Quantile Regression</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Kaicheng Chen, Antonio F. Galvao, Seunghwa Rho, Timothy J. Vogelsang, Jungmo Yoon
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>This paper develops fixed-smoothing (fixed-b, fixed-K) inference methods for time-series quantile regression that are robust to heteroskedasticity and autocorrelation. Our approach is uniformly valid over quantile levels and accounts for dependence both over time and across quantiles. It enables the construction of uniform confidence bands, Wald, and Sup-t tests for joint hypotheses, and tests of shape restrictions, providing a unified framework for assessing heterogeneity in quantile effects. A key challenge is that, under weak dependence, uniform inference for quantile regression processes is generally non-pivotal because the limiting distributions depend on the long-run covariance structure across quantiles. To address this issue, we develop two complementary approaches. The uniform-in-$\tau$ method estimates the covariance structure and simulates the non-pivotal limiting distribution. For certain tests involving a finite collection of quantile levels, the stack-Wald method delivers pivotal fixed-smoothing inference. We establish the asymptotic validity of both approaches. Simulation results show that the proposed methods substantially improve size control relative to existing HAC-based procedures while maintaining good power. An application to predictive quantile regressions for stock returns reveals substantial heterogeneity in predictive effects across both quantiles and forecast horizons.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.05883" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.05883" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

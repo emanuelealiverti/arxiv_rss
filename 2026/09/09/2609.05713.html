@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Approximating Bayesian leave-one-group-out cross-validation</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Approximating Bayesian leave-one-group-out cross-validation" />
+<meta name="author" content="Anna Elisabeth Riha, Svenja Jedhoff, Paul-Christian Bürkner, Aki Vehtari" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When data are grouped, hierarchical or multilevel models are commonly used to account for group-level variation with group-specific parameters. Leave-one-group-out cross-validation (LOGO-CV) is a suitable tool for evaluating predictive performance for new groups, providing an estimator of the expected log predictive density (elpd). Brute-force LOGO-CV requires one model refit per held-out group, often using computationally expensive inference algorithms such as MCMC. This is costly, particularly for large numbers of groups or complex model structures. Commonly used importance sampling approximations, intended to reduce this cost, tend to fail because the group-specific parameters of the held-out group must be integrated out. We…" />
+<meta name="twitter:description" property="og:description" content="When data are grouped, hierarchical or multilevel models are commonly used to account for group-level variation with group-specific parameters. Leave-one-group-out cross-validation (LOGO-CV) is a suitable tool for evaluating predictive performance for new groups, providing an estimator of the expected log predictive density (elpd). Brute-force LOGO-CV requires one model refit per held-out group, often using computationally expensive inference algorithms such as MCMC. This is costly, particularly for large numbers of groups or complex model structures. Commonly used importance sampling approximations, intended to reduce this cost, tend to fail because the group-specific parameters of the held-out group must be integrated out. We…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05713.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05713.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Approximating Bayesian leave-one-group-out cross-validation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anna Elisabeth Riha, Svenja Jedhoff, Paul-Christian Bürkner, Aki Vehtari"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"When data are grouped, hierarchical or multilevel models are commonly used to account for group-level variation with group-specific parameters. Leave-one-group-out cross-validation (LOGO-CV) is a suitable tool for evaluating predictive performance for new groups, providing an estimator of the expected log predictive density (elpd). Brute-force LOGO-CV requires one model refit per held-out group, often using computationally expensive inference algorithms such as MCMC. This is costly, particularly for large numbers of groups or complex model structures. Commonly used importance sampling approximations, intended to reduce this cost, tend to fail because the group-specific parameters of the held-out group must be integrated out. We…","headline":"Approximating Bayesian leave-one-group-out cross-validation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05713.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05713.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Approximating Bayesian leave-one-group-out cross-validation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Anna Elisabeth Riha, Svenja Jedhoff, Paul-Christian Bürkner, Aki Vehtari
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>When data are grouped, hierarchical or multilevel models are commonly used to account for group-level variation with group-specific parameters. Leave-one-group-out cross-validation (LOGO-CV) is a suitable tool for evaluating predictive performance for new groups, providing an estimator of the expected log predictive density (elpd). Brute-force LOGO-CV requires one model refit per held-out group, often using computationally expensive inference algorithms such as MCMC. This is costly, particularly for large numbers of groups or complex model structures. Commonly used importance sampling approximations, intended to reduce this cost, tend to fail because the group-specific parameters of the held-out group must be integrated out. We identify two key challenges in LOGO-CV elpd estimation: approximating the LOGO posterior and computing the grouped marginal likelihood. We compare 11 strategies, including 5 newly proposed, to address them. Among others, we combine Pareto-smoothed importance sampling or adaptive importance sampling with integration techniques such as Laplace approximation, adaptive Gauss-Hermite quadrature, and bridge sampling. We evaluate these strategies in both simulation experiments and real-world case studies, which show that marginalising over the group-specific parameters substantially improves the reliability of the importance sampling approaches.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.05713" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.05713" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

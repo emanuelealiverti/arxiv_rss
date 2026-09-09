@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Pre-game paired-comparison modeling of professional League of Legends map outcomes</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Pre-game paired-comparison modeling of professional League of Legends map outcomes" />
+<meta name="author" content="Min-Ren Guan, Shen-Ning Tung" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We build and evaluate a pre-game win-probability forecaster for individual maps (``games’’) in professional \emph{League of Legends} (LoL). The proposed model is a one-stage logistic regression fit end-to-end on the win/loss log-loss: each team’s exponentially-weighted moving average of past same-side results, a ridge-shrunk stable strength that is the maximum-a-posteriori estimate of a logistic mixed model, and a first-pick draft covariate, natively calibrated out of sample (walk-forward slope $0.995$). It augments a purely dynamic Bradley–Terry specification with stable team strengths. A second, independently built two-stage composite mixed model under restricted maximum likelihood (REML) and best linear unbiased prediction (BLUP) shrinkage, with…" />
+<meta name="twitter:description" property="og:description" content="We build and evaluate a pre-game win-probability forecaster for individual maps (``games’’) in professional \emph{League of Legends} (LoL). The proposed model is a one-stage logistic regression fit end-to-end on the win/loss log-loss: each team’s exponentially-weighted moving average of past same-side results, a ridge-shrunk stable strength that is the maximum-a-posteriori estimate of a logistic mixed model, and a first-pick draft covariate, natively calibrated out of sample (walk-forward slope $0.995$). It augments a purely dynamic Bradley–Terry specification with stable team strengths. A second, independently built two-stage composite mixed model under restricted maximum likelihood (REML) and best linear unbiased prediction (BLUP) shrinkage, with…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08060.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08060.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Pre-game paired-comparison modeling of professional League of Legends map outcomes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Min-Ren Guan, Shen-Ning Tung"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"We build and evaluate a pre-game win-probability forecaster for individual maps (``games’’) in professional \\emph{League of Legends} (LoL). The proposed model is a one-stage logistic regression fit end-to-end on the win/loss log-loss: each team’s exponentially-weighted moving average of past same-side results, a ridge-shrunk stable strength that is the maximum-a-posteriori estimate of a logistic mixed model, and a first-pick draft covariate, natively calibrated out of sample (walk-forward slope $0.995$). It augments a purely dynamic Bradley–Terry specification with stable team strengths. A second, independently built two-stage composite mixed model under restricted maximum likelihood (REML) and best linear unbiased prediction (BLUP) shrinkage, with…","headline":"Pre-game paired-comparison modeling of professional League of Legends map outcomes","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08060.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08060.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Pre-game paired-comparison modeling of professional League of Legends map outcomes</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Min-Ren Guan, Shen-Ning Tung
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>We build and evaluate a pre-game win-probability forecaster for individual maps (``games’’) in professional \emph{League of Legends} (LoL). The proposed model is a one-stage logistic regression fit end-to-end on the win/loss log-loss: each team’s exponentially-weighted moving average of past same-side results, a ridge-shrunk stable strength that is the maximum-a-posteriori estimate of a logistic mixed model, and a first-pick draft covariate, natively calibrated out of sample (walk-forward slope $0.995$). It augments a purely dynamic Bradley–Terry specification with stable team strengths. A second, independently built two-stage composite mixed model under restricted maximum likelihood (REML) and best linear unbiased prediction (BLUP) shrinkage, with Platt calibration, serves as the strongest rival the authors could build. On $5{,}135$ games across six regional leagues and three international events (2024–2026), under paired per-game Diebold–Mariano inference, the two architectures are statistically indistinguishable on every protocol and window (global holdout $0.2230$ vs.\ $0.2257$; walk-forward $0.2207$ vs.\ $0.2215$), so the simpler model is preferred on parsimony, not accuracy; both improve on the classical dynamic benchmark ($0.2351$) by a clear margin and on the static fits ($0.2301$/$0.2268$) more modestly. Against Polymarket on $928$ matched maps, the forecasts are statistically indistinguishable from the market on its own per-game contracts, with a modest market edge concentrated on cross-region Worlds and series-decider maps.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.08060" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.08060" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

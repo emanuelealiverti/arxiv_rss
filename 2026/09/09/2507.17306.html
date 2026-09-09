@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Principled Approach for Defining and Comparing Variable Importance Measures</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Principled Approach for Defining and Comparing Variable Importance Measures" />
+<meta name="author" content="Angel Reyero-Lobo, Pierre Neuvial, Bertrand Thirion" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Variable importance measures (VIMs) aim to quantify the contribution of each input covariate to the predictability of a given output. With the growing interest in explainable AI, numerous VIMs have been proposed, many of which are heuristic in nature. This is often justified by the inherent subjectivity of the notion of importance. This raises important questions regarding usage: What makes a good VIM? How can we compare different VIMs? In this paper, we address these questions by: (1) proposing an axiomatic framework that bridges the gap between variable importance and variable selection. This allows VIM methods to leverage the extensive…" />
+<meta name="twitter:description" property="og:description" content="Variable importance measures (VIMs) aim to quantify the contribution of each input covariate to the predictability of a given output. With the growing interest in explainable AI, numerous VIMs have been proposed, many of which are heuristic in nature. This is often justified by the inherent subjectivity of the notion of importance. This raises important questions regarding usage: What makes a good VIM? How can we compare different VIMs? In this paper, we address these questions by: (1) proposing an axiomatic framework that bridges the gap between variable importance and variable selection. This allows VIM methods to leverage the extensive…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2507.17306.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2507.17306.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Principled Approach for Defining and Comparing Variable Importance Measures" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Angel Reyero-Lobo, Pierre Neuvial, Bertrand Thirion"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"Variable importance measures (VIMs) aim to quantify the contribution of each input covariate to the predictability of a given output. With the growing interest in explainable AI, numerous VIMs have been proposed, many of which are heuristic in nature. This is often justified by the inherent subjectivity of the notion of importance. This raises important questions regarding usage: What makes a good VIM? How can we compare different VIMs? In this paper, we address these questions by: (1) proposing an axiomatic framework that bridges the gap between variable importance and variable selection. This allows VIM methods to leverage the extensive…","headline":"A Principled Approach for Defining and Comparing Variable Importance Measures","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2507.17306.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2507.17306.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Principled Approach for Defining and Comparing Variable Importance Measures</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Angel Reyero-Lobo, Pierre Neuvial, Bertrand Thirion
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Variable importance measures (VIMs) aim to quantify the contribution of each input covariate to the predictability of a given output. With the growing interest in explainable AI, numerous VIMs have been proposed, many of which are heuristic in nature. This is often justified by the inherent subjectivity of the notion of importance. This raises important questions regarding usage: What makes a good VIM? How can we compare different VIMs? In this paper, we address these questions by: (1) proposing an axiomatic framework that bridges the gap between variable importance and variable selection. This allows VIM methods to leverage the extensive literature on statistical guarantees developed for conditional independence testing. Our framework formalizes the intuitive principle that features providing no additional information should not be assigned importance, helping avoid false positives due to spurious correlations, which can arise with popular methods such as Shapley values; and (2) advocating for a general pipeline for constructing VIMs based on the definition of a theoretical index, its estimation, and the derivation of associated statistical guarantees. This pipeline clarifies the objective of various VIMs and thus facilitates meaningful comparisons. While this approach is natural from a statistical perspective, much of the literature has diverged from it, as we illustrate using the popular Total Sobol’ Index. Finally, we apply this framework to an extensive set of VIMs, showing how practitioners can select and estimate indices aligned with their specific goals. Our results are supported by numerical experiments on simulated and real data.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2507.17306" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2507.17306" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Matrix-Valued Graphs for Context-Dependent Multivariate Relationships</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian Matrix-Valued Graphs for Context-Dependent Multivariate Relationships" />
+<meta name="author" content="Papri Dey" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many scientific graphs attach several variables to each node, so a single scalar edge weight cannot describe direction-dependent interactions. We model each edge by a symmetric positive-definite (SPD) matrix and infer a posterior over matrix-valued graph geometries, which we call the Bayesian matrix-valued graph (BMVG). We ask how these interactions reconfigure across contexts: how large the change is and which multivariate directions strengthen or weaken. The geodesic distance induced by the affine-invariant Riemannian metric (AIRM) quantifies deformation magnitude and generalized eigenvalues resolve its signed directions.Against fused graphical lasso, Bayesian multiple-GGM, and common principal components, BMVG is competitive on global precision…" />
+<meta name="twitter:description" property="og:description" content="Many scientific graphs attach several variables to each node, so a single scalar edge weight cannot describe direction-dependent interactions. We model each edge by a symmetric positive-definite (SPD) matrix and infer a posterior over matrix-valued graph geometries, which we call the Bayesian matrix-valued graph (BMVG). We ask how these interactions reconfigure across contexts: how large the change is and which multivariate directions strengthen or weaken. The geodesic distance induced by the affine-invariant Riemannian metric (AIRM) quantifies deformation magnitude and generalized eigenvalues resolve its signed directions.Against fused graphical lasso, Bayesian multiple-GGM, and common principal components, BMVG is competitive on global precision…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08055.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08055.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian Matrix-Valued Graphs for Context-Dependent Multivariate Relationships" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Papri Dey"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"Many scientific graphs attach several variables to each node, so a single scalar edge weight cannot describe direction-dependent interactions. We model each edge by a symmetric positive-definite (SPD) matrix and infer a posterior over matrix-valued graph geometries, which we call the Bayesian matrix-valued graph (BMVG). We ask how these interactions reconfigure across contexts: how large the change is and which multivariate directions strengthen or weaken. The geodesic distance induced by the affine-invariant Riemannian metric (AIRM) quantifies deformation magnitude and generalized eigenvalues resolve its signed directions.Against fused graphical lasso, Bayesian multiple-GGM, and common principal components, BMVG is competitive on global precision…","headline":"Bayesian Matrix-Valued Graphs for Context-Dependent Multivariate Relationships","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08055.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.08055.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian Matrix-Valued Graphs for Context-Dependent Multivariate Relationships</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Papri Dey
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Many scientific graphs attach several variables to each node, so a single scalar edge weight cannot describe direction-dependent interactions. We model each edge by a symmetric positive-definite (SPD) matrix and infer a posterior over matrix-valued graph geometries, which we call the Bayesian matrix-valued graph (BMVG). We ask how these interactions reconfigure across contexts: how large the change is and which multivariate directions strengthen or weaken. The geodesic distance induced by the affine-invariant Riemannian metric (AIRM) quantifies deformation magnitude and generalized eigenvalues resolve its signed directions.Against fused graphical lasso, Bayesian multiple-GGM, and common principal components, BMVG is competitive on global precision recovery while retaining identifiable matrix-valued edge structure and accurately recovering edge-level deformation directions. In controlled known-truth experiments, it resolves structural change with increasing sample size, including orientation changes that leave ordinary eigenvalues unchanged. In one year of Bay Area weather data, the geometry of 12-hour change reconfigures spatial coupling about as much as whole seasons differ. In TCGA-BRCA, estrogen-receptor (ER)-associated reconfiguration concentrates on specific gene-module pairs and persists under graph-scaffold sparsification and removal of subgroup mean differences. These results establish posterior matrix-valued edge geometry as a unified framework for quantifying and interpreting context-dependent multivariate reconfiguration.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.08055" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.08055" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

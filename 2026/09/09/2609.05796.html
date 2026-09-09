@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Diagonal Attenuation: A Finite-Sample Correction for PCA</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Diagonal Attenuation: A Finite-Sample Correction for PCA" />
+<meta name="author" content="Qiang Sun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Principal component analysis (PCA) can rotate away from its population target when a covariance matrix is estimated from limited data. We introduce diagonal attenuation, which preserves sample cross-covariances while reducing coordinatewise sample variances. The method is revealed exactly by averaging a linear full-output reconstruction loss over random input masks; studying the correction directly extends it beyond the range attainable by masking. We isolate the part of the random coupling between retained and omitted population directions that is contributed by sample-variance errors, and show how attenuation can reduce the resulting rotation. Under balanced marginal variances, we derive an explicit expected-risk theorem,…" />
+<meta name="twitter:description" property="og:description" content="Principal component analysis (PCA) can rotate away from its population target when a covariance matrix is estimated from limited data. We introduce diagonal attenuation, which preserves sample cross-covariances while reducing coordinatewise sample variances. The method is revealed exactly by averaging a linear full-output reconstruction loss over random input masks; studying the correction directly extends it beyond the range attainable by masking. We isolate the part of the random coupling between retained and omitted population directions that is contributed by sample-variance errors, and show how attenuation can reduce the resulting rotation. Under balanced marginal variances, we derive an explicit expected-risk theorem,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05796.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05796.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Diagonal Attenuation: A Finite-Sample Correction for PCA" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Qiang Sun"},"dateModified":"2026-09-09T00:00:00+02:00","datePublished":"2026-09-09T00:00:00+02:00","description":"Principal component analysis (PCA) can rotate away from its population target when a covariance matrix is estimated from limited data. We introduce diagonal attenuation, which preserves sample cross-covariances while reducing coordinatewise sample variances. The method is revealed exactly by averaging a linear full-output reconstruction loss over random input masks; studying the correction directly extends it beyond the range attainable by masking. We isolate the part of the random coupling between retained and omitted population directions that is contributed by sample-variance errors, and show how attenuation can reduce the resulting rotation. Under balanced marginal variances, we derive an explicit expected-risk theorem,…","headline":"Diagonal Attenuation: A Finite-Sample Correction for PCA","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05796.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/09/2609.05796.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Diagonal Attenuation: A Finite-Sample Correction for PCA</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Qiang Sun
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      9 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Principal component analysis (PCA) can rotate away from its population target when a covariance matrix is estimated from limited data. We introduce diagonal attenuation, which preserves sample cross-covariances while reducing coordinatewise sample variances. The method is revealed exactly by averaging a linear full-output reconstruction loss over random input masks; studying the correction directly extends it beyond the range attainable by masking. We isolate the part of the random coupling between retained and omitted population directions that is contributed by sample-variance errors, and show how attenuation can reduce the resulting rotation. Under balanced marginal variances, we derive an explicit expected-risk theorem, uniform over the attenuation path for all sufficiently large finite samples, and obtain the asymptotically risk-minimizing strength. For general covariances, we characterize when attenuation leaves the population PCA subspace unchanged and give a risk theorem that also accounts for changing eigengaps and the population cost when the target moves. Simulations track this tradeoff from exact preservation back to PCA. Across local image patches, speech spectra, and smartphone acceleration, both mask-derived and direct attenuation improve PCA under two fitting-sample budgets, and one of them has the largest mean gain among seven methods in every data–budget cell. The full path selects strengths beyond the mask-derived boundary on $63\%$–$95\%$ of the subsamples.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.05796" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.05796" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
