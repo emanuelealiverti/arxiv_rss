@@ -1,4 +1,5 @@
 import feedparser
+import json
 import LaTexAccents as TeX
 import re
 import os
@@ -6,6 +7,7 @@ import sys
 import yaml
 from datetime import date, timedelta
 from pathlib import Path
+from urllib.request import urlopen
 
 from llm_utils import build_interest_profile, score_and_summarize
 
@@ -15,7 +17,8 @@ FEED_URLS = [
     'https://rss.arxiv.org/rss/stat.CO',
     'https://rss.arxiv.org/rss/stat.AP',
 ]
-MODEL = "meta/llama-3.1-8b-instruct"
+MODEL = "nv-mistralai/mistral-nemo-12b-instruct"
+MODELS_URL = "https://integrate.api.nvidia.com/v1/models"
 POSTS_DIR = Path("_posts")
 PREFS_FILE = Path("preferences.yml")
 RETENTION_DAYS = 7
@@ -102,6 +105,17 @@ def keyword_boost(article, preferences):
 
 
 
+def model_available(model):
+    """Check the configured model against the NIM catalogue (no auth needed)."""
+    try:
+        with urlopen(MODELS_URL, timeout=15) as r:
+            catalogue = json.load(r)
+        return model in {m['id'] for m in catalogue.get('data', [])}
+    except Exception as e:
+        print(f"Could not verify model catalogue: {e}", flush=True)
+        return True  # don't block the run on a check failure
+
+
 def badge(score):
     if score >= 7:
         return 'high'
@@ -168,6 +182,14 @@ def main():
     llm_available = bool(api_key)
     client = None
 
+    if llm_available and not model_available(MODEL):
+        print(
+            f"WARNING: model '{MODEL}' is not in the NVIDIA NIM catalogue — "
+            "every scoring call will fail and papers will be ranked by "
+            "keywords only. Update MODEL in rss_arxiv.py.",
+            flush=True,
+        )
+
     if llm_available:
         try:
             from openai import OpenAI
@@ -179,6 +201,8 @@ def main():
             print(f"LLM client init failed: {e}", flush=True)
             llm_available = False
 
+    llm_failures = [0]
+
     def score_article(article):
         kw, au = keyword_boost(article, preferences)
         if llm_available and client:
@@ -187,6 +211,7 @@ def main():
                 llm_score = float(result['score'])
                 article['summary'] = result['summary']
             except Exception as e:
+                llm_failures[0] += 1
                 print(f"LLM failed for {article['arxiv_id']}: {e} — keyword fallback", flush=True)
                 llm_score = (kw + au) * 2.5
                 article['summary'] = ''
@@ -201,6 +226,13 @@ def main():
     print(f"Scoring {len(articles)} articles...", flush=True)
     for article in articles:
         score_article(article)
+
+    if llm_available and llm_failures[0]:
+        print(
+            f"WARNING: LLM scoring failed for {llm_failures[0]}/{len(articles)} "
+            "articles — those fell back to keyword-only scores.",
+            flush=True,
+        )
 
     articles.sort(key=lambda x: x['score'], reverse=True)
 
