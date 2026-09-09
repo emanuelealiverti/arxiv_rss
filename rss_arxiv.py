@@ -20,13 +20,13 @@ FEED_URLS = [
 # a model can be listed and still be unavailable to this account, and models
 # get retired without notice (meta/llama-3.1-8b-instruct did, 2026-08-26).
 MODEL_CANDIDATES = [
+    "openai/gpt-oss-20b",  # the only one this account could invoke as of 2026-09-09
     "nvidia/nemotron-nano-3-30b-a3b",
     "google/gemma-3-12b-it",
     "mistralai/mistral-7b-instruct-v0.3",
     "nv-mistralai/mistral-nemo-12b-instruct",
     "microsoft/phi-3.5-moe-instruct",
     "nvidia/llama-3.1-nemotron-70b-instruct",
-    "openai/gpt-oss-20b",
 ]
 POSTS_DIR = Path("_posts")
 PREFS_FILE = Path("preferences.yml")
