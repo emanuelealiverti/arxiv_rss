@@ -56,14 +56,14 @@ MathJax = {
   <div class="post-header">
     <h1>Approximating Bayesian leave-one-group-out cross-validation</h1>
     <div class="post-meta-block">
-      <span class="badge badge-low">low</span>
+      <span class="badge badge-high">high</span>
       Anna Elisabeth Riha, Svenja Jedhoff, Paul-Christian Bürkner, Aki Vehtari
       <span class="sep">&middot;</span>
       stat.ME, stat.CO
       <span class="sep">&middot;</span>
       9 Sep 2026
     </div>
-  </div><h3>Abstract</h3>
+  </div><div class="summary-box">Proposes 11 strategies to approximate leave-one-group-out cross-validation for hierarchical models.</div><h3>Abstract</h3>
   <p>When data are grouped, hierarchical or multilevel models are commonly used to account for group-level variation with group-specific parameters. Leave-one-group-out cross-validation (LOGO-CV) is a suitable tool for evaluating predictive performance for new groups, providing an estimator of the expected log predictive density (elpd). Brute-force LOGO-CV requires one model refit per held-out group, often using computationally expensive inference algorithms such as MCMC. This is costly, particularly for large numbers of groups or complex model structures. Commonly used importance sampling approximations, intended to reduce this cost, tend to fail because the group-specific parameters of the held-out group must be integrated out. We identify two key challenges in LOGO-CV elpd estimation: approximating the LOGO posterior and computing the grouped marginal likelihood. We compare 11 strategies, including 5 newly proposed, to address them. Among others, we combine Pareto-smoothed importance sampling or adaptive importance sampling with integration techniques such as Laplace approximation, adaptive Gauss-Hermite quadrature, and bridge sampling. We evaluate these strategies in both simulation experiments and real-world case studies, which show that marginalising over the group-specific parameters substantially improves the reliability of the importance sampling approaches.</p>
 
 

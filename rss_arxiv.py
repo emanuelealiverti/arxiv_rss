@@ -15,17 +15,22 @@ FEED_URLS = [
     'https://rss.arxiv.org/rss/stat.CO',
     'https://rss.arxiv.org/rss/stat.AP',
 ]
-# Tried in order at startup; the first one that actually answers with valid
-# JSON is used for the whole run. Being in the public catalogue is not enough:
-# a model can be listed and still be unavailable to this account, and models
-# get retired without notice (meta/llama-3.1-8b-instruct did, 2026-08-26).
+# Tried in order at startup; the first that answers with valid JSON is used for
+# the whole run. Being in the public catalogue is not enough: this account can
+# invoke only 8 of the 57 chat models listed, the rest return 404 "Not found
+# for account". Models also get retired without notice — the previous default,
+# meta/llama-3.1-8b-instruct, reached end of life on 2026-08-26.
+#
+# Measured on 3 real abstracts (2026-09-09): llama-3.2-11b 6.7s/article with
+# concise summaries and well-spread scores; deepseek-v4-pro 8.7s and nemotron
+# nano-omni 9.4s, both wordier. Reasoning models whose scratchpad overruns the
+# token budget (nemotron-3.5-lightning, nemotron-3-super) and gpt-oss-20b (over
+# 90s per call) are deliberately left out.
 MODEL_CANDIDATES = [
-    "nvidia/nemotron-nano-3-30b-a3b",
-    "google/gemma-3-12b-it",
-    "mistralai/mistral-7b-instruct-v0.3",
-    "nv-mistralai/mistral-nemo-12b-instruct",
-    "microsoft/phi-3.5-moe-instruct",
-    "nvidia/llama-3.1-nemotron-70b-instruct",
+    "meta/llama-3.2-11b-vision-instruct",
+    "deepseek-ai/deepseek-v4-pro-0813",
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "nvidia/nemotron-3-super-120b-a12b",
     "openai/gpt-oss-20b",
 ]
 POSTS_DIR = Path("_posts")
@@ -204,6 +209,7 @@ def main():
             client = OpenAI(
                 base_url="https://integrate.api.nvidia.com/v1",
                 api_key=api_key,
+                timeout=60.0,  # default is 600s; a stalled model must not hang the run
             )
         except Exception as e:
             print(f"LLM client init failed: {e}", flush=True)

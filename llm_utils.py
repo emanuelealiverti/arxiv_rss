@@ -17,6 +17,24 @@ def build_interest_profile(preferences):
     return '\n'.join(parts) if parts else "Statistics and machine learning research"
 
 
+def extract_result(text):
+    """Pull the score/summary object out of a model reply.
+
+    Reasoning models emit their scratchpad before the answer, which can hold
+    several JSON-looking fragments, so take the last one that actually parses
+    and carries a score rather than the first thing that looks like an object.
+    """
+    for candidate in reversed(re.findall(r'\{[^{}]*\}', text, re.DOTALL)):
+        try:
+            obj = json.loads(candidate)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(obj, dict) and 'score' in obj:
+            obj.setdefault('summary', '')
+            return obj
+    return None
+
+
 def score_and_summarize(article, interest_profile, client, model, retries=3):
     prompt = f"""You are helping a statistician rank arxiv papers by relevance.
 
@@ -40,12 +58,15 @@ JSON:"""
                 model=model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.1,
-                max_tokens=120,
+                max_tokens=800,
             )
-            text = response.choices[0].message.content.strip()
-            match = re.search(r'\{.*?\}', text, re.DOTALL)
-            if match:
-                return json.loads(match.group())
+            message = response.choices[0].message
+            # Reasoning models leave `content` empty and put everything,
+            # answer included, in `reasoning_content`.
+            text = (message.content or getattr(message, 'reasoning_content', '') or '').strip()
+            result = extract_result(text)
+            if result is not None:
+                return result
             raise ValueError(f"No JSON found in response: {text[:200]}")
         except Exception as e:
             is_rate_limit = '429' in str(e)
