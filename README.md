@@ -7,7 +7,7 @@ A personalized arXiv RSS reader built with Jekyll and deployed on GitHub Pages.
 A GitHub Actions workflow runs every weekday at 8:30 Rome time:
 
 1. **Scraping** — fetches RSS feeds from arXiv (stat.ME, stat.CO, stat.AP) via `feedparser`
-2. **Ranking** — each paper is scored by an LLM (via the [NVIDIA NIM API](https://integrate.api.nvidia.com), model `nv-mistralai/mistral-nemo-12b-instruct`) against a research interest profile defined in `preferences.yml`; the score is further boosted by keyword and author matches
+2. **Ranking** — each paper is scored by an LLM (via the [NVIDIA NIM API](https://integrate.api.nvidia.com), the first usable model from `MODEL_CANDIDATES` in `rss_arxiv.py`, probed at startup) against a research interest profile defined in `preferences.yml`; the score is further boosted by keyword and author matches
 3. **Publishing** — scored papers are written as Jekyll posts, the site is rebuilt and deployed to GitHub Pages; posts are kept for a rolling 7-day window
 
 The rendered website lives at [https://emanuelealiverti.github.io/arxiv_rss/](https://emanuelealiverti.github.io/arxiv_rss/).
@@ -19,6 +19,7 @@ Edit `preferences.yml` to update your research context, keywords, and followed a
 ## Notes
 
 - The `main` branch holds the infrastructure; `gh-pages` holds the deployed site
-- If the NVIDIA API is unavailable, scoring falls back to keyword/author matching only
+- If the NVIDIA API is unavailable, scoring falls back to keyword/author matching only; the run log then carries an explicit `WARNING`, since a fallback-only run produces scores that are all multiples of 1.75 and empty summaries
+- NVIDIA retires models without notice and a listed model may not be enabled for a given account, so the script probes `MODEL_CANDIDATES` in order and uses the first that returns valid JSON
 
 This project started from a personal first draft and was then vibe coded with [Claude Code](https://claude.ai/claude-code).

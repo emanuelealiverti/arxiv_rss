@@ -1,5 +1,4 @@
 import feedparser
-import json
 import LaTexAccents as TeX
 import re
 import os
@@ -7,7 +6,6 @@ import sys
 import yaml
 from datetime import date, timedelta
 from pathlib import Path
-from urllib.request import urlopen
 
 from llm_utils import build_interest_profile, score_and_summarize
 
@@ -17,8 +15,19 @@ FEED_URLS = [
     'https://rss.arxiv.org/rss/stat.CO',
     'https://rss.arxiv.org/rss/stat.AP',
 ]
-MODEL = "nv-mistralai/mistral-nemo-12b-instruct"
-MODELS_URL = "https://integrate.api.nvidia.com/v1/models"
+# Tried in order at startup; the first one that actually answers with valid
+# JSON is used for the whole run. Being in the public catalogue is not enough:
+# a model can be listed and still be unavailable to this account, and models
+# get retired without notice (meta/llama-3.1-8b-instruct did, 2026-08-26).
+MODEL_CANDIDATES = [
+    "nvidia/nemotron-nano-3-30b-a3b",
+    "google/gemma-3-12b-it",
+    "mistralai/mistral-7b-instruct-v0.3",
+    "nv-mistralai/mistral-nemo-12b-instruct",
+    "microsoft/phi-3.5-moe-instruct",
+    "nvidia/llama-3.1-nemotron-70b-instruct",
+    "openai/gpt-oss-20b",
+]
 POSTS_DIR = Path("_posts")
 PREFS_FILE = Path("preferences.yml")
 RETENTION_DAYS = 7
@@ -105,15 +114,22 @@ def keyword_boost(article, preferences):
 
 
 
-def model_available(model):
-    """Check the configured model against the NIM catalogue (no auth needed)."""
-    try:
-        with urlopen(MODELS_URL, timeout=15) as r:
-            catalogue = json.load(r)
-        return model in {m['id'] for m in catalogue.get('data', [])}
-    except Exception as e:
-        print(f"Could not verify model catalogue: {e}", flush=True)
-        return True  # don't block the run on a check failure
+def select_model(article, interest_profile, client):
+    """Return (model, result) for the first candidate that answers correctly.
+
+    Probes with a real scoring request, so a model that is listed but not
+    enabled for this account, or that cannot produce the JSON we ask for,
+    is skipped rather than silently failing on every article.
+    """
+    for model in MODEL_CANDIDATES:
+        try:
+            result = score_and_summarize(article, interest_profile, client, model, retries=1)
+            float(result['score'])
+            print(f"Using model: {model}", flush=True)
+            return model, result
+        except Exception as e:
+            print(f"Model {model} unusable: {e}", flush=True)
+    return None, None
 
 
 def badge(score):
@@ -182,14 +198,6 @@ def main():
     llm_available = bool(api_key)
     client = None
 
-    if llm_available and not model_available(MODEL):
-        print(
-            f"WARNING: model '{MODEL}' is not in the NVIDIA NIM catalogue — "
-            "every scoring call will fail and papers will be ranked by "
-            "keywords only. Update MODEL in rss_arxiv.py.",
-            flush=True,
-        )
-
     if llm_available:
         try:
             from openai import OpenAI
@@ -201,13 +209,28 @@ def main():
             print(f"LLM client init failed: {e}", flush=True)
             llm_available = False
 
+    model = None
+    probe_result = None
+    if llm_available and client:
+        model, probe_result = select_model(articles[0], interest_profile, client)
+        if model is None:
+            print(
+                "WARNING: no usable model among "
+                f"{', '.join(MODEL_CANDIDATES)} — every paper will be ranked "
+                "by keywords only. Check NVIDIA_API_KEY and the model list.",
+                flush=True,
+            )
+            llm_available = False
+
     llm_failures = [0]
 
-    def score_article(article):
+    def score_article(article, cached=None):
         kw, au = keyword_boost(article, preferences)
         if llm_available and client:
             try:
-                result = score_and_summarize(article, interest_profile, client, MODEL)
+                result = cached or score_and_summarize(
+                    article, interest_profile, client, model
+                )
                 llm_score = float(result['score'])
                 article['summary'] = result['summary']
             except Exception as e:
@@ -224,8 +247,8 @@ def main():
         return article
 
     print(f"Scoring {len(articles)} articles...", flush=True)
-    for article in articles:
-        score_article(article)
+    for i, article in enumerate(articles):
+        score_article(article, cached=probe_result if i == 0 else None)
 
     if llm_available and llm_failures[0]:
         print(
