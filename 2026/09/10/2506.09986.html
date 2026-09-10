@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Constrained Denoising, Empirical Bayes, and Optimal Transport</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Constrained Denoising, Empirical Bayes, and Optimal Transport" />
+<meta name="author" content="Adam Quinn Jaffe, Nikolaos Ignatiadis, Bodhisattva Sen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In latent variables models, two important goals are denoising and deconvolution: denoising aims to estimate the latent variables, whereas deconvolution aims to estimate the distribution of the latent variables. As has been recognized in the literature over the last century, these two goals are fundamentally in tension, since denoising yields a poor estimate of the distribution of the latent variables due to shrinkage, and deconvolution yields a distribution-valued estimate that carries no unit-specific information. In this paper, we provide a systematic study of denoisers, and empirical Bayes approximations thereof, which attain optimal denoising error subject to the constraint that the…" />
+<meta name="twitter:description" property="og:description" content="In latent variables models, two important goals are denoising and deconvolution: denoising aims to estimate the latent variables, whereas deconvolution aims to estimate the distribution of the latent variables. As has been recognized in the literature over the last century, these two goals are fundamentally in tension, since denoising yields a poor estimate of the distribution of the latent variables due to shrinkage, and deconvolution yields a distribution-valued estimate that carries no unit-specific information. In this paper, we provide a systematic study of denoisers, and empirical Bayes approximations thereof, which attain optimal denoising error subject to the constraint that the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2506.09986.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2506.09986.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-10T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-10T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Constrained Denoising, Empirical Bayes, and Optimal Transport" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Adam Quinn Jaffe, Nikolaos Ignatiadis, Bodhisattva Sen"},"dateModified":"2026-09-10T00:00:00+02:00","datePublished":"2026-09-10T00:00:00+02:00","description":"In latent variables models, two important goals are denoising and deconvolution: denoising aims to estimate the latent variables, whereas deconvolution aims to estimate the distribution of the latent variables. As has been recognized in the literature over the last century, these two goals are fundamentally in tension, since denoising yields a poor estimate of the distribution of the latent variables due to shrinkage, and deconvolution yields a distribution-valued estimate that carries no unit-specific information. In this paper, we provide a systematic study of denoisers, and empirical Bayes approximations thereof, which attain optimal denoising error subject to the constraint that the…","headline":"Constrained Denoising, Empirical Bayes, and Optimal Transport","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2506.09986.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2506.09986.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Constrained Denoising, Empirical Bayes, and Optimal Transport</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Adam Quinn Jaffe, Nikolaos Ignatiadis, Bodhisattva Sen
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      10 Sep 2026
+    </div>
+  </div><div class="summary-box">Paper proposes a methodology combining denoisers with optimal transport for constrained denoising and deconvolution.</div><h3>Abstract</h3>
+  <p>In latent variables models, two important goals are denoising and deconvolution: denoising aims to estimate the latent variables, whereas deconvolution aims to estimate the distribution of the latent variables. As has been recognized in the literature over the last century, these two goals are fundamentally in tension, since denoising yields a poor estimate of the distribution of the latent variables due to shrinkage, and deconvolution yields a distribution-valued estimate that carries no unit-specific information. In this paper, we provide a systematic study of denoisers, and empirical Bayes approximations thereof, which attain optimal denoising error subject to the constraint that the distribution of the denoised data matches, in some sense, the distribution of the latent variables. Our insight is that optimal transport allows practitioners to navigate the tension between denoising and deconvolution. More precisely, we propose a modular methodology that combines any suitable unconstrained empirical Bayes denoiser (arising, e.g., via $F$-modeling, $G$-modeling, conjugate-parametric models) with any suitable information about the distribution of the latent variables (e.g., its moments, support, or an approximation of the entire distribution via deconvolution) into a single denoised data set. We prove explicit rates of convergence for our proposed methodologies, and we apply the resulting methods in applications in astronomy, baseball analytics, and marketing.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2506.09986" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2506.09986" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

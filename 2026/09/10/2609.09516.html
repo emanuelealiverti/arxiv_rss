@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Differential Privacy Guarantees in Small Area Estimation</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Differential Privacy Guarantees in Small Area Estimation" />
+<meta name="author" content="Soumojit Das, Jörg Drechsler" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Statistical agencies increasingly rely on small area estimation to produce reliable estimates for subpopulations with limited sample sizes. These estimates are built from individual survey responses, so agencies must ensure that releasing them does not reveal information about any single respondent. We show that when a single draw from the posterior distribution of the Bayesian Fay-Herriot model is released, pure $\varepsilon$-differential privacy is unattainable, but the release satisfies formal privacy guarantees under R&#39;enyi differential privacy and zero-concentrated differential privacy without any noise being added, provided we treat the variance components as fixed. The key insight is that the posterior draw…" />
+<meta name="twitter:description" property="og:description" content="Statistical agencies increasingly rely on small area estimation to produce reliable estimates for subpopulations with limited sample sizes. These estimates are built from individual survey responses, so agencies must ensure that releasing them does not reveal information about any single respondent. We show that when a single draw from the posterior distribution of the Bayesian Fay-Herriot model is released, pure $\varepsilon$-differential privacy is unattainable, but the release satisfies formal privacy guarantees under R&#39;enyi differential privacy and zero-concentrated differential privacy without any noise being added, provided we treat the variance components as fixed. The key insight is that the posterior draw…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2609.09516.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2609.09516.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-10T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-10T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Differential Privacy Guarantees in Small Area Estimation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soumojit Das, Jörg Drechsler"},"dateModified":"2026-09-10T00:00:00+02:00","datePublished":"2026-09-10T00:00:00+02:00","description":"Statistical agencies increasingly rely on small area estimation to produce reliable estimates for subpopulations with limited sample sizes. These estimates are built from individual survey responses, so agencies must ensure that releasing them does not reveal information about any single respondent. We show that when a single draw from the posterior distribution of the Bayesian Fay-Herriot model is released, pure $\\varepsilon$-differential privacy is unattainable, but the release satisfies formal privacy guarantees under R&#39;enyi differential privacy and zero-concentrated differential privacy without any noise being added, provided we treat the variance components as fixed. The key insight is that the posterior draw…","headline":"Differential Privacy Guarantees in Small Area Estimation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2609.09516.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2609.09516.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Differential Privacy Guarantees in Small Area Estimation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Soumojit Das, Jörg Drechsler
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      10 Sep 2026
+    </div>
+  </div><div class="summary-box">Paper derives differential privacy guarantees for Bayesian small area estimation models.</div><h3>Abstract</h3>
+  <p>Statistical agencies increasingly rely on small area estimation to produce reliable estimates for subpopulations with limited sample sizes. These estimates are built from individual survey responses, so agencies must ensure that releasing them does not reveal information about any single respondent. We show that when a single draw from the posterior distribution of the Bayesian Fay-Herriot model is released, pure $\varepsilon$-differential privacy is unattainable, but the release satisfies formal privacy guarantees under R'enyi differential privacy and zero-concentrated differential privacy without any noise being added, provided we treat the variance components as fixed. The key insight is that the posterior draw equals the posterior mean plus the Gaussian noise whose variance equals the posterior variance. The guarantee is thus governed by the sensitivity of the direct survey estimate and the posterior variance, and applies equally to a release of the posterior mean with that amount of noise added. For binary outcomes estimated with the H'ajek estimator, the sensitivity equals the largest survey weight in the area divided by the sum of the weights. For the intercept-only model we derive exact coefficients describing how a change in one record propagates to every area’s posterior mean, giving finite-sample per-area guarantees and a joint guarantee for releasing all areas at once that exceeds the largest per-area guarantee by at most a few percent in our applications. Two applications, poverty prevalence across 2,462 Public Use Microdata Areas in the American Community Survey and smoking prevalence across 52 substrata in the Washington state Behavioral Risk Factor Surveillance System, show that the guarantee is driven far more by the inequality of the survey weights than by the sample size, and that the shrinkage of the model tightens it substantially.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.09516" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.09516" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

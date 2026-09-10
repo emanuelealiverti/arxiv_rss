@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sparse departures from independence in two-way tables: a heteroscedasticity profile and detection boundary, an adaptive higher-criticism gate, and an assumption-lean exact anchor</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Sparse departures from independence in two-way tables: a heteroscedasticity profile and detection boundary, an adaptive higher-criticism gate, and an assumption-lean exact anchor" />
+<meta name="author" content="William J. Dwyer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Two-way contingency tables are tested for independence throughout applied statistics (genomics, network and text co-occurrence, pharmacovigilance, ecology, survey cross-tabulation), and the routine test reads asymptotic Gaussian tail probabilities off the table cell by cell. On the tables people actually analyze this is badly miscalibrated: across 5,543 real public two-way tables, two-thirds have counts small enough or margins heterogeneous enough that the asymptotic maximum-cell independence scan false-positives at a mean 33% against a 0.05 target, while an exact margin-conditional anchor holds at about 1%. The failure is sharpest when the departure is sparse, the association concentrated in a few cells, where…" />
+<meta name="twitter:description" property="og:description" content="Two-way contingency tables are tested for independence throughout applied statistics (genomics, network and text co-occurrence, pharmacovigilance, ecology, survey cross-tabulation), and the routine test reads asymptotic Gaussian tail probabilities off the table cell by cell. On the tables people actually analyze this is badly miscalibrated: across 5,543 real public two-way tables, two-thirds have counts small enough or margins heterogeneous enough that the asymptotic maximum-cell independence scan false-positives at a mean 33% against a 0.05 target, while an exact margin-conditional anchor holds at about 1%. The failure is sharpest when the departure is sparse, the association concentrated in a few cells, where…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2608.07979.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2608.07979.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-10T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-10T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sparse departures from independence in two-way tables: a heteroscedasticity profile and detection boundary, an adaptive higher-criticism gate, and an assumption-lean exact anchor" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"William J. Dwyer"},"dateModified":"2026-09-10T00:00:00+02:00","datePublished":"2026-09-10T00:00:00+02:00","description":"Two-way contingency tables are tested for independence throughout applied statistics (genomics, network and text co-occurrence, pharmacovigilance, ecology, survey cross-tabulation), and the routine test reads asymptotic Gaussian tail probabilities off the table cell by cell. On the tables people actually analyze this is badly miscalibrated: across 5,543 real public two-way tables, two-thirds have counts small enough or margins heterogeneous enough that the asymptotic maximum-cell independence scan false-positives at a mean 33% against a 0.05 target, while an exact margin-conditional anchor holds at about 1%. The failure is sharpest when the departure is sparse, the association concentrated in a few cells, where…","headline":"Sparse departures from independence in two-way tables: a heteroscedasticity profile and detection boundary, an adaptive higher-criticism gate, and an assumption-lean exact anchor","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2608.07979.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2608.07979.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Sparse departures from independence in two-way tables: a heteroscedasticity profile and detection boundary, an adaptive higher-criticism gate, and an assumption-lean exact anchor</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      William J. Dwyer
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      10 Sep 2026
+    </div>
+  </div><div class="summary-box">Develops a method to detect sparse departures from independence in two-way tables.</div><h3>Abstract</h3>
+  <p>Two-way contingency tables are tested for independence throughout applied statistics (genomics, network and text co-occurrence, pharmacovigilance, ecology, survey cross-tabulation), and the routine test reads asymptotic Gaussian tail probabilities off the table cell by cell. On the tables people actually analyze this is badly miscalibrated: across 5,543 real public two-way tables, two-thirds have counts small enough or margins heterogeneous enough that the asymptotic maximum-cell independence scan false-positives at a mean 33% against a 0.05 target, while an exact margin-conditional anchor holds at about 1%. The failure is sharpest when the departure is sparse, the association concentrated in a few cells, where the omnibus chi-square is inefficient and the sharp object is the detection boundary. In three parts we answer where a sparse signal can be seen, which combiner attains that limit, and how to calibrate at small counts. Part I specializes the sparse-detection theory of Ingster (1997), Donoho and Jin (2004), and Chhor, Mukherjee and Sen (2024) to independence: the table is a heteroscedastic Gaussian sequence whose variance profile is the expected-count table, fixed by the margins via CVe^2 = (1 + CVr^2)(1 + CVc^2) - 1, giving an exact signal map and a closed-form separation radius valid under a moderate-deviation growing-count condition. Part II shows higher criticism, with its closed-form Jaeschke-Eicker null, attains that boundary adaptively over unknown sparsity. Part III measures the small-count calibration failure (size 0.3 to 0.6 even under uniform margins, so the driver is the per-cell tail), removes it with exact margin-conditional laws (size 0.003 to 0.009), and gives a routing rule sending large-count tables to the asymptotic gate and small-count tables to the exact anchor. Every claim is reproduced from openly deposited, deterministically seeded code.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.07979" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.07979" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

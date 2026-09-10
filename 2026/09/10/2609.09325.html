@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Kalman Filtering and Smoothing for Improving Precision in Horvitz--Thompson Estimation of Infectious Disease Prevalence</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Kalman Filtering and Smoothing for Improving Precision in Horvitz–Thompson Estimation of Infectious Disease Prevalence" />
+<meta name="author" content="Jeongjin Lee, Grzegorz A. Rempala, Patrick M. Schnell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Horvitz–Thompson (HT) estimators can provide unbiased daily estimates of infectious disease prevalence under repeated surveillance by correcting for nonrandom testing induced by scheduled, symptom-based, and contact-tracing components. However, because each HT estimate is based on the testing data available for that day and may involve highly variable inverse probability weights, it can be noisy, have precision that varies over time, and become unavailable during temporary interruptions in testing. The daily HT estimator is modeled as a noisy observation of an underlying prevalence process, with day-specific observation variances estimated using a delete-a-group jackknife. Our primary specification is a joint local linear…" />
+<meta name="twitter:description" property="og:description" content="Horvitz–Thompson (HT) estimators can provide unbiased daily estimates of infectious disease prevalence under repeated surveillance by correcting for nonrandom testing induced by scheduled, symptom-based, and contact-tracing components. However, because each HT estimate is based on the testing data available for that day and may involve highly variable inverse probability weights, it can be noisy, have precision that varies over time, and become unavailable during temporary interruptions in testing. The daily HT estimator is modeled as a noisy observation of an underlying prevalence process, with day-specific observation variances estimated using a delete-a-group jackknife. Our primary specification is a joint local linear…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2609.09325.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2609.09325.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-10T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-10T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Kalman Filtering and Smoothing for Improving Precision in Horvitz–Thompson Estimation of Infectious Disease Prevalence" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jeongjin Lee, Grzegorz A. Rempala, Patrick M. Schnell"},"dateModified":"2026-09-10T00:00:00+02:00","datePublished":"2026-09-10T00:00:00+02:00","description":"Horvitz–Thompson (HT) estimators can provide unbiased daily estimates of infectious disease prevalence under repeated surveillance by correcting for nonrandom testing induced by scheduled, symptom-based, and contact-tracing components. However, because each HT estimate is based on the testing data available for that day and may involve highly variable inverse probability weights, it can be noisy, have precision that varies over time, and become unavailable during temporary interruptions in testing. The daily HT estimator is modeled as a noisy observation of an underlying prevalence process, with day-specific observation variances estimated using a delete-a-group jackknife. Our primary specification is a joint local linear…","headline":"Kalman Filtering and Smoothing for Improving Precision in Horvitz–Thompson Estimation of Infectious Disease Prevalence","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2609.09325.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/10/2609.09325.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Kalman Filtering and Smoothing for Improving Precision in Horvitz--Thompson Estimation of Infectious Disease Prevalence</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Jeongjin Lee, Grzegorz A. Rempala, Patrick M. Schnell
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      10 Sep 2026
+    </div>
+  </div><div class="summary-box">Kalman filter improves precision of Horvitz-Thompson estimators for infectious disease prevalence.</div><h3>Abstract</h3>
+  <p>Horvitz–Thompson (HT) estimators can provide unbiased daily estimates of infectious disease prevalence under repeated surveillance by correcting for nonrandom testing induced by scheduled, symptom-based, and contact-tracing components. However, because each HT estimate is based on the testing data available for that day and may involve highly variable inverse probability weights, it can be noisy, have precision that varies over time, and become unavailable during temporary interruptions in testing. The daily HT estimator is modeled as a noisy observation of an underlying prevalence process, with day-specific observation variances estimated using a delete-a-group jackknife. Our primary specification is a joint local linear trend state-space model that extends the standard level-only random walk by adding a latent slope. The Kalman filter improves precision by borrowing information from past estimates. At each time $t$, the process variances are estimated or carried forward using only observations available through time $t$, so the resulting filtered estimate is available in real time. We also describe the corresponding Kalman smoother as a retrospective extension based on the full observed series. When daily HT estimates are missing, the Kalman filter proceeds through prediction-only updates, whereas the corresponding smoother retrospectively reconstructs those periods using later observations. In simulations, the joint Kalman filter substantially improves precision relative to the raw daily HT estimator while preserving the main temporal pattern, and the smoother provides a more stable retrospective summary. In The Ohio State University’s fall 2020 SARS-CoV-2 surveillance data, the filter and smoother provide estimates on no-testing days, when the HT estimator provides neither point nor interval estimates, and yield narrower confidence intervals than HT intervals on observed days.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.09325" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.09325" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
