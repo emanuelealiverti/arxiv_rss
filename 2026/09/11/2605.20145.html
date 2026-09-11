@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Goal-Oriented Lower-Tail Calibration of Gaussian Processes for Bayesian Optimization</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Goal-Oriented Lower-Tail Calibration of Gaussian Processes for Bayesian Optimization" />
+<meta name="author" content="Aurélien Pion, Emmanuel Vazquez" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gaussian process (GP) predictive distributions are commonly used in Bayesian optimization (BO) to guide the selection of evaluation points for expensive objective functions. The choice of kernel and hyperparameters has a strong influence on the exploration–exploitation trade-off. For minimization, sampling criteria such as expected improvement (EI) depend on both the probability mass below the current best value and the shape of the predictive distribution in this region. This article studies goal-oriented calibration of GP predictive distributions below a low threshold $t$ in the noiseless setting, for standard GP models with hyperparameters selected by maximum likelihood. We consider two complementary forms…" />
+<meta name="twitter:description" property="og:description" content="Gaussian process (GP) predictive distributions are commonly used in Bayesian optimization (BO) to guide the selection of evaluation points for expensive objective functions. The choice of kernel and hyperparameters has a strong influence on the exploration–exploitation trade-off. For minimization, sampling criteria such as expected improvement (EI) depend on both the probability mass below the current best value and the shape of the predictive distribution in this region. This article studies goal-oriented calibration of GP predictive distributions below a low threshold $t$ in the noiseless setting, for standard GP models with hyperparameters selected by maximum likelihood. We consider two complementary forms…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/11/2605.20145.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/11/2605.20145.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-11T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-11T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Goal-Oriented Lower-Tail Calibration of Gaussian Processes for Bayesian Optimization" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aurélien Pion, Emmanuel Vazquez"},"dateModified":"2026-09-11T00:00:00+02:00","datePublished":"2026-09-11T00:00:00+02:00","description":"Gaussian process (GP) predictive distributions are commonly used in Bayesian optimization (BO) to guide the selection of evaluation points for expensive objective functions. The choice of kernel and hyperparameters has a strong influence on the exploration–exploitation trade-off. For minimization, sampling criteria such as expected improvement (EI) depend on both the probability mass below the current best value and the shape of the predictive distribution in this region. This article studies goal-oriented calibration of GP predictive distributions below a low threshold $t$ in the noiseless setting, for standard GP models with hyperparameters selected by maximum likelihood. We consider two complementary forms…","headline":"Goal-Oriented Lower-Tail Calibration of Gaussian Processes for Bayesian Optimization","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/11/2605.20145.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/11/2605.20145.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Goal-Oriented Lower-Tail Calibration of Gaussian Processes for Bayesian Optimization</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Aurélien Pion, Emmanuel Vazquez
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME
+      <span class="sep">&middot;</span>
+      11 Sep 2026
+    </div>
+  </div><div class="summary-box">A post-hoc method, tcGP, is proposed for goal-oriented calibration of Gaussian Process predictive distributions.</div><h3>Abstract</h3>
+  <p>Gaussian process (GP) predictive distributions are commonly used in Bayesian optimization (BO) to guide the selection of evaluation points for expensive objective functions. The choice of kernel and hyperparameters has a strong influence on the exploration–exploitation trade-off. For minimization, sampling criteria such as expected improvement (EI) depend on both the probability mass below the current best value and the shape of the predictive distribution in this region. This article studies goal-oriented calibration of GP predictive distributions below a low threshold $t$ in the noiseless setting, for standard GP models with hyperparameters selected by maximum likelihood. We consider two complementary forms of calibration below $t$ for inputs distributed according to a reference measure $\mu$: occurrence calibration over the design space and thresholded $\mu$-calibration on sublevel sets of the form ${x\in\mathbb{X}, f(x)\le t}$. We propose tcGP, a post-hoc method that combines these two forms of calibration for GP predictive distributions below $t$. With fixed GP hyperparameters, the exact EI sampling criterion based on tcGP generates a sequence of evaluation points that is dense in the design space. Experiments on standard benchmarks show improved lower-tail calibration and BO performance relative to standard GP models and globally calibrated GP models.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.20145" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.20145" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
