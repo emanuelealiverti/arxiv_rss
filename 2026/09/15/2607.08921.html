@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Extrapolation of extreme covariates in generalized additive regression using extreme-value theory</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Extrapolation of extreme covariates in generalized additive regression using extreme-value theory" />
+<meta name="author" content="Viviana Carcaiso, Sebastian Engelke, Juliette Legrand, Thomas Opitz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Predictions with covariates in the tails of the covariate distribution often lack accuracy and are highly uncertain but may be of critical importance in many applications. New covariates may even lie beyond the range of training data. The problem can be particularly critical in environmental contexts, for example with climate-change scenarios, where new covariates represent future, more extreme climate conditions. We here propose novel methods to improve generalized additive models (GAMs) with focus on extreme covariates and covariate extrapolation. Adopting a random-design setting, we continuously integrate GAMs for the bulk of covariate distributions with models motivated by multivariate extreme value…" />
+<meta name="twitter:description" property="og:description" content="Predictions with covariates in the tails of the covariate distribution often lack accuracy and are highly uncertain but may be of critical importance in many applications. New covariates may even lie beyond the range of training data. The problem can be particularly critical in environmental contexts, for example with climate-change scenarios, where new covariates represent future, more extreme climate conditions. We here propose novel methods to improve generalized additive models (GAMs) with focus on extreme covariates and covariate extrapolation. Adopting a random-design setting, we continuously integrate GAMs for the bulk of covariate distributions with models motivated by multivariate extreme value…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2607.08921.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2607.08921.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-15T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-15T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Extrapolation of extreme covariates in generalized additive regression using extreme-value theory" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Viviana Carcaiso, Sebastian Engelke, Juliette Legrand, Thomas Opitz"},"dateModified":"2026-09-15T00:00:00+02:00","datePublished":"2026-09-15T00:00:00+02:00","description":"Predictions with covariates in the tails of the covariate distribution often lack accuracy and are highly uncertain but may be of critical importance in many applications. New covariates may even lie beyond the range of training data. The problem can be particularly critical in environmental contexts, for example with climate-change scenarios, where new covariates represent future, more extreme climate conditions. We here propose novel methods to improve generalized additive models (GAMs) with focus on extreme covariates and covariate extrapolation. Adopting a random-design setting, we continuously integrate GAMs for the bulk of covariate distributions with models motivated by multivariate extreme value…","headline":"Extrapolation of extreme covariates in generalized additive regression using extreme-value theory","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2607.08921.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2607.08921.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Extrapolation of extreme covariates in generalized additive regression using extreme-value theory</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Viviana Carcaiso, Sebastian Engelke, Juliette Legrand, Thomas Opitz
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      15 Sep 2026
+    </div>
+  </div><div class="summary-box">A novel method is proposed to improve generalized additive models for extreme covariates using extreme-value theory.</div><h3>Abstract</h3>
+  <p>Predictions with covariates in the tails of the covariate distribution often lack accuracy and are highly uncertain but may be of critical importance in many applications. New covariates may even lie beyond the range of training data. The problem can be particularly critical in environmental contexts, for example with climate-change scenarios, where new covariates represent future, more extreme climate conditions. We here propose novel methods to improve generalized additive models (GAMs) with focus on extreme covariates and covariate extrapolation. Adopting a random-design setting, we continuously integrate GAMs for the bulk of covariate distributions with models motivated by multivariate extreme value theory for high covariate values. We consider continuous responses but develop also a new approach for binary responses by assuming a continuous latent response variable. Our framework imposes a specific structure for large values of the covariates motivated by extreme value theory: by combining a transformation to a specific marginal scale with an appropriate link function, the continuous response variable depends linearly on the covariates. In an application to occurrences and sizes of large wildfires in Europe for the period 2008-2023, we explore how the new method can improve predictions, especially during extreme conditions, using environmental and meteorological covariates.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.08921" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.08921" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

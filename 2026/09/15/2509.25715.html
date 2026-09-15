@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>MuPlon: Multi-Path Causal Optimization for Claim Verification through Controlling Confounding</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="MuPlon: Multi-Path Causal Optimization for Claim Verification through Controlling Confounding" />
+<meta name="author" content="Hanghui Guo, Shimin Di, Pasquale De Meo, Zhangze Chen, Jia Zhu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As a critical task in data quality control, claim verification aims to curb the spread of misinformation by assessing the truthfulness of claims based on a wide range of evidence. However, traditional methods often overlook the complex interactions between evidence, leading to unreliable verification results. A straightforward solution represents the claim and evidence as a fully connected graph, which we define as the Claim-Evidence Graph (C-E Graph). Nevertheless, claim verification methods based on fully connected graphs face two primary confounding challenges, Data Noise and Data Biases. To address these challenges, we propose a novel framework, Multi-Path Causal Optimization (MuPlon). MuPlon…" />
+<meta name="twitter:description" property="og:description" content="As a critical task in data quality control, claim verification aims to curb the spread of misinformation by assessing the truthfulness of claims based on a wide range of evidence. However, traditional methods often overlook the complex interactions between evidence, leading to unreliable verification results. A straightforward solution represents the claim and evidence as a fully connected graph, which we define as the Claim-Evidence Graph (C-E Graph). Nevertheless, claim verification methods based on fully connected graphs face two primary confounding challenges, Data Noise and Data Biases. To address these challenges, we propose a novel framework, Multi-Path Causal Optimization (MuPlon). MuPlon…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2509.25715.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2509.25715.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-15T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-15T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="MuPlon: Multi-Path Causal Optimization for Claim Verification through Controlling Confounding" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanghui Guo, Shimin Di, Pasquale De Meo, Zhangze Chen, Jia Zhu"},"dateModified":"2026-09-15T00:00:00+02:00","datePublished":"2026-09-15T00:00:00+02:00","description":"As a critical task in data quality control, claim verification aims to curb the spread of misinformation by assessing the truthfulness of claims based on a wide range of evidence. However, traditional methods often overlook the complex interactions between evidence, leading to unreliable verification results. A straightforward solution represents the claim and evidence as a fully connected graph, which we define as the Claim-Evidence Graph (C-E Graph). Nevertheless, claim verification methods based on fully connected graphs face two primary confounding challenges, Data Noise and Data Biases. To address these challenges, we propose a novel framework, Multi-Path Causal Optimization (MuPlon). MuPlon…","headline":"MuPlon: Multi-Path Causal Optimization for Claim Verification through Controlling Confounding","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2509.25715.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2509.25715.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>MuPlon: Multi-Path Causal Optimization for Claim Verification through Controlling Confounding</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Hanghui Guo, Shimin Di, Pasquale De Meo, Zhangze Chen, Jia Zhu
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      15 Sep 2026
+    </div>
+  </div><div class="summary-box">MuPlon integrates a dual causal intervention strategy for claim verification.</div><h3>Abstract</h3>
+  <p>As a critical task in data quality control, claim verification aims to curb the spread of misinformation by assessing the truthfulness of claims based on a wide range of evidence. However, traditional methods often overlook the complex interactions between evidence, leading to unreliable verification results. A straightforward solution represents the claim and evidence as a fully connected graph, which we define as the Claim-Evidence Graph (C-E Graph). Nevertheless, claim verification methods based on fully connected graphs face two primary confounding challenges, Data Noise and Data Biases. To address these challenges, we propose a novel framework, Multi-Path Causal Optimization (MuPlon). MuPlon integrates a dual causal intervention strategy, consisting of the back-door path and front-door path. In the back-door path, MuPlon dilutes noisy node interference by optimizing node probability weights, while simultaneously strengthening the connections between relevant evidence nodes. In the front-door path, MuPlon extracts highly relevant subgraphs and constructs reasoning paths, further applying counterfactual reasoning to eliminate data biases within these paths. The experimental results demonstrate that MuPlon outperforms existing methods and achieves state-of-the-art performance.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2509.25715" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2509.25715" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

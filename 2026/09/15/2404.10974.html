@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Compressive Bayesian non-negative matrix factorization for mutational signatures analysis</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Compressive Bayesian non-negative matrix factorization for mutational signatures analysis" />
+<meta name="author" content="Alessandro Zito, Jeffrey W. Miller" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Non-negative matrix factorization (NMF) is a popular tool for dimensionality reduction, especially for count matrices. However, inferring an appropriate number of factors is challenging. Existing approaches based on information criteria or nonparametric sparsity-inducing priors tend to be computationally burdensome or highly sensitive to prior choices. Moreover, theoretical properties of the posterior distribution of Poisson NMF parameters endowed with shrinkage priors remain under-explored. This paper introduces a novel Bayesian NMF method that automatically infers the number of factors while also incorporating information on the latent factors from previous studies. This is achieved using compressive hyperpriors, which are hierarchical priors that make…" />
+<meta name="twitter:description" property="og:description" content="Non-negative matrix factorization (NMF) is a popular tool for dimensionality reduction, especially for count matrices. However, inferring an appropriate number of factors is challenging. Existing approaches based on information criteria or nonparametric sparsity-inducing priors tend to be computationally burdensome or highly sensitive to prior choices. Moreover, theoretical properties of the posterior distribution of Poisson NMF parameters endowed with shrinkage priors remain under-explored. This paper introduces a novel Bayesian NMF method that automatically infers the number of factors while also incorporating information on the latent factors from previous studies. This is achieved using compressive hyperpriors, which are hierarchical priors that make…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2404.10974.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2404.10974.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-15T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-15T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Compressive Bayesian non-negative matrix factorization for mutational signatures analysis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alessandro Zito, Jeffrey W. Miller"},"dateModified":"2026-09-15T00:00:00+02:00","datePublished":"2026-09-15T00:00:00+02:00","description":"Non-negative matrix factorization (NMF) is a popular tool for dimensionality reduction, especially for count matrices. However, inferring an appropriate number of factors is challenging. Existing approaches based on information criteria or nonparametric sparsity-inducing priors tend to be computationally burdensome or highly sensitive to prior choices. Moreover, theoretical properties of the posterior distribution of Poisson NMF parameters endowed with shrinkage priors remain under-explored. This paper introduces a novel Bayesian NMF method that automatically infers the number of factors while also incorporating information on the latent factors from previous studies. This is achieved using compressive hyperpriors, which are hierarchical priors that make…","headline":"Compressive Bayesian non-negative matrix factorization for mutational signatures analysis","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2404.10974.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2404.10974.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Compressive Bayesian non-negative matrix factorization for mutational signatures analysis</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Alessandro Zito, Jeffrey W. Miller
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      15 Sep 2026
+    </div>
+  </div><div class="summary-box">A Bayesian NMF method with compressive hyperpriors for inferring the number of factors.</div><h3>Abstract</h3>
+  <p>Non-negative matrix factorization (NMF) is a popular tool for dimensionality reduction, especially for count matrices. However, inferring an appropriate number of factors is challenging. Existing approaches based on information criteria or nonparametric sparsity-inducing priors tend to be computationally burdensome or highly sensitive to prior choices. Moreover, theoretical properties of the posterior distribution of Poisson NMF parameters endowed with shrinkage priors remain under-explored. This paper introduces a novel Bayesian NMF method that automatically infers the number of factors while also incorporating information on the latent factors from previous studies. This is achieved using compressive hyperpriors, which are hierarchical priors that make the sample-specific weights of unneeded factors concentrate near zero in the posterior. We provide novel distribution theory for posterior inference to elucidate this shrinkage mechanism, both in finite samples and asymptotically. We apply our method to mutational signatures analysis in cancer genomics, in simulations and on real data from breast cancer. Compared to state-of-the-art alternatives, our method is more robust to mild overdispersion and improves detection and estimation of signatures aligned with prior information.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2404.10974" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2404.10974" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

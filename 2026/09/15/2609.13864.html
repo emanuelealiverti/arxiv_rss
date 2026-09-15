@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An Uncertainty-Aware Hybrid Mathematical-Machine-Learning Model for Smart Irrigation Decision Support</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="An Uncertainty-Aware Hybrid Mathematical-Machine-Learning Model for Smart Irrigation Decision Support" />
+<meta name="author" content="Andrea Scariolo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Agriculture accounts for roughly 70% of global freshwater withdrawals, yet irrigation is still commonly scheduled reactively, with no forecast of where soil moisture is heading and no statement of confidence in that forecast. Data-driven models are accurate but opaque and point-valued; water-balance models are transparent but carry large structural error. Neither alone supports a defensible irrigation decision under uncertainty. This study coupled the two and carried uncertainty through to the decision: a four-parameter water-balance core, calibrated on training data only, was corrected by a Random Forest that learned nothing but the physical residual, conformal prediction attached 90%-nominal intervals, and a…" />
+<meta name="twitter:description" property="og:description" content="Agriculture accounts for roughly 70% of global freshwater withdrawals, yet irrigation is still commonly scheduled reactively, with no forecast of where soil moisture is heading and no statement of confidence in that forecast. Data-driven models are accurate but opaque and point-valued; water-balance models are transparent but carry large structural error. Neither alone supports a defensible irrigation decision under uncertainty. This study coupled the two and carried uncertainty through to the decision: a four-parameter water-balance core, calibrated on training data only, was corrected by a Random Forest that learned nothing but the physical residual, conformal prediction attached 90%-nominal intervals, and a…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2609.13864.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2609.13864.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-15T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-15T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="An Uncertainty-Aware Hybrid Mathematical-Machine-Learning Model for Smart Irrigation Decision Support" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Andrea Scariolo"},"dateModified":"2026-09-15T00:00:00+02:00","datePublished":"2026-09-15T00:00:00+02:00","description":"Agriculture accounts for roughly 70% of global freshwater withdrawals, yet irrigation is still commonly scheduled reactively, with no forecast of where soil moisture is heading and no statement of confidence in that forecast. Data-driven models are accurate but opaque and point-valued; water-balance models are transparent but carry large structural error. Neither alone supports a defensible irrigation decision under uncertainty. This study coupled the two and carried uncertainty through to the decision: a four-parameter water-balance core, calibrated on training data only, was corrected by a Random Forest that learned nothing but the physical residual, conformal prediction attached 90%-nominal intervals, and a…","headline":"An Uncertainty-Aware Hybrid Mathematical-Machine-Learning Model for Smart Irrigation Decision Support","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2609.13864.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/15/2609.13864.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>An Uncertainty-Aware Hybrid Mathematical-Machine-Learning Model for Smart Irrigation Decision Support</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Andrea Scariolo
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      15 Sep 2026
+    </div>
+  </div><div class="summary-box">A hybrid model combines water-balance and machine learning components for uncertainty-aware smart irrigation decision support.</div><h3>Abstract</h3>
+  <p>Agriculture accounts for roughly 70% of global freshwater withdrawals, yet irrigation is still commonly scheduled reactively, with no forecast of where soil moisture is heading and no statement of confidence in that forecast. Data-driven models are accurate but opaque and point-valued; water-balance models are transparent but carry large structural error. Neither alone supports a defensible irrigation decision under uncertainty. This study coupled the two and carried uncertainty through to the decision: a four-parameter water-balance core, calibrated on training data only, was corrected by a Random Forest that learned nothing but the physical residual, conformal prediction attached 90%-nominal intervals, and a risk-aware rule converted the interval lower bound into an irrigation trigger. It was evaluated on three years of hourly in-situ measurements from a rainfed Mediterranean cropland station under a strict chronological split, scored against persistence, from one hour to one week. At the 24 h horizon the hybrid reached RMSE 0.00925 m^3 m^-3 and +9.4% skill, roughly double the best of nine baselines, of which only the Random Forest beat persistence. Skill did not grow with lead time: it peaked at +27.4% at three hours and fell to +1.2% at one week. Conformalised quantile regression was better calibrated and 11% sharper than constant-width conformal prediction. The risk-aware rule raised management-threshold crossings detected in advance from 0.905 to 1.000, at a precision cost of 0.975 to 0.950 and 3.7% more notional water, and beyond 72 h the point forecast fell below the no-forecast rule while the interval-based rule did not. Uncertainty quantification therefore governs the lead time over which forecast-driven irrigation advice remains trustworthy, and here transparency in the physical layer cost no measurable accuracy.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.13864" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.13864" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
