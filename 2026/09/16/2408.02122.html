@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Graph-Enabled Efficient Federated Bayesian Modeling</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Graph-Enabled Efficient Federated Bayesian Modeling" />
+<meta name="author" content="Chenyang Zhong, Shouxuan Ji, Tian Zheng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Federated Bayesian modeling requires combining evidence across distributed data holders while preserving posterior uncertainty and keeping local data decentralized. We propose Federated Latent Graph MCMC (FLaG-MCMC), a framework for sequential posterior transfer in which accumulated posterior information is represented by a reservoir of Monte Carlo samples. FLaG-MCMC constructs a graph that captures the geometry of the posterior reservoir and uses graph-enabled proposals whose per-iteration cost is independent of the reservoir size. Each data holder updates the inherited posterior using its local likelihood and returns an updated reservoir for subsequent inference. We apply FLaG-MCMC in two health science settings. Using mobile…" />
+<meta name="twitter:description" property="og:description" content="Federated Bayesian modeling requires combining evidence across distributed data holders while preserving posterior uncertainty and keeping local data decentralized. We propose Federated Latent Graph MCMC (FLaG-MCMC), a framework for sequential posterior transfer in which accumulated posterior information is represented by a reservoir of Monte Carlo samples. FLaG-MCMC constructs a graph that captures the geometry of the posterior reservoir and uses graph-enabled proposals whose per-iteration cost is independent of the reservoir size. Each data holder updates the inherited posterior using its local likelihood and returns an updated reservoir for subsequent inference. We apply FLaG-MCMC in two health science settings. Using mobile…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/16/2408.02122.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/16/2408.02122.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-16T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-16T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Graph-Enabled Efficient Federated Bayesian Modeling" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Chenyang Zhong, Shouxuan Ji, Tian Zheng"},"dateModified":"2026-09-16T00:00:00+02:00","datePublished":"2026-09-16T00:00:00+02:00","description":"Federated Bayesian modeling requires combining evidence across distributed data holders while preserving posterior uncertainty and keeping local data decentralized. We propose Federated Latent Graph MCMC (FLaG-MCMC), a framework for sequential posterior transfer in which accumulated posterior information is represented by a reservoir of Monte Carlo samples. FLaG-MCMC constructs a graph that captures the geometry of the posterior reservoir and uses graph-enabled proposals whose per-iteration cost is independent of the reservoir size. Each data holder updates the inherited posterior using its local likelihood and returns an updated reservoir for subsequent inference. We apply FLaG-MCMC in two health science settings. Using mobile…","headline":"Graph-Enabled Efficient Federated Bayesian Modeling","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/16/2408.02122.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/16/2408.02122.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Graph-Enabled Efficient Federated Bayesian Modeling</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Chenyang Zhong, Shouxuan Ji, Tian Zheng
+      <span class="sep">&middot;</span>
+      stat.CO, stat.AP, stat.ME
+      <span class="sep">&middot;</span>
+      16 Sep 2026
+    </div>
+  </div><div class="summary-box">A framework for federated Bayesian modeling using graph-enabled proposals and MCMC.</div><h3>Abstract</h3>
+  <p>Federated Bayesian modeling requires combining evidence across distributed data holders while preserving posterior uncertainty and keeping local data decentralized. We propose Federated Latent Graph MCMC (FLaG-MCMC), a framework for sequential posterior transfer in which accumulated posterior information is represented by a reservoir of Monte Carlo samples. FLaG-MCMC constructs a graph that captures the geometry of the posterior reservoir and uses graph-enabled proposals whose per-iteration cost is independent of the reservoir size. Each data holder updates the inherited posterior using its local likelihood and returns an updated reservoir for subsequent inference. We apply FLaG-MCMC in two health science settings. Using mobile and wearable device data from GLOBEM, we investigate associations between depression status and behavioral patterns while sequentially accumulating posterior information across participants. FLaG-MCMC accurately reconstructs the corresponding pooled Bayesian posterior while closely tracking evolving posterior location and uncertainty in these associations. We also conduct a simulation study motivated by Bayesian evidence synthesis for opioid use disorder prevalence across studies, transferring posterior information from an Ohio study to a subsequent New York analysis under covariate shift. In this setting, FLaG-MCMC demonstrates reliable posterior transfer and favorable computational scaling. Theoretical results establish the validity and consistency of the framework.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2408.02122" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2408.02122" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
