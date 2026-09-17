@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Robust Tests for Step-Stress Models under Exponential Lifetimes</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Robust Tests for Step-Stress Models under Exponential Lifetimes" />
+<meta name="author" content="María Jaenada Malagón, Juan Manuel Millán Fanconi, Leandro Pardo Llorente" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Highly reliable products with extended lifetimes present a challenge in reliability analysis: obtaining enough failure data under normal operating conditions is often incompatible with reasonable time and cost constraints. Step-Stress Accelerated Life Tests (SSALTs) offer a practical solution by progressively increasing stress levels to accelerate product degradation, allowing results to be extrapolated to normal conditions. However, the small sample sizes and Type-I censoring inherent to these experiments render classical maximum likelihood-based inference vulnerable to data contamination. Robust point estimation has been studied in the literature. However, robust test statistics have not yet been developed in this context. In this paper,…" />
+<meta name="twitter:description" property="og:description" content="Highly reliable products with extended lifetimes present a challenge in reliability analysis: obtaining enough failure data under normal operating conditions is often incompatible with reasonable time and cost constraints. Step-Stress Accelerated Life Tests (SSALTs) offer a practical solution by progressively increasing stress levels to accelerate product degradation, allowing results to be extrapolated to normal conditions. However, the small sample sizes and Type-I censoring inherent to these experiments render classical maximum likelihood-based inference vulnerable to data contamination. Robust point estimation has been studied in the literature. However, robust test statistics have not yet been developed in this context. In this paper,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/17/2609.17827.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/17/2609.17827.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-17T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-17T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Robust Tests for Step-Stress Models under Exponential Lifetimes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"María Jaenada Malagón, Juan Manuel Millán Fanconi, Leandro Pardo Llorente"},"dateModified":"2026-09-17T00:00:00+02:00","datePublished":"2026-09-17T00:00:00+02:00","description":"Highly reliable products with extended lifetimes present a challenge in reliability analysis: obtaining enough failure data under normal operating conditions is often incompatible with reasonable time and cost constraints. Step-Stress Accelerated Life Tests (SSALTs) offer a practical solution by progressively increasing stress levels to accelerate product degradation, allowing results to be extrapolated to normal conditions. However, the small sample sizes and Type-I censoring inherent to these experiments render classical maximum likelihood-based inference vulnerable to data contamination. Robust point estimation has been studied in the literature. However, robust test statistics have not yet been developed in this context. In this paper,…","headline":"Robust Tests for Step-Stress Models under Exponential Lifetimes","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/17/2609.17827.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/17/2609.17827.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Robust Tests for Step-Stress Models under Exponential Lifetimes</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      María Jaenada Malagón, Juan Manuel Millán Fanconi, Leandro Pardo Llorente
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      17 Sep 2026
+    </div>
+  </div><div class="summary-box">Proposes robust test statistics for step-stress models under exponential lifetimes using MDPDE.</div><h3>Abstract</h3>
+  <p>Highly reliable products with extended lifetimes present a challenge in reliability analysis: obtaining enough failure data under normal operating conditions is often incompatible with reasonable time and cost constraints. Step-Stress Accelerated Life Tests (SSALTs) offer a practical solution by progressively increasing stress levels to accelerate product degradation, allowing results to be extrapolated to normal conditions. However, the small sample sizes and Type-I censoring inherent to these experiments render classical maximum likelihood-based inference vulnerable to data contamination. Robust point estimation has been studied in the literature. However, robust test statistics have not yet been developed in this context. In this paper, we propose robust test statistics for SSALTs under exponential lifetime distributions, based on the minimum density power divergence estimator (MDPDE). This paper directly works with the exact failure times recorded before the end of the experiment. Once this limit time is reached, all surviving components are censored. This creates a mixed discrete-continuous distribution, which is a major analytical breakthrough in the context of SSALT. We introduce the restricted version of the MDPDE, establish its asymptotic properties, and construct Z-type and Rao-type test statistics for linear hypotheses on the model parameters. The proposed tests are shown to maintain their nominal significance levels and statistical power under data contamination, where classical MLE-based procedures fail. An extensive simulation study confirms the robustness gains of the proposed methods, and a real data application illustrates their practical value.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.17827" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.17827" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

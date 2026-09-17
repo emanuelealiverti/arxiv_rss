@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sparse Bayesian Modeling of EEG Channel Interactions Improves P300 Brain-Computer Interface Performance</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Sparse Bayesian Modeling of EEG Channel Interactions Improves P300 Brain-Computer Interface Performance" />
+<meta name="author" content="Guoxuan Ma, Yuan Zhong, Moyan Li, Yuxiao Nie, Jian Kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Electroencephalography (EEG)-based P300 brain-computer interfaces (BCIs) enable communication without physical movement by detecting stimulus-evoked neural responses. Accurate and efficient decoding remains challenging due to high dimensionality, temporal dependence, and complex interactions across EEG channels. Existing approaches often treat channels independently or rely on black-box models, limiting interpretability and personalization. We propose a sparse Bayesian time-varying regression framework that explicitly models pairwise EEG channel interactions while performing temporal feature selection, where a relaxed-thresholded Gaussian process prior induces structured sparsity in both channel-specific and interaction effects, enabling interpretable identification of task-relevant channels and channel pairs. Applied to a public P300 speller dataset…" />
+<meta name="twitter:description" property="og:description" content="Electroencephalography (EEG)-based P300 brain-computer interfaces (BCIs) enable communication without physical movement by detecting stimulus-evoked neural responses. Accurate and efficient decoding remains challenging due to high dimensionality, temporal dependence, and complex interactions across EEG channels. Existing approaches often treat channels independently or rely on black-box models, limiting interpretability and personalization. We propose a sparse Bayesian time-varying regression framework that explicitly models pairwise EEG channel interactions while performing temporal feature selection, where a relaxed-thresholded Gaussian process prior induces structured sparsity in both channel-specific and interaction effects, enabling interpretable identification of task-relevant channels and channel pairs. Applied to a public P300 speller dataset…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/17/2602.17772.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/17/2602.17772.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-17T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-17T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sparse Bayesian Modeling of EEG Channel Interactions Improves P300 Brain-Computer Interface Performance" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Guoxuan Ma, Yuan Zhong, Moyan Li, Yuxiao Nie, Jian Kang"},"dateModified":"2026-09-17T00:00:00+02:00","datePublished":"2026-09-17T00:00:00+02:00","description":"Electroencephalography (EEG)-based P300 brain-computer interfaces (BCIs) enable communication without physical movement by detecting stimulus-evoked neural responses. Accurate and efficient decoding remains challenging due to high dimensionality, temporal dependence, and complex interactions across EEG channels. Existing approaches often treat channels independently or rely on black-box models, limiting interpretability and personalization. We propose a sparse Bayesian time-varying regression framework that explicitly models pairwise EEG channel interactions while performing temporal feature selection, where a relaxed-thresholded Gaussian process prior induces structured sparsity in both channel-specific and interaction effects, enabling interpretable identification of task-relevant channels and channel pairs. Applied to a public P300 speller dataset…","headline":"Sparse Bayesian Modeling of EEG Channel Interactions Improves P300 Brain-Computer Interface Performance","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/17/2602.17772.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/17/2602.17772.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Sparse Bayesian Modeling of EEG Channel Interactions Improves P300 Brain-Computer Interface Performance</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Guoxuan Ma, Yuan Zhong, Moyan Li, Yuxiao Nie, Jian Kang
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      17 Sep 2026
+    </div>
+  </div><div class="summary-box">A sparse Bayesian time-varying regression framework models EEG channel interactions for P300 brain-computer interface performance.</div><h3>Abstract</h3>
+  <p>Electroencephalography (EEG)-based P300 brain-computer interfaces (BCIs) enable communication without physical movement by detecting stimulus-evoked neural responses. Accurate and efficient decoding remains challenging due to high dimensionality, temporal dependence, and complex interactions across EEG channels. Existing approaches often treat channels independently or rely on black-box models, limiting interpretability and personalization. We propose a sparse Bayesian time-varying regression framework that explicitly models pairwise EEG channel interactions while performing temporal feature selection, where a relaxed-thresholded Gaussian process prior induces structured sparsity in both channel-specific and interaction effects, enabling interpretable identification of task-relevant channels and channel pairs. Applied to a public P300 speller dataset of 55 participants, our method achieves a 96.4% median character-level accuracy using all sequence repetitions and attains the best overall decoding performance among competing statistical and deep learning approaches. Incorporating channel interactions yields subgroup-specific gains in character-level accuracy, particularly among participants abstained from alcohol (median 7%, up to 14%). Importantly, our approach improves median BCI-Utility by more than 10% at its optimal operating point, achieving peak throughput after only six sequence repetitions. These results demonstrate that explicitly modeling structured EEG channel interactions within a principled Bayesian framework enhances accuracy and user-centric throughput, and supports personalization in P300 BCI systems.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2602.17772" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2602.17772" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
