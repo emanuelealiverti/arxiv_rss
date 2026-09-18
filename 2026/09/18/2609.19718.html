@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Matrix Graphical Model Via Joint Estimation of Partial Correlations</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Matrix Graphical Model Via Joint Estimation of Partial Correlations" />
+<meta name="author" content="Hyewon Kim, Seongoh Park" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Matrix graphical models aim to characterize conditional dependence structures in matrix-variate data under a separable covariance assumption. In this framework, the precision matrix is decomposed as a Kronecker product, enabling separate modeling of undirected graphs across row and column domains. Existing methods have been developed for this problem, including likelihood-based approaches and regression-based procedures for graph estimation. Likelihood-based methods estimate precision matrices directly and recover graph structures indirectly, whereas regression-based approaches directly target estimating edges among variables, thus outperforming the former. However, existing regression-based methods are based on multiple penalized regression problems, which naturally yields asymmetry in estimated graphs and…" />
+<meta name="twitter:description" property="og:description" content="Matrix graphical models aim to characterize conditional dependence structures in matrix-variate data under a separable covariance assumption. In this framework, the precision matrix is decomposed as a Kronecker product, enabling separate modeling of undirected graphs across row and column domains. Existing methods have been developed for this problem, including likelihood-based approaches and regression-based procedures for graph estimation. Likelihood-based methods estimate precision matrices directly and recover graph structures indirectly, whereas regression-based approaches directly target estimating edges among variables, thus outperforming the former. However, existing regression-based methods are based on multiple penalized regression problems, which naturally yields asymmetry in estimated graphs and…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/18/2609.19718.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/18/2609.19718.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-18T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-18T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Matrix Graphical Model Via Joint Estimation of Partial Correlations" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hyewon Kim, Seongoh Park"},"dateModified":"2026-09-18T00:00:00+02:00","datePublished":"2026-09-18T00:00:00+02:00","description":"Matrix graphical models aim to characterize conditional dependence structures in matrix-variate data under a separable covariance assumption. In this framework, the precision matrix is decomposed as a Kronecker product, enabling separate modeling of undirected graphs across row and column domains. Existing methods have been developed for this problem, including likelihood-based approaches and regression-based procedures for graph estimation. Likelihood-based methods estimate precision matrices directly and recover graph structures indirectly, whereas regression-based approaches directly target estimating edges among variables, thus outperforming the former. However, existing regression-based methods are based on multiple penalized regression problems, which naturally yields asymmetry in estimated graphs and…","headline":"Matrix Graphical Model Via Joint Estimation of Partial Correlations","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/18/2609.19718.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/18/2609.19718.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Matrix Graphical Model Via Joint Estimation of Partial Correlations</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Hyewon Kim, Seongoh Park
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      18 Sep 2026
+    </div>
+  </div><div class="summary-box">A joint estimation method for partial correlations in matrix graphical models is proposed.</div><h3>Abstract</h3>
+  <p>Matrix graphical models aim to characterize conditional dependence structures in matrix-variate data under a separable covariance assumption. In this framework, the precision matrix is decomposed as a Kronecker product, enabling separate modeling of undirected graphs across row and column domains. Existing methods have been developed for this problem, including likelihood-based approaches and regression-based procedures for graph estimation. Likelihood-based methods estimate precision matrices directly and recover graph structures indirectly, whereas regression-based approaches directly target estimating edges among variables, thus outperforming the former. However, existing regression-based methods are based on multiple penalized regression problems, which naturally yields asymmetry in estimated graphs and computational difficulty in selecting tuning parameters. To address the limitations, we propose a joint estimation of partial correlations in matrix graphical models. The proposed method estimates all partial correlations simultaneously within a unified optimization framework, thereby preserving symmetry and easing the pain of selecting the best models. Numerical studies demonstrate that the proposed method improves graph recovery performance compared to existing approaches. We also analyze protein expression data collected from patients with pulmonary tuberculosis, measured repeatedly at multiple time points, where the proposed method compares protein networks between two groups of patients and recovers the temporal dependence structure.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.19718" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.19718" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

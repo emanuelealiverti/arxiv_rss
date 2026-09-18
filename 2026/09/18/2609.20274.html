@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Exponential Smoothing for Time Series of Random Objects</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Exponential Smoothing for Time Series of Random Objects" />
+<meta name="author" content="Takuo Matsubara, Peiwen Jiang, Wilson Ye Chen, Minh-Ngoc Tran" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Time series of random objects, such as covariance matrices, probability distributions, and functional data, call for forecasting methods that do not rely on standard arithmetic operations. We introduce geodesic exponential smoothing, a generalization of exponential smoothing to time series in Hadamard spaces: the forecast level moves a fixed fraction of the way along the geodesic toward each new observation. The smoothing parameter is estimated by minimizing the average squared distance between observations and their forecasts. We further introduce an innovations mechanism under which each observation has conditional Fr&#39;echet mean equal to the current level, providing the metric-space analog of the…" />
+<meta name="twitter:description" property="og:description" content="Time series of random objects, such as covariance matrices, probability distributions, and functional data, call for forecasting methods that do not rely on standard arithmetic operations. We introduce geodesic exponential smoothing, a generalization of exponential smoothing to time series in Hadamard spaces: the forecast level moves a fixed fraction of the way along the geodesic toward each new observation. The smoothing parameter is estimated by minimizing the average squared distance between observations and their forecasts. We further introduce an innovations mechanism under which each observation has conditional Fr&#39;echet mean equal to the current level, providing the metric-space analog of the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/18/2609.20274.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/18/2609.20274.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-18T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-18T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Exponential Smoothing for Time Series of Random Objects" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Takuo Matsubara, Peiwen Jiang, Wilson Ye Chen, Minh-Ngoc Tran"},"dateModified":"2026-09-18T00:00:00+02:00","datePublished":"2026-09-18T00:00:00+02:00","description":"Time series of random objects, such as covariance matrices, probability distributions, and functional data, call for forecasting methods that do not rely on standard arithmetic operations. We introduce geodesic exponential smoothing, a generalization of exponential smoothing to time series in Hadamard spaces: the forecast level moves a fixed fraction of the way along the geodesic toward each new observation. The smoothing parameter is estimated by minimizing the average squared distance between observations and their forecasts. We further introduce an innovations mechanism under which each observation has conditional Fr&#39;echet mean equal to the current level, providing the metric-space analog of the…","headline":"Exponential Smoothing for Time Series of Random Objects","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/18/2609.20274.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/18/2609.20274.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Exponential Smoothing for Time Series of Random Objects</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Takuo Matsubara, Peiwen Jiang, Wilson Ye Chen, Minh-Ngoc Tran
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO, stat.TH
+      <span class="sep">&middot;</span>
+      18 Sep 2026
+    </div>
+  </div><div class="summary-box">Introduces geodesic exponential smoothing for time series of random objects in Hadamard spaces.</div><h3>Abstract</h3>
+  <p>Time series of random objects, such as covariance matrices, probability distributions, and functional data, call for forecasting methods that do not rely on standard arithmetic operations. We introduce geodesic exponential smoothing, a generalization of exponential smoothing to time series in Hadamard spaces: the forecast level moves a fixed fraction of the way along the geodesic toward each new observation. The smoothing parameter is estimated by minimizing the average squared distance between observations and their forecasts. We further introduce an innovations mechanism under which each observation has conditional Fr'echet mean equal to the current level, providing the metric-space analog of the innovations state-space model. In contrast to autoregressive models for object-valued time series, the framework involves a single scalar parameter, assumes no stationarity, and updates online in constant time per observation. Under this mechanism, we establish sample-path properties of the generative process via the quasilinearization available in Hadamard spaces, and prove almost-sure consistency of the smoothing-parameter estimator. Three real-data applications, spanning covariance-matrix, distributional, and functional time series, assess the forecasting performance of the method against structurally heavier alternatives.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.20274" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.20274" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
