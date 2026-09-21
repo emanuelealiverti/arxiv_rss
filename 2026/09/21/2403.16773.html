@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bias-Correction for Privacy-Protected Spatial Autoregressive Models with Application to Restaurant Network Analysis</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bias-Correction for Privacy-Protected Spatial Autoregressive Models with Application to Restaurant Network Analysis" />
+<meta name="author" content="Danyang Huang, Ziyi Kong, Shuyuan Wu, Hansheng Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Spatial autoregressive (SAR) models and their extensions are important tools for studying network effects. However, with an increasing emphasis on data privacy, data providers often implement protection measures that render standard SAR models inapplicable. In this study, we introduce a privacy-protected SAR model that incorporates noise into both the response and covariates to meet privacy requirements. With noise present in both components, the traditional quasi-maximum likelihood estimator becomes difficult to compute because the likelihood function cannot be directly formulated. To bypass this hurdle, we begin with a pseudo-likelihood approach, initially omitting the noise in the covariates. A Newton-Raphson algorithm is…" />
+<meta name="twitter:description" property="og:description" content="Spatial autoregressive (SAR) models and their extensions are important tools for studying network effects. However, with an increasing emphasis on data privacy, data providers often implement protection measures that render standard SAR models inapplicable. In this study, we introduce a privacy-protected SAR model that incorporates noise into both the response and covariates to meet privacy requirements. With noise present in both components, the traditional quasi-maximum likelihood estimator becomes difficult to compute because the likelihood function cannot be directly formulated. To bypass this hurdle, we begin with a pseudo-likelihood approach, initially omitting the noise in the covariates. A Newton-Raphson algorithm is…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2403.16773.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2403.16773.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bias-Correction for Privacy-Protected Spatial Autoregressive Models with Application to Restaurant Network Analysis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Danyang Huang, Ziyi Kong, Shuyuan Wu, Hansheng Wang"},"dateModified":"2026-09-21T00:00:00+02:00","datePublished":"2026-09-21T00:00:00+02:00","description":"Spatial autoregressive (SAR) models and their extensions are important tools for studying network effects. However, with an increasing emphasis on data privacy, data providers often implement protection measures that render standard SAR models inapplicable. In this study, we introduce a privacy-protected SAR model that incorporates noise into both the response and covariates to meet privacy requirements. With noise present in both components, the traditional quasi-maximum likelihood estimator becomes difficult to compute because the likelihood function cannot be directly formulated. To bypass this hurdle, we begin with a pseudo-likelihood approach, initially omitting the noise in the covariates. A Newton-Raphson algorithm is…","headline":"Bias-Correction for Privacy-Protected Spatial Autoregressive Models with Application to Restaurant Network Analysis","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2403.16773.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2403.16773.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bias-Correction for Privacy-Protected Spatial Autoregressive Models with Application to Restaurant Network Analysis</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Danyang Huang, Ziyi Kong, Shuyuan Wu, Hansheng Wang
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      21 Sep 2026
+    </div>
+  </div><div class="summary-box">A bias-corrected Newton-Raphson algorithm is proposed for privacy-protected spatial autoregressive models.</div><h3>Abstract</h3>
+  <p>Spatial autoregressive (SAR) models and their extensions are important tools for studying network effects. However, with an increasing emphasis on data privacy, data providers often implement protection measures that render standard SAR models inapplicable. In this study, we introduce a privacy-protected SAR model that incorporates noise into both the response and covariates to meet privacy requirements. With noise present in both components, the traditional quasi-maximum likelihood estimator becomes difficult to compute because the likelihood function cannot be directly formulated. To bypass this hurdle, we begin with a pseudo-likelihood approach, initially omitting the noise in the covariates. A Newton-Raphson algorithm is then applied to compute the estimator; however, the estimator is biased. To address this, we propose a bias-corrected Newton-Raphson-type algorithm that simultaneously accounts for noise in both the response and covariates. We further show, under appropriate regularity conditions, that the resulting estimator is consistent and asymptotically normal. To further enhance computational efficiency, we also develop a bias-corrected least squares estimator. Several extensions are discussed, and the finite-sample performance of the proposed methods is evaluated through extensive simulations. We apply the proposed methodology to restaurant transaction data from a third-party payment platform. Our method identifies a statistically significant competitive network effect among restaurants and further reveals meaningful restaurant-customer interaction patterns.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2403.16773" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2403.16773" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

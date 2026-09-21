@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Framework to Quantify the Probability of Future Cyber Loss Events</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Framework to Quantify the Probability of Future Cyber Loss Events" />
+<meta name="author" content="Siem Peters, Martin Eian" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cybersecurity risk quantification remains challenging due to limited operational data and difficulties in quantifying Loss Event Frequency (LEF). This paper introduces the Loss Event Frequency Security Analyser (LEFSA), a probabilistic framework that reformulates LEF estimation as machine-level Cyber Loss Event (CLE) prediction combined with hierarchical infrastructure-level aggregation. LEFSA estimates calibrated machine-level CLE probabilities from operational cybersecurity telemetry and aggregates them across infrastructure layers while accounting for machine-level dependencies. This provides a foundation for scalable, explainable, and operationally applicable cyber risk estimation at the level of machines, services, business processes, and the entire organization. The framework was evaluated using proprietary Managed…" />
+<meta name="twitter:description" property="og:description" content="Cybersecurity risk quantification remains challenging due to limited operational data and difficulties in quantifying Loss Event Frequency (LEF). This paper introduces the Loss Event Frequency Security Analyser (LEFSA), a probabilistic framework that reformulates LEF estimation as machine-level Cyber Loss Event (CLE) prediction combined with hierarchical infrastructure-level aggregation. LEFSA estimates calibrated machine-level CLE probabilities from operational cybersecurity telemetry and aggregates them across infrastructure layers while accounting for machine-level dependencies. This provides a foundation for scalable, explainable, and operationally applicable cyber risk estimation at the level of machines, services, business processes, and the entire organization. The framework was evaluated using proprietary Managed…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21717.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21717.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Framework to Quantify the Probability of Future Cyber Loss Events" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Siem Peters, Martin Eian"},"dateModified":"2026-09-21T00:00:00+02:00","datePublished":"2026-09-21T00:00:00+02:00","description":"Cybersecurity risk quantification remains challenging due to limited operational data and difficulties in quantifying Loss Event Frequency (LEF). This paper introduces the Loss Event Frequency Security Analyser (LEFSA), a probabilistic framework that reformulates LEF estimation as machine-level Cyber Loss Event (CLE) prediction combined with hierarchical infrastructure-level aggregation. LEFSA estimates calibrated machine-level CLE probabilities from operational cybersecurity telemetry and aggregates them across infrastructure layers while accounting for machine-level dependencies. This provides a foundation for scalable, explainable, and operationally applicable cyber risk estimation at the level of machines, services, business processes, and the entire organization. The framework was evaluated using proprietary Managed…","headline":"A Framework to Quantify the Probability of Future Cyber Loss Events","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21717.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21717.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Framework to Quantify the Probability of Future Cyber Loss Events</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Siem Peters, Martin Eian
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      21 Sep 2026
+    </div>
+  </div><div class="summary-box">A probabilistic framework, LEFSA, estimates cyber loss event frequencies from operational telemetry data.</div><h3>Abstract</h3>
+  <p>Cybersecurity risk quantification remains challenging due to limited operational data and difficulties in quantifying Loss Event Frequency (LEF). This paper introduces the Loss Event Frequency Security Analyser (LEFSA), a probabilistic framework that reformulates LEF estimation as machine-level Cyber Loss Event (CLE) prediction combined with hierarchical infrastructure-level aggregation. LEFSA estimates calibrated machine-level CLE probabilities from operational cybersecurity telemetry and aggregates them across infrastructure layers while accounting for machine-level dependencies. This provides a foundation for scalable, explainable, and operationally applicable cyber risk estimation at the level of machines, services, business processes, and the entire organization. The framework was evaluated using proprietary Managed Detection &amp; Response telemetry from 23 organizations using Microsoft Defender for Endpoint. XGBoost achieved the strongest predictive performance, with a mean area under the receiver operating characteristic curve of 0.90 and consistently low calibration error across evaluation periods. The results demonstrate that operational cybersecurity telemetry contains substantial predictive information for future CLE occurrence, supporting probabilistic machine-level modeling and hierarchical aggregation as a promising foundation for quantitative, data-driven cyber risk management.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.21717" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.21717" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

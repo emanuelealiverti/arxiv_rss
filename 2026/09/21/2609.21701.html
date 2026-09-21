@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Partial Fay-Herriot model for Small Area Estimation: Estimating district-level consumption in Mozambique</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Partial Fay-Herriot model for Small Area Estimation: Estimating district-level consumption in Mozambique" />
+<meta name="author" content="Francesco Schirripa Spagnolo, Nicola Salvati, Enrico Fabrizi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper proposes a new small area estimation approach that integrates Partial Least Squares within the Fay-Herriot model to address the challenges posed by high-dimensional and highly correlated auxiliary variables sets. The resulting Partial Fay-Herriot (PFH) estimator constructs supervised components that maximize their association with the target variable, enhancing model stability and predictive efficiency. Monte Carlo simulations demonstrate that PFH estimator achieves lower mean squared error than the standard Fay-Herriot estimator and outperforms principal components-based alternatives while relying on fewer latent dimensions. The methodology is applied to the estimation of district-level per capita consumption in Mozambique, where the survey data…" />
+<meta name="twitter:description" property="og:description" content="This paper proposes a new small area estimation approach that integrates Partial Least Squares within the Fay-Herriot model to address the challenges posed by high-dimensional and highly correlated auxiliary variables sets. The resulting Partial Fay-Herriot (PFH) estimator constructs supervised components that maximize their association with the target variable, enhancing model stability and predictive efficiency. Monte Carlo simulations demonstrate that PFH estimator achieves lower mean squared error than the standard Fay-Herriot estimator and outperforms principal components-based alternatives while relying on fewer latent dimensions. The methodology is applied to the estimation of district-level per capita consumption in Mozambique, where the survey data…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21701.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21701.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Partial Fay-Herriot model for Small Area Estimation: Estimating district-level consumption in Mozambique" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Francesco Schirripa Spagnolo, Nicola Salvati, Enrico Fabrizi"},"dateModified":"2026-09-21T00:00:00+02:00","datePublished":"2026-09-21T00:00:00+02:00","description":"This paper proposes a new small area estimation approach that integrates Partial Least Squares within the Fay-Herriot model to address the challenges posed by high-dimensional and highly correlated auxiliary variables sets. The resulting Partial Fay-Herriot (PFH) estimator constructs supervised components that maximize their association with the target variable, enhancing model stability and predictive efficiency. Monte Carlo simulations demonstrate that PFH estimator achieves lower mean squared error than the standard Fay-Herriot estimator and outperforms principal components-based alternatives while relying on fewer latent dimensions. The methodology is applied to the estimation of district-level per capita consumption in Mozambique, where the survey data…","headline":"A Partial Fay-Herriot model for Small Area Estimation: Estimating district-level consumption in Mozambique","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21701.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21701.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Partial Fay-Herriot model for Small Area Estimation: Estimating district-level consumption in Mozambique</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Francesco Schirripa Spagnolo, Nicola Salvati, Enrico Fabrizi
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      21 Sep 2026
+    </div>
+  </div><div class="summary-box">A Partial Fay-Herriot model integrates Partial Least Squares for small area estimation.</div><h3>Abstract</h3>
+  <p>This paper proposes a new small area estimation approach that integrates Partial Least Squares within the Fay-Herriot model to address the challenges posed by high-dimensional and highly correlated auxiliary variables sets. The resulting Partial Fay-Herriot (PFH) estimator constructs supervised components that maximize their association with the target variable, enhancing model stability and predictive efficiency. Monte Carlo simulations demonstrate that PFH estimator achieves lower mean squared error than the standard Fay-Herriot estimator and outperforms principal components-based alternatives while relying on fewer latent dimensions. The methodology is applied to the estimation of district-level per capita consumption in Mozambique, where the survey data source is complemented by large set of correlated census variables. The resulting estimates highlight pronounced geographic heterogeneity and uncover spatial clusters of deprivation. Overall, the findings show that the proposed supervised dimension-reduction approach represents an effective and easily interpretable tool for producing reliable indicators in high-dimensional contexts.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.21701" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.21701" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

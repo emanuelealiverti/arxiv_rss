@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian additive regression trees for evaluating treatment benefit predictors using observational data</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian additive regression trees for evaluating treatment benefit predictors using observational data" />
+<meta name="author" content="Yuan Xia, Mohsen Sadatsafavi, Jeenat Mehareen, Paul Gustafson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A treatment benefit predictor (TBP) is an algorithm that maps a patient’s characteristics to their putative benefit from a given treatment, which can be used to inform treatment decisions. However, a TBP must be evaluated in the target population before being adopted for patient care. When only observational data are available, evaluating TBPs requires standard causal identification assumptions, as treatment assignment in such settings is not random. We obtain the posterior distributions of predictive performance measures to evaluate prespecified TBPs using observational data, by taking advantage of Bayesian additive regression trees (BART). We illustrate the evaluation of TBPs using selected…" />
+<meta name="twitter:description" property="og:description" content="A treatment benefit predictor (TBP) is an algorithm that maps a patient’s characteristics to their putative benefit from a given treatment, which can be used to inform treatment decisions. However, a TBP must be evaluated in the target population before being adopted for patient care. When only observational data are available, evaluating TBPs requires standard causal identification assumptions, as treatment assignment in such settings is not random. We obtain the posterior distributions of predictive performance measures to evaluate prespecified TBPs using observational data, by taking advantage of Bayesian additive regression trees (BART). We illustrate the evaluation of TBPs using selected…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21097.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21097.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian additive regression trees for evaluating treatment benefit predictors using observational data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yuan Xia, Mohsen Sadatsafavi, Jeenat Mehareen, Paul Gustafson"},"dateModified":"2026-09-21T00:00:00+02:00","datePublished":"2026-09-21T00:00:00+02:00","description":"A treatment benefit predictor (TBP) is an algorithm that maps a patient’s characteristics to their putative benefit from a given treatment, which can be used to inform treatment decisions. However, a TBP must be evaluated in the target population before being adopted for patient care. When only observational data are available, evaluating TBPs requires standard causal identification assumptions, as treatment assignment in such settings is not random. We obtain the posterior distributions of predictive performance measures to evaluate prespecified TBPs using observational data, by taking advantage of Bayesian additive regression trees (BART). We illustrate the evaluation of TBPs using selected…","headline":"Bayesian additive regression trees for evaluating treatment benefit predictors using observational data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21097.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21097.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian additive regression trees for evaluating treatment benefit predictors using observational data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Yuan Xia, Mohsen Sadatsafavi, Jeenat Mehareen, Paul Gustafson
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      21 Sep 2026
+    </div>
+  </div><div class="summary-box">Bayesian additive regression trees evaluate treatment benefit predictors using observational data.</div><h3>Abstract</h3>
+  <p>A treatment benefit predictor (TBP) is an algorithm that maps a patient’s characteristics to their putative benefit from a given treatment, which can be used to inform treatment decisions. However, a TBP must be evaluated in the target population before being adopted for patient care. When only observational data are available, evaluating TBPs requires standard causal identification assumptions, as treatment assignment in such settings is not random. We obtain the posterior distributions of predictive performance measures to evaluate prespecified TBPs using observational data, by taking advantage of Bayesian additive regression trees (BART). We illustrate the evaluation of TBPs using selected measures and graphical visualizations: the concentration of benefit ($C_b$) index and the moderate calibration curve. Simulation studies of binary and continuous outcomes settings, including balanced and imbalanced treatment allocation in the binary setting, establish the validity of the proposed approach. In a case study, we use this approach to assess a TBP for systemic antibiotic therapy for patients with chronic obstructive pulmonary disease (COPD). We show that the constructed TBP does not in fact make calibrated predictions, because it both makes optimistic predictions of risks and exaggerates the risk reduction due to treatment. We conclude that flexible Bayesian approaches have the potential to assess TBPs, offering opportunities for flexible model specifications, adjustment for confounding, and uncertainty characterization.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.21097" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.21097" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

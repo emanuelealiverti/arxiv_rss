@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Repulsive normalizing flow mixtures for adaptive importance sampling: reliability analysis of complex systems</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Repulsive normalizing flow mixtures for adaptive importance sampling: reliability analysis of complex systems" />
+<meta name="author" content="Sara Helal, Victor Elvira" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Accurate rare-event estimation can be computationally expensive. Classical adaptive importance sampling (IS) schemes often rely on restrictive proposal families and can struggle under multiple failure modes. We propose FAMIS, a flow-based multiple importance sampling (MIS) framework that learns a nonuniform mixture of normalizing flow proposals for rare event estimation. The method does not require presampled failure data or prior knowledge of the number, location, or geometry of the failure modes. Instead, it adaptively learns the mixture through sequential evaluations of the limit state function. To guide training toward the failure domain, FAMIS uses a smooth rare-event surrogate and a tempered…" />
+<meta name="twitter:description" property="og:description" content="Accurate rare-event estimation can be computationally expensive. Classical adaptive importance sampling (IS) schemes often rely on restrictive proposal families and can struggle under multiple failure modes. We propose FAMIS, a flow-based multiple importance sampling (MIS) framework that learns a nonuniform mixture of normalizing flow proposals for rare event estimation. The method does not require presampled failure data or prior knowledge of the number, location, or geometry of the failure modes. Instead, it adaptively learns the mixture through sequential evaluations of the limit state function. To guide training toward the failure domain, FAMIS uses a smooth rare-event surrogate and a tempered…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21160.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21160.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Repulsive normalizing flow mixtures for adaptive importance sampling: reliability analysis of complex systems" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sara Helal, Victor Elvira"},"dateModified":"2026-09-21T00:00:00+02:00","datePublished":"2026-09-21T00:00:00+02:00","description":"Accurate rare-event estimation can be computationally expensive. Classical adaptive importance sampling (IS) schemes often rely on restrictive proposal families and can struggle under multiple failure modes. We propose FAMIS, a flow-based multiple importance sampling (MIS) framework that learns a nonuniform mixture of normalizing flow proposals for rare event estimation. The method does not require presampled failure data or prior knowledge of the number, location, or geometry of the failure modes. Instead, it adaptively learns the mixture through sequential evaluations of the limit state function. To guide training toward the failure domain, FAMIS uses a smooth rare-event surrogate and a tempered…","headline":"Repulsive normalizing flow mixtures for adaptive importance sampling: reliability analysis of complex systems","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21160.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2609.21160.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Repulsive normalizing flow mixtures for adaptive importance sampling: reliability analysis of complex systems</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Sara Helal, Victor Elvira
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ML
+      <span class="sep">&middot;</span>
+      21 Sep 2026
+    </div>
+  </div><div class="summary-box">Proposes a flow-based multiple importance sampling framework for rare event estimation.</div><h3>Abstract</h3>
+  <p>Accurate rare-event estimation can be computationally expensive. Classical adaptive importance sampling (IS) schemes often rely on restrictive proposal families and can struggle under multiple failure modes. We propose FAMIS, a flow-based multiple importance sampling (MIS) framework that learns a nonuniform mixture of normalizing flow proposals for rare event estimation. The method does not require presampled failure data or prior knowledge of the number, location, or geometry of the failure modes. Instead, it adaptively learns the mixture through sequential evaluations of the limit state function. To guide training toward the failure domain, FAMIS uses a smooth rare-event surrogate and a tempered target sequence. A defensive exploration mixture improves early-stage coverage, a Rao Blackwellized update adapts the mixture weights, and a Jensen-Shannon repulsion term promotes separation and diversity among the base components. The final failure probability is computed with a deterministic-mixture MIS estimator. Numerical experiments demonstrate that FAMIS accurately approximates quasi-optimal IS densities with fewer training samples and model evaluations, providing stable variance reduction across complex reliability problems.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.21160" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.21160" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

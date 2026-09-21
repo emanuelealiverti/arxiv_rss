@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Randomized Principal Component Ensembles for High-Dimensional Calibration</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Randomized Principal Component Ensembles for High-Dimensional Calibration" />
+<meta name="author" content="Caren Hasler, Arnaud Tripet, Yves Tillé" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Calibration is a widely used method in survey sampling to adjust weights so that estimated totals of some chosen calibration variables match known population totals or totals obtained from other sources. When a large number of auxiliary variables are included as calibration variables, the variance of the total estimator can increase, and the calibration weights can become highly dispersed. To address these issues, we propose an ensemble method based on a principal component decomposition of the auxiliary variables. We repeatedly select sets of principal components without replacement and with unequal selection probabilities. Calibration is performed on each selected set of…" />
+<meta name="twitter:description" property="og:description" content="Calibration is a widely used method in survey sampling to adjust weights so that estimated totals of some chosen calibration variables match known population totals or totals obtained from other sources. When a large number of auxiliary variables are included as calibration variables, the variance of the total estimator can increase, and the calibration weights can become highly dispersed. To address these issues, we propose an ensemble method based on a principal component decomposition of the auxiliary variables. We repeatedly select sets of principal components without replacement and with unequal selection probabilities. Calibration is performed on each selected set of…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2512.09505.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2512.09505.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Randomized Principal Component Ensembles for High-Dimensional Calibration" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Caren Hasler, Arnaud Tripet, Yves Tillé"},"dateModified":"2026-09-21T00:00:00+02:00","datePublished":"2026-09-21T00:00:00+02:00","description":"Calibration is a widely used method in survey sampling to adjust weights so that estimated totals of some chosen calibration variables match known population totals or totals obtained from other sources. When a large number of auxiliary variables are included as calibration variables, the variance of the total estimator can increase, and the calibration weights can become highly dispersed. To address these issues, we propose an ensemble method based on a principal component decomposition of the auxiliary variables. We repeatedly select sets of principal components without replacement and with unequal selection probabilities. Calibration is performed on each selected set of…","headline":"Randomized Principal Component Ensembles for High-Dimensional Calibration","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2512.09505.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/21/2512.09505.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Randomized Principal Component Ensembles for High-Dimensional Calibration</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Caren Hasler, Arnaud Tripet, Yves Tillé
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      21 Sep 2026
+    </div>
+  </div><div class="summary-box">A method for ensemble calibration of survey weights using principal component decomposition.</div><h3>Abstract</h3>
+  <p>Calibration is a widely used method in survey sampling to adjust weights so that estimated totals of some chosen calibration variables match known population totals or totals obtained from other sources. When a large number of auxiliary variables are included as calibration variables, the variance of the total estimator can increase, and the calibration weights can become highly dispersed. To address these issues, we propose an ensemble method based on a principal component decomposition of the auxiliary variables. We repeatedly select sets of principal components without replacement and with unequal selection probabilities. Calibration is performed on each selected set of principal components, and the resulting weights are aggregated to obtain a final set of weights. With our proposed method, it is possible to calibrate exactly for some of the main auxiliary variables, while relaxing the calibration constraints for the remaining variables. It yields a total estimator whose variance does not explode when new auxiliary variables are added while producing weights with low dispersion. Finally, our proposed method allows us to obtain a single weighting system that can be applied to several variables of interest of a survey. An estimator of the variance of the total estimator is also proposed. We evaluate the proposed total estimator and its variance estimator using a simulation study on real survey data from the Swiss Survey on Income and Living Conditions and on synthetic data. The results show that the proposed solution significantly reduces the weight variability and the variance of the total estimator compared with competing total estimators for some variables of interest.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2512.09505" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2512.09505" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
