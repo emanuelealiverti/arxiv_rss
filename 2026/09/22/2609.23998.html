@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Stochastic Nested Fixed Point Algorithm for Large-Scale BLP Estimation</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Stochastic Nested Fixed Point Algorithm for Large-Scale BLP Estimation" />
+<meta name="author" content="Zhentong Lu, Myung Hwan Seo, Youngki Shin, Qichen Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a stochastic nested fixed point (SNFP) estimator for random coefficients logit demand models that updates model parameters using stochastic gradients and performs demand inversion one market at a time. Relative to the conventional nested fixed point (NFP) estimator, SNFP substantially reduces memory requirements and computational cost, making estimation feasible in very large datasets. We establish the large-$T$ (number of markets) asymptotic properties of the estimator under regularity conditions. We also characterize the effect of sharing one block of simulation draws across markets and show how to correct for it. Monte Carlo simulations show that the SNFP estimator achieves…" />
+<meta name="twitter:description" property="og:description" content="We develop a stochastic nested fixed point (SNFP) estimator for random coefficients logit demand models that updates model parameters using stochastic gradients and performs demand inversion one market at a time. Relative to the conventional nested fixed point (NFP) estimator, SNFP substantially reduces memory requirements and computational cost, making estimation feasible in very large datasets. We establish the large-$T$ (number of markets) asymptotic properties of the estimator under regularity conditions. We also characterize the effect of sharing one block of simulation draws across markets and show how to correct for it. Monte Carlo simulations show that the SNFP estimator achieves…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23998.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23998.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-22T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-22T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Stochastic Nested Fixed Point Algorithm for Large-Scale BLP Estimation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zhentong Lu, Myung Hwan Seo, Youngki Shin, Qichen Zhang"},"dateModified":"2026-09-22T00:00:00+02:00","datePublished":"2026-09-22T00:00:00+02:00","description":"We develop a stochastic nested fixed point (SNFP) estimator for random coefficients logit demand models that updates model parameters using stochastic gradients and performs demand inversion one market at a time. Relative to the conventional nested fixed point (NFP) estimator, SNFP substantially reduces memory requirements and computational cost, making estimation feasible in very large datasets. We establish the large-$T$ (number of markets) asymptotic properties of the estimator under regularity conditions. We also characterize the effect of sharing one block of simulation draws across markets and show how to correct for it. Monte Carlo simulations show that the SNFP estimator achieves…","headline":"A Stochastic Nested Fixed Point Algorithm for Large-Scale BLP Estimation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23998.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23998.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Stochastic Nested Fixed Point Algorithm for Large-Scale BLP Estimation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Zhentong Lu, Myung Hwan Seo, Youngki Shin, Qichen Zhang
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ME
+      <span class="sep">&middot;</span>
+      22 Sep 2026
+    </div>
+  </div><div class="summary-box">Develops a stochastic nested fixed point estimator for large-scale BLP estimation.</div><h3>Abstract</h3>
+  <p>We develop a stochastic nested fixed point (SNFP) estimator for random coefficients logit demand models that updates model parameters using stochastic gradients and performs demand inversion one market at a time. Relative to the conventional nested fixed point (NFP) estimator, SNFP substantially reduces memory requirements and computational cost, making estimation feasible in very large datasets. We establish the large-$T$ (number of markets) asymptotic properties of the estimator under regularity conditions. We also characterize the effect of sharing one block of simulation draws across markets and show how to correct for it. Monte Carlo simulations show that the SNFP estimator achieves statistical accuracy comparable to the NFP estimator, and in our benchmark a single online pass estimates a model with 100 million markets in about 5.5 hours. An empirical application using scanner data further demonstrates the practical advantages of SNFP for large-scale demand estimation.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.23998" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.23998" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

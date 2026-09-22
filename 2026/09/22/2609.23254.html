@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Price of Self-Calibration: Exact Evidence Budgets and Manufactured Blind Sets in Adaptive Monitoring</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="The Price of Self-Calibration: Exact Evidence Budgets and Manufactured Blind Sets in Adaptive Monitoring" />
+<meta name="author" content="Abdou-Raouf Atarmla" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Self-calibrating monitors adapt their threshold online to guarantee a prescribed long-run false-alarm rate under arbitrary drift. We compute the price of that guarantee, stating every law with its exact domain of validity. First, the guarantee is an accounting identity, insensitive to what the monitor is meant to detect. Two evidence identities make the cost exact for the online quantile tracker: a persistent step of height $\delta$ yields excess alarm mass within one alarm of $\delta/\eta$, and exactly $\delta/\eta$ pathwise when $\delta$ is a lattice multiple of the gain $\eta$; a ramp of slope $c$ yields a stationary excess rate of…" />
+<meta name="twitter:description" property="og:description" content="Self-calibrating monitors adapt their threshold online to guarantee a prescribed long-run false-alarm rate under arbitrary drift. We compute the price of that guarantee, stating every law with its exact domain of validity. First, the guarantee is an accounting identity, insensitive to what the monitor is meant to detect. Two evidence identities make the cost exact for the online quantile tracker: a persistent step of height $\delta$ yields excess alarm mass within one alarm of $\delta/\eta$, and exactly $\delta/\eta$ pathwise when $\delta$ is a lattice multiple of the gain $\eta$; a ramp of slope $c$ yields a stationary excess rate of…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23254.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23254.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-22T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-22T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="The Price of Self-Calibration: Exact Evidence Budgets and Manufactured Blind Sets in Adaptive Monitoring" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Abdou-Raouf Atarmla"},"dateModified":"2026-09-22T00:00:00+02:00","datePublished":"2026-09-22T00:00:00+02:00","description":"Self-calibrating monitors adapt their threshold online to guarantee a prescribed long-run false-alarm rate under arbitrary drift. We compute the price of that guarantee, stating every law with its exact domain of validity. First, the guarantee is an accounting identity, insensitive to what the monitor is meant to detect. Two evidence identities make the cost exact for the online quantile tracker: a persistent step of height $\\delta$ yields excess alarm mass within one alarm of $\\delta/\\eta$, and exactly $\\delta/\\eta$ pathwise when $\\delta$ is a lattice multiple of the gain $\\eta$; a ramp of slope $c$ yields a stationary excess rate of…","headline":"The Price of Self-Calibration: Exact Evidence Budgets and Manufactured Blind Sets in Adaptive Monitoring","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23254.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23254.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>The Price of Self-Calibration: Exact Evidence Budgets and Manufactured Blind Sets in Adaptive Monitoring</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Abdou-Raouf Atarmla
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      22 Sep 2026
+    </div>
+  </div><div class="summary-box">The paper derives exact evidence budgets and manufactured blind sets for adaptive monitoring.</div><h3>Abstract</h3>
+  <p>Self-calibrating monitors adapt their threshold online to guarantee a prescribed long-run false-alarm rate under arbitrary drift. We compute the price of that guarantee, stating every law with its exact domain of validity. First, the guarantee is an accounting identity, insensitive to what the monitor is meant to detect. Two evidence identities make the cost exact for the online quantile tracker: a persistent step of height $\delta$ yields excess alarm mass within one alarm of $\delta/\eta$, and exactly $\delta/\eta$ pathwise when $\delta$ is a lattice multiple of the gain $\eta$; a ramp of slope $c$ yields a stationary excess rate of exactly $c/\eta$, independent of accumulated size, up to a boundary $c=\eta(1-\alpha)$ coinciding with the alarm-rate cap. Second, the certificate’s own fluctuation obeys an exact law: the windowed alarm rate has standard deviation of order $1/L$, not the binomial $1/\sqrt{L}$, since the windowed mass telescopes to a difference of a tight internal state; the closed-form constant is validated with no fitted parameter. Detectors calibrated on the binomial scale are miscalibrated by $\sqrt{\eta\varphi(q_0)L}$, and correct calibration turns detection windows from quadratic to linear in the inverse fault speed. Third, any monitor required to tolerate a drift class $\mathcal{D}$ is blind, at any horizon and for any rule, to every fault in $\mathcal{D}-\mathcal{D}$; the proof is a deliberately elementary two-point argument and the contribution is the object it identifies: for speed-bounded classes the blind set is exactly the doubled-speed class, and the tracker absorbs a speed class fixed by its own gain, so that under a certification regime declaring absorbed drift normal, the monitor manufactures $\mathcal{D}$. An exact Gaussian projection bound, sharper than Pinsker and never vacuous, quantifies power outside it.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.23254" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.23254" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

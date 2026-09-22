@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>OSCAR: Order-aware Scoring and Calibration for AI Rankings</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="OSCAR: Order-aware Scoring and Calibration for AI Rankings" />
+<meta name="author" content="You Liu, Yue Liu, Quanchao Lu, Nick Shipilov" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Judge-specific sensitivity is useful for aggregating pairwise LLM evaluations, but its interpretation depends on which systematic presentation effects the ranking model includes. We introduce OSCAR, an order-aware framework for scoring and calibrating AI rankings, and study position as one such effect. In released judgments from 18 evaluators, the all-response A-minus-B score difference ranges from $-63.11$ to $98.31$ percentage points. Matching question text, response texts, candidate identities, and judge within the released table gives an overall difference of $24.22$ points (95% interval $[22.90,25.54]$), conditional on the released text mapping. A controlled calculation isolates the potential consequence: with true sensitivity fixed at…" />
+<meta name="twitter:description" property="og:description" content="Judge-specific sensitivity is useful for aggregating pairwise LLM evaluations, but its interpretation depends on which systematic presentation effects the ranking model includes. We introduce OSCAR, an order-aware framework for scoring and calibrating AI rankings, and study position as one such effect. In released judgments from 18 evaluators, the all-response A-minus-B score difference ranges from $-63.11$ to $98.31$ percentage points. Matching question text, response texts, candidate identities, and judge within the released table gives an overall difference of $24.22$ points (95% interval $[22.90,25.54]$), conditional on the released text mapping. A controlled calculation isolates the potential consequence: with true sensitivity fixed at…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.24128.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.24128.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-22T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-22T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="OSCAR: Order-aware Scoring and Calibration for AI Rankings" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"You Liu, Yue Liu, Quanchao Lu, Nick Shipilov"},"dateModified":"2026-09-22T00:00:00+02:00","datePublished":"2026-09-22T00:00:00+02:00","description":"Judge-specific sensitivity is useful for aggregating pairwise LLM evaluations, but its interpretation depends on which systematic presentation effects the ranking model includes. We introduce OSCAR, an order-aware framework for scoring and calibrating AI rankings, and study position as one such effect. In released judgments from 18 evaluators, the all-response A-minus-B score difference ranges from $-63.11$ to $98.31$ percentage points. Matching question text, response texts, candidate identities, and judge within the released table gives an overall difference of $24.22$ points (95% interval $[22.90,25.54]$), conditional on the released text mapping. A controlled calculation isolates the potential consequence: with true sensitivity fixed at…","headline":"OSCAR: Order-aware Scoring and Calibration for AI Rankings","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.24128.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.24128.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>OSCAR: Order-aware Scoring and Calibration for AI Rankings</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      You Liu, Yue Liu, Quanchao Lu, Nick Shipilov
+      <span class="sep">&middot;</span>
+      stat.ML, stat.AP
+      <span class="sep">&middot;</span>
+      22 Sep 2026
+    </div>
+  </div><div class="summary-box">Introduces OSCAR, an order-aware framework for scoring and calibrating AI rankings.</div><h3>Abstract</h3>
+  <p>Judge-specific sensitivity is useful for aggregating pairwise LLM evaluations, but its interpretation depends on which systematic presentation effects the ranking model includes. We introduce OSCAR, an order-aware framework for scoring and calibrating AI rankings, and study position as one such effect. In released judgments from 18 evaluators, the all-response A-minus-B score difference ranges from $-63.11$ to $98.31$ percentage points. Matching question text, response texts, candidate identities, and judge within the released table gives an overall difference of $24.22$ points (95% interval $[22.90,25.54]$), conditional on the released text mapping. A controlled calculation isolates the potential consequence: with true sensitivity fixed at one, omitting a position intercept of four reduces the population-optimal slope to $0.0771$. We extend sensitivity-based ranking with judge-specific position, length, and family terms, characterize local omission-induced displacement and an identification failure, and propagate prompt-cluster uncertainty to adjusted comparisons. Across four released datasets, position provides the largest stand-alone predictive improvement. Refitting bootstrap comparisons show more selective gains from the full model over position-only adjustment. In dependent binary simulations, adjusting both the mean and covariance yields 94.4–95.2% coverage; correcting either alone is insufficient. At $N=10{,}000$, OSCAR reduces mean neutral-target RMSE from $0.1158$ under the sensitivity-only model to $0.0237$.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.24128" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.24128" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

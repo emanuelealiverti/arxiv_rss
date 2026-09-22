@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>TASTE: A Designer-Annotated Multi-Dimensional Preference Dataset for AI-Generated Graphic Design</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="TASTE: A Designer-Annotated Multi-Dimensional Preference Dataset for AI-Generated Graphic Design" />
+<meta name="author" content="Haonan Zhu, Elad Hirsch, Alexandria Minetti, Allison Nulty, Ben Huffman, Purvanshi Mehta" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Text-to-image models now generate graphic design at production scale, yet their supervision still comes primarily from photo-style preference datasets with a single overall verdict per comparison. Designers evaluate designs along several distinct axes (e.g., typography, layout, color harmony) that a single preference label collapses. We release \emph{TASTE} \textit{(Typography, Aesthetics, Spatial, Tone, Etc.)}, a multi-dimensional preference dataset in which two disjoint cohorts of five professional designers each ranked outputs from four current text-to-image models across nine criteria along with per-image hallucination flags. We pair the dataset with two contributions. First, a criterion-agnostic signal-validation framework based on Kendall’s $\tau$, majority-vote probability, and…" />
+<meta name="twitter:description" property="og:description" content="Text-to-image models now generate graphic design at production scale, yet their supervision still comes primarily from photo-style preference datasets with a single overall verdict per comparison. Designers evaluate designs along several distinct axes (e.g., typography, layout, color harmony) that a single preference label collapses. We release \emph{TASTE} \textit{(Typography, Aesthetics, Spatial, Tone, Etc.)}, a multi-dimensional preference dataset in which two disjoint cohorts of five professional designers each ranked outputs from four current text-to-image models across nine criteria along with per-image hallucination flags. We pair the dataset with two contributions. First, a criterion-agnostic signal-validation framework based on Kendall’s $\tau$, majority-vote probability, and…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2605.20731.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2605.20731.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-22T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-22T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="TASTE: A Designer-Annotated Multi-Dimensional Preference Dataset for AI-Generated Graphic Design" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Haonan Zhu, Elad Hirsch, Alexandria Minetti, Allison Nulty, Ben Huffman, Purvanshi Mehta"},"dateModified":"2026-09-22T00:00:00+02:00","datePublished":"2026-09-22T00:00:00+02:00","description":"Text-to-image models now generate graphic design at production scale, yet their supervision still comes primarily from photo-style preference datasets with a single overall verdict per comparison. Designers evaluate designs along several distinct axes (e.g., typography, layout, color harmony) that a single preference label collapses. We release \\emph{TASTE} \\textit{(Typography, Aesthetics, Spatial, Tone, Etc.)}, a multi-dimensional preference dataset in which two disjoint cohorts of five professional designers each ranked outputs from four current text-to-image models across nine criteria along with per-image hallucination flags. We pair the dataset with two contributions. First, a criterion-agnostic signal-validation framework based on Kendall’s $\\tau$, majority-vote probability, and…","headline":"TASTE: A Designer-Annotated Multi-Dimensional Preference Dataset for AI-Generated Graphic Design","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2605.20731.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2605.20731.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>TASTE: A Designer-Annotated Multi-Dimensional Preference Dataset for AI-Generated Graphic Design</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Haonan Zhu, Elad Hirsch, Alexandria Minetti, Allison Nulty, Ben Huffman, Purvanshi Mehta
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      22 Sep 2026
+    </div>
+  </div><div class="summary-box">A multi-dimensional preference dataset for AI-generated graphic design is released, along with a signal-validation framework and benchmarking results.</div><h3>Abstract</h3>
+  <p>Text-to-image models now generate graphic design at production scale, yet their supervision still comes primarily from photo-style preference datasets with a single overall verdict per comparison. Designers evaluate designs along several distinct axes (e.g., typography, layout, color harmony) that a single preference label collapses. We release \emph{TASTE} \textit{(Typography, Aesthetics, Spatial, Tone, Etc.)}, a multi-dimensional preference dataset in which two disjoint cohorts of five professional designers each ranked outputs from four current text-to-image models across nine criteria along with per-image hallucination flags. We pair the dataset with two contributions. First, a criterion-agnostic signal-validation framework based on Kendall’s $\tau$, majority-vote probability, and Condorcet cycles against exact iid-uniform nulls; the analysis reveals significant but moderate designer agreement, with every TASTE criterion rejecting the random-rater null. Second, we benchmark preference models on TASTE and find that off-the-shelf VLM judges and dedicated T2I scorers fail to reach majority agreement with the designer panel, while a small MLP head trained directly on TASTE substantially narrows the gap to the single-rater ceiling, setting a baseline for future TASTE-trained preference models.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.20731" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.20731" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>NIRVAR: Network Informed Restricted Vector Autoregression</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="NIRVAR: Network Informed Restricted Vector Autoregression" />
+<meta name="author" content="Brendan Martin, Francesco Sanna Passino, Mihai Cucuringu, Alessandra Luati" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="High-dimensional panels of time series often arise in finance and macroeconomics, where co-movements within groups of panel components occur. Extracting these groupings from the data provides a coarse-grained description of the complex system in question and can inform subsequent prediction tasks. We develop a novel methodology to model such a panel as a restricted vector autoregressive process, where the coefficient matrix is the weighted adjacency matrix of a stochastic block model. This network time series model, which we call the Network Informed Restricted Vector Autoregression (NIRVAR) model, yields a coefficient matrix that has a sparse block-diagonal structure. We propose an…" />
+<meta name="twitter:description" property="og:description" content="High-dimensional panels of time series often arise in finance and macroeconomics, where co-movements within groups of panel components occur. Extracting these groupings from the data provides a coarse-grained description of the complex system in question and can inform subsequent prediction tasks. We develop a novel methodology to model such a panel as a restricted vector autoregressive process, where the coefficient matrix is the weighted adjacency matrix of a stochastic block model. This network time series model, which we call the Network Informed Restricted Vector Autoregression (NIRVAR) model, yields a coefficient matrix that has a sparse block-diagonal structure. We propose an…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2407.13314.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2407.13314.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-22T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-22T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="NIRVAR: Network Informed Restricted Vector Autoregression" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Brendan Martin, Francesco Sanna Passino, Mihai Cucuringu, Alessandra Luati"},"dateModified":"2026-09-22T00:00:00+02:00","datePublished":"2026-09-22T00:00:00+02:00","description":"High-dimensional panels of time series often arise in finance and macroeconomics, where co-movements within groups of panel components occur. Extracting these groupings from the data provides a coarse-grained description of the complex system in question and can inform subsequent prediction tasks. We develop a novel methodology to model such a panel as a restricted vector autoregressive process, where the coefficient matrix is the weighted adjacency matrix of a stochastic block model. This network time series model, which we call the Network Informed Restricted Vector Autoregression (NIRVAR) model, yields a coefficient matrix that has a sparse block-diagonal structure. We propose an…","headline":"NIRVAR: Network Informed Restricted Vector Autoregression","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2407.13314.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2407.13314.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>NIRVAR: Network Informed Restricted Vector Autoregression</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Brendan Martin, Francesco Sanna Passino, Mihai Cucuringu, Alessandra Luati
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      22 Sep 2026
+    </div>
+  </div><div class="summary-box">Develops a network-informed restricted vector autoregression model for high-dimensional time series panels.</div><h3>Abstract</h3>
+  <p>High-dimensional panels of time series often arise in finance and macroeconomics, where co-movements within groups of panel components occur. Extracting these groupings from the data provides a coarse-grained description of the complex system in question and can inform subsequent prediction tasks. We develop a novel methodology to model such a panel as a restricted vector autoregressive process, where the coefficient matrix is the weighted adjacency matrix of a stochastic block model. This network time series model, which we call the Network Informed Restricted Vector Autoregression (NIRVAR) model, yields a coefficient matrix that has a sparse block-diagonal structure. We propose an estimation procedure that embeds each panel component in a low-dimensional latent space and clusters the embedded points to recover the blocks of the coefficient matrix. Crucially, the method allows for network-based time series modelling when the underlying network is unobserved. We derive the bias, consistency and asymptotic normality of the NIRVAR estimator. Simulation studies suggest that the NIRVAR estimated embedded points are Gaussian distributed around the ground truth latent positions. On three applications to finance, macroeconomics, and transportation systems, NIRVAR outperforms competing models in terms of prediction and provides interpretable results regarding group recovery.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2407.13314" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2407.13314" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

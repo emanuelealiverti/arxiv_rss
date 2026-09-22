@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient estimation of weighted treatment effects under two-phase sampling</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Efficient estimation of weighted treatment effects under two-phase sampling" />
+<meta name="author" content="Kazuharu Harada, Masataka Taguri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Two-phase sampling offers a practical way to collect costly confounders only in a subsample while retaining inexpensive information for a larger cohort. In observational causal studies, however, phase-2 selection can distort estimation of population causal effects if the sampling mechanism is ignored, and available phase-1 information may also be exploited to improve efficiency. Yet efficiency theory for causal estimands under such designs remains limited, particularly beyond the average treatment effect. In this paper, we derive the semiparametric efficiency bound for a class of propensity-score-weighted average treatment effects, which includes the average treatment effect, effects among treated and untreated populations, and…" />
+<meta name="twitter:description" property="og:description" content="Two-phase sampling offers a practical way to collect costly confounders only in a subsample while retaining inexpensive information for a larger cohort. In observational causal studies, however, phase-2 selection can distort estimation of population causal effects if the sampling mechanism is ignored, and available phase-1 information may also be exploited to improve efficiency. Yet efficiency theory for causal estimands under such designs remains limited, particularly beyond the average treatment effect. In this paper, we derive the semiparametric efficiency bound for a class of propensity-score-weighted average treatment effects, which includes the average treatment effect, effects among treated and untreated populations, and…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2511.06808.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2511.06808.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-22T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-22T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Efficient estimation of weighted treatment effects under two-phase sampling" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kazuharu Harada, Masataka Taguri"},"dateModified":"2026-09-22T00:00:00+02:00","datePublished":"2026-09-22T00:00:00+02:00","description":"Two-phase sampling offers a practical way to collect costly confounders only in a subsample while retaining inexpensive information for a larger cohort. In observational causal studies, however, phase-2 selection can distort estimation of population causal effects if the sampling mechanism is ignored, and available phase-1 information may also be exploited to improve efficiency. Yet efficiency theory for causal estimands under such designs remains limited, particularly beyond the average treatment effect. In this paper, we derive the semiparametric efficiency bound for a class of propensity-score-weighted average treatment effects, which includes the average treatment effect, effects among treated and untreated populations, and…","headline":"Efficient estimation of weighted treatment effects under two-phase sampling","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2511.06808.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2511.06808.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Efficient estimation of weighted treatment effects under two-phase sampling</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Kazuharu Harada, Masataka Taguri
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      22 Sep 2026
+    </div>
+  </div><div class="summary-box">Derives semiparametric efficiency bound for weighted treatment effects under two-phase sampling.</div><h3>Abstract</h3>
+  <p>Two-phase sampling offers a practical way to collect costly confounders only in a subsample while retaining inexpensive information for a larger cohort. In observational causal studies, however, phase-2 selection can distort estimation of population causal effects if the sampling mechanism is ignored, and available phase-1 information may also be exploited to improve efficiency. Yet efficiency theory for causal estimands under such designs remains limited, particularly beyond the average treatment effect. In this paper, we derive the semiparametric efficiency bound for a class of propensity-score-weighted average treatment effects, which includes the average treatment effect, effects among treated and untreated populations, and the overlap effect, under two-phase sampling. In addition to straightforward weighting estimators based on the known sampling probabilities, we propose an enriched doubly robust estimator that attains the efficiency bound when all nuisance functions are consistently estimated. In particular, under outcome-dependent sampling, substantial efficiency gains can arise in some settings by appropriately incorporating phase-1 information. We further conduct extensive simulation studies, varying the choice of phase-1 variables and sampling schemes, to characterize when and to what extent leveraging phase-1 information leads to efficiency gains.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2511.06808" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2511.06808" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

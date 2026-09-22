@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sparse Regression Distilled from a Single Robust Fit</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Sparse Regression Distilled from a Single Robust Fit" />
+<meta name="author" content="Wooyoung Shin, Seunghwan Park" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Robust linear fits can resist response contamination yet remain too dense or unstable for useful global explanations. We propose penalized distillation, which fits a smoothly clipped absolute deviation (SCAD) estimator to a robust initial estimator’s empirical fitted surface along a safeguarded coordinate-descent path and evaluates candidate states separately for fidelity, parsimony, perturbation stability, and held-out prediction. The new results attach to the states the algorithm actually computes. Conditional on a fixed uncontaminated design, deterministic bounds transfer response-replacement boundedness from the initial fit to every retained path state. Turning to fixed dimension, we characterize the oracle-support branch by its empirical-Gram projection…" />
+<meta name="twitter:description" property="og:description" content="Robust linear fits can resist response contamination yet remain too dense or unstable for useful global explanations. We propose penalized distillation, which fits a smoothly clipped absolute deviation (SCAD) estimator to a robust initial estimator’s empirical fitted surface along a safeguarded coordinate-descent path and evaluates candidate states separately for fidelity, parsimony, perturbation stability, and held-out prediction. The new results attach to the states the algorithm actually computes. Conditional on a fixed uncontaminated design, deterministic bounds transfer response-replacement boundedness from the initial fit to every retained path state. Turning to fixed dimension, we characterize the oracle-support branch by its empirical-Gram projection…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23937.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23937.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-22T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-22T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sparse Regression Distilled from a Single Robust Fit" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wooyoung Shin, Seunghwan Park"},"dateModified":"2026-09-22T00:00:00+02:00","datePublished":"2026-09-22T00:00:00+02:00","description":"Robust linear fits can resist response contamination yet remain too dense or unstable for useful global explanations. We propose penalized distillation, which fits a smoothly clipped absolute deviation (SCAD) estimator to a robust initial estimator’s empirical fitted surface along a safeguarded coordinate-descent path and evaluates candidate states separately for fidelity, parsimony, perturbation stability, and held-out prediction. The new results attach to the states the algorithm actually computes. Conditional on a fixed uncontaminated design, deterministic bounds transfer response-replacement boundedness from the initial fit to every retained path state. Turning to fixed dimension, we characterize the oracle-support branch by its empirical-Gram projection…","headline":"Sparse Regression Distilled from a Single Robust Fit","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23937.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2609.23937.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Sparse Regression Distilled from a Single Robust Fit</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Wooyoung Shin, Seunghwan Park
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME
+      <span class="sep">&middot;</span>
+      22 Sep 2026
+    </div>
+  </div><div class="summary-box">A method is proposed to distill sparse regression models from robust initial estimators.</div><h3>Abstract</h3>
+  <p>Robust linear fits can resist response contamination yet remain too dense or unstable for useful global explanations. We propose penalized distillation, which fits a smoothly clipped absolute deviation (SCAD) estimator to a robust initial estimator’s empirical fitted surface along a safeguarded coordinate-descent path and evaluates candidate states separately for fidelity, parsimony, perturbation stability, and held-out prediction. The new results attach to the states the algorithm actually computes. Conditional on a fixed uncontaminated design, deterministic bounds transfer response-replacement boundedness from the initial fit to every retained path state. Turning to fixed dimension, we characterize the oracle-support branch by its empirical-Gram projection and influence function, give conditions for covariance-weighted least-squares approximation equivalence, and establish a path-conditional generalized information criterion. By contrast, at large dimension-to-sample ratios the full-coordinate robust fit collapses without warning, and screening restores the construction. Under a sure-screening framework, the robustness bound and the support and selection guarantees transfer to the screened fit. Simulations separate robustness transfer from support recovery, efficiency, and computation across the dimension-to-sample ratio, with p up to 240, and the signal density, which isolates what the sparse stage adds once the screen over-selects. In a duplicate-grouped superconductivity study, the distilled estimator remains predictively stable under prespecified training-response shifts but retains 66.8–68.8 of 81 slopes. Stronger sparsification reduces the model to 12.6–14.0 slopes only at visible fidelity and prediction cost. Distillation therefore preserves predictive stability on these data without substantiating a compact coordinate-level explanation.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.23937" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.23937" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

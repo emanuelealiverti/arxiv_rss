@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Evidence thresholds of collapsed structured block models</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Evidence thresholds of collapsed structured block models" />
+<meta name="author" content="Marios Papamichalis, Regina Ruane" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A stochastic block model explains a network by splitting its nodes into communities and a matrix of tie probabilities between them. Collapsing those probabilities out scores each split by one number, its marginal likelihood, and every decision the model takes, how many communities, whether a weak one survives, what generates the ties inside it, is a comparison of two such numbers. The comparisons fail in known ways: weak structure is dropped, small communities are merged, a group of hubs is returned in place of the real groups. Each failure has a threshold, and the thresholds have not been computed. We…" />
+<meta name="twitter:description" property="og:description" content="A stochastic block model explains a network by splitting its nodes into communities and a matrix of tie probabilities between them. Collapsing those probabilities out scores each split by one number, its marginal likelihood, and every decision the model takes, how many communities, whether a weak one survives, what generates the ties inside it, is a comparison of two such numbers. The comparisons fail in known ways: weak structure is dropped, small communities are merged, a group of hubs is returned in place of the real groups. Each failure has a threshold, and the thresholds have not been computed. We…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2601.02828.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2601.02828.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-22T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-22T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Evidence thresholds of collapsed structured block models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Marios Papamichalis, Regina Ruane"},"dateModified":"2026-09-22T00:00:00+02:00","datePublished":"2026-09-22T00:00:00+02:00","description":"A stochastic block model explains a network by splitting its nodes into communities and a matrix of tie probabilities between them. Collapsing those probabilities out scores each split by one number, its marginal likelihood, and every decision the model takes, how many communities, whether a weak one survives, what generates the ties inside it, is a comparison of two such numbers. The comparisons fail in known ways: weak structure is dropped, small communities are merged, a group of hubs is returned in place of the real groups. Each failure has a threshold, and the thresholds have not been computed. We…","headline":"Evidence thresholds of collapsed structured block models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2601.02828.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/22/2601.02828.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Evidence thresholds of collapsed structured block models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Marios Papamichalis, Regina Ruane
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      22 Sep 2026
+    </div>
+  </div><div class="summary-box">The paper computes evidence thresholds for collapsed structured block models in network data.</div><h3>Abstract</h3>
+  <p>A stochastic block model explains a network by splitting its nodes into communities and a matrix of tie probabilities between them. Collapsing those probabilities out scores each split by one number, its marginal likelihood, and every decision the model takes, how many communities, whether a weak one survives, what generates the ties inside it, is a comparison of two such numbers. The comparisons fail in known ways: weak structure is dropped, small communities are merged, a group of hubs is returned in place of the real groups. Each failure has a threshold, and the thresholds have not been computed. We compute them. We prove that the best single partition keeps a planted structure only above the first-moment bound, which sits above the Kesten-Stigum threshold for up to ten communities, while the evidence summed over all partitions switches at Kesten-Stigum itself: between the two, the posterior favours structure that every partition a sampler can report rejects. We prove three further thresholds, one for merging small communities, one for the density at which the representation alone decides, one for the degree prior that cuts a community along its degrees. The empirical finding confirms the theory: on planted partitions and on thirteen labelled networks, from the karate club to citation and co-purchase networks of up to 19,717 nodes, each threshold falls where it is predicted, against likelihood, spectral, penalised and nonparametric alternatives.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2601.02828" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2601.02828" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
