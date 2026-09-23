@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Exact Conditional Confidence Intervals for Cramér's V: Near-Nominal and Tight Where the Guaranteed Interval Is Wide and the Software Interval Does Not Cover</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Exact Conditional Confidence Intervals for Cramér’s V: Near-Nominal and Tight Where the Guaranteed Interval Is Wide and the Software Interval Does Not Cover" />
+<meta name="author" content="William J. Dwyer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cram&#39;er’s V, the effect size reported beside almost every chi-square test, is almost never accompanied by a confidence interval, because the interval is a hard nuisance-parameter problem: infinitely many tables share one effect-size value. The two intervals an analyst can reach for are unsatisfactory. The projection of a joint confidence region onto the effect size is guaranteed for every table but wide, over-covering at essentially 1.000 on larger tables; the noncentral inversion the software prints, and the bootstrap, are narrow but do not cover (median coverage 0.31 on this study’s grid). This paper supplies an interval that is both valid…" />
+<meta name="twitter:description" property="og:description" content="Cram&#39;er’s V, the effect size reported beside almost every chi-square test, is almost never accompanied by a confidence interval, because the interval is a hard nuisance-parameter problem: infinitely many tables share one effect-size value. The two intervals an analyst can reach for are unsatisfactory. The projection of a joint confidence region onto the effect size is guaranteed for every table but wide, over-covering at essentially 1.000 on larger tables; the noncentral inversion the software prints, and the bootstrap, are narrow but do not cover (median coverage 0.31 on this study’s grid). This paper supplies an interval that is both valid…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/23/2609.26163.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/23/2609.26163.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-23T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-23T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Exact Conditional Confidence Intervals for Cramér’s V: Near-Nominal and Tight Where the Guaranteed Interval Is Wide and the Software Interval Does Not Cover" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"William J. Dwyer"},"dateModified":"2026-09-23T00:00:00+02:00","datePublished":"2026-09-23T00:00:00+02:00","description":"Cram&#39;er’s V, the effect size reported beside almost every chi-square test, is almost never accompanied by a confidence interval, because the interval is a hard nuisance-parameter problem: infinitely many tables share one effect-size value. The two intervals an analyst can reach for are unsatisfactory. The projection of a joint confidence region onto the effect size is guaranteed for every table but wide, over-covering at essentially 1.000 on larger tables; the noncentral inversion the software prints, and the bootstrap, are narrow but do not cover (median coverage 0.31 on this study’s grid). This paper supplies an interval that is both valid…","headline":"Exact Conditional Confidence Intervals for Cramér’s V: Near-Nominal and Tight Where the Guaranteed Interval Is Wide and the Software Interval Does Not Cover","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/23/2609.26163.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/23/2609.26163.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Exact Conditional Confidence Intervals for Cramér's V: Near-Nominal and Tight Where the Guaranteed Interval Is Wide and the Software Interval Does Not Cover</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      William J. Dwyer
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      23 Sep 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Cram'er’s V, the effect size reported beside almost every chi-square test, is almost never accompanied by a confidence interval, because the interval is a hard nuisance-parameter problem: infinitely many tables share one effect-size value. The two intervals an analyst can reach for are unsatisfactory. The projection of a joint confidence region onto the effect size is guaranteed for every table but wide, over-covering at essentially 1.000 on larger tables; the noncentral inversion the software prints, and the bootstrap, are narrow but do not cover (median coverage 0.31 on this study’s grid). This paper supplies an interval that is both valid and informative. Conditioning on the observed margins makes the exact conditional distribution of the Pearson statistic under a non-null association computable with no asymptotics and no Monte Carlo; inverting it yields a near-nominal confidence interval for Cram'er’s V that is a third to a half the width of the projection, the advantage growing with table size. The one price, stated plainly, is a change of estimand to the effect size at the observed margins; the mid-p default undercovers small effects, where a conservative variant or the projection remains the fallback.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.26163" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.26163" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
