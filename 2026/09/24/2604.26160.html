@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fitting Large Nonlinear Mixed Effects Models Using Variational Expectation Maximization</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Fitting Large Nonlinear Mixed Effects Models Using Variational Expectation Maximization" />
+<meta name="author" content="Mohamed Tarek, Pedro Afonso" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Nonlinear Mixed Effects (NLME) models are widely used in pharmacometrics and related fields to analyze hierarchical and longitudinal data. However, as the number of parameters and random effects increases, traditional methods for maximizing the marginal likelihood become computationally expensive. This paper explores the Variational Expectation Maximization (VEM) algorithm, a scalable alternative for fitting NLME models. Originally introduced in the context of probabilistic graphical models and later popularized through variational autoencoders, VEM has not been extensively applied to NLME modeling. By leveraging flexible variational families and reverse-mode automatic differentiation, VEM can efficiently maximize the marginal likelihood, scaling to NLME models with…" />
+<meta name="twitter:description" property="og:description" content="Nonlinear Mixed Effects (NLME) models are widely used in pharmacometrics and related fields to analyze hierarchical and longitudinal data. However, as the number of parameters and random effects increases, traditional methods for maximizing the marginal likelihood become computationally expensive. This paper explores the Variational Expectation Maximization (VEM) algorithm, a scalable alternative for fitting NLME models. Originally introduced in the context of probabilistic graphical models and later popularized through variational autoencoders, VEM has not been extensively applied to NLME modeling. By leveraging flexible variational families and reverse-mode automatic differentiation, VEM can efficiently maximize the marginal likelihood, scaling to NLME models with…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2604.26160.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2604.26160.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-24T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-24T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Fitting Large Nonlinear Mixed Effects Models Using Variational Expectation Maximization" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mohamed Tarek, Pedro Afonso"},"dateModified":"2026-09-24T00:00:00+02:00","datePublished":"2026-09-24T00:00:00+02:00","description":"Nonlinear Mixed Effects (NLME) models are widely used in pharmacometrics and related fields to analyze hierarchical and longitudinal data. However, as the number of parameters and random effects increases, traditional methods for maximizing the marginal likelihood become computationally expensive. This paper explores the Variational Expectation Maximization (VEM) algorithm, a scalable alternative for fitting NLME models. Originally introduced in the context of probabilistic graphical models and later popularized through variational autoencoders, VEM has not been extensively applied to NLME modeling. By leveraging flexible variational families and reverse-mode automatic differentiation, VEM can efficiently maximize the marginal likelihood, scaling to NLME models with…","headline":"Fitting Large Nonlinear Mixed Effects Models Using Variational Expectation Maximization","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2604.26160.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2604.26160.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Fitting Large Nonlinear Mixed Effects Models Using Variational Expectation Maximization</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Mohamed Tarek, Pedro Afonso
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      24 Sep 2026
+    </div>
+  </div><div class="summary-box">Fits large nonlinear mixed effects models using variational expectation maximization algorithm.</div><h3>Abstract</h3>
+  <p>Nonlinear Mixed Effects (NLME) models are widely used in pharmacometrics and related fields to analyze hierarchical and longitudinal data. However, as the number of parameters and random effects increases, traditional methods for maximizing the marginal likelihood become computationally expensive. This paper explores the Variational Expectation Maximization (VEM) algorithm, a scalable alternative for fitting NLME models. Originally introduced in the context of probabilistic graphical models and later popularized through variational autoencoders, VEM has not been extensively applied to NLME modeling. By leveraging flexible variational families and reverse-mode automatic differentiation, VEM can efficiently maximize the marginal likelihood, scaling to NLME models with over 15,000 population parameters. This work provides a detailed description of VEM, compares it to other NLME fitting algorithms, and highlights its scalability through computational experiments. Using the Pumas statistical software, we fit two test models: 1) a standard warfarin model, and 2) an unnecessarily over-parameterized DeepNLME Friberg model with 15,410 population parameters and 16 random effects. The warfarin model was fitted to completion to demonstrate the correctness of VEM, while the DeepNLME Friberg model instead demonstrates VEM’s scalability on a toy but large model. VEM improves the log likelihood steadily over hundreds of iterations at a practical per-iteration cost, while FOCE fails to complete even one iteration within a day. The model is deliberately over-parameterized for its small dataset and over-fits it, so what this experiment establishes is that VEM optimizes the objective of a model of this size at a practical cost. Applying VEM to large models that are genuinely useful is left to future work.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2604.26160" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2604.26160" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

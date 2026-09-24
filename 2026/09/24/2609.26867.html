@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Additive Nonparametric Regression with Spatial and Network Objects</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Additive Nonparametric Regression with Spatial and Network Objects" />
+<meta name="author" content="Rajarshi Guhaniyogi, Pritam Dey, Krishnendu Chandra, Aaron Scheffler, Bani K. Mallick" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This article is motivated by an imaging application from the Adolescent Brain Cognitive Development (ABCD) study, aiming to predict task-based brain activation maps from t-fMRI using cortical metrics from structural MRI (s-MRI) and brain connectivity data from resting-state fMRI (rs-fMRI). Hierarchical Bayesian modeling is well-suited for integrating diverse imaging data and quantifying prediction uncertainty. However, progress in this field is limited due to challenges in designing joint priors that capture the structures and interconnections between different imaging modalities, along with computational complexity and lack of theoretical assurances. To address these challenges, the article introduces a novel regression framework that treats…" />
+<meta name="twitter:description" property="og:description" content="This article is motivated by an imaging application from the Adolescent Brain Cognitive Development (ABCD) study, aiming to predict task-based brain activation maps from t-fMRI using cortical metrics from structural MRI (s-MRI) and brain connectivity data from resting-state fMRI (rs-fMRI). Hierarchical Bayesian modeling is well-suited for integrating diverse imaging data and quantifying prediction uncertainty. However, progress in this field is limited due to challenges in designing joint priors that capture the structures and interconnections between different imaging modalities, along with computational complexity and lack of theoretical assurances. To address these challenges, the article introduces a novel regression framework that treats…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.26867.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.26867.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-24T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-24T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Additive Nonparametric Regression with Spatial and Network Objects" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rajarshi Guhaniyogi, Pritam Dey, Krishnendu Chandra, Aaron Scheffler, Bani K. Mallick"},"dateModified":"2026-09-24T00:00:00+02:00","datePublished":"2026-09-24T00:00:00+02:00","description":"This article is motivated by an imaging application from the Adolescent Brain Cognitive Development (ABCD) study, aiming to predict task-based brain activation maps from t-fMRI using cortical metrics from structural MRI (s-MRI) and brain connectivity data from resting-state fMRI (rs-fMRI). Hierarchical Bayesian modeling is well-suited for integrating diverse imaging data and quantifying prediction uncertainty. However, progress in this field is limited due to challenges in designing joint priors that capture the structures and interconnections between different imaging modalities, along with computational complexity and lack of theoretical assurances. To address these challenges, the article introduces a novel regression framework that treats…","headline":"Additive Nonparametric Regression with Spatial and Network Objects","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.26867.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.26867.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Additive Nonparametric Regression with Spatial and Network Objects</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Rajarshi Guhaniyogi, Pritam Dey, Krishnendu Chandra, Aaron Scheffler, Bani K. Mallick
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP, stat.ML
+      <span class="sep">&middot;</span>
+      24 Sep 2026
+    </div>
+  </div><div class="summary-box">A novel regression framework for predicting brain activation maps using imaging data and network connectivity.</div><h3>Abstract</h3>
+  <p>This article is motivated by an imaging application from the Adolescent Brain Cognitive Development (ABCD) study, aiming to predict task-based brain activation maps from t-fMRI using cortical metrics from structural MRI (s-MRI) and brain connectivity data from resting-state fMRI (rs-fMRI). Hierarchical Bayesian modeling is well-suited for integrating diverse imaging data and quantifying prediction uncertainty. However, progress in this field is limited due to challenges in designing joint priors that capture the structures and interconnections between different imaging modalities, along with computational complexity and lack of theoretical assurances. To address these challenges, the article introduces a novel regression framework that treats t-fMRI and s-MRI images as functional data, incorporating additive non-linear effects of both network and functional predictors on the functional response. Specifically, we employ Gaussian process (GP) priors on coefficients related to the functional predictors to capture their intricate functional dependencies with the response. Furthermore, a GP prior is assigned to encapsulate the non-linear nodal effects of the network predictor on the response function. The method is supported by theoretical results on predictive accuracy for the functional response, and is empirically validated through simulation studies and analysis of multi-modal neuroimaging data from the ABCD study.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.26867" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.26867" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

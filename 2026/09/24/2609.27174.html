@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Elastic Multi-Fidelity Bayesian Model Calibration</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Elastic Multi-Fidelity Bayesian Model Calibration" />
+<meta name="author" content="J. Derek Tucker, Gavin Collins, Gabriel Huerta, Justin L. Brown" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian calibration of functional-output computer models typically relies on dimension reduction techniques, such as functional principal component analysis, which assume that differences among simulator realizations arise only from amplitude variation. When simulator output also exhibits phase variation such as shifts in the timing or location of key features, this assumption is violated. Recent work has addressed this issue through elastic calibration, which aligns functional computer model realizations with observed experimental data prior to dimension reduction. Separately, multi-fidelity methods reduce the cost of calibration by supplementing a small number of expensive high-fidelity simulator runs with a larger ensemble of cheap low-fidelity…" />
+<meta name="twitter:description" property="og:description" content="Bayesian calibration of functional-output computer models typically relies on dimension reduction techniques, such as functional principal component analysis, which assume that differences among simulator realizations arise only from amplitude variation. When simulator output also exhibits phase variation such as shifts in the timing or location of key features, this assumption is violated. Recent work has addressed this issue through elastic calibration, which aligns functional computer model realizations with observed experimental data prior to dimension reduction. Separately, multi-fidelity methods reduce the cost of calibration by supplementing a small number of expensive high-fidelity simulator runs with a larger ensemble of cheap low-fidelity…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.27174.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.27174.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-24T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-24T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Elastic Multi-Fidelity Bayesian Model Calibration" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"J. Derek Tucker, Gavin Collins, Gabriel Huerta, Justin L. Brown"},"dateModified":"2026-09-24T00:00:00+02:00","datePublished":"2026-09-24T00:00:00+02:00","description":"Bayesian calibration of functional-output computer models typically relies on dimension reduction techniques, such as functional principal component analysis, which assume that differences among simulator realizations arise only from amplitude variation. When simulator output also exhibits phase variation such as shifts in the timing or location of key features, this assumption is violated. Recent work has addressed this issue through elastic calibration, which aligns functional computer model realizations with observed experimental data prior to dimension reduction. Separately, multi-fidelity methods reduce the cost of calibration by supplementing a small number of expensive high-fidelity simulator runs with a larger ensemble of cheap low-fidelity…","headline":"Elastic Multi-Fidelity Bayesian Model Calibration","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.27174.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.27174.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Elastic Multi-Fidelity Bayesian Model Calibration</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      J. Derek Tucker, Gavin Collins, Gabriel Huerta, Justin L. Brown
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      24 Sep 2026
+    </div>
+  </div><div class="summary-box">Combines elastic calibration and multi-fidelity methods for Bayesian model calibration of functional-output computer models.</div><h3>Abstract</h3>
+  <p>Bayesian calibration of functional-output computer models typically relies on dimension reduction techniques, such as functional principal component analysis, which assume that differences among simulator realizations arise only from amplitude variation. When simulator output also exhibits phase variation such as shifts in the timing or location of key features, this assumption is violated. Recent work has addressed this issue through elastic calibration, which aligns functional computer model realizations with observed experimental data prior to dimension reduction. Separately, multi-fidelity methods reduce the cost of calibration by supplementing a small number of expensive high-fidelity simulator runs with a larger ensemble of cheap low-fidelity runs. This is typically done through either a mapping strategy, which corrects low-fidelity predictions toward high-fidelity output, or a fusion strategy, which builds a shared basis across both fidelities. This paper combines these two lines of work, introducing elastic multi-fidelity Bayesian model calibration, which aligns high- and low-fidelity functional output to a common reference before applying multi-fidelity mapping or fusion. On a synthetic two-dimensional calibration problem and a dynamic material properties equation-of-state problem, both elastic multi-fidelity strategies match or improve on the leave-one-out predictive accuracy of a mono-fidelity elastic emulator, with the fusion approach achieving the lowest error. Both strategies also produce tighter calibrated posteriors than the mono-fidelity baseline, with the fusion approach providing the best coverage and parameter estimates closest to the true values.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.27174" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.27174" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Long-Term Tail Modeling in Survival Analysis via Extended Generalized Pareto Distributions</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Long-Term Tail Modeling in Survival Analysis via Extended Generalized Pareto Distributions" />
+<meta name="author" content="Eduardo Janotti, Lígia Henriques-Rodrigues, Antonio Carlos Pedroso de Lima" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose a class of extended generalized Pareto models for right-censored survival data, with particular emphasis on tail inference and long-term extrapolation. Our framework integrates extreme value theory and survival analysis, combining a generalized Pareto distribution with a flexible perturbation distribution on the unit interval. We consider three perturbation specifications: a parametric Beta model, a Bernstein polynomial estimator, and a histogram-based estimator. To facilitate direct comparison, all three models are fitted using a unified iterative procedure adapted to right censoring through Kaplan-Meier-based pseudo-observations. A Monte Carlo study evaluates finite-sample performance across different tail indices, censoring levels, sample sizes, and model…" />
+<meta name="twitter:description" property="og:description" content="We propose a class of extended generalized Pareto models for right-censored survival data, with particular emphasis on tail inference and long-term extrapolation. Our framework integrates extreme value theory and survival analysis, combining a generalized Pareto distribution with a flexible perturbation distribution on the unit interval. We consider three perturbation specifications: a parametric Beta model, a Bernstein polynomial estimator, and a histogram-based estimator. To facilitate direct comparison, all three models are fitted using a unified iterative procedure adapted to right censoring through Kaplan-Meier-based pseudo-observations. A Monte Carlo study evaluates finite-sample performance across different tail indices, censoring levels, sample sizes, and model…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.28321.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.28321.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-24T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-24T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Long-Term Tail Modeling in Survival Analysis via Extended Generalized Pareto Distributions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eduardo Janotti, Lígia Henriques-Rodrigues, Antonio Carlos Pedroso de Lima"},"dateModified":"2026-09-24T00:00:00+02:00","datePublished":"2026-09-24T00:00:00+02:00","description":"We propose a class of extended generalized Pareto models for right-censored survival data, with particular emphasis on tail inference and long-term extrapolation. Our framework integrates extreme value theory and survival analysis, combining a generalized Pareto distribution with a flexible perturbation distribution on the unit interval. We consider three perturbation specifications: a parametric Beta model, a Bernstein polynomial estimator, and a histogram-based estimator. To facilitate direct comparison, all three models are fitted using a unified iterative procedure adapted to right censoring through Kaplan-Meier-based pseudo-observations. A Monte Carlo study evaluates finite-sample performance across different tail indices, censoring levels, sample sizes, and model…","headline":"Long-Term Tail Modeling in Survival Analysis via Extended Generalized Pareto Distributions","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.28321.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.28321.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Long-Term Tail Modeling in Survival Analysis via Extended Generalized Pareto Distributions</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Eduardo Janotti, Lígia Henriques-Rodrigues, Antonio Carlos Pedroso de Lima
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP, stat.TH
+      <span class="sep">&middot;</span>
+      24 Sep 2026
+    </div>
+  </div><div class="summary-box">Extended generalized Pareto models are proposed for right-censored survival data with flexible perturbation distributions.</div><h3>Abstract</h3>
+  <p>We propose a class of extended generalized Pareto models for right-censored survival data, with particular emphasis on tail inference and long-term extrapolation. Our framework integrates extreme value theory and survival analysis, combining a generalized Pareto distribution with a flexible perturbation distribution on the unit interval. We consider three perturbation specifications: a parametric Beta model, a Bernstein polynomial estimator, and a histogram-based estimator. To facilitate direct comparison, all three models are fitted using a unified iterative procedure adapted to right censoring through Kaplan-Meier-based pseudo-observations. A Monte Carlo study evaluates finite-sample performance across different tail indices, censoring levels, sample sizes, and model complexities. The results reveal a trade-off between flexibility and stability: the Beta specification generally performs best for tail-index estimation, whereas the histogram estimator performs particularly well for scale estimation under low censoring. The Bernstein estimator shows intermediate performance and greater sensitivity to sample size and censoring. Applications to bladder cancer recurrence and heart-failure survival data show that models with very similar in-sample fits can nevertheless produce markedly different tail-index estimates and long-term extrapolations. These findings emphasize the importance of perturbation specification when extended generalized Pareto models are used for survival extrapolation under censoring.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.28321" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.28321" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Bayesian framework for multilevel data under model mis-specification</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Bayesian framework for multilevel data under model mis-specification" />
+<meta name="author" content="Widemberg S. Nobre, David A. Stephens, Alexandra M. Schmidt, Erica E. M. Moodie" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose a Bayesian framework for uncertainty quantification from the perspective that the working model is mis-specified in settings of a multilevel data-generating process. We focus on settings in which the mis-specification fails to match the functional form of the mean structure, and discuss Bayesian estimation of target parameters under dependence induced by a mismatch between working and data-generating models. The proposal represents a Bayesian semi-parametric procedure aimed at estimating population-level parameters while accounting for cluster- and unit-level variation in the estimating function. The proposal extends the regular Bayesian bootstrap to account for cluster- and unit-level variation using multilevel weights…" />
+<meta name="twitter:description" property="og:description" content="We propose a Bayesian framework for uncertainty quantification from the perspective that the working model is mis-specified in settings of a multilevel data-generating process. We focus on settings in which the mis-specification fails to match the functional form of the mean structure, and discuss Bayesian estimation of target parameters under dependence induced by a mismatch between working and data-generating models. The proposal represents a Bayesian semi-parametric procedure aimed at estimating population-level parameters while accounting for cluster- and unit-level variation in the estimating function. The proposal extends the regular Bayesian bootstrap to account for cluster- and unit-level variation using multilevel weights…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.27112.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.27112.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-24T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-24T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Bayesian framework for multilevel data under model mis-specification" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Widemberg S. Nobre, David A. Stephens, Alexandra M. Schmidt, Erica E. M. Moodie"},"dateModified":"2026-09-24T00:00:00+02:00","datePublished":"2026-09-24T00:00:00+02:00","description":"We propose a Bayesian framework for uncertainty quantification from the perspective that the working model is mis-specified in settings of a multilevel data-generating process. We focus on settings in which the mis-specification fails to match the functional form of the mean structure, and discuss Bayesian estimation of target parameters under dependence induced by a mismatch between working and data-generating models. The proposal represents a Bayesian semi-parametric procedure aimed at estimating population-level parameters while accounting for cluster- and unit-level variation in the estimating function. The proposal extends the regular Bayesian bootstrap to account for cluster- and unit-level variation using multilevel weights…","headline":"A Bayesian framework for multilevel data under model mis-specification","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.27112.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/24/2609.27112.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Bayesian framework for multilevel data under model mis-specification</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Widemberg S. Nobre, David A. Stephens, Alexandra M. Schmidt, Erica E. M. Moodie
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      24 Sep 2026
+    </div>
+  </div><div class="summary-box">Proposes a Bayesian framework for multilevel data under model mis-specification.</div><h3>Abstract</h3>
+  <p>We propose a Bayesian framework for uncertainty quantification from the perspective that the working model is mis-specified in settings of a multilevel data-generating process. We focus on settings in which the mis-specification fails to match the functional form of the mean structure, and discuss Bayesian estimation of target parameters under dependence induced by a mismatch between working and data-generating models. The proposal represents a Bayesian semi-parametric procedure aimed at estimating population-level parameters while accounting for cluster- and unit-level variation in the estimating function. The proposal extends the regular Bayesian bootstrap to account for cluster- and unit-level variation using multilevel weights from an enriched Dirichlet model. Simulation studies indicate that the proposed approach has good frequentist properties when the data-generating process and the proposed model induce a partially exchangeable sequence associated with the unknown quantity of interest. Applications to radon \citep{gelman2007data}, Programme for International Student Assessment 2022 \citep{OECD2023PISA}, and tuberculosis \citep{nobre2023impact} datasets are presented for illustrative purposes. The results demonstrate that the proposed method is competitive with variations of multilevel models, with major differences observed in the range of credible intervals, which are justified by the nonparametric assumptions underlying the proposed method.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.27112" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.27112" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
