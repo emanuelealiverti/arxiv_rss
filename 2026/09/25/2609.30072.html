@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PK/PD-integrated Bayesian platform design for phase II dose regimen optimization</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="PK/PD-integrated Bayesian platform design for phase II dose regimen optimization" />
+<meta name="author" content="Axel Vuorinen, Antoine Guillon, Emanuelle Comets, Moreno Ursino" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Early-phase dose-finding methods increasingly assess toxicity and efficacy jointly, but comparisons based only on administered dose may inadequately characterize regimens differing in schedule. We developed a Bayesian phase II adaptive platform design for regimen optimization that integrates pharmacokinetic/pharmacodynamic (PK/PD) modelling into toxicity, efficacy, regimen selection and adaptation decisions. The proposed PK/PD-informed Regimen Optimization Platform (PROP) design uses a population PK/PD model to generate patient- and population-level predictions of exposure and biological activity. Acute and cumulative toxicities are analysed using a discrete-time time-to-event model informed by PK exposure. Efficacy is evaluated through Bayesian model averaging of exposure-driven and biomarker-driven time-to-event models.…" />
+<meta name="twitter:description" property="og:description" content="Early-phase dose-finding methods increasingly assess toxicity and efficacy jointly, but comparisons based only on administered dose may inadequately characterize regimens differing in schedule. We developed a Bayesian phase II adaptive platform design for regimen optimization that integrates pharmacokinetic/pharmacodynamic (PK/PD) modelling into toxicity, efficacy, regimen selection and adaptation decisions. The proposed PK/PD-informed Regimen Optimization Platform (PROP) design uses a population PK/PD model to generate patient- and population-level predictions of exposure and biological activity. Acute and cumulative toxicities are analysed using a discrete-time time-to-event model informed by PK exposure. Efficacy is evaluated through Bayesian model averaging of exposure-driven and biomarker-driven time-to-event models.…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.30072.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.30072.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-25T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-25T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="PK/PD-integrated Bayesian platform design for phase II dose regimen optimization" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Axel Vuorinen, Antoine Guillon, Emanuelle Comets, Moreno Ursino"},"dateModified":"2026-09-25T00:00:00+02:00","datePublished":"2026-09-25T00:00:00+02:00","description":"Early-phase dose-finding methods increasingly assess toxicity and efficacy jointly, but comparisons based only on administered dose may inadequately characterize regimens differing in schedule. We developed a Bayesian phase II adaptive platform design for regimen optimization that integrates pharmacokinetic/pharmacodynamic (PK/PD) modelling into toxicity, efficacy, regimen selection and adaptation decisions. The proposed PK/PD-informed Regimen Optimization Platform (PROP) design uses a population PK/PD model to generate patient- and population-level predictions of exposure and biological activity. Acute and cumulative toxicities are analysed using a discrete-time time-to-event model informed by PK exposure. Efficacy is evaluated through Bayesian model averaging of exposure-driven and biomarker-driven time-to-event models.…","headline":"PK/PD-integrated Bayesian platform design for phase II dose regimen optimization","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.30072.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.30072.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>PK/PD-integrated Bayesian platform design for phase II dose regimen optimization</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Axel Vuorinen, Antoine Guillon, Emanuelle Comets, Moreno Ursino
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      25 Sep 2026
+    </div>
+  </div><div class="summary-box">A Bayesian platform design integrates PK/PD modeling for phase II dose regimen optimization.</div><h3>Abstract</h3>
+  <p>Early-phase dose-finding methods increasingly assess toxicity and efficacy jointly, but comparisons based only on administered dose may inadequately characterize regimens differing in schedule. We developed a Bayesian phase II adaptive platform design for regimen optimization that integrates pharmacokinetic/pharmacodynamic (PK/PD) modelling into toxicity, efficacy, regimen selection and adaptation decisions. The proposed PK/PD-informed Regimen Optimization Platform (PROP) design uses a population PK/PD model to generate patient- and population-level predictions of exposure and biological activity. Acute and cumulative toxicities are analysed using a discrete-time time-to-event model informed by PK exposure. Efficacy is evaluated through Bayesian model averaging of exposure-driven and biomarker-driven time-to-event models. The design supports regimen graduation, discontinuation for futility or safety, and addition of unexplored regimens. Performance was evaluated through simulations motivated by an influenza intensive-care setting. Across six scenarios, PROP generally improved graduation and futility decisions, reduced inappropriate graduation, and supported the addition of promising regimens compared with dose-based alternatives. It also more accurately estimated regimen-specific toxicity and arm-specific efficacy, while the model-averaging framework favored the efficacy model consistent with the data-generating mechanism. Dose-based approaches performed better for safety stopping in some scenarios, despite less accurate characterization of the regimen–toxicity relationship. PK/PD-informed platform designs can improve adaptive regimen selection and knowledge generation when dose alone cannot adequately characterize treatment regimens.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.30072" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.30072" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

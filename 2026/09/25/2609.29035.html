@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Phylodynamic inference with the bounded coalescent: a point process perspective</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Phylodynamic inference with the bounded coalescent: a point process perspective" />
+<meta name="author" content="Bingjing Tang, Shuangping Li, Julia A. Palacios" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The coalescent is a central framework in population genetics for modelling the ancestral relationships among sampled individuals through a genealogy, represented as a rooted and ranked binary tree. In this model, lineages coalesce at a rate inversely proportional to the effective population size, a time-varying quantity of primary interest. The bounded coalescent conditions genealogies on the time to the most recent common ancestor being bounded above by a fixed time. This model is useful in various contexts, such as phylodynamics of infectious diseases with known introduction times and single-cell lineage tracing in synthetic barcoding experiments. To our knowledge, there is…" />
+<meta name="twitter:description" property="og:description" content="The coalescent is a central framework in population genetics for modelling the ancestral relationships among sampled individuals through a genealogy, represented as a rooted and ranked binary tree. In this model, lineages coalesce at a rate inversely proportional to the effective population size, a time-varying quantity of primary interest. The bounded coalescent conditions genealogies on the time to the most recent common ancestor being bounded above by a fixed time. This model is useful in various contexts, such as phylodynamics of infectious diseases with known introduction times and single-cell lineage tracing in synthetic barcoding experiments. To our knowledge, there is…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29035.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29035.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-25T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-25T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Phylodynamic inference with the bounded coalescent: a point process perspective" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Bingjing Tang, Shuangping Li, Julia A. Palacios"},"dateModified":"2026-09-25T00:00:00+02:00","datePublished":"2026-09-25T00:00:00+02:00","description":"The coalescent is a central framework in population genetics for modelling the ancestral relationships among sampled individuals through a genealogy, represented as a rooted and ranked binary tree. In this model, lineages coalesce at a rate inversely proportional to the effective population size, a time-varying quantity of primary interest. The bounded coalescent conditions genealogies on the time to the most recent common ancestor being bounded above by a fixed time. This model is useful in various contexts, such as phylodynamics of infectious diseases with known introduction times and single-cell lineage tracing in synthetic barcoding experiments. To our knowledge, there is…","headline":"Phylodynamic inference with the bounded coalescent: a point process perspective","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29035.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29035.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Phylodynamic inference with the bounded coalescent: a point process perspective</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Bingjing Tang, Shuangping Li, Julia A. Palacios
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      25 Sep 2026
+    </div>
+  </div><div class="summary-box">Develops a Markov chain Monte Carlo procedure for phylodynamic inference under the bounded coalescent model.</div><h3>Abstract</h3>
+  <p>The coalescent is a central framework in population genetics for modelling the ancestral relationships among sampled individuals through a genealogy, represented as a rooted and ranked binary tree. In this model, lineages coalesce at a rate inversely proportional to the effective population size, a time-varying quantity of primary interest. The bounded coalescent conditions genealogies on the time to the most recent common ancestor being bounded above by a fixed time. This model is useful in various contexts, such as phylodynamics of infectious diseases with known introduction times and single-cell lineage tracing in synthetic barcoding experiments. To our knowledge, there is no existing tool that infers variable effective population size trajectories under the bounded coalescent. We view estimation under the bounded coalescent as equivalent to estimation of the intensity function of an inhomogeneous point process. We provide an efficient algorithm for coalescent simulation under the bounded coalescent using point process methods, retaining the exactness of naive rejection sampling while substantially reducing computational cost and avoiding repeated numerical inversion of the bounded cumulative hazard. We then develop a Markov chain Monte Carlo procedure for posterior inference of effective population size trajectories that avoids discretization of the likelihood integrals. In simulations, conditioning on the bound reduces the median sum of squared errors in two of three settings, with less favourable results in the most rapidly varying setting. We illustrate the method using severe acute respiratory syndrome coronavirus 2 sequence data from Washington State.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.29035" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.29035" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

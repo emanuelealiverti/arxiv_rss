@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Smooth Information Criterion for Variable Selection in Generalised Linear Models</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Smooth Information Criterion for Variable Selection in Generalised Linear Models" />
+<meta name="author" content="Andrew McInerney" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Variable selection using information criteria has an explicit statistical target but requires discrete search over candidate models. The smooth information criterion (SIC) replaces the discontinuous model-dimension term by a differentiable approximation, with an $\epsilon$-telescoping continuation strategy progressively sharpening this approximation without data-driven selection of a regularisation-strength parameter. We develop SIC as a general procedure for coefficient-level variable selection in generalised linear models (GLMs) and use it to address a central question: how faithfully does smooth optimisation reproduce the corresponding discrete information-criterion selection problem? Focusing on BIC, we benchmark SIC directly against exhaustive subset selection where feasible, using exact support agreement,…" />
+<meta name="twitter:description" property="og:description" content="Variable selection using information criteria has an explicit statistical target but requires discrete search over candidate models. The smooth information criterion (SIC) replaces the discontinuous model-dimension term by a differentiable approximation, with an $\epsilon$-telescoping continuation strategy progressively sharpening this approximation without data-driven selection of a regularisation-strength parameter. We develop SIC as a general procedure for coefficient-level variable selection in generalised linear models (GLMs) and use it to address a central question: how faithfully does smooth optimisation reproduce the corresponding discrete information-criterion selection problem? Focusing on BIC, we benchmark SIC directly against exhaustive subset selection where feasible, using exact support agreement,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.30174.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.30174.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-25T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-25T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Smooth Information Criterion for Variable Selection in Generalised Linear Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Andrew McInerney"},"dateModified":"2026-09-25T00:00:00+02:00","datePublished":"2026-09-25T00:00:00+02:00","description":"Variable selection using information criteria has an explicit statistical target but requires discrete search over candidate models. The smooth information criterion (SIC) replaces the discontinuous model-dimension term by a differentiable approximation, with an $\\epsilon$-telescoping continuation strategy progressively sharpening this approximation without data-driven selection of a regularisation-strength parameter. We develop SIC as a general procedure for coefficient-level variable selection in generalised linear models (GLMs) and use it to address a central question: how faithfully does smooth optimisation reproduce the corresponding discrete information-criterion selection problem? Focusing on BIC, we benchmark SIC directly against exhaustive subset selection where feasible, using exact support agreement,…","headline":"Smooth Information Criterion for Variable Selection in Generalised Linear Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.30174.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.30174.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Smooth Information Criterion for Variable Selection in Generalised Linear Models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Andrew McInerney
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      25 Sep 2026
+    </div>
+  </div><div class="summary-box">Develops a smooth information criterion for variable selection in generalized linear models.</div><h3>Abstract</h3>
+  <p>Variable selection using information criteria has an explicit statistical target but requires discrete search over candidate models. The smooth information criterion (SIC) replaces the discontinuous model-dimension term by a differentiable approximation, with an $\epsilon$-telescoping continuation strategy progressively sharpening this approximation without data-driven selection of a regularisation-strength parameter. We develop SIC as a general procedure for coefficient-level variable selection in generalised linear models (GLMs) and use it to address a central question: how faithfully does smooth optimisation reproduce the corresponding discrete information-criterion selection problem? Focusing on BIC, we benchmark SIC directly against exhaustive subset selection where feasible, using exact support agreement, BIC difference and selection behaviour across a varying signal-strength boundary. Simulations in Gaussian, binomial and Poisson regression show that SIC closely reproduces exhaustive BIC selection and tracks the exact BIC selection boundary. Relative to stepwise BIC, LASSO, SCAD and MCP, SIC produces competitive variable-selection performance while retaining sparse models, with predictive performance broadly comparable across methods. Computational advantages over stepwise BIC increase with predictor dimension. In a real-data application with 16 candidate predictors, SIC recovers the globally BIC-optimal model among all 65,536 supports at a small fraction of the computational cost of exhaustive enumeration.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.30174" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.30174" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

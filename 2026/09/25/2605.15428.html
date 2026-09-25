@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Quantile Regression for Misclassified Binary Data with an Application to Spousal Violence Reporting</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian Quantile Regression for Misclassified Binary Data with an Application to Spousal Violence Reporting" />
+<meta name="author" content="Joon Jin Song, Mohammad Arshad Rahman, Yoo-Mi Chin, James Stamey" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Survey responses on socially undesirable behaviors, such as self-reported spousal violence, are often subject to underreporting due to social stigma, fear of retaliation, and other reporting pressures. When such data are analyzed using standard econometric models that focus on conditional means, such as probit and logit models, the resulting estimates are likely to be biased and can obscure heterogeneity in covariate effects. To address these challenges, we propose a Bayesian binary quantile regression framework that accounts for misclassification and provides quantile-specific effects for the latent true response. The framework incorporates false-negative and false-positive probabilities to capture reporting errors and employs…" />
+<meta name="twitter:description" property="og:description" content="Survey responses on socially undesirable behaviors, such as self-reported spousal violence, are often subject to underreporting due to social stigma, fear of retaliation, and other reporting pressures. When such data are analyzed using standard econometric models that focus on conditional means, such as probit and logit models, the resulting estimates are likely to be biased and can obscure heterogeneity in covariate effects. To address these challenges, we propose a Bayesian binary quantile regression framework that accounts for misclassification and provides quantile-specific effects for the latent true response. The framework incorporates false-negative and false-positive probabilities to capture reporting errors and employs…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2605.15428.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2605.15428.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-25T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-25T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian Quantile Regression for Misclassified Binary Data with an Application to Spousal Violence Reporting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joon Jin Song, Mohammad Arshad Rahman, Yoo-Mi Chin, James Stamey"},"dateModified":"2026-09-25T00:00:00+02:00","datePublished":"2026-09-25T00:00:00+02:00","description":"Survey responses on socially undesirable behaviors, such as self-reported spousal violence, are often subject to underreporting due to social stigma, fear of retaliation, and other reporting pressures. When such data are analyzed using standard econometric models that focus on conditional means, such as probit and logit models, the resulting estimates are likely to be biased and can obscure heterogeneity in covariate effects. To address these challenges, we propose a Bayesian binary quantile regression framework that accounts for misclassification and provides quantile-specific effects for the latent true response. The framework incorporates false-negative and false-positive probabilities to capture reporting errors and employs…","headline":"Bayesian Quantile Regression for Misclassified Binary Data with an Application to Spousal Violence Reporting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2605.15428.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2605.15428.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian Quantile Regression for Misclassified Binary Data with an Application to Spousal Violence Reporting</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Joon Jin Song, Mohammad Arshad Rahman, Yoo-Mi Chin, James Stamey
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      25 Sep 2026
+    </div>
+  </div><div class="summary-box">Proposes a Bayesian binary quantile regression framework for misclassified binary data.</div><h3>Abstract</h3>
+  <p>Survey responses on socially undesirable behaviors, such as self-reported spousal violence, are often subject to underreporting due to social stigma, fear of retaliation, and other reporting pressures. When such data are analyzed using standard econometric models that focus on conditional means, such as probit and logit models, the resulting estimates are likely to be biased and can obscure heterogeneity in covariate effects. To address these challenges, we propose a Bayesian binary quantile regression framework that accounts for misclassification and provides quantile-specific effects for the latent true response. The framework incorporates false-negative and false-positive probabilities to capture reporting errors and employs a novel partially collapsed Gibbs sampler for estimation. We also discuss the computation of covariate effects and marginal likelihood for Bayesian model comparison. Simulation studies under various settings (prior effective sample size, misclassification rates, and prior distribution) show that accounting for misclassification improves inference across quantiles relative to models that ignore reporting errors. We apply the framework to women’s self-reported spousal violence and find that underreporting of spousal violence exceeds overreporting across quantiles, while model comparisons using marginal likelihood generally favor the quantile model with misclassification and yield different conclusions about the determinants of reported violence.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.15428" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.15428" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

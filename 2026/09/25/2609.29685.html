@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Aggregation Distortion in Multilevel Mediation: Estimand Geometry, Design Dependence, and Diagnostics</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Aggregation Distortion in Multilevel Mediation: Estimand Geometry, Design Dependence, and Diagnostics" />
+<meta name="author" content="Subir Hait" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Researchers often summarize mediation in clustered data with a single-level product-of-coefficients estimator. We show what this pooled analysis estimates and why the target depends on the design. The pooled a-path is weighted by the within-between variance composition of the treatment. The pooled b-path uses a different weight, based on the mediator variance that remains after residualizing on treatment and covariates. Because these weights generally differ, the pooled indirect effect can differ from a level-respecting combination of the within- and between-level indirect effects. We derive the pooled probability limit and split this difference into a nonlinearity term and a weight-mismatch term.…" />
+<meta name="twitter:description" property="og:description" content="Researchers often summarize mediation in clustered data with a single-level product-of-coefficients estimator. We show what this pooled analysis estimates and why the target depends on the design. The pooled a-path is weighted by the within-between variance composition of the treatment. The pooled b-path uses a different weight, based on the mediator variance that remains after residualizing on treatment and covariates. Because these weights generally differ, the pooled indirect effect can differ from a level-respecting combination of the within- and between-level indirect effects. We derive the pooled probability limit and split this difference into a nonlinearity term and a weight-mismatch term.…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29685.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29685.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-25T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-25T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Aggregation Distortion in Multilevel Mediation: Estimand Geometry, Design Dependence, and Diagnostics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Subir Hait"},"dateModified":"2026-09-25T00:00:00+02:00","datePublished":"2026-09-25T00:00:00+02:00","description":"Researchers often summarize mediation in clustered data with a single-level product-of-coefficients estimator. We show what this pooled analysis estimates and why the target depends on the design. The pooled a-path is weighted by the within-between variance composition of the treatment. The pooled b-path uses a different weight, based on the mediator variance that remains after residualizing on treatment and covariates. Because these weights generally differ, the pooled indirect effect can differ from a level-respecting combination of the within- and between-level indirect effects. We derive the pooled probability limit and split this difference into a nonlinearity term and a weight-mismatch term.…","headline":"Aggregation Distortion in Multilevel Mediation: Estimand Geometry, Design Dependence, and Diagnostics","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29685.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29685.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Aggregation Distortion in Multilevel Mediation: Estimand Geometry, Design Dependence, and Diagnostics</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Subir Hait
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      25 Sep 2026
+    </div>
+  </div><div class="summary-box">Derives estimands and diagnostics for multilevel mediation analysis in clustered data.</div><h3>Abstract</h3>
+  <p>Researchers often summarize mediation in clustered data with a single-level product-of-coefficients estimator. We show what this pooled analysis estimates and why the target depends on the design. The pooled a-path is weighted by the within-between variance composition of the treatment. The pooled b-path uses a different weight, based on the mediator variance that remains after residualizing on treatment and covariates. Because these weights generally differ, the pooled indirect effect can differ from a level-respecting combination of the within- and between-level indirect effects. We derive the pooled probability limit and split this difference into a nonlinearity term and a weight-mismatch term. Equal b-paths remove the distortion, but equal a-paths do not. Allowing the two weights to vary gives a bilinear surface with saddle geometry, sharp corner bounds, and a zero-distortion frontier. We also define a design-standardized indirect effect and practical diagnostics. Simulations verify the identities and show that a common decompose-first, cluster-weighted construction can overstate apparent distortion. In an ECLS-K:2011 illustration with 8,363 children in 753 baseline schools, the within-level weights were 0.723 and 0.896, a difference of -0.173 (95% bootstrap CI [-0.193, -0.151]). The conventional construction produced 1.76 times the absolute distortion of the identity-consistent construction. The identity-consistent AD interval included zero. Thus, the application shows unequal weighting and sensitivity to construction, not evidence of nonzero population distortion.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.29685" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.29685" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

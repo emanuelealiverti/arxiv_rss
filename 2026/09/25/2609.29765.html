@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dense Matrices Are Alike; Sparse Matrices Are Sparse in Their Own Way: A Structure-Adaptive Tile Cholesky Factorization</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Dense Matrices Are Alike; Sparse Matrices Are Sparse in Their Own Way: A Structure-Adaptive Tile Cholesky Factorization" />
+<meta name="author" content="Esmail Abdul Fattah, Hatem Ltaief, H{\aa}vard Rue, David E. Keyes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sparse direct Cholesky solvers fix one data structure for an entire matrix, but symmetric positive definite systems range from nearly dense to irregular, sometimes mixing both within one matrix. We let the data structure follow the sparsity structure, across matrices and across tiles within a matrix. Before numerical work starts, a lightweight selector captures the sparsity pattern of the Cholesky factor and routes the matrix, on one static shared-memory schedule, to one of three regimes: dense, sparse, or an intermediate semisparse regime. Dense tiles are stored in full; the semisparse regime uses a new active-column tile that keeps only the…" />
+<meta name="twitter:description" property="og:description" content="Sparse direct Cholesky solvers fix one data structure for an entire matrix, but symmetric positive definite systems range from nearly dense to irregular, sometimes mixing both within one matrix. We let the data structure follow the sparsity structure, across matrices and across tiles within a matrix. Before numerical work starts, a lightweight selector captures the sparsity pattern of the Cholesky factor and routes the matrix, on one static shared-memory schedule, to one of three regimes: dense, sparse, or an intermediate semisparse regime. Dense tiles are stored in full; the semisparse regime uses a new active-column tile that keeps only the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29765.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29765.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-25T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-25T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Dense Matrices Are Alike; Sparse Matrices Are Sparse in Their Own Way: A Structure-Adaptive Tile Cholesky Factorization" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Esmail Abdul Fattah, Hatem Ltaief, H{\\aa}vard Rue, David E. Keyes"},"dateModified":"2026-09-25T00:00:00+02:00","datePublished":"2026-09-25T00:00:00+02:00","description":"Sparse direct Cholesky solvers fix one data structure for an entire matrix, but symmetric positive definite systems range from nearly dense to irregular, sometimes mixing both within one matrix. We let the data structure follow the sparsity structure, across matrices and across tiles within a matrix. Before numerical work starts, a lightweight selector captures the sparsity pattern of the Cholesky factor and routes the matrix, on one static shared-memory schedule, to one of three regimes: dense, sparse, or an intermediate semisparse regime. Dense tiles are stored in full; the semisparse regime uses a new active-column tile that keeps only the…","headline":"Dense Matrices Are Alike; Sparse Matrices Are Sparse in Their Own Way: A Structure-Adaptive Tile Cholesky Factorization","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29765.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/25/2609.29765.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Dense Matrices Are Alike; Sparse Matrices Are Sparse in Their Own Way: A Structure-Adaptive Tile Cholesky Factorization</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Esmail Abdul Fattah, Hatem Ltaief, H{\aa}vard Rue, David E. Keyes
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      25 Sep 2026
+    </div>
+  </div><div class="summary-box">A structure-adaptive Cholesky factorization method for symmetric positive definite matrices.</div><h3>Abstract</h3>
+  <p>Sparse direct Cholesky solvers fix one data structure for an entire matrix, but symmetric positive definite systems range from nearly dense to irregular, sometimes mixing both within one matrix. We let the data structure follow the sparsity structure, across matrices and across tiles within a matrix. Before numerical work starts, a lightweight selector captures the sparsity pattern of the Cholesky factor and routes the matrix, on one static shared-memory schedule, to one of three regimes: dense, sparse, or an intermediate semisparse regime. Dense tiles are stored in full; the semisparse regime uses a new active-column tile that keeps only the columns the factorization will touch, so banded or arrowhead-shaped structures common in spatial models still reach BLAS-3 efficiency. The approach suits the integrated nested Laplace approximation (INLA): one sparsity pattern factorized thousands of times with different values, so the one-time analysis cost is amortized and every factorization saving compounds. We evaluate the technique on 60 SPD matrices, comparing against MUMPS, PaStiX, CHOLMOD, symPACK, and Intel oneMKL PARDISO on Intel Xeon and AMD EPYC nodes; the selector alone achieves the lowest total factorization time in every regime. Summed over the suite, it beats the best fixed single-structure mode by 1.6 to 2.6x, and every alternative by 1.8 to 12.5x on Intel and 2.6 to 10.1x on AMD, with the largest gains on the most expensive factorizations. It trades more one-time analysis for less time per factorization, pulling ahead by the third factorization of a given pattern. As a first GPU extension, the dense route on one NVIDIA A100, with the factor resident on the device, runs 1.2 to 6.3x faster than on the faster CPU node, the margin widening with factor size. Solver, Python/R/Julia interfaces, benchmark suite, and results are open at https://github.com/esmail-abdulfattah/sTiles.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.29765" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.29765" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
