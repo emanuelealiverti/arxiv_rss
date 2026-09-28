@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A likelihood-based coefficient for biomedical independence testing: the binomial-cut composite likelihood ratio</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A likelihood-based coefficient for biomedical independence testing: the binomial-cut composite likelihood ratio" />
+<meta name="author" content="Jing Qin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The standard dependence summaries used in biomarker studies – Pearson’s r, Spearman’s rho, Kendall’s tau – take values in [-1, 1] with 0 indicating no linear or monotone association. Zero does not distinguish independence from non-monotone dependence, so the scale cannot represent threshold effects, heteroscedasticity, and tail shifts common in biomarker practice. We formulate independence testing as a composite Bernoulli likelihood ratio: at each threshold t, comparing the Bernoulli laws of 1(Y &lt;= t) conditionally on X versus marginally, aggregated over cut points. The resulting coefficient xi_cut lies on [0, 1] with 0 iff X and Y are independent (under…" />
+<meta name="twitter:description" property="og:description" content="The standard dependence summaries used in biomarker studies – Pearson’s r, Spearman’s rho, Kendall’s tau – take values in [-1, 1] with 0 indicating no linear or monotone association. Zero does not distinguish independence from non-monotone dependence, so the scale cannot represent threshold effects, heteroscedasticity, and tail shifts common in biomarker practice. We formulate independence testing as a composite Bernoulli likelihood ratio: at each threshold t, comparing the Bernoulli laws of 1(Y &lt;= t) conditionally on X versus marginally, aggregated over cut points. The resulting coefficient xi_cut lies on [0, 1] with 0 iff X and Y are independent (under…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/28/2609.31467.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/28/2609.31467.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-28T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-28T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A likelihood-based coefficient for biomedical independence testing: the binomial-cut composite likelihood ratio" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jing Qin"},"dateModified":"2026-09-28T00:00:00+02:00","datePublished":"2026-09-28T00:00:00+02:00","description":"The standard dependence summaries used in biomarker studies – Pearson’s r, Spearman’s rho, Kendall’s tau – take values in [-1, 1] with 0 indicating no linear or monotone association. Zero does not distinguish independence from non-monotone dependence, so the scale cannot represent threshold effects, heteroscedasticity, and tail shifts common in biomarker practice. We formulate independence testing as a composite Bernoulli likelihood ratio: at each threshold t, comparing the Bernoulli laws of 1(Y &lt;= t) conditionally on X versus marginally, aggregated over cut points. The resulting coefficient xi_cut lies on [0, 1] with 0 iff X and Y are independent (under…","headline":"A likelihood-based coefficient for biomedical independence testing: the binomial-cut composite likelihood ratio","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/28/2609.31467.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/28/2609.31467.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A likelihood-based coefficient for biomedical independence testing: the binomial-cut composite likelihood ratio</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Jing Qin
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      28 Sep 2026
+    </div>
+  </div><div class="summary-box">A new coefficient for independence testing in biomarker studies is proposed, based on a composite Bernoulli likelihood ratio.</div><h3>Abstract</h3>
+  <p>The standard dependence summaries used in biomarker studies – Pearson’s r, Spearman’s rho, Kendall’s tau – take values in [-1, 1] with 0 indicating no linear or monotone association. Zero does not distinguish independence from non-monotone dependence, so the scale cannot represent threshold effects, heteroscedasticity, and tail shifts common in biomarker practice. We formulate independence testing as a composite Bernoulli likelihood ratio: at each threshold t, comparing the Bernoulli laws of 1(Y &lt;= t) conditionally on X versus marginally, aggregated over cut points. The resulting coefficient xi_cut lies on [0, 1] with 0 iff X and Y are independent (under continuity of Y) and 1 iff Y is a measurable function of X. Fisher weighting arises at second order from the Bernoulli likelihood, and xi_cut equals twice the threshold-averaged mutual information between X and 1(Y &lt;= t), giving a distribution-free lower bound on I(X; Y). A second-order expansion recovers the Fisher-weighted Dette-Siburg-Stoimenov measure, which coincides under continuity with Chatterjee’s rank correlation. Estimation uses a Nadaraya-Watson plug-in with a max-over-grid bandwidth; inference is by exact permutation. In biomarker-motivated simulations T_cut substantially outperforms rank-based coefficients on W-shaped non-monotone and heteroscedastic alternatives. We illustrate on the Seattle cohort (n=70, ages 21-88) of the aging plasma proteome dataset, screening all 1,305 proteins for age dependence: under Benjamini-Hochberg control at q&lt;0.05, T_cut rejects on 70 proteins, six of which are missed by Pearson, Spearman, and Chatterjee at the same FDR level.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.31467" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.31467" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
