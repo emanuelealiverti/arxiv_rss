@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Rank Confidence Sequences:Anytime-valid Leaderboards</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Rank Confidence Sequences:Anytime-valid Leaderboards" />
+<meta name="author" content="Hamed Khosravi, Xiaoming Huo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Leaderboards rank models by their average scores on benchmark items, and they are consulted repeatedly while the evaluation is still running. Existing confidence intervals for a model’s rank control their error rate only if they are computed once, after a number of items chosen in advance. If they are recomputed as results arrive, and the evaluation stops once they look decisive, their error rate exceeds its nominal level. Anytime-valid methods keep their guarantees at all sample sizes simultaneously and hence under any stopping rule. They exist for the accuracy of one model, for one pair of models and for the…" />
+<meta name="twitter:description" property="og:description" content="Leaderboards rank models by their average scores on benchmark items, and they are consulted repeatedly while the evaluation is still running. Existing confidence intervals for a model’s rank control their error rate only if they are computed once, after a number of items chosen in advance. If they are recomputed as results arrive, and the evaluation stops once they look decisive, their error rate exceeds its nominal level. Anytime-valid methods keep their guarantees at all sample sizes simultaneously and hence under any stopping rule. They exist for the accuracy of one model, for one pair of models and for the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32211.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32211.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-29T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Rank Confidence Sequences:Anytime-valid Leaderboards" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hamed Khosravi, Xiaoming Huo"},"dateModified":"2026-09-29T00:00:00+02:00","datePublished":"2026-09-29T00:00:00+02:00","description":"Leaderboards rank models by their average scores on benchmark items, and they are consulted repeatedly while the evaluation is still running. Existing confidence intervals for a model’s rank control their error rate only if they are computed once, after a number of items chosen in advance. If they are recomputed as results arrive, and the evaluation stops once they look decisive, their error rate exceeds its nominal level. Anytime-valid methods keep their guarantees at all sample sizes simultaneously and hence under any stopping rule. They exist for the accuracy of one model, for one pair of models and for the…","headline":"Rank Confidence Sequences:Anytime-valid Leaderboards","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32211.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32211.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Rank Confidence Sequences:Anytime-valid Leaderboards</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Hamed Khosravi, Xiaoming Huo
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      29 Sep 2026
+    </div>
+  </div><div class="summary-box">Develops anytime-valid confidence sequences for model rankings in leaderboards.</div><h3>Abstract</h3>
+  <p>Leaderboards rank models by their average scores on benchmark items, and they are consulted repeatedly while the evaluation is still running. Existing confidence intervals for a model’s rank control their error rate only if they are computed once, after a number of items chosen in advance. If they are recomputed as results arrive, and the evaluation stops once they look decisive, their error rate exceeds its nominal level. Anytime-valid methods keep their guarantees at all sample sizes simultaneously and hence under any stopping rule. They exist for the accuracy of one model, for one pair of models and for the set of models that may be best. For pairwise battles they also give ranks. None gives ranks when all models are scored on the same items, which makes their scores dependent. We construct rank confidence sequences: for every model, a set of ranks that contains its true rank, simultaneously for all models and at all times, at a chosen error level $\alpha$, in finite samples. The construction combines betting e-processes, one for each ordered pair of models, with closed testing over the possible orderings of the models. It allows any dependence between the models’ scores on an item. The method has two advantages. A leaderboard can be inspected after every item without inflating its error rate. The evaluation of each model can stop as soon as the question asked about it is answered, which saves compute. When results are examined only once, halfway through or later, little power is lost relative to fixed-sample methods. The paper quantifies these advantages in simulations and on public leaderboard data.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.32211" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.32211" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

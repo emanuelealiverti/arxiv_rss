@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Phantom-Conditioned Nested Sampling</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Phantom-Conditioned Nested Sampling" />
+<meta name="author" content="Joshua G. Albert" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Nested sampling estimates the evidence by assigning prior volumes to an ordered sequence of likelihood contours. Markov chain constrained-prior samplers, which are used in high-dimensional problems, generate many intermediate states before producing the next classic sample. These intermediate states are discarded because their correlation prevents them from being inserted into the ordered NS sequence without changing its order-statistic law. This paper introduces a novel method of using them to improve evidence estimation, by formulating NS in a Bayesian way and conditioning on phantom samples as Monte Carlo observations. We then present the open-source software package, JAXNS v3, and its implementation…" />
+<meta name="twitter:description" property="og:description" content="Nested sampling estimates the evidence by assigning prior volumes to an ordered sequence of likelihood contours. Markov chain constrained-prior samplers, which are used in high-dimensional problems, generate many intermediate states before producing the next classic sample. These intermediate states are discarded because their correlation prevents them from being inserted into the ordered NS sequence without changing its order-statistic law. This paper introduces a novel method of using them to improve evidence estimation, by formulating NS in a Bayesian way and conditioning on phantom samples as Monte Carlo observations. We then present the open-source software package, JAXNS v3, and its implementation…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32120.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32120.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-29T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Phantom-Conditioned Nested Sampling" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joshua G. Albert"},"dateModified":"2026-09-29T00:00:00+02:00","datePublished":"2026-09-29T00:00:00+02:00","description":"Nested sampling estimates the evidence by assigning prior volumes to an ordered sequence of likelihood contours. Markov chain constrained-prior samplers, which are used in high-dimensional problems, generate many intermediate states before producing the next classic sample. These intermediate states are discarded because their correlation prevents them from being inserted into the ordered NS sequence without changing its order-statistic law. This paper introduces a novel method of using them to improve evidence estimation, by formulating NS in a Bayesian way and conditioning on phantom samples as Monte Carlo observations. We then present the open-source software package, JAXNS v3, and its implementation…","headline":"Phantom-Conditioned Nested Sampling","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32120.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32120.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Phantom-Conditioned Nested Sampling</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Joshua G. Albert
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      29 Sep 2026
+    </div>
+  </div><div class="summary-box">A novel method of using intermediate states in nested sampling to improve evidence estimation.</div><h3>Abstract</h3>
+  <p>Nested sampling estimates the evidence by assigning prior volumes to an ordered sequence of likelihood contours. Markov chain constrained-prior samplers, which are used in high-dimensional problems, generate many intermediate states before producing the next classic sample. These intermediate states are discarded because their correlation prevents them from being inserted into the ordered NS sequence without changing its order-statistic law. This paper introduces a novel method of using them to improve evidence estimation, by formulating NS in a Bayesian way and conditioning on phantom samples as Monte Carlo observations. We then present the open-source software package, JAXNS v3, and its implementation choices. We validate the approach on a set of problems, and identify its limitations via ablation. In our experiments, when problem structure is well resolved, conditioning on all retained phantom samples reduces log-evidence RMSE by at least $30\%$, with larger improvements at higher dimensionality. For the tested problems with unresolved structure, full phantom conditioning produces no detectable improvement or deterioration in evidence accuracy. Phantom conditioning produces overconfident evidence uncertainties. We also introduce two dynamic nested sampling allocation schemes. Evidence-improving allocation approximately halves the number of likelihood evaluations required to achieve comparable evidence accuracy relative to uniform allocation. Posterior-improving allocation doubles the classic posterior’s Kish effective sample size for $17.5\%$ additional likelihood evaluations.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.32120" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.32120" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

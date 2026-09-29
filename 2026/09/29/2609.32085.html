@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Modelling nuisance parameters in linear models: Formal and empirical comparisons between the two-way Anova and Ancova</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Modelling nuisance parameters in linear models: Formal and empirical comparisons between the two-way Anova and Ancova" />
+<meta name="author" content="Carlos A. Martinez, Nelson A. Cruz, Sandra E. Melo, Oscar O. Melo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The analysis of experimental or observational data often requires controlling for the effects of variables of secondary interest. Two common approaches to account for such parameters are grouping experimental or observational units into homogeneous groups (blocking), and observing quantitative variables on each one of them (covariance analysis). Often, both can be used and; therefore, comparing their performance poses a research question. Specifically, under randomized complete block designs where the blocks are defined by quantitative variables, there is interest in comparing the two-way Anova (TWA) with analysis of covariance (Ancova) models. Motivated by real-life problems coming from statistical consulting, we compared…" />
+<meta name="twitter:description" property="og:description" content="The analysis of experimental or observational data often requires controlling for the effects of variables of secondary interest. Two common approaches to account for such parameters are grouping experimental or observational units into homogeneous groups (blocking), and observing quantitative variables on each one of them (covariance analysis). Often, both can be used and; therefore, comparing their performance poses a research question. Specifically, under randomized complete block designs where the blocks are defined by quantitative variables, there is interest in comparing the two-way Anova (TWA) with analysis of covariance (Ancova) models. Motivated by real-life problems coming from statistical consulting, we compared…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32085.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32085.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-29T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Modelling nuisance parameters in linear models: Formal and empirical comparisons between the two-way Anova and Ancova" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Carlos A. Martinez, Nelson A. Cruz, Sandra E. Melo, Oscar O. Melo"},"dateModified":"2026-09-29T00:00:00+02:00","datePublished":"2026-09-29T00:00:00+02:00","description":"The analysis of experimental or observational data often requires controlling for the effects of variables of secondary interest. Two common approaches to account for such parameters are grouping experimental or observational units into homogeneous groups (blocking), and observing quantitative variables on each one of them (covariance analysis). Often, both can be used and; therefore, comparing their performance poses a research question. Specifically, under randomized complete block designs where the blocks are defined by quantitative variables, there is interest in comparing the two-way Anova (TWA) with analysis of covariance (Ancova) models. Motivated by real-life problems coming from statistical consulting, we compared…","headline":"Modelling nuisance parameters in linear models: Formal and empirical comparisons between the two-way Anova and Ancova","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32085.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.32085.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Modelling nuisance parameters in linear models: Formal and empirical comparisons between the two-way Anova and Ancova</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Carlos A. Martinez, Nelson A. Cruz, Sandra E. Melo, Oscar O. Melo
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      29 Sep 2026
+    </div>
+  </div><div class="summary-box">Compared two statistical models for controlling nuisance parameters in linear models.</div><h3>Abstract</h3>
+  <p>The analysis of experimental or observational data often requires controlling for the effects of variables of secondary interest. Two common approaches to account for such parameters are grouping experimental or observational units into homogeneous groups (blocking), and observing quantitative variables on each one of them (covariance analysis). Often, both can be used and; therefore, comparing their performance poses a research question. Specifically, under randomized complete block designs where the blocks are defined by quantitative variables, there is interest in comparing the two-way Anova (TWA) with analysis of covariance (Ancova) models. Motivated by real-life problems coming from statistical consulting, we compared the performance of linear models considering block effects and those considering covariate effects from analytical and empirical perspectives. Models assumed Gaussian errors and included the effects of T treatments. The formal comparison relied on the theory of orthogonal projections and vector spaces under containment relationships of column spaces of the design matrices induced by conditions on the experimental design or data structure. We found asymptotic and small-sample conditions for the TWA to be at least as precise as the Ancova, as well as for these models to be equivalent. As to the empirical perspective, models were compared through a simulation study motivated by agronomical experiments. The results suggested that when the covariates show complex heterogeneity patterns, the Ancova outperforms the TWA with blocks defined by traditional approaches in terms of precision of location parameters, but not in hypothesis testing accuracy.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.32085" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.32085" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

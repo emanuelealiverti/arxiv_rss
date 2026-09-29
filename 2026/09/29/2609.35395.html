@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bitcoin UTXO Values Are Heavy-Tailed but not Power-Law Distributed: A Clauset-Shalizi-Newman Test across Eight Snapshots</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bitcoin UTXO Values Are Heavy-Tailed but not Power-Law Distributed: A Clauset-Shalizi-Newman Test across Eight Snapshots" />
+<meta name="author" content="Carlos Baquero, Raquel Menezes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Power laws are often claimed for Bitcoin quantities from the slope of a log-log plot. We test one such claim with a formal protocol: whether the upper tail of the values of live unspent transaction outputs (UTXOs) follows a power law. We reconstruct the exact UTXO set at eight block heights from 2012 to 2025, validate it against an independent Bitcoin Core snapshot, and apply the Clauset-Shalizi-Newman protocol with three adaptations the data require: exact discrete support, several near-tied cutoffs retained and reselected in every bootstrap replicate, and resampling by transaction, because the outputs of one transaction are not independent.…" />
+<meta name="twitter:description" property="og:description" content="Power laws are often claimed for Bitcoin quantities from the slope of a log-log plot. We test one such claim with a formal protocol: whether the upper tail of the values of live unspent transaction outputs (UTXOs) follows a power law. We reconstruct the exact UTXO set at eight block heights from 2012 to 2025, validate it against an independent Bitcoin Core snapshot, and apply the Clauset-Shalizi-Newman protocol with three adaptations the data require: exact discrete support, several near-tied cutoffs retained and reselected in every bootstrap replicate, and resampling by transaction, because the outputs of one transaction are not independent.…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.35395.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.35395.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-29T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bitcoin UTXO Values Are Heavy-Tailed but not Power-Law Distributed: A Clauset-Shalizi-Newman Test across Eight Snapshots" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Carlos Baquero, Raquel Menezes"},"dateModified":"2026-09-29T00:00:00+02:00","datePublished":"2026-09-29T00:00:00+02:00","description":"Power laws are often claimed for Bitcoin quantities from the slope of a log-log plot. We test one such claim with a formal protocol: whether the upper tail of the values of live unspent transaction outputs (UTXOs) follows a power law. We reconstruct the exact UTXO set at eight block heights from 2012 to 2025, validate it against an independent Bitcoin Core snapshot, and apply the Clauset-Shalizi-Newman protocol with three adaptations the data require: exact discrete support, several near-tied cutoffs retained and reselected in every bootstrap replicate, and resampling by transaction, because the outputs of one transaction are not independent.…","headline":"Bitcoin UTXO Values Are Heavy-Tailed but not Power-Law Distributed: A Clauset-Shalizi-Newman Test across Eight Snapshots","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.35395.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.35395.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bitcoin UTXO Values Are Heavy-Tailed but not Power-Law Distributed: A Clauset-Shalizi-Newman Test across Eight Snapshots</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Carlos Baquero, Raquel Menezes
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      29 Sep 2026
+    </div>
+  </div><div class="summary-box">The paper tests the power-law distribution of Bitcoin UTXO values using the Clauset-Shalizi-Newman protocol.</div><h3>Abstract</h3>
+  <p>Power laws are often claimed for Bitcoin quantities from the slope of a log-log plot. We test one such claim with a formal protocol: whether the upper tail of the values of live unspent transaction outputs (UTXOs) follows a power law. We reconstruct the exact UTXO set at eight block heights from 2012 to 2025, validate it against an independent Bitcoin Core snapshot, and apply the Clauset-Shalizi-Newman protocol with three adaptations the data require: exact discrete support, several near-tied cutoffs retained and reselected in every bootstrap replicate, and resampling by transaction, because the outputs of one transaction are not independent. The protocol was fixed before inference and every later change is recorded. The pure power law is rejected at every height, with observed Kolmogorov-Smirnov distances five to forty times those the fitted law produces, and where the exponent is below 2 its extrapolation predicts, in expectation, several outputs each larger than the total coin supply. A lognormal, a stretched exponential and a power law with an exponential cutoff near a thousand bitcoin fit better in sample at every height, as families that contain the power law must, by margins that exceed those seen on simulated power-law tails at six of the eight heights, and they predict held-out transactions better at nearly every height. They rank differently from height to height, and the lognormal and the cutoff power law differ clearly at only two. The tail’s shape and the share of supply it holds drifted slowly while the number of outputs grew seventy-fold. The rejection survives a null that reproduces the dependence measured within transactions, which halves the one exceptional effect size in the panel and changes no verdict. Bitcoin UTXO values are heavy-tailed but not power-law distributed.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.35395" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.35395" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

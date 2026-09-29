@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Federated Independent Component Analysis via Spectral Alignment and Robust Aggregation</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Federated Independent Component Analysis via Spectral Alignment and Robust Aggregation" />
+<meta name="author" content="Xin Bing, Dian Jin, Yuqian Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper studies robust estimation for Independent Component Analysis (ICA) in the federated learning setting, where data are locally distributed across clients and may exhibit substantial heterogeneity. The goal is to recover a common global mixing matrix by aggregating local estimators computed by individual clients. The main difficulty is that local ICA estimators are identifiable only up to sign flips and column permutations and may have highly heterogeneous estimation quality. We propose a novel three-step aggregation method that first aligns the permutations across all local estimators via a particular spectral clustering approach, then aligns the signs within each estimated cluster…" />
+<meta name="twitter:description" property="og:description" content="This paper studies robust estimation for Independent Component Analysis (ICA) in the federated learning setting, where data are locally distributed across clients and may exhibit substantial heterogeneity. The goal is to recover a common global mixing matrix by aggregating local estimators computed by individual clients. The main difficulty is that local ICA estimators are identifiable only up to sign flips and column permutations and may have highly heterogeneous estimation quality. We propose a novel three-step aggregation method that first aligns the permutations across all local estimators via a particular spectral clustering approach, then aligns the signs within each estimated cluster…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2505.20532.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2505.20532.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-29T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Federated Independent Component Analysis via Spectral Alignment and Robust Aggregation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xin Bing, Dian Jin, Yuqian Zhang"},"dateModified":"2026-09-29T00:00:00+02:00","datePublished":"2026-09-29T00:00:00+02:00","description":"This paper studies robust estimation for Independent Component Analysis (ICA) in the federated learning setting, where data are locally distributed across clients and may exhibit substantial heterogeneity. The goal is to recover a common global mixing matrix by aggregating local estimators computed by individual clients. The main difficulty is that local ICA estimators are identifiable only up to sign flips and column permutations and may have highly heterogeneous estimation quality. We propose a novel three-step aggregation method that first aligns the permutations across all local estimators via a particular spectral clustering approach, then aligns the signs within each estimated cluster…","headline":"Federated Independent Component Analysis via Spectral Alignment and Robust Aggregation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2505.20532.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2505.20532.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Federated Independent Component Analysis via Spectral Alignment and Robust Aggregation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Xin Bing, Dian Jin, Yuqian Zhang
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      29 Sep 2026
+    </div>
+  </div><div class="summary-box">Proposes a three-step method for robust aggregation of local ICA estimators in federated learning.</div><h3>Abstract</h3>
+  <p>This paper studies robust estimation for Independent Component Analysis (ICA) in the federated learning setting, where data are locally distributed across clients and may exhibit substantial heterogeneity. The goal is to recover a common global mixing matrix by aggregating local estimators computed by individual clients. The main difficulty is that local ICA estimators are identifiable only up to sign flips and column permutations and may have highly heterogeneous estimation quality. We propose a novel three-step aggregation method that first aligns the permutations across all local estimators via a particular spectral clustering approach, then aligns the signs within each estimated cluster via another tailored spectral approach, and finally applies the geometric median for robust aggregation. The proposed estimator is shown to remain accurate even when a substantial fraction of local estimators are of low quality or inconsistent, as long as each cluster contains a majority of accurate estimators. This contrasts with its analogue based on simple averaging, whose performance is determined by the worst local estimator. In the homogeneous setting, the robust estimator is also shown to be minimax optimal, up to a logarithmic factor, both when the number of clients remains fixed and when it diverges. The theoretical findings are corroborated by simulation studies and a real-data analysis.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2505.20532" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2505.20532" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

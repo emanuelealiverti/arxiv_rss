@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Augmented James--Stein estimation for leading eigenvectors and eigenspaces in high dimensions</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Augmented James–Stein estimation for leading eigenvectors and eigenspaces in high dimensions" />
+<meta name="author" content="Giheon Seong, Seungki Hong, Sungkyu Jung" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Building on the James–Stein approach to leading eigenvector estimation (Goldberg and Kercheval, Proc. Natl. Acad. Sci. USA 120, e2207046120, 2023), we develop a data-adaptive augmented James–Stein shrinkage framework for estimating leading eigenvectors and eigenspaces under a generalized spiked population model, in the high-dimensional regime where the dimension $p$ and sample size $n$ grow proportionally. For each spiked eigenvector, we construct an augmented target subspace that combines auxiliary information, either from domain knowledge or prior information, with the remaining sample spiked eigenvectors. This augmentation allows information shared across the sample spiked components to be exploited while retaining a fully data-driven shrinkage…" />
+<meta name="twitter:description" property="og:description" content="Building on the James–Stein approach to leading eigenvector estimation (Goldberg and Kercheval, Proc. Natl. Acad. Sci. USA 120, e2207046120, 2023), we develop a data-adaptive augmented James–Stein shrinkage framework for estimating leading eigenvectors and eigenspaces under a generalized spiked population model, in the high-dimensional regime where the dimension $p$ and sample size $n$ grow proportionally. For each spiked eigenvector, we construct an augmented target subspace that combines auxiliary information, either from domain knowledge or prior information, with the remaining sample spiked eigenvectors. This augmentation allows information shared across the sample spiked components to be exploited while retaining a fully data-driven shrinkage…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.34315.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.34315.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-29T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Augmented James–Stein estimation for leading eigenvectors and eigenspaces in high dimensions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Giheon Seong, Seungki Hong, Sungkyu Jung"},"dateModified":"2026-09-29T00:00:00+02:00","datePublished":"2026-09-29T00:00:00+02:00","description":"Building on the James–Stein approach to leading eigenvector estimation (Goldberg and Kercheval, Proc. Natl. Acad. Sci. USA 120, e2207046120, 2023), we develop a data-adaptive augmented James–Stein shrinkage framework for estimating leading eigenvectors and eigenspaces under a generalized spiked population model, in the high-dimensional regime where the dimension $p$ and sample size $n$ grow proportionally. For each spiked eigenvector, we construct an augmented target subspace that combines auxiliary information, either from domain knowledge or prior information, with the remaining sample spiked eigenvectors. This augmentation allows information shared across the sample spiked components to be exploited while retaining a fully data-driven shrinkage…","headline":"Augmented James–Stein estimation for leading eigenvectors and eigenspaces in high dimensions","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.34315.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.34315.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Augmented James--Stein estimation for leading eigenvectors and eigenspaces in high dimensions</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Giheon Seong, Seungki Hong, Sungkyu Jung
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      29 Sep 2026
+    </div>
+  </div><div class="summary-box">Develops an augmented James-Stein shrinkage framework for high-dimensional eigenvector estimation.</div><h3>Abstract</h3>
+  <p>Building on the James–Stein approach to leading eigenvector estimation (Goldberg and Kercheval, Proc. Natl. Acad. Sci. USA 120, e2207046120, 2023), we develop a data-adaptive augmented James–Stein shrinkage framework for estimating leading eigenvectors and eigenspaces under a generalized spiked population model, in the high-dimensional regime where the dimension $p$ and sample size $n$ grow proportionally. For each spiked eigenvector, we construct an augmented target subspace that combines auxiliary information, either from domain knowledge or prior information, with the remaining sample spiked eigenvectors. This augmentation allows information shared across the sample spiked components to be exploited while retaining a fully data-driven shrinkage rule. We show that the resulting eigenvector estimator strictly improves upon standard PCA whenever the target subspace contains nonvanishing information about the population eigenvector, while asymptotically reverting to PCA when the target is uninformative. The individual estimators further yield a nested sequence of estimators for all leading spiked eigenspaces, with analogous dominance properties. The proposed estimator also strictly improves upon the existing HDLSS-motivated shrinkage estimator in the proportional high-dimensional regime. Simulation studies demonstrate substantial finite-sample gains and robustness to misspecification of the number of spikes.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.34315" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.34315" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Guided Uncertainty-Aware Robust Domain Transfer</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Guided Uncertainty-Aware Robust Domain Transfer" />
+<meta name="author" content="Xin Xiong, Zijian Guo, Tianxi Cai" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Artificial intelligence models deployed as clinical decision support tools often suffer substantial performance degradation over time and across institutions due to covariate shift, concept drift, and cross-system heterogeneity. Fully retraining complex models is frequently infeasible, particularly in EHR settings where labeled outcome data are scarce and regulatory constraints limit model modification. We propose GUARD (Guided and Uncertainty-Aware Robustness to Domain shift), a unified statistical framework for updating an existing deployed model using limited labeled target data and multiple heterogeneous source populations while guarding against future distributional shifts. GUARD formulates robust multi-source transfer learning as a semi-supervised, adversarial optimization problem anchored…" />
+<meta name="twitter:description" property="og:description" content="Artificial intelligence models deployed as clinical decision support tools often suffer substantial performance degradation over time and across institutions due to covariate shift, concept drift, and cross-system heterogeneity. Fully retraining complex models is frequently infeasible, particularly in EHR settings where labeled outcome data are scarce and regulatory constraints limit model modification. We propose GUARD (Guided and Uncertainty-Aware Robustness to Domain shift), a unified statistical framework for updating an existing deployed model using limited labeled target data and multiple heterogeneous source populations while guarding against future distributional shifts. GUARD formulates robust multi-source transfer learning as a semi-supervised, adversarial optimization problem anchored…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.35654.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.35654.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-29T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Guided Uncertainty-Aware Robust Domain Transfer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xin Xiong, Zijian Guo, Tianxi Cai"},"dateModified":"2026-09-29T00:00:00+02:00","datePublished":"2026-09-29T00:00:00+02:00","description":"Artificial intelligence models deployed as clinical decision support tools often suffer substantial performance degradation over time and across institutions due to covariate shift, concept drift, and cross-system heterogeneity. Fully retraining complex models is frequently infeasible, particularly in EHR settings where labeled outcome data are scarce and regulatory constraints limit model modification. We propose GUARD (Guided and Uncertainty-Aware Robustness to Domain shift), a unified statistical framework for updating an existing deployed model using limited labeled target data and multiple heterogeneous source populations while guarding against future distributional shifts. GUARD formulates robust multi-source transfer learning as a semi-supervised, adversarial optimization problem anchored…","headline":"Guided Uncertainty-Aware Robust Domain Transfer","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.35654.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.35654.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Guided Uncertainty-Aware Robust Domain Transfer</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Xin Xiong, Zijian Guo, Tianxi Cai
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      29 Sep 2026
+    </div>
+  </div><div class="summary-box">Proposes GUARD, a unified statistical framework for updating deployed models via transfer learning.</div><h3>Abstract</h3>
+  <p>Artificial intelligence models deployed as clinical decision support tools often suffer substantial performance degradation over time and across institutions due to covariate shift, concept drift, and cross-system heterogeneity. Fully retraining complex models is frequently infeasible, particularly in EHR settings where labeled outcome data are scarce and regulatory constraints limit model modification. We propose GUARD (Guided and Uncertainty-Aware Robustness to Domain shift), a unified statistical framework for updating an existing deployed model using limited labeled target data and multiple heterogeneous source populations while guarding against future distributional shifts. GUARD formulates robust multi-source transfer learning as a semi-supervised, adversarial optimization problem anchored at the current model, and employs double machine learning with cross-fitting to obtain debiased, efficient estimates that leverage abundant unlabeled target covariates. It then constructs an uncertainty-aware, guided group DRO estimator that combines source and target information while accounting for sampling variability in the source models. Our framework jointly provides principled robustness to domain shift, efficient semi-supervised estimation, and valid statistical inference for multi-source transfer of clinical prediction models. We demonstrate the utility of GUARD via extensive simulation experiments and a real world application to predicting future disease activity in rheumatoid arthritis from EHR data spanning more than a decade. GUARD recalibrates a pretrained model with only a small number of labeled records per year and remains accurate over multi-year horizons where target-only and standard transfer estimators degrade sharply.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.35654" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.35654" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

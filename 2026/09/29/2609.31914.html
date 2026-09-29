@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Reference-based sensitivity analysis for repeated count outcomes using negative binomial margins and a Gaussian copula</title><!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Reference-based sensitivity analysis for repeated count outcomes using negative binomial margins and a Gaussian copula" />
+<meta name="author" content="Divan Aristo Burger, Emmanuel Lesaffre, Reynaldo Martina" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reference-based multiple imputation is used in longitudinal clinical trials to assess sensitivity to assumptions about outcomes unobserved after intercurrent events. Most existing methods target continuous outcomes and use multivariate normal working models. Scheduled count outcomes require a model that preserves integer support, skewness, overdispersion, longitudinal dependence, and an exposure-based rate interpretation. We propose visit-specific negative binomial (NB) margins linked by a Gaussian copula. Covariate-adjusted log rate models define the margins, while the copula captures longitudinal dependence. For missing outcomes in the active arm after a prespecified event, termed the trigger, assigned arm continuation retains the fitted active arm marginal mean,…" />
+<meta name="twitter:description" property="og:description" content="Reference-based multiple imputation is used in longitudinal clinical trials to assess sensitivity to assumptions about outcomes unobserved after intercurrent events. Most existing methods target continuous outcomes and use multivariate normal working models. Scheduled count outcomes require a model that preserves integer support, skewness, overdispersion, longitudinal dependence, and an exposure-based rate interpretation. We propose visit-specific negative binomial (NB) margins linked by a Gaussian copula. Covariate-adjusted log rate models define the margins, while the copula captures longitudinal dependence. For missing outcomes in the active arm after a prespecified event, termed the trigger, assigned arm continuation retains the fitted active arm marginal mean,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.31914.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.31914.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-29T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Reference-based sensitivity analysis for repeated count outcomes using negative binomial margins and a Gaussian copula" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Divan Aristo Burger, Emmanuel Lesaffre, Reynaldo Martina"},"dateModified":"2026-09-29T00:00:00+02:00","datePublished":"2026-09-29T00:00:00+02:00","description":"Reference-based multiple imputation is used in longitudinal clinical trials to assess sensitivity to assumptions about outcomes unobserved after intercurrent events. Most existing methods target continuous outcomes and use multivariate normal working models. Scheduled count outcomes require a model that preserves integer support, skewness, overdispersion, longitudinal dependence, and an exposure-based rate interpretation. We propose visit-specific negative binomial (NB) margins linked by a Gaussian copula. Covariate-adjusted log rate models define the margins, while the copula captures longitudinal dependence. For missing outcomes in the active arm after a prespecified event, termed the trigger, assigned arm continuation retains the fitted active arm marginal mean,…","headline":"Reference-based sensitivity analysis for repeated count outcomes using negative binomial margins and a Gaussian copula","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.31914.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/29/2609.31914.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Reference-based sensitivity analysis for repeated count outcomes using negative binomial margins and a Gaussian copula</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Divan Aristo Burger, Emmanuel Lesaffre, Reynaldo Martina
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      29 Sep 2026
+    </div>
+  </div><div class="summary-box">A reference-based sensitivity analysis method for repeated count outcomes using negative binomial margins and a Gaussian copula.</div><h3>Abstract</h3>
+  <p>Reference-based multiple imputation is used in longitudinal clinical trials to assess sensitivity to assumptions about outcomes unobserved after intercurrent events. Most existing methods target continuous outcomes and use multivariate normal working models. Scheduled count outcomes require a model that preserves integer support, skewness, overdispersion, longitudinal dependence, and an exposure-based rate interpretation. We propose visit-specific negative binomial (NB) margins linked by a Gaussian copula. Covariate-adjusted log rate models define the margins, while the copula captures longitudinal dependence. For missing outcomes in the active arm after a prespecified event, termed the trigger, assigned arm continuation retains the fitted active arm marginal mean, jump to reference uses the corresponding reference arm marginal mean, and the intermediate rule interpolates between these means on the log rate scale. Combined with the copula, the resulting NB margins determine an imputation distribution conditional on the retained history. We account for discreteness through randomized probability integral transform augmentation and fit the model with a custom Metropolis-within-Gibbs sampler. In targeted simulations, the model recovered the generating marginal and dependence parameters with little bias. In simulations with incomplete data, treatment effect estimates were closest to the corresponding complete data estimates when the imputation rule matched the mechanism governing outcomes after the trigger. We illustrate the method using repeated incontinence episode counts from a published trial in overactive bladder. Estimated rate ratios comparing active treatment with placebo remained below 1 under all reference-based assumptions, with modest attenuation toward the null and the greatest separation between rules at the final visit.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.31914" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.31914" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
