@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Testing for Unobserved Heterogeneity in Censored Duration Models: EM Approach</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Testing for Unobserved Heterogeneity in Censored Duration Models: EM Approach" />
+<meta name="author" content="Hiroyuki Kasahara, Hirokazu Matsuyama, Katsumi Shimotsu, Shota Takeishi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ignoring unobserved heterogeneity in duration models biases parameter estimates and invalidates inference, but testing for it is non-regular: the null hypothesis lies on the boundary of the parameter space and some parameters are unidentified under the null. These features render standard asymptotic theory inapplicable. This paper develops an EM test for unobserved heterogeneity in censored Weibull duration models, building on the EM approach of Li, Chen, and Marriott (2009). The test statistic has an asymptotic null distribution equal to the square of max{0, N(0,1)}, hence critical values require neither simulation nor bootstrap, and the test accommodates covariate-dependent censoring of arbitrary…" />
+<meta name="twitter:description" property="og:description" content="Ignoring unobserved heterogeneity in duration models biases parameter estimates and invalidates inference, but testing for it is non-regular: the null hypothesis lies on the boundary of the parameter space and some parameters are unidentified under the null. These features render standard asymptotic theory inapplicable. This paper develops an EM test for unobserved heterogeneity in censored Weibull duration models, building on the EM approach of Li, Chen, and Marriott (2009). The test statistic has an asymptotic null distribution equal to the square of max{0, N(0,1)}, hence critical values require neither simulation nor bootstrap, and the test accommodates covariate-dependent censoring of arbitrary…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.36824.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.36824.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-30T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-30T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Testing for Unobserved Heterogeneity in Censored Duration Models: EM Approach" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hiroyuki Kasahara, Hirokazu Matsuyama, Katsumi Shimotsu, Shota Takeishi"},"dateModified":"2026-09-30T00:00:00+02:00","datePublished":"2026-09-30T00:00:00+02:00","description":"Ignoring unobserved heterogeneity in duration models biases parameter estimates and invalidates inference, but testing for it is non-regular: the null hypothesis lies on the boundary of the parameter space and some parameters are unidentified under the null. These features render standard asymptotic theory inapplicable. This paper develops an EM test for unobserved heterogeneity in censored Weibull duration models, building on the EM approach of Li, Chen, and Marriott (2009). The test statistic has an asymptotic null distribution equal to the square of max{0, N(0,1)}, hence critical values require neither simulation nor bootstrap, and the test accommodates covariate-dependent censoring of arbitrary…","headline":"Testing for Unobserved Heterogeneity in Censored Duration Models: EM Approach","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.36824.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.36824.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Testing for Unobserved Heterogeneity in Censored Duration Models: EM Approach</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Hiroyuki Kasahara, Hirokazu Matsuyama, Katsumi Shimotsu, Shota Takeishi
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      30 Sep 2026
+    </div>
+  </div><div class="summary-box">Develops an EM test for unobserved heterogeneity in censored Weibull duration models.</div><h3>Abstract</h3>
+  <p>Ignoring unobserved heterogeneity in duration models biases parameter estimates and invalidates inference, but testing for it is non-regular: the null hypothesis lies on the boundary of the parameter space and some parameters are unidentified under the null. These features render standard asymptotic theory inapplicable. This paper develops an EM test for unobserved heterogeneity in censored Weibull duration models, building on the EM approach of Li, Chen, and Marriott (2009). The test statistic has an asymptotic null distribution equal to the square of max{0, N(0,1)}, hence critical values require neither simulation nor bootstrap, and the test accommodates covariate-dependent censoring of arbitrary form. Monte Carlo simulations compare the EM test with the likelihood ratio test (LRT) of Cho and White (2010), information matrix tests, and Lagrange multiplier tests. The EM test has empirical size close to the nominal level for sample sizes of 500 or more, where the LRT remains markedly conservative and the other tests over-reject. Its size-adjusted power is comparable to that of the LRT and higher than that of the other tests. Because size adjustment requires knowledge of the data-generating process and is unavailable in practice, the EM test attains higher power than the LRT in most designs as the tests would actually be applied. In an application to the Stanford Heart Transplant data, the EM test rejects homogeneity in every covariate specification, whereas the LRT’s conclusion depends on a user-chosen set of admissible parameter values and on the specification.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.36824" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.36824" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

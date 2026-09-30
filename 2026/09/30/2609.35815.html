@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>How to Run Statistics over LLM Judges and Trust the Results: Calibrated Inference for Small-Sample AI Evaluation with evalstats</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="How to Run Statistics over LLM Judges and Trust the Results: Calibrated Inference for Small-Sample AI Evaluation with evalstats" />
+<meta name="author" content="Ian Arawjo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Researchers across academia increasingly base significance claims on LLM judge scores and small-sample AI evaluations. Yet without well-calibrated confidence intervals (CIs), hypothesis tests, and judge-bias corrections, such claims are unreliable. We address these issues in several contributions. First, we find that running statistics over raw LLM judge scores leads to inflated false positives: counterintuitively, for many inter-rater agreement metrics, false positive risk peaks at “almost perfect” human-LLM agreement. To help researchers understand how to run statistics over LLM judges responsibly, we present guidance and tooling for the statistical analysis of mixed human-AI judge designs, and implement nine hypothesis tests via…" />
+<meta name="twitter:description" property="og:description" content="Researchers across academia increasingly base significance claims on LLM judge scores and small-sample AI evaluations. Yet without well-calibrated confidence intervals (CIs), hypothesis tests, and judge-bias corrections, such claims are unreliable. We address these issues in several contributions. First, we find that running statistics over raw LLM judge scores leads to inflated false positives: counterintuitively, for many inter-rater agreement metrics, false positive risk peaks at “almost perfect” human-LLM agreement. To help researchers understand how to run statistics over LLM judges responsibly, we present guidance and tooling for the statistical analysis of mixed human-AI judge designs, and implement nine hypothesis tests via…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.35815.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.35815.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-30T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-30T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to Run Statistics over LLM Judges and Trust the Results: Calibrated Inference for Small-Sample AI Evaluation with evalstats" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ian Arawjo"},"dateModified":"2026-09-30T00:00:00+02:00","datePublished":"2026-09-30T00:00:00+02:00","description":"Researchers across academia increasingly base significance claims on LLM judge scores and small-sample AI evaluations. Yet without well-calibrated confidence intervals (CIs), hypothesis tests, and judge-bias corrections, such claims are unreliable. We address these issues in several contributions. First, we find that running statistics over raw LLM judge scores leads to inflated false positives: counterintuitively, for many inter-rater agreement metrics, false positive risk peaks at “almost perfect” human-LLM agreement. To help researchers understand how to run statistics over LLM judges responsibly, we present guidance and tooling for the statistical analysis of mixed human-AI judge designs, and implement nine hypothesis tests via…","headline":"How to Run Statistics over LLM Judges and Trust the Results: Calibrated Inference for Small-Sample AI Evaluation with evalstats","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.35815.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.35815.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>How to Run Statistics over LLM Judges and Trust the Results: Calibrated Inference for Small-Sample AI Evaluation with evalstats</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Ian Arawjo
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      30 Sep 2026
+    </div>
+  </div><div class="summary-box">Develops evalstats, a Python package for calibrated inference in small-sample AI evaluations.</div><h3>Abstract</h3>
+  <p>Researchers across academia increasingly base significance claims on LLM judge scores and small-sample AI evaluations. Yet without well-calibrated confidence intervals (CIs), hypothesis tests, and judge-bias corrections, such claims are unreliable. We address these issues in several contributions. First, we find that running statistics over raw LLM judge scores leads to inflated false positives: counterintuitively, for many inter-rater agreement metrics, false positive risk peaks at “almost perfect” human-LLM agreement. To help researchers understand how to run statistics over LLM judges responsibly, we present guidance and tooling for the statistical analysis of mixed human-AI judge designs, and implement nine hypothesis tests via prediction-powered inference (PPI), including the first known PPI corrections for four rank-based tests (Wilcoxon signed-rank, Mann-Whitney U, and omnibus variants). To keep PPI++ stable with small human-labeled calibration sets, we introduce bootstrap-adaptive power tuning, which shrinks the estimated weight toward a target estimated from the labeled data, and accounts for that weight’s own sampling variance. Second, through Monte Carlo simulations, we derive recommendations for what CI, p-value, and FWER correction methods to use for small-sample AI evaluations (N&lt;100), and warn researchers against bootstrap CIs. We package these recommendations into evalstats, an open-source Python package that selects calibrated methods automatically, and demonstrate it in three scenarios, including one where a real LLM judge validated at “substantial agreement” would have led a researcher to publish a spurious finding. evalstats is publicly available at https://github.com/ianarawjo/evalstats.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.35815" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.35815" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

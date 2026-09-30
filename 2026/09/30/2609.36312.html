@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Faster Estimates from Binned Test Score Data---and How Accurate They Are</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Faster Estimates from Binned Test Score Data—and How Accurate They Are" />
+<meta name="author" content="Paul T. von Hippel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Education agencies often summarize test score distributions by counting how many students scored in 3 to 5 different \textit{bins}. The HETOP model transforms bin counts into estimated means and standard deviations, assuming that scores follow a normal distribution within each school or district. Past HETOP implementations ran slowly, taking 3–60 minutes, if they finished, when given bin counts for all 1,151 districts in Texas. Our new function, \code{fast_hetop()} in the R package \pkg{binest}, runs all Texas districts in less than a second. Users can choose between maximum likelihood, empirical Bayes, sample-based or population-based estimates. Estimates are strongly correlated with true…" />
+<meta name="twitter:description" property="og:description" content="Education agencies often summarize test score distributions by counting how many students scored in 3 to 5 different \textit{bins}. The HETOP model transforms bin counts into estimated means and standard deviations, assuming that scores follow a normal distribution within each school or district. Past HETOP implementations ran slowly, taking 3–60 minutes, if they finished, when given bin counts for all 1,151 districts in Texas. Our new function, \code{fast_hetop()} in the R package \pkg{binest}, runs all Texas districts in less than a second. Users can choose between maximum likelihood, empirical Bayes, sample-based or population-based estimates. Estimates are strongly correlated with true…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.36312.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.36312.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-30T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-30T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Faster Estimates from Binned Test Score Data—and How Accurate They Are" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Paul T. von Hippel"},"dateModified":"2026-09-30T00:00:00+02:00","datePublished":"2026-09-30T00:00:00+02:00","description":"Education agencies often summarize test score distributions by counting how many students scored in 3 to 5 different \\textit{bins}. The HETOP model transforms bin counts into estimated means and standard deviations, assuming that scores follow a normal distribution within each school or district. Past HETOP implementations ran slowly, taking 3–60 minutes, if they finished, when given bin counts for all 1,151 districts in Texas. Our new function, \\code{fast_hetop()} in the R package \\pkg{binest}, runs all Texas districts in less than a second. Users can choose between maximum likelihood, empirical Bayes, sample-based or population-based estimates. Estimates are strongly correlated with true…","headline":"Faster Estimates from Binned Test Score Data—and How Accurate They Are","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.36312.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/09/30/2609.36312.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Faster Estimates from Binned Test Score Data---and How Accurate They Are</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Paul T. von Hippel
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      30 Sep 2026
+    </div>
+  </div><div class="summary-box">A new R function, fast_hetop(), estimates means and standard deviations from binned test score data.</div><h3>Abstract</h3>
+  <p>Education agencies often summarize test score distributions by counting how many students scored in 3 to 5 different \textit{bins}. The HETOP model transforms bin counts into estimated means and standard deviations, assuming that scores follow a normal distribution within each school or district. Past HETOP implementations ran slowly, taking 3–60 minutes, if they finished, when given bin counts for all 1,151 districts in Texas. Our new function, \code{fast_hetop()} in the R package \pkg{binest}, runs all Texas districts in less than a second. Users can choose between maximum likelihood, empirical Bayes, sample-based or population-based estimates. Estimates are strongly correlated with true values, but have bias when the score distribution is skewed and scores are concentrated in the lowest or highest bin.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.36312" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.36312" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
