@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Instability Floors: Separating Bias from Noise in Fairness Audits of Clinical LLM Agents with FairMedAgent</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Instability Floors: Separating Bias from Noise in Fairness Audits of Clinical LLM Agents with FairMedAgent" />
+<meta name="author" content="Rohith Reddy Bellibatlu, Manpreet Singh, Deepak Parashar, Rahul Joshi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Counterfactual fairness audits of clinical language-model agents report a flip rate: how often an action changes when only the patient’s demographic descriptor changes. Part of that rate is not demographic. A stochastic agent also changes its own action when nothing changes, and a flip rate cannot be interpreted without knowing how often. We measured it. Re-running one condition ten times over sixteen synthetic vignettes at default sampling changed a clinical agent’s action in 8.7 percent of replicate pairs, from 2.2 percent for intensive-care escalation to 17.9 percent for controlled-substance caution, an output given no operational criteria. Across six models from…" />
+<meta name="twitter:description" property="og:description" content="Counterfactual fairness audits of clinical language-model agents report a flip rate: how often an action changes when only the patient’s demographic descriptor changes. Part of that rate is not demographic. A stochastic agent also changes its own action when nothing changes, and a flip rate cannot be interpreted without knowing how often. We measured it. Re-running one condition ten times over sixteen synthetic vignettes at default sampling changed a clinical agent’s action in 8.7 percent of replicate pairs, from 2.2 percent for intensive-care escalation to 17.9 percent for controlled-substance caution, an output given no operational criteria. Across six models from…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/01/2609.03221.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/01/2609.03221.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-01T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Instability Floors: Separating Bias from Noise in Fairness Audits of Clinical LLM Agents with FairMedAgent" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rohith Reddy Bellibatlu, Manpreet Singh, Deepak Parashar, Rahul Joshi"},"dateModified":"2026-10-01T00:00:00+02:00","datePublished":"2026-10-01T00:00:00+02:00","description":"Counterfactual fairness audits of clinical language-model agents report a flip rate: how often an action changes when only the patient’s demographic descriptor changes. Part of that rate is not demographic. A stochastic agent also changes its own action when nothing changes, and a flip rate cannot be interpreted without knowing how often. We measured it. Re-running one condition ten times over sixteen synthetic vignettes at default sampling changed a clinical agent’s action in 8.7 percent of replicate pairs, from 2.2 percent for intensive-care escalation to 17.9 percent for controlled-substance caution, an output given no operational criteria. Across six models from…","headline":"Instability Floors: Separating Bias from Noise in Fairness Audits of Clinical LLM Agents with FairMedAgent","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/01/2609.03221.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/01/2609.03221.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Instability Floors: Separating Bias from Noise in Fairness Audits of Clinical LLM Agents with FairMedAgent</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Rohith Reddy Bellibatlu, Manpreet Singh, Deepak Parashar, Rahul Joshi
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      1 Oct 2026
+    </div>
+  </div><div class="summary-box">A method to measure and report the 'floor' of clinical language-model agent flip rates for fairness audits.</div><h3>Abstract</h3>
+  <p>Counterfactual fairness audits of clinical language-model agents report a flip rate: how often an action changes when only the patient’s demographic descriptor changes. Part of that rate is not demographic. A stochastic agent also changes its own action when nothing changes, and a flip rate cannot be interpreted without knowing how often. We measured it. Re-running one condition ten times over sixteen synthetic vignettes at default sampling changed a clinical agent’s action in 8.7 percent of replicate pairs, from 2.2 percent for intensive-care escalation to 17.9 percent for controlled-substance caution, an output given no operational criteria. Across six models from five vendors, pooled floors ranged from 2.5 to 23.7 percent; in this panel neither disclosed size, vendor, nor hosting ordered them. The floor depends on the decoding configuration: majority voting over five draws removed 39 percent of it (95 percent confidence interval (CI) 18 to 64); at temperature 0 three of four locally served models showed no disagreement, but a hosted model still did. We also show that, for a binary action, the flip rate expected under no demographic effect equals the floor and a real effect adds only its square, so a flip rate inside the floor is not evidence of fairness, and direction must be tested with a signed paired test. We give a four-step reporting procedure and release FairMedAgent, the harness, with its protocol, vignettes and analysis scripts, so any team can measure the floor for its own agent.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.03221" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.03221" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
