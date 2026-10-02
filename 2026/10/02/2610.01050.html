@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Gradient-Guided Density Peak Clustering</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Gradient-Guided Density Peak Clustering" />
+<meta name="author" content="Yikun Zhang, Yen-Chi Chen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Density peak clustering (DPC) connects each observation to its nearest neighbor of higher density and identifies cluster centers as high-density observations with unusually large nearest neighbor uphill shifts. The resulting uphill paths from observations to cluster centers, however, can be irregular and unstable in low-density regions, making the clustering assignments sensitive to local perturbations and obscuring the population geometry of the DPC graph. In this paper, we introduce \emph{gradient-guided density peak clustering} (GGDPC), which performs a gradient ascent step before each nearest neighbor uphill search. We develop a stability theory that relates the GGDPC graph to the gradient ascent flow…" />
+<meta name="twitter:description" property="og:description" content="Density peak clustering (DPC) connects each observation to its nearest neighbor of higher density and identifies cluster centers as high-density observations with unusually large nearest neighbor uphill shifts. The resulting uphill paths from observations to cluster centers, however, can be irregular and unstable in low-density regions, making the clustering assignments sensitive to local perturbations and obscuring the population geometry of the DPC graph. In this paper, we introduce \emph{gradient-guided density peak clustering} (GGDPC), which performs a gradient ascent step before each nearest neighbor uphill search. We develop a stability theory that relates the GGDPC graph to the gradient ascent flow…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2610.01050.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2610.01050.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Gradient-Guided Density Peak Clustering" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yikun Zhang, Yen-Chi Chen"},"dateModified":"2026-10-02T00:00:00+02:00","datePublished":"2026-10-02T00:00:00+02:00","description":"Density peak clustering (DPC) connects each observation to its nearest neighbor of higher density and identifies cluster centers as high-density observations with unusually large nearest neighbor uphill shifts. The resulting uphill paths from observations to cluster centers, however, can be irregular and unstable in low-density regions, making the clustering assignments sensitive to local perturbations and obscuring the population geometry of the DPC graph. In this paper, we introduce \\emph{gradient-guided density peak clustering} (GGDPC), which performs a gradient ascent step before each nearest neighbor uphill search. We develop a stability theory that relates the GGDPC graph to the gradient ascent flow…","headline":"Gradient-Guided Density Peak Clustering","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2610.01050.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2610.01050.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Gradient-Guided Density Peak Clustering</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Yikun Zhang, Yen-Chi Chen
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML, stat.TH
+      <span class="sep">&middot;</span>
+      2 Oct 2026
+    </div>
+  </div><div class="summary-box">A clustering algorithm that performs a gradient ascent step before nearest neighbor search.</div><h3>Abstract</h3>
+  <p>Density peak clustering (DPC) connects each observation to its nearest neighbor of higher density and identifies cluster centers as high-density observations with unusually large nearest neighbor uphill shifts. The resulting uphill paths from observations to cluster centers, however, can be irregular and unstable in low-density regions, making the clustering assignments sensitive to local perturbations and obscuring the population geometry of the DPC graph. In this paper, we introduce \emph{gradient-guided density peak clustering} (GGDPC), which performs a gradient ascent step before each nearest neighbor uphill search. We develop a stability theory that relates the GGDPC graph to the gradient ascent flow of the population density. In particular, we establish consistency of GGDPC under five complementary criteria: recovery of local modes, adjusted Rand index, dendrogram (cluster tree), path length, and waterfall measure. Together, these results provide new statistical, geometric, and topological interpretations of DPC-type clustering algorithms.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.01050" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.01050" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

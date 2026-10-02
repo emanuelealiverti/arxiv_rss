@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Casewise and Cellwise Robust Tensor-on-Tensor Regression</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Casewise and Cellwise Robust Tensor-on-Tensor Regression" />
+<meta name="author" content="Mehdi Hirari, Fabio Centofanti, Mia Hubert, Stefan Van Aelst" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tensor-on-tensor regression is an important tool for the analysis of tensor data, aiming to predict a set of response tensors from a corresponding set of predictor tensors. However, standard tensor-on-tensor regression is sensitive to outliers, which may be present in both the response and the predictor. It can be affected by casewise outliers, which are observations that deviate from the bulk of the data, as well as by cellwise outliers, which are individual anomalous cells within the tensors. The latter are particularly common due to the typically large number of cells in tensor data. This paper introduces a novel robust…" />
+<meta name="twitter:description" property="og:description" content="Tensor-on-tensor regression is an important tool for the analysis of tensor data, aiming to predict a set of response tensors from a corresponding set of predictor tensors. However, standard tensor-on-tensor regression is sensitive to outliers, which may be present in both the response and the predictor. It can be affected by casewise outliers, which are observations that deviate from the bulk of the data, as well as by cellwise outliers, which are individual anomalous cells within the tensors. The latter are particularly common due to the typically large number of cells in tensor data. This paper introduces a novel robust…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2603.25911.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2603.25911.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Casewise and Cellwise Robust Tensor-on-Tensor Regression" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mehdi Hirari, Fabio Centofanti, Mia Hubert, Stefan Van Aelst"},"dateModified":"2026-10-02T00:00:00+02:00","datePublished":"2026-10-02T00:00:00+02:00","description":"Tensor-on-tensor regression is an important tool for the analysis of tensor data, aiming to predict a set of response tensors from a corresponding set of predictor tensors. However, standard tensor-on-tensor regression is sensitive to outliers, which may be present in both the response and the predictor. It can be affected by casewise outliers, which are observations that deviate from the bulk of the data, as well as by cellwise outliers, which are individual anomalous cells within the tensors. The latter are particularly common due to the typically large number of cells in tensor data. This paper introduces a novel robust…","headline":"Casewise and Cellwise Robust Tensor-on-Tensor Regression","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2603.25911.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2603.25911.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Casewise and Cellwise Robust Tensor-on-Tensor Regression</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Mehdi Hirari, Fabio Centofanti, Mia Hubert, Stefan Van Aelst
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      2 Oct 2026
+    </div>
+  </div><div class="summary-box">A robust tensor-on-tensor regression method is introduced to handle outliers and missing values.</div><h3>Abstract</h3>
+  <p>Tensor-on-tensor regression is an important tool for the analysis of tensor data, aiming to predict a set of response tensors from a corresponding set of predictor tensors. However, standard tensor-on-tensor regression is sensitive to outliers, which may be present in both the response and the predictor. It can be affected by casewise outliers, which are observations that deviate from the bulk of the data, as well as by cellwise outliers, which are individual anomalous cells within the tensors. The latter are particularly common due to the typically large number of cells in tensor data. This paper introduces a novel robust tensor-on-tensor regression method, named ROTOT, that can handle both types of outliers simultaneously, and can cope with missing values as well. This method uses a single loss function to reduce the influence of both casewise and cellwise outliers in the response. The outliers in the predictor are handled using a robust Multilinear Principal Component Analysis method. Graphical diagnostic tools are also proposed to visualize the different types of detected outliers. The performance of ROTOT is evaluated through extensive simulations and further illustrated using the Labeled Faces in the Wild dataset, where ROTOT is applied to predict facial attributes.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2603.25911" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2603.25911" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

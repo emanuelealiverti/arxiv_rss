@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Multi-Fidelity Tensor Emulator for Spatiotemporal Outputs: Emulation of Arctic Sea-Ice Dynamics</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Multi-Fidelity Tensor Emulator for Spatiotemporal Outputs: Emulation of Arctic Sea-Ice Dynamics" />
+<meta name="author" content="Tristan Contant, Yawen Guan, Ander Wilson, Adrian K. Turner, Deborah Sulsky" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Numerical models are widely used to simulate the Earth system, but they are computationally expensive and often depend on many uncertain input parameters. Calibration and uncertainty quantification require running them across many input configurations, so their effective use is costly. Statistical emulation provides a practical alternative for efficiently exploring model behavior. We are motivated by the Arctic sea-ice component of the Energy Exascale Earth System Model (MPAS-Seaice), which generates large spatiotemporal outputs at multiple spatial resolutions, with high-resolution (or high-fidelity, HF) simulations being more accurate but computationally more expensive than lower-resolution (low-fidelity, LF) simulations. Multi-fidelity (MF) emulation integrates information across…" />
+<meta name="twitter:description" property="og:description" content="Numerical models are widely used to simulate the Earth system, but they are computationally expensive and often depend on many uncertain input parameters. Calibration and uncertainty quantification require running them across many input configurations, so their effective use is costly. Statistical emulation provides a practical alternative for efficiently exploring model behavior. We are motivated by the Arctic sea-ice component of the Energy Exascale Earth System Model (MPAS-Seaice), which generates large spatiotemporal outputs at multiple spatial resolutions, with high-resolution (or high-fidelity, HF) simulations being more accurate but computationally more expensive than lower-resolution (low-fidelity, LF) simulations. Multi-fidelity (MF) emulation integrates information across…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2603.04697.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2603.04697.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-02T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-02T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Multi-Fidelity Tensor Emulator for Spatiotemporal Outputs: Emulation of Arctic Sea-Ice Dynamics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tristan Contant, Yawen Guan, Ander Wilson, Adrian K. Turner, Deborah Sulsky"},"dateModified":"2026-10-02T00:00:00+02:00","datePublished":"2026-10-02T00:00:00+02:00","description":"Numerical models are widely used to simulate the Earth system, but they are computationally expensive and often depend on many uncertain input parameters. Calibration and uncertainty quantification require running them across many input configurations, so their effective use is costly. Statistical emulation provides a practical alternative for efficiently exploring model behavior. We are motivated by the Arctic sea-ice component of the Energy Exascale Earth System Model (MPAS-Seaice), which generates large spatiotemporal outputs at multiple spatial resolutions, with high-resolution (or high-fidelity, HF) simulations being more accurate but computationally more expensive than lower-resolution (low-fidelity, LF) simulations. Multi-fidelity (MF) emulation integrates information across…","headline":"A Multi-Fidelity Tensor Emulator for Spatiotemporal Outputs: Emulation of Arctic Sea-Ice Dynamics","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2603.04697.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/02/2603.04697.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Multi-Fidelity Tensor Emulator for Spatiotemporal Outputs: Emulation of Arctic Sea-Ice Dynamics</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Tristan Contant, Yawen Guan, Ander Wilson, Adrian K. Turner, Deborah Sulsky
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      2 Oct 2026
+    </div>
+  </div><div class="summary-box">Develops a multi-fidelity tensor emulator for spatiotemporal outputs using Gaussian process priors and tensor decomposition.</div><h3>Abstract</h3>
+  <p>Numerical models are widely used to simulate the Earth system, but they are computationally expensive and often depend on many uncertain input parameters. Calibration and uncertainty quantification require running them across many input configurations, so their effective use is costly. Statistical emulation provides a practical alternative for efficiently exploring model behavior. We are motivated by the Arctic sea-ice component of the Energy Exascale Earth System Model (MPAS-Seaice), which generates large spatiotemporal outputs at multiple spatial resolutions, with high-resolution (or high-fidelity, HF) simulations being more accurate but computationally more expensive than lower-resolution (low-fidelity, LF) simulations. Multi-fidelity (MF) emulation integrates information across resolutions to construct efficient and accurate surrogate models, yet existing approaches struggle to scale to large spatiotemporal data. We develop a MF emulator that combines tensor decomposition for dimensionality reduction, Gaussian process priors for flexible function approximation, and an additive discrepancy model to capture systematic differences between LF and HF data. The proposed framework scales to complex spatiotemporal fields while keeping predictions accurate and uncertainty well calibrated. In the MPAS-Seaice analysis, it attains the lowest prediction error of all emulators considered, including separable-covariance and neural-network approaches, especially throughout the summer melt season, when sea-ice concentration varies most across model settings and matters most scientifically, and best reproduces the spatiotemporal dependence of the output. By combining many inexpensive low-resolution runs with a few expensive high-resolution ones, the emulator substantially reduces the simulation cost of exploring model behavior, and suits large-scale studies involving complex physical models.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2603.04697" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2603.04697" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
