@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Parameter uncertainty in dynamical models: a practical identifiability index</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Parameter uncertainty in dynamical models: a practical identifiability index" />
+<meta name="author" content="Hamed Karami, Alexandra Smirnova, Sunmi Lee, Gerardo Chowell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ordinary differential equation models are widely used to describe how complex systems change over time, but reliable conclusions depend on how well their parameters can be estimated from limited, noisy data. Common measures of uncertainty, such as confidence intervals and coefficients of variation, do not provide a single, easy-to-interpret scale for comparing uncertainty across parameters, models, error structures, and data-collection designs. We introduce the Practical Identifiability Index (PII), a unit-free, scale-invariant measure of uncertainty for individual positive-valued parameters, defined as the base-10 logarithm of the ratio between the upper and lower bounds of a confidence interval; a value of 1…" />
+<meta name="twitter:description" property="og:description" content="Ordinary differential equation models are widely used to describe how complex systems change over time, but reliable conclusions depend on how well their parameters can be estimated from limited, noisy data. Common measures of uncertainty, such as confidence intervals and coefficients of variation, do not provide a single, easy-to-interpret scale for comparing uncertainty across parameters, models, error structures, and data-collection designs. We introduce the Practical Identifiability Index (PII), a unit-free, scale-invariant measure of uncertainty for individual positive-valued parameters, defined as the base-10 logarithm of the ratio between the upper and lower bounds of a confidence interval; a value of 1…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/05/2606.08475.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/05/2606.08475.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-05T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-05T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Parameter uncertainty in dynamical models: a practical identifiability index" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hamed Karami, Alexandra Smirnova, Sunmi Lee, Gerardo Chowell"},"dateModified":"2026-10-05T00:00:00+02:00","datePublished":"2026-10-05T00:00:00+02:00","description":"Ordinary differential equation models are widely used to describe how complex systems change over time, but reliable conclusions depend on how well their parameters can be estimated from limited, noisy data. Common measures of uncertainty, such as confidence intervals and coefficients of variation, do not provide a single, easy-to-interpret scale for comparing uncertainty across parameters, models, error structures, and data-collection designs. We introduce the Practical Identifiability Index (PII), a unit-free, scale-invariant measure of uncertainty for individual positive-valued parameters, defined as the base-10 logarithm of the ratio between the upper and lower bounds of a confidence interval; a value of 1…","headline":"Parameter uncertainty in dynamical models: a practical identifiability index","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/05/2606.08475.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/05/2606.08475.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Parameter uncertainty in dynamical models: a practical identifiability index</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Hamed Karami, Alexandra Smirnova, Sunmi Lee, Gerardo Chowell
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      5 Oct 2026
+    </div>
+  </div><div class="summary-box">A Practical Identifiability Index (PII) is introduced for measuring parameter uncertainty in dynamical models.</div><h3>Abstract</h3>
+  <p>Ordinary differential equation models are widely used to describe how complex systems change over time, but reliable conclusions depend on how well their parameters can be estimated from limited, noisy data. Common measures of uncertainty, such as confidence intervals and coefficients of variation, do not provide a single, easy-to-interpret scale for comparing uncertainty across parameters, models, error structures, and data-collection designs. We introduce the Practical Identifiability Index (PII), a unit-free, scale-invariant measure of uncertainty for individual positive-valued parameters, defined as the base-10 logarithm of the ratio between the upper and lower bounds of a confidence interval; a value of 1 corresponds to a tenfold ratio between the interval bounds. We study PII using parametric bootstrap experiments in growth and compartmental epidemic models. PII decreases as longer data windows are used for model fitting and tends to increase with observation noise (although not uniformly across settings) and when several parameters must be estimated together. PII remains larger for parameters associated with latent or indirectly observed processes, while adding more measured quantities substantially improves estimation of progression and recovery parameters. We then apply PII to daily influenza incidence from the 1918 San Francisco epidemic. As a benchmark, PII and normalized confidence-interval width (NCIW) with equivalent thresholds give the same classification in 134 of 135 model, scenario, parameter, and error-structure combinations (99.3% agreement), while PII expresses uncertainty directly as a multiplicative range, without normalization by the parameter estimate. PII is meant to complement, rather than replace, other identifiability and uncertainty analyses, and should be considered together with empirical coverage and other diagnostic measures.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.08475" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.08475" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Univariate-Guided Sparse Regression for Ultra-High-Dimensional Data</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian Univariate-Guided Sparse Regression for Ultra-High-Dimensional Data" />
+<meta name="author" content="Priyam Das" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ultra-high-dimensional genomic studies require simultaneous identification of sparse signals, control of spurious discoveries, and computationally feasible inference when the number of predictors can reach hundreds of thousands or more. We propose Bayesian Univariate-Guided Sparse Regression (BUGS), a global–local shrinkage framework that incorporates marginal association information directly into the prior through continuous modulation of shrinkage. By embedding univariate guidance within the nonlinear variance structure of a regularized horseshoe prior, BUGS adaptively differentiates predictors with strong and weak marginal evidence without relying on hard screening. We establish theoretical results on prior concentration, posterior contraction, and guidance-induced shrinkage separation, and characterize the behavior…" />
+<meta name="twitter:description" property="og:description" content="Ultra-high-dimensional genomic studies require simultaneous identification of sparse signals, control of spurious discoveries, and computationally feasible inference when the number of predictors can reach hundreds of thousands or more. We propose Bayesian Univariate-Guided Sparse Regression (BUGS), a global–local shrinkage framework that incorporates marginal association information directly into the prior through continuous modulation of shrinkage. By embedding univariate guidance within the nonlinear variance structure of a regularized horseshoe prior, BUGS adaptively differentiates predictors with strong and weak marginal evidence without relying on hard screening. We establish theoretical results on prior concentration, posterior contraction, and guidance-induced shrinkage separation, and characterize the behavior…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/05/2604.04964.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/05/2604.04964.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-05T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-05T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian Univariate-Guided Sparse Regression for Ultra-High-Dimensional Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Priyam Das"},"dateModified":"2026-10-05T00:00:00+02:00","datePublished":"2026-10-05T00:00:00+02:00","description":"Ultra-high-dimensional genomic studies require simultaneous identification of sparse signals, control of spurious discoveries, and computationally feasible inference when the number of predictors can reach hundreds of thousands or more. We propose Bayesian Univariate-Guided Sparse Regression (BUGS), a global–local shrinkage framework that incorporates marginal association information directly into the prior through continuous modulation of shrinkage. By embedding univariate guidance within the nonlinear variance structure of a regularized horseshoe prior, BUGS adaptively differentiates predictors with strong and weak marginal evidence without relying on hard screening. We establish theoretical results on prior concentration, posterior contraction, and guidance-induced shrinkage separation, and characterize the behavior…","headline":"Bayesian Univariate-Guided Sparse Regression for Ultra-High-Dimensional Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/05/2604.04964.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/05/2604.04964.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian Univariate-Guided Sparse Regression for Ultra-High-Dimensional Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Priyam Das
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      5 Oct 2026
+    </div>
+  </div><div class="summary-box">Proposes Bayesian Univariate-Guided Sparse Regression for ultra-high-dimensional genomic data.</div><h3>Abstract</h3>
+  <table>
+  <tbody>
+    <tr>
+      <td>Ultra-high-dimensional genomic studies require simultaneous identification of sparse signals, control of spurious discoveries, and computationally feasible inference when the number of predictors can reach hundreds of thousands or more. We propose Bayesian Univariate-Guided Sparse Regression (BUGS), a global–local shrinkage framework that incorporates marginal association information directly into the prior through continuous modulation of shrinkage. By embedding univariate guidance within the nonlinear variance structure of a regularized horseshoe prior, BUGS adaptively differentiates predictors with strong and weak marginal evidence without relying on hard screening. We establish theoretical results on prior concentration, posterior contraction, and guidance-induced shrinkage separation, and characterize the behavior of the prior under uninformative guidance. For ultra-high-dimensional problems, we develop BUGS-Active, an active-set MCMC approximation that reduces the cost of local-scale updates from $O(p)$ to $O(</td>
+      <td>A_n</td>
+      <td>)$ while retaining global coefficient updates. Simulations under independent and correlated designs show strong signal recovery and substantially lower empirical false discovery rates relative to competing methods. We apply BUGS-Active to a DNA methylation study of developmental age with $n=1051$ samples and approximately $850{,}000$ CpG sites, jointly analyzing all probes without pre-screening. The analysis yields strong out-of-sample prediction and a sparse set of age-associated CpG sites with stable posterior support. These results illustrate the practical value of marginally guided Bayesian shrinkage for large-scale genomic regression.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2604.04964" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2604.04964" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
