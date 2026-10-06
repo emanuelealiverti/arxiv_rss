@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Rank-one variance inflation in polynomial estimation of signal parameters with a sign-preserving fractional-power basis</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Rank-one variance inflation in polynomial estimation of signal parameters with a sign-preserving fractional-power basis" />
+<meta name="author" content="Serhii Zabolotnii" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The polynomial maximization method estimates signal parameters in non-Gaussian noise from a finite description of the noise by its moments and cumulants, without a density. Known accuracy results assume that these noise characteristics are known, or use a design in which estimating them jointly costs no accuracy. In practice they are estimated from the residuals of a preliminary fit, and the effect of this substitution on accuracy is unknown. We treat the feasible scheme as a two-step estimator and, for a general smooth signal model in a fixed design, find the increment of its asymptotic covariance in closed form: $\Sigma_{\rm…" />
+<meta name="twitter:description" property="og:description" content="The polynomial maximization method estimates signal parameters in non-Gaussian noise from a finite description of the noise by its moments and cumulants, without a density. Known accuracy results assume that these noise characteristics are known, or use a design in which estimating them jointly costs no accuracy. In practice they are estimated from the residuals of a preliminary fit, and the effect of this substitution on accuracy is unknown. We treat the feasible scheme as a two-step estimator and, for a general smooth signal model in a fixed design, find the increment of its asymptotic covariance in closed form: $\Sigma_{\rm…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05511.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05511.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-06T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-06T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Rank-one variance inflation in polynomial estimation of signal parameters with a sign-preserving fractional-power basis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Serhii Zabolotnii"},"dateModified":"2026-10-06T00:00:00+02:00","datePublished":"2026-10-06T00:00:00+02:00","description":"The polynomial maximization method estimates signal parameters in non-Gaussian noise from a finite description of the noise by its moments and cumulants, without a density. Known accuracy results assume that these noise characteristics are known, or use a design in which estimating them jointly costs no accuracy. In practice they are estimated from the residuals of a preliminary fit, and the effect of this substitution on accuracy is unknown. We treat the feasible scheme as a two-step estimator and, for a general smooth signal model in a fixed design, find the increment of its asymptotic covariance in closed form: $\\Sigma_{\\rm…","headline":"Rank-one variance inflation in polynomial estimation of signal parameters with a sign-preserving fractional-power basis","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05511.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05511.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Rank-one variance inflation in polynomial estimation of signal parameters with a sign-preserving fractional-power basis</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Serhii Zabolotnii
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      6 Oct 2026
+    </div>
+  </div><div class="summary-box">Derives the increment of asymptotic covariance for a two-step estimator in signal parameter estimation.</div><h3>Abstract</h3>
+  <p>The polynomial maximization method estimates signal parameters in non-Gaussian noise from a finite description of the noise by its moments and cumulants, without a density. Known accuracy results assume that these noise characteristics are known, or use a design in which estimating them jointly costs no accuracy. In practice they are estimated from the residuals of a preliminary fit, and the effect of this substitution on accuracy is unknown. We treat the feasible scheme as a two-step estimator and, for a general smooth signal model in a fixed design, find the increment of its asymptotic covariance in closed form: $\Sigma_{\rm fe}-\Sigma_{\rm or}=c_2(1-g_{\rm or}) Q^{-1}\bar{d}\bar{d}^{\top}Q^{-1}$, a positive semidefinite matrix of rank at most one. Here $c_2$ is the noise variance, $g_{\rm or}\le 1$ the oracle variance reduction factor, and $Q$ and $\bar{d}$ the second-moment matrix and mean of the signal gradient over the design. Estimating the fractional moments that form the weights costs no first-order accuracy, because that block is orthogonal; the whole increment comes from estimating the sign-preserving centering means. The increment lies along the single direction $Q^{-1}\bar{d}$, so linear combinations of the parameters orthogonal to it keep oracle accuracy. In the trace metric the variance reduction factor becomes $g_{\rm fe}=g_{\rm or}+(1-g_{\rm or})R_D$, where $R_D=|Q^{-1}\bar{d}|^2/{\rm tr} Q^{-1}$ depends on the design alone. We give four sufficient conditions for first-order oracle equivalence; noise symmetry is not among them. Monte Carlo experiments with a harmonic signal confirm the direction and size of the increment. A covariance estimate that ignores the increment undercovers where non-Gaussianity gives the largest gain, symmetric noise included.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.05511" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.05511" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

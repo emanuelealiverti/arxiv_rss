@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Calculating the Expected Value of Sample Information for Observational Studies affected by Confounding</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Calculating the Expected Value of Sample Information for Observational Studies affected by Confounding" />
+<meta name="author" content="Luca Benetti, Gianluca Baio, Anna Heath" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Background: The Expected Value of Sample Information (EVSI) quantifies the value of collecting additional evidence to inform a health economic model. Existing EVSI methods typically assume idealized data collection mechanisms, most commonly randomized controlled trials (RCTs). However, in many realistic contexts, additional evidence comes from observational studies, which are subject to confounding or other bias. In this work, we define a methodology to calculate EVSI when additional data are observational and confounded. Methods: First, we define a simulation-based framework in which confounded observational data are generated through Inverse Target Trial Emulation (ITTE), a methodology that generates observational data with controlled…" />
+<meta name="twitter:description" property="og:description" content="Background: The Expected Value of Sample Information (EVSI) quantifies the value of collecting additional evidence to inform a health economic model. Existing EVSI methods typically assume idealized data collection mechanisms, most commonly randomized controlled trials (RCTs). However, in many realistic contexts, additional evidence comes from observational studies, which are subject to confounding or other bias. In this work, we define a methodology to calculate EVSI when additional data are observational and confounded. Methods: First, we define a simulation-based framework in which confounded observational data are generated through Inverse Target Trial Emulation (ITTE), a methodology that generates observational data with controlled…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.06377.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.06377.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-06T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-06T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Calculating the Expected Value of Sample Information for Observational Studies affected by Confounding" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Luca Benetti, Gianluca Baio, Anna Heath"},"dateModified":"2026-10-06T00:00:00+02:00","datePublished":"2026-10-06T00:00:00+02:00","description":"Background: The Expected Value of Sample Information (EVSI) quantifies the value of collecting additional evidence to inform a health economic model. Existing EVSI methods typically assume idealized data collection mechanisms, most commonly randomized controlled trials (RCTs). However, in many realistic contexts, additional evidence comes from observational studies, which are subject to confounding or other bias. In this work, we define a methodology to calculate EVSI when additional data are observational and confounded. Methods: First, we define a simulation-based framework in which confounded observational data are generated through Inverse Target Trial Emulation (ITTE), a methodology that generates observational data with controlled…","headline":"Calculating the Expected Value of Sample Information for Observational Studies affected by Confounding","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.06377.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.06377.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Calculating the Expected Value of Sample Information for Observational Studies affected by Confounding</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Luca Benetti, Gianluca Baio, Anna Heath
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      6 Oct 2026
+    </div>
+  </div><div class="summary-box">A methodology is proposed to calculate EVSI from observational data with confounding using inverse probability weighting.</div><h3>Abstract</h3>
+  <p>Background: The Expected Value of Sample Information (EVSI) quantifies the value of collecting additional evidence to inform a health economic model. Existing EVSI methods typically assume idealized data collection mechanisms, most commonly randomized controlled trials (RCTs). However, in many realistic contexts, additional evidence comes from observational studies, which are subject to confounding or other bias. In this work, we define a methodology to calculate EVSI when additional data are observational and confounded. Methods: First, we define a simulation-based framework in which confounded observational data are generated through Inverse Target Trial Emulation (ITTE), a methodology that generates observational data with controlled levels of confounding starting from initial level data or prior information on population structure. Then, we apply inverse probability weighting (IPW) to obtain an adjusted summary statistic of the data targeting the corresponding randomized estimand. EVSI is finally computed using a regression based approach. Moreover, we propose a computationally efficient method to determine the sample size required to recover the EVSI achievable under an idealized randomized design. Results: We apply the methodology to two health economic models: a Normal Normal conjugate model and a chemotherapy treatment model combining a decision tree and Markov structure. We show that EVSI computed from observational data, even after adjustment, is lower than EVSI based on randomized data. The loss in EVSI increases with the level of induced confounding. Conclusions: This methodology extends EVSI when future evidence is expected to be observational and affected by confounding, enabling value-of-information analysis in more realistic and feasible data collection scenarios. It also provides a principled approach to sample size planning when observational evidence is anticipated.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.06377" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.06377" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

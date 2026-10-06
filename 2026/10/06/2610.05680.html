@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Instrumental Variable Analysis in Underrepresented Subpopulations Powered by Knowledge Transfer</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Instrumental Variable Analysis in Underrepresented Subpopulations Powered by Knowledge Transfer" />
+<meta name="author" content="Ruoyu Wang, Zijian Xu, Zijian Guo, Xihong Liu, Molei Liu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Instrumental variable (IV) analysis in underrepresented target populations suffers from low statistical efficiency and weak IV bias due to limited sample size. Leveraging external knowledge from a source population with larger samples offers an appealing solution to this problem. We propose in this paper the KNowledge-powered IV Estimator for underrepresented Subpopulations (KNIVES), a framework that enhances the IV analysis for underrepresented subpopulations by transferring knowledge from external source population data. KNIVES constructs a knowledge-transferred IV score by combining multiple candidate models through an effective signal-to-noise ratio criterion tailored to the downstream IV estimator, rather than prediction accuracy alone. To address…" />
+<meta name="twitter:description" property="og:description" content="Instrumental variable (IV) analysis in underrepresented target populations suffers from low statistical efficiency and weak IV bias due to limited sample size. Leveraging external knowledge from a source population with larger samples offers an appealing solution to this problem. We propose in this paper the KNowledge-powered IV Estimator for underrepresented Subpopulations (KNIVES), a framework that enhances the IV analysis for underrepresented subpopulations by transferring knowledge from external source population data. KNIVES constructs a knowledge-transferred IV score by combining multiple candidate models through an effective signal-to-noise ratio criterion tailored to the downstream IV estimator, rather than prediction accuracy alone. To address…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05680.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05680.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-06T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-06T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Instrumental Variable Analysis in Underrepresented Subpopulations Powered by Knowledge Transfer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ruoyu Wang, Zijian Xu, Zijian Guo, Xihong Liu, Molei Liu"},"dateModified":"2026-10-06T00:00:00+02:00","datePublished":"2026-10-06T00:00:00+02:00","description":"Instrumental variable (IV) analysis in underrepresented target populations suffers from low statistical efficiency and weak IV bias due to limited sample size. Leveraging external knowledge from a source population with larger samples offers an appealing solution to this problem. We propose in this paper the KNowledge-powered IV Estimator for underrepresented Subpopulations (KNIVES), a framework that enhances the IV analysis for underrepresented subpopulations by transferring knowledge from external source population data. KNIVES constructs a knowledge-transferred IV score by combining multiple candidate models through an effective signal-to-noise ratio criterion tailored to the downstream IV estimator, rather than prediction accuracy alone. To address…","headline":"Instrumental Variable Analysis in Underrepresented Subpopulations Powered by Knowledge Transfer","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05680.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05680.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Instrumental Variable Analysis in Underrepresented Subpopulations Powered by Knowledge Transfer</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Ruoyu Wang, Zijian Xu, Zijian Guo, Xihong Liu, Molei Liu
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      6 Oct 2026
+    </div>
+  </div><div class="summary-box">A framework for instrumental variable analysis in underrepresented subpopulations using knowledge transfer from external source populations.</div><h3>Abstract</h3>
+  <p>Instrumental variable (IV) analysis in underrepresented target populations suffers from low statistical efficiency and weak IV bias due to limited sample size. Leveraging external knowledge from a source population with larger samples offers an appealing solution to this problem. We propose in this paper the KNowledge-powered IV Estimator for underrepresented Subpopulations (KNIVES), a framework that enhances the IV analysis for underrepresented subpopulations by transferring knowledge from external source population data. KNIVES constructs a knowledge-transferred IV score by combining multiple candidate models through an effective signal-to-noise ratio criterion tailored to the downstream IV estimator, rather than prediction accuracy alone. To address weak associations between the IV score and the exposure, as well as a high correlation among candidate models in the target population, KNIVES employs a bias correction technique to mitigate the resulting bias and ensure robust performance. Theoretical investigation demonstrates that our method is robust to weak IV bias and achieves improved efficiency compared to the causal effect estimator based on any single candidate model. In addition, KNIVES avoids negative transfer by guaranteeing that its asymptotic variance is not larger than that of the estimator relying solely on target population data. Extensive numerical studies demonstrate the superior finite-sample performance of our method over existing methods. Two Mendelian randomization studies on ethnic minority subgroups in UK Biobank data further illustrate the advantages of our method.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.05680" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.05680" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Semi-Supervised Kernel Ridge Fréchet Regression</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Semi-Supervised Kernel Ridge Fréchet Regression" />
+<meta name="author" content="Jaehee Seo, Kwangho Kim, Jisu Kim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Fr&#39;echet regression provides a framework for predicting random object-valued responses by minimizing the conditional expected squared distances. We propose semi-supervised kernel ridge Fr&#39;echet regression (SS-KRFR) to exploit unlabeled covariates when labeled samples are scarce. The method learns kernel spectral features from both labeled and unlabeled covariates, then uses labeled responses to estimate the conditional Fr&#39;echet function by ridge regression. We derive prediction error bounds that distinguish the roles of labeled and unlabeled samples, and establish polynomial convergence rates under suitable conditions. Under additional kernel assumptions, a sharper analysis relaxes the sample-size requirements for learning the features. We also develop hybrid…" />
+<meta name="twitter:description" property="og:description" content="Fr&#39;echet regression provides a framework for predicting random object-valued responses by minimizing the conditional expected squared distances. We propose semi-supervised kernel ridge Fr&#39;echet regression (SS-KRFR) to exploit unlabeled covariates when labeled samples are scarce. The method learns kernel spectral features from both labeled and unlabeled covariates, then uses labeled responses to estimate the conditional Fr&#39;echet function by ridge regression. We derive prediction error bounds that distinguish the roles of labeled and unlabeled samples, and establish polynomial convergence rates under suitable conditions. Under additional kernel assumptions, a sharper analysis relaxes the sample-size requirements for learning the features. We also develop hybrid…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05388.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05388.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-06T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-06T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Semi-Supervised Kernel Ridge Fréchet Regression" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jaehee Seo, Kwangho Kim, Jisu Kim"},"dateModified":"2026-10-06T00:00:00+02:00","datePublished":"2026-10-06T00:00:00+02:00","description":"Fr\u0026#39;echet regression provides a framework for predicting random object-valued responses by minimizing the conditional expected squared distances. We propose semi-supervised kernel ridge Fr\u0026#39;echet regression (SS-KRFR) to exploit unlabeled covariates when labeled samples are scarce. The method learns kernel spectral features from both labeled and unlabeled covariates, then uses labeled responses to estimate the conditional Fr\u0026#39;echet function by ridge regression. We derive prediction error bounds that distinguish the roles of labeled and unlabeled samples, and establish polynomial convergence rates under suitable conditions. Under additional kernel assumptions, a sharper analysis relaxes the sample-size requirements for learning the features. We also develop hybrid…","headline":"Semi-Supervised Kernel Ridge Fréchet Regression","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05388.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.05388.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Semi-Supervised Kernel Ridge Fréchet Regression</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Jaehee Seo, Kwangho Kim, Jisu Kim
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      6 Oct 2026
+    </div>
+  </div><div class="summary-box">Proposes semi-supervised kernel ridge Fréchet regression for predicting random object-valued responses.</div><h3>Abstract</h3>
+  <p>Fr'echet regression provides a framework for predicting random object-valued responses by minimizing the conditional expected squared distances. We propose semi-supervised kernel ridge Fr'echet regression (SS-KRFR) to exploit unlabeled covariates when labeled samples are scarce. The method learns kernel spectral features from both labeled and unlabeled covariates, then uses labeled responses to estimate the conditional Fr'echet function by ridge regression. We derive prediction error bounds that distinguish the roles of labeled and unlabeled samples, and establish polynomial convergence rates under suitable conditions. Under additional kernel assumptions, a sharper analysis relaxes the sample-size requirements for learning the features. We also develop hybrid methods that combine features, predictions, or both from models fitted with and without unlabeled covariates, and establish hybrid stability uniformly over mixing weights in Hadamard spaces at common tuning, with a separate rate guarantee for prediction mixing. Simulations and an EEG application show semi-supervised gain and improvements over competing Fr'echet regression methods in several settings.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.05388" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.05388" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

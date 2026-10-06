@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Gradient-Free Sampling from Generative Models via Stochastic Bounded Extremum Seeking</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Gradient-Free Sampling from Generative Models via Stochastic Bounded Extremum Seeking" />
+<meta name="author" content="Alexander Scheinker" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce a sampling approach for energy- and score-based generative models that requires no gradient evaluations of the model. Replacing the drift term that would normally contain the score $\nabla_\mathbf{x} \log p_\theta(\bf{x})$ with a high-frequency dithered cosine of the model’s \textit{value}, $\sqrt{\alpha\omega}\,\cos(\omega t + k \log p_\theta(\bf{x}))$, produces, in the high-frequency averaging limit, Langevin Markov chain Monte Carlo for energy-based models and the reverse-time SDE of score-based diffusion. We prove that trajectories of the dithered It\^{o} SDE converge to those of the target SDE, driven by the same Brownian motion, uniformly on compact time intervals in probability, by an averaging…" />
+<meta name="twitter:description" property="og:description" content="We introduce a sampling approach for energy- and score-based generative models that requires no gradient evaluations of the model. Replacing the drift term that would normally contain the score $\nabla_\mathbf{x} \log p_\theta(\bf{x})$ with a high-frequency dithered cosine of the model’s \textit{value}, $\sqrt{\alpha\omega}\,\cos(\omega t + k \log p_\theta(\bf{x}))$, produces, in the high-frequency averaging limit, Langevin Markov chain Monte Carlo for energy-based models and the reverse-time SDE of score-based diffusion. We prove that trajectories of the dithered It\^{o} SDE converge to those of the target SDE, driven by the same Brownian motion, uniformly on compact time intervals in probability, by an averaging…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.04568.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.04568.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-06T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-06T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Gradient-Free Sampling from Generative Models via Stochastic Bounded Extremum Seeking" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alexander Scheinker"},"dateModified":"2026-10-06T00:00:00+02:00","datePublished":"2026-10-06T00:00:00+02:00","description":"We introduce a sampling approach for energy- and score-based generative models that requires no gradient evaluations of the model. Replacing the drift term that would normally contain the score $\\nabla_\\mathbf{x} \\log p_\\theta(\\bf{x})$ with a high-frequency dithered cosine of the model’s \\textit{value}, $\\sqrt{\\alpha\\omega}\\,\\cos(\\omega t + k \\log p_\\theta(\\bf{x}))$, produces, in the high-frequency averaging limit, Langevin Markov chain Monte Carlo for energy-based models and the reverse-time SDE of score-based diffusion. We prove that trajectories of the dithered It\\^{o} SDE converge to those of the target SDE, driven by the same Brownian motion, uniformly on compact time intervals in probability, by an averaging…","headline":"Gradient-Free Sampling from Generative Models via Stochastic Bounded Extremum Seeking","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.04568.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2610.04568.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Gradient-Free Sampling from Generative Models via Stochastic Bounded Extremum Seeking</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Alexander Scheinker
+      <span class="sep">&middot;</span>
+      stat.ML, stat.CO
+      <span class="sep">&middot;</span>
+      6 Oct 2026
+    </div>
+  </div><div class="summary-box">A gradient-free sampling method for generative models using stochastic bounded extremum seeking.</div><h3>Abstract</h3>
+  <p>We introduce a sampling approach for energy- and score-based generative models that requires no gradient evaluations of the model. Replacing the drift term that would normally contain the score $\nabla_\mathbf{x} \log p_\theta(\bf{x})$ with a high-frequency dithered cosine of the model’s \textit{value}, $\sqrt{\alpha\omega}\,\cos(\omega t + k \log p_\theta(\bf{x}))$, produces, in the high-frequency averaging limit, Langevin Markov chain Monte Carlo for energy-based models and the reverse-time SDE of score-based diffusion. We prove that trajectories of the dithered It\^{o} SDE converge to those of the target SDE, driven by the same Brownian motion, uniformly on compact time intervals in probability, by an averaging argument that extends bounded extremum seeking (ES) to It\^{o} processes, with an explicit $O(\omega^{-1/2})$ mean-square rate under global bounds. The approach is not confined to smooth targets: it extends to $C^{1,1}$ energies with discontinuous curvature (without ellipticity requirement) and to Sobolev energies whose Hessians exist only off measure zero sets; for Lipschitz energies with gradient kinks the averaged limit remains well posed; the Krylov-R"ockner integrability class is the boundary of provability. The approach provides a hard \textit{a priori} bound on the per-step update rate and applies to explicitly time-varying targets on finite horizons. Gradient-free pixel-space sampling is not competitive with well-tuned backpropagation-based samplers at practical evaluation budgets; the regime where the approach offers an advantage is latent-space sampling when the model is a black box and the target drifts in time. We demonstrate latent-space tracking for time-varying images on CelebA-HQ ($256{\times}256$) from limited 1D projection measurements and latent-space EBM sampling on CIFAR-10.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.04568" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.04568" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

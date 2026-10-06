@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Two Localization Strategies for Sequential MCMC Data Assimilation with Applications to Nonlinear Non-Gaussian Geophysical Models</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Two Localization Strategies for Sequential MCMC Data Assimilation with Applications to Nonlinear Non-Gaussian Geophysical Models" />
+<meta name="author" content="Hamza Ruzayqat, Hristo G. Chipilski, Omar Knio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We present a localized data assimilation (DA) scheme based on sequential Markov Chain Monte Carlo (SMCMC) \cite{smcmc}, a provably convergent method for filtering high-dimensional, nonlinear, and potentially non-Gaussian state-space models. Unlike particle filters, which are exact for such models, SMCMC does not assign weights to samples, avoiding weight degeneracy in small-ensemble regimes. We design two localization approaches within the SMCMC framework that exploit observation sparsity to reduce effective degrees of freedom. The first variant collects observed blocks into a single reduced domain and runs parallel MCMC chains over this combined region. The second further reduces per-chain state dimension by decomposing…" />
+<meta name="twitter:description" property="og:description" content="We present a localized data assimilation (DA) scheme based on sequential Markov Chain Monte Carlo (SMCMC) \cite{smcmc}, a provably convergent method for filtering high-dimensional, nonlinear, and potentially non-Gaussian state-space models. Unlike particle filters, which are exact for such models, SMCMC does not assign weights to samples, avoiding weight degeneracy in small-ensemble regimes. We design two localization approaches within the SMCMC framework that exploit observation sparsity to reduce effective degrees of freedom. The first variant collects observed blocks into a single reduced domain and runs parallel MCMC chains over this combined region. The second further reduces per-chain state dimension by decomposing…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2603.05817.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2603.05817.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-06T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-06T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Two Localization Strategies for Sequential MCMC Data Assimilation with Applications to Nonlinear Non-Gaussian Geophysical Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hamza Ruzayqat, Hristo G. Chipilski, Omar Knio"},"dateModified":"2026-10-06T00:00:00+02:00","datePublished":"2026-10-06T00:00:00+02:00","description":"We present a localized data assimilation (DA) scheme based on sequential Markov Chain Monte Carlo (SMCMC) \\cite{smcmc}, a provably convergent method for filtering high-dimensional, nonlinear, and potentially non-Gaussian state-space models. Unlike particle filters, which are exact for such models, SMCMC does not assign weights to samples, avoiding weight degeneracy in small-ensemble regimes. We design two localization approaches within the SMCMC framework that exploit observation sparsity to reduce effective degrees of freedom. The first variant collects observed blocks into a single reduced domain and runs parallel MCMC chains over this combined region. The second further reduces per-chain state dimension by decomposing…","headline":"Two Localization Strategies for Sequential MCMC Data Assimilation with Applications to Nonlinear Non-Gaussian Geophysical Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2603.05817.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/06/2603.05817.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Two Localization Strategies for Sequential MCMC Data Assimilation with Applications to Nonlinear Non-Gaussian Geophysical Models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Hamza Ruzayqat, Hristo G. Chipilski, Omar Knio
+      <span class="sep">&middot;</span>
+      stat.CO, stat.AP, stat.ME
+      <span class="sep">&middot;</span>
+      6 Oct 2026
+    </div>
+  </div><div class="summary-box">Develops localized data assimilation methods for sequential MCMC in nonlinear non-Gaussian state-space models.</div><h3>Abstract</h3>
+  <p>We present a localized data assimilation (DA) scheme based on sequential Markov Chain Monte Carlo (SMCMC) \cite{smcmc}, a provably convergent method for filtering high-dimensional, nonlinear, and potentially non-Gaussian state-space models. Unlike particle filters, which are exact for such models, SMCMC does not assign weights to samples, avoiding weight degeneracy in small-ensemble regimes. We design two localization approaches within the SMCMC framework that exploit observation sparsity to reduce effective degrees of freedom. The first variant collects observed blocks into a single reduced domain and runs parallel MCMC chains over this combined region. The second further reduces per-chain state dimension by decomposing the observed region into independent blocks with compact halos, applying Gaspari–Cohn tapering to down-weight distant observations. When the observation model is linear Gaussian, the approximate filtering density reduces to a Gaussian mixture from which independent samples can be drawn exactly; otherwise, we employ an MCMC kernel. We test on high-dimensional ($d \sim 10^4 - 10^5$) state-space models, including a linear Gaussian model and a nonlinear multilayer shallow water equation with linear and nonlinear observation operators. We consider Gaussian and Student-$t$ observation noise, showing that LSMCMC handles heavy-tailed errors that cause ensemble Kalman methods to diverge. Observations include synthetic and real SWOT (NASA) and ocean drifter (NOAA) data. We compare the two variants against each other and the local ensemble transform Kalman filter (LETKF).</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2603.05817" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2603.05817" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
