@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When does conformal calibration need censoring weights? Cause-of-failure prediction sets under competing risks</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="When does conformal calibration need censoring weights? Cause-of-failure prediction sets under competing risks" />
+<meta name="author" content="Sunny Yang, Weiyan Zhao" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Split conformal prediction sets for competing-risks labels at a fixed horizon require calibration labels that right censoring can leave unobserved. Complete-case calibration guarantees coverage for the label-complete subpopulation, but its population coverage can deviate in either direction, even at the true class probabilities. We study how selection changes the score distribution near the population quantile. At the true score in our main simulation family, with independent draws, complete-case calibration covers 0.8723 at a nominal 0.900 when 22% of subjects are event-free at the horizon. In 4 of 48 further designs using per-draw normalisation, estimating cause incidences as one minus the…" />
+<meta name="twitter:description" property="og:description" content="Split conformal prediction sets for competing-risks labels at a fixed horizon require calibration labels that right censoring can leave unobserved. Complete-case calibration guarantees coverage for the label-complete subpopulation, but its population coverage can deviate in either direction, even at the true class probabilities. We study how selection changes the score distribution near the population quantile. At the true score in our main simulation family, with independent draws, complete-case calibration covers 0.8723 at a nominal 0.900 when 22% of subjects are event-free at the horizon. In 4 of 48 further designs using per-draw normalisation, estimating cause incidences as one minus the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08602.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08602.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-07T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-07T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="When does conformal calibration need censoring weights? Cause-of-failure prediction sets under competing risks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sunny Yang, Weiyan Zhao"},"dateModified":"2026-10-07T00:00:00+02:00","datePublished":"2026-10-07T00:00:00+02:00","description":"Split conformal prediction sets for competing-risks labels at a fixed horizon require calibration labels that right censoring can leave unobserved. Complete-case calibration guarantees coverage for the label-complete subpopulation, but its population coverage can deviate in either direction, even at the true class probabilities. We study how selection changes the score distribution near the population quantile. At the true score in our main simulation family, with independent draws, complete-case calibration covers 0.8723 at a nominal 0.900 when 22% of subjects are event-free at the horizon. In 4 of 48 further designs using per-draw normalisation, estimating cause incidences as one minus the…","headline":"When does conformal calibration need censoring weights? Cause-of-failure prediction sets under competing risks","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08602.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08602.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>When does conformal calibration need censoring weights? Cause-of-failure prediction sets under competing risks</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Sunny Yang, Weiyan Zhao
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      7 Oct 2026
+    </div>
+  </div><div class="summary-box">Develops a method to determine when censoring weights are needed for conformal calibration.</div><h3>Abstract</h3>
+  <p>Split conformal prediction sets for competing-risks labels at a fixed horizon require calibration labels that right censoring can leave unobserved. Complete-case calibration guarantees coverage for the label-complete subpopulation, but its population coverage can deviate in either direction, even at the true class probabilities. We study how selection changes the score distribution near the population quantile. At the true score in our main simulation family, with independent draws, complete-case calibration covers 0.8723 at a nominal 0.900 when 22% of subjects are event-free at the horizon. In 4 of 48 further designs using per-draw normalisation, estimating cause incidences as one minus the exponential of the negative of the cause-specific Nelson-Aalen cumulative hazards, with the event-free probability as the clipped and renormalised remainder, puts complete-case coverage at least four standard errors below nominal. In these designs, weights from a correctly specified censoring model keep coverage near nominal. Extending the argument of Yi et al. (2025) to a cause label, we establish a finite-sample coverage lower bound with an explicit penalty for censoring-model error. Misspecifying the censoring model can also lead to under-coverage.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.08602" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.08602" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

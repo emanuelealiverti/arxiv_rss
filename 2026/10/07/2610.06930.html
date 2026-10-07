@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Low-Rank and Structured Sparse Tensor Decomposition for Anomaly Detection in Multivariate Functional Data</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Low-Rank and Structured Sparse Tensor Decomposition for Anomaly Detection in Multivariate Functional Data" />
+<meta name="author" content="Mohammad N. Bisheh, Che-Yi Liao, Kamran Paynabar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Multivariate functional data arise in many modern manufacturing systems, where multiple sensors record densely sampled process trajectories. Monitoring such data is challenging because nominal variation is strongly correlated across samples, sensors, and time, while faults may appear either as isolated deviations or as structured departures concentrated within a limited number of sensor-specific temporal trajectories. We propose two unsupervised sparse tensor decomposition methods that preserve this multimode structure. Entrywise Sparse CP Decomposition (ES-CP) uses an entrywise (\ell_1) penalty to identify localized anomalies, whereas Fiberwise Sparse-Group Lasso CP Decomposition (FG-Lasso) combines entrywise and fiberwise penalties to detect both localized deviations and anomalies…" />
+<meta name="twitter:description" property="og:description" content="Multivariate functional data arise in many modern manufacturing systems, where multiple sensors record densely sampled process trajectories. Monitoring such data is challenging because nominal variation is strongly correlated across samples, sensors, and time, while faults may appear either as isolated deviations or as structured departures concentrated within a limited number of sensor-specific temporal trajectories. We propose two unsupervised sparse tensor decomposition methods that preserve this multimode structure. Entrywise Sparse CP Decomposition (ES-CP) uses an entrywise (\ell_1) penalty to identify localized anomalies, whereas Fiberwise Sparse-Group Lasso CP Decomposition (FG-Lasso) combines entrywise and fiberwise penalties to detect both localized deviations and anomalies…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.06930.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.06930.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-07T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-07T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Low-Rank and Structured Sparse Tensor Decomposition for Anomaly Detection in Multivariate Functional Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mohammad N. Bisheh, Che-Yi Liao, Kamran Paynabar"},"dateModified":"2026-10-07T00:00:00+02:00","datePublished":"2026-10-07T00:00:00+02:00","description":"Multivariate functional data arise in many modern manufacturing systems, where multiple sensors record densely sampled process trajectories. Monitoring such data is challenging because nominal variation is strongly correlated across samples, sensors, and time, while faults may appear either as isolated deviations or as structured departures concentrated within a limited number of sensor-specific temporal trajectories. We propose two unsupervised sparse tensor decomposition methods that preserve this multimode structure. Entrywise Sparse CP Decomposition (ES-CP) uses an entrywise (\\ell_1) penalty to identify localized anomalies, whereas Fiberwise Sparse-Group Lasso CP Decomposition (FG-Lasso) combines entrywise and fiberwise penalties to detect both localized deviations and anomalies…","headline":"Low-Rank and Structured Sparse Tensor Decomposition for Anomaly Detection in Multivariate Functional Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.06930.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.06930.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Low-Rank and Structured Sparse Tensor Decomposition for Anomaly Detection in Multivariate Functional Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Mohammad N. Bisheh, Che-Yi Liao, Kamran Paynabar
+      <span class="sep">&middot;</span>
+      stat.ML, stat.AP, stat.CO
+      <span class="sep">&middot;</span>
+      7 Oct 2026
+    </div>
+  </div><div class="summary-box">Proposes two unsupervised sparse tensor decomposition methods for anomaly detection in multivariate functional data.</div><h3>Abstract</h3>
+  <p>Multivariate functional data arise in many modern manufacturing systems, where multiple sensors record densely sampled process trajectories. Monitoring such data is challenging because nominal variation is strongly correlated across samples, sensors, and time, while faults may appear either as isolated deviations or as structured departures concentrated within a limited number of sensor-specific temporal trajectories. We propose two unsupervised sparse tensor decomposition methods that preserve this multimode structure. Entrywise Sparse CP Decomposition (ES-CP) uses an entrywise (\ell_1) penalty to identify localized anomalies, whereas Fiberwise Sparse-Group Lasso CP Decomposition (FG-Lasso) combines entrywise and fiberwise penalties to detect both localized deviations and anomalies concentrated within temporal fibers. Both methods represent nominal process behavior through a low-rank CP decomposition and are estimated using alternating optimization with closed-form sparse-component updates. Two simulation studies evaluate performance under different fault structures, signal severities, noise levels, and missing observations. FG-Lasso attains or ties the highest macro F$_1$ score in almost all settings in the first study and achieves the highest macro F$_1$ score. In a multichannel forging-process case study, FG-Lasso and ES-CP obtain macro F$_1$ scores of 0.85 and 0.82, respectively, compared with 0.69 or lower for TRPCA and PCA-based anomaly detectors. The results demonstrate that explicitly matching the sparse penalty to the anticipated fault structure improves both anomaly detection and fault localization in high-dimensional functional processes.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.06930" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.06930" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

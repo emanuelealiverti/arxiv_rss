@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series" />
+<meta name="author" content="Rohan Hemant Chhatre, Chiranjit Dutta, Nalini Ravishanker, Sumanta Basu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The logarithmic multiplicative error model (log-vMEM) has been useful in modeling and forecasting multivariate positive-valued financial time series. The number of parameters grow rapidly with the dimension of the system and the lag order, making estimation computationally demanding in high-dimensional settings. This paper describes regularized estimation via hierarchical lag structures (Nicholson et al., 2020) for log-vMEM models with multivariate gamma error distribution of Tsionas (2004). The parameter estimation is performed using a blockwise coordinate descent algorithm with a Gauss-Seidel-style update scheme (Wright, 2015). This enables an efficient computation strategy compared to traditional penalized maximum likelihood approaches. The competing models are…" />
+<meta name="twitter:description" property="og:description" content="The logarithmic multiplicative error model (log-vMEM) has been useful in modeling and forecasting multivariate positive-valued financial time series. The number of parameters grow rapidly with the dimension of the system and the lag order, making estimation computationally demanding in high-dimensional settings. This paper describes regularized estimation via hierarchical lag structures (Nicholson et al., 2020) for log-vMEM models with multivariate gamma error distribution of Tsionas (2004). The parameter estimation is performed using a blockwise coordinate descent algorithm with a Gauss-Seidel-style update scheme (Wright, 2015). This enables an efficient computation strategy compared to traditional penalized maximum likelihood approaches. The competing models are…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08443.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08443.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-07T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-07T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rohan Hemant Chhatre, Chiranjit Dutta, Nalini Ravishanker, Sumanta Basu"},"dateModified":"2026-10-07T00:00:00+02:00","datePublished":"2026-10-07T00:00:00+02:00","description":"The logarithmic multiplicative error model (log-vMEM) has been useful in modeling and forecasting multivariate positive-valued financial time series. The number of parameters grow rapidly with the dimension of the system and the lag order, making estimation computationally demanding in high-dimensional settings. This paper describes regularized estimation via hierarchical lag structures (Nicholson et al., 2020) for log-vMEM models with multivariate gamma error distribution of Tsionas (2004). The parameter estimation is performed using a blockwise coordinate descent algorithm with a Gauss-Seidel-style update scheme (Wright, 2015). This enables an efficient computation strategy compared to traditional penalized maximum likelihood approaches. The competing models are…","headline":"Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08443.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08443.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Rohan Hemant Chhatre, Chiranjit Dutta, Nalini Ravishanker, Sumanta Basu
+      <span class="sep">&middot;</span>
+      stat.CO, stat.AP, stat.ML
+      <span class="sep">&middot;</span>
+      7 Oct 2026
+    </div>
+  </div><div class="summary-box">Regularized estimation of log-vMEM models for financial time series using blockwise coordinate descent.</div><h3>Abstract</h3>
+  <p>The logarithmic multiplicative error model (log-vMEM) has been useful in modeling and forecasting multivariate positive-valued financial time series. The number of parameters grow rapidly with the dimension of the system and the lag order, making estimation computationally demanding in high-dimensional settings. This paper describes regularized estimation via hierarchical lag structures (Nicholson et al., 2020) for log-vMEM models with multivariate gamma error distribution of Tsionas (2004). The parameter estimation is performed using a blockwise coordinate descent algorithm with a Gauss-Seidel-style update scheme (Wright, 2015). This enables an efficient computation strategy compared to traditional penalized maximum likelihood approaches. The competing models are juxtaposed against each other by combining three hierarchical lag structures (componentwise, elementwise, own-other) and four penalties(group-lasso, adaptive group-lasso, group-mcp, and group-scad). Extensive simulation runs have been performed to test the parameter recovery for both the unpenalized and the penalized models. We apply the proposed methods to model the joint dynamics of robust intraday realized volatility measures for Microsoft (NASDAQ: MSFT) for the competing models. The numerical integration step of the log-likelihood is identified to be the principal computational bottleneck. We address this issue by using GPU-accelerated quadrature integration thus improving computational scalability of the proposed models.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.08443" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.08443" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

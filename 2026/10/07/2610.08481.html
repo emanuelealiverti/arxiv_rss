@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fridge: focused fine-tuning of ridge regression for personalize predictions</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Fridge: focused fine-tuning of ridge regression for personalize predictions" />
+<meta name="author" content="Kristoffer Herland Hellton, Nils Lid Hjort" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Statistical prediction methods typically require some form of fine-tuning of tuning parameter(s), with $K$-fold cross-validation as the canonical procedure. For ridge regression there exist numerous procedures, but common for all, including cross-validation, is that one single parameter is chosen for all future predictions. We propose instead to calculate a unique tuning parameter for each individual for which we wish to predict an outcome. This generates an individualized prediction by focusing on the vector of covariates of a specific individual. The focused ridge – fridge – procedure is introduced with a two-part contribution: 1) first we define an oracle tuning parameter…" />
+<meta name="twitter:description" property="og:description" content="Statistical prediction methods typically require some form of fine-tuning of tuning parameter(s), with $K$-fold cross-validation as the canonical procedure. For ridge regression there exist numerous procedures, but common for all, including cross-validation, is that one single parameter is chosen for all future predictions. We propose instead to calculate a unique tuning parameter for each individual for which we wish to predict an outcome. This generates an individualized prediction by focusing on the vector of covariates of a specific individual. The focused ridge – fridge – procedure is introduced with a two-part contribution: 1) first we define an oracle tuning parameter…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08481.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08481.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-07T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-07T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Fridge: focused fine-tuning of ridge regression for personalize predictions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kristoffer Herland Hellton, Nils Lid Hjort"},"dateModified":"2026-10-07T00:00:00+02:00","datePublished":"2026-10-07T00:00:00+02:00","description":"Statistical prediction methods typically require some form of fine-tuning of tuning parameter(s), with $K$-fold cross-validation as the canonical procedure. For ridge regression there exist numerous procedures, but common for all, including cross-validation, is that one single parameter is chosen for all future predictions. We propose instead to calculate a unique tuning parameter for each individual for which we wish to predict an outcome. This generates an individualized prediction by focusing on the vector of covariates of a specific individual. The focused ridge – fridge – procedure is introduced with a two-part contribution: 1) first we define an oracle tuning parameter…","headline":"Fridge: focused fine-tuning of ridge regression for personalize predictions","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08481.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/07/2610.08481.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Fridge: focused fine-tuning of ridge regression for personalize predictions</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Kristoffer Herland Hellton, Nils Lid Hjort
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      7 Oct 2026
+    </div>
+  </div><div class="summary-box">A method for personalized predictions using ridge regression with individualized tuning parameters.</div><h3>Abstract</h3>
+  <p>Statistical prediction methods typically require some form of fine-tuning of tuning parameter(s), with $K$-fold cross-validation as the canonical procedure. For ridge regression there exist numerous procedures, but common for all, including cross-validation, is that one single parameter is chosen for all future predictions. We propose instead to calculate a unique tuning parameter for each individual for which we wish to predict an outcome. This generates an individualized prediction by focusing on the vector of covariates of a specific individual. The focused ridge – fridge – procedure is introduced with a two-part contribution: 1) first we define an oracle tuning parameter minimizing the mean squared prediction error of a specific covariate vector, 2) then we propose to estimate this tuning parameter by using plug-in estimates of the regression coefficients and error variance parameter. The procedure is extended to logistic ridge regression by utilizing parametric bootstrap. For high-dimensional data, we propose to use ridge regression with cross-validation as the plug-in estimate, and simulations show that fridge gives smaller average prediction error than ridge with cross-validation for both simulated and real data. We illustrate the new concept for both linear and logistic regression models in two applications of personalized medicine: predicting individual risk and treatment response based on gene expression data. The method is implemented in the R package “fridge”.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.08481" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.08481" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
