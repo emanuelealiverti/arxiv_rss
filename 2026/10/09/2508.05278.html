@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>NExt-LMM: a two-stage LMM framework with near-exact variance components for genome-wide association studies</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="NExt-LMM: a two-stage LMM framework with near-exact variance components for genome-wide association studies" />
+<meta name="author" content="Zhibin Pu, Shufei Ge, Shijia Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Linear mixed models (LMMs) are widely used in genome-wide association studies (GWAS) to account for population stratification and cryptic relatedness. However, their practical application remains computationally challenging because parameter estimation and association testing require large-scale operations on genetic similarity matrices (GSMs). Here, we present NExt-LMM, a two-stage framework for scalable LMM-based GWAS. In the first stage, NExt-LMM obtains a preliminary estimate of a shared variance ratio under the null model. In the second stage, it constructs the corresponding covariance matrix and accelerates downstream inference through a Hierarchical Off-Diagonal Low-Rank (HODLR) representation. Specifically, NExt-LMM exploits the low-rank structure of off-diagonal covariance…" />
+<meta name="twitter:description" property="og:description" content="Linear mixed models (LMMs) are widely used in genome-wide association studies (GWAS) to account for population stratification and cryptic relatedness. However, their practical application remains computationally challenging because parameter estimation and association testing require large-scale operations on genetic similarity matrices (GSMs). Here, we present NExt-LMM, a two-stage framework for scalable LMM-based GWAS. In the first stage, NExt-LMM obtains a preliminary estimate of a shared variance ratio under the null model. In the second stage, it constructs the corresponding covariance matrix and accelerates downstream inference through a Hierarchical Off-Diagonal Low-Rank (HODLR) representation. Specifically, NExt-LMM exploits the low-rank structure of off-diagonal covariance…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2508.05278.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2508.05278.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="NExt-LMM: a two-stage LMM framework with near-exact variance components for genome-wide association studies" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zhibin Pu, Shufei Ge, Shijia Wang"},"dateModified":"2026-10-09T00:00:00+02:00","datePublished":"2026-10-09T00:00:00+02:00","description":"Linear mixed models (LMMs) are widely used in genome-wide association studies (GWAS) to account for population stratification and cryptic relatedness. However, their practical application remains computationally challenging because parameter estimation and association testing require large-scale operations on genetic similarity matrices (GSMs). Here, we present NExt-LMM, a two-stage framework for scalable LMM-based GWAS. In the first stage, NExt-LMM obtains a preliminary estimate of a shared variance ratio under the null model. In the second stage, it constructs the corresponding covariance matrix and accelerates downstream inference through a Hierarchical Off-Diagonal Low-Rank (HODLR) representation. Specifically, NExt-LMM exploits the low-rank structure of off-diagonal covariance…","headline":"NExt-LMM: a two-stage LMM framework with near-exact variance components for genome-wide association studies","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2508.05278.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2508.05278.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>NExt-LMM: a two-stage LMM framework with near-exact variance components for genome-wide association studies</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Zhibin Pu, Shufei Ge, Shijia Wang
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      9 Oct 2026
+    </div>
+  </div><div class="summary-box">A two-stage LMM framework with near-exact variance components for genome-wide association studies.</div><h3>Abstract</h3>
+  <p>Linear mixed models (LMMs) are widely used in genome-wide association studies (GWAS) to account for population stratification and cryptic relatedness. However, their practical application remains computationally challenging because parameter estimation and association testing require large-scale operations on genetic similarity matrices (GSMs). Here, we present NExt-LMM, a two-stage framework for scalable LMM-based GWAS. In the first stage, NExt-LMM obtains a preliminary estimate of a shared variance ratio under the null model. In the second stage, it constructs the corresponding covariance matrix and accelerates downstream inference through a Hierarchical Off-Diagonal Low-Rank (HODLR) representation. Specifically, NExt-LMM exploits the low-rank structure of off-diagonal covariance blocks to enable substantially faster matrix factorization and inverse-related computations than conventional dense decompositions. It then reuses the resulting HODLR-based covariance representation to accelerate maximum-likelihood-based inference under the shared variance-ratio setting. We further establish error bounds that account for both sources of approximation in the framework: the preliminary variance-ratio estimate and the HODLR approximation. In particular, we show that, conditional on a fixed variance ratio, the NExt-LMM estimator can be made arbitrarily close to the exact shared-variance estimator as the matrix approximation tolerance approaches zero. \AAA{Numerical experiments show that NExt-LMM improves computational efficiency while maintaining high accuracy relative to existing methods, and that the size of this improvement is governed by the numerical rank retained at the tolerance required for calibrated association inference.} We provide an open-source Python implementation at https://github.com/ZhibinPU/NExt-LMM.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2508.05278" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2508.05278" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

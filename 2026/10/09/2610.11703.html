@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>How Much Does Submitting a Burst of Jobs Impact Waiting Time? An Analysis of the Jean Zay Workload Trace</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="How Much Does Submitting a Burst of Jobs Impact Waiting Time? An Analysis of the Jean Zay Workload Trace" />
+<meta name="author" content="Marius Garénaux , François Bodin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper examines job waiting times on the Jean Zay supercomputer at IDRIS (Institut du D{&#39;e}veloppement et des Ressources en Informatique Scientifique http://www.idris.fr/), driven by the need to improve scheduling strategies for crossfacility scientific workflows. Drawing on large workload traces, we show that job waiting times are not independent of one another but are instead correlated through job bursts-batches of identical jobs submitted together, also called ``flurries’’. We introduce a method for quantifying the effect of these bursts on waiting times, and find a strong Pearson correlation between waiting time and a job’s rank within its burst. This correlation is…" />
+<meta name="twitter:description" property="og:description" content="This paper examines job waiting times on the Jean Zay supercomputer at IDRIS (Institut du D{&#39;e}veloppement et des Ressources en Informatique Scientifique http://www.idris.fr/), driven by the need to improve scheduling strategies for crossfacility scientific workflows. Drawing on large workload traces, we show that job waiting times are not independent of one another but are instead correlated through job bursts-batches of identical jobs submitted together, also called ``flurries’’. We introduce a method for quantifying the effect of these bursts on waiting times, and find a strong Pearson correlation between waiting time and a job’s rank within its burst. This correlation is…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11703.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11703.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How Much Does Submitting a Burst of Jobs Impact Waiting Time? An Analysis of the Jean Zay Workload Trace" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Marius Garénaux , François Bodin"},"dateModified":"2026-10-09T00:00:00+02:00","datePublished":"2026-10-09T00:00:00+02:00","description":"This paper examines job waiting times on the Jean Zay supercomputer at IDRIS (Institut du D{\u0026#39;e}veloppement et des Ressources en Informatique Scientifique http://www.idris.fr/), driven by the need to improve scheduling strategies for crossfacility scientific workflows. Drawing on large workload traces, we show that job waiting times are not independent of one another but are instead correlated through job bursts-batches of identical jobs submitted together, also called ``flurries’’. We introduce a method for quantifying the effect of these bursts on waiting times, and find a strong Pearson correlation between waiting time and a job’s rank within its burst. This correlation is…","headline":"How Much Does Submitting a Burst of Jobs Impact Waiting Time? An Analysis of the Jean Zay Workload Trace","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11703.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11703.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>How Much Does Submitting a Burst of Jobs Impact Waiting Time? An Analysis of the Jean Zay Workload Trace</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Marius Garénaux , François Bodin
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      9 Oct 2026
+    </div>
+  </div><div class="summary-box">The paper analyzes job waiting times on a supercomputer, accounting for correlated job bursts.</div><h3>Abstract</h3>
+  <p>This paper examines job waiting times on the Jean Zay supercomputer at IDRIS (Institut du D{'e}veloppement et des Ressources en Informatique Scientifique http://www.idris.fr/), driven by the need to improve scheduling strategies for crossfacility scientific workflows. Drawing on large workload traces, we show that job waiting times are not independent of one another but are instead correlated through job bursts-batches of identical jobs submitted together, also called ``flurries’’. We introduce a method for quantifying the effect of these bursts on waiting times, and find a strong Pearson correlation between waiting time and a job’s rank within its burst. This correlation is above 0.8 for more than 40% of the jobs. We further derive an exact formula for the Slurm fairshare factor based on a convolution product, showing that the burst penalty operates on a much shorter timescale than fairshare itself-pointing to a distinct throttling mechanism specifically targeting bulk submissions. Once burst effects are accounted for, we use Welch’s t-test to find that partition occupancy and number of requested cores have a significant effect on waiting time, though the effect is not significant for all partitions.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.11703" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.11703" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

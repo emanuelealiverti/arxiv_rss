@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>High-Dimensional Two-Sample Covariance Testing with Null-Preserving Transformations</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="High-Dimensional Two-Sample Covariance Testing with Null-Preserving Transformations" />
+<meta name="author" content="Haozhen Shu, Tianming Zhu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Testing equality of two high-dimensional covariance matrices is challenging when many entries differ only slightly. Dependence among sample covariance entries can also affect the finite-sample size and power of tests that aggregate their differences. We propose a studentized $\ell_2$-type statistic that averages squared, marginally standardized differences between corresponding entries of the two sample covariance matrices. Before constructing the statistic, we apply the same nonsingular linear transformation to both samples. In the transformed coordinates, the covariance-equality hypothesis is unchanged, whereas the standardized differences and correlations among their estimators generally change. The transformation can therefore incorporate structural or scientific information without reducing…" />
+<meta name="twitter:description" property="og:description" content="Testing equality of two high-dimensional covariance matrices is challenging when many entries differ only slightly. Dependence among sample covariance entries can also affect the finite-sample size and power of tests that aggregate their differences. We propose a studentized $\ell_2$-type statistic that averages squared, marginally standardized differences between corresponding entries of the two sample covariance matrices. Before constructing the statistic, we apply the same nonsingular linear transformation to both samples. In the transformed coordinates, the covariance-equality hypothesis is unchanged, whereas the standardized differences and correlations among their estimators generally change. The transformation can therefore incorporate structural or scientific information without reducing…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11249.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11249.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="High-Dimensional Two-Sample Covariance Testing with Null-Preserving Transformations" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Haozhen Shu, Tianming Zhu"},"dateModified":"2026-10-09T00:00:00+02:00","datePublished":"2026-10-09T00:00:00+02:00","description":"Testing equality of two high-dimensional covariance matrices is challenging when many entries differ only slightly. Dependence among sample covariance entries can also affect the finite-sample size and power of tests that aggregate their differences. We propose a studentized $\\ell_2$-type statistic that averages squared, marginally standardized differences between corresponding entries of the two sample covariance matrices. Before constructing the statistic, we apply the same nonsingular linear transformation to both samples. In the transformed coordinates, the covariance-equality hypothesis is unchanged, whereas the standardized differences and correlations among their estimators generally change. The transformation can therefore incorporate structural or scientific information without reducing…","headline":"High-Dimensional Two-Sample Covariance Testing with Null-Preserving Transformations","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11249.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11249.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>High-Dimensional Two-Sample Covariance Testing with Null-Preserving Transformations</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Haozhen Shu, Tianming Zhu
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      9 Oct 2026
+    </div>
+  </div><div class="summary-box">Proposes a studentized statistic for testing equality of two high-dimensional covariance matrices.</div><h3>Abstract</h3>
+  <p>Testing equality of two high-dimensional covariance matrices is challenging when many entries differ only slightly. Dependence among sample covariance entries can also affect the finite-sample size and power of tests that aggregate their differences. We propose a studentized $\ell_2$-type statistic that averages squared, marginally standardized differences between corresponding entries of the two sample covariance matrices. Before constructing the statistic, we apply the same nonsingular linear transformation to both samples. In the transformed coordinates, the covariance-equality hypothesis is unchanged, whereas the standardized differences and correlations among their estimators generally change. The transformation can therefore incorporate structural or scientific information without reducing dimension. We approximate the null distribution using a Gaussian multiplier bootstrap that uses coordinatewise studentization and avoids forming or inverting the full covariance matrix of the vectorized sample covariance entries. For deterministic transformations, we derive nonasymptotic Gaussian and bootstrap approximation bounds and establish asymptotic size validity and power consistency. We also show that replacing a population transformation by a same-sample estimator leaves the statistic and bootstrap critical value asymptotically unchanged in relative terms under an operator-norm convergence condition. Simulations show that suitable transformations improve size accuracy and power under weak dependence. An analysis of breast cancer gene-expression data illustrates the method.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.11249" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.11249" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

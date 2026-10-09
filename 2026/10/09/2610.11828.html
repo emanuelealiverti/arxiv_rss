@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Manifold Regression</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Manifold Regression" />
+<meta name="author" content="Yuanyuan Lin, Dennis K. J. Lin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Conventional statistical modeling typically assumes a one-to-one mapping between input and output variables, where one-to-one is used in the predictive sense that a specified input results in a unique output. Many scientific and engineering systems, however, exhibit non-one-to-one(noto) input-output relations. In a noto relation, the same input may correspond to multiple admissible outputs, so the conventional statistical models may not be appropriate. This paper develops manifold regression, a parametric modeling framework for such noto input-output relations, which represents the underlying input-output relation through a latent manifold. The manifold is specified upto an unknown finite dimensional parameter and we estimate the…" />
+<meta name="twitter:description" property="og:description" content="Conventional statistical modeling typically assumes a one-to-one mapping between input and output variables, where one-to-one is used in the predictive sense that a specified input results in a unique output. Many scientific and engineering systems, however, exhibit non-one-to-one(noto) input-output relations. In a noto relation, the same input may correspond to multiple admissible outputs, so the conventional statistical models may not be appropriate. This paper develops manifold regression, a parametric modeling framework for such noto input-output relations, which represents the underlying input-output relation through a latent manifold. The manifold is specified upto an unknown finite dimensional parameter and we estimate the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11828.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11828.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Manifold Regression" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yuanyuan Lin, Dennis K. J. Lin"},"dateModified":"2026-10-09T00:00:00+02:00","datePublished":"2026-10-09T00:00:00+02:00","description":"Conventional statistical modeling typically assumes a one-to-one mapping between input and output variables, where one-to-one is used in the predictive sense that a specified input results in a unique output. Many scientific and engineering systems, however, exhibit non-one-to-one(noto) input-output relations. In a noto relation, the same input may correspond to multiple admissible outputs, so the conventional statistical models may not be appropriate. This paper develops manifold regression, a parametric modeling framework for such noto input-output relations, which represents the underlying input-output relation through a latent manifold. The manifold is specified upto an unknown finite dimensional parameter and we estimate the…","headline":"Manifold Regression","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11828.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11828.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Manifold Regression</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Yuanyuan Lin, Dennis K. J. Lin
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      9 Oct 2026
+    </div>
+  </div><div class="summary-box">Develops manifold regression for non-one-to-one input-output relations with latent manifold representation.</div><h3>Abstract</h3>
+  <p>Conventional statistical modeling typically assumes a one-to-one mapping between input and output variables, where one-to-one is used in the predictive sense that a specified input results in a unique output. Many scientific and engineering systems, however, exhibit non-one-to-one(noto) input-output relations. In a noto relation, the same input may correspond to multiple admissible outputs, so the conventional statistical models may not be appropriate. This paper develops manifold regression, a parametric modeling framework for such noto input-output relations, which represents the underlying input-output relation through a latent manifold. The manifold is specified upto an unknown finite dimensional parameter and we estimate the unknown parameters from ordinary input-output observations by regularized profile optimization with a robust solver. Once the manifold has been learned, prediction is obtained by slicing the estimated manifold along a specified coordinate value. Because a slice may contain multiple latent roots, the resulting manifold prediction is naturally set-valued. This formulation extends predictive learning beyond conventional one-to-one statistical models while containing classical regression and inverse prediction as special cases. Theoretical results are established to justify the manifold regression model and its sliced prediction sets; and case studies are used to demonstrate stable performance across representative noto cases.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.11828" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.11828" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

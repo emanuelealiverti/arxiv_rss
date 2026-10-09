@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Anchored multiple testing: a transparent use of e-closure to improve FDR procedures</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Anchored multiple testing: a transparent use of e-closure to improve FDR procedures" />
+<meta name="author" content="Aaditya Ramdas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The recent e-closure method can recover every procedure that controls FDR (and other expectation losses). But the recovered e-collection is ``self-referential’’ and gives no insight on how to improve the procedure (if improvable), and some recent improvements have been somewhat opaque. We introduce an elementary new technique called anchoring that exploits looseness in existing FDR proofs to enlarge a baseline multiple-testing procedure’s self-referential local e-value. The resulting e-closure thus transparently retains every baseline discovery (and usually adding more) and controlling the false discovery rate under the same conditions as the baseline. To show that this principle is broadly applicable, we…" />
+<meta name="twitter:description" property="og:description" content="The recent e-closure method can recover every procedure that controls FDR (and other expectation losses). But the recovered e-collection is ``self-referential’’ and gives no insight on how to improve the procedure (if improvable), and some recent improvements have been somewhat opaque. We introduce an elementary new technique called anchoring that exploits looseness in existing FDR proofs to enlarge a baseline multiple-testing procedure’s self-referential local e-value. The resulting e-closure thus transparently retains every baseline discovery (and usually adding more) and controlling the false discovery rate under the same conditions as the baseline. To show that this principle is broadly applicable, we…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11279.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11279.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-09T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Anchored multiple testing: a transparent use of e-closure to improve FDR procedures" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aaditya Ramdas"},"dateModified":"2026-10-09T00:00:00+02:00","datePublished":"2026-10-09T00:00:00+02:00","description":"The recent e-closure method can recover every procedure that controls FDR (and other expectation losses). But the recovered e-collection is ``self-referential’’ and gives no insight on how to improve the procedure (if improvable), and some recent improvements have been somewhat opaque. We introduce an elementary new technique called anchoring that exploits looseness in existing FDR proofs to enlarge a baseline multiple-testing procedure’s self-referential local e-value. The resulting e-closure thus transparently retains every baseline discovery (and usually adding more) and controlling the false discovery rate under the same conditions as the baseline. To show that this principle is broadly applicable, we…","headline":"Anchored multiple testing: a transparent use of e-closure to improve FDR procedures","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11279.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/09/2610.11279.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Anchored multiple testing: a transparent use of e-closure to improve FDR procedures</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Aaditya Ramdas
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      9 Oct 2026
+    </div>
+  </div><div class="summary-box">A new technique called anchoring is introduced to improve FDR procedures.</div><h3>Abstract</h3>
+  <p>The recent e-closure method can recover every procedure that controls FDR (and other expectation losses). But the recovered e-collection is ``self-referential’’ and gives no insight on how to improve the procedure (if improvable), and some recent improvements have been somewhat opaque. We introduce an elementary new technique called anchoring that exploits looseness in existing FDR proofs to enlarge a baseline multiple-testing procedure’s self-referential local e-value. The resulting e-closure thus transparently retains every baseline discovery (and usually adding more) and controlling the false discovery rate under the same conditions as the baseline. To show that this principle is broadly applicable, we use it to improve a large suite of multiple testing procedures: (i) Anchored-BH dominates the Benjamini-Hochberg (BH) procedure under PRDS while being incomparable to Goeman’s recent closed-BH, (ii) Anchored-BY dominates the Benjamini-Yekutieli (BY) procedure under arbitrary dependence while being incomparable to closed-BY, (iii) For two-sided Gaussian p-values (under appropriate covariance conditions), Anchored-2BH dominates running BH twice at half the level on two one-sided p-values, (iv) Anchored-dBH dominates dependence-adjusted BH, (v) Anchored e-BH dominates e-BH and is incomparable to closed e-BH, (vi) Anchored SeqStep+ improves the original (including selective and adpative variants) while preserving ordered rejection structures. All of these are accomplished in sorting or quadratic time. The appendix shows how to dominate Shifted-BH (for two-sided arbitrarily correlated Gaussians) and NDBH (under negative dependent p-values).</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.11279" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.11279" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
