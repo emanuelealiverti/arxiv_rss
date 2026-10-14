@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Cosine-Projection Framework for Choosing Among Cox HR, D-RMST, and Average-Hazard Tests in Survival Trials</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Cosine-Projection Framework for Choosing Among Cox HR, D-RMST, and Average-Hazard Tests in Survival Trials" />
+<meta name="author" content="Xiang Meng, Lu Tian, Hajime Uno" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The log-rank/Cox hazard-ratio test remains the standard approach for the primary analysis of randomized trials with time-to-event endpoints and is fully efficient under proportional hazards (PH). Two model-free alternatives that have recently gained attention are the difference in restricted mean survival time (D-RMST), a contrast on the time scale, and the more recently proposed ratio of average hazards (RAH), a contrast on the rate scale. Simulation studies suggest that the RAH-based test can outperform both under delayed treatment effects, but its efficiency has not been characterized analytically, and no unified framework explains how censoring and accrual affect the efficiency ordering…" />
+<meta name="twitter:description" property="og:description" content="The log-rank/Cox hazard-ratio test remains the standard approach for the primary analysis of randomized trials with time-to-event endpoints and is fully efficient under proportional hazards (PH). Two model-free alternatives that have recently gained attention are the difference in restricted mean survival time (D-RMST), a contrast on the time scale, and the more recently proposed ratio of average hazards (RAH), a contrast on the rate scale. Simulation studies suggest that the RAH-based test can outperform both under delayed treatment effects, but its efficiency has not been characterized analytically, and no unified framework explains how censoring and accrual affect the efficiency ordering…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/14/2610.15149.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/14/2610.15149.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-14T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-14T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Cosine-Projection Framework for Choosing Among Cox HR, D-RMST, and Average-Hazard Tests in Survival Trials" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xiang Meng, Lu Tian, Hajime Uno"},"dateModified":"2026-10-14T00:00:00+02:00","datePublished":"2026-10-14T00:00:00+02:00","description":"The log-rank/Cox hazard-ratio test remains the standard approach for the primary analysis of randomized trials with time-to-event endpoints and is fully efficient under proportional hazards (PH). Two model-free alternatives that have recently gained attention are the difference in restricted mean survival time (D-RMST), a contrast on the time scale, and the more recently proposed ratio of average hazards (RAH), a contrast on the rate scale. Simulation studies suggest that the RAH-based test can outperform both under delayed treatment effects, but its efficiency has not been characterized analytically, and no unified framework explains how censoring and accrual affect the efficiency ordering…","headline":"A Cosine-Projection Framework for Choosing Among Cox HR, D-RMST, and Average-Hazard Tests in Survival Trials","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/14/2610.15149.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/14/2610.15149.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Cosine-Projection Framework for Choosing Among Cox HR, D-RMST, and Average-Hazard Tests in Survival Trials</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Xiang Meng, Lu Tian, Hajime Uno
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      14 Oct 2026
+    </div>
+  </div><div class="summary-box">Derives asymptotic relative efficiencies of Cox HR, D-RMST, and Average-Hazard Tests.</div><h3>Abstract</h3>
+  <p>The log-rank/Cox hazard-ratio test remains the standard approach for the primary analysis of randomized trials with time-to-event endpoints and is fully efficient under proportional hazards (PH). Two model-free alternatives that have recently gained attention are the difference in restricted mean survival time (D-RMST), a contrast on the time scale, and the more recently proposed ratio of average hazards (RAH), a contrast on the rate scale. Simulation studies suggest that the RAH-based test can outperform both under delayed treatment effects, but its efficiency has not been characterized analytically, and no unified framework explains how censoring and accrual affect the efficiency ordering among these tests. We show that all three statistics share a weighted-log-rank representation and derive their asymptotic relative efficiencies under local alternatives, including the first analytic efficiency results for the RAH-based test. Geometrically, each test defines a direction in a function space and the anticipated treatment effect defines a signal direction. A test’s efficiency relative to the oracle test equals the squared cosine of the angle between these directions, so the asymptotic relative efficiency of any two tests is a ratio of squared cosines. Because censoring and accrual enter through an information weight, the framework shows how design choices can alter, and even reverse, the efficiency ordering. We illustrate the framework using the CheckMate 057 immunotherapy trial and corroborate the theoretical results through simulations spanning proportional- and non-proportional-hazards settings.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.15149" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.15149" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Free-support Wasserstein Resampling in Sequential Monte Carlo</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Free-support Wasserstein Resampling in Sequential Monte Carlo" />
+<meta name="author" content="Mengyu Li, Cheng Meng, Jun S. Liu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In modern sequential Monte Carlo (SMC) applications, such as diffusion model samplers, propagating a particle is expensive, so only a few particles can be afforded. In this regime, each resampling step decides which regions of the state space survive, so a better resampling scheme is worth extra computation. However, classical resampling methods only replicate existing particles and suffer from sample impoverishment, especially when the particle size is small relative to the dimension. To create new particles, we relax the unbiasedness of resampling and control the mean squared error via a Wasserstein criterion. Specifically, we propose Wasserstein-Dirichlet resampling (WDR), which constructs…" />
+<meta name="twitter:description" property="og:description" content="In modern sequential Monte Carlo (SMC) applications, such as diffusion model samplers, propagating a particle is expensive, so only a few particles can be afforded. In this regime, each resampling step decides which regions of the state space survive, so a better resampling scheme is worth extra computation. However, classical resampling methods only replicate existing particles and suffer from sample impoverishment, especially when the particle size is small relative to the dimension. To create new particles, we relax the unbiasedness of resampling and control the mean squared error via a Wasserstein criterion. Specifically, we propose Wasserstein-Dirichlet resampling (WDR), which constructs…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/14/2610.17924.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/14/2610.17924.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-14T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-14T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Free-support Wasserstein Resampling in Sequential Monte Carlo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mengyu Li, Cheng Meng, Jun S. Liu"},"dateModified":"2026-10-14T00:00:00+02:00","datePublished":"2026-10-14T00:00:00+02:00","description":"In modern sequential Monte Carlo (SMC) applications, such as diffusion model samplers, propagating a particle is expensive, so only a few particles can be afforded. In this regime, each resampling step decides which regions of the state space survive, so a better resampling scheme is worth extra computation. However, classical resampling methods only replicate existing particles and suffer from sample impoverishment, especially when the particle size is small relative to the dimension. To create new particles, we relax the unbiasedness of resampling and control the mean squared error via a Wasserstein criterion. Specifically, we propose Wasserstein-Dirichlet resampling (WDR), which constructs…","headline":"Free-support Wasserstein Resampling in Sequential Monte Carlo","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/14/2610.17924.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/14/2610.17924.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Free-support Wasserstein Resampling in Sequential Monte Carlo</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Mengyu Li, Cheng Meng, Jun S. Liu
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      14 Oct 2026
+    </div>
+  </div><div class="summary-box">Proposes Wasserstein-Dirichlet resampling for sequential Monte Carlo methods to improve estimation accuracy and diversity.</div><h3>Abstract</h3>
+  <p>In modern sequential Monte Carlo (SMC) applications, such as diffusion model samplers, propagating a particle is expensive, so only a few particles can be afforded. In this regime, each resampling step decides which regions of the state space survive, so a better resampling scheme is worth extra computation. However, classical resampling methods only replicate existing particles and suffer from sample impoverishment, especially when the particle size is small relative to the dimension. To create new particles, we relax the unbiasedness of resampling and control the mean squared error via a Wasserstein criterion. Specifically, we propose Wasserstein-Dirichlet resampling (WDR), which constructs an equal-weight measure that optimally approximates the weighted particle distribution by solving a free-support Wasserstein barycenter problem. We then randomize the resulting optimal coupling by Dirichlet mixing. Theoretically, we provide non-asymptotic mean squared error bounds that quantify the bias-variance trade-off and show that the rate depends on the intrinsic dimension. A truncated variant preserves high-weight particles while applying WDR to the remaining mass, targeting mild weight degeneracy. Experiments on state-space models and conditional image generation demonstrate that WDR consistently improves estimation accuracy, stability, and sample diversity. The improvements persist at matched wall-clock cost when the propagation cost dominates.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.17924" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.17924" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
