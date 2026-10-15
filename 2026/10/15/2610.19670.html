@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>SULA: Robust Langevin Sampling via Drift-Diffusion Saturation</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="SULA: Robust Langevin Sampling via Drift-Diffusion Saturation" />
+<meta name="author" content="Ritik Soni, Dootika Vats" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The unadjusted Langevin algorithm (ULA) and its stochastic-gradient variant, SGLD, are workhorses of modern Bayesian machine learning, but can be fragile when faced with a target distribution possessing a non-Lipschitz drift. In such settings, the expected squared jump distance can grow rapidly, leading to numerical instability or the need for prohibitively small step-sizes. We propose the saturated unadjusted Langevin algorithm (SULA) that pairs a saturated gradient drift with a gradient-informed state-dependent diffusion, while preserving first-order consistency with the Langevin diffusion. The drift and diffusion terms are chosen to guarantee that the one-step squared update is independent of the gradient. Consequently,…" />
+<meta name="twitter:description" property="og:description" content="The unadjusted Langevin algorithm (ULA) and its stochastic-gradient variant, SGLD, are workhorses of modern Bayesian machine learning, but can be fragile when faced with a target distribution possessing a non-Lipschitz drift. In such settings, the expected squared jump distance can grow rapidly, leading to numerical instability or the need for prohibitively small step-sizes. We propose the saturated unadjusted Langevin algorithm (SULA) that pairs a saturated gradient drift with a gradient-informed state-dependent diffusion, while preserving first-order consistency with the Langevin diffusion. The drift and diffusion terms are chosen to guarantee that the one-step squared update is independent of the gradient. Consequently,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/15/2610.19670.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/15/2610.19670.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-15T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-15T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="SULA: Robust Langevin Sampling via Drift-Diffusion Saturation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ritik Soni, Dootika Vats"},"dateModified":"2026-10-15T00:00:00+02:00","datePublished":"2026-10-15T00:00:00+02:00","description":"The unadjusted Langevin algorithm (ULA) and its stochastic-gradient variant, SGLD, are workhorses of modern Bayesian machine learning, but can be fragile when faced with a target distribution possessing a non-Lipschitz drift. In such settings, the expected squared jump distance can grow rapidly, leading to numerical instability or the need for prohibitively small step-sizes. We propose the saturated unadjusted Langevin algorithm (SULA) that pairs a saturated gradient drift with a gradient-informed state-dependent diffusion, while preserving first-order consistency with the Langevin diffusion. The drift and diffusion terms are chosen to guarantee that the one-step squared update is independent of the gradient. Consequently,…","headline":"SULA: Robust Langevin Sampling via Drift-Diffusion Saturation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/15/2610.19670.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/15/2610.19670.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>SULA: Robust Langevin Sampling via Drift-Diffusion Saturation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Ritik Soni, Dootika Vats
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ME
+      <span class="sep">&middot;</span>
+      15 Oct 2026
+    </div>
+  </div><div class="summary-box">A new algorithm, SULA, is proposed for robust Langevin sampling with non-Lipschitz drift.</div><h3>Abstract</h3>
+  <p>The unadjusted Langevin algorithm (ULA) and its stochastic-gradient variant, SGLD, are workhorses of modern Bayesian machine learning, but can be fragile when faced with a target distribution possessing a non-Lipschitz drift. In such settings, the expected squared jump distance can grow rapidly, leading to numerical instability or the need for prohibitively small step-sizes. We propose the saturated unadjusted Langevin algorithm (SULA) that pairs a saturated gradient drift with a gradient-informed state-dependent diffusion, while preserving first-order consistency with the Langevin diffusion. The drift and diffusion terms are chosen to guarantee that the one-step squared update is independent of the gradient. Consequently, SULA is robust to the choice of step-size and preserves estimation and prediction quality. We provide sufficient conditions under which SULA with a step-size $h$ converges weakly to the Langevin diffusion at the standard $O(h)$ rate, the SULA chain is geometrically ergodic, and that the bias of its invariant measure relative to the target is $O(h)$. Further, we develop SG-SULA, a stochastic-gradient version of SULA that rescales the stochastic gradient using a Gaussian CDF correction under Gaussianity of the gradient noise. Numerical experiments on various examples demonstrate SULA’s robustness to tuning and SG-SULA’s improved predictive performance.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.19670" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.19670" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

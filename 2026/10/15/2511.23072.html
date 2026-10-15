@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>What If They Took the Shot? A Hierarchical Bayesian Framework for Counterfactual Expected Goals</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="What If They Took the Shot? A Hierarchical Bayesian Framework for Counterfactual Expected Goals" />
+<meta name="author" content="Mikayil Mahmudlu, Oktay Karakuş, Hasan Arkadaş, Can Eyüpoğlu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How would the probability of scoring change if a different player took the same shot? Although expected goals models describe the difficulty of scoring opportunities, comparing players on identical chances requires accounting for uncertainty in their estimated conversion probabilities. We address this question through a hierarchical Bayesian framework that evaluates alternative shooters under the same observed circumstances. Using 35,700 eligible shots from four leagues during the 2015/16 season, we compare a contextual benchmark with a primary player-intercept model and a provisional extension that allows player differences to vary with shooting conditions. Paired posterior draws preserve shared uncertainty when individual probability…" />
+<meta name="twitter:description" property="og:description" content="How would the probability of scoring change if a different player took the same shot? Although expected goals models describe the difficulty of scoring opportunities, comparing players on identical chances requires accounting for uncertainty in their estimated conversion probabilities. We address this question through a hierarchical Bayesian framework that evaluates alternative shooters under the same observed circumstances. Using 35,700 eligible shots from four leagues during the 2015/16 season, we compare a contextual benchmark with a primary player-intercept model and a provisional extension that allows player differences to vary with shooting conditions. Paired posterior draws preserve shared uncertainty when individual probability…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/15/2511.23072.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/15/2511.23072.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-15T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-15T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="What If They Took the Shot? A Hierarchical Bayesian Framework for Counterfactual Expected Goals" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mikayil Mahmudlu, Oktay Karakuş, Hasan Arkadaş, Can Eyüpoğlu"},"dateModified":"2026-10-15T00:00:00+02:00","datePublished":"2026-10-15T00:00:00+02:00","description":"How would the probability of scoring change if a different player took the same shot? Although expected goals models describe the difficulty of scoring opportunities, comparing players on identical chances requires accounting for uncertainty in their estimated conversion probabilities. We address this question through a hierarchical Bayesian framework that evaluates alternative shooters under the same observed circumstances. Using 35,700 eligible shots from four leagues during the 2015/16 season, we compare a contextual benchmark with a primary player-intercept model and a provisional extension that allows player differences to vary with shooting conditions. Paired posterior draws preserve shared uncertainty when individual probability…","headline":"What If They Took the Shot? A Hierarchical Bayesian Framework for Counterfactual Expected Goals","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/15/2511.23072.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/15/2511.23072.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>What If They Took the Shot? A Hierarchical Bayesian Framework for Counterfactual Expected Goals</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Mikayil Mahmudlu, Oktay Karakuş, Hasan Arkadaş, Can Eyüpoğlu
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      15 Oct 2026
+    </div>
+  </div><div class="summary-box">A hierarchical Bayesian framework evaluates alternative shooters under identical observed circumstances.</div><h3>Abstract</h3>
+  <p>How would the probability of scoring change if a different player took the same shot? Although expected goals models describe the difficulty of scoring opportunities, comparing players on identical chances requires accounting for uncertainty in their estimated conversion probabilities. We address this question through a hierarchical Bayesian framework that evaluates alternative shooters under the same observed circumstances. Using 35,700 eligible shots from four leagues during the 2015/16 season, we compare a contextual benchmark with a primary player-intercept model and a provisional extension that allows player differences to vary with shooting conditions. Paired posterior draws preserve shared uncertainty when individual probability differences are aggregated across opportunities. Chronological validation demonstrates improved predictive performance relative to a constant-rate baseline, but introducing player effects provides negligible additional gains. Controlled single-seed experiments show that greater information per player improves estimation accuracy and narrows uncertainty intervals, although distinguishing small differences remains difficult and confident conclusions about near-null effects can become more frequent. Applications involving Giroud–Vardy and Berardi–Sansone similarly yield estimated differences that are small relative to their posterior uncertainty. These findings highlight an important distinction between predicting the outcome of a shot and establishing whether one player would be more likely to convert it. The proposed framework makes this distinction explicit by evaluating alternative shooters on fixed recorded opportunities while accounting for their contextual exposure. The resulting comparisons concern conditional conversion rather than the causal consequences of replacing a player in a match.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2511.23072" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2511.23072" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
