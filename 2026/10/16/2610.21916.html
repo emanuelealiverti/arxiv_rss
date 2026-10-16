@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Prescreen, Then Subsample: Efficient model training for large-scale biomedical data with correlated covariates</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Prescreen, Then Subsample: Efficient model training for large-scale biomedical data with correlated covariates" />
+<meta name="author" content="Subhadra Dasgupta, Christian Staerk" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Statistical modeling of high-dimensional and large-sample data with complex correlation structures is increasingly important in biomedical research, particularly in large-scale omics applications such as genomic studies. Analyzing these large-scale datasets imposes substantial computational and memory demands, requiring efficient model training strategies that maintain predictive accuracy. We propose Prescreen, Then Subsample (PTS), a two-stage approach that combines variable selection with optimal-design-based informative subsampling to address both high dimensionality and large sample size. The first stage screens informative variables and can explicitly account for covariate correlation; the second stage selects informative observations in the prescreened variable space. In contrast to existing two-stage…" />
+<meta name="twitter:description" property="og:description" content="Statistical modeling of high-dimensional and large-sample data with complex correlation structures is increasingly important in biomedical research, particularly in large-scale omics applications such as genomic studies. Analyzing these large-scale datasets imposes substantial computational and memory demands, requiring efficient model training strategies that maintain predictive accuracy. We propose Prescreen, Then Subsample (PTS), a two-stage approach that combines variable selection with optimal-design-based informative subsampling to address both high dimensionality and large sample size. The first stage screens informative variables and can explicitly account for covariate correlation; the second stage selects informative observations in the prescreened variable space. In contrast to existing two-stage…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/16/2610.21916.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/16/2610.21916.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-16T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-16T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Prescreen, Then Subsample: Efficient model training for large-scale biomedical data with correlated covariates" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Subhadra Dasgupta, Christian Staerk"},"dateModified":"2026-10-16T00:00:00+02:00","datePublished":"2026-10-16T00:00:00+02:00","description":"Statistical modeling of high-dimensional and large-sample data with complex correlation structures is increasingly important in biomedical research, particularly in large-scale omics applications such as genomic studies. Analyzing these large-scale datasets imposes substantial computational and memory demands, requiring efficient model training strategies that maintain predictive accuracy. We propose Prescreen, Then Subsample (PTS), a two-stage approach that combines variable selection with optimal-design-based informative subsampling to address both high dimensionality and large sample size. The first stage screens informative variables and can explicitly account for covariate correlation; the second stage selects informative observations in the prescreened variable space. In contrast to existing two-stage…","headline":"Prescreen, Then Subsample: Efficient model training for large-scale biomedical data with correlated covariates","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/16/2610.21916.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/16/2610.21916.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Prescreen, Then Subsample: Efficient model training for large-scale biomedical data with correlated covariates</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Subhadra Dasgupta, Christian Staerk
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      16 Oct 2026
+    </div>
+  </div><div class="summary-box">A two-stage approach for efficient model training with correlated covariates in large-scale biomedical data.</div><h3>Abstract</h3>
+  <p>Statistical modeling of high-dimensional and large-sample data with complex correlation structures is increasingly important in biomedical research, particularly in large-scale omics applications such as genomic studies. Analyzing these large-scale datasets imposes substantial computational and memory demands, requiring efficient model training strategies that maintain predictive accuracy. We propose Prescreen, Then Subsample (PTS), a two-stage approach that combines variable selection with optimal-design-based informative subsampling to address both high dimensionality and large sample size. The first stage screens informative variables and can explicitly account for covariate correlation; the second stage selects informative observations in the prescreened variable space. In contrast to existing two-stage subdata selection approaches, PTS can incorporate multivariable fine-mapping to identify a correlation-aware covariate space for informative subsampling. In particular, we integrate the Sum of Single Effects (SuSiE) model for fine-mapping-based prescreening with information-based optimal subdata selection (IBOSS) for sample selection. Simulation studies based on correlated Gaussian covariates and biobank-scale synthetic genotype data show that PTS reduces model training time while achieving predictive performance comparable to full-data training. We find that SuSiE-based PTS provides improved predictive performance consistent with better stage-one screening precision compared with commonly used univariate prescreening methods. PTS therefore provides a flexible and scalable training framework for large-scale biomedical data with complex correlation structures, including genomic data with linkage disequilibrium.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.21916" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.21916" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

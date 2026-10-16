@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Bayesian Spatially Varying Coefficient Model for Surface Urban Heat Island Estimation</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Bayesian Spatially Varying Coefficient Model for Surface Urban Heat Island Estimation" />
+<meta name="author" content="Marika D&#39;Agostini, Massimo Ventrucci, Francesca K. de&#39;Donato, Andrea Ranzi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Surface urban heat islands (SUHIs) are commonly studied using satellite-derived land surface temperature (LST), but many analyses rely on static summaries or pointwise urban-rural contrasts, providing limited inference on temporal change, spatial dependence, and uncertainty. This study models LST as a stochastic spatio-temporal process using a spatially varying coefficient formulation that decomposes LST into a baseline spatial field and a location-specific temporal trend. This structure allows persistent thermal differences and local warming rates to be estimated within a unified probabilistic framework. SUHI is derived from the posterior distribution of the baseline spatial field by contrasting the estimated LST at a…" />
+<meta name="twitter:description" property="og:description" content="Surface urban heat islands (SUHIs) are commonly studied using satellite-derived land surface temperature (LST), but many analyses rely on static summaries or pointwise urban-rural contrasts, providing limited inference on temporal change, spatial dependence, and uncertainty. This study models LST as a stochastic spatio-temporal process using a spatially varying coefficient formulation that decomposes LST into a baseline spatial field and a location-specific temporal trend. This structure allows persistent thermal differences and local warming rates to be estimated within a unified probabilistic framework. SUHI is derived from the posterior distribution of the baseline spatial field by contrasting the estimated LST at a…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/16/2610.21980.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/16/2610.21980.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-16T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-16T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Bayesian Spatially Varying Coefficient Model for Surface Urban Heat Island Estimation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Marika D'Agostini, Massimo Ventrucci, Francesca K. de'Donato, Andrea Ranzi"},"dateModified":"2026-10-16T00:00:00+02:00","datePublished":"2026-10-16T00:00:00+02:00","description":"Surface urban heat islands (SUHIs) are commonly studied using satellite-derived land surface temperature (LST), but many analyses rely on static summaries or pointwise urban-rural contrasts, providing limited inference on temporal change, spatial dependence, and uncertainty. This study models LST as a stochastic spatio-temporal process using a spatially varying coefficient formulation that decomposes LST into a baseline spatial field and a location-specific temporal trend. This structure allows persistent thermal differences and local warming rates to be estimated within a unified probabilistic framework. SUHI is derived from the posterior distribution of the baseline spatial field by contrasting the estimated LST at a…","headline":"A Bayesian Spatially Varying Coefficient Model for Surface Urban Heat Island Estimation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/16/2610.21980.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/16/2610.21980.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Bayesian Spatially Varying Coefficient Model for Surface Urban Heat Island Estimation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Marika D'Agostini, Massimo Ventrucci, Francesca K. de'Donato, Andrea Ranzi
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      16 Oct 2026
+    </div>
+  </div><div class="summary-box">A Bayesian spatially varying coefficient model estimates surface urban heat island effects with uncertainty.</div><h3>Abstract</h3>
+  <p>Surface urban heat islands (SUHIs) are commonly studied using satellite-derived land surface temperature (LST), but many analyses rely on static summaries or pointwise urban-rural contrasts, providing limited inference on temporal change, spatial dependence, and uncertainty. This study models LST as a stochastic spatio-temporal process using a spatially varying coefficient formulation that decomposes LST into a baseline spatial field and a location-specific temporal trend. This structure allows persistent thermal differences and local warming rates to be estimated within a unified probabilistic framework. SUHI is derived from the posterior distribution of the baseline spatial field by contrasting the estimated LST at a given pixel with the minimum estimated LST among non-urban pixels. Posterior excursion probabilities are used to identify areas where temporal changes are supported under simultaneous probability control. The framework is applied to summer Landsat 8 LST observations for Bologna, Italy, from 2013 to 2025. Results show strong spatial heterogeneity in SUHI, with higher values over impervious surfaces and lower values over forests and water bodies. Summer LST increased overall, but local trends varied markedly across the municipality. Joint excursion sets identify areas with warming greater than the domain-wide average and smaller clusters with statistically supported cooling. These results reveal changing thermal patterns across Bologna and help distinguish areas experiencing increasing surface heat from locations where thermal conditions have improved over time. The framework therefore provides an uncertainty-aware basis for monitoring urban thermal change.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.21980" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.21980" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
