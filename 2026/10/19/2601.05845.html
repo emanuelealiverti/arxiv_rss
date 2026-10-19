@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A New Family of Poisson Non-negative Matrix Factorization Methods Using the Shifted Log Link</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A New Family of Poisson Non-negative Matrix Factorization Methods Using the Shifted Log Link" />
+<meta name="author" content="Eric Weine, Peter Carbonetto, Rafael A. Irizarry, Matthew Stephens" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Poisson non-negative matrix factorization (NMF) is a widely used method to find interpretable “parts-based” decompositions of count data. While many variants of Poisson NMF exist, existing methods assume that the “parts” in the decomposition combine additively. This assumption may be natural in some settings, but not in others. Here we introduce Poisson NMF with the shifted-log link function to relax this assumption. The shifted-log link function has a single tuning parameter, and as this parameter varies the model changes from assuming that parts combine additively (i.e., standard Poisson NMF) to assuming that parts combine more multiplicatively. We provide an algorithm…" />
+<meta name="twitter:description" property="og:description" content="Poisson non-negative matrix factorization (NMF) is a widely used method to find interpretable “parts-based” decompositions of count data. While many variants of Poisson NMF exist, existing methods assume that the “parts” in the decomposition combine additively. This assumption may be natural in some settings, but not in others. Here we introduce Poisson NMF with the shifted-log link function to relax this assumption. The shifted-log link function has a single tuning parameter, and as this parameter varies the model changes from assuming that parts combine additively (i.e., standard Poisson NMF) to assuming that parts combine more multiplicatively. We provide an algorithm…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/19/2601.05845.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/19/2601.05845.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-19T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-19T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A New Family of Poisson Non-negative Matrix Factorization Methods Using the Shifted Log Link" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eric Weine, Peter Carbonetto, Rafael A. Irizarry, Matthew Stephens"},"dateModified":"2026-10-19T00:00:00+02:00","datePublished":"2026-10-19T00:00:00+02:00","description":"Poisson non-negative matrix factorization (NMF) is a widely used method to find interpretable “parts-based” decompositions of count data. While many variants of Poisson NMF exist, existing methods assume that the “parts” in the decomposition combine additively. This assumption may be natural in some settings, but not in others. Here we introduce Poisson NMF with the shifted-log link function to relax this assumption. The shifted-log link function has a single tuning parameter, and as this parameter varies the model changes from assuming that parts combine additively (i.e., standard Poisson NMF) to assuming that parts combine more multiplicatively. We provide an algorithm…","headline":"A New Family of Poisson Non-negative Matrix Factorization Methods Using the Shifted Log Link","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/19/2601.05845.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/19/2601.05845.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A New Family of Poisson Non-negative Matrix Factorization Methods Using the Shifted Log Link</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Eric Weine, Peter Carbonetto, Rafael A. Irizarry, Matthew Stephens
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      19 Oct 2026
+    </div>
+  </div><div class="summary-box">Introduces Poisson NMF with shifted-log link function for non-additive decomposition of count data.</div><h3>Abstract</h3>
+  <p>Poisson non-negative matrix factorization (NMF) is a widely used method to find interpretable “parts-based” decompositions of count data. While many variants of Poisson NMF exist, existing methods assume that the “parts” in the decomposition combine additively. This assumption may be natural in some settings, but not in others. Here we introduce Poisson NMF with the shifted-log link function to relax this assumption. The shifted-log link function has a single tuning parameter, and as this parameter varies the model changes from assuming that parts combine additively (i.e., standard Poisson NMF) to assuming that parts combine more multiplicatively. We provide an algorithm to fit this model by maximum likelihood, and also an approximation that substantially reduces computation time for large, sparse datasets (computations scale with the number of non-zero entries in the data matrix). We illustrate these new methods on a variety of real datasets. Our examples show how the choice of link function in Poisson NMF can substantively impact the results, and how in some settings the use of a shifted-log link function may improve interpretability compared with the standard, additive link.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2601.05845" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2601.05845" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
