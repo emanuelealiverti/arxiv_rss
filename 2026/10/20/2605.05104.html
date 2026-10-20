@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Diversity-Aware Active Learning Builds Materials Datasets for Current and Future Objectives</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Diversity-Aware Active Learning Builds Materials Datasets for Current and Future Objectives" />
+<meta name="author" content="Rafael Espinosa Castañeda, Ashley Dale, Hongchen Wang, Yonatan Kurniawan, Hao Wan, Runze Zhang, Adji Bousso Dieng, Kangming Li, Jason Hattrick-Simpers" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Materials science data collection can be expensive, making dataset reuse and long-term utility important for future discovery. In practice, data collection often prioritizes properties of current interest while other properties are excluded from the acquisition process. This can produce datasets that are well suited for current objectives but lose information needed for properties of future interest. Here, we present how to construct datasets that remain informative for both. We develop and evaluate acquisition frameworks that combine predictive disagreement with diversity in material features, predicted outcomes, or both. We test these approaches across four DFT datasets and an experimental thermoelectric dataset.…" />
+<meta name="twitter:description" property="og:description" content="Materials science data collection can be expensive, making dataset reuse and long-term utility important for future discovery. In practice, data collection often prioritizes properties of current interest while other properties are excluded from the acquisition process. This can produce datasets that are well suited for current objectives but lose information needed for properties of future interest. Here, we present how to construct datasets that remain informative for both. We develop and evaluate acquisition frameworks that combine predictive disagreement with diversity in material features, predicted outcomes, or both. We test these approaches across four DFT datasets and an experimental thermoelectric dataset.…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2605.05104.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2605.05104.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-20T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-20T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Diversity-Aware Active Learning Builds Materials Datasets for Current and Future Objectives" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rafael Espinosa Castañeda, Ashley Dale, Hongchen Wang, Yonatan Kurniawan, Hao Wan, Runze Zhang, Adji Bousso Dieng, Kangming Li, Jason Hattrick-Simpers"},"dateModified":"2026-10-20T00:00:00+02:00","datePublished":"2026-10-20T00:00:00+02:00","description":"Materials science data collection can be expensive, making dataset reuse and long-term utility important for future discovery. In practice, data collection often prioritizes properties of current interest while other properties are excluded from the acquisition process. This can produce datasets that are well suited for current objectives but lose information needed for properties of future interest. Here, we present how to construct datasets that remain informative for both. We develop and evaluate acquisition frameworks that combine predictive disagreement with diversity in material features, predicted outcomes, or both. We test these approaches across four DFT datasets and an experimental thermoelectric dataset.…","headline":"Diversity-Aware Active Learning Builds Materials Datasets for Current and Future Objectives","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2605.05104.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2605.05104.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Diversity-Aware Active Learning Builds Materials Datasets for Current and Future Objectives</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Rafael Espinosa Castañeda, Ashley Dale, Hongchen Wang, Yonatan Kurniawan, Hao Wan, Runze Zhang, Adji Bousso Dieng, Kangming Li, Jason Hattrick-Simpers
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      20 Oct 2026
+    </div>
+  </div><div class="summary-box">A diversity-aware active learning framework for materials dataset construction.</div><h3>Abstract</h3>
+  <p>Materials science data collection can be expensive, making dataset reuse and long-term utility important for future discovery. In practice, data collection often prioritizes properties of current interest while other properties are excluded from the acquisition process. This can produce datasets that are well suited for current objectives but lose information needed for properties of future interest. Here, we present how to construct datasets that remain informative for both. We develop and evaluate acquisition frameworks that combine predictive disagreement with diversity in material features, predicted outcomes, or both. We test these approaches across four DFT datasets and an experimental thermoelectric dataset. Diversity inclusion in dataset construction can reduce present and future objectives trade-off by preserving a broader range of materials and property behavior during acquisition. Across all datasets, the Non-dominated Sorting Genetic Algorithm II with disagreements and feature diversity (NSGA-II Dis. + diversity) framework developed in this work provides the most robust balance between current and future objectives. It maintains prediction performance above random sampling for current objectives while mitigating bias on excluded properties and, in many cases, improving their performance beyond random sampling. This diversity-aware acquisition framework provides a practical route to building materials datasets with unbiased quality entries and mitigating cold-start limitations in subsequent modeling and discovery campaigns.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.05104" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.05104" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

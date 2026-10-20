@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>High-dimensional covariate-assisted ranking</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="High-dimensional covariate-assisted ranking" />
+<meta name="author" content="Yujia Liu, Yuanyuan Lin, Ruijian Han, Yiming Xu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ranking data in modern applications often involves covariate vectors whose dimension grows with the number of objects. Identifying relevant covariates and integrating them with item-specific utilities can yield better predictive performance. In this work, we study a Plackett–Luce model that incorporates both item-specific utilities and high-dimensional covariate effects. Under a sparsity assumption on the covariate coefficients, we establish a necessary and sufficient condition for identifiability in terms of the Kruskal rank of the restricted covariate design. We then propose an $\ell_1$-regularized maximum likelihood estimator for the covariate coefficients. Under suitable design and connectivity conditions, we establish the existence and uniqueness…" />
+<meta name="twitter:description" property="og:description" content="Ranking data in modern applications often involves covariate vectors whose dimension grows with the number of objects. Identifying relevant covariates and integrating them with item-specific utilities can yield better predictive performance. In this work, we study a Plackett–Luce model that incorporates both item-specific utilities and high-dimensional covariate effects. Under a sparsity assumption on the covariate coefficients, we establish a necessary and sufficient condition for identifiability in terms of the Kruskal rank of the restricted covariate design. We then propose an $\ell_1$-regularized maximum likelihood estimator for the covariate coefficients. Under suitable design and connectivity conditions, we establish the existence and uniqueness…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.26796.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.26796.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-20T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-20T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="High-dimensional covariate-assisted ranking" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yujia Liu, Yuanyuan Lin, Ruijian Han, Yiming Xu"},"dateModified":"2026-10-20T00:00:00+02:00","datePublished":"2026-10-20T00:00:00+02:00","description":"Ranking data in modern applications often involves covariate vectors whose dimension grows with the number of objects. Identifying relevant covariates and integrating them with item-specific utilities can yield better predictive performance. In this work, we study a Plackett–Luce model that incorporates both item-specific utilities and high-dimensional covariate effects. Under a sparsity assumption on the covariate coefficients, we establish a necessary and sufficient condition for identifiability in terms of the Kruskal rank of the restricted covariate design. We then propose an $\\ell_1$-regularized maximum likelihood estimator for the covariate coefficients. Under suitable design and connectivity conditions, we establish the existence and uniqueness…","headline":"High-dimensional covariate-assisted ranking","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.26796.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.26796.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>High-dimensional covariate-assisted ranking</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Yujia Liu, Yuanyuan Lin, Ruijian Han, Yiming Xu
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      20 Oct 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Ranking data in modern applications often involves covariate vectors whose dimension grows with the number of objects. Identifying relevant covariates and integrating them with item-specific utilities can yield better predictive performance. In this work, we study a Plackett–Luce model that incorporates both item-specific utilities and high-dimensional covariate effects. Under a sparsity assumption on the covariate coefficients, we establish a necessary and sufficient condition for identifiability in terms of the Kruskal rank of the restricted covariate design. We then propose an $\ell_1$-regularized maximum likelihood estimator for the covariate coefficients. Under suitable design and connectivity conditions, we establish the existence and uniqueness of the estimator with probability tending to one, as well as its uniform consistency. With an additional minimum-signal condition, we further establish exact support recovery. Our analysis combines a hypergraph-based chaining technique with a profile-likelihood perturbation analysis, yielding estimation rates that explicitly capture the effects of the comparison hypergraph’s connectivity and the underlying sparsity level. Numerical experiments using synthetic data and a horse racing dataset corroborate our theoretical findings.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.26796" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.26796" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

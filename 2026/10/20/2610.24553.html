@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>WUI-CAST: Real-Time Forecast Updating for Partially Observed Wildland-Urban Interface Fires</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="WUI-CAST: Real-Time Forecast Updating for Partially Observed Wildland-Urban Interface Fires" />
+<meta name="author" content="Can Wang, Naiyu Wang, Yang Zhou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Wildland-urban interface (WUI) fires couple landscape spread, structural fire development, and wind-driven ember transport. Forecasting building risk requires models that incorporate emerging observations and update predictions as fires evolve. This study presents WUI-CAST, a framework integrating established fire-propagation representations with sequential Bayesian state estimation to support real-time forecast updating under partial observation. A Dynamic Bayesian Network represents nonlocal ember-driven ignition and local structural propagation, while Bayesian filtering updates building-state probabilities using sparse reports. A retrospective Camp Fire application provides a proof-of-concept evaluation. Open-loop simulations captured key features of the wildfire-to-community transition. In two 30-minute forecasts evaluated against subsequently reported buildings…" />
+<meta name="twitter:description" property="og:description" content="Wildland-urban interface (WUI) fires couple landscape spread, structural fire development, and wind-driven ember transport. Forecasting building risk requires models that incorporate emerging observations and update predictions as fires evolve. This study presents WUI-CAST, a framework integrating established fire-propagation representations with sequential Bayesian state estimation to support real-time forecast updating under partial observation. A Dynamic Bayesian Network represents nonlocal ember-driven ignition and local structural propagation, while Bayesian filtering updates building-state probabilities using sparse reports. A retrospective Camp Fire application provides a proof-of-concept evaluation. Open-loop simulations captured key features of the wildfire-to-community transition. In two 30-minute forecasts evaluated against subsequently reported buildings…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.24553.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.24553.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-20T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-20T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="WUI-CAST: Real-Time Forecast Updating for Partially Observed Wildland-Urban Interface Fires" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Can Wang, Naiyu Wang, Yang Zhou"},"dateModified":"2026-10-20T00:00:00+02:00","datePublished":"2026-10-20T00:00:00+02:00","description":"Wildland-urban interface (WUI) fires couple landscape spread, structural fire development, and wind-driven ember transport. Forecasting building risk requires models that incorporate emerging observations and update predictions as fires evolve. This study presents WUI-CAST, a framework integrating established fire-propagation representations with sequential Bayesian state estimation to support real-time forecast updating under partial observation. A Dynamic Bayesian Network represents nonlocal ember-driven ignition and local structural propagation, while Bayesian filtering updates building-state probabilities using sparse reports. A retrospective Camp Fire application provides a proof-of-concept evaluation. Open-loop simulations captured key features of the wildfire-to-community transition. In two 30-minute forecasts evaluated against subsequently reported buildings…","headline":"WUI-CAST: Real-Time Forecast Updating for Partially Observed Wildland-Urban Interface Fires","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.24553.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.24553.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>WUI-CAST: Real-Time Forecast Updating for Partially Observed Wildland-Urban Interface Fires</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Can Wang, Naiyu Wang, Yang Zhou
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      20 Oct 2026
+    </div>
+  </div><div class="summary-box">A framework integrates fire-propagation models with sequential Bayesian state estimation for real-time wildfire forecasting.</div><h3>Abstract</h3>
+  <p>Wildland-urban interface (WUI) fires couple landscape spread, structural fire development, and wind-driven ember transport. Forecasting building risk requires models that incorporate emerging observations and update predictions as fires evolve. This study presents WUI-CAST, a framework integrating established fire-propagation representations with sequential Bayesian state estimation to support real-time forecast updating under partial observation. A Dynamic Bayesian Network represents nonlocal ember-driven ignition and local structural propagation, while Bayesian filtering updates building-state probabilities using sparse reports. A retrospective Camp Fire application provides a proof-of-concept evaluation. Open-loop simulations captured key features of the wildfire-to-community transition. In two 30-minute forecasts evaluated against subsequently reported buildings before their assimilation, closed-loop updating increased Recall@10% from 29.03% to 83.87% and from 0.00% to 43.75%, with improved conditional spatial logarithmic scores in both windows. Regional and local diagnostics reveal how assimilation redistributes risk beyond directly observed buildings. Controlled experiments demonstrate gains across the tested observation conditions and filtering implementations. A forecast-update cycle averaged 42 s for a 5-min simulation interval. Together, these findings demonstrate improved spatial risk prioritization from sparse observations and a computationally feasible approach to real-time WUI forecast updating.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.24553" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.24553" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

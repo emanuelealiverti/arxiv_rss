@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>R2-GP: Variance-Calibrated Priors for Additive Gaussian Processes</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="R2-GP: Variance-Calibrated Priors for Additive Gaussian Processes" />
+<meta name="author" content="Javier Enrique Aguilar, Soham Mukherjee, David Kohns" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop R2-GP, an R2D2-type prior for Gaussian process (GP) generalised additive models (GAMs) that calibrates explained variance ($R^2$) for Mat&#39;ern covariance kernels. The function variance for standard Mat&#39;ern kernels depends jointly on the effect magnitude and length-scale. As such, smooth and rough components with identical amplitudes contribute very different amounts of variation. With independent priors on component amplitudes, this variation results in variance overestimation, especially in higher dimensions. We overcome this by taking direct control over each component’s expected contribution to prior explained variance. We do this by rescaling each component based on its length scale and observed inputs,…" />
+<meta name="twitter:description" property="og:description" content="We develop R2-GP, an R2D2-type prior for Gaussian process (GP) generalised additive models (GAMs) that calibrates explained variance ($R^2$) for Mat&#39;ern covariance kernels. The function variance for standard Mat&#39;ern kernels depends jointly on the effect magnitude and length-scale. As such, smooth and rough components with identical amplitudes contribute very different amounts of variation. With independent priors on component amplitudes, this variation results in variance overestimation, especially in higher dimensions. We overcome this by taking direct control over each component’s expected contribution to prior explained variance. We do this by rescaling each component based on its length scale and observed inputs,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.26437.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.26437.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-20T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-20T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="R2-GP: Variance-Calibrated Priors for Additive Gaussian Processes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Javier Enrique Aguilar, Soham Mukherjee, David Kohns"},"dateModified":"2026-10-20T00:00:00+02:00","datePublished":"2026-10-20T00:00:00+02:00","description":"We develop R2-GP, an R2D2-type prior for Gaussian process (GP) generalised additive models (GAMs) that calibrates explained variance ($R^2$) for Mat\u0026#39;ern covariance kernels. The function variance for standard Mat\u0026#39;ern kernels depends jointly on the effect magnitude and length-scale. As such, smooth and rough components with identical amplitudes contribute very different amounts of variation. With independent priors on component amplitudes, this variation results in variance overestimation, especially in higher dimensions. We overcome this by taking direct control over each component’s expected contribution to prior explained variance. We do this by rescaling each component based on its length scale and observed inputs,…","headline":"R2-GP: Variance-Calibrated Priors for Additive Gaussian Processes","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.26437.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/20/2610.26437.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>R2-GP: Variance-Calibrated Priors for Additive Gaussian Processes</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Javier Enrique Aguilar, Soham Mukherjee, David Kohns
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME
+      <span class="sep">&middot;</span>
+      20 Oct 2026
+    </div>
+  </div><div class="summary-box">Develops R2-GP, a variance-calibrated prior for Gaussian process generalized additive models.</div><h3>Abstract</h3>
+  <p>We develop R2-GP, an R2D2-type prior for Gaussian process (GP) generalised additive models (GAMs) that calibrates explained variance ($R^2$) for Mat'ern covariance kernels. The function variance for standard Mat'ern kernels depends jointly on the effect magnitude and length-scale. As such, smooth and rough components with identical amplitudes contribute very different amounts of variation. With independent priors on component amplitudes, this variation results in variance overestimation, especially in higher dimensions. We overcome this by taking direct control over each component’s expected contribution to prior explained variance. We do this by rescaling each component based on its length scale and observed inputs, and modelling each rescaled variance as a share of the function variance induced by a global $R^2$ prior. This allows R2-GP to scale well to many components. To also scale to large sample sizes, we extend R2-GP to Hilbert space approximation methods, a framework for kernels exploiting their spectral decompositions for fast and efficient inference. Our simulations and real-world case studies demonstrate superior generalisation and parameter recovery over independent variance priors.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.26437" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.26437" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
