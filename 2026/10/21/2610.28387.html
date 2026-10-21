@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Exact Covariance Structure and Efficient Computation for L-Comoments</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Exact Covariance Structure and Efficient Computation for L-Comoments" />
+<meta name="author" content="Palakorn Seenoi, Jeong-Soo Park" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="L-moments are useful summary statistics and so have been widely employed in statistical analysis. L-comoments provide a multivariate generalization of L-moments. Joint finite-sample covariance structure, which represents the sampling uncertainty, of L-comoments is less well understood than that of univariate L-moments. We thus derive exact finite-sample covariance formulas for sample L-comoments using explicit conditional U-statistic kernels. We further construct an asymptotic projection estimator and an unbiased estimator of the finite-sample covariance matrix and develop positive-definite corrections. An efficient rank-prefix algorithm evaluates the full unbiased covariance estimator in $O(n^2)$ time without enumerating disjoint subsets. Numerical experiments demonstrate substantial computational savings. The…" />
+<meta name="twitter:description" property="og:description" content="L-moments are useful summary statistics and so have been widely employed in statistical analysis. L-comoments provide a multivariate generalization of L-moments. Joint finite-sample covariance structure, which represents the sampling uncertainty, of L-comoments is less well understood than that of univariate L-moments. We thus derive exact finite-sample covariance formulas for sample L-comoments using explicit conditional U-statistic kernels. We further construct an asymptotic projection estimator and an unbiased estimator of the finite-sample covariance matrix and develop positive-definite corrections. An efficient rank-prefix algorithm evaluates the full unbiased covariance estimator in $O(n^2)$ time without enumerating disjoint subsets. Numerical experiments demonstrate substantial computational savings. The…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/21/2610.28387.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/21/2610.28387.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-21T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Exact Covariance Structure and Efficient Computation for L-Comoments" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Palakorn Seenoi, Jeong-Soo Park"},"dateModified":"2026-10-21T00:00:00+02:00","datePublished":"2026-10-21T00:00:00+02:00","description":"L-moments are useful summary statistics and so have been widely employed in statistical analysis. L-comoments provide a multivariate generalization of L-moments. Joint finite-sample covariance structure, which represents the sampling uncertainty, of L-comoments is less well understood than that of univariate L-moments. We thus derive exact finite-sample covariance formulas for sample L-comoments using explicit conditional U-statistic kernels. We further construct an asymptotic projection estimator and an unbiased estimator of the finite-sample covariance matrix and develop positive-definite corrections. An efficient rank-prefix algorithm evaluates the full unbiased covariance estimator in $O(n^2)$ time without enumerating disjoint subsets. Numerical experiments demonstrate substantial computational savings. The…","headline":"Exact Covariance Structure and Efficient Computation for L-Comoments","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/21/2610.28387.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/21/2610.28387.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Exact Covariance Structure and Efficient Computation for L-Comoments</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Palakorn Seenoi, Jeong-Soo Park
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      21 Oct 2026
+    </div>
+  </div><div class="summary-box">Derives exact finite-sample covariance formulas for sample L-comoments using U-statistic kernels.</div><h3>Abstract</h3>
+  <p>L-moments are useful summary statistics and so have been widely employed in statistical analysis. L-comoments provide a multivariate generalization of L-moments. Joint finite-sample covariance structure, which represents the sampling uncertainty, of L-comoments is less well understood than that of univariate L-moments. We thus derive exact finite-sample covariance formulas for sample L-comoments using explicit conditional U-statistic kernels. We further construct an asymptotic projection estimator and an unbiased estimator of the finite-sample covariance matrix and develop positive-definite corrections. An efficient rank-prefix algorithm evaluates the full unbiased covariance estimator in $O(n^2)$ time without enumerating disjoint subsets. Numerical experiments demonstrate substantial computational savings. The results provide a basis for first-order covariance approximations for L-comoment ratios and for subsequent multivariate L-moment estimation.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.28387" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.28387" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
