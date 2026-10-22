@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sequential Entropic Optimal Transport for Bayesian Inverse Problems via Multilevel Monte Carlo</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Sequential Entropic Optimal Transport for Bayesian Inverse Problems via Multilevel Monte Carlo" />
+<meta name="author" content="Jason Beh, Pierre Del Moral, Ajay Jasra" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We consider the problem of Bayesian estimation associated to inverse problems governed by partial differential equations (PDEs). In most cases of practical interest, one must use numerical solvers to implement computational methods based on Monte Carlo methods. This inevitably leads to an adaptation of multilevel Monte Carlo (MLMC) methods to reduce computational efforts to achieve a pre-specified mean square error (MSE). MLMC is based on sampling coupled versions of Bayesian posteriors associated to increasingly precise numerical solves of the PDE. In this article we present a novel method to implement MLMC based upon sequential entropic optimal transport couplings learned with…" />
+<meta name="twitter:description" property="og:description" content="We consider the problem of Bayesian estimation associated to inverse problems governed by partial differential equations (PDEs). In most cases of practical interest, one must use numerical solvers to implement computational methods based on Monte Carlo methods. This inevitably leads to an adaptation of multilevel Monte Carlo (MLMC) methods to reduce computational efforts to achieve a pre-specified mean square error (MSE). MLMC is based on sampling coupled versions of Bayesian posteriors associated to increasingly precise numerical solves of the PDE. In this article we present a novel method to implement MLMC based upon sequential entropic optimal transport couplings learned with…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/22/2610.29546.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/22/2610.29546.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-22T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-22T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sequential Entropic Optimal Transport for Bayesian Inverse Problems via Multilevel Monte Carlo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jason Beh, Pierre Del Moral, Ajay Jasra"},"dateModified":"2026-10-22T00:00:00+02:00","datePublished":"2026-10-22T00:00:00+02:00","description":"We consider the problem of Bayesian estimation associated to inverse problems governed by partial differential equations (PDEs). In most cases of practical interest, one must use numerical solvers to implement computational methods based on Monte Carlo methods. This inevitably leads to an adaptation of multilevel Monte Carlo (MLMC) methods to reduce computational efforts to achieve a pre-specified mean square error (MSE). MLMC is based on sampling coupled versions of Bayesian posteriors associated to increasingly precise numerical solves of the PDE. In this article we present a novel method to implement MLMC based upon sequential entropic optimal transport couplings learned with…","headline":"Sequential Entropic Optimal Transport for Bayesian Inverse Problems via Multilevel Monte Carlo","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/22/2610.29546.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/22/2610.29546.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Sequential Entropic Optimal Transport for Bayesian Inverse Problems via Multilevel Monte Carlo</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Jason Beh, Pierre Del Moral, Ajay Jasra
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      22 Oct 2026
+    </div>
+  </div><div class="summary-box">A novel method for Bayesian inverse problems using sequential entropic optimal transport and multilevel Monte Carlo.</div><h3>Abstract</h3>
+  <p>We consider the problem of Bayesian estimation associated to inverse problems governed by partial differential equations (PDEs). In most cases of practical interest, one must use numerical solvers to implement computational methods based on Monte Carlo methods. This inevitably leads to an adaptation of multilevel Monte Carlo (MLMC) methods to reduce computational efforts to achieve a pre-specified mean square error (MSE). MLMC is based on sampling coupled versions of Bayesian posteriors associated to increasingly precise numerical solves of the PDE. In this article we present a novel method to implement MLMC based upon sequential entropic optimal transport couplings learned with light Schr"odinger bridges, and correct the transport with Metropolis–Hastings steps that preserve the pairing. We bound the mean square error associated to a version of our new estimation method and show, for an elliptic inverse problem, that to achieve a MSE of $\mathcal{O}(\delta^2)$ ($\delta &gt;0$) one can have an optimal cost of $\mathcal{O}(\delta^{-2})$. The results feature explicit bounds on the effect of the fitted transport and of the Metropolis–Hastings correction. From a numerical perspective, on elliptic, Darcy-flow and Navier-Stokes problems, the method reduces the variance of the most precise solver by a factor of five to ten and is faster than multilevel sequential Monte Carlo [arXiv:1503.07259] at tight accuracies.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.29546" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.29546" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
