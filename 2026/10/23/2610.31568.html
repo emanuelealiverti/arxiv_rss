@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>More efficient transportation of causal effects using mediators</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="More efficient transportation of causal effects using mediators" />
+<meta name="author" content="Xinyi Zhang, Kara E. Rudolph, James Russell Pike, Richard Liu, Michele Santacatterina, Iván Díaz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop flexible semiparametric estimators of the average treatment effect transported to a target population that leverage mediators to achieve identification, and prior knowledge of population heterogeneity or summary-level statistics to achieve improved efficiency. We first propose a one-step semiparametric estimator that assumes knowledge of the baseline covariates driving the heterogeneity across populations. This approach improves efficiency by transporting only through these covariates, rather than through the full covariate set. We then introduce a collaborative one-step semiparametric estimator that also improves efficiency without requiring knowledge of which covariates drive study heterogeneity. Collectively, these estimators advance our ability to transport causal…" />
+<meta name="twitter:description" property="og:description" content="We develop flexible semiparametric estimators of the average treatment effect transported to a target population that leverage mediators to achieve identification, and prior knowledge of population heterogeneity or summary-level statistics to achieve improved efficiency. We first propose a one-step semiparametric estimator that assumes knowledge of the baseline covariates driving the heterogeneity across populations. This approach improves efficiency by transporting only through these covariates, rather than through the full covariate set. We then introduce a collaborative one-step semiparametric estimator that also improves efficiency without requiring knowledge of which covariates drive study heterogeneity. Collectively, these estimators advance our ability to transport causal…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.31568.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.31568.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-23T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-23T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="More efficient transportation of causal effects using mediators" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xinyi Zhang, Kara E. Rudolph, James Russell Pike, Richard Liu, Michele Santacatterina, Iván Díaz"},"dateModified":"2026-10-23T00:00:00+02:00","datePublished":"2026-10-23T00:00:00+02:00","description":"We develop flexible semiparametric estimators of the average treatment effect transported to a target population that leverage mediators to achieve identification, and prior knowledge of population heterogeneity or summary-level statistics to achieve improved efficiency. We first propose a one-step semiparametric estimator that assumes knowledge of the baseline covariates driving the heterogeneity across populations. This approach improves efficiency by transporting only through these covariates, rather than through the full covariate set. We then introduce a collaborative one-step semiparametric estimator that also improves efficiency without requiring knowledge of which covariates drive study heterogeneity. Collectively, these estimators advance our ability to transport causal…","headline":"More efficient transportation of causal effects using mediators","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.31568.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.31568.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>More efficient transportation of causal effects using mediators</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Xinyi Zhang, Kara E. Rudolph, James Russell Pike, Richard Liu, Michele Santacatterina, Iván Díaz
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      23 Oct 2026
+    </div>
+  </div><div class="summary-box">Develops semiparametric estimators for average treatment effect transported to a target population.</div><h3>Abstract</h3>
+  <p>We develop flexible semiparametric estimators of the average treatment effect transported to a target population that leverage mediators to achieve identification, and prior knowledge of population heterogeneity or summary-level statistics to achieve improved efficiency. We first propose a one-step semiparametric estimator that assumes knowledge of the baseline covariates driving the heterogeneity across populations. This approach improves efficiency by transporting only through these covariates, rather than through the full covariate set. We then introduce a collaborative one-step semiparametric estimator that also improves efficiency without requiring knowledge of which covariates drive study heterogeneity. Collectively, these estimators advance our ability to transport causal effects by improving efficiency in the presence of mediation and intermediate confounding through targeted dimension reduction strategies. We use simulation to examine finite-sample performance and apply our estimators to a large-scale housing mobility trial (MTO) and a hearing intervention trial (ACHIEVE).</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.31568" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.31568" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

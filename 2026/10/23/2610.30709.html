@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Estimating Group Average Treatment Effects in High-Risk Populations with Unobserved Target Membership</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Estimating Group Average Treatment Effects in High-Risk Populations with Unobserved Target Membership" />
+<meta name="author" content="Shubo Zhang, Yinjun Zhao, Donglin Zeng, Yuanjia Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Estimating treatment effects within a prespecified high-risk population is challenging. When risk status is unobserved or the target population is small, analyses restricted to high-risk individuals can be unstable or inefficient. We propose a risk-score-weighted soft-targeting (RSW) estimator for group average treatment effects in high-risk populations. It accommodates two settings: when high-risk status is observed, the membership probability can be estimated within the analysis sample; when unobserved, it can be obtained from a reference model using covariates in the analysis sample. RSW uses these probabilities to represent the target population, learns a doubly robust treatment effect in the full sample,…" />
+<meta name="twitter:description" property="og:description" content="Estimating treatment effects within a prespecified high-risk population is challenging. When risk status is unobserved or the target population is small, analyses restricted to high-risk individuals can be unstable or inefficient. We propose a risk-score-weighted soft-targeting (RSW) estimator for group average treatment effects in high-risk populations. It accommodates two settings: when high-risk status is observed, the membership probability can be estimated within the analysis sample; when unobserved, it can be obtained from a reference model using covariates in the analysis sample. RSW uses these probabilities to represent the target population, learns a doubly robust treatment effect in the full sample,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30709.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30709.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-23T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-23T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Estimating Group Average Treatment Effects in High-Risk Populations with Unobserved Target Membership" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shubo Zhang, Yinjun Zhao, Donglin Zeng, Yuanjia Wang"},"dateModified":"2026-10-23T00:00:00+02:00","datePublished":"2026-10-23T00:00:00+02:00","description":"Estimating treatment effects within a prespecified high-risk population is challenging. When risk status is unobserved or the target population is small, analyses restricted to high-risk individuals can be unstable or inefficient. We propose a risk-score-weighted soft-targeting (RSW) estimator for group average treatment effects in high-risk populations. It accommodates two settings: when high-risk status is observed, the membership probability can be estimated within the analysis sample; when unobserved, it can be obtained from a reference model using covariates in the analysis sample. RSW uses these probabilities to represent the target population, learns a doubly robust treatment effect in the full sample,…","headline":"Estimating Group Average Treatment Effects in High-Risk Populations with Unobserved Target Membership","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30709.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30709.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Estimating Group Average Treatment Effects in High-Risk Populations with Unobserved Target Membership</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Shubo Zhang, Yinjun Zhao, Donglin Zeng, Yuanjia Wang
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      23 Oct 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Estimating treatment effects within a prespecified high-risk population is challenging. When risk status is unobserved or the target population is small, analyses restricted to high-risk individuals can be unstable or inefficient. We propose a risk-score-weighted soft-targeting (RSW) estimator for group average treatment effects in high-risk populations. It accommodates two settings: when high-risk status is observed, the membership probability can be estimated within the analysis sample; when unobserved, it can be obtained from a reference model using covariates in the analysis sample. RSW uses these probabilities to represent the target population, learns a doubly robust treatment effect in the full sample, and aggregates a low-dimensional treatment-effect surface over the risk-weighted target distribution. We establish pointwise asymptotic normality and an influence-function-based variance estimator. In simulations with continuous and binary outcomes, RSW had similar bias and lower variance than two hard-targeting alternatives. Sensitivity analyses showed that the gain persisted when treatment-effect sufficiency was violated, although RSW bias increased under strong violations. We applied the method to the All of Us study to estimate effects of non-GLP antidiabetic and antihypertensive medication use on mild cognitive impairment (MCI)-free time restricted at 48 months within comorbidity-defined high-risk subgroups. We estimated the risk score in a nonoverlapping internal reference sample and applied it to the outcome-analysis sample. This illustrates how soft targeting can improve precision while retaining an interpretable high-risk target population.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.30709" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.30709" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

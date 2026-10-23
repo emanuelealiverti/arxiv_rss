@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Bayesian Copula Dirichlet Process GLM for Longitudinal Data</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Bayesian Copula Dirichlet Process GLM for Longitudinal Data" />
+<meta name="author" content="Shijie Yuan, Entejar Alam, Asmit Chakraborty, Paul Rathouz, Jonathan Schildcrout, Peter Müller" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce a semiparametric Bayesian generalized linear model (GLM) for longitudinal continuous outcomes that preserves the usual interpretation of the GLM regression structure while leaving the baseline distribution nonparametric. The proposed copula Dirichlet process generalized linear model (CDPGLM) combines a Dirichlet process prior for the baseline distribution, a parametric GLM regression structure for covariate effects, and a copula for longitudinal within–subject dependence. This construction separates modeling the marginal distribution of an individual repeated measurement from modeling the association: the Dirichlet process GLM component defines the marginal density and regression mean, whereas the copula captures dependence among repeated measurements. Compared with…" />
+<meta name="twitter:description" property="og:description" content="We introduce a semiparametric Bayesian generalized linear model (GLM) for longitudinal continuous outcomes that preserves the usual interpretation of the GLM regression structure while leaving the baseline distribution nonparametric. The proposed copula Dirichlet process generalized linear model (CDPGLM) combines a Dirichlet process prior for the baseline distribution, a parametric GLM regression structure for covariate effects, and a copula for longitudinal within–subject dependence. This construction separates modeling the marginal distribution of an individual repeated measurement from modeling the association: the Dirichlet process GLM component defines the marginal density and regression mean, whereas the copula captures dependence among repeated measurements. Compared with…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30467.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30467.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-23T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-23T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Bayesian Copula Dirichlet Process GLM for Longitudinal Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shijie Yuan, Entejar Alam, Asmit Chakraborty, Paul Rathouz, Jonathan Schildcrout, Peter Müller"},"dateModified":"2026-10-23T00:00:00+02:00","datePublished":"2026-10-23T00:00:00+02:00","description":"We introduce a semiparametric Bayesian generalized linear model (GLM) for longitudinal continuous outcomes that preserves the usual interpretation of the GLM regression structure while leaving the baseline distribution nonparametric. The proposed copula Dirichlet process generalized linear model (CDPGLM) combines a Dirichlet process prior for the baseline distribution, a parametric GLM regression structure for covariate effects, and a copula for longitudinal within–subject dependence. This construction separates modeling the marginal distribution of an individual repeated measurement from modeling the association: the Dirichlet process GLM component defines the marginal density and regression mean, whereas the copula captures dependence among repeated measurements. Compared with…","headline":"A Bayesian Copula Dirichlet Process GLM for Longitudinal Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30467.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30467.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Bayesian Copula Dirichlet Process GLM for Longitudinal Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Shijie Yuan, Entejar Alam, Asmit Chakraborty, Paul Rathouz, Jonathan Schildcrout, Peter Müller
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      23 Oct 2026
+    </div>
+  </div><div class="summary-box">A Bayesian GLM with Dirichlet process prior and copula for longitudinal data modeling.</div><h3>Abstract</h3>
+  <p>We introduce a semiparametric Bayesian generalized linear model (GLM) for longitudinal continuous outcomes that preserves the usual interpretation of the GLM regression structure while leaving the baseline distribution nonparametric. The proposed copula Dirichlet process generalized linear model (CDPGLM) combines a Dirichlet process prior for the baseline distribution, a parametric GLM regression structure for covariate effects, and a copula for longitudinal within–subject dependence. This construction separates modeling the marginal distribution of an individual repeated measurement from modeling the association: the Dirichlet process GLM component defines the marginal density and regression mean, whereas the copula captures dependence among repeated measurements. Compared with a parametric beta mixed–effects model, the CDPGLM provides similarly efficient estimation of regression effects while being substantially more robust to estimate marginal distributions and lower-tail probabilities (the complement of exceedance probability). In an application to data from the National Heart, Lung, and Blood Institute (NHLBI) Lung Health Study, the CDPGLM and a parametric mixed beta model gave comparable inference on regression coefficients, but the CDPGLM more closely matched the empirical marginal distribution and reported more realistic and detailed lower–tail risk summaries.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.30467" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.30467" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

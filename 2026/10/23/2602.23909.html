@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Automated selection of $r$ in $r$-largest order statistics models: finite-sample performance and return-level inference</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Automated selection of $r$ in $r$-largest order statistics models: finite-sample performance and return-level inference" />
+<meta name="author" content="Yire Shin, Jihong Park, Jeong-Soo Park" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Selecting the number $r$ of upper order statistics is a key practical issue in fitting $r$-largest order statistics models. The entropy difference test for selecting $r$ relies on a large-sample approximation. The score test can be used for small samples but is computationally demanding. To obtain a fast method that is also applicable to small samples, we propose a method based on the conditional cumulative distribution function (CCDF), which applies a sequence of Cram&#39;er–von Mises goodness-of-fit tests. The tests are calibrated by a parametric bootstrap in which each refit is replaced by a single Newton step, so the computation remains…" />
+<meta name="twitter:description" property="og:description" content="Selecting the number $r$ of upper order statistics is a key practical issue in fitting $r$-largest order statistics models. The entropy difference test for selecting $r$ relies on a large-sample approximation. The score test can be used for small samples but is computationally demanding. To obtain a fast method that is also applicable to small samples, we propose a method based on the conditional cumulative distribution function (CCDF), which applies a sequence of Cram&#39;er–von Mises goodness-of-fit tests. The tests are calibrated by a parametric bootstrap in which each refit is replaced by a single Newton step, so the computation remains…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2602.23909.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2602.23909.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-23T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-23T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Automated selection of $r$ in $r$-largest order statistics models: finite-sample performance and return-level inference" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yire Shin, Jihong Park, Jeong-Soo Park"},"dateModified":"2026-10-23T00:00:00+02:00","datePublished":"2026-10-23T00:00:00+02:00","description":"Selecting the number $r$ of upper order statistics is a key practical issue in fitting $r$-largest order statistics models. The entropy difference test for selecting $r$ relies on a large-sample approximation. The score test can be used for small samples but is computationally demanding. To obtain a fast method that is also applicable to small samples, we propose a method based on the conditional cumulative distribution function (CCDF), which applies a sequence of Cram\u0026#39;er–von Mises goodness-of-fit tests. The tests are calibrated by a parametric bootstrap in which each refit is replaced by a single Newton step, so the computation remains…","headline":"Automated selection of $r$ in $r$-largest order statistics models: finite-sample performance and return-level inference","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2602.23909.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2602.23909.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Automated selection of $r$ in $r$-largest order statistics models: finite-sample performance and return-level inference</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Yire Shin, Jihong Park, Jeong-Soo Park
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO
+      <span class="sep">&middot;</span>
+      23 Oct 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Selecting the number $r$ of upper order statistics is a key practical issue in fitting $r$-largest order statistics models. The entropy difference test for selecting $r$ relies on a large-sample approximation. The score test can be used for small samples but is computationally demanding. To obtain a fast method that is also applicable to small samples, we propose a method based on the conditional cumulative distribution function (CCDF), which applies a sequence of Cram'er–von Mises goodness-of-fit tests. The tests are calibrated by a parametric bootstrap in which each refit is replaced by a single Newton step, so the computation remains fast. We also revisit the spacings test and show that the two test statistics become nearly identical as $r$ increases. Monte Carlo simulations show that the CCDF test has accurate size and good power in small and moderate samples. Further simulations show that a few additional order statistics can reduce the error of return-level estimates compared with those obtained from the block maxima only. The method is illustrated using rainfall data from Sancheong, Korea.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2602.23909" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2602.23909" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

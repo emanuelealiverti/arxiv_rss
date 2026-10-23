@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>2Flow2SN: Dusty Supernova Cosmology with Photometric Redshifts and Contamination using Neural Simulation-Based Inference</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="2Flow2SN: Dusty Supernova Cosmology with Photometric Redshifts and Contamination using Neural Simulation-Based Inference" />
+<meta name="author" content="Benjamin M. Boyd, Maximilian Autenrieth, Kaisey S. Mandel, Matthew Grayling, Madeleine Ginolin, Lisa Kelsey, Stephen Thorp" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Photometric Type Ia supernova (SN Ia) cosmology in the era of the Vera C. Rubin Observatory’s Legacy Survey of Space and Time (LSST) demands statistical frameworks that simultaneously account for selection effects, photometric redshift uncertainties and non-Ia contamination at scale. We present FlowSN2, a modular statistical framework combining hierarchical Bayesian modelling and simulation-based inference (SBI), that reframes photometric SN cosmology from a regression task to a joint inference problem over light curve summaries and photometric redshifts. By employing neural likelihood estimation via normalising flows, FlowSN2 approximates the data distributions of selected objects in a form that can be reused across…" />
+<meta name="twitter:description" property="og:description" content="Photometric Type Ia supernova (SN Ia) cosmology in the era of the Vera C. Rubin Observatory’s Legacy Survey of Space and Time (LSST) demands statistical frameworks that simultaneously account for selection effects, photometric redshift uncertainties and non-Ia contamination at scale. We present FlowSN2, a modular statistical framework combining hierarchical Bayesian modelling and simulation-based inference (SBI), that reframes photometric SN cosmology from a regression task to a joint inference problem over light curve summaries and photometric redshifts. By employing neural likelihood estimation via normalising flows, FlowSN2 approximates the data distributions of selected objects in a form that can be reused across…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30244.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30244.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-23T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-23T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="2Flow2SN: Dusty Supernova Cosmology with Photometric Redshifts and Contamination using Neural Simulation-Based Inference" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Benjamin M. Boyd, Maximilian Autenrieth, Kaisey S. Mandel, Matthew Grayling, Madeleine Ginolin, Lisa Kelsey, Stephen Thorp"},"dateModified":"2026-10-23T00:00:00+02:00","datePublished":"2026-10-23T00:00:00+02:00","description":"Photometric Type Ia supernova (SN Ia) cosmology in the era of the Vera C. Rubin Observatory’s Legacy Survey of Space and Time (LSST) demands statistical frameworks that simultaneously account for selection effects, photometric redshift uncertainties and non-Ia contamination at scale. We present FlowSN2, a modular statistical framework combining hierarchical Bayesian modelling and simulation-based inference (SBI), that reframes photometric SN cosmology from a regression task to a joint inference problem over light curve summaries and photometric redshifts. By employing neural likelihood estimation via normalising flows, FlowSN2 approximates the data distributions of selected objects in a form that can be reused across…","headline":"2Flow2SN: Dusty Supernova Cosmology with Photometric Redshifts and Contamination using Neural Simulation-Based Inference","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30244.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.30244.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>2Flow2SN: Dusty Supernova Cosmology with Photometric Redshifts and Contamination using Neural Simulation-Based Inference</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Benjamin M. Boyd, Maximilian Autenrieth, Kaisey S. Mandel, Matthew Grayling, Madeleine Ginolin, Lisa Kelsey, Stephen Thorp
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      23 Oct 2026
+    </div>
+  </div><div class="summary-box">A framework combines hierarchical Bayesian modeling and simulation-based inference for photometric supernova cosmology.</div><h3>Abstract</h3>
+  <p>Photometric Type Ia supernova (SN Ia) cosmology in the era of the Vera C. Rubin Observatory’s Legacy Survey of Space and Time (LSST) demands statistical frameworks that simultaneously account for selection effects, photometric redshift uncertainties and non-Ia contamination at scale. We present FlowSN2, a modular statistical framework combining hierarchical Bayesian modelling and simulation-based inference (SBI), that reframes photometric SN cosmology from a regression task to a joint inference problem over light curve summaries and photometric redshifts. By employing neural likelihood estimation via normalising flows, FlowSN2 approximates the data distributions of selected objects in a form that can be reused across different cosmological models, achieving amortisation over the Hubble diagram. This amortisation enables inference across alternative cosmological parameterisations, such as $w_0w_a\mathrm{CDM}$, away from the fiducial training cosmology. The framework integrates a standardisation model that disentangles intrinsic SN variations from extrinsic host-galaxy dust effects and adopts a principled Bayesian resampling approach to propagate SN classification uncertainty, without requiring an explicit contaminant likelihood. Across simulated tests spanning five cosmological parameter sets, our framework recovers true cosmological and population parameters, with posteriors in close agreement with both tractable analytical solutions and pure-Ia baselines. Conveniently, the framework enables Bayesian model comparison at negligible additional computational cost, providing a valuable tool for addressing debates surrounding SN standardisation and evolving dark energy. Capable of scaling to over a hundred thousand SNe without retraining, FlowSN2 offers an interpretable and statistically principled solution for cosmological inference with upcoming wide-field photometric surveys.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.30244" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.30244" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

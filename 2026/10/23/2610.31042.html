@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sequential Monte Carlo Sampling of Feasible Regions Represented by R-Functions</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Sequential Monte Carlo Sampling of Feasible Regions Represented by R-Functions" />
+<meta name="author" content="Sinan Y{\i}ld{\i}r{\i}m, Sergei Kucherenko" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Feasible-region sampling and volume estimation become increasingly inefficient when constraints define only a small fraction of a convenient bounding domain. We combine R-functions, which encode compound feasibility as a continuous signed field, with sequential Monte Carlo (SMC) samplers. The proposed construction exploits not only the sign of the R-function, which determines exact feasibility, but also its continuous negative values outside the feasible set, which provide graded information on constraint violation. Logistic intermediate distributions use this information to guide particles progressively towards feasibility, while the final target distribution remains uniform on the feasible region. Experiments on intersections and unions, including disconnected…" />
+<meta name="twitter:description" property="og:description" content="Feasible-region sampling and volume estimation become increasingly inefficient when constraints define only a small fraction of a convenient bounding domain. We combine R-functions, which encode compound feasibility as a continuous signed field, with sequential Monte Carlo (SMC) samplers. The proposed construction exploits not only the sign of the R-function, which determines exact feasibility, but also its continuous negative values outside the feasible set, which provide graded information on constraint violation. Logistic intermediate distributions use this information to guide particles progressively towards feasibility, while the final target distribution remains uniform on the feasible region. Experiments on intersections and unions, including disconnected…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.31042.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.31042.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-23T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-10-23T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sequential Monte Carlo Sampling of Feasible Regions Represented by R-Functions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sinan Y{\\i}ld{\\i}r{\\i}m, Sergei Kucherenko"},"dateModified":"2026-10-23T00:00:00+02:00","datePublished":"2026-10-23T00:00:00+02:00","description":"Feasible-region sampling and volume estimation become increasingly inefficient when constraints define only a small fraction of a convenient bounding domain. We combine R-functions, which encode compound feasibility as a continuous signed field, with sequential Monte Carlo (SMC) samplers. The proposed construction exploits not only the sign of the R-function, which determines exact feasibility, but also its continuous negative values outside the feasible set, which provide graded information on constraint violation. Logistic intermediate distributions use this information to guide particles progressively towards feasibility, while the final target distribution remains uniform on the feasible region. Experiments on intersections and unions, including disconnected…","headline":"Sequential Monte Carlo Sampling of Feasible Regions Represented by R-Functions","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.31042.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/23/2610.31042.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Sequential Monte Carlo Sampling of Feasible Regions Represented by R-Functions</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Sinan Y{\i}ld{\i}r{\i}m, Sergei Kucherenko
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      23 Oct 2026
+    </div>
+  </div><div class="summary-box">Combines R-functions with sequential Monte Carlo samplers for efficient feasible-region sampling.</div><h3>Abstract</h3>
+  <p>Feasible-region sampling and volume estimation become increasingly inefficient when constraints define only a small fraction of a convenient bounding domain. We combine R-functions, which encode compound feasibility as a continuous signed field, with sequential Monte Carlo (SMC) samplers. The proposed construction exploits not only the sign of the R-function, which determines exact feasibility, but also its continuous negative values outside the feasible set, which provide graded information on constraint violation. Logistic intermediate distributions use this information to guide particles progressively towards feasibility, while the final target distribution remains uniform on the feasible region. Experiments on intersections and unions, including disconnected cases of hyperballs, show substantial variance reductions relative to direct rejection sampling, with the statistical advantage generally increasing as the feasible fraction decreases. For sufficiently small feasible regions, these advantages persist even after accounting for computational cost. To isolate the benefit of continuous R-function information, we also compare the proposed method with an SMC sampler with a region-only (RO) construction that uses the same sequential particle machinery but retains only binary feasible/infeasible information. We demonstrate that the R-function-informed SMC method concentrates particles in the feasible region earlier and produces lower-variance volume estimates than RO.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.31042" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.31042" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
