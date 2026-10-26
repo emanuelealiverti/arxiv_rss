@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Operationalising Weaker Faithfulness: Recovery, Ambiguity and Computational Limits</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Operationalising Weaker Faithfulness: Recovery, Ambiguity and Computational Limits" />
+<meta name="author" content="Cillian Hourican, Rick Quax" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Variables can predict an outcome jointly while each is individually independent of it, causing structure learners to discard informative links. We investigate how to operationalise weaker faithfulness through two approaches: selective protection in an adjacency learner and explicit retention of alternative directed graph explanations. Matched experiments show that changes at both an early candidate-removal stage and later pruning can be necessary. In noisy XOR with a descendant (N = 10,000, 20 matched samples), combining reactivation and protection raises complete parent-pair recovery from 0/20 for either change alone to 20/20, while adding false edges. A confirmation study shows that the family…" />
+<meta name="twitter:description" property="og:description" content="Variables can predict an outcome jointly while each is individually independent of it, causing structure learners to discard informative links. We investigate how to operationalise weaker faithfulness through two approaches: selective protection in an adjacency learner and explicit retention of alternative directed graph explanations. Matched experiments show that changes at both an early candidate-removal stage and later pruning can be necessary. In noisy XOR with a descendant (N = 10,000, 20 matched samples), combining reactivation and protection raises complete parent-pair recovery from 0/20 for either change alone to 20/20, while adding false edges. A confirmation study shows that the family…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/26/2610.31724.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/26/2610.31724.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-26T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-26T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Operationalising Weaker Faithfulness: Recovery, Ambiguity and Computational Limits" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Cillian Hourican, Rick Quax"},"dateModified":"2026-10-26T00:00:00+01:00","datePublished":"2026-10-26T00:00:00+01:00","description":"Variables can predict an outcome jointly while each is individually independent of it, causing structure learners to discard informative links. We investigate how to operationalise weaker faithfulness through two approaches: selective protection in an adjacency learner and explicit retention of alternative directed graph explanations. Matched experiments show that changes at both an early candidate-removal stage and later pruning can be necessary. In noisy XOR with a descendant (N = 10,000, 20 matched samples), combining reactivation and protection raises complete parent-pair recovery from 0/20 for either change alone to 20/20, while adding false edges. A confirmation study shows that the family…","headline":"Operationalising Weaker Faithfulness: Recovery, Ambiguity and Computational Limits","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/26/2610.31724.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/26/2610.31724.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Operationalising Weaker Faithfulness: Recovery, Ambiguity and Computational Limits</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Cillian Hourican, Rick Quax
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      26 Oct 2026
+    </div>
+  </div><div class="summary-box">The paper investigates operationalising weaker faithfulness in structure learning through two approaches.</div><h3>Abstract</h3>
+  <p>Variables can predict an outcome jointly while each is individually independent of it, causing structure learners to discard informative links. We investigate how to operationalise weaker faithfulness through two approaches: selective protection in an adjacency learner and explicit retention of alternative directed graph explanations. Matched experiments show that changes at both an early candidate-removal stage and later pruning can be necessary. In noisy XOR with a descendant (N = 10,000, 20 matched samples), combining reactivation and protection raises complete parent-pair recovery from 0/20 for either change alone to 20/20, while adding false edges. A confirmation study shows that the family estimator can preserve explanations lost by orienting the protected learner’s selected skeleton: in one weaker signal XOR condition (N = 10,000) it retains the entire reference family in 48/50 samples, compared with 0/50 for the skeleton adapter. These gains are conditional. Protection can add only error, weaker effects produce false exclusions, and an ordinary faithful-chain comparison favours the PC learner. Complete nonempty family outputs decline at six/eight variables, and all 400 twelve/twenty-variable searches remain unfinished at the reporting cutoff. Neural controls show engineered retention, while the family estimator returns no accepted graph within its application budget. This operationalisation identifies two deletion stages that must be coordinated in the motivating example and shows when direct family search preserves explanations lost by selecting one skeleton. Finite evidence and computation remain substantial barriers to reliable general inference.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.31724" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.31724" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

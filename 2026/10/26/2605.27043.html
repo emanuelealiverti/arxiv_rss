@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Causal Representation Learning for Generalisable Recommendation</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Causal Representation Learning for Generalisable Recommendation" />
+<meta name="author" content="Yorgos Felekis, Michael O&#39;Riordan, Oriol Corcoll, Ciarán M. Gilligan-Lee" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Predictive models trained on observational data often fail to generalise when deployed, especially when the training data is a product of the system being optimised. Recommender systems are a canonical example: they are trained on interaction logs confounded by the deployed policy, past user behaviour, and platform filtering. As a result, the training distribution differs from the candidate distribution scored at serving time, a gap that makes offline metrics unreliable predictors of online performance. We address the distribution shift problem with a method motivated by causal representation learning (CRL). We propose an information-theoretic disentanglement criterion and prove that its optimum…" />
+<meta name="twitter:description" property="og:description" content="Predictive models trained on observational data often fail to generalise when deployed, especially when the training data is a product of the system being optimised. Recommender systems are a canonical example: they are trained on interaction logs confounded by the deployed policy, past user behaviour, and platform filtering. As a result, the training distribution differs from the candidate distribution scored at serving time, a gap that makes offline metrics unreliable predictors of online performance. We address the distribution shift problem with a method motivated by causal representation learning (CRL). We propose an information-theoretic disentanglement criterion and prove that its optimum…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/26/2605.27043.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/26/2605.27043.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-26T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-26T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Causal Representation Learning for Generalisable Recommendation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yorgos Felekis, Michael O'Riordan, Oriol Corcoll, Ciarán M. Gilligan-Lee"},"dateModified":"2026-10-26T00:00:00+01:00","datePublished":"2026-10-26T00:00:00+01:00","description":"Predictive models trained on observational data often fail to generalise when deployed, especially when the training data is a product of the system being optimised. Recommender systems are a canonical example: they are trained on interaction logs confounded by the deployed policy, past user behaviour, and platform filtering. As a result, the training distribution differs from the candidate distribution scored at serving time, a gap that makes offline metrics unreliable predictors of online performance. We address the distribution shift problem with a method motivated by causal representation learning (CRL). We propose an information-theoretic disentanglement criterion and prove that its optimum…","headline":"Causal Representation Learning for Generalisable Recommendation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/26/2605.27043.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/26/2605.27043.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Causal Representation Learning for Generalisable Recommendation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Yorgos Felekis, Michael O'Riordan, Oriol Corcoll, Ciarán M. Gilligan-Lee
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME
+      <span class="sep">&middot;</span>
+      26 Oct 2026
+    </div>
+  </div><div class="summary-box">Proposes a causal representation learning method for generalisable recommendation systems.</div><h3>Abstract</h3>
+  <p>Predictive models trained on observational data often fail to generalise when deployed, especially when the training data is a product of the system being optimised. Recommender systems are a canonical example: they are trained on interaction logs confounded by the deployed policy, past user behaviour, and platform filtering. As a result, the training distribution differs from the candidate distribution scored at serving time, a gap that makes offline metrics unreliable predictors of online performance. We address the distribution shift problem with a method motivated by causal representation learning (CRL). We propose an information-theoretic disentanglement criterion and prove that its optimum excludes confounder-dependent non-causal information from the treatment representation. We derive a tractable variational lower bound making the criterion optimisable from finite observational data. The scope of our method is narrower than that of much of the CRL literature, in that we target better generalisation under distribution shift, not full identification of latent causal factors. This narrower target makes the method practical, requiring only existing confounded logs, applying to any standard supervised model, and adding no inference-time cost. Our headline evaluation is an A/B test with millions of users on Spotify, applied to a production ranker for personalised playlist generation. A CRL variant matched in capacity to the production baseline performed on par offline but delivered substantial online gains in listener engagement. Complementary evidence on a synthetic dataset with known causal structure and a semi-synthetic variant of the public KuaiRand recommendation dataset shows similar in-distribution performance to the baseline but gains under distribution shift. Across all three settings, adding our causal disentanglement objective yields better out-of-distribution generalisation.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.27043" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.27043" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
