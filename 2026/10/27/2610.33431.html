@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Nonparametric shrinkage estimation of high-dimensional variance component matrices</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Nonparametric shrinkage estimation of high-dimensional variance component matrices" />
+<meta name="author" content="Ran Xie, Iain M. Johnstone" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a nonparametric spectral estimation method for variance component covariance matrices in high-dimensional multivariate mixed effects models. Although classical MANOVA estimators are unbiased entrywise, their eigenvalues can be severely dispersed and biased when the number of traits is comparable to the number of realizations of the random effects. Building on a system of self-consistent equations that characterizes the limiting spectral distribution of a MANOVA estimator, we construct a kernel-based nonlinear transformation of the sample eigenvalues that targets the optimal rotation-invariant estimator under Frobenius loss. The resulting procedure corrects for high-dimensional eigenvalue spreading without imposing a parametric model on the…" />
+<meta name="twitter:description" property="og:description" content="We develop a nonparametric spectral estimation method for variance component covariance matrices in high-dimensional multivariate mixed effects models. Although classical MANOVA estimators are unbiased entrywise, their eigenvalues can be severely dispersed and biased when the number of traits is comparable to the number of realizations of the random effects. Building on a system of self-consistent equations that characterizes the limiting spectral distribution of a MANOVA estimator, we construct a kernel-based nonlinear transformation of the sample eigenvalues that targets the optimal rotation-invariant estimator under Frobenius loss. The resulting procedure corrects for high-dimensional eigenvalue spreading without imposing a parametric model on the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33431.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33431.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-27T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Nonparametric shrinkage estimation of high-dimensional variance component matrices" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ran Xie, Iain M. Johnstone"},"dateModified":"2026-10-27T00:00:00+01:00","datePublished":"2026-10-27T00:00:00+01:00","description":"We develop a nonparametric spectral estimation method for variance component covariance matrices in high-dimensional multivariate mixed effects models. Although classical MANOVA estimators are unbiased entrywise, their eigenvalues can be severely dispersed and biased when the number of traits is comparable to the number of realizations of the random effects. Building on a system of self-consistent equations that characterizes the limiting spectral distribution of a MANOVA estimator, we construct a kernel-based nonlinear transformation of the sample eigenvalues that targets the optimal rotation-invariant estimator under Frobenius loss. The resulting procedure corrects for high-dimensional eigenvalue spreading without imposing a parametric model on the…","headline":"Nonparametric shrinkage estimation of high-dimensional variance component matrices","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33431.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33431.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Nonparametric shrinkage estimation of high-dimensional variance component matrices</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Ran Xie, Iain M. Johnstone
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      27 Oct 2026
+    </div>
+  </div><div class="summary-box">Develops a kernel-based nonparametric shrinkage estimator for high-dimensional variance component matrices in mixed‑effects models.</div><h3>Abstract</h3>
+  <p>We develop a nonparametric spectral estimation method for variance component covariance matrices in high-dimensional multivariate mixed effects models. Although classical MANOVA estimators are unbiased entrywise, their eigenvalues can be severely dispersed and biased when the number of traits is comparable to the number of realizations of the random effects. Building on a system of self-consistent equations that characterizes the limiting spectral distribution of a MANOVA estimator, we construct a kernel-based nonlinear transformation of the sample eigenvalues that targets the optimal rotation-invariant estimator under Frobenius loss. The resulting procedure corrects for high-dimensional eigenvalue spreading without imposing a parametric model on the unknown covariance spectrum. Our work is motivated by applications in quantitative genetics, where estimating genetic covariance components across many phenotypic traits is of central interest. We implement the method in a new Python package mlmm-shrinkage and compare the proposed estimator with classical estimators across several common experimental designs in this domain through simulations and a real-data application.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.33431" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.33431" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

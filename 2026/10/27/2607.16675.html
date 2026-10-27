@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Isotonic Conformal Inference</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Isotonic Conformal Inference" />
+<meta name="author" content="Daniel Bensimon, Zhiquan Liu, Sean X. Yu, Eric D. Kolaczyk, Archer Y. Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A predictor with small overall bias can still exhibit systematic bias conditional on its predicted value, limiting its reliability for downstream uncertainty quantification and candidate screening. We propose Isotonic Conformal Inference, a unified framework for prediction and multiple testing that separates calibration from inference and exploits the level set structure of an isotonic predictor. This structure enables the computation of localized conformal quantiles and $p$-values while avoiding repeated isotonic refitting across candidate responses. For prediction, we introduce Split Isotonic Conformal Prediction (sICP) and Transductive Isotonic Conformal Prediction (tICP), establish prediction-conditional coverage guarantees for both methods, and characterize their finite-sample and…" />
+<meta name="twitter:description" property="og:description" content="A predictor with small overall bias can still exhibit systematic bias conditional on its predicted value, limiting its reliability for downstream uncertainty quantification and candidate screening. We propose Isotonic Conformal Inference, a unified framework for prediction and multiple testing that separates calibration from inference and exploits the level set structure of an isotonic predictor. This structure enables the computation of localized conformal quantiles and $p$-values while avoiding repeated isotonic refitting across candidate responses. For prediction, we introduce Split Isotonic Conformal Prediction (sICP) and Transductive Isotonic Conformal Prediction (tICP), establish prediction-conditional coverage guarantees for both methods, and characterize their finite-sample and…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2607.16675.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2607.16675.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-27T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Isotonic Conformal Inference" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Daniel Bensimon, Zhiquan Liu, Sean X. Yu, Eric D. Kolaczyk, Archer Y. Yang"},"dateModified":"2026-10-27T00:00:00+01:00","datePublished":"2026-10-27T00:00:00+01:00","description":"A predictor with small overall bias can still exhibit systematic bias conditional on its predicted value, limiting its reliability for downstream uncertainty quantification and candidate screening. We propose Isotonic Conformal Inference, a unified framework for prediction and multiple testing that separates calibration from inference and exploits the level set structure of an isotonic predictor. This structure enables the computation of localized conformal quantiles and $p$-values while avoiding repeated isotonic refitting across candidate responses. For prediction, we introduce Split Isotonic Conformal Prediction (sICP) and Transductive Isotonic Conformal Prediction (tICP), establish prediction-conditional coverage guarantees for both methods, and characterize their finite-sample and…","headline":"Isotonic Conformal Inference","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2607.16675.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2607.16675.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Isotonic Conformal Inference</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Daniel Bensimon, Zhiquan Liu, Sean X. Yu, Eric D. Kolaczyk, Archer Y. Yang
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME
+      <span class="sep">&middot;</span>
+      27 Oct 2026
+    </div>
+  </div><div class="summary-box">Introduces isotonic conformal inference with split and transductive methods for prediction and FDR-controlled selection.</div><h3>Abstract</h3>
+  <p>A predictor with small overall bias can still exhibit systematic bias conditional on its predicted value, limiting its reliability for downstream uncertainty quantification and candidate screening. We propose Isotonic Conformal Inference, a unified framework for prediction and multiple testing that separates calibration from inference and exploits the level set structure of an isotonic predictor. This structure enables the computation of localized conformal quantiles and $p$-values while avoiding repeated isotonic refitting across candidate responses. For prediction, we introduce Split Isotonic Conformal Prediction (sICP) and Transductive Isotonic Conformal Prediction (tICP), establish prediction-conditional coverage guarantees for both methods, and characterize their finite-sample and asymptotic self-calibration properties. For selection, we introduce Isotonic Conformal Selection (ICS), which provides finite-sample stratum-conditional false discovery rate control. Experiments on simulated regression problems, a healthcare-utilization dataset, and a high-throughput ADMET drug discovery dataset demonstrate the practical performance of the framework and substantially lower computational costs relative to full transductive baselines.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.16675" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.16675" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

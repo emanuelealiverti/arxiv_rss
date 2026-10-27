@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Pro-Active Inference</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Pro-Active Inference" />
+<meta name="author" content="Skyler Wu, Yash Nair, Antoine Maechler, Emmanuel J. Candès" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Estimating a population mean is fundamental across scientific applications, but observing every outcome can be prohibitively expensive. Often, covariates and machine learning (ML) predictions are available for the full population, even when only a small subset of outcomes can be observed. How can we leverage this information to proactively select observations to label, update ML predictions as labels arrive, and construct statistically valid confidence intervals? We develop a general, without-replacement formulation of Pro-Active Inference (PAI), extending our earlier with-replacement approach and building on Active Statistical Inference. Rather than making fixed-order label-skip decisions, PAI proactively selects which observation to label next…" />
+<meta name="twitter:description" property="og:description" content="Estimating a population mean is fundamental across scientific applications, but observing every outcome can be prohibitively expensive. Often, covariates and machine learning (ML) predictions are available for the full population, even when only a small subset of outcomes can be observed. How can we leverage this information to proactively select observations to label, update ML predictions as labels arrive, and construct statistically valid confidence intervals? We develop a general, without-replacement formulation of Pro-Active Inference (PAI), extending our earlier with-replacement approach and building on Active Statistical Inference. Rather than making fixed-order label-skip decisions, PAI proactively selects which observation to label next…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34681.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34681.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-27T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Pro-Active Inference" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Skyler Wu, Yash Nair, Antoine Maechler, Emmanuel J. Candès"},"dateModified":"2026-10-27T00:00:00+01:00","datePublished":"2026-10-27T00:00:00+01:00","description":"Estimating a population mean is fundamental across scientific applications, but observing every outcome can be prohibitively expensive. Often, covariates and machine learning (ML) predictions are available for the full population, even when only a small subset of outcomes can be observed. How can we leverage this information to proactively select observations to label, update ML predictions as labels arrive, and construct statistically valid confidence intervals? We develop a general, without-replacement formulation of Pro-Active Inference (PAI), extending our earlier with-replacement approach and building on Active Statistical Inference. Rather than making fixed-order label-skip decisions, PAI proactively selects which observation to label next…","headline":"Pro-Active Inference","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34681.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34681.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Pro-Active Inference</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Skyler Wu, Yash Nair, Antoine Maechler, Emmanuel J. Candès
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      27 Oct 2026
+    </div>
+  </div><div class="summary-box">Develops a without-replacement active inference framework for optimal observation selection and confidence intervals using ML predictions.</div><h3>Abstract</h3>
+  <p>Estimating a population mean is fundamental across scientific applications, but observing every outcome can be prohibitively expensive. Often, covariates and machine learning (ML) predictions are available for the full population, even when only a small subset of outcomes can be observed. How can we leverage this information to proactively select observations to label, update ML predictions as labels arrive, and construct statistically valid confidence intervals? We develop a general, without-replacement formulation of Pro-Active Inference (PAI), extending our earlier with-replacement approach and building on Active Statistical Inference. Rather than making fixed-order label-skip decisions, PAI proactively selects which observation to label next from the remaining covariate pool while accommodating online ML updates. We establish PAI’s finite-sample unbiasedness and asymptotic validity, develop an improved finite-sample variance estimator, and extend PAI to superpopulation inference without Bonferroni corrections or $\alpha$-splitting. We characterize PAI’s potential efficiency gains over Batch Active Inference in a quasi-oracle setting, highlighting the role of prediction-residual imbalance. Across eight diverse datasets, PAI achieves greater sampling efficiency than Sequential Active Inference in the vast majority of tested settings with near-nominal statistical coverage, using the same ML predictor and uncertainty score. However, comparisons with simpler baselines such as Prediction-Powered Inference and uniform sampling, as well as the closely related Prediction-Powered Active Testing, reveal when additional adaptivity helps or hurts statistical efficiency. Through interpretable, theory-motivated diagnostics and frozen-ML ablations, we investigate when and why PAI gains or loses efficiency, highlighting the initial residual-estimation problem and subsequent online learning dynamics.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.34681" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.34681" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

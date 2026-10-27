@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Predictive Inference Beyond Martingales</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian Predictive Inference Beyond Martingales" />
+<meta name="author" content="Marco Battiston, Lorenzo Cappello" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There is growing interest in the so-called Bayesian Predictive Inference approach, which enables Bayesian inference without specifying a likelihood function or prior distribution and without resorting to MCMC methods. Instead, only a sequence of predictive distributions for the observations is required, and inference on the unknown estimand can be performed, cheaply in parallel, using bootstrap-type schemes. Understanding which classes of predictive distributions can be used within this framework, is still a key open question. We relax commonly used probabilistic assumptions on the observations, namely exchangeability and conditionally identical distribution, and on their predictive distributions, which are measure-valued martingales, by introducing…" />
+<meta name="twitter:description" property="og:description" content="There is growing interest in the so-called Bayesian Predictive Inference approach, which enables Bayesian inference without specifying a likelihood function or prior distribution and without resorting to MCMC methods. Instead, only a sequence of predictive distributions for the observations is required, and inference on the unknown estimand can be performed, cheaply in parallel, using bootstrap-type schemes. Understanding which classes of predictive distributions can be used within this framework, is still a key open question. We relax commonly used probabilistic assumptions on the observations, namely exchangeability and conditionally identical distribution, and on their predictive distributions, which are measure-valued martingales, by introducing…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2507.21874.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2507.21874.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-27T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian Predictive Inference Beyond Martingales" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Marco Battiston, Lorenzo Cappello"},"dateModified":"2026-10-27T00:00:00+01:00","datePublished":"2026-10-27T00:00:00+01:00","description":"There is growing interest in the so-called Bayesian Predictive Inference approach, which enables Bayesian inference without specifying a likelihood function or prior distribution and without resorting to MCMC methods. Instead, only a sequence of predictive distributions for the observations is required, and inference on the unknown estimand can be performed, cheaply in parallel, using bootstrap-type schemes. Understanding which classes of predictive distributions can be used within this framework, is still a key open question. We relax commonly used probabilistic assumptions on the observations, namely exchangeability and conditionally identical distribution, and on their predictive distributions, which are measure-valued martingales, by introducing…","headline":"Bayesian Predictive Inference Beyond Martingales","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2507.21874.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2507.21874.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian Predictive Inference Beyond Martingales</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Marco Battiston, Lorenzo Cappello
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      27 Oct 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>There is growing interest in the so-called Bayesian Predictive Inference approach, which enables Bayesian inference without specifying a likelihood function or prior distribution and without resorting to MCMC methods. Instead, only a sequence of predictive distributions for the observations is required, and inference on the unknown estimand can be performed, cheaply in parallel, using bootstrap-type schemes. Understanding which classes of predictive distributions can be used within this framework, is still a key open question. We relax commonly used probabilistic assumptions on the observations, namely exchangeability and conditionally identical distribution, and on their predictive distributions, which are measure-valued martingales, by introducing the new class of Almost Conditionally Identically Distributed (a.c.i.d.) random variables. This class assumes that the predictive distributions are measure-valued almost supermartingales, and is parametrized by a sequence of parameters $(\xi_{n})<em>{n\geq 0}$, which regulate the decay of conditional dependence among future observations. Under mild summability assumptions on $(\xi</em>{n})_{n\geq 0}$, the resulting sequence of observations is shown to be asymptotically exchangeable, hence amenable to Bayesian Predictive Inference techniques. A.c.i.d. random variables arise naturally in recursive algorithms, and include classic approaches in Statistics and Learning Theory, such as kernel estimators, and more novel ones, such as the parametric Bayesian bootstrap.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2507.21874" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2507.21874" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

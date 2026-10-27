@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Uncovering Latent Patterns in Program-Associated Library Attendance through Background Adjustment</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Uncovering Latent Patterns in Program-Associated Library Attendance through Background Adjustment" />
+<meta name="author" content="Keunsu Kim, Hisatoshi Kodani, Motoki Masada, Nam Tuan Nguyen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Routinely collected library entrance records offer an opportunity to understand attendance patterns associated with library programs, but ordinary daily variation and detailed administrative user status categories complicate their interpretation. Building on a project-based learning collaboration with Kyushu University Central Library, we analyzed entrance records from October 2018 to July 2026. Descriptive analysis revealed relatively modest differences in attendance across the main weather categories, higher attendance on days with mean temperatures of 30{\deg}C or above, and pronounced differences between weekdays and weekends. To account for such background variation, we estimated expected attendance for each user status category and applied nonnegative matrix…" />
+<meta name="twitter:description" property="og:description" content="Routinely collected library entrance records offer an opportunity to understand attendance patterns associated with library programs, but ordinary daily variation and detailed administrative user status categories complicate their interpretation. Building on a project-based learning collaboration with Kyushu University Central Library, we analyzed entrance records from October 2018 to July 2026. Descriptive analysis revealed relatively modest differences in attendance across the main weather categories, higher attendance on days with mean temperatures of 30{\deg}C or above, and pronounced differences between weekdays and weekends. To account for such background variation, we estimated expected attendance for each user status category and applied nonnegative matrix…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34150.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34150.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-27T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Uncovering Latent Patterns in Program-Associated Library Attendance through Background Adjustment" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Keunsu Kim, Hisatoshi Kodani, Motoki Masada, Nam Tuan Nguyen"},"dateModified":"2026-10-27T00:00:00+01:00","datePublished":"2026-10-27T00:00:00+01:00","description":"Routinely collected library entrance records offer an opportunity to understand attendance patterns associated with library programs, but ordinary daily variation and detailed administrative user status categories complicate their interpretation. Building on a project-based learning collaboration with Kyushu University Central Library, we analyzed entrance records from October 2018 to July 2026. Descriptive analysis revealed relatively modest differences in attendance across the main weather categories, higher attendance on days with mean temperatures of 30{\\deg}C or above, and pronounced differences between weekdays and weekends. To account for such background variation, we estimated expected attendance for each user status category and applied nonnegative matrix…","headline":"Uncovering Latent Patterns in Program-Associated Library Attendance through Background Adjustment","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34150.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34150.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Uncovering Latent Patterns in Program-Associated Library Attendance through Background Adjustment</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Keunsu Kim, Hisatoshi Kodani, Motoki Masada, Nam Tuan Nguyen
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      27 Oct 2026
+    </div>
+  </div><div class="summary-box">Identifies latent attendance patterns using background-adjusted nonnegative matrix factorization on library records.</div><h3>Abstract</h3>
+  <p>Routinely collected library entrance records offer an opportunity to understand attendance patterns associated with library programs, but ordinary daily variation and detailed administrative user status categories complicate their interpretation. Building on a project-based learning collaboration with Kyushu University Central Library, we analyzed entrance records from October 2018 to July 2026. Descriptive analysis revealed relatively modest differences in attendance across the main weather categories, higher attendance on days with mean temperatures of 30{\deg}C or above, and pronounced differences between weekdays and weekends. To account for such background variation, we estimated expected attendance for each user status category and applied nonnegative matrix factorization (NMF) to identify common patterns in positive background-adjusted responses from 92 events across 39 user status categories. Three interpretable response modes were identified: two concentrated on temporary external visitors and undergraduates, respectively, and one representing a broader combination of graduate student and research-related categories. The three-mode solution was selected by jointly considering held-out reconstruction error and basis stability across year-excluded fits. The identified modes also remained stable after excluding events from the selected COVID-19 period. The modes appeared in different combinations across individual events, with their dominance varying by program category. These findings illustrate how existing library records can reveal interpretable patterns of program-associated attendance without predefined grouping of user status categories.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.34150" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.34150" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Renewable model averaging for generalized linear models</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Renewable model averaging for generalized linear models" />
+<meta name="author" content="Yalu Ping, Chen Xuerong, Yu Dalei" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Prediction is one of the most important research topics in statistics and machine learning. Moreover, in the domain of streaming data analysis, real-time prediction has become a rapidly growing research field in recent years, owing to the abundance of streaming data. In many fields of scientific research, such as biomedical research, weather forecasting, and traffic management, improving real-time prediction of streaming data is crucial in general. However, the complicated features of streaming data, such as large-scale and high-velocity, impose both theoretical and computational challenges to the development and evaluation of real-time prediction in this field, especially when the investigator has…" />
+<meta name="twitter:description" property="og:description" content="Prediction is one of the most important research topics in statistics and machine learning. Moreover, in the domain of streaming data analysis, real-time prediction has become a rapidly growing research field in recent years, owing to the abundance of streaming data. In many fields of scientific research, such as biomedical research, weather forecasting, and traffic management, improving real-time prediction of streaming data is crucial in general. However, the complicated features of streaming data, such as large-scale and high-velocity, impose both theoretical and computational challenges to the development and evaluation of real-time prediction in this field, especially when the investigator has…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33665.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33665.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-27T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Renewable model averaging for generalized linear models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yalu Ping, Chen Xuerong, Yu Dalei"},"dateModified":"2026-10-27T00:00:00+01:00","datePublished":"2026-10-27T00:00:00+01:00","description":"Prediction is one of the most important research topics in statistics and machine learning. Moreover, in the domain of streaming data analysis, real-time prediction has become a rapidly growing research field in recent years, owing to the abundance of streaming data. In many fields of scientific research, such as biomedical research, weather forecasting, and traffic management, improving real-time prediction of streaming data is crucial in general. However, the complicated features of streaming data, such as large-scale and high-velocity, impose both theoretical and computational challenges to the development and evaluation of real-time prediction in this field, especially when the investigator has…","headline":"Renewable model averaging for generalized linear models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33665.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33665.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Renewable model averaging for generalized linear models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Yalu Ping, Chen Xuerong, Yu Dalei
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      27 Oct 2026
+    </div>
+  </div><div class="summary-box">ReMAQ sequentially updates quadratic approximations for GLM model averaging in streaming data.</div><h3>Abstract</h3>
+  <p>Prediction is one of the most important research topics in statistics and machine learning. Moreover, in the domain of streaming data analysis, real-time prediction has become a rapidly growing research field in recent years, owing to the abundance of streaming data. In many fields of scientific research, such as biomedical research, weather forecasting, and traffic management, improving real-time prediction of streaming data is crucial in general. However, the complicated features of streaming data, such as large-scale and high-velocity, impose both theoretical and computational challenges to the development and evaluation of real-time prediction in this field, especially when the investigator has multiple models at hand. To overcome these challenges, we propose a novel Renewable Model Averaging method through Quadratic approximation (ReMAQ) for generalized linear model (GLM) for streaming data. By approximating the model averaging procedure for GLMs (which is typically a convex optimization problem) with a quadratic optimization formulation, ReMAQ allows us to update the model averaging prediction sequentially when a new batch of data arrives, without accessing the entire historical data. Moreover, ReMAQ is also computationally efficient as one only needs to consider a quadratic programming problem in each steps of updating. Under certain regular conditions, we also show that the proposed ReMAQ weight is asymptotically equivalent to that by the oracle model averaging based on the inaccessible full data, the asymptotic optimality of ReMAQ is then established accordingly. The proposed method is also assessed by simulation studies. We apply our proposed ReMAQ in the study of the Airline On-Time Performance Dataset and the results demonstrate the superiority our method in practical situations.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.33665" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.33665" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

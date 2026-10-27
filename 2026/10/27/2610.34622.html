@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Calibration of robust covariance estimation under heavy tails</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Calibration of robust covariance estimation under heavy tails" />
+<meta name="author" content="Andrea Cerioli, Domenico Perrotta, Francesca Torti" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Minimum Covariance Determinant (MCD) estimator is one of the most widely used high-breakdown estimators of multivariate location and scatter. Its practical success relies on suitable corrections, which remove the asymptotic and small-sample biases introduced by trimming. While explicit consistency factors are available under the multivariate normal distribution and, more recently, under multivariate Student-t models, these corrections only address the asymptotic behavior of the estimator. In the Gaussian case, it is known showed that the MCD also exhibits a non-negligible finite-sample bias, particularly for small sample sizes and relatively large dimensions. Such bias propagates to robust Mahalanobis distances and may…" />
+<meta name="twitter:description" property="og:description" content="The Minimum Covariance Determinant (MCD) estimator is one of the most widely used high-breakdown estimators of multivariate location and scatter. Its practical success relies on suitable corrections, which remove the asymptotic and small-sample biases introduced by trimming. While explicit consistency factors are available under the multivariate normal distribution and, more recently, under multivariate Student-t models, these corrections only address the asymptotic behavior of the estimator. In the Gaussian case, it is known showed that the MCD also exhibits a non-negligible finite-sample bias, particularly for small sample sizes and relatively large dimensions. Such bias propagates to robust Mahalanobis distances and may…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34622.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34622.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-27T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Calibration of robust covariance estimation under heavy tails" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Andrea Cerioli, Domenico Perrotta, Francesca Torti"},"dateModified":"2026-10-27T00:00:00+01:00","datePublished":"2026-10-27T00:00:00+01:00","description":"The Minimum Covariance Determinant (MCD) estimator is one of the most widely used high-breakdown estimators of multivariate location and scatter. Its practical success relies on suitable corrections, which remove the asymptotic and small-sample biases introduced by trimming. While explicit consistency factors are available under the multivariate normal distribution and, more recently, under multivariate Student-t models, these corrections only address the asymptotic behavior of the estimator. In the Gaussian case, it is known showed that the MCD also exhibits a non-negligible finite-sample bias, particularly for small sample sizes and relatively large dimensions. Such bias propagates to robust Mahalanobis distances and may…","headline":"Calibration of robust covariance estimation under heavy tails","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34622.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.34622.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Calibration of robust covariance estimation under heavy tails</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Andrea Cerioli, Domenico Perrotta, Francesca Torti
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      27 Oct 2026
+    </div>
+  </div><div class="summary-box">Provides empirical calibration factors for MCD scatter and robust distances under heavy‑tailed Student‑t distributions.</div><h3>Abstract</h3>
+  <p>The Minimum Covariance Determinant (MCD) estimator is one of the most widely used high-breakdown estimators of multivariate location and scatter. Its practical success relies on suitable corrections, which remove the asymptotic and small-sample biases introduced by trimming. While explicit consistency factors are available under the multivariate normal distribution and, more recently, under multivariate Student-t models, these corrections only address the asymptotic behavior of the estimator. In the Gaussian case, it is known showed that the MCD also exhibits a non-negligible finite-sample bias, particularly for small sample sizes and relatively large dimensions. Such bias propagates to robust Mahalanobis distances and may affect subsequent procedures, including multivariate outlier detection and robust inference. This paper investigates the finite-sample behavior of the MCD estimator and of the related robust distances under multivariate Student-t distributions, a potentially relevant scenario in many application fields. Extensive Monte Carlo experiments are carried out over a broad range of sample sizes, dimensions, trimming levels and degrees of freedom. Based on these experiments, empirical correction factors are obtained and approximated by smooth functions, providing a computationally efficient calibration suitable for practical implementations to heavy-tailed data. The proposed corrections are developed both for the scatter bias and the robust distance quantiles, thus leading to improved approximations for robust inference.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.34622" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.34622" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

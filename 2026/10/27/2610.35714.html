@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Quantifying and Predicting Pitch Sequence Effectiveness Using Visual Deception Metrics</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Quantifying and Predicting Pitch Sequence Effectiveness Using Visual Deception Metrics" />
+<meta name="author" content="Joseph DiGiovanni, Justin Kurland" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Pitcher performance is influenced not only by individual pitch characteristics, but also by the relationship and sequencing between consecutive pitches. In this study, we construct a sequence-level framework using MLB Statcast data from 2021-2025 to quantify the value of pitch deception with two geometric features: Decision Angular Separation (DAS) and Average Angular Separation (AAS). These metrics measure visual similarity of back-to-back pitches from the batter’s perspective at a hitter’s swing “decision point” during the flight of the ball from the pitcher’s hand to the plate. We introduce Swinging Strike Lift (SwStr Lift), a residualized outcome isolating sequencing value beyond player…" />
+<meta name="twitter:description" property="og:description" content="Pitcher performance is influenced not only by individual pitch characteristics, but also by the relationship and sequencing between consecutive pitches. In this study, we construct a sequence-level framework using MLB Statcast data from 2021-2025 to quantify the value of pitch deception with two geometric features: Decision Angular Separation (DAS) and Average Angular Separation (AAS). These metrics measure visual similarity of back-to-back pitches from the batter’s perspective at a hitter’s swing “decision point” during the flight of the ball from the pitcher’s hand to the plate. We introduce Swinging Strike Lift (SwStr Lift), a residualized outcome isolating sequencing value beyond player…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.35714.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.35714.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-27T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Quantifying and Predicting Pitch Sequence Effectiveness Using Visual Deception Metrics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Joseph DiGiovanni, Justin Kurland"},"dateModified":"2026-10-27T00:00:00+01:00","datePublished":"2026-10-27T00:00:00+01:00","description":"Pitcher performance is influenced not only by individual pitch characteristics, but also by the relationship and sequencing between consecutive pitches. In this study, we construct a sequence-level framework using MLB Statcast data from 2021-2025 to quantify the value of pitch deception with two geometric features: Decision Angular Separation (DAS) and Average Angular Separation (AAS). These metrics measure visual similarity of back-to-back pitches from the batter’s perspective at a hitter’s swing “decision point” during the flight of the ball from the pitcher’s hand to the plate. We introduce Swinging Strike Lift (SwStr Lift), a residualized outcome isolating sequencing value beyond player…","headline":"Quantifying and Predicting Pitch Sequence Effectiveness Using Visual Deception Metrics","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.35714.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.35714.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Quantifying and Predicting Pitch Sequence Effectiveness Using Visual Deception Metrics</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Joseph DiGiovanni, Justin Kurland
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      27 Oct 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Pitcher performance is influenced not only by individual pitch characteristics, but also by the relationship and sequencing between consecutive pitches. In this study, we construct a sequence-level framework using MLB Statcast data from 2021-2025 to quantify the value of pitch deception with two geometric features: Decision Angular Separation (DAS) and Average Angular Separation (AAS). These metrics measure visual similarity of back-to-back pitches from the batter’s perspective at a hitter’s swing “decision point” during the flight of the ball from the pitcher’s hand to the plate. We introduce Swinging Strike Lift (SwStr Lift), a residualized outcome isolating sequencing value beyond player identity, pitch type, location, and count. Across more than 740,936 two-pitch sequences, we find that tighter tunnels (low DAS/AAS) produce significant behavioral changes, for well-tunneled FB-to-BR (fastball-to-breaking-ball) sequences in the Shadow/Chase regions. This elevated swing propensity is consistent with swing induction as a primary behavioral pathway underlying the observed gains in swinging strikes. Our predictive modeling confirms the importance of tunneling, as adding DAS/AAS to gradient-boosted models yields substantial relative improvements in out-of-sample R-squared (e.g., +38% for FB-to-BR and +163% for FB-to-OS [fastball-to-off-speed]). These results demonstrate that tunneling generates a measurable and behaviorally coherent sequencing advantage, offering a tractable, perceptually grounded tool for evaluating pitcher deception which informs pitch design and game strategy. Quintile analyses confirm the effect is not confined to extreme tunnels; ICE plots show model-predicted lift declining sharply as DAS increases. Keywords: pitch tunneling; pitch sequencing; baseball analytics; predictive modeling; XGBoost; perceptual geometry; decision point; Statcast</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.35714" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.35714" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Cohort Effects, Not Treatment Response, Dominate Public Immunotherapy Cohorts: Evidence from Microbiome and Tumor Genomic Data</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Cohort Effects, Not Treatment Response, Dominate Public Immunotherapy Cohorts: Evidence from Microbiome and Tumor Genomic Data" />
+<meta name="author" content="Amey Garg" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Researchers often pool public gut microbiome datasets from immunotherapy studies to get around small sample sizes, assuming that adding cohorts adds statistical power faster than it adds differences between studies. We test that assumption. We processed four public shotgun metagenomic cohorts of patients receiving immune checkpoint blockade through one pipeline and pooled them step by step, from 39 to 283 patients. Because the PERMANOVA effect size R^2 is above zero even when there is no real effect, we compared every result with its exact chance expectation. Measured as raw variance explained, cohort membership accounted for 8 to 27 times more…" />
+<meta name="twitter:description" property="og:description" content="Researchers often pool public gut microbiome datasets from immunotherapy studies to get around small sample sizes, assuming that adding cohorts adds statistical power faster than it adds differences between studies. We test that assumption. We processed four public shotgun metagenomic cohorts of patients receiving immune checkpoint blockade through one pipeline and pooled them step by step, from 39 to 283 patients. Because the PERMANOVA effect size R^2 is above zero even when there is no real effect, we compared every result with its exact chance expectation. Measured as raw variance explained, cohort membership accounted for 8 to 27 times more…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33010.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33010.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-27T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Cohort Effects, Not Treatment Response, Dominate Public Immunotherapy Cohorts: Evidence from Microbiome and Tumor Genomic Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Amey Garg"},"dateModified":"2026-10-27T00:00:00+01:00","datePublished":"2026-10-27T00:00:00+01:00","description":"Researchers often pool public gut microbiome datasets from immunotherapy studies to get around small sample sizes, assuming that adding cohorts adds statistical power faster than it adds differences between studies. We test that assumption. We processed four public shotgun metagenomic cohorts of patients receiving immune checkpoint blockade through one pipeline and pooled them step by step, from 39 to 283 patients. Because the PERMANOVA effect size R^2 is above zero even when there is no real effect, we compared every result with its exact chance expectation. Measured as raw variance explained, cohort membership accounted for 8 to 27 times more…","headline":"Cohort Effects, Not Treatment Response, Dominate Public Immunotherapy Cohorts: Evidence from Microbiome and Tumor Genomic Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33010.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2610.33010.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Cohort Effects, Not Treatment Response, Dominate Public Immunotherapy Cohorts: Evidence from Microbiome and Tumor Genomic Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Amey Garg
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      27 Oct 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Researchers often pool public gut microbiome datasets from immunotherapy studies to get around small sample sizes, assuming that adding cohorts adds statistical power faster than it adds differences between studies. We test that assumption. We processed four public shotgun metagenomic cohorts of patients receiving immune checkpoint blockade through one pipeline and pooled them step by step, from 39 to 283 patients. Because the PERMANOVA effect size R^2 is above zero even when there is no real effect, we compared every result with its exact chance expectation. Measured as raw variance explained, cohort membership accounted for 8 to 27 times more variance than treatment response, although much of that ratio comes from sample size alone. At every pooling step, treatment response explained no more variance than chance (within 0.2 percentage points) and was never significant, while cohort membership explained 6.0 to 9.5 percentage points beyond chance (p = 0.001 each time). Classification stayed at chance across three model types, none of six leak-free batch-correction strategies recovered signal, and no genus reached significance in a random-effects meta-analysis. The largest single cohort (n = 165) was also non-significant, although simulation shows it had at least 90% power to detect an effect at its own 95% upper bound; within it, recruiting site alone explained 7.0 percentage points beyond chance. In three tumor genomic cohorts (n = 223), a small but real response effect sat next to a cohort effect about eighteen times larger, so the problem is not specific to microbiome data. We release batch_detector, an open tool that reports chance-corrected cohort and response effects before pooling, and test it on an independent colorectal cancer meta-analysis.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.33010" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.33010" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

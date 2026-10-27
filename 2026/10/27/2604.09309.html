@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Iterative Identification Closure: Amplifying Causal Identifiability in Linear SEMs</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Iterative Identification Closure: Amplifying Causal Identifiability in Linear SEMs" />
+<meta name="author" content="Ziyi Ding, Xiao-Ping Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Half-Trek Criterion (HTC) is the primary graphical tool for determining generic identifiability of causal effect coefficients in linear structural equation models (SEMs) with latent confounders. However, HTC is inherently node-wise: it simultaneously resolves all incoming edges of a node, leaving a gap of “inconclusive” causal effects (15-23% in moderate graphs). We introduce Iterative Identification Closure (IIC), a general framework that decouples causal identification into two phases: (1) a seed function S_0 that identifies an initial set of edges from any external source of information (instrumental variables, interventions, non-Gaussianity, prior knowledge, etc.); and (2) Reduced HTC propagation that iteratively substitutes…" />
+<meta name="twitter:description" property="og:description" content="The Half-Trek Criterion (HTC) is the primary graphical tool for determining generic identifiability of causal effect coefficients in linear structural equation models (SEMs) with latent confounders. However, HTC is inherently node-wise: it simultaneously resolves all incoming edges of a node, leaving a gap of “inconclusive” causal effects (15-23% in moderate graphs). We introduce Iterative Identification Closure (IIC), a general framework that decouples causal identification into two phases: (1) a seed function S_0 that identifies an initial set of edges from any external source of information (instrumental variables, interventions, non-Gaussianity, prior knowledge, etc.); and (2) Reduced HTC propagation that iteratively substitutes…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2604.09309.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2604.09309.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-27T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Iterative Identification Closure: Amplifying Causal Identifiability in Linear SEMs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ziyi Ding, Xiao-Ping Zhang"},"dateModified":"2026-10-27T00:00:00+01:00","datePublished":"2026-10-27T00:00:00+01:00","description":"The Half-Trek Criterion (HTC) is the primary graphical tool for determining generic identifiability of causal effect coefficients in linear structural equation models (SEMs) with latent confounders. However, HTC is inherently node-wise: it simultaneously resolves all incoming edges of a node, leaving a gap of “inconclusive” causal effects (15-23% in moderate graphs). We introduce Iterative Identification Closure (IIC), a general framework that decouples causal identification into two phases: (1) a seed function S_0 that identifies an initial set of edges from any external source of information (instrumental variables, interventions, non-Gaussianity, prior knowledge, etc.); and (2) Reduced HTC propagation that iteratively substitutes…","headline":"Iterative Identification Closure: Amplifying Causal Identifiability in Linear SEMs","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2604.09309.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/27/2604.09309.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Iterative Identification Closure: Amplifying Causal Identifiability in Linear SEMs</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Ziyi Ding, Xiao-Ping Zhang
+      <span class="sep">&middot;</span>
+      stat.ML, stat.CO
+      <span class="sep">&middot;</span>
+      27 Oct 2026
+    </div>
+  </div><div class="summary-box">Introduces Iterative Identification Closure to iteratively resolve causal edge identification beyond the Half-Trek Criterion.</div><h3>Abstract</h3>
+  <table>
+  <tbody>
+    <tr>
+      <td>The Half-Trek Criterion (HTC) is the primary graphical tool for determining generic identifiability of causal effect coefficients in linear structural equation models (SEMs) with latent confounders. However, HTC is inherently node-wise: it simultaneously resolves all incoming edges of a node, leaving a gap of “inconclusive” causal effects (15-23% in moderate graphs). We introduce Iterative Identification Closure (IIC), a general framework that decouples causal identification into two phases: (1) a seed function S_0 that identifies an initial set of edges from any external source of information (instrumental variables, interventions, non-Gaussianity, prior knowledge, etc.); and (2) Reduced HTC propagation that iteratively substitutes known coefficients to reduce system dimension, enabling identification of edges that standard HTC cannot resolve. The core novelty is iterative identification propagation: newly identified edges feed back to unlock further identification – a mechanism absent from all existing graphical criteria, which treat each edge (or node) in isolation. This propagation is non-trivial: coefficient substitution alters the covariance structure, and soundness requires proving that the modified Jacobian retains generic full rank – a new theoretical result (Reduced HTC Theorem). We prove that IIC is sound, monotone, converges in O(</td>
+      <td>E</td>
+      <td>) iterations (empirically &lt;=2), and strictly subsumes both HTC and ancestor decomposition. Exhaustive verification on all graphs with n&lt;=5 (134,144 edges) confirms 100% precision (zero false positives); with combined seeds, IIC reduces the HTC gap by over 80%. The propagation gain is gamma~4x (2 seeds identifying ~3% of edges to 97.5% total identification), far exceeding gamma&lt;=1.2x of prior methods that incorporate side information without iterative feedback.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2604.09309" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2604.09309" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
