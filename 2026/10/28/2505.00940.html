@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>StablePCA: Distributionally Robust Learning of Shared Representations from Multi-Source Data</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="StablePCA: Distributionally Robust Learning of Shared Representations from Multi-Source Data" />
+<meta name="author" content="Zhenyu Wang, Molei Liu, Jing Lei, Francis Bach, Zijian Guo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When synthesizing multi-source high-dimensional data, a key objective is to extract low-dimensional representations that effectively approximate the original features across different sources. Such representations facilitate the discovery of transferable structures and help mitigate systematic biases such as batch effects. We introduce Stable Principal Component Analysis (StablePCA), a distributionally robust framework for constructing stable latent representations by maximizing the worst-case explained variance over multiple sources. A primary challenge in extending classical PCA to the multi-source setting lies in the nonconvex rank constraint, which renders the StablePCA formulation a nonconvex optimization problem. To overcome this challenge, we conduct a convex relaxation of…" />
+<meta name="twitter:description" property="og:description" content="When synthesizing multi-source high-dimensional data, a key objective is to extract low-dimensional representations that effectively approximate the original features across different sources. Such representations facilitate the discovery of transferable structures and help mitigate systematic biases such as batch effects. We introduce Stable Principal Component Analysis (StablePCA), a distributionally robust framework for constructing stable latent representations by maximizing the worst-case explained variance over multiple sources. A primary challenge in extending classical PCA to the multi-source setting lies in the nonconvex rank constraint, which renders the StablePCA formulation a nonconvex optimization problem. To overcome this challenge, we conduct a convex relaxation of…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2505.00940.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2505.00940.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-28T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-28T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="StablePCA: Distributionally Robust Learning of Shared Representations from Multi-Source Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zhenyu Wang, Molei Liu, Jing Lei, Francis Bach, Zijian Guo"},"dateModified":"2026-10-28T00:00:00+01:00","datePublished":"2026-10-28T00:00:00+01:00","description":"When synthesizing multi-source high-dimensional data, a key objective is to extract low-dimensional representations that effectively approximate the original features across different sources. Such representations facilitate the discovery of transferable structures and help mitigate systematic biases such as batch effects. We introduce Stable Principal Component Analysis (StablePCA), a distributionally robust framework for constructing stable latent representations by maximizing the worst-case explained variance over multiple sources. A primary challenge in extending classical PCA to the multi-source setting lies in the nonconvex rank constraint, which renders the StablePCA formulation a nonconvex optimization problem. To overcome this challenge, we conduct a convex relaxation of…","headline":"StablePCA: Distributionally Robust Learning of Shared Representations from Multi-Source Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2505.00940.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2505.00940.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>StablePCA: Distributionally Robust Learning of Shared Representations from Multi-Source Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Zhenyu Wang, Molei Liu, Jing Lei, Francis Bach, Zijian Guo
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ME
+      <span class="sep">&middot;</span>
+      28 Oct 2026
+    </div>
+  </div><div class="summary-box">Introduces StablePCA, a distributionally robust framework for multi-source PCA with convex relaxation and global convergence guarantees.</div><h3>Abstract</h3>
+  <p>When synthesizing multi-source high-dimensional data, a key objective is to extract low-dimensional representations that effectively approximate the original features across different sources. Such representations facilitate the discovery of transferable structures and help mitigate systematic biases such as batch effects. We introduce Stable Principal Component Analysis (StablePCA), a distributionally robust framework for constructing stable latent representations by maximizing the worst-case explained variance over multiple sources. A primary challenge in extending classical PCA to the multi-source setting lies in the nonconvex rank constraint, which renders the StablePCA formulation a nonconvex optimization problem. To overcome this challenge, we conduct a convex relaxation of StablePCA and develop an efficient Mirror-Prox algorithm to solve the relaxed problem, with global convergence guarantees. Since the relaxed problem generally differs from the original formulation, we further introduce a data-dependent certificate to assess how well the algorithm solves the original nonconvex problem and establish the condition under which the relaxation is tight. Finally, we explore alternative distributionally robust formulations of multi-source PCA based on different loss functions.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2505.00940" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2505.00940" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

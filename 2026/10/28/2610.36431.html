@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fixed-Horizon Error Rates for Array-RQMC Metropolis-Hastings</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Fixed-Horizon Error Rates for Array-RQMC Metropolis-Hastings" />
+<meta name="author" content="Jiarui Du, Josef Dick, Zexin Pan, Houying Zhu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper studies randomised quasi-Monte Carlo (RQMC) methods for Metropolis–Hastings (MH) algorithms, whose accept–reject discontinuity complicates RQMC analysis. To circumvent some of these complications, we study Array-RQMC for MH, with $N$ replicated chains evolved over a fixed time horizon $T$, where we make use of Hilbert sorting for joint multidimensional updates at each step. For one-dimensional MH and bounded-variation test functions, we prove a sampling mean squared error bound of $\mathcal O_T(N^{-4/3})$ relative to the finite-horizon expectation. For product targets, coordinatewise Array-RQMC Metropolis-within-Gibbs retains this exponent for additive marginal bounded-variation tests, with constants that may depend on dimension. With Gaussian…" />
+<meta name="twitter:description" property="og:description" content="This paper studies randomised quasi-Monte Carlo (RQMC) methods for Metropolis–Hastings (MH) algorithms, whose accept–reject discontinuity complicates RQMC analysis. To circumvent some of these complications, we study Array-RQMC for MH, with $N$ replicated chains evolved over a fixed time horizon $T$, where we make use of Hilbert sorting for joint multidimensional updates at each step. For one-dimensional MH and bounded-variation test functions, we prove a sampling mean squared error bound of $\mathcal O_T(N^{-4/3})$ relative to the finite-horizon expectation. For product targets, coordinatewise Array-RQMC Metropolis-within-Gibbs retains this exponent for additive marginal bounded-variation tests, with constants that may depend on dimension. With Gaussian…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.36431.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.36431.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-28T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-28T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Fixed-Horizon Error Rates for Array-RQMC Metropolis-Hastings" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jiarui Du, Josef Dick, Zexin Pan, Houying Zhu"},"dateModified":"2026-10-28T00:00:00+01:00","datePublished":"2026-10-28T00:00:00+01:00","description":"This paper studies randomised quasi-Monte Carlo (RQMC) methods for Metropolis–Hastings (MH) algorithms, whose accept–reject discontinuity complicates RQMC analysis. To circumvent some of these complications, we study Array-RQMC for MH, with $N$ replicated chains evolved over a fixed time horizon $T$, where we make use of Hilbert sorting for joint multidimensional updates at each step. For one-dimensional MH and bounded-variation test functions, we prove a sampling mean squared error bound of $\\mathcal O_T(N^{-4/3})$ relative to the finite-horizon expectation. For product targets, coordinatewise Array-RQMC Metropolis-within-Gibbs retains this exponent for additive marginal bounded-variation tests, with constants that may depend on dimension. With Gaussian…","headline":"Fixed-Horizon Error Rates for Array-RQMC Metropolis-Hastings","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.36431.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.36431.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Fixed-Horizon Error Rates for Array-RQMC Metropolis-Hastings</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Jiarui Du, Josef Dick, Zexin Pan, Houying Zhu
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      28 Oct 2026
+    </div>
+  </div><div class="summary-box">Develops Array-RQMC methods for Metropolis-Hastings algorithms with error rate bounds.</div><h3>Abstract</h3>
+  <p>This paper studies randomised quasi-Monte Carlo (RQMC) methods for Metropolis–Hastings (MH) algorithms, whose accept–reject discontinuity complicates RQMC analysis. To circumvent some of these complications, we study Array-RQMC for MH, with $N$ replicated chains evolved over a fixed time horizon $T$, where we make use of Hilbert sorting for joint multidimensional updates at each step. For one-dimensional MH and bounded-variation test functions, we prove a sampling mean squared error bound of $\mathcal O_T(N^{-4/3})$ relative to the finite-horizon expectation. For product targets, coordinatewise Array-RQMC Metropolis-within-Gibbs retains this exponent for additive marginal bounded-variation tests, with constants that may depend on dimension. With Gaussian random-walk proposals, the bounds extend to scalar and additive marginal polynomials with an additional factor $(\log N)^\ell$, where $\ell$ is the maximum polynomial degree. For joint updates in state dimension $p$ using $p$ proposal uniforms, we provide a conditional $\mathcal O_T(N^{-1-1/(p+2)})$ framework under regularity assumptions that are not verified for the joint multidimensional examples. Numerical experiments support the verified one-dimensional theory and demonstrate variance reduction for joint Hilbert-sorted updates, including Bayesian logistic regression, while illustrating the limitations of these gains as dimension increases.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.36431" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.36431" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

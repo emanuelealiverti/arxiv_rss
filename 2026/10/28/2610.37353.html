@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Cost-based variable selection for prediction models</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Cost-based variable selection for prediction models" />
+<meta name="author" content="Lasai Barreñada, Andrew Vickers, Laure Wynants, Bieke Tack, Dirk Timmerman, Ewout Steyerberg, Ben Van Calster" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Objective: Variable selection for clinical prediction models is commonly done on statistical grounds related to model fit. Statistical approaches ignore the cost of misclassifications and the harm of measuring a variable. We aim to develop a decision-analytic variable selection algorithm based on net benefit. Materials and Methods: The proposed algorithm selects the set of predictors by exhaustively comparing the net benefit of all combinations using cross validation, with an extension based on backward elimination for settings with many predictors. Variables are selected if the increased net benefit from better predictiveness exceeds the net benefit reduction from the harm of variable…" />
+<meta name="twitter:description" property="og:description" content="Objective: Variable selection for clinical prediction models is commonly done on statistical grounds related to model fit. Statistical approaches ignore the cost of misclassifications and the harm of measuring a variable. We aim to develop a decision-analytic variable selection algorithm based on net benefit. Materials and Methods: The proposed algorithm selects the set of predictors by exhaustively comparing the net benefit of all combinations using cross validation, with an extension based on backward elimination for settings with many predictors. Variables are selected if the increased net benefit from better predictiveness exceeds the net benefit reduction from the harm of variable…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37353.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37353.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-28T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-28T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Cost-based variable selection for prediction models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lasai Barreñada, Andrew Vickers, Laure Wynants, Bieke Tack, Dirk Timmerman, Ewout Steyerberg, Ben Van Calster"},"dateModified":"2026-10-28T00:00:00+01:00","datePublished":"2026-10-28T00:00:00+01:00","description":"Objective: Variable selection for clinical prediction models is commonly done on statistical grounds related to model fit. Statistical approaches ignore the cost of misclassifications and the harm of measuring a variable. We aim to develop a decision-analytic variable selection algorithm based on net benefit. Materials and Methods: The proposed algorithm selects the set of predictors by exhaustively comparing the net benefit of all combinations using cross validation, with an extension based on backward elimination for settings with many predictors. Variables are selected if the increased net benefit from better predictiveness exceeds the net benefit reduction from the harm of variable…","headline":"Cost-based variable selection for prediction models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37353.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37353.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Cost-based variable selection for prediction models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Lasai Barreñada, Andrew Vickers, Laure Wynants, Bieke Tack, Dirk Timmerman, Ewout Steyerberg, Ben Van Calster
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      28 Oct 2026
+    </div>
+  </div><div class="summary-box">Develops a decision-analytic variable selection algorithm for prediction models.</div><h3>Abstract</h3>
+  <p>Objective: Variable selection for clinical prediction models is commonly done on statistical grounds related to model fit. Statistical approaches ignore the cost of misclassifications and the harm of measuring a variable. We aim to develop a decision-analytic variable selection algorithm based on net benefit. Materials and Methods: The proposed algorithm selects the set of predictors by exhaustively comparing the net benefit of all combinations using cross validation, with an extension based on backward elimination for settings with many predictors. Variables are selected if the increased net benefit from better predictiveness exceeds the net benefit reduction from the harm of variable measurement. Harm includes financial expense, time, resource allocation, and patient burden. We illustrate the algorithm through a simulated example and three real case studies. We compare its performance to traditional backward elimination and LASSO. Results: Across the case studies, parsimonious models were generated that optimized clinical utility with minimal impact on discrimination and calibration. Penalizing predictors based on their cost ensured that expensive or burdensome variables were only selected if they offer sufficient clinical utility. The algorithm was implemented in the R package NBvarsel. Discussion: Decision-analytic variable selection allows prediction models to maximize patient benefit while minimizing unnecessary clinical burden and costs. Conclusion: Clinical utility should not be an afterthought reserved only for implementation. By integrating a harm-adjusted net benefit metric directly into the variable selection process, NBvarsel allows researchers to select only the variables that sufficiently improve clinical utility.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.37353" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.37353" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

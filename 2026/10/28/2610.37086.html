@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Is Your LLM Relay Serving What It Claims? A low-cost and high-power test for LLM Relay Auditing</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Is Your LLM Relay Serving What It Claims? A low-cost and high-power test for LLM Relay Auditing" />
+<meta name="author" content="Fangran Miao, Shengjie Niu, Jian Huang, Ting Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Relay and reseller APIs have become a common way to access large language models (LLMs), yet users cannot directly verify whether they receive the models they request and pay for. This opacity motivates LLM relay auditing, but existing methods struggle to combine low cost, robustness to benign deployment changes, and statistically interpretable decisions under black-box access. To address these limitations, we propose distributional fingerprint auditing (DFA), a statistical method that requires only textual responses from suspect and trusted reference endpoints. DFA repeatedly queries semantically simple finite-choice probes and uses the resulting categorical response distributions to construct endpoint fingerprints. It compares…" />
+<meta name="twitter:description" property="og:description" content="Relay and reseller APIs have become a common way to access large language models (LLMs), yet users cannot directly verify whether they receive the models they request and pay for. This opacity motivates LLM relay auditing, but existing methods struggle to combine low cost, robustness to benign deployment changes, and statistically interpretable decisions under black-box access. To address these limitations, we propose distributional fingerprint auditing (DFA), a statistical method that requires only textual responses from suspect and trusted reference endpoints. DFA repeatedly queries semantically simple finite-choice probes and uses the resulting categorical response distributions to construct endpoint fingerprints. It compares…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37086.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37086.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-28T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-28T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Is Your LLM Relay Serving What It Claims? A low-cost and high-power test for LLM Relay Auditing" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Fangran Miao, Shengjie Niu, Jian Huang, Ting Li"},"dateModified":"2026-10-28T00:00:00+01:00","datePublished":"2026-10-28T00:00:00+01:00","description":"Relay and reseller APIs have become a common way to access large language models (LLMs), yet users cannot directly verify whether they receive the models they request and pay for. This opacity motivates LLM relay auditing, but existing methods struggle to combine low cost, robustness to benign deployment changes, and statistically interpretable decisions under black-box access. To address these limitations, we propose distributional fingerprint auditing (DFA), a statistical method that requires only textual responses from suspect and trusted reference endpoints. DFA repeatedly queries semantically simple finite-choice probes and uses the resulting categorical response distributions to construct endpoint fingerprints. It compares…","headline":"Is Your LLM Relay Serving What It Claims? A low-cost and high-power test for LLM Relay Auditing","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37086.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37086.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Is Your LLM Relay Serving What It Claims? A low-cost and high-power test for LLM Relay Auditing</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Fangran Miao, Shengjie Niu, Jian Huang, Ting Li
+      <span class="sep">&middot;</span>
+      stat.AP, stat.ML
+      <span class="sep">&middot;</span>
+      28 Oct 2026
+    </div>
+  </div><div class="summary-box">Proposes distributional fingerprint auditing for verifying LLM relay services using textual responses.</div><h3>Abstract</h3>
+  <p>Relay and reseller APIs have become a common way to access large language models (LLMs), yet users cannot directly verify whether they receive the models they request and pay for. This opacity motivates LLM relay auditing, but existing methods struggle to combine low cost, robustness to benign deployment changes, and statistically interpretable decisions under black-box access. To address these limitations, we propose distributional fingerprint auditing (DFA), a statistical method that requires only textual responses from suspect and trusted reference endpoints. DFA repeatedly queries semantically simple finite-choice probes and uses the resulting categorical response distributions to construct endpoint fingerprints. It compares the suspect and reference fingerprints probe by probe and aggregates the resulting evidence using the Cauchy combination test, yielding an approximate endpoint-level $p$-value for audit decisions at a prespecified nominal significance level. Using registered fingerprints of candidate models, a likelihood-based formulation further supports model attribution under full substitution and joint estimation of substitute identity and substitution ratio under constant-ratio mixed routing. Our benchmark includes 16 proprietary and open-weight LLMs from 10 model families. Across 240 ordered full-substitution pairs, DFA achieves high detection rates at a nominal significance level of $\alpha=0.05$, using five probes and 250 relay requests per audit with stored reference fingerprints. Configuration overrides can lead to rejection even when the served model remains unchanged, with effects varying across models and configurations. Simulations based on stored empirical fingerprints demonstrate accurate model attribution and estimate substitution ratios, with estimation error decreasing as the audit budget increases.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.37086" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.37086" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

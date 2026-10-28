@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Practical Guidelines for Goodness-of-Fit Testing for Right-Censored Data</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Practical Guidelines for Goodness-of-Fit Testing for Right-Censored Data" />
+<meta name="author" content="Arnau Gómez-Català, Guadalupe Gómez Melis, Klaus Langohr" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In survival studies, right censoring often prevents the observation of subjects’ complete outcomes, complicating inference about the underlying distribution. Evaluating whether a given distribution adequately fits right-censored data is therefore essential. However, guidance on the relative performance of available goodness-of-fit tests under different data conditions remains limited. In this work, we present a comparative assessment of three classical goodness-of-fit tests adapted for right-censored data: Kolmogorov-Smirnov, Anderson-Darling, and Cram&#39;er-von Mises. Through an extensive simulation study, we investigate how factors such as the proportion of right-censored observations, sample size, and distributional symmetry influence the statistical power of each test. All procedures were…" />
+<meta name="twitter:description" property="og:description" content="In survival studies, right censoring often prevents the observation of subjects’ complete outcomes, complicating inference about the underlying distribution. Evaluating whether a given distribution adequately fits right-censored data is therefore essential. However, guidance on the relative performance of available goodness-of-fit tests under different data conditions remains limited. In this work, we present a comparative assessment of three classical goodness-of-fit tests adapted for right-censored data: Kolmogorov-Smirnov, Anderson-Darling, and Cram&#39;er-von Mises. Through an extensive simulation study, we investigate how factors such as the proportion of right-censored observations, sample size, and distributional symmetry influence the statistical power of each test. All procedures were…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37513.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37513.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-28T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-28T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Practical Guidelines for Goodness-of-Fit Testing for Right-Censored Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arnau Gómez-Català, Guadalupe Gómez Melis, Klaus Langohr"},"dateModified":"2026-10-28T00:00:00+01:00","datePublished":"2026-10-28T00:00:00+01:00","description":"In survival studies, right censoring often prevents the observation of subjects’ complete outcomes, complicating inference about the underlying distribution. Evaluating whether a given distribution adequately fits right-censored data is therefore essential. However, guidance on the relative performance of available goodness-of-fit tests under different data conditions remains limited. In this work, we present a comparative assessment of three classical goodness-of-fit tests adapted for right-censored data: Kolmogorov-Smirnov, Anderson-Darling, and Cram\u0026#39;er-von Mises. Through an extensive simulation study, we investigate how factors such as the proportion of right-censored observations, sample size, and distributional symmetry influence the statistical power of each test. All procedures were…","headline":"Practical Guidelines for Goodness-of-Fit Testing for Right-Censored Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37513.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37513.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Practical Guidelines for Goodness-of-Fit Testing for Right-Censored Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Arnau Gómez-Català, Guadalupe Gómez Melis, Klaus Langohr
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      28 Oct 2026
+    </div>
+  </div><div class="summary-box">Comparative assessment of three goodness-of-fit tests for right-censored data.</div><h3>Abstract</h3>
+  <p>In survival studies, right censoring often prevents the observation of subjects’ complete outcomes, complicating inference about the underlying distribution. Evaluating whether a given distribution adequately fits right-censored data is therefore essential. However, guidance on the relative performance of available goodness-of-fit tests under different data conditions remains limited. In this work, we present a comparative assessment of three classical goodness-of-fit tests adapted for right-censored data: Kolmogorov-Smirnov, Anderson-Darling, and Cram'er-von Mises. Through an extensive simulation study, we investigate how factors such as the proportion of right-censored observations, sample size, and distributional symmetry influence the statistical power of each test. All procedures were implemented using the R package GofCens, and power estimates were obtained from extensive replicated simulations. The results identify the settings in which each test exhibits superior performance, providing practical, evidence-based recommendations for test selection in survival analysis. These recommendations are summarized as user-oriented guidelines and complemented by a concise graphical cheat sheet, enabling practitioners to quickly identify the most suitable test for their specific application.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.37513" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.37513" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

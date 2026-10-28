@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Ordinal Analysis of Cereal Growth Stage Data from Oat Trials in Western Australia</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian Ordinal Analysis of Cereal Growth Stage Data from Oat Trials in Western Australia" />
+<meta name="author" content="Zhanglong Cao, Rose Megirian, Matthew Nguyen, Adam H. Sparks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Growth stage in cereal field trials is usually scored on the Zadoks decimal scale. The score is ordinal, yet it is often analysed as if it were continuous, which can lead to misleading conclusions. Ordinal analysis of growth stage data has received little attention from biometricians or agronomists, and it is not straightforward when several plants are scored in each plot of a split-plot design. We analysed Zadoks scores recorded four weeks after sowing on ten plants per plot in two deep-sowing oat trials in Western Australia, using a Bayesian hierarchical ordinal model that carries the full split-plot structure and…" />
+<meta name="twitter:description" property="og:description" content="Growth stage in cereal field trials is usually scored on the Zadoks decimal scale. The score is ordinal, yet it is often analysed as if it were continuous, which can lead to misleading conclusions. Ordinal analysis of growth stage data has received little attention from biometricians or agronomists, and it is not straightforward when several plants are scored in each plot of a split-plot design. We analysed Zadoks scores recorded four weeks after sowing on ten plants per plot in two deep-sowing oat trials in Western Australia, using a Bayesian hierarchical ordinal model that carries the full split-plot structure and…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37384.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37384.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-28T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-28T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian Ordinal Analysis of Cereal Growth Stage Data from Oat Trials in Western Australia" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zhanglong Cao, Rose Megirian, Matthew Nguyen, Adam H. Sparks"},"dateModified":"2026-10-28T00:00:00+01:00","datePublished":"2026-10-28T00:00:00+01:00","description":"Growth stage in cereal field trials is usually scored on the Zadoks decimal scale. The score is ordinal, yet it is often analysed as if it were continuous, which can lead to misleading conclusions. Ordinal analysis of growth stage data has received little attention from biometricians or agronomists, and it is not straightforward when several plants are scored in each plot of a split-plot design. We analysed Zadoks scores recorded four weeks after sowing on ten plants per plot in two deep-sowing oat trials in Western Australia, using a Bayesian hierarchical ordinal model that carries the full split-plot structure and…","headline":"Bayesian Ordinal Analysis of Cereal Growth Stage Data from Oat Trials in Western Australia","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37384.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/28/2610.37384.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian Ordinal Analysis of Cereal Growth Stage Data from Oat Trials in Western Australia</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Zhanglong Cao, Rose Megirian, Matthew Nguyen, Adam H. Sparks
+      <span class="sep">&middot;</span>
+      stat.AP, stat.OT
+      <span class="sep">&middot;</span>
+      28 Oct 2026
+    </div>
+  </div><div class="summary-box">A Bayesian hierarchical ordinal model is applied to cereal growth stage data from oat trials in Western Australia.</div><h3>Abstract</h3>
+  <p>Growth stage in cereal field trials is usually scored on the Zadoks decimal scale. The score is ordinal, yet it is often analysed as if it were continuous, which can lead to misleading conclusions. Ordinal analysis of growth stage data has received little attention from biometricians or agronomists, and it is not straightforward when several plants are scored in each plot of a split-plot design. We analysed Zadoks scores recorded four weeks after sowing on ten plants per plot in two deep-sowing oat trials in Western Australia, using a Bayesian hierarchical ordinal model that carries the full split-plot structure and an AR1 x AR1 spatial covariance. The implementation was validated on simulated data, and the candidate models were compared by five-fold cross-validation over plots. Adding a random effect at the experimental-unit (plot) level changed the uncertainty of the sub-plot contrasts substantially, while the main-plot contrasts changed little. How that plot-level heterogeneity was modelled mattered much less. At either site, cross-validation could not separate the candidate models that carried a plot-level term, whether or not they included an AR1 x AR1 field or the blocking terms, and the autoregressive parameters were only weakly identified on this layout. Deeper sowing (80 and 120 mm against 30 mm) went with more advanced development at four weeks in both trials. Sowing at 120 mm rather than 30 mm raised the predicted probability of tillering from 0.04 to 0.24 at Wickepin and from 0.04 to 0.10 at Merredin. The depth effects were stable whether or not the spatial field was fitted, and under both the cumulative and the sequential ordinal family.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.37384" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.37384" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
