@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Conformal Annotation with Randomized Expert Review: Application to Online Cell-Type Labeling</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Conformal Annotation with Randomized Expert Review: Application to Online Cell-Type Labeling" />
+<meta name="author" content="Xuhe Zhang, Zhi Huang, Ying Jin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Artificial intelligence (AI) models can accelerate cell-type annotation in digital pathology, but safely scaling their use requires determining, with error control, which model-generated labels can be accepted without expert review. This is challenging in evolving workflows because cell morphology and type composition may change across tissue regions and slides, making one-time calibration unreliable. We propose Conformal Annotation with Randomized Expert review under Distribution shift (CARED), a distribution-free framework that leverages randomized expert audit to achieve long-run error control for AI-assisted annotation under distribution shift. For each incoming batch, CARED uniformly selects a subset of cases for expert review and uses…" />
+<meta name="twitter:description" property="og:description" content="Artificial intelligence (AI) models can accelerate cell-type annotation in digital pathology, but safely scaling their use requires determining, with error control, which model-generated labels can be accepted without expert review. This is challenging in evolving workflows because cell morphology and type composition may change across tissue regions and slides, making one-time calibration unreliable. We propose Conformal Annotation with Randomized Expert review under Distribution shift (CARED), a distribution-free framework that leverages randomized expert audit to achieve long-run error control for AI-assisted annotation under distribution shift. For each incoming batch, CARED uniformly selects a subset of cases for expert review and uses…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.40252.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.40252.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-30T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-30T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Conformal Annotation with Randomized Expert Review: Application to Online Cell-Type Labeling" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xuhe Zhang, Zhi Huang, Ying Jin"},"dateModified":"2026-10-30T00:00:00+01:00","datePublished":"2026-10-30T00:00:00+01:00","description":"Artificial intelligence (AI) models can accelerate cell-type annotation in digital pathology, but safely scaling their use requires determining, with error control, which model-generated labels can be accepted without expert review. This is challenging in evolving workflows because cell morphology and type composition may change across tissue regions and slides, making one-time calibration unreliable. We propose Conformal Annotation with Randomized Expert review under Distribution shift (CARED), a distribution-free framework that leverages randomized expert audit to achieve long-run error control for AI-assisted annotation under distribution shift. For each incoming batch, CARED uniformly selects a subset of cases for expert review and uses…","headline":"Conformal Annotation with Randomized Expert Review: Application to Online Cell-Type Labeling","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.40252.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.40252.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Conformal Annotation with Randomized Expert Review: Application to Online Cell-Type Labeling</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Xuhe Zhang, Zhi Huang, Ying Jin
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP, stat.ML
+      <span class="sep">&middot;</span>
+      30 Oct 2026
+    </div>
+  </div><div class="summary-box">CARED uses randomized expert review to calibrate AI labels and control cumulative error under distribution shift.</div><h3>Abstract</h3>
+  <p>Artificial intelligence (AI) models can accelerate cell-type annotation in digital pathology, but safely scaling their use requires determining, with error control, which model-generated labels can be accepted without expert review. This is challenging in evolving workflows because cell morphology and type composition may change across tissue regions and slides, making one-time calibration unreliable. We propose Conformal Annotation with Randomized Expert review under Distribution shift (CARED), a distribution-free framework that leverages randomized expert audit to achieve long-run error control for AI-assisted annotation under distribution shift. For each incoming batch, CARED uniformly selects a subset of cases for expert review and uses the acquired labels to calibrate later decisions. Among unreviewed cases, CARED determines a subset of them to safely skip expert labeling, while suggesting candidate labels for the others for downstream resolution. We prove that this workflow provides long-run control of cumulative error over both the full stream and the cells outside of the audit sample, without stationarity or exchangeability assumptions. We further enhance the framework by introducing class-conditional guarantees to ensure error control within important but rare cell types, together with a utility module to target more automatic resolutions, smaller candidate sets, and greater biological coherence, without compromising validity. Experiments on pancreas, lung, and ovary annotation streams, together with a stream constructed from real expert annotations, show that CARED controls the cumulative errors while a substantial fraction of cells (up to 70%) bypass expert review.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.40252" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.40252" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

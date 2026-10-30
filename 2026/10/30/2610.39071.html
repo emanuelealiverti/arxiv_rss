@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adaptive stopping and forecasting of screening, rescreening and randomization in multicentre clinical trials</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Adaptive stopping and forecasting of screening, rescreening and randomization in multicentre clinical trials" />
+<meta name="author" content="Volodymyr Anisimov, Thomas Henderson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In randomised clinical trials, patients typically undergo some screening stages before randomisation. These stages complicate design as patients may be randomised after admissions to screening have been halted. Stopping the admission of new patients too late may lead to over-enrolment, as more patients than planned are randomised, increasing costs, unnecessary patient exposure and the time required to complete recruitment. Stopping too early may result in failure to achieve the planned sample size. Predictions of the stopping time should therefore account for patients currently in screening and the number of the patients to be randomised. We present a novel statistical framework…" />
+<meta name="twitter:description" property="og:description" content="In randomised clinical trials, patients typically undergo some screening stages before randomisation. These stages complicate design as patients may be randomised after admissions to screening have been halted. Stopping the admission of new patients too late may lead to over-enrolment, as more patients than planned are randomised, increasing costs, unnecessary patient exposure and the time required to complete recruitment. Stopping too early may result in failure to achieve the planned sample size. Predictions of the stopping time should therefore account for patients currently in screening and the number of the patients to be randomised. We present a novel statistical framework…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.39071.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.39071.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-30T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-30T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Adaptive stopping and forecasting of screening, rescreening and randomization in multicentre clinical trials" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Volodymyr Anisimov, Thomas Henderson"},"dateModified":"2026-10-30T00:00:00+01:00","datePublished":"2026-10-30T00:00:00+01:00","description":"In randomised clinical trials, patients typically undergo some screening stages before randomisation. These stages complicate design as patients may be randomised after admissions to screening have been halted. Stopping the admission of new patients too late may lead to over-enrolment, as more patients than planned are randomised, increasing costs, unnecessary patient exposure and the time required to complete recruitment. Stopping too early may result in failure to achieve the planned sample size. Predictions of the stopping time should therefore account for patients currently in screening and the number of the patients to be randomised. We present a novel statistical framework…","headline":"Adaptive stopping and forecasting of screening, rescreening and randomization in multicentre clinical trials","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.39071.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.39071.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Adaptive stopping and forecasting of screening, rescreening and randomization in multicentre clinical trials</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Volodymyr Anisimov, Thomas Henderson
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      30 Oct 2026
+    </div>
+  </div><div class="summary-box">Develops a statistical framework to jointly model screening and randomisation and determine adaptive stopping times for clinical trials.</div><h3>Abstract</h3>
+  <p>In randomised clinical trials, patients typically undergo some screening stages before randomisation. These stages complicate design as patients may be randomised after admissions to screening have been halted. Stopping the admission of new patients too late may lead to over-enrolment, as more patients than planned are randomised, increasing costs, unnecessary patient exposure and the time required to complete recruitment. Stopping too early may result in failure to achieve the planned sample size. Predictions of the stopping time should therefore account for patients currently in screening and the number of the patients to be randomised. We present a novel statistical framework for joint modelling screening and randomisation and determining an adaptive stopping time to stop admitting new patients to screening before the planned randomisation target is reached. The aim is to reduce over-enrolment while maintaining a high probability of achieving the target. We represent the screening and randomisation pathway as a multistage process with stage-specific durations and transition probabilities estimated from trial data. The model yields the distribution of the number of patients who will be randomised from the current screening pipeline and the probability of reaching the planned randomisation target. If this probability exceeds a specified threshold, such as 95% or 99%, admission of new patients to screening should be stopped. Otherwise, the model is updated as additional data accrue and is used to forecast future pipeline and the stopping time. The framework can incorporate scheduled site initiations and future closures using evolving stochastic processes, and supporting forecasts at global, regional and country levels. Illustrative simulations show that the approach can reduce over-enrolment substantially while preserving a high probability of reaching the target sample size.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.39071" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.39071" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

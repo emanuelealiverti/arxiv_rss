@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>L-PASSO: Adaptive Log-penalized Variable Selector, with Sparse Selection and Robustness to the Pilot Estimator</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="L-PASSO: Adaptive Log-penalized Variable Selector, with Sparse Selection and Robustness to the Pilot Estimator" />
+<meta name="author" content="Samiran Ghosh, Shuva Gupta, Shreyo Ghosh" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study L-PASSO, a penalized least-squares regression method based on the logarithmic penalty $\lambda\sum_j\log(1+ \beta_j /\tau)$, and its two-stage adaptive form, in which the scales $\tau_j$ come from a pilot estimator. Although this concave penalty has been proposed previously, its variable-selection properties and sparsity relative to other popular penalties have not been fully characterized. We derive the exact orthogonal-design solution, and show that the single-stage estimator selects the true model under a weighted irrepresentable condition that holds for every design once $\tau$ is small. We further establish that, under matched tuning, the two-stage estimator possesses the oracle property and has…" />
+<meta name="twitter:description" property="og:description" content="We study L-PASSO, a penalized least-squares regression method based on the logarithmic penalty $\lambda\sum_j\log(1+ \beta_j /\tau)$, and its two-stage adaptive form, in which the scales $\tau_j$ come from a pilot estimator. Although this concave penalty has been proposed previously, its variable-selection properties and sparsity relative to other popular penalties have not been fully characterized. We derive the exact orthogonal-design solution, and show that the single-stage estimator selects the true model under a weighted irrepresentable condition that holds for every design once $\tau$ is small. We further establish that, under matched tuning, the two-stage estimator possesses the oracle property and has…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.38092.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.38092.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-30T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-30T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="L-PASSO: Adaptive Log-penalized Variable Selector, with Sparse Selection and Robustness to the Pilot Estimator" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Samiran Ghosh, Shuva Gupta, Shreyo Ghosh"},"dateModified":"2026-10-30T00:00:00+01:00","datePublished":"2026-10-30T00:00:00+01:00","description":"We study L-PASSO, a penalized least-squares regression method based on the logarithmic penalty $\\lambda\\sum_j\\log(1+ \\beta_j /\\tau)$, and its two-stage adaptive form, in which the scales $\\tau_j$ come from a pilot estimator. Although this concave penalty has been proposed previously, its variable-selection properties and sparsity relative to other popular penalties have not been fully characterized. We derive the exact orthogonal-design solution, and show that the single-stage estimator selects the true model under a weighted irrepresentable condition that holds for every design once $\\tau$ is small. We further establish that, under matched tuning, the two-stage estimator possesses the oracle property and has…","headline":"L-PASSO: Adaptive Log-penalized Variable Selector, with Sparse Selection and Robustness to the Pilot Estimator","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.38092.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.38092.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>L-PASSO: Adaptive Log-penalized Variable Selector, with Sparse Selection and Robustness to the Pilot Estimator</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Samiran Ghosh, Shuva Gupta, Shreyo Ghosh
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      30 Oct 2026
+    </div>
+  </div><div class="summary-box">L-PASSO is an adaptive log‑penalized regression method that achieves robust sparse variable selection with provable oracle properties.</div><h3>Abstract</h3>
+  <table>
+  <tbody>
+    <tr>
+      <td>We study L-PASSO, a penalized least-squares regression method based on the logarithmic penalty $\lambda\sum_j\log(1+</td>
+      <td>\beta_j</td>
+      <td>/\tau)$, and its two-stage adaptive form, in which the scales $\tau_j$ come from a pilot estimator. Although this concave penalty has been proposed previously, its variable-selection properties and sparsity relative to other popular penalties have not been fully characterized. We derive the exact orthogonal-design solution, and show that the single-stage estimator selects the true model under a weighted irrepresentable condition that holds for every design once $\tau$ is small. We further establish that, under matched tuning, the two-stage estimator possesses the oracle property and has half the asymptotic bias of the adaptive LASSO. Our main theoretical contribution concerns the robustness of the two-stage procedure to the pilot estimator. We show that two-stage L-PASSO remains selection consistent even when the weights associated with relevant variables are as small as $\exp{-o(1/\zeta_n)}$, whereas the adaptive LASSO fails to retain relevant variables whose pilot weights are sufficiently small relative to its tuning parameter $\zeta_n$. We establish that both thresholds are sharp. In high-dimensional settings, we prove support recovery for a local minimizer without imposing any lower-bound condition on the weights of relevant variables, and provide conditions under which this local minimizer is also the unique global minimizer. We additionally establish the selection consistency of a BIC-based tuning-parameter selection procedure. Finally, simulations comparing L-PASSO with the LASSO, SCAD, MCP, SELO, uniLasso, and the adaptive LASSO show that L-PASSO most frequently recovers the true support. Two real-data examples further illustrate the method.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.38092" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.38092" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

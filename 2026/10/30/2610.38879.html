@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Proximal R2 Priors for Structured Variance Allocation</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Proximal R2 Priors for Structured Variance Allocation" />
+<meta name="author" content="Javier Enrique Aguilar, David Kohns, Eric Yanchenko, Shonosuke Sugasawa, Kaoru Irie, Aki Vehtari, Paul-Christian Bürkner" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Scientific domain knowledge in regression often concerns structural relationships among model terms, which are typically encoded as parameter constraints. Since such relationships rarely hold exactly in practice, prior distributions should encourage them while at the same time retaining support for scientifically plausible departures. Accounting for these relationships becomes more pressing in modern regression, where high-dimensionality is usually present and regularisation is essential. $R^2$ decomposition priors provide an interpretable foundation for regularisation by placing a prior on total explained variance and distributing the implied signal across model terms. We introduce the Proximal R2 prior, which uses proximal relaxations to encode these…" />
+<meta name="twitter:description" property="og:description" content="Scientific domain knowledge in regression often concerns structural relationships among model terms, which are typically encoded as parameter constraints. Since such relationships rarely hold exactly in practice, prior distributions should encourage them while at the same time retaining support for scientifically plausible departures. Accounting for these relationships becomes more pressing in modern regression, where high-dimensionality is usually present and regularisation is essential. $R^2$ decomposition priors provide an interpretable foundation for regularisation by placing a prior on total explained variance and distributing the implied signal across model terms. We introduce the Proximal R2 prior, which uses proximal relaxations to encode these…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.38879.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.38879.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-30T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-30T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Proximal R2 Priors for Structured Variance Allocation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Javier Enrique Aguilar, David Kohns, Eric Yanchenko, Shonosuke Sugasawa, Kaoru Irie, Aki Vehtari, Paul-Christian Bürkner"},"dateModified":"2026-10-30T00:00:00+01:00","datePublished":"2026-10-30T00:00:00+01:00","description":"Scientific domain knowledge in regression often concerns structural relationships among model terms, which are typically encoded as parameter constraints. Since such relationships rarely hold exactly in practice, prior distributions should encourage them while at the same time retaining support for scientifically plausible departures. Accounting for these relationships becomes more pressing in modern regression, where high-dimensionality is usually present and regularisation is essential. $R^2$ decomposition priors provide an interpretable foundation for regularisation by placing a prior on total explained variance and distributing the implied signal across model terms. We introduce the Proximal R2 prior, which uses proximal relaxations to encode these…","headline":"Proximal R2 Priors for Structured Variance Allocation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.38879.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.38879.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Proximal R2 Priors for Structured Variance Allocation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Javier Enrique Aguilar, David Kohns, Eric Yanchenko, Shonosuke Sugasawa, Kaoru Irie, Aki Vehtari, Paul-Christian Bürkner
+      <span class="sep">&middot;</span>
+      stat.ME, stat.CO, stat.TH
+      <span class="sep">&middot;</span>
+      30 Oct 2026
+    </div>
+  </div><div class="summary-box">Introduces Proximal R2 priors that encode structural variance constraints via proximal relaxations, enabling differentiable posterior inference.</div><h3>Abstract</h3>
+  <p>Scientific domain knowledge in regression often concerns structural relationships among model terms, which are typically encoded as parameter constraints. Since such relationships rarely hold exactly in practice, prior distributions should encourage them while at the same time retaining support for scientifically plausible departures. Accounting for these relationships becomes more pressing in modern regression, where high-dimensionality is usually present and regularisation is essential. $R^2$ decomposition priors provide an interpretable foundation for regularisation by placing a prior on total explained variance and distributing the implied signal across model terms. We introduce the Proximal R2 prior, which uses proximal relaxations to encode these relationships as soft constraints on the variance allocation. Our formulation yields differentiable posteriors compatible with standard gradient based samplers. Theoretically, we prove that our prior preserves the characteristic marginal properties of global-local shrinkage priors. Moreover, we establish posterior consistency and contraction rates in growing dimensions, showing that the inclusion of structural relationships and proximal methods do not alter the shrinkage properties. Notably, these results demonstrate that the structural constraints in the model do not hinder posterior recovery. Simulation studies and real-data applications to interaction and generalised additive models demonstrate that our prior improves parameter recovery, out-of-sample prediction, and sampling efficiency over existing constrained and unconstrained shrinkage priors, even under structural misspecification.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.38879" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.38879" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

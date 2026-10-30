@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Reframing Spatial Uncertainty Visualisation with a Layered Grammar of Graphics</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Reframing Spatial Uncertainty Visualisation with a Layered Grammar of Graphics" />
+<meta name="author" content="Maggie Xueqi Ma, Weihao Li, Quan Vu, Francis Hui, Emi Tanaka" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Communicating both estimated values and their associated uncertainties presents a particular challenge in spatial visualisation because spatial coordinates already occupy the primary visual channels, leaving relatively few channels available for encoding uncertainty alongside the estimated values. A range of visualisation techniques has been developed to address this challenge, including bivariate choropleth maps, pixel maps, and glyph maps. However, existing implementations typically treat these techniques as dedicated visualisations rather than expressing them through the composable elements of a grammar of graphics. We reframe uncertainty visualisation as an extension of the layered grammar of graphics, allowing uncertainty-specific representations to be composed, customised,…" />
+<meta name="twitter:description" property="og:description" content="Communicating both estimated values and their associated uncertainties presents a particular challenge in spatial visualisation because spatial coordinates already occupy the primary visual channels, leaving relatively few channels available for encoding uncertainty alongside the estimated values. A range of visualisation techniques has been developed to address this challenge, including bivariate choropleth maps, pixel maps, and glyph maps. However, existing implementations typically treat these techniques as dedicated visualisations rather than expressing them through the composable elements of a grammar of graphics. We reframe uncertainty visualisation as an extension of the layered grammar of graphics, allowing uncertainty-specific representations to be composed, customised,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.40258.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.40258.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-30T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-30T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Reframing Spatial Uncertainty Visualisation with a Layered Grammar of Graphics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Maggie Xueqi Ma, Weihao Li, Quan Vu, Francis Hui, Emi Tanaka"},"dateModified":"2026-10-30T00:00:00+01:00","datePublished":"2026-10-30T00:00:00+01:00","description":"Communicating both estimated values and their associated uncertainties presents a particular challenge in spatial visualisation because spatial coordinates already occupy the primary visual channels, leaving relatively few channels available for encoding uncertainty alongside the estimated values. A range of visualisation techniques has been developed to address this challenge, including bivariate choropleth maps, pixel maps, and glyph maps. However, existing implementations typically treat these techniques as dedicated visualisations rather than expressing them through the composable elements of a grammar of graphics. We reframe uncertainty visualisation as an extension of the layered grammar of graphics, allowing uncertainty-specific representations to be composed, customised,…","headline":"Reframing Spatial Uncertainty Visualisation with a Layered Grammar of Graphics","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.40258.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/10/30/2610.40258.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Reframing Spatial Uncertainty Visualisation with a Layered Grammar of Graphics</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Maggie Xueqi Ma, Weihao Li, Quan Vu, Francis Hui, Emi Tanaka
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      30 Oct 2026
+    </div>
+  </div><div class="summary-box">Introduces a layered grammar of graphics framework to compose spatial uncertainty visualisations in ggplot2.</div><h3>Abstract</h3>
+  <p>Communicating both estimated values and their associated uncertainties presents a particular challenge in spatial visualisation because spatial coordinates already occupy the primary visual channels, leaving relatively few channels available for encoding uncertainty alongside the estimated values. A range of visualisation techniques has been developed to address this challenge, including bivariate choropleth maps, pixel maps, and glyph maps. However, existing implementations typically treat these techniques as dedicated visualisations rather than expressing them through the composable elements of a grammar of graphics. We reframe uncertainty visualisation as an extension of the layered grammar of graphics, allowing uncertainty-specific representations to be composed, customised, and extended alongside other graphical components. We demonstrate this perspective by integrating uncertainty visualisation into the layered architecture of ggplot2, accommodating these techniques while also motivating new approaches such as the dual map for selective attention between estimated values and their associated uncertainties. We implement the framework in the R package ggincerta and demonstrate its application through three case studies.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2610.40258" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2610.40258" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
