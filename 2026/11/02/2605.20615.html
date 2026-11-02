@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Evaluating causal indirect effects when mediators are left-censored by assay limit of quantification</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Evaluating causal indirect effects when mediators are left-censored by assay limit of quantification" />
+<meta name="author" content="Cong Jiang, Michael D. Hughes, Nima S. Hejazi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Causal mediation analysis is essential for disentangling the mechanisms by which investigational therapeutic and preventive agents impact clinical outcomes. However, the measurement of biological mediators is often subject to left-censoring by technical measurement limitations, most commonly an assay’s limit of quantification. This form of censoring can pose severe challenges for both identification and estimation of causal mediation estimands, particularly when the censoring mechanism is deterministic and the resulting missingness is missing not at random (MNAR) or nonignorable. Motivated by the question of assessing the role of viral RNA in the action mechanism of monoclonal antibody therapies for COVID-19 in the…" />
+<meta name="twitter:description" property="og:description" content="Causal mediation analysis is essential for disentangling the mechanisms by which investigational therapeutic and preventive agents impact clinical outcomes. However, the measurement of biological mediators is often subject to left-censoring by technical measurement limitations, most commonly an assay’s limit of quantification. This form of censoring can pose severe challenges for both identification and estimation of causal mediation estimands, particularly when the censoring mechanism is deterministic and the resulting missingness is missing not at random (MNAR) or nonignorable. Motivated by the question of assessing the role of viral RNA in the action mechanism of monoclonal antibody therapies for COVID-19 in the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/02/2605.20615.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/02/2605.20615.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-02T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-02T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Evaluating causal indirect effects when mediators are left-censored by assay limit of quantification" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Cong Jiang, Michael D. Hughes, Nima S. Hejazi"},"dateModified":"2026-11-02T00:00:00+01:00","datePublished":"2026-11-02T00:00:00+01:00","description":"Causal mediation analysis is essential for disentangling the mechanisms by which investigational therapeutic and preventive agents impact clinical outcomes. However, the measurement of biological mediators is often subject to left-censoring by technical measurement limitations, most commonly an assay’s limit of quantification. This form of censoring can pose severe challenges for both identification and estimation of causal mediation estimands, particularly when the censoring mechanism is deterministic and the resulting missingness is missing not at random (MNAR) or nonignorable. Motivated by the question of assessing the role of viral RNA in the action mechanism of monoclonal antibody therapies for COVID-19 in the…","headline":"Evaluating causal indirect effects when mediators are left-censored by assay limit of quantification","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/02/2605.20615.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/02/2605.20615.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Evaluating causal indirect effects when mediators are left-censored by assay limit of quantification</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Cong Jiang, Michael D. Hughes, Nima S. Hejazi
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      2 Nov 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>Causal mediation analysis is essential for disentangling the mechanisms by which investigational therapeutic and preventive agents impact clinical outcomes. However, the measurement of biological mediators is often subject to left-censoring by technical measurement limitations, most commonly an assay’s limit of quantification. This form of censoring can pose severe challenges for both identification and estimation of causal mediation estimands, particularly when the censoring mechanism is deterministic and the resulting missingness is missing not at random (MNAR) or nonignorable. Motivated by the question of assessing the role of viral RNA in the action mechanism of monoclonal antibody therapies for COVID-19 in the Accelerating COVID-19 Therapeutics and Vaccine (ACTIV)-2 platform trial, we develop a semi-parametric framework for estimation of the natural direct and indirect effects when the mediator of interest is partially subject to this form of left-censoring. Our proposed strategy combines fractional imputation with a semi-parametric EM algorithm to flexibly estimate key components of the factorized data likelihood. Applying the proposed strategy to circumvent the left-censoring, we discuss both traditional plug-in and asymptotically efficient estimators of the direct and indirect effect estimands, introducing a data-adaptive $m$-out-of-$n$ bootstrap for robust inference under the imputation procedure. We demonstrate in numerical experiments that our approach significantly reduces bias and allows for reliable inference. An application to data from the ACTIV-2 platform trial confirms that monoclonal antibody therapies reduce the risk of hospitalization and death due to COVID-19, while suggesting that changes in viral RNA mediate only a modest proportion of the overall treatment effect.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.20615" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.20615" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
