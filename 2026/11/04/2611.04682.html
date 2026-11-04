@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Change-Point Detection and Fault Scoring in District Heating Systems</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian Change-Point Detection and Fault Scoring in District Heating Systems" />
+<meta name="author" content="Tanja Korsten Bugajski, Nicolai Peder Bülow Pedersen, J. Eduardo Vera-Valdés, Michal Zbigniew Pomianowski, Anna Marszal-Pomianowska" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Smart heat meter data provide an important basis for monitoring district-heating installations, but fault reports are delayed, incomplete and temporally coarse: a report follows the appearance of a fault, sometimes by weeks, so the onset is unknown. This blurs the distinction between statistical changes and operational faults and prevents the reliable labelling that fault classifiers require. Changepoint detectors such as the Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) report only the probability that a change occurred, so a large jump and a much smaller one can receive the same probability, and probabilities alone cannot tell a utility which…" />
+<meta name="twitter:description" property="og:description" content="Smart heat meter data provide an important basis for monitoring district-heating installations, but fault reports are delayed, incomplete and temporally coarse: a report follows the appearance of a fault, sometimes by weeks, so the onset is unknown. This blurs the distinction between statistical changes and operational faults and prevents the reliable labelling that fault classifiers require. Changepoint detectors such as the Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) report only the probability that a change occurred, so a large jump and a much smaller one can receive the same probability, and probabilities alone cannot tell a utility which…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.04682.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.04682.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-04T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-04T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian Change-Point Detection and Fault Scoring in District Heating Systems" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tanja Korsten Bugajski, Nicolai Peder Bülow Pedersen, J. Eduardo Vera-Valdés, Michal Zbigniew Pomianowski, Anna Marszal-Pomianowska"},"dateModified":"2026-11-04T00:00:00+01:00","datePublished":"2026-11-04T00:00:00+01:00","description":"Smart heat meter data provide an important basis for monitoring district-heating installations, but fault reports are delayed, incomplete and temporally coarse: a report follows the appearance of a fault, sometimes by weeks, so the onset is unknown. This blurs the distinction between statistical changes and operational faults and prevents the reliable labelling that fault classifiers require. Changepoint detectors such as the Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) report only the probability that a change occurred, so a large jump and a much smaller one can receive the same probability, and probabilities alone cannot tell a utility which…","headline":"Bayesian Change-Point Detection and Fault Scoring in District Heating Systems","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.04682.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.04682.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian Change-Point Detection and Fault Scoring in District Heating Systems</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Tanja Korsten Bugajski, Nicolai Peder Bülow Pedersen, J. Eduardo Vera-Valdés, Michal Zbigniew Pomianowski, Anna Marszal-Pomianowska
+      <span class="sep">&middot;</span>
+      stat.AP, stat.ME
+      <span class="sep">&middot;</span>
+      4 Nov 2026
+    </div>
+  </div><div class="summary-box">Develops a Bayesian changepoint detection method with a decision score to prioritize district heating faults.</div><h3>Abstract</h3>
+  <p>Smart heat meter data provide an important basis for monitoring district-heating installations, but fault reports are delayed, incomplete and temporally coarse: a report follows the appearance of a fault, sometimes by weeks, so the onset is unknown. This blurs the distinction between statistical changes and operational faults and prevents the reliable labelling that fault classifiers require. Changepoint detectors such as the Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) report only the probability that a change occurred, so a large jump and a much smaller one can receive the same probability, and probabilities alone cannot tell a utility which installation to inspect first. We therefore develop a decision score that applies BEAST to temperature difference and flow and scores each detected changepoint by its posterior probability together with its deviation from recent operation, jump size, local behaviour and physical direction. Cases with unfavourable changes in both channels, the pattern of insufficient cooling, receive the highest priority. Of 1,522 cases, 648 had a reported fault; these made up 96% of the 25 highest-priority cases and 90% of the highest 200, and Average Precision was 0.771 against a reported-fault prevalence of 0.426. As cases without a report are not verified to be fault-free, these figures are likely conservative. Without using the report date, the strongest unfavourable flow change in reported-fault cases fell a median of 11 days before the report. Level-based screening of temperature difference, as practised by utilities, ranked the cases comparably but cannot date the change, and the two kinds of evidence were complementary. The method can serve as the first step in a fault-detection workflow, providing a manageable subset of installations for inspection and candidate onset dates for training fault classifiers.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.04682" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.04682" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

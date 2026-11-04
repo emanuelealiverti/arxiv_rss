@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Probabilistic Framework for Estimating the Modal Age at Death</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Probabilistic Framework for Estimating the Modal Age at Death" />
+<meta name="author" content="Silvio C. Patricio, Paola Vazquez-Castillo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The modal age at death is used to track longevity, but existing methods report it as a single number. We estimate its posterior distribution. Death counts are modeled as Poisson given the death rates and exposures, and posterior draws of the rates, passed through the life table, give the probability that each age is the mode and a credible interval for an interpolated modal age. With independent gamma priors, the posterior is computed exactly and concentrates on the true mode as the population grows. Because single-year rates are noisy, we also use a second-order random-walk prior on the log rates,…" />
+<meta name="twitter:description" property="og:description" content="The modal age at death is used to track longevity, but existing methods report it as a single number. We estimate its posterior distribution. Death counts are modeled as Poisson given the death rates and exposures, and posterior draws of the rates, passed through the life table, give the probability that each age is the mode and a credible interval for an interpolated modal age. With independent gamma priors, the posterior is computed exactly and concentrates on the true mode as the population grows. Because single-year rates are noisy, we also use a second-order random-walk prior on the log rates,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2411.09800.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2411.09800.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-04T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-04T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Probabilistic Framework for Estimating the Modal Age at Death" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Silvio C. Patricio, Paola Vazquez-Castillo"},"dateModified":"2026-11-04T00:00:00+01:00","datePublished":"2026-11-04T00:00:00+01:00","description":"The modal age at death is used to track longevity, but existing methods report it as a single number. We estimate its posterior distribution. Death counts are modeled as Poisson given the death rates and exposures, and posterior draws of the rates, passed through the life table, give the probability that each age is the mode and a credible interval for an interpolated modal age. With independent gamma priors, the posterior is computed exactly and concentrates on the true mode as the population grows. Because single-year rates are noisy, we also use a second-order random-walk prior on the log rates,…","headline":"A Probabilistic Framework for Estimating the Modal Age at Death","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2411.09800.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2411.09800.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Probabilistic Framework for Estimating the Modal Age at Death</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Silvio C. Patricio, Paola Vazquez-Castillo
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      4 Nov 2026
+    </div>
+  </div><div class="summary-box">Estimates the posterior distribution of the modal age at death using Poisson modeling and random-walk priors.</div><h3>Abstract</h3>
+  <p>The modal age at death is used to track longevity, but existing methods report it as a single number. We estimate its posterior distribution. Death counts are modeled as Poisson given the death rates and exposures, and posterior draws of the rates, passed through the life table, give the probability that each age is the mode and a credible interval for an interpolated modal age. With independent gamma priors, the posterior is computed exactly and concentrates on the true mode as the population grows. Because single-year rates are noisy, we also use a second-order random-walk prior on the log rates, which shares information across neighboring ages and estimates the degree of smoothing from the data; this posterior is computed with a Laplace approximation, which we check against posterior sampling. In simulations, the random-walk posterior mean was 1.4 to 10.6 times more accurate than the posterior mean under independent priors. When the distribution of deaths was unimodal, its errors were close to those of P-spline and Gompertz estimates, which were slightly more accurate; with a secondary peak, P-splines were the most accurate. The random-walk credible intervals were conservative, covering the true mode in 98% to 100% of replications, whereas bootstrap intervals for the other estimators either covered it less often or were much wider. For women in Denmark, France, Japan and Sweden since 1960, the random-walk estimates hardly changed with the starting age of the estimation, and the posterior gives the probability that the modal age declined in 2020.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2411.09800" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2411.09800" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

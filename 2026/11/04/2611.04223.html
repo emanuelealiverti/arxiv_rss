@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Aggregate Calibration Can Mask Stress-State Undercoverage: Bounded-Memory Forecast Intervals under Recurrent Financial Stress</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Aggregate Calibration Can Mask Stress-State Undercoverage: Bounded-Memory Forecast Intervals under Recurrent Financial Stress" />
+<meta name="author" content="Ruihang Han, Li-Hsiang Lin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sequential forecast intervals are often evaluated by aggregate coverage even when calibration memory is bounded. This can be misleading when economically important states recur after long absences: a recent-only buffer may satisfy its overall coverage target while no longer containing errors from earlier episodes of the returning state. We study this problem in next-day financial range forecasting, holding the forecasting model, conformity score, adaptive update, and memory budget constant while varying the historical residual information available at each query. Recent-only first-in, first-out (FIFO) calibration is near nominal in aggregate but undercovers substantially during high-volatility states in both an exchange-traded fund…" />
+<meta name="twitter:description" property="og:description" content="Sequential forecast intervals are often evaluated by aggregate coverage even when calibration memory is bounded. This can be misleading when economically important states recur after long absences: a recent-only buffer may satisfy its overall coverage target while no longer containing errors from earlier episodes of the returning state. We study this problem in next-day financial range forecasting, holding the forecasting model, conformity score, adaptive update, and memory budget constant while varying the historical residual information available at each query. Recent-only first-in, first-out (FIFO) calibration is near nominal in aggregate but undercovers substantially during high-volatility states in both an exchange-traded fund…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.04223.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.04223.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-04T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-04T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Aggregate Calibration Can Mask Stress-State Undercoverage: Bounded-Memory Forecast Intervals under Recurrent Financial Stress" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ruihang Han, Li-Hsiang Lin"},"dateModified":"2026-11-04T00:00:00+01:00","datePublished":"2026-11-04T00:00:00+01:00","description":"Sequential forecast intervals are often evaluated by aggregate coverage even when calibration memory is bounded. This can be misleading when economically important states recur after long absences: a recent-only buffer may satisfy its overall coverage target while no longer containing errors from earlier episodes of the returning state. We study this problem in next-day financial range forecasting, holding the forecasting model, conformity score, adaptive update, and memory budget constant while varying the historical residual information available at each query. Recent-only first-in, first-out (FIFO) calibration is near nominal in aggregate but undercovers substantially during high-volatility states in both an exchange-traded fund…","headline":"Aggregate Calibration Can Mask Stress-State Undercoverage: Bounded-Memory Forecast Intervals under Recurrent Financial Stress","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.04223.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.04223.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Aggregate Calibration Can Mask Stress-State Undercoverage: Bounded-Memory Forecast Intervals under Recurrent Financial Stress</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Ruihang Han, Li-Hsiang Lin
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      4 Nov 2026
+    </div>
+  </div><div class="summary-box">Evaluates bounded-memory calibration effects on forecast interval coverage during recurring high‑volatility states.</div><h3>Abstract</h3>
+  <p>Sequential forecast intervals are often evaluated by aggregate coverage even when calibration memory is bounded. This can be misleading when economically important states recur after long absences: a recent-only buffer may satisfy its overall coverage target while no longer containing errors from earlier episodes of the returning state. We study this problem in next-day financial range forecasting, holding the forecasting model, conformity score, adaptive update, and memory budget constant while varying the historical residual information available at each query. Recent-only first-in, first-out (FIFO) calibration is near nominal in aggregate but undercovers substantially during high-volatility states in both an exchange-traded fund development panel and a fixed stock panel. An unbounded state-history reference yields a lower observed stress-period interval score; Rare replay yields lower high-VIX interval scores than the matched Recent-n and Hybrid-n controls in both panels, and the state-structured versus recent-only contrast is largest near stress re-entry. Bounded calibration memory is therefore part of the forecasting information design, and aggregate calibration alone can conceal state-specific reliability failures.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.04223" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.04223" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

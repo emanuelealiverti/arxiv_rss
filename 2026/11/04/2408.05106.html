@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On Reasonable Uses of the Restricted Spatial Regression Model: Selection Criteria, Robust Adjustments, and Computational Advances</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="On Reasonable Uses of the Restricted Spatial Regression Model: Selection Criteria, Robust Adjustments, and Computational Advances" />
+<meta name="author" content="Jonathan R. Bradley" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The spatial linear mixed model (SLMM) consists of fixed and spatial random effects that may be effected by unmeasured confounding and collinearity. Partially motivated as a means to address potential issues with confounding, the Restricted spatial regression (RSR) model restricts spatial random effects to be in the orthogonal column space of the covariates. Recent articles have shown that the misspecified Bayesian RSR generally performs worse than the SLMM when the data is generated from the SLMM. However, we show that the misspecified Bayesian RSR model’s marginal posterior distribution is equivalent up to a reparameterization to that of the SLMM’s marginal…" />
+<meta name="twitter:description" property="og:description" content="The spatial linear mixed model (SLMM) consists of fixed and spatial random effects that may be effected by unmeasured confounding and collinearity. Partially motivated as a means to address potential issues with confounding, the Restricted spatial regression (RSR) model restricts spatial random effects to be in the orthogonal column space of the covariates. Recent articles have shown that the misspecified Bayesian RSR generally performs worse than the SLMM when the data is generated from the SLMM. However, we show that the misspecified Bayesian RSR model’s marginal posterior distribution is equivalent up to a reparameterization to that of the SLMM’s marginal…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2408.05106.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2408.05106.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-04T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-04T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="On Reasonable Uses of the Restricted Spatial Regression Model: Selection Criteria, Robust Adjustments, and Computational Advances" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jonathan R. Bradley"},"dateModified":"2026-11-04T00:00:00+01:00","datePublished":"2026-11-04T00:00:00+01:00","description":"The spatial linear mixed model (SLMM) consists of fixed and spatial random effects that may be effected by unmeasured confounding and collinearity. Partially motivated as a means to address potential issues with confounding, the Restricted spatial regression (RSR) model restricts spatial random effects to be in the orthogonal column space of the covariates. Recent articles have shown that the misspecified Bayesian RSR generally performs worse than the SLMM when the data is generated from the SLMM. However, we show that the misspecified Bayesian RSR model’s marginal posterior distribution is equivalent up to a reparameterization to that of the SLMM’s marginal…","headline":"On Reasonable Uses of the Restricted Spatial Regression Model: Selection Criteria, Robust Adjustments, and Computational Advances","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2408.05106.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2408.05106.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>On Reasonable Uses of the Restricted Spatial Regression Model: Selection Criteria, Robust Adjustments, and Computational Advances</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Jonathan R. Bradley
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      4 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces computational equivalence and new samplers for Bayesian spatial regression models, improving inference and scalability.</div><h3>Abstract</h3>
+  <p>The spatial linear mixed model (SLMM) consists of fixed and spatial random effects that may be effected by unmeasured confounding and collinearity. Partially motivated as a means to address potential issues with confounding, the Restricted spatial regression (RSR) model restricts spatial random effects to be in the orthogonal column space of the covariates. Recent articles have shown that the misspecified Bayesian RSR generally performs worse than the SLMM when the data is generated from the SLMM. However, we show that the misspecified Bayesian RSR model’s marginal posterior distribution is equivalent up to a reparameterization to that of the SLMM’s marginal posterior distribution, under a certain prior assumption on the orthogonalized regression coefficients. These equivalence relationships show that when comparing the SLMM and RSR using the Bayes factor, stictly proper scoring rules, cross-validation, and many other standard impartial selection criteria we see that the Bayesian SLMM and the misspecified Bayesian RSR are seen as equivalent under certain prior specifications. We provide several new directions for the RSR including results that show that an augmented RSR can produce clear computational advantages via a direct sampler from the posterior distribution for all hyperparameters, fixed effects, and random effects leading to implementation strategies for the SLMM via these equivalence relationships. Additionally, a type of transfer learning approach offers a new interpretation to orthogonalized regression coefficients, which we show empirically can improve inference on linearly dependent regression coefficients, via a bias adjustment, in the presence of spatial confounding. Simulations and an illustration using COVID-19 mortality data are provided.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2408.05106" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2408.05106" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

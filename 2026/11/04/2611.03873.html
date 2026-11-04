@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>BEAGLE in Action: Phylogenetic Likelihoods for Very Large State Spaces</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="BEAGLE in Action: Phylogenetic Likelihoods for Very Large State Spaces" />
+<meta name="author" content="Benjamin D Redelings, April Wright, Karthik Gangavarapu, Yucai Shao, Filippo Monti, Wu-Min Deng, Shuo Su, Andrew Rambaut, Guy Baele, Philippe Lemey, Marc A. Suchard, Xiang Ji" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Computing phylogenetic likelihoods becomes challenging when the continuous-time Markov chain has a large state space. At each branch, pruning algorithms require terms of the form $e^{Q t}\cdot B$, where $Q$ is an $S \times S$ rate matrix (e.g., for $S$ states), $t$ is a branch length, and the columns of matrix $B$ (e.g., $B \in \mathbb{R}_{+}^{S \times L}$) are partial-likelihood vectors for $L$ site patterns. Many implementations calculate the dense transition matrix $P(t)=e^{Q t}$ via eigendecomposition and multiply it by $B$. This strategy is efficient for small state spaces, but it can be inefficient for large sparse rate matrices because…" />
+<meta name="twitter:description" property="og:description" content="Computing phylogenetic likelihoods becomes challenging when the continuous-time Markov chain has a large state space. At each branch, pruning algorithms require terms of the form $e^{Q t}\cdot B$, where $Q$ is an $S \times S$ rate matrix (e.g., for $S$ states), $t$ is a branch length, and the columns of matrix $B$ (e.g., $B \in \mathbb{R}_{+}^{S \times L}$) are partial-likelihood vectors for $L$ site patterns. Many implementations calculate the dense transition matrix $P(t)=e^{Q t}$ via eigendecomposition and multiply it by $B$. This strategy is efficient for small state spaces, but it can be inefficient for large sparse rate matrices because…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.03873.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.03873.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-04T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-04T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="BEAGLE in Action: Phylogenetic Likelihoods for Very Large State Spaces" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Benjamin D Redelings, April Wright, Karthik Gangavarapu, Yucai Shao, Filippo Monti, Wu-Min Deng, Shuo Su, Andrew Rambaut, Guy Baele, Philippe Lemey, Marc A. Suchard, Xiang Ji"},"dateModified":"2026-11-04T00:00:00+01:00","datePublished":"2026-11-04T00:00:00+01:00","description":"Computing phylogenetic likelihoods becomes challenging when the continuous-time Markov chain has a large state space. At each branch, pruning algorithms require terms of the form $e^{Q t}\\cdot B$, where $Q$ is an $S \\times S$ rate matrix (e.g., for $S$ states), $t$ is a branch length, and the columns of matrix $B$ (e.g., $B \\in \\mathbb{R}_{+}^{S \\times L}$) are partial-likelihood vectors for $L$ site patterns. Many implementations calculate the dense transition matrix $P(t)=e^{Q t}$ via eigendecomposition and multiply it by $B$. This strategy is efficient for small state spaces, but it can be inefficient for large sparse rate matrices because…","headline":"BEAGLE in Action: Phylogenetic Likelihoods for Very Large State Spaces","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.03873.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/04/2611.03873.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>BEAGLE in Action: Phylogenetic Likelihoods for Very Large State Spaces</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Benjamin D Redelings, April Wright, Karthik Gangavarapu, Yucai Shao, Filippo Monti, Wu-Min Deng, Shuo Su, Andrew Rambaut, Guy Baele, Philippe Lemey, Marc A. Suchard, Xiang Ji
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      4 Nov 2026
+    </div>
+  </div><div class="summary-box">Implements sparse matrix exponential action to compute phylogenetic likelihoods efficiently for large state spaces.</div><h3>Abstract</h3>
+  <p>Computing phylogenetic likelihoods becomes challenging when the continuous-time Markov chain has a large state space. At each branch, pruning algorithms require terms of the form $e^{Q t}\cdot B$, where $Q$ is an $S \times S$ rate matrix (e.g., for $S$ states), $t$ is a branch length, and the columns of matrix $B$ (e.g., $B \in \mathbb{R}_{+}^{S \times L}$) are partial-likelihood vectors for $L$ site patterns. Many implementations calculate the dense transition matrix $P(t)=e^{Q t}$ via eigendecomposition and multiply it by $B$. This strategy is efficient for small state spaces, but it can be inefficient for large sparse rate matrices because forming $P(t)$ or its eigen vector matrices destroys sparsity and its cost may not be well amortized when $L$ is small. We implement an alternative likelihood kernel based on the Al-Mohy and Higham (2011) algorithm for computing the action of the matrix exponential directly, avoiding explicit construction of $P(t)$ or its eigen vector matrices. The resulting method takes full advantage of the sparsity of $Q$. We implement this method as a CPU-based extension to the BEAGLE library and evaluate it on two large-state molecular models: a Markov-modulated codon model of heterotachy with $M$ selective regimes and $61\cdot M$ possible states, and a codon-pair model of interlocus gene conversion between two paralogs with $61^2=3\,721$ possible states. Our results characterize when action-based likelihood computation improves performance over calculating $e^{Q t}$ directly. We show that this method enables fast, scalable inference for complex models, removing a key computational barrier to the study of evolution with large state space models.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.03873" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.03873" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
