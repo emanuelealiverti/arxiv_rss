@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Inherited Local Shrinkage for Adaptive Functional Form Discovery</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Inherited Local Shrinkage for Adaptive Functional Form Discovery" />
+<meta name="author" content="Jacob C. Schultz, Daniel Taylor-Rodriguez" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Statistical models frequently employ nonlinear effects, interactions, and multiresolution basis expansions to represent complex relationships between predictors and responses. Determining the appropriate level of model complexity, however, remains a fundamental challenge. This paper introduces \textit{Inherited Local Shrinkage} (ILS), a Bayesian global-local shrinkage framework for adaptive functional form discovery that incorporates strong heredity among hierarchically related predictors. ILS propagates shrinkage through directed acyclic graphs (DAGs) encoding relationships among predictors, allowing increasingly complex terms to contribute only when supported by their simpler ancestors. This construction provides a common prior framework for a broad class of hierarchical regression models. We demonstrate its application…" />
+<meta name="twitter:description" property="og:description" content="Statistical models frequently employ nonlinear effects, interactions, and multiresolution basis expansions to represent complex relationships between predictors and responses. Determining the appropriate level of model complexity, however, remains a fundamental challenge. This paper introduces \textit{Inherited Local Shrinkage} (ILS), a Bayesian global-local shrinkage framework for adaptive functional form discovery that incorporates strong heredity among hierarchically related predictors. ILS propagates shrinkage through directed acyclic graphs (DAGs) encoding relationships among predictors, allowing increasingly complex terms to contribute only when supported by their simpler ancestors. This construction provides a common prior framework for a broad class of hierarchical regression models. We demonstrate its application…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/05/2611.06847.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/05/2611.06847.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-05T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-05T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Inherited Local Shrinkage for Adaptive Functional Form Discovery" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jacob C. Schultz, Daniel Taylor-Rodriguez"},"dateModified":"2026-11-05T00:00:00+01:00","datePublished":"2026-11-05T00:00:00+01:00","description":"Statistical models frequently employ nonlinear effects, interactions, and multiresolution basis expansions to represent complex relationships between predictors and responses. Determining the appropriate level of model complexity, however, remains a fundamental challenge. This paper introduces \\textit{Inherited Local Shrinkage} (ILS), a Bayesian global-local shrinkage framework for adaptive functional form discovery that incorporates strong heredity among hierarchically related predictors. ILS propagates shrinkage through directed acyclic graphs (DAGs) encoding relationships among predictors, allowing increasingly complex terms to contribute only when supported by their simpler ancestors. This construction provides a common prior framework for a broad class of hierarchical regression models. We demonstrate its application…","headline":"Inherited Local Shrinkage for Adaptive Functional Form Discovery","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/05/2611.06847.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/05/2611.06847.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Inherited Local Shrinkage for Adaptive Functional Form Discovery</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Jacob C. Schultz, Daniel Taylor-Rodriguez
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      5 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces Inherited Local Shrinkage, a Bayesian global‑local shrinkage framework for adaptive functional form discovery via DAG‑based hierarchical shrinkage.</div><h3>Abstract</h3>
+  <p>Statistical models frequently employ nonlinear effects, interactions, and multiresolution basis expansions to represent complex relationships between predictors and responses. Determining the appropriate level of model complexity, however, remains a fundamental challenge. This paper introduces \textit{Inherited Local Shrinkage} (ILS), a Bayesian global-local shrinkage framework for adaptive functional form discovery that incorporates strong heredity among hierarchically related predictors. ILS propagates shrinkage through directed acyclic graphs (DAGs) encoding relationships among predictors, allowing increasingly complex terms to contribute only when supported by their simpler ancestors. This construction provides a common prior framework for a broad class of hierarchical regression models. We demonstrate its application to polynomial regression, as well as multiresolution modeling with two-dimensional Haar wavelet and eigenvalue-ordered spline (EVOS) bases. Although these examples illustrate specific basis systems, ILS is not tied to any particular basis construction and can be applied to any regression model in which relationships among predictors can be represented by a DAG, regardless of the graph’s size or topology. Simulation studies demonstrate that ILS achieves competitive predictive performance relative to existing heredity-constrained methods while recovering underlying functional structure. Spatial applications further illustrate its ability to adaptively regulate model complexity across multiple resolutions, identifying where finer-scale detail is supported by the data. Together, these results establish ILS as a flexible framework for hierarchical complexity control and adaptive functional form discovery in Bayesian regression.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.06847" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.06847" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

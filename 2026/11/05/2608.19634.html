@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Curvature-Calibrated Quasi-Bayesian Updating for Moment-Restricted Models</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Curvature-Calibrated Quasi-Bayesian Updating for Moment-Restricted Models" />
+<meta name="author" content="Masahiro Tanaka" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Quadratic moment-based quasi-posteriors depend on a weighting matrix governing both the contributions of moment conditions and the scale of posterior uncertainty. We propose curvature-calibrated quasi-Bayesian (CCQB) updating, which iteratively evaluates the inverse of the estimated moment covariance (or long-run covariance) at the center of the resulting fixed-weight quasi-posterior. A two-part stopping rule monitors changes in the center and Monte Carlo error in estimating it. Under local regularity conditions, the ideal calibration map is contractive, and its fixed point is root-N consistent. The calibrated quasi-posterior and the sampling distribution of its center have the inverse Godambe information matrix as their root-N-scale…" />
+<meta name="twitter:description" property="og:description" content="Quadratic moment-based quasi-posteriors depend on a weighting matrix governing both the contributions of moment conditions and the scale of posterior uncertainty. We propose curvature-calibrated quasi-Bayesian (CCQB) updating, which iteratively evaluates the inverse of the estimated moment covariance (or long-run covariance) at the center of the resulting fixed-weight quasi-posterior. A two-part stopping rule monitors changes in the center and Monte Carlo error in estimating it. Under local regularity conditions, the ideal calibration map is contractive, and its fixed point is root-N consistent. The calibrated quasi-posterior and the sampling distribution of its center have the inverse Godambe information matrix as their root-N-scale…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/05/2608.19634.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/05/2608.19634.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-05T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-05T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Curvature-Calibrated Quasi-Bayesian Updating for Moment-Restricted Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Masahiro Tanaka"},"dateModified":"2026-11-05T00:00:00+01:00","datePublished":"2026-11-05T00:00:00+01:00","description":"Quadratic moment-based quasi-posteriors depend on a weighting matrix governing both the contributions of moment conditions and the scale of posterior uncertainty. We propose curvature-calibrated quasi-Bayesian (CCQB) updating, which iteratively evaluates the inverse of the estimated moment covariance (or long-run covariance) at the center of the resulting fixed-weight quasi-posterior. A two-part stopping rule monitors changes in the center and Monte Carlo error in estimating it. Under local regularity conditions, the ideal calibration map is contractive, and its fixed point is root-N consistent. The calibrated quasi-posterior and the sampling distribution of its center have the inverse Godambe information matrix as their root-N-scale…","headline":"Curvature-Calibrated Quasi-Bayesian Updating for Moment-Restricted Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/05/2608.19634.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/05/2608.19634.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Curvature-Calibrated Quasi-Bayesian Updating for Moment-Restricted Models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Masahiro Tanaka
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      5 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces curvature-calibrated quasi-Bayesian updating to improve moment‑restricted posterior approximation.</div><h3>Abstract</h3>
+  <p>Quadratic moment-based quasi-posteriors depend on a weighting matrix governing both the contributions of moment conditions and the scale of posterior uncertainty. We propose curvature-calibrated quasi-Bayesian (CCQB) updating, which iteratively evaluates the inverse of the estimated moment covariance (or long-run covariance) at the center of the resulting fixed-weight quasi-posterior. A two-part stopping rule monitors changes in the center and Monte Carlo error in estimating it. Under local regularity conditions, the ideal calibration map is contractive, and its fixed point is root-N consistent. The calibrated quasi-posterior and the sampling distribution of its center have the inverse Godambe information matrix as their root-N-scale covariance. Simulations show substantial gains over identity weighting. Further iteration has little effect in linear designs but improves calibration for some parameters in nonlinear settings, although nominal coverage is not uniformly achieved. An application to longitudinal childhood wheeze data illustrates the method under within-subject dependence.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2608.19634" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2608.19634" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
