@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficiently Estimating Cycle Statistics on Graphs via Spanning Trees</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Efficiently Estimating Cycle Statistics on Graphs via Spanning Trees" />
+<meta name="author" content="Josef Hoppe, Michael T. Schaub" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Simple cycles encode feedback and alternative routes in networks and are important for routing problems, the convergence of dynamical processes on networks, message passing and belief propagation, or even static network characterizations such as structural balance in signed networks. Being able to assess and sample from the cycle structure of a graph is thus of interest in many analysis contexts. However, due to the combinatorial growth of the cycle space with graph size, the computational cost for such sampling is high. Therefore, we here introduce a sampling framework that enables us to sample from the cycle structure without enumerating all…" />
+<meta name="twitter:description" property="og:description" content="Simple cycles encode feedback and alternative routes in networks and are important for routing problems, the convergence of dynamical processes on networks, message passing and belief propagation, or even static network characterizations such as structural balance in signed networks. Being able to assess and sample from the cycle structure of a graph is thus of interest in many analysis contexts. However, due to the combinatorial growth of the cycle space with graph size, the computational cost for such sampling is high. Therefore, we here introduce a sampling framework that enables us to sample from the cycle structure without enumerating all…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/06/2611.07925.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/06/2611.07925.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-06T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-06T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Efficiently Estimating Cycle Statistics on Graphs via Spanning Trees" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Josef Hoppe, Michael T. Schaub"},"dateModified":"2026-11-06T00:00:00+01:00","datePublished":"2026-11-06T00:00:00+01:00","description":"Simple cycles encode feedback and alternative routes in networks and are important for routing problems, the convergence of dynamical processes on networks, message passing and belief propagation, or even static network characterizations such as structural balance in signed networks. Being able to assess and sample from the cycle structure of a graph is thus of interest in many analysis contexts. However, due to the combinatorial growth of the cycle space with graph size, the computational cost for such sampling is high. Therefore, we here introduce a sampling framework that enables us to sample from the cycle structure without enumerating all…","headline":"Efficiently Estimating Cycle Statistics on Graphs via Spanning Trees","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/06/2611.07925.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/06/2611.07925.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Efficiently Estimating Cycle Statistics on Graphs via Spanning Trees</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Josef Hoppe, Michael T. Schaub
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      6 Nov 2026
+    </div>
+  </div><div class="summary-box">Samples graph cycles via spanning trees using a Monte Carlo Horvitz-Thompson estimator.</div><h3>Abstract</h3>
+  <p>Simple cycles encode feedback and alternative routes in networks and are important for routing problems, the convergence of dynamical processes on networks, message passing and belief propagation, or even static network characterizations such as structural balance in signed networks. Being able to assess and sample from the cycle structure of a graph is thus of interest in many analysis contexts. However, due to the combinatorial growth of the cycle space with graph size, the computational cost for such sampling is high. Therefore, we here introduce a sampling framework that enables us to sample from the cycle structure without enumerating all cycles. Specifically, the method draws uniform spanning trees and collects the fundamental cycles created by their non-tree edges, such that each tree provides an informative subset of simple cycles. Because cycles are included with unequal probabilities and are dependent within each subset, we formulate an inclusion-probability-based Horvitz-Thompson estimator, which we average over random subsets, a procedure we call Monte Carlo Horvitz-Thompson. For this, we sample multiple Horvitz-Thompson estimators and introduce a method to further subsample the individual estimators for increased computational performance. For sampling cycles, the estimator is unbiased if exact cycle inclusion probabilities are known. To extend the method to larger networks, we derive an efficient mean-field approximation for the inclusion probabilities and characterize the graph regimes in which it remains accurate. Experiments on synthetic and real-world networks demonstrate the computational scaling and statistical performance of the framework. We then illustrate the utility of Monte Carlo Horvitz-Thompson estimation by estimating cycle counts and cycle-level frustration statistics in signed spin systems. An implementation is available in the py-raccoon package.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.07925" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.07925" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
