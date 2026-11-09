@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>CleanScore: Black-Box Benchmark Audits with Negative Controls and Sensitivity Bounds</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="CleanScore: Black-Box Benchmark Audits with Negative Controls and Sensitivity Bounds" />
+<meta name="author" content="Jeffery Opoku, David Banahene" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Public benchmark scores reflect skill, prior exposure to the questions, or both, and for most models the training data are unknown. CleanScore is a black-box audit: the estimator needs only a correct-or-incorrect score for each form, not training data or weights. Each benchmark question becomes a parent item with one public form and two independently written fresh forms that keep its numbers, facts and answer. The audit reports an interval for the public-form advantage, not a verdict, and a private control bank with an explicit transport radius provides a proxy for the ordinary form gap that a rewrite alone can…" />
+<meta name="twitter:description" property="og:description" content="Public benchmark scores reflect skill, prior exposure to the questions, or both, and for most models the training data are unknown. CleanScore is a black-box audit: the estimator needs only a correct-or-incorrect score for each form, not training data or weights. Each benchmark question becomes a parent item with one public form and two independently written fresh forms that keep its numbers, facts and answer. The audit reports an interval for the public-form advantage, not a verdict, and a private control bank with an explicit transport radius provides a proxy for the ordinary form gap that a rewrite alone can…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2609.22183.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2609.22183.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-09T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-09T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="CleanScore: Black-Box Benchmark Audits with Negative Controls and Sensitivity Bounds" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jeffery Opoku, David Banahene"},"dateModified":"2026-11-09T00:00:00+01:00","datePublished":"2026-11-09T00:00:00+01:00","description":"Public benchmark scores reflect skill, prior exposure to the questions, or both, and for most models the training data are unknown. CleanScore is a black-box audit: the estimator needs only a correct-or-incorrect score for each form, not training data or weights. Each benchmark question becomes a parent item with one public form and two independently written fresh forms that keep its numbers, facts and answer. The audit reports an interval for the public-form advantage, not a verdict, and a private control bank with an explicit transport radius provides a proxy for the ordinary form gap that a rewrite alone can…","headline":"CleanScore: Black-Box Benchmark Audits with Negative Controls and Sensitivity Bounds","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2609.22183.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2609.22183.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>CleanScore: Black-Box Benchmark Audits with Negative Controls and Sensitivity Bounds</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Jeffery Opoku, David Banahene
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      9 Nov 2026
+    </div>
+  </div><div class="summary-box">CleanScore offers black‑box benchmark audits using negative controls and sensitivity bounds to detect exposure and leakage.</div><h3>Abstract</h3>
+  <p>Public benchmark scores reflect skill, prior exposure to the questions, or both, and for most models the training data are unknown. CleanScore is a black-box audit: the estimator needs only a correct-or-incorrect score for each form, not training data or weights. Each benchmark question becomes a parent item with one public form and two independently written fresh forms that keep its numbers, facts and answer. The audit reports an interval for the public-form advantage, not a verdict, and a private control bank with an explicit transport radius provides a proxy for the ordinary form gap that a rewrite alone can produce. A registered controlled-exposure experiment, a preliminary validation, detects planted exposure in one of two model families. A registered audit of five open models on 200 GSM8K and 200 ARC-Challenge items (ARC with stem-only rewrites, scored by option log probabilities) finds no exposure-consistent advantage, and two reruns declared before they were run (GSM8K at a longer token budget, ARC scored from generated letters) leave that conclusion unchanged. For four of the ten model-benchmark pairs the upper end of the interval is about five points or less, and for none is it above 21 points. The registered claim rule is much less sensitive than the primary interval: it flags a planted ten-point advantage in 5% to 11% of audits. Registered positive controls show what a null can mean. In four models, each trained under four seeds, items leaked into fine-tuning gained 25 points on average over unleaked items on the leaked wording and 19 points on paraphrases the model never saw, so a substantial share of the effect, estimated at 76% (95% interval 50% to 113%), is invisible to a paraphrase audit. A null on surface form says much less about contamination than the name suggests.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.22183" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.22183" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

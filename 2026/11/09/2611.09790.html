@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Box-Cox Transformations of Correlation Matrices</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Box-Cox Transformations of Correlation Matrices" />
+<meta name="author" content="Ilya Archakov, Peter Reinhard Hansen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We consider Box-Cox transformations of correlation matrices, $\Phi_\alpha(C)=\mathrm{vecl}{(C^{\alpha}-I)/\alpha}$, with Jacobian $J_\alpha$. The family nests the raw correlations at $\alpha=1$, the generalised Fisher transformation (GFT), $C\mapsto\mathrm{vecl}(\log C)$, at $\alpha=0$, and the negated off-diagonal concentration coordinates at $\alpha=-1$. The inverse problem is a strictly convex program for every $\alpha$, so every member is injective. The map is onto $\mathbb{R}^{d}$, $d=n(n-1)/2$, if and only if $\alpha\le0$, such that $\alpha=0$ defines the boundary for unrestricted parametrizations. For $\alpha&gt;0$ the image is bounded. The conditioning obeys the bound $\kappa(J_\alpha)\le\kappa(C)^{ 1-\alpha }$, where $\kappa(C)=\lambda_{\max}(C)/\lambda_{\min}(C)$, and on the surjective range the exponent is smallest at $\alpha=0$. Under…" />
+<meta name="twitter:description" property="og:description" content="We consider Box-Cox transformations of correlation matrices, $\Phi_\alpha(C)=\mathrm{vecl}{(C^{\alpha}-I)/\alpha}$, with Jacobian $J_\alpha$. The family nests the raw correlations at $\alpha=1$, the generalised Fisher transformation (GFT), $C\mapsto\mathrm{vecl}(\log C)$, at $\alpha=0$, and the negated off-diagonal concentration coordinates at $\alpha=-1$. The inverse problem is a strictly convex program for every $\alpha$, so every member is injective. The map is onto $\mathbb{R}^{d}$, $d=n(n-1)/2$, if and only if $\alpha\le0$, such that $\alpha=0$ defines the boundary for unrestricted parametrizations. For $\alpha&gt;0$ the image is bounded. The conditioning obeys the bound $\kappa(J_\alpha)\le\kappa(C)^{ 1-\alpha }$, where $\kappa(C)=\lambda_{\max}(C)/\lambda_{\min}(C)$, and on the surjective range the exponent is smallest at $\alpha=0$. Under…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.09790.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.09790.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-09T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-09T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Box-Cox Transformations of Correlation Matrices" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ilya Archakov, Peter Reinhard Hansen"},"dateModified":"2026-11-09T00:00:00+01:00","datePublished":"2026-11-09T00:00:00+01:00","description":"We consider Box-Cox transformations of correlation matrices, $\\Phi_\\alpha(C)=\\mathrm{vecl}{(C^{\\alpha}-I)/\\alpha}$, with Jacobian $J_\\alpha$. The family nests the raw correlations at $\\alpha=1$, the generalised Fisher transformation (GFT), $C\\mapsto\\mathrm{vecl}(\\log C)$, at $\\alpha=0$, and the negated off-diagonal concentration coordinates at $\\alpha=-1$. The inverse problem is a strictly convex program for every $\\alpha$, so every member is injective. The map is onto $\\mathbb{R}^{d}$, $d=n(n-1)/2$, if and only if $\\alpha\\le0$, such that $\\alpha=0$ defines the boundary for unrestricted parametrizations. For $\\alpha\u0026gt;0$ the image is bounded. The conditioning obeys the bound $\\kappa(J_\\alpha)\\le\\kappa(C)^{ 1-\\alpha }$, where $\\kappa(C)=\\lambda_{\\max}(C)/\\lambda_{\\min}(C)$, and on the surjective range the exponent is smallest at $\\alpha=0$. Under…","headline":"Box-Cox Transformations of Correlation Matrices","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.09790.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.09790.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Box-Cox Transformations of Correlation Matrices</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Ilya Archakov, Peter Reinhard Hansen
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      9 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces Box-Cox transformations of correlation matrices with explicit Jacobians and convex inverse properties.</div><h3>Abstract</h3>
+  <table>
+  <tbody>
+    <tr>
+      <td>We consider Box-Cox transformations of correlation matrices, $\Phi_\alpha(C)=\mathrm{vecl}{(C^{\alpha}-I)/\alpha}$, with Jacobian $J_\alpha$. The family nests the raw correlations at $\alpha=1$, the generalised Fisher transformation (GFT), $C\mapsto\mathrm{vecl}(\log C)$, at $\alpha=0$, and the negated off-diagonal concentration coordinates at $\alpha=-1$. The inverse problem is a strictly convex program for every $\alpha$, so every member is injective. The map is onto $\mathbb{R}^{d}$, $d=n(n-1)/2$, if and only if $\alpha\le0$, such that $\alpha=0$ defines the boundary for unrestricted parametrizations. For $\alpha&gt;0$ the image is bounded. The conditioning obeys the bound $\kappa(J_\alpha)\le\kappa(C)^{</td>
+      <td>1-\alpha</td>
+      <td>}$, where $\kappa(C)=\lambda_{\max}(C)/\lambda_{\min}(C)$, and on the surjective range the exponent is smallest at $\alpha=0$. Under Gaussian sampling with $n\geq3$, the asymptotic covariance of the transformed sample correlations is the identity at independence for every member, but only $\alpha=0$ retains the identity to first order in the correlations, whereas the leading joint third cumulant at independence vanishes only at $\alpha=1/3$. Finally, applying the transformation to the diagonal rescaling of $C$ that makes the result hollow adds a new family to the existing correlation parametrizations. For every $\alpha$ the rescaling solves a strictly convex problem and the inverse is explicit, and the scaled coordinates are unrestricted exactly when $\alpha=0$, where they recover the known global normal coordinates, centred at independence, for the efficient information metric of the correlations.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.09790" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.09790" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

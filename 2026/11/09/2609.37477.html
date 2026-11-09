@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Calibrated Order-Randomized Rosenblatt Tests</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Calibrated Order-Randomized Rosenblatt Tests" />
+<meta name="author" content="Mehrdad Pournaderi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We test whether a multivariate vector X conforms to a specified distribution F, as in copula modelling and density forecasting. The Rosenblatt transform reduces this to testing uniformity, but its arbitrary coordinate ordering affects power under dependence. We study order randomization: transforming under many random orderings and merging evidence with dependence-robust rules. Reordering only redistributes the Mahalanobis signal energy, so one ordering is a lucky or unlucky draw, and pooling raises calibrated power. We compare against two order-invariant baselines, the chi-squared energy test and the symmetric-root test. With F known, the e-value average over orderings is at least as powerful…" />
+<meta name="twitter:description" property="og:description" content="We test whether a multivariate vector X conforms to a specified distribution F, as in copula modelling and density forecasting. The Rosenblatt transform reduces this to testing uniformity, but its arbitrary coordinate ordering affects power under dependence. We study order randomization: transforming under many random orderings and merging evidence with dependence-robust rules. Reordering only redistributes the Mahalanobis signal energy, so one ordering is a lucky or unlucky draw, and pooling raises calibrated power. We compare against two order-invariant baselines, the chi-squared energy test and the symmetric-root test. With F known, the e-value average over orderings is at least as powerful…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2609.37477.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2609.37477.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-09T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-09T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Calibrated Order-Randomized Rosenblatt Tests" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mehrdad Pournaderi"},"dateModified":"2026-11-09T00:00:00+01:00","datePublished":"2026-11-09T00:00:00+01:00","description":"We test whether a multivariate vector X conforms to a specified distribution F, as in copula modelling and density forecasting. The Rosenblatt transform reduces this to testing uniformity, but its arbitrary coordinate ordering affects power under dependence. We study order randomization: transforming under many random orderings and merging evidence with dependence-robust rules. Reordering only redistributes the Mahalanobis signal energy, so one ordering is a lucky or unlucky draw, and pooling raises calibrated power. We compare against two order-invariant baselines, the chi-squared energy test and the symmetric-root test. With F known, the e-value average over orderings is at least as powerful…","headline":"Calibrated Order-Randomized Rosenblatt Tests","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2609.37477.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2609.37477.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Calibrated Order-Randomized Rosenblatt Tests</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Mehrdad Pournaderi
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      9 Nov 2026
+    </div>
+  </div><div class="summary-box">The paper introduces order‑randomized Rosenblatt tests that calibrate power for multivariate distribution conformity testing.</div><h3>Abstract</h3>
+  <p>We test whether a multivariate vector X conforms to a specified distribution F, as in copula modelling and density forecasting. The Rosenblatt transform reduces this to testing uniformity, but its arbitrary coordinate ordering affects power under dependence. We study order randomization: transforming under many random orderings and merging evidence with dependence-robust rules. Reordering only redistributes the Mahalanobis signal energy, so one ordering is a lucky or unlucky draw, and pooling raises calibrated power. We compare against two order-invariant baselines, the chi-squared energy test and the symmetric-root test. With F known, the e-value average over orderings is at least as powerful as the symmetric-root test in every setting we ran, and as the chi-squared test on concentrated and fully diffuse departures. With Gaussian mean and covariance estimated, the classical conditional probability integral transform keeps each ordering’s p-values exact and e-values valid, a parametric bootstrap calibrates the pooled tests, and the comparisons hold except for deficits of at most 0.02 against the symmetric-root test on single-coordinate departures. Validating a Gaussian risk model for nine currencies, the test flags Brexit, COVID and other episodes; it extends to any null with computable, simulable conditionals.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2609.37477" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2609.37477" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

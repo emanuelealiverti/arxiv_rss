@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Electoral Intelligence: A Neural Zero-Inflated Negative Binomial Model for Forecasting Swedish Municipal Elections</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Electoral Intelligence: A Neural Zero-Inflated Negative Binomial Model for Forecasting Swedish Municipal Elections" />
+<meta name="author" content="Haodong Qi, Stefano M. Iacus, Pieter Bevelander, Derek S. Hutcheson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Forecasting local elections is difficult because electoral competition is geographically heterogeneous, highly overdispersed, and characterized by many party-municipality combinations with little or no electoral activity. This article develops a bounded neural zero-inflated negative binomial (ZINB) model for forecasting party-level vote counts in Swedish municipal elections. The model combines a count component for expected votes, a zero-inflation component for structural electoral absence, municipality-specific dispersion, and learned embeddings capturing latent party, municipality, and party-municipality structure. Model training relies on data from the 2014, 2018, and 2022 Swedish municipal elections and performance is evaluated on a held-out set of municipalities. Testing results show…" />
+<meta name="twitter:description" property="og:description" content="Forecasting local elections is difficult because electoral competition is geographically heterogeneous, highly overdispersed, and characterized by many party-municipality combinations with little or no electoral activity. This article develops a bounded neural zero-inflated negative binomial (ZINB) model for forecasting party-level vote counts in Swedish municipal elections. The model combines a count component for expected votes, a zero-inflation component for structural electoral absence, municipality-specific dispersion, and learned embeddings capturing latent party, municipality, and party-municipality structure. Model training relies on data from the 2014, 2018, and 2022 Swedish municipal elections and performance is evaluated on a held-out set of municipalities. Testing results show…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.08501.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.08501.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-09T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-09T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Electoral Intelligence: A Neural Zero-Inflated Negative Binomial Model for Forecasting Swedish Municipal Elections" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Haodong Qi, Stefano M. Iacus, Pieter Bevelander, Derek S. Hutcheson"},"dateModified":"2026-11-09T00:00:00+01:00","datePublished":"2026-11-09T00:00:00+01:00","description":"Forecasting local elections is difficult because electoral competition is geographically heterogeneous, highly overdispersed, and characterized by many party-municipality combinations with little or no electoral activity. This article develops a bounded neural zero-inflated negative binomial (ZINB) model for forecasting party-level vote counts in Swedish municipal elections. The model combines a count component for expected votes, a zero-inflation component for structural electoral absence, municipality-specific dispersion, and learned embeddings capturing latent party, municipality, and party-municipality structure. Model training relies on data from the 2014, 2018, and 2022 Swedish municipal elections and performance is evaluated on a held-out set of municipalities. Testing results show…","headline":"Electoral Intelligence: A Neural Zero-Inflated Negative Binomial Model for Forecasting Swedish Municipal Elections","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.08501.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.08501.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Electoral Intelligence: A Neural Zero-Inflated Negative Binomial Model for Forecasting Swedish Municipal Elections</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Haodong Qi, Stefano M. Iacus, Pieter Bevelander, Derek S. Hutcheson
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      9 Nov 2026
+    </div>
+  </div><div class="summary-box">It introduces a bounded neural zero‑inflated negative binomial model with latent party‑municipality embeddings for election vote forecasting.</div><h3>Abstract</h3>
+  <p>Forecasting local elections is difficult because electoral competition is geographically heterogeneous, highly overdispersed, and characterized by many party-municipality combinations with little or no electoral activity. This article develops a bounded neural zero-inflated negative binomial (ZINB) model for forecasting party-level vote counts in Swedish municipal elections. The model combines a count component for expected votes, a zero-inflation component for structural electoral absence, municipality-specific dispersion, and learned embeddings capturing latent party, municipality, and party-municipality structure. Model training relies on data from the 2014, 2018, and 2022 Swedish municipal elections and performance is evaluated on a held-out set of municipalities. Testing results show strong predictive accuracy in both vote counts and vote shares. Explanatory diagnostics indicate that latent party structure, local party-municipality relationships, electoral persistence, organizational capacity, and candidate-electorate representational similarity are among the most important determinants of predictive performance. Following model evaluation and diagnostics, the selected specification is refit on all historical data and applied to generate forecasts for the 2026 municipal elections. The proposed framework provides a flexible approach for studying local electoral competition in multiparty systems characterized by heterogeneous party presence and substantial geographic variation.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.08501" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.08501" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

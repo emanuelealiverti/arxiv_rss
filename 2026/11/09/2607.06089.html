@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Closed-form fractional radial links for elliptical Mahalanobis discriminant analysis</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Closed-form fractional radial links for elliptical Mahalanobis discriminant analysis" />
+<meta name="author" content="Serhii Zabolotnii" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study binary classification when the two classes are elliptical with a shared radial generator $g$. The log-likelihood ratio is then an additive function of the two squared Mahalanobis radii, with radial link $\varphi=\log g$. For Gaussian classes $\varphi$ is affine and the rule reduces to quadratic discriminant analysis (QDA); otherwise the Bayes link is not the identity. Instead of fitting this link with a spline smoother, we derive its family from the within-class law of the radius and estimate a finite fractional-power projection. We prove that the link is identifiable from the radius law, that the plug-in estimator is…" />
+<meta name="twitter:description" property="og:description" content="We study binary classification when the two classes are elliptical with a shared radial generator $g$. The log-likelihood ratio is then an additive function of the two squared Mahalanobis radii, with radial link $\varphi=\log g$. For Gaussian classes $\varphi$ is affine and the rule reduces to quadratic discriminant analysis (QDA); otherwise the Bayes link is not the identity. Instead of fitting this link with a spline smoother, we derive its family from the within-class law of the radius and estimate a finite fractional-power projection. We prove that the link is identifiable from the radius law, that the plug-in estimator is…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2607.06089.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2607.06089.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-09T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-09T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Closed-form fractional radial links for elliptical Mahalanobis discriminant analysis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Serhii Zabolotnii"},"dateModified":"2026-11-09T00:00:00+01:00","datePublished":"2026-11-09T00:00:00+01:00","description":"We study binary classification when the two classes are elliptical with a shared radial generator $g$. The log-likelihood ratio is then an additive function of the two squared Mahalanobis radii, with radial link $\\varphi=\\log g$. For Gaussian classes $\\varphi$ is affine and the rule reduces to quadratic discriminant analysis (QDA); otherwise the Bayes link is not the identity. Instead of fitting this link with a spline smoother, we derive its family from the within-class law of the radius and estimate a finite fractional-power projection. We prove that the link is identifiable from the radius law, that the plug-in estimator is…","headline":"Closed-form fractional radial links for elliptical Mahalanobis discriminant analysis","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2607.06089.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2607.06089.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Closed-form fractional radial links for elliptical Mahalanobis discriminant analysis</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Serhii Zabolotnii
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML, stat.TH
+      <span class="sep">&middot;</span>
+      9 Nov 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>We study binary classification when the two classes are elliptical with a shared radial generator $g$. The log-likelihood ratio is then an additive function of the two squared Mahalanobis radii, with radial link $\varphi=\log g$. For Gaussian classes $\varphi$ is affine and the rule reduces to quadratic discriminant analysis (QDA); otherwise the Bayes link is not the identity. Instead of fitting this link with a spline smoother, we derive its family from the within-class law of the radius and estimate a finite fractional-power projection. We prove that the link is identifiable from the radius law, that the plug-in estimator is $\sqrt{n}$-consistent and asymptotically normal under finite-moment conditions, and that the induced classifier is asymptotically Bayes-optimal in an iterated sieve limit. For $d\ge2$ and non-nested class parameters, the identity link suffices only for affine (Gaussian) generators. The bridge, GAM membership and the affine direction of this dichotomy are verified in Lean 4. We compare against the global Mahalanobis-GAM of Ghosh et al. (2025), re-implemented with mgcv REML splines at equal input budget. On two UCI benchmarks the derived link ties with the fitted GAM. On six financial series from three asset classes, with validation that respects temporal dependence, it is never significantly worse than the fitted GAM: better on CAD/USD and tied on the other five. It beats QDA on the three heaviest-tailed series (oil $[+0.023,+0.069]$, S&amp;P 500 $[+0.039,+0.125]$, JPY/USD $[+0.009,+0.047]$) and ties elsewhere. A rate simulation with a closed-form ground truth reproduces the $\sqrt{n}$ rate and, under covariance heterogeneity, QDA’s risk floor against the derived link’s vanishing excess risk. The derived link thus matches a tuned GAM without smoothing-parameter selection and improves on QDA where the generator departs from the Gaussian.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2607.06089" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2607.06089" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

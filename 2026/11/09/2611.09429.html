@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Navigating Selection Bias in Genome-wide Association Studies (GWAS)</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Navigating Selection Bias in Genome-wide Association Studies (GWAS)" />
+<meta name="author" content="Ciarrah-Jane S Barry, Tahereh Gholipourshahraki, Zoltán Kutalik, Bjarni J Vilhjálmsson, Esben Agerbo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Selection bias arises when inclusion in a genetic study depends on traits, or causes of traits, that are associated with genotype. It is present in volunteer-based biobanks, case-control designs and studies of disease progression, and genome-wide association study (GWAS) summary statistics from affected samples can propagate this bias into post-GWAS analyses, such as polygenic scores (PGS), Mendelian randomization (MR) and genetic correlation analyses. Despite this broad potential impact, selection bias is sometimes ignored in genetic studies. Many methods exist to detect and correct it, but they rely on different assumptions and require specific data. We organise ten methods applicable to…" />
+<meta name="twitter:description" property="og:description" content="Selection bias arises when inclusion in a genetic study depends on traits, or causes of traits, that are associated with genotype. It is present in volunteer-based biobanks, case-control designs and studies of disease progression, and genome-wide association study (GWAS) summary statistics from affected samples can propagate this bias into post-GWAS analyses, such as polygenic scores (PGS), Mendelian randomization (MR) and genetic correlation analyses. Despite this broad potential impact, selection bias is sometimes ignored in genetic studies. Many methods exist to detect and correct it, but they rely on different assumptions and require specific data. We organise ten methods applicable to…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.09429.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.09429.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-09T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-09T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Navigating Selection Bias in Genome-wide Association Studies (GWAS)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ciarrah-Jane S Barry, Tahereh Gholipourshahraki, Zoltán Kutalik, Bjarni J Vilhjálmsson, Esben Agerbo"},"dateModified":"2026-11-09T00:00:00+01:00","datePublished":"2026-11-09T00:00:00+01:00","description":"Selection bias arises when inclusion in a genetic study depends on traits, or causes of traits, that are associated with genotype. It is present in volunteer-based biobanks, case-control designs and studies of disease progression, and genome-wide association study (GWAS) summary statistics from affected samples can propagate this bias into post-GWAS analyses, such as polygenic scores (PGS), Mendelian randomization (MR) and genetic correlation analyses. Despite this broad potential impact, selection bias is sometimes ignored in genetic studies. Many methods exist to detect and correct it, but they rely on different assumptions and require specific data. We organise ten methods applicable to…","headline":"Navigating Selection Bias in Genome-wide Association Studies (GWAS)","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.09429.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/09/2611.09429.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Navigating Selection Bias in Genome-wide Association Studies (GWAS)</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Ciarrah-Jane S Barry, Tahereh Gholipourshahraki, Zoltán Kutalik, Bjarni J Vilhjálmsson, Esben Agerbo
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      9 Nov 2026
+    </div>
+  </div><div class="summary-box">The paper organizes and compares ten selection bias methods for GWAS, providing implementations and recommendations.</div><h3>Abstract</h3>
+  <p>Selection bias arises when inclusion in a genetic study depends on traits, or causes of traits, that are associated with genotype. It is present in volunteer-based biobanks, case-control designs and studies of disease progression, and genome-wide association study (GWAS) summary statistics from affected samples can propagate this bias into post-GWAS analyses, such as polygenic scores (PGS), Mendelian randomization (MR) and genetic correlation analyses. Despite this broad potential impact, selection bias is sometimes ignored in genetic studies. Many methods exist to detect and correct it, but they rely on different assumptions and require specific data. We organise ten methods applicable to GWAS by the decisions an analyst faces: whether to diagnose or correct, which data are available (individual-level or summary-level), and which form of selection is operating (non-representative participation, case-control ascertainment, index events, sex-differential participation or survival to recruitment). For each method, we describe its principle and assumptions, and we compare methods addressing the same form of selection by their assumptions, data requirements and limitations. A companion GitHub repository implements nine methods in R, prepares input for the external SPREG software, and provides worked examples on simulated data with known true effects for each form of selection, one of which we present in full. An interactive tool supports method selection. We conclude with recommendations for bias-aware study design, sensitivity analysis and reporting.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.09429" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.09429" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
