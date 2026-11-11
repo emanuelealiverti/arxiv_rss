@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>BONuS: Multiple multivariate testing with a data-adaptive test statistic</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="BONuS: Multiple multivariate testing with a data-adaptive test statistic" />
+<meta name="author" content="Zhifei Li, Chiao-Yu Yang, Lihua Lei, Nhat Ho, William Fithian" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose a new adaptive empirical Bayes framework, the Bag-Of-Null-Statistics (BONuS) procedure, for multiple testing where each hypothesis testing problem is itself multivariate or nonparametric. BONuS is an adaptive and interactive knockoff-type method that helps improve the testing power while controlling the false discovery rate (FDR). The BONuS procedure is closely connected to many existing FDR-controlling methods, such as the counting knockoffs procedure and Benjamini-Hochberg procedure with conformal p-values. Contrary to procedures that start with a $p$-value for each hypothesis, BONuS analyzes the entire data set to adaptively estimate an optimal $p$-value transform based on an empirical Bayes model. Moreover,…" />
+<meta name="twitter:description" property="og:description" content="We propose a new adaptive empirical Bayes framework, the Bag-Of-Null-Statistics (BONuS) procedure, for multiple testing where each hypothesis testing problem is itself multivariate or nonparametric. BONuS is an adaptive and interactive knockoff-type method that helps improve the testing power while controlling the false discovery rate (FDR). The BONuS procedure is closely connected to many existing FDR-controlling methods, such as the counting knockoffs procedure and Benjamini-Hochberg procedure with conformal p-values. Contrary to procedures that start with a $p$-value for each hypothesis, BONuS analyzes the entire data set to adaptively estimate an optimal $p$-value transform based on an empirical Bayes model. Moreover,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/11/2106.15743.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/11/2106.15743.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-11T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-11T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="BONuS: Multiple multivariate testing with a data-adaptive test statistic" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zhifei Li, Chiao-Yu Yang, Lihua Lei, Nhat Ho, William Fithian"},"dateModified":"2026-11-11T00:00:00+01:00","datePublished":"2026-11-11T00:00:00+01:00","description":"We propose a new adaptive empirical Bayes framework, the Bag-Of-Null-Statistics (BONuS) procedure, for multiple testing where each hypothesis testing problem is itself multivariate or nonparametric. BONuS is an adaptive and interactive knockoff-type method that helps improve the testing power while controlling the false discovery rate (FDR). The BONuS procedure is closely connected to many existing FDR-controlling methods, such as the counting knockoffs procedure and Benjamini-Hochberg procedure with conformal p-values. Contrary to procedures that start with a $p$-value for each hypothesis, BONuS analyzes the entire data set to adaptively estimate an optimal $p$-value transform based on an empirical Bayes model. Moreover,…","headline":"BONuS: Multiple multivariate testing with a data-adaptive test statistic","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/11/2106.15743.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/11/2106.15743.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>BONuS: Multiple multivariate testing with a data-adaptive test statistic</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Zhifei Li, Chiao-Yu Yang, Lihua Lei, Nhat Ho, William Fithian
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      11 Nov 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>We propose a new adaptive empirical Bayes framework, the Bag-Of-Null-Statistics (BONuS) procedure, for multiple testing where each hypothesis testing problem is itself multivariate or nonparametric. BONuS is an adaptive and interactive knockoff-type method that helps improve the testing power while controlling the false discovery rate (FDR). The BONuS procedure is closely connected to many existing FDR-controlling methods, such as the counting knockoffs procedure and Benjamini-Hochberg procedure with conformal p-values. Contrary to procedures that start with a $p$-value for each hypothesis, BONuS analyzes the entire data set to adaptively estimate an optimal $p$-value transform based on an empirical Bayes model. Moreover, it can iteratively refine the model fit by peeling off synthetic null statistics to reduce noise in a highly adaptively way. Our method controls FDR in finite samples even if the empirical Bayes model is incorrect or the estimation is poor. An extension, the Double BONuS procedure, validates the empirical Bayes model to guard against power loss due to model misspecification. We demonstrate the power gain of BONuS procedure on multi-trait GWAS, asset pricing, and LLM evaluation.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2106.15743" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2106.15743" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

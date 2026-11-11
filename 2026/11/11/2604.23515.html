@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ragR: Retrieval-Augmented Generation and RAG Assessment in R</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="ragR: Retrieval-Augmented Generation and RAG Assessment in R" />
+<meta name="author" content="Muhammad Aimal Rehman, Zhili Lu, Seoyoung Kim, Chi-Kuang Yeh" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Retrieval-augmented generation (RAG) combines document retrieval with large language models (LLMs) to produce responses grounded in external evidence. While several R packages support core components of RAG workflows, integrated evaluation of RAG systems in R remains limited and is often conducted through Python-based tools, most notably the RAG assessment (RAGAS) framework. To address this gap, we introduce ragR, an R package that unifies document ingestion, embedding and vector storage, similarity-based retrieval, grounded generation, structured question-answer logging, and RAGAS-style evaluation within a single R-native workflow. Its evaluation module, ragR-RAGAS, uses an LLM as a judge to score four core RAGAS metrics:…" />
+<meta name="twitter:description" property="og:description" content="Retrieval-augmented generation (RAG) combines document retrieval with large language models (LLMs) to produce responses grounded in external evidence. While several R packages support core components of RAG workflows, integrated evaluation of RAG systems in R remains limited and is often conducted through Python-based tools, most notably the RAG assessment (RAGAS) framework. To address this gap, we introduce ragR, an R package that unifies document ingestion, embedding and vector storage, similarity-based retrieval, grounded generation, structured question-answer logging, and RAGAS-style evaluation within a single R-native workflow. Its evaluation module, ragR-RAGAS, uses an LLM as a judge to score four core RAGAS metrics:…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/11/2604.23515.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/11/2604.23515.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-11T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-11T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="ragR: Retrieval-Augmented Generation and RAG Assessment in R" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Muhammad Aimal Rehman, Zhili Lu, Seoyoung Kim, Chi-Kuang Yeh"},"dateModified":"2026-11-11T00:00:00+01:00","datePublished":"2026-11-11T00:00:00+01:00","description":"Retrieval-augmented generation (RAG) combines document retrieval with large language models (LLMs) to produce responses grounded in external evidence. While several R packages support core components of RAG workflows, integrated evaluation of RAG systems in R remains limited and is often conducted through Python-based tools, most notably the RAG assessment (RAGAS) framework. To address this gap, we introduce ragR, an R package that unifies document ingestion, embedding and vector storage, similarity-based retrieval, grounded generation, structured question-answer logging, and RAGAS-style evaluation within a single R-native workflow. Its evaluation module, ragR-RAGAS, uses an LLM as a judge to score four core RAGAS metrics:…","headline":"ragR: Retrieval-Augmented Generation and RAG Assessment in R","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/11/2604.23515.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/11/2604.23515.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>ragR: Retrieval-Augmented Generation and RAG Assessment in R</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Muhammad Aimal Rehman, Zhili Lu, Seoyoung Kim, Chi-Kuang Yeh
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      11 Nov 2026
+    </div>
+  </div><div class="summary-box">ragR provides an R workflow for document retrieval, generation, and RAG evaluation using LLM judges.</div><h3>Abstract</h3>
+  <p>Retrieval-augmented generation (RAG) combines document retrieval with large language models (LLMs) to produce responses grounded in external evidence. While several R packages support core components of RAG workflows, integrated evaluation of RAG systems in R remains limited and is often conducted through Python-based tools, most notably the RAG assessment (RAGAS) framework. To address this gap, we introduce ragR, an R package that unifies document ingestion, embedding and vector storage, similarity-based retrieval, grounded generation, structured question-answer logging, and RAGAS-style evaluation within a single R-native workflow. Its evaluation module, ragR-RAGAS, uses an LLM as a judge to score four core RAGAS metrics: context precision, context recall, faithfulness, and answer relevance. To assess the credibility of these automated judgments, we compared ragR-RAGAS with two independent human annotators on three document collections. The human annotators demonstrated consistently high agreement, and ragR-RAGAS generally aligned with their judgments, although discrepancies were more pronounced for context precision and the identification of unsupported statements. By integrating RAG construction and evaluation within a reproducible workflow in R, ragR provides a practical framework for research, teaching, and moderate-scale experimentation on RAG systems entirely within the R ecosystem.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2604.23515" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2604.23515" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
