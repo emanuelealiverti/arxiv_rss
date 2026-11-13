@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A market-initialised accelerated failure time model for in-play football forecasting</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A market-initialised accelerated failure time model for in-play football forecasting" />
+<meta name="author" content="Lawrence Clegg, Zixing Song, John Cartlidge" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In-play football forecasting models are rarely compared with betting exchange prices, which aggregate information from many market participants. We make this comparison for several goal-arrival models, focusing on a Weibull accelerated failure time model with two extensions: initialising team strength parameters from Betfair Exchange prices at kick-off to capture pre-match market information, and including cumulative shots as a time-varying covariate to capture in-play information. The initialisation, which fits team-strength parameters to 1X2 and over/under prices by squared-error minimisation, applies to any intensity-based goal arrival model. Evaluated across 280 English Premier League matches at minute intervals, the market-initialised model remains measurably…" />
+<meta name="twitter:description" property="og:description" content="In-play football forecasting models are rarely compared with betting exchange prices, which aggregate information from many market participants. We make this comparison for several goal-arrival models, focusing on a Weibull accelerated failure time model with two extensions: initialising team strength parameters from Betfair Exchange prices at kick-off to capture pre-match market information, and including cumulative shots as a time-varying covariate to capture in-play information. The initialisation, which fits team-strength parameters to 1X2 and over/under prices by squared-error minimisation, applies to any intensity-based goal arrival model. Evaluated across 280 English Premier League matches at minute intervals, the market-initialised model remains measurably…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2605.16066.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2605.16066.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-13T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-13T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A market-initialised accelerated failure time model for in-play football forecasting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lawrence Clegg, Zixing Song, John Cartlidge"},"dateModified":"2026-11-13T00:00:00+01:00","datePublished":"2026-11-13T00:00:00+01:00","description":"In-play football forecasting models are rarely compared with betting exchange prices, which aggregate information from many market participants. We make this comparison for several goal-arrival models, focusing on a Weibull accelerated failure time model with two extensions: initialising team strength parameters from Betfair Exchange prices at kick-off to capture pre-match market information, and including cumulative shots as a time-varying covariate to capture in-play information. The initialisation, which fits team-strength parameters to 1X2 and over/under prices by squared-error minimisation, applies to any intensity-based goal arrival model. Evaluated across 280 English Premier League matches at minute intervals, the market-initialised model remains measurably…","headline":"A market-initialised accelerated failure time model for in-play football forecasting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2605.16066.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2605.16066.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A market-initialised accelerated failure time model for in-play football forecasting</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Lawrence Clegg, Zixing Song, John Cartlidge
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      13 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces a Weibull AFT model for football goals, initialising team strengths from betting odds and adding shot covariates.</div><h3>Abstract</h3>
+  <p>In-play football forecasting models are rarely compared with betting exchange prices, which aggregate information from many market participants. We make this comparison for several goal-arrival models, focusing on a Weibull accelerated failure time model with two extensions: initialising team strength parameters from Betfair Exchange prices at kick-off to capture pre-match market information, and including cumulative shots as a time-varying covariate to capture in-play information. The initialisation, which fits team-strength parameters to 1X2 and over/under prices by squared-error minimisation, applies to any intensity-based goal arrival model. Evaluated across 280 English Premier League matches at minute intervals, the market-initialised model remains measurably weaker than Betfair in-play prices (classification accuracy 68.5% versus 69.5%, ranked probability score 0.1325 versus 0.1281), but retains interpretable team-level parameters and covariate effects. A comparison with a market-implied Poisson model, a Cox process and a Bayesian birth process, all initialised from the same pre-match odds, confirms that market initialisation is the dominant driver of predictive accuracy. A betting simulation against Betfair in-play odds yields a 1.0% return on investment over 37,467 bets (95% interval -3.8% to 5.9%), which we regard as preliminary given the limited sample of matches and prices that may not have been executable.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.16066" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.16066" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

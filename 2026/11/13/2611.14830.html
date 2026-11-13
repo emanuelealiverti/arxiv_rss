@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Geometric Perspective for Marginal R2: Estimation and Inference in Generalized Linear Mixed Models</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Geometric Perspective for Marginal R2: Estimation and Inference in Generalized Linear Mixed Models" />
+<meta name="author" content="Hao Qin, Ayumi Mizuno, Kyle Morrison, Allison K. White, Shinichi Nakagawa" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Generalized linear mixed models (GLMMs) are widely used across scientific disciplines, yet quantifying response variation explained by auxiliary information remains challenging for non-Gaussian outcomes and hierarchical dependence. Existing $R^2$ measures provide useful summaries, but their variance-based constructions are not generally linked to a common geometric interpretation, a fixed-design marginal estimand, and corresponding statistical inference. We propose marginal quasi-$R^2$ through two distinct operations. First, marginalization integrates over latent random effects, retaining their uncertainty in the marginal response moments and specifying the model for explanatory assessment. Second, a Quasi-GLM formulation supplies a local working information metric under which orthogonal projection yields an…" />
+<meta name="twitter:description" property="og:description" content="Generalized linear mixed models (GLMMs) are widely used across scientific disciplines, yet quantifying response variation explained by auxiliary information remains challenging for non-Gaussian outcomes and hierarchical dependence. Existing $R^2$ measures provide useful summaries, but their variance-based constructions are not generally linked to a common geometric interpretation, a fixed-design marginal estimand, and corresponding statistical inference. We propose marginal quasi-$R^2$ through two distinct operations. First, marginalization integrates over latent random effects, retaining their uncertainty in the marginal response moments and specifying the model for explanatory assessment. Second, a Quasi-GLM formulation supplies a local working information metric under which orthogonal projection yields an…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14830.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14830.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-13T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-13T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Geometric Perspective for Marginal R2: Estimation and Inference in Generalized Linear Mixed Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hao Qin, Ayumi Mizuno, Kyle Morrison, Allison K. White, Shinichi Nakagawa"},"dateModified":"2026-11-13T00:00:00+01:00","datePublished":"2026-11-13T00:00:00+01:00","description":"Generalized linear mixed models (GLMMs) are widely used across scientific disciplines, yet quantifying response variation explained by auxiliary information remains challenging for non-Gaussian outcomes and hierarchical dependence. Existing $R^2$ measures provide useful summaries, but their variance-based constructions are not generally linked to a common geometric interpretation, a fixed-design marginal estimand, and corresponding statistical inference. We propose marginal quasi-$R^2$ through two distinct operations. First, marginalization integrates over latent random effects, retaining their uncertainty in the marginal response moments and specifying the model for explanatory assessment. Second, a Quasi-GLM formulation supplies a local working information metric under which orthogonal projection yields an…","headline":"A Geometric Perspective for Marginal R2: Estimation and Inference in Generalized Linear Mixed Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14830.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14830.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Geometric Perspective for Marginal R2: Estimation and Inference in Generalized Linear Mixed Models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Hao Qin, Ayumi Mizuno, Kyle Morrison, Allison K. White, Shinichi Nakagawa
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      13 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces marginal quasi‑R² for GLMMs with geometric interpretation, theoretical properties, and cluster‑robust inference.</div><h3>Abstract</h3>
+  <p>Generalized linear mixed models (GLMMs) are widely used across scientific disciplines, yet quantifying response variation explained by auxiliary information remains challenging for non-Gaussian outcomes and hierarchical dependence. Existing $R^2$ measures provide useful summaries, but their variance-based constructions are not generally linked to a common geometric interpretation, a fixed-design marginal estimand, and corresponding statistical inference. We propose marginal quasi-$R^2$ through two distinct operations. First, marginalization integrates over latent random effects, retaining their uncertainty in the marginal response moments and specifying the model for explanatory assessment. Second, a Quasi-GLM formulation supplies a local working information metric under which orthogonal projection yields an Pythagorean decomposition of explained and unexplained variation. We define a fixed-design population estimand, establish consistency and asymptotic normality of its estimator, and derive cluster-robust sandwich standard errors and confidence intervals under stated regularity conditions. Simulations assess estimation accuracy and interval coverage across response families and random-effects structures. Two ecological applications illustrate the importance of reporting estimation uncertainty alongside marginal quasi-$R^2$. The method is implemented in the R package quasiR2.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.14830" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.14830" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

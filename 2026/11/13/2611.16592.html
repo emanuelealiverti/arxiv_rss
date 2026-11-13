@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Flexible nonlinear spatial autoregressive models under spatial confounding: a gradient boosting approach with closed-form estimation</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Flexible nonlinear spatial autoregressive models under spatial confounding: a gradient boosting approach with closed-form estimation" />
+<meta name="author" content="Ghislain Geniaux" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper develops a boosting-based framework for estimating nonlinear spatial autoregressive models (SAR and SEM). Functional gradient descent boosting with spline base learners provides automatic selection of covariates and functional forms, while the spatial parameter is estimated by an extension of the closed-form, determinant-free estimator (CFE) of Smirnov (2020): we show that it remains consistent, with the same asymptotic variance formula, for any additive estimator admitting a smoothing-matrix representation, and we prove that the underlying quasi-score is Neyman-orthogonal to the nonlinear nuisance, which makes the flexible, regularized first stage safe. This flexibility, however, exposes the estimator to a spatial confounding…" />
+<meta name="twitter:description" property="og:description" content="This paper develops a boosting-based framework for estimating nonlinear spatial autoregressive models (SAR and SEM). Functional gradient descent boosting with spline base learners provides automatic selection of covariates and functional forms, while the spatial parameter is estimated by an extension of the closed-form, determinant-free estimator (CFE) of Smirnov (2020): we show that it remains consistent, with the same asymptotic variance formula, for any additive estimator admitting a smoothing-matrix representation, and we prove that the underlying quasi-score is Neyman-orthogonal to the nonlinear nuisance, which makes the flexible, regularized first stage safe. This flexibility, however, exposes the estimator to a spatial confounding…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.16592.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.16592.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-13T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-13T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Flexible nonlinear spatial autoregressive models under spatial confounding: a gradient boosting approach with closed-form estimation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ghislain Geniaux"},"dateModified":"2026-11-13T00:00:00+01:00","datePublished":"2026-11-13T00:00:00+01:00","description":"This paper develops a boosting-based framework for estimating nonlinear spatial autoregressive models (SAR and SEM). Functional gradient descent boosting with spline base learners provides automatic selection of covariates and functional forms, while the spatial parameter is estimated by an extension of the closed-form, determinant-free estimator (CFE) of Smirnov (2020): we show that it remains consistent, with the same asymptotic variance formula, for any additive estimator admitting a smoothing-matrix representation, and we prove that the underlying quasi-score is Neyman-orthogonal to the nonlinear nuisance, which makes the flexible, regularized first stage safe. This flexibility, however, exposes the estimator to a spatial confounding…","headline":"Flexible nonlinear spatial autoregressive models under spatial confounding: a gradient boosting approach with closed-form estimation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.16592.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.16592.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Flexible nonlinear spatial autoregressive models under spatial confounding: a gradient boosting approach with closed-form estimation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Ghislain Geniaux
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      13 Nov 2026
+    </div>
+  </div><div class="summary-box">The paper introduces a gradient boosting framework with closed-form spatial AR estimation to handle nonlinear spatial models and confounding.</div><h3>Abstract</h3>
+  <p>This paper develops a boosting-based framework for estimating nonlinear spatial autoregressive models (SAR and SEM). Functional gradient descent boosting with spline base learners provides automatic selection of covariates and functional forms, while the spatial parameter is estimated by an extension of the closed-form, determinant-free estimator (CFE) of Smirnov (2020): we show that it remains consistent, with the same asymptotic variance formula, for any additive estimator admitting a smoothing-matrix representation, and we prove that the underlying quasi-score is Neyman-orthogonal to the nonlinear nuisance, which makes the flexible, regularized first stage safe. This flexibility, however, exposes the estimator to a spatial confounding problem that must be solved for the framework to deliver structural estimates. The geoadditive smooth of the coordinates, s(u, v), a default ingredient of flexible spatial specifications, competes with the autoregressive term for the same low-frequency spatial variation, and purely predictive tuning resolves the competition in favour of the surface, biasing the spatial parameter -the geoadditive trap. We therefore equip the estimator with targeted safeguards: a spectral identification diagnostic, a spectral penalty on the surface, spatial cross-fitting, stopping iterations selected by spatial cross-validation, and heteroskedasticity-and spatial-correlation-robust sandwich variances. Monte Carlo experiments, including a factorial design that generates the trap, show that the safeguarded estimators restore test size and confidence-interval coverage while matching maximum likelihood accuracy at a fraction of its computational cost. An empirical application to the Lucas County, Ohio, housing market illustrates the workflow.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.16592" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.16592" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

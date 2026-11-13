@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Estimation and Inference for Multiplicative Error Models via Analytical Derivatives</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Estimation and Inference for Multiplicative Error Models via Analytical Derivatives" />
+<meta name="author" content="Luca Scaffidi Domianello" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Maximum Likelihood Estimates (MLEs) of the parameters of a Multiplicative Error Model are typically computed through a standard gradient method, an iterative procedure usually based on numerical approximations to derivatives of the log-likelihood function, owing to the complexity of the analytical derivatives, which involve recursive terms. Building on previous work developed mainly in the GARCH framework, we derive analytical expressions for the score vector and the Hessian matrix of the Multiplicative Error Model log-likelihood by adopting the Gamma distribution for estimation purposes. Then, we illustrate how the iterative algorithm based on the analytical derivatives should be computationally implemented. After maximizing…" />
+<meta name="twitter:description" property="og:description" content="Maximum Likelihood Estimates (MLEs) of the parameters of a Multiplicative Error Model are typically computed through a standard gradient method, an iterative procedure usually based on numerical approximations to derivatives of the log-likelihood function, owing to the complexity of the analytical derivatives, which involve recursive terms. Building on previous work developed mainly in the GARCH framework, we derive analytical expressions for the score vector and the Hessian matrix of the Multiplicative Error Model log-likelihood by adopting the Gamma distribution for estimation purposes. Then, we illustrate how the iterative algorithm based on the analytical derivatives should be computationally implemented. After maximizing…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.16577.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.16577.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-13T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-13T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Estimation and Inference for Multiplicative Error Models via Analytical Derivatives" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Luca Scaffidi Domianello"},"dateModified":"2026-11-13T00:00:00+01:00","datePublished":"2026-11-13T00:00:00+01:00","description":"Maximum Likelihood Estimates (MLEs) of the parameters of a Multiplicative Error Model are typically computed through a standard gradient method, an iterative procedure usually based on numerical approximations to derivatives of the log-likelihood function, owing to the complexity of the analytical derivatives, which involve recursive terms. Building on previous work developed mainly in the GARCH framework, we derive analytical expressions for the score vector and the Hessian matrix of the Multiplicative Error Model log-likelihood by adopting the Gamma distribution for estimation purposes. Then, we illustrate how the iterative algorithm based on the analytical derivatives should be computationally implemented. After maximizing…","headline":"Estimation and Inference for Multiplicative Error Models via Analytical Derivatives","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.16577.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.16577.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Estimation and Inference for Multiplicative Error Models via Analytical Derivatives</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Luca Scaffidi Domianello
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      13 Nov 2026
+    </div>
+  </div><div class="summary-box">Derives analytical score and Hessian for multiplicative error model log-likelihood and provides robust covariance estimators.</div><h3>Abstract</h3>
+  <p>Maximum Likelihood Estimates (MLEs) of the parameters of a Multiplicative Error Model are typically computed through a standard gradient method, an iterative procedure usually based on numerical approximations to derivatives of the log-likelihood function, owing to the complexity of the analytical derivatives, which involve recursive terms. Building on previous work developed mainly in the GARCH framework, we derive analytical expressions for the score vector and the Hessian matrix of the Multiplicative Error Model log-likelihood by adopting the Gamma distribution for estimation purposes. Then, we illustrate how the iterative algorithm based on the analytical derivatives should be computationally implemented. After maximizing the log-likelihood, we also provide explicit formulas for several estimators of the asymptotic covariance matrix of the MLE. Additionally, we provide analytic formulas for robust covariance estimators that remain valid under distributional misspecification, which are also referred to as the asymptotic variance of the Quasi-Maximum Likelihood Estimator. We also propose a covariance estimator that is consistent under general forms of heteroskedasticity of the error term, while the usually adopted estimators rely on a specific variance assumption. The finite-sample performance of the covariance estimators is assessed through a Monte Carlo investigation. An application on real data completes the analysis.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.16577" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.16577" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

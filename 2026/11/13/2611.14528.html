@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Goal-Oriented Bayesian Experimental Design to Reduce Uncertainty in Sparse-Angle X-ray Computed Tomography</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Goal-Oriented Bayesian Experimental Design to Reduce Uncertainty in Sparse-Angle X-ray Computed Tomography" />
+<meta name="author" content="Mansoure Giahi Sabour, Hassan Yazdanian, Babak Maboudi Afkham" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sparse-angle X-ray computed tomography (CT) presents a challenge for reliable inference, as limited measurements may leave object boundaries unresolved. Bayesian optimal experimental design (BOED) methods select informative measurements, but can be computationally expensive or require data-driven surrogates and do not explicitly exploit microlocal visibility. We address this limitation by focusing on estimating inclusion boundaries rather than the entire attenuation field. For piecewise-constant objects, these boundaries correspond to singularities characterized by their wavefront sets. Microlocal analysis determines the X-ray view-angles at which these singularities are visible. We combine this information with Bayesian uncertainty quantification to introduce B-MUSE, a microlocal uncertainty-driven sequential…" />
+<meta name="twitter:description" property="og:description" content="Sparse-angle X-ray computed tomography (CT) presents a challenge for reliable inference, as limited measurements may leave object boundaries unresolved. Bayesian optimal experimental design (BOED) methods select informative measurements, but can be computationally expensive or require data-driven surrogates and do not explicitly exploit microlocal visibility. We address this limitation by focusing on estimating inclusion boundaries rather than the entire attenuation field. For piecewise-constant objects, these boundaries correspond to singularities characterized by their wavefront sets. Microlocal analysis determines the X-ray view-angles at which these singularities are visible. We combine this information with Bayesian uncertainty quantification to introduce B-MUSE, a microlocal uncertainty-driven sequential…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14528.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14528.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-13T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-13T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Goal-Oriented Bayesian Experimental Design to Reduce Uncertainty in Sparse-Angle X-ray Computed Tomography" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mansoure Giahi Sabour, Hassan Yazdanian, Babak Maboudi Afkham"},"dateModified":"2026-11-13T00:00:00+01:00","datePublished":"2026-11-13T00:00:00+01:00","description":"Sparse-angle X-ray computed tomography (CT) presents a challenge for reliable inference, as limited measurements may leave object boundaries unresolved. Bayesian optimal experimental design (BOED) methods select informative measurements, but can be computationally expensive or require data-driven surrogates and do not explicitly exploit microlocal visibility. We address this limitation by focusing on estimating inclusion boundaries rather than the entire attenuation field. For piecewise-constant objects, these boundaries correspond to singularities characterized by their wavefront sets. Microlocal analysis determines the X-ray view-angles at which these singularities are visible. We combine this information with Bayesian uncertainty quantification to introduce B-MUSE, a microlocal uncertainty-driven sequential…","headline":"A Goal-Oriented Bayesian Experimental Design to Reduce Uncertainty in Sparse-Angle X-ray Computed Tomography","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14528.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14528.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Goal-Oriented Bayesian Experimental Design to Reduce Uncertainty in Sparse-Angle X-ray Computed Tomography</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Mansoure Giahi Sabour, Hassan Yazdanian, Babak Maboudi Afkham
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      13 Nov 2026
+    </div>
+  </div><div class="summary-box">B-MUSE sequentially selects X-ray view angles to minimize posterior uncertainty in sparse-angle CT boundary estimation using microlocal analysis.</div><h3>Abstract</h3>
+  <p>Sparse-angle X-ray computed tomography (CT) presents a challenge for reliable inference, as limited measurements may leave object boundaries unresolved. Bayesian optimal experimental design (BOED) methods select informative measurements, but can be computationally expensive or require data-driven surrogates and do not explicitly exploit microlocal visibility. We address this limitation by focusing on estimating inclusion boundaries rather than the entire attenuation field. For piecewise-constant objects, these boundaries correspond to singularities characterized by their wavefront sets. Microlocal analysis determines the X-ray view-angles at which these singularities are visible. We combine this information with Bayesian uncertainty quantification to introduce B-MUSE, a microlocal uncertainty-driven sequential experimental design method. We define a microlocal C-optimality criterion associated with the wavefront direction of the most uncertain boundary singularity and prove that its optimal solution satisfies the microlocal visibility condition. B-MUSE uses this result to sequentially select informative view-angles according to boundary uncertainty. It also incorporates an adaptive stopping criterion that terminates acquisition when additional measurements provide no meaningful uncertainty reduction. We evaluate B-MUSE through numerical experiments, including interpretable examples, prior-generated inclusions, and a multi-inclusion example from an external dataset, and benchmark it against recent methods. The results show that B-MUSE substantially reduces posterior uncertainty with few adaptively selected measurements while providing boundary estimates. These findings establish a direct connection between BOED and microlocal visibility and demonstrate the potential of uncertainty-driven acquisition to reduce measurement requirements for goal-oriented X-ray CT without training data.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.14528" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.14528" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

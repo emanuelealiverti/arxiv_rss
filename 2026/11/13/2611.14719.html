@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Martingale posteriors for flexible regression via recursive least squares</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Martingale posteriors for flexible regression via recursive least squares" />
+<meta name="author" content="Davide Agnoletto, Tommaso Rigon, David B. Dunson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Predictive Bayes quantifies uncertainty by specifying a sequence of one-step-ahead predictive distributions, inducing a martingale posterior without an explicit prior. Existing parametric constructions rely on stochastic-gradient updates and have seen limited development for flexible regression. We propose a predictive Bayes framework based on recursive least squares, whose martingale posterior has an explicit representation: given future covariates, it is the law of the posterior mean plus a weighted series of independent draws from the standardized predictive distribution. The posterior mean is a penalized least squares estimator, available in closed form and invariant to data ordering, whereas the predictive distribution, for example…" />
+<meta name="twitter:description" property="og:description" content="Predictive Bayes quantifies uncertainty by specifying a sequence of one-step-ahead predictive distributions, inducing a martingale posterior without an explicit prior. Existing parametric constructions rely on stochastic-gradient updates and have seen limited development for flexible regression. We propose a predictive Bayes framework based on recursive least squares, whose martingale posterior has an explicit representation: given future covariates, it is the law of the posterior mean plus a weighted series of independent draws from the standardized predictive distribution. The posterior mean is a penalized least squares estimator, available in closed form and invariant to data ordering, whereas the predictive distribution, for example…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14719.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14719.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-13T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-13T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Martingale posteriors for flexible regression via recursive least squares" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Davide Agnoletto, Tommaso Rigon, David B. Dunson"},"dateModified":"2026-11-13T00:00:00+01:00","datePublished":"2026-11-13T00:00:00+01:00","description":"Predictive Bayes quantifies uncertainty by specifying a sequence of one-step-ahead predictive distributions, inducing a martingale posterior without an explicit prior. Existing parametric constructions rely on stochastic-gradient updates and have seen limited development for flexible regression. We propose a predictive Bayes framework based on recursive least squares, whose martingale posterior has an explicit representation: given future covariates, it is the law of the posterior mean plus a weighted series of independent draws from the standardized predictive distribution. The posterior mean is a penalized least squares estimator, available in closed form and invariant to data ordering, whereas the predictive distribution, for example…","headline":"Martingale posteriors for flexible regression via recursive least squares","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14719.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14719.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Martingale posteriors for flexible regression via recursive least squares</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Davide Agnoletto, Tommaso Rigon, David B. Dunson
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      13 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces a predictive Bayes recursive least squares framework yielding a closed‑form martingale posterior for flexible regression.</div><h3>Abstract</h3>
+  <p>Predictive Bayes quantifies uncertainty by specifying a sequence of one-step-ahead predictive distributions, inducing a martingale posterior without an explicit prior. Existing parametric constructions rely on stochastic-gradient updates and have seen limited development for flexible regression. We propose a predictive Bayes framework based on recursive least squares, whose martingale posterior has an explicit representation: given future covariates, it is the law of the posterior mean plus a weighted series of independent draws from the standardized predictive distribution. The posterior mean is a penalized least squares estimator, available in closed form and invariant to data ordering, whereas the predictive distribution, for example heavy tailed, is chosen separately without changing the estimator or algorithm. We derive the exact posterior variance under a known design and an asymptotically Gaussian approximation, and obtain the martingale posterior in closed form for Gaussian predictive distributions. Posterior draws are independent by construction, with a known truncation error, and require no Markov chain Monte Carlo. The construction extends to additive, mixed and Gaussian process models. In simulations and an analysis of NHANES triglyceride data, the method attains accuracy comparable to that of a fully Bayesian model with the same response distribution at a fraction of its computational cost.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.14719" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.14719" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

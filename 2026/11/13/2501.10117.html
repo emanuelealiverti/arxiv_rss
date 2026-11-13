@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Prediction Sets and Conformal Inference with Interval Outcomes</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Prediction Sets and Conformal Inference with Interval Outcomes" />
+<meta name="author" content="Weiguang Liu, Áureo de Paula, Elie Tamer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Given data on a random variable $Y$, a prediction set with miscoverage level $\alpha \in (0,1)$ is a set that contains a new draw of $Y$ with probability at least $1-\alpha$. Among all prediction sets satisfying this coverage property, the oracle prediction set is the one with minimal volume. The oracle prediction set offers a complementary view of the distribution of $Y$, beyond point estimators such as the mean and quantiles, and has attracted considerable interest recently. This paper develops methods for estimating such prediction sets conditional on observed covariates when $Y$ censored or interval-valued. We characterise the oracle prediction…" />
+<meta name="twitter:description" property="og:description" content="Given data on a random variable $Y$, a prediction set with miscoverage level $\alpha \in (0,1)$ is a set that contains a new draw of $Y$ with probability at least $1-\alpha$. Among all prediction sets satisfying this coverage property, the oracle prediction set is the one with minimal volume. The oracle prediction set offers a complementary view of the distribution of $Y$, beyond point estimators such as the mean and quantiles, and has attracted considerable interest recently. This paper develops methods for estimating such prediction sets conditional on observed covariates when $Y$ censored or interval-valued. We characterise the oracle prediction…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2501.10117.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2501.10117.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-13T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-13T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Prediction Sets and Conformal Inference with Interval Outcomes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Weiguang Liu, Áureo de Paula, Elie Tamer"},"dateModified":"2026-11-13T00:00:00+01:00","datePublished":"2026-11-13T00:00:00+01:00","description":"Given data on a random variable $Y$, a prediction set with miscoverage level $\\alpha \\in (0,1)$ is a set that contains a new draw of $Y$ with probability at least $1-\\alpha$. Among all prediction sets satisfying this coverage property, the oracle prediction set is the one with minimal volume. The oracle prediction set offers a complementary view of the distribution of $Y$, beyond point estimators such as the mean and quantiles, and has attracted considerable interest recently. This paper develops methods for estimating such prediction sets conditional on observed covariates when $Y$ censored or interval-valued. We characterise the oracle prediction…","headline":"Prediction Sets and Conformal Inference with Interval Outcomes","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2501.10117.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2501.10117.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Prediction Sets and Conformal Inference with Interval Outcomes</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Weiguang Liu, Áureo de Paula, Elie Tamer
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      13 Nov 2026
+    </div>
+  </div><div class="summary-box">The paper proposes conformal methods to construct valid prediction intervals and sets for interval‑censored or interval‑valued outcomes.</div><h3>Abstract</h3>
+  <p>Given data on a random variable $Y$, a prediction set with miscoverage level $\alpha \in (0,1)$ is a set that contains a new draw of $Y$ with probability at least $1-\alpha$. Among all prediction sets satisfying this coverage property, the oracle prediction set is the one with minimal volume. The oracle prediction set offers a complementary view of the distribution of $Y$, beyond point estimators such as the mean and quantiles, and has attracted considerable interest recently. This paper develops methods for estimating such prediction sets conditional on observed covariates when $Y$ censored or interval-valued. We characterise the oracle prediction set under partial identification induced by interval censoring and propose consistent estimators for both oracle prediction intervals and more general oracle prediction sets consisting of multiple disjoint intervals. In addition, we apply conformal inference to construct finite-sample valid prediction sets for interval outcomes that remain consistent as the sample size grows, using a conformity score tailored to interval data. The proposed procedure accounts for irreducible prediction uncertainty due to the stochastic nature of outcomes, modelling uncertainty arising from partial identification, and sampling uncertainty that vanishes as sample size increases. We conduct Monte Carlo simulations and two empirical applications using UK job postings data and the US Current Population Survey. The results demonstrate the robustness and efficiency of the proposed methods.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2501.10117" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2501.10117" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

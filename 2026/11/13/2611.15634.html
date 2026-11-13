@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sampling the Funnel: A Comprehensive Survey of Hamiltonian Monte Carlo for Hierarchical Bayesian Inference</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Sampling the Funnel: A Comprehensive Survey of Hamiltonian Monte Carlo for Hierarchical Bayesian Inference" />
+<meta name="author" content="Miguel Fernandez-de-Retana, Aitor Almeida" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hierarchical models are central to applied Bayesian statistics, yet the variance structures they depend on can produce posterior geometries that remain difficult to explore even with Hamiltonian Monte Carlo (HMC), a designation now covering a large and increasingly heterogeneous family of algorithms. This survey uses Generalized HMC as an organizing framework to describe the many variants of HMC, their methodological and computational properties, and their empirical consequences. Varying the trajectory length, the degree of momentum refreshment, and the presence of a Metropolis correction recovers several familiar Hamiltonian and Langevin samplers as special cases. Three further, largely independent directions account for…" />
+<meta name="twitter:description" property="og:description" content="Hierarchical models are central to applied Bayesian statistics, yet the variance structures they depend on can produce posterior geometries that remain difficult to explore even with Hamiltonian Monte Carlo (HMC), a designation now covering a large and increasingly heterogeneous family of algorithms. This survey uses Generalized HMC as an organizing framework to describe the many variants of HMC, their methodological and computational properties, and their empirical consequences. Varying the trajectory length, the degree of momentum refreshment, and the presence of a Metropolis correction recovers several familiar Hamiltonian and Langevin samplers as special cases. Three further, largely independent directions account for…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.15634.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.15634.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-13T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-13T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sampling the Funnel: A Comprehensive Survey of Hamiltonian Monte Carlo for Hierarchical Bayesian Inference" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Miguel Fernandez-de-Retana, Aitor Almeida"},"dateModified":"2026-11-13T00:00:00+01:00","datePublished":"2026-11-13T00:00:00+01:00","description":"Hierarchical models are central to applied Bayesian statistics, yet the variance structures they depend on can produce posterior geometries that remain difficult to explore even with Hamiltonian Monte Carlo (HMC), a designation now covering a large and increasingly heterogeneous family of algorithms. This survey uses Generalized HMC as an organizing framework to describe the many variants of HMC, their methodological and computational properties, and their empirical consequences. Varying the trajectory length, the degree of momentum refreshment, and the presence of a Metropolis correction recovers several familiar Hamiltonian and Langevin samplers as special cases. Three further, largely independent directions account for…","headline":"Sampling the Funnel: A Comprehensive Survey of Hamiltonian Monte Carlo for Hierarchical Bayesian Inference","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.15634.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.15634.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Sampling the Funnel: A Comprehensive Survey of Hamiltonian Monte Carlo for Hierarchical Bayesian Inference</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Miguel Fernandez-de-Retana, Aitor Almeida
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ME, stat.ML
+      <span class="sep">&middot;</span>
+      13 Nov 2026
+    </div>
+  </div><div class="summary-box">The paper surveys Hamiltonian Monte Carlo variants and their application to hierarchical Bayesian inference.</div><h3>Abstract</h3>
+  <p>Hierarchical models are central to applied Bayesian statistics, yet the variance structures they depend on can produce posterior geometries that remain difficult to explore even with Hamiltonian Monte Carlo (HMC), a designation now covering a large and increasingly heterogeneous family of algorithms. This survey uses Generalized HMC as an organizing framework to describe the many variants of HMC, their methodological and computational properties, and their empirical consequences. Varying the trajectory length, the degree of momentum refreshment, and the presence of a Metropolis correction recovers several familiar Hamiltonian and Langevin samplers as special cases. Three further, largely independent directions account for much of the remaining literature: modifying the metric, as in Riemannian HMC; modifying the Hamiltonian used by the acceptance test, as in modified or shadow HMC; and modifying the numerical integrator, as in multi-stage splitting schemes. We review these variants alongside the procedures used to tune and diagnose them, with particular attention to the effective sample size, whose standard estimators assume a reversibility that generalized and modified samplers lack, and ignore the importance weights that modified Hamiltonians introduce. We close with the open problems these methods face for hierarchical models, taking joint longitudinal and time-to-event models as the motivating example.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.15634" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.15634" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

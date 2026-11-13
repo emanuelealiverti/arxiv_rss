@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Combinatorial Bernoulli Factories with Polynomially Many Coins</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Combinatorial Bernoulli Factories with Polynomially Many Coins" />
+<meta name="author" content="Renato Paes Leme, Rad Niazadeh" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We provide an efficient implementation of combinatorial Bernoulli factories. Such a factory turns coins of unknown biases $x$ into a random vertex of a polytope $P$ whose mean is exactly $x$. For every affine slice of the cube (the class of polytopes that admit a factory), we give a single algorithm whose expected number of coin flips and running time at every interior $x$ are polynomial in the dimension and in $1/{\delta_}$, where ${\delta_}=\min_i{x_i,1-x_i}$ is never supplied to the algorithm. For perfect matchings this gives $O(n^{8}{\delta_}^{-2}\log(n/{\delta_}))$ flips, while the factory of Niazadeh, Paes Leme, and Schneider [STOC 2021] spends at…" />
+<meta name="twitter:description" property="og:description" content="We provide an efficient implementation of combinatorial Bernoulli factories. Such a factory turns coins of unknown biases $x$ into a random vertex of a polytope $P$ whose mean is exactly $x$. For every affine slice of the cube (the class of polytopes that admit a factory), we give a single algorithm whose expected number of coin flips and running time at every interior $x$ are polynomial in the dimension and in $1/{\delta_}$, where ${\delta_}=\min_i{x_i,1-x_i}$ is never supplied to the algorithm. For perfect matchings this gives $O(n^{8}{\delta_}^{-2}\log(n/{\delta_}))$ flips, while the factory of Niazadeh, Paes Leme, and Schneider [STOC 2021] spends at…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.17223.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.17223.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-13T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-13T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Combinatorial Bernoulli Factories with Polynomially Many Coins" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Renato Paes Leme, Rad Niazadeh"},"dateModified":"2026-11-13T00:00:00+01:00","datePublished":"2026-11-13T00:00:00+01:00","description":"We provide an efficient implementation of combinatorial Bernoulli factories. Such a factory turns coins of unknown biases $x$ into a random vertex of a polytope $P$ whose mean is exactly $x$. For every affine slice of the cube (the class of polytopes that admit a factory), we give a single algorithm whose expected number of coin flips and running time at every interior $x$ are polynomial in the dimension and in $1/{\\delta_}$, where ${\\delta_}=\\min_i{x_i,1-x_i}$ is never supplied to the algorithm. For perfect matchings this gives $O(n^{8}{\\delta_}^{-2}\\log(n/{\\delta_}))$ flips, while the factory of Niazadeh, Paes Leme, and Schneider [STOC 2021] spends at…","headline":"Combinatorial Bernoulli Factories with Polynomially Many Coins","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.17223.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.17223.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Combinatorial Bernoulli Factories with Polynomially Many Coins</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Renato Paes Leme, Rad Niazadeh
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      13 Nov 2026
+    </div>
+  </div><div class="summary-box">Presents polynomial‑time algorithms to generate polytope vertices from coin flips.</div><h3>Abstract</h3>
+  <p>We provide an efficient implementation of combinatorial Bernoulli factories. Such a factory turns coins of unknown biases $x$ into a random vertex of a polytope $P$ whose mean is exactly $x$. For every affine slice of the cube (the class of polytopes that admit a factory), we give a single algorithm whose expected number of coin flips and running time at every interior $x$ are polynomial in the dimension and in $1/{\delta_<em>}$, where ${\delta_</em>}=\min_i{x_i,1-x_i}$ is never supplied to the algorithm. For perfect matchings this gives $O(n^{8}{\delta_<em>}^{-2}\log(n/{\delta_</em>}))$ flips, while the factory of Niazadeh, Paes Leme, and Schneider [STOC 2021] spends at least $n^{2n-1}$ flips in expectation at the uniform doubly stochastic matrix. For other polytopes, our method rounds exactly given a point deep inside $P$ and the promise that $x$ is far from the boundary of $P$.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.17223" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.17223" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

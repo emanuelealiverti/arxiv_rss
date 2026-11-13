@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Semiparametric Inference for Marginal Win Odds with Censored Time-to-Event Outcomes</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Semiparametric Inference for Marginal Win Odds with Censored Time-to-Event Outcomes" />
+<meta name="author" content="Zhiguo Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Win statistics provide clinically interpretable measures for comparing treatment groups with prioritized composite outcomes, but efficient covariate-adjustment methods for win statistics with right censored time-to-event outcomes remain limited. We develop a semiparametric framework for marginal win probability and win odds with prioritized time-to-event outcomes, including semi-competing risks, while also accommodating scalar survival outcomes as a special case. The estimand compares independent draws from the marginal distributions of the potential outcomes under treatment and control, which preserves a marginal causal interpretation. We derive the efficient influence function under conditional independent censoring, allowing censoring to depend on baseline covariates and predictable event…" />
+<meta name="twitter:description" property="og:description" content="Win statistics provide clinically interpretable measures for comparing treatment groups with prioritized composite outcomes, but efficient covariate-adjustment methods for win statistics with right censored time-to-event outcomes remain limited. We develop a semiparametric framework for marginal win probability and win odds with prioritized time-to-event outcomes, including semi-competing risks, while also accommodating scalar survival outcomes as a special case. The estimand compares independent draws from the marginal distributions of the potential outcomes under treatment and control, which preserves a marginal causal interpretation. We derive the efficient influence function under conditional independent censoring, allowing censoring to depend on baseline covariates and predictable event…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14785.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14785.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-13T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-13T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Semiparametric Inference for Marginal Win Odds with Censored Time-to-Event Outcomes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zhiguo Li"},"dateModified":"2026-11-13T00:00:00+01:00","datePublished":"2026-11-13T00:00:00+01:00","description":"Win statistics provide clinically interpretable measures for comparing treatment groups with prioritized composite outcomes, but efficient covariate-adjustment methods for win statistics with right censored time-to-event outcomes remain limited. We develop a semiparametric framework for marginal win probability and win odds with prioritized time-to-event outcomes, including semi-competing risks, while also accommodating scalar survival outcomes as a special case. The estimand compares independent draws from the marginal distributions of the potential outcomes under treatment and control, which preserves a marginal causal interpretation. We derive the efficient influence function under conditional independent censoring, allowing censoring to depend on baseline covariates and predictable event…","headline":"Semiparametric Inference for Marginal Win Odds with Censored Time-to-Event Outcomes","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14785.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2611.14785.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Semiparametric Inference for Marginal Win Odds with Censored Time-to-Event Outcomes</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Zhiguo Li
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      13 Nov 2026
+    </div>
+  </div><div class="summary-box">Develops a semiparametric cross‑fitted estimator for marginal win odds with right‑censored time‑to‑event data.</div><h3>Abstract</h3>
+  <p>Win statistics provide clinically interpretable measures for comparing treatment groups with prioritized composite outcomes, but efficient covariate-adjustment methods for win statistics with right censored time-to-event outcomes remain limited. We develop a semiparametric framework for marginal win probability and win odds with prioritized time-to-event outcomes, including semi-competing risks, while also accommodating scalar survival outcomes as a special case. The estimand compares independent draws from the marginal distributions of the potential outcomes under treatment and control, which preserves a marginal causal interpretation. We derive the efficient influence function under conditional independent censoring, allowing censoring to depend on baseline covariates and predictable event history. The resulting cross-fitted one-step estimator incorporates covariate adjustment and censoring martingale augmentation, allows flexible estimation of nuisance parameters, and attains the semiparametric efficiency bound under suitable conditions on consistency and convergence rate of nuisance parameters. Simulation studies show that the estimator has small bias, accurate standard error estimation and confidence interval coverage, and substantial efficiency gain relative to the inverse-probability-of-censoring weighted (IPCW) estimator. An application to a randomized breast cancer trial comparing tamoxifen combined with radiotherapy against tamoxifen alone demonstrates improved precision, with an approximately 25\% reduction in estimated variance at five years.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.14785" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.14785" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

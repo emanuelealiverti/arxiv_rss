@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Large sample scaling analysis of the Zig-Zag algorithm for Bayesian inference</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Large sample scaling analysis of the Zig-Zag algorithm for Bayesian inference" />
+<meta name="author" content="Sanket Agrawal, Joris Bierkens, Gareth O. Roberts" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Piecewise deterministic Markov processes provide scalable methods for sampling from the posterior distributions in big data settings by admitting principled sub-sampling strategies that do not bias the output. An important example is the Zig-Zag process of [Ann. Stats. 47 (2019) 1288 - 1320] where clever sub-sampling has been shown to produce an essentially independent sample at a cost that does not scale with the size of the data. However, sub-sampling also leads to slower convergence and poor mixing of the process, a behaviour which questions the promised scalability of the algorithm. We provide a large sample scaling analysis of the…" />
+<meta name="twitter:description" property="og:description" content="Piecewise deterministic Markov processes provide scalable methods for sampling from the posterior distributions in big data settings by admitting principled sub-sampling strategies that do not bias the output. An important example is the Zig-Zag process of [Ann. Stats. 47 (2019) 1288 - 1320] where clever sub-sampling has been shown to produce an essentially independent sample at a cost that does not scale with the size of the data. However, sub-sampling also leads to slower convergence and poor mixing of the process, a behaviour which questions the promised scalability of the algorithm. We provide a large sample scaling analysis of the…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2411.14983.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2411.14983.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-13T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-13T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Large sample scaling analysis of the Zig-Zag algorithm for Bayesian inference" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sanket Agrawal, Joris Bierkens, Gareth O. Roberts"},"dateModified":"2026-11-13T00:00:00+01:00","datePublished":"2026-11-13T00:00:00+01:00","description":"Piecewise deterministic Markov processes provide scalable methods for sampling from the posterior distributions in big data settings by admitting principled sub-sampling strategies that do not bias the output. An important example is the Zig-Zag process of [Ann. Stats. 47 (2019) 1288 - 1320] where clever sub-sampling has been shown to produce an essentially independent sample at a cost that does not scale with the size of the data. However, sub-sampling also leads to slower convergence and poor mixing of the process, a behaviour which questions the promised scalability of the algorithm. We provide a large sample scaling analysis of the…","headline":"Large sample scaling analysis of the Zig-Zag algorithm for Bayesian inference","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2411.14983.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/13/2411.14983.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Large sample scaling analysis of the Zig-Zag algorithm for Bayesian inference</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Sanket Agrawal, Joris Bierkens, Gareth O. Roberts
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      13 Nov 2026
+    </div>
+  </div><div class="summary-box">Provides large‑sample scaling analysis showing Zig‑Zag with sub‑sampling achieves O(1) cost per independent sample.</div><h3>Abstract</h3>
+  <p>Piecewise deterministic Markov processes provide scalable methods for sampling from the posterior distributions in big data settings by admitting principled sub-sampling strategies that do not bias the output. An important example is the Zig-Zag process of [Ann. Stats. 47 (2019) 1288 - 1320] where clever sub-sampling has been shown to produce an essentially independent sample at a cost that does not scale with the size of the data. However, sub-sampling also leads to slower convergence and poor mixing of the process, a behaviour which questions the promised scalability of the algorithm. We provide a large sample scaling analysis of the Zig-Zag process and its sub-sampling versions in settings of parametric Bayesian inference. In the transient phase of the algorithm, we show that the Zig-Zag trajectories are well approximated by the solution to a system of ODEs. These ODEs possess a drift in the direction of decreasing KL-divergence between the assumed model and the true distribution and are explicitly characterized in the paper. In the stationary phase, we give weak convergence results for different versions of the Zig-Zag process. Based on our results, we estimate that for large data sets of size n, using suitable control variates with sub-sampling in Zig-Zag, the algorithm costs O(1) to obtain an essentially independent sample; a computational speed-up of O(n) over the canonical version of Zig-Zag and other traditional MCMC methods</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2411.14983" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2411.14983" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
