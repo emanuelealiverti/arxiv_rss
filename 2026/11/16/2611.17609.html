@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Homogeneous pursuit in $\beta$ model</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Homogeneous pursuit in $\beta$ model" />
+<meta name="author" content="Ergan Shang, Si Chen, Canhong Wen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data in forms of networks has been encountered in various prevalent fields at the arrival of big data era. To unveil and recover the true model with core units with numerous links, the $\beta$-model under sparsity constraint is proposed to meet the expectation of statisticians and engineers. Not only does this network model inherit spectacular property from the Erd\H{o}s-R&#39;enyi model, but also exhibits degree heterogeneity through tuning sparsity parameter $s$. In this paper, we propose Homogeneous Pursuit (HP), an $\ell_0$-constrained maximum likelihood estimation method implemented through a primal-dual algorithm. To ease the harshness of computation, we find the surrogate function…" />
+<meta name="twitter:description" property="og:description" content="Data in forms of networks has been encountered in various prevalent fields at the arrival of big data era. To unveil and recover the true model with core units with numerous links, the $\beta$-model under sparsity constraint is proposed to meet the expectation of statisticians and engineers. Not only does this network model inherit spectacular property from the Erd\H{o}s-R&#39;enyi model, but also exhibits degree heterogeneity through tuning sparsity parameter $s$. In this paper, we propose Homogeneous Pursuit (HP), an $\ell_0$-constrained maximum likelihood estimation method implemented through a primal-dual algorithm. To ease the harshness of computation, we find the surrogate function…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/16/2611.17609.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/16/2611.17609.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-16T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-16T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Homogeneous pursuit in $\beta$ model" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ergan Shang, Si Chen, Canhong Wen"},"dateModified":"2026-11-16T00:00:00+01:00","datePublished":"2026-11-16T00:00:00+01:00","description":"Data in forms of networks has been encountered in various prevalent fields at the arrival of big data era. To unveil and recover the true model with core units with numerous links, the $\\beta$-model under sparsity constraint is proposed to meet the expectation of statisticians and engineers. Not only does this network model inherit spectacular property from the Erd\\H{o}s-R\u0026#39;enyi model, but also exhibits degree heterogeneity through tuning sparsity parameter $s$. In this paper, we propose Homogeneous Pursuit (HP), an $\\ell_0$-constrained maximum likelihood estimation method implemented through a primal-dual algorithm. To ease the harshness of computation, we find the surrogate function…","headline":"Homogeneous pursuit in $\\beta$ model","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/16/2611.17609.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/16/2611.17609.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Homogeneous pursuit in $\beta$ model</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Ergan Shang, Si Chen, Canhong Wen
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML, stat.TH
+      <span class="sep">&middot;</span>
+      16 Nov 2026
+    </div>
+  </div><div class="summary-box">Proposes a primal-dual MM algorithm for l0-constrained network model estimation with GIC* model selection.</div><h3>Abstract</h3>
+  <p>Data in forms of networks has been encountered in various prevalent fields at the arrival of big data era. To unveil and recover the true model with core units with numerous links, the $\beta$-model under sparsity constraint is proposed to meet the expectation of statisticians and engineers. Not only does this network model inherit spectacular property from the Erd\H{o}s-R'enyi model, but also exhibits degree heterogeneity through tuning sparsity parameter $s$. In this paper, we propose Homogeneous Pursuit (HP), an $\ell_0$-constrained maximum likelihood estimation method implemented through a primal-dual algorithm. To ease the harshness of computation, we find the surrogate function of the corresponding objective function to derive Majorization Minimization algorithm through the primal-dual process. Moreover, after meticulous evaluation, the algorithm brought about captures the property of fine convergence rate in a contraction mapping way. Under some mild conditions, the proposed generalized information criterion (GIC$^<em>$) for selecting the sparsity level is consistent to find the truth. Combining HP with GIC$^</em>$ gives the adaptive procedure HP-GIC$^<em>$; HP-BIC denotes the same estimation method with sparsity selected by BIC. Finally, simulation studies show that GIC$^</em>$ improves support recovery relative to BIC in the reported comparisons, while HP achieves lower computational cost while maintaining estimation accuracy comparable to the sparse benchmark methods. A microfinance application illustrates the use of HP-GIC$^*$ for studying the association between network prominence and participation, with improved fit in the reported village-level regressions.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.17609" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.17609" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

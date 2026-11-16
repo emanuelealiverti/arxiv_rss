@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Making Experiment Results Comparable through Sitewide Impact Estimation</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Making Experiment Results Comparable through Sitewide Impact Estimation" />
+<meta name="author" content="Xiaochen Zhang, Wenjing Zheng, Xingye Kang, Vamsi Manthena" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Roblox spans many product surfaces-discovery, the virtual economy, creator tools-that differ sharply in reach and in how much the affected population contributes to any sitewide metric. A randomized experiment shows whether a treatment works for the users in its sample, but this experiment lift is not comparable across surfaces, because surfaces differ in reach and in their contribution to sitewide metrics. The quantity a strategic decision needs is a counterfactual-how much an aggregated sitewide metric (e.g., total platform play time) would move if the treatment reached 100% of its target population, which may be only part of the sitewide population,…" />
+<meta name="twitter:description" property="og:description" content="Roblox spans many product surfaces-discovery, the virtual economy, creator tools-that differ sharply in reach and in how much the affected population contributes to any sitewide metric. A randomized experiment shows whether a treatment works for the users in its sample, but this experiment lift is not comparable across surfaces, because surfaces differ in reach and in their contribution to sitewide metrics. The quantity a strategic decision needs is a counterfactual-how much an aggregated sitewide metric (e.g., total platform play time) would move if the treatment reached 100% of its target population, which may be only part of the sitewide population,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/16/2611.18411.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/16/2611.18411.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-16T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-16T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Making Experiment Results Comparable through Sitewide Impact Estimation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xiaochen Zhang, Wenjing Zheng, Xingye Kang, Vamsi Manthena"},"dateModified":"2026-11-16T00:00:00+01:00","datePublished":"2026-11-16T00:00:00+01:00","description":"Roblox spans many product surfaces-discovery, the virtual economy, creator tools-that differ sharply in reach and in how much the affected population contributes to any sitewide metric. A randomized experiment shows whether a treatment works for the users in its sample, but this experiment lift is not comparable across surfaces, because surfaces differ in reach and in their contribution to sitewide metrics. The quantity a strategic decision needs is a counterfactual-how much an aggregated sitewide metric (e.g., total platform play time) would move if the treatment reached 100% of its target population, which may be only part of the sitewide population,…","headline":"Making Experiment Results Comparable through Sitewide Impact Estimation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/16/2611.18411.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/16/2611.18411.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Making Experiment Results Comparable through Sitewide Impact Estimation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Xiaochen Zhang, Wenjing Zheng, Xingye Kang, Vamsi Manthena
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      16 Nov 2026
+    </div>
+  </div><div class="summary-box">Develops estimators for sitewide impact by scaling experiment effects with coverage factors.</div><h3>Abstract</h3>
+  <p>Roblox spans many product surfaces-discovery, the virtual economy, creator tools-that differ sharply in reach and in how much the affected population contributes to any sitewide metric. A randomized experiment shows whether a treatment works for the users in its sample, but this experiment lift is not comparable across surfaces, because surfaces differ in reach and in their contribution to sitewide metrics. The quantity a strategic decision needs is a counterfactual-how much an aggregated sitewide metric (e.g., total platform play time) would move if the treatment reached 100% of its target population, which may be only part of the sitewide population, during the measurement period. We call this sitewide impact. Its scaling factor, which we call the coverage factor, combines the reach and the target population’s contribution to the sitewide metric under no treatment. Hence a low-reach surface whose users carry much of the metric could outrank a high-reach surface whose users carry little. We develop two estimators under this framing: one for difference-in-means metrics and one for variant-level ratio metrics (a metric defined as a ratio of two population aggregates). Empirically, experiment lift is a poor proxy for sitewide impact-across 139 experiments that are statistically significant on time spent, the Spearman rank correlation between the two is 0.20, and 5 of the 10 largest experiment lifts are among the 10 largest sitewide impacts. We validate the estimator with A/A tests and against a long-term holdout, and apply it to cross-domain prioritization and attributing year-over-year growth to shipped innovations.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.18411" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.18411" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
