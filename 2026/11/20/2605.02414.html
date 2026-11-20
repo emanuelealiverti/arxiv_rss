@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>How Much to Experiment? Admissible Sample Sizes in Test-and-Roll Experiments</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="How Much to Experiment? Admissible Sample Sizes in Test-and-Roll Experiments" />
+<meta name="author" content="Kentaro Kawato, Shosei Sakaguchi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper studies welfare-based sample-size choice in finite-population test-and-roll experiments. A decision-maker conducts a balanced randomized experiment on $m$ of $N$ units and assigns the remaining $N-m$ units to the arm with the higher sample mean. Regret combines the welfare cost of experimentation with the risk of an inferior rollout. Direct minimax regret is uninformative when treatment-effect magnitudes or noise scales are unrestricted, while minimax-regret choices under parameter bounds can depend materially on those bounds. We therefore derive a sharp characterization of admissible sample sizes, defined as those not dominated in regret by any other sample size under the same…" />
+<meta name="twitter:description" property="og:description" content="This paper studies welfare-based sample-size choice in finite-population test-and-roll experiments. A decision-maker conducts a balanced randomized experiment on $m$ of $N$ units and assigns the remaining $N-m$ units to the arm with the higher sample mean. Regret combines the welfare cost of experimentation with the risk of an inferior rollout. Direct minimax regret is uninformative when treatment-effect magnitudes or noise scales are unrestricted, while minimax-regret choices under parameter bounds can depend materially on those bounds. We therefore derive a sharp characterization of admissible sample sizes, defined as those not dominated in regret by any other sample size under the same…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2605.02414.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2605.02414.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-20T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-20T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How Much to Experiment? Admissible Sample Sizes in Test-and-Roll Experiments" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kentaro Kawato, Shosei Sakaguchi"},"dateModified":"2026-11-20T00:00:00+01:00","datePublished":"2026-11-20T00:00:00+01:00","description":"This paper studies welfare-based sample-size choice in finite-population test-and-roll experiments. A decision-maker conducts a balanced randomized experiment on $m$ of $N$ units and assigns the remaining $N-m$ units to the arm with the higher sample mean. Regret combines the welfare cost of experimentation with the risk of an inferior rollout. Direct minimax regret is uninformative when treatment-effect magnitudes or noise scales are unrestricted, while minimax-regret choices under parameter bounds can depend materially on those bounds. We therefore derive a sharp characterization of admissible sample sizes, defined as those not dominated in regret by any other sample size under the same…","headline":"How Much to Experiment? Admissible Sample Sizes in Test-and-Roll Experiments","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2605.02414.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2605.02414.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>How Much to Experiment? Admissible Sample Sizes in Test-and-Roll Experiments</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Kentaro Kawato, Shosei Sakaguchi
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      20 Nov 2026
+    </div>
+  </div><div class="summary-box">Derives admissible sample sizes for welfare-optimal test-and-roll experiments via regret minimization.</div><h3>Abstract</h3>
+  <p>This paper studies welfare-based sample-size choice in finite-population test-and-roll experiments. A decision-maker conducts a balanced randomized experiment on $m$ of $N$ units and assigns the remaining $N-m$ units to the arm with the higher sample mean. Regret combines the welfare cost of experimentation with the risk of an inferior rollout. Direct minimax regret is uninformative when treatment-effect magnitudes or noise scales are unrestricted, while minimax-regret choices under parameter bounds can depend materially on those bounds. We therefore derive a sharp characterization of admissible sample sizes, defined as those not dominated in regret by any other sample size under the same rollout rule. Under a Gaussian approximation and continuous relaxation, the admissible set for two treatments is exactly $(0,N/3]$, with $N/3$ strictly dominating every larger sample size. This characterization requires neither a prior nor externally specified parameter bounds, while partial information on the signal-to-noise ratio further narrows the admissible set. We extend the analysis to covariate targeting and multiple treatment arms. Under covariate targeting with a plug-in rule, the largest admissible sample size depends on the convergence rate of the conditional average treatment effect (CATE) estimator and falls below $N/3$ for slower-than-root-$m$ convergence. With three or more treatments, even arbitrarily small variance heterogeneity makes every sample size admissible, whereas under common variance the largest admissible sample size lies in $(N/3,N)$ and depends on the number of treatments.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.02414" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.02414" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

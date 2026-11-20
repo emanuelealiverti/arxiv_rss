@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>BRUCE (Bayesian Rio Urban Climate Estimator): spatiotemporal interpolation of air temperature from heterogeneous sensor networks for operational heat monitoring</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="BRUCE (Bayesian Rio Urban Climate Estimator): spatiotemporal interpolation of air temperature from heterogeneous sensor networks for operational heat monitoring" />
+<meta name="author" content="Ayrton Sena Gouveia, Rafael Santos de Oliveira, Lucas Menezes-Silva, Maira Alejandra Moreno Castillo, Felipe de Carvalho Vommaro Marincola, João Henrique de Araújo Morais, Valéria Saraceni, Gislani Mateus Oliveira Aguilar, Caroline Dias Ferreira, Oswaldo Gonçalves Cruz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Accurate characterization of intra-urban temperature variability is essential for heat-health surveillance, yet official monitoring networks are too sparse to resolve fine-scale gradients, particularly in Global South cities. We present BRUCE, a Bayesian hierarchical spatiotemporal model, fitted with the Integrated Nested Laplace Approximation (INLA) and a Stochastic Partial Differential Equation (SPDE) spatial component, that fuses four heterogeneous temperature sources for Rio de Janeiro, Brazil: official weather stations, low-cost IoT sensors, citizen-science personal weather stations and ERA5-Land reanalysis. The model accounts for class- and station-specific measurement bias and estimates a continuous spatial field that evolves day to day through an autoregressive (AR1)…" />
+<meta name="twitter:description" property="og:description" content="Accurate characterization of intra-urban temperature variability is essential for heat-health surveillance, yet official monitoring networks are too sparse to resolve fine-scale gradients, particularly in Global South cities. We present BRUCE, a Bayesian hierarchical spatiotemporal model, fitted with the Integrated Nested Laplace Approximation (INLA) and a Stochastic Partial Differential Equation (SPDE) spatial component, that fuses four heterogeneous temperature sources for Rio de Janeiro, Brazil: official weather stations, low-cost IoT sensors, citizen-science personal weather stations and ERA5-Land reanalysis. The model accounts for class- and station-specific measurement bias and estimates a continuous spatial field that evolves day to day through an autoregressive (AR1)…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.26612.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.26612.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-20T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-20T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="BRUCE (Bayesian Rio Urban Climate Estimator): spatiotemporal interpolation of air temperature from heterogeneous sensor networks for operational heat monitoring" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ayrton Sena Gouveia, Rafael Santos de Oliveira, Lucas Menezes-Silva, Maira Alejandra Moreno Castillo, Felipe de Carvalho Vommaro Marincola, João Henrique de Araújo Morais, Valéria Saraceni, Gislani Mateus Oliveira Aguilar, Caroline Dias Ferreira, Oswaldo Gonçalves Cruz"},"dateModified":"2026-11-20T00:00:00+01:00","datePublished":"2026-11-20T00:00:00+01:00","description":"Accurate characterization of intra-urban temperature variability is essential for heat-health surveillance, yet official monitoring networks are too sparse to resolve fine-scale gradients, particularly in Global South cities. We present BRUCE, a Bayesian hierarchical spatiotemporal model, fitted with the Integrated Nested Laplace Approximation (INLA) and a Stochastic Partial Differential Equation (SPDE) spatial component, that fuses four heterogeneous temperature sources for Rio de Janeiro, Brazil: official weather stations, low-cost IoT sensors, citizen-science personal weather stations and ERA5-Land reanalysis. The model accounts for class- and station-specific measurement bias and estimates a continuous spatial field that evolves day to day through an autoregressive (AR1)…","headline":"BRUCE (Bayesian Rio Urban Climate Estimator): spatiotemporal interpolation of air temperature from heterogeneous sensor networks for operational heat monitoring","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.26612.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.26612.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>BRUCE (Bayesian Rio Urban Climate Estimator): spatiotemporal interpolation of air temperature from heterogeneous sensor networks for operational heat monitoring</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Ayrton Sena Gouveia, Rafael Santos de Oliveira, Lucas Menezes-Silva, Maira Alejandra Moreno Castillo, Felipe de Carvalho Vommaro Marincola, João Henrique de Araújo Morais, Valéria Saraceni, Gislani Mateus Oliveira Aguilar, Caroline Dias Ferreira, Oswaldo Gonçalves Cruz
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      20 Nov 2026
+    </div>
+  </div><div class="summary-box">BRUCE uses a Bayesian hierarchical spatiotemporal model with INLA and SPDE to fuse heterogeneous temperature data for fine-scale heat monitoring.</div><h3>Abstract</h3>
+  <p>Accurate characterization of intra-urban temperature variability is essential for heat-health surveillance, yet official monitoring networks are too sparse to resolve fine-scale gradients, particularly in Global South cities. We present BRUCE, a Bayesian hierarchical spatiotemporal model, fitted with the Integrated Nested Laplace Approximation (INLA) and a Stochastic Partial Differential Equation (SPDE) spatial component, that fuses four heterogeneous temperature sources for Rio de Janeiro, Brazil: official weather stations, low-cost IoT sensors, citizen-science personal weather stations and ERA5-Land reanalysis. The model accounts for class- and station-specific measurement bias and estimates a continuous spatial field that evolves day to day through an autoregressive (AR1) structure. Fitted independently to nine monthly windows (January, June, November; 2023–2025), the elevation coefficient was significant in all windows and of consistent magnitude in eight ($-$1.08 to $-$1.38 \textdegree{}C per SD). In leave-region-out cross-validation against LCZ4r, accuracy was comparable (RMSE differences within station-level bootstrap uncertainty in all three windows), while BRUCE produced predictions at every held-out station, including those where LCZ4r is masked, and preserved finer-scale spatial structure than LCZ4r’s discrete zone classification. Applied to 241 primary care territories, BRUCE’s posterior exceedance probabilities allowed 96 to be classified with high confidence (model-based classifications), whereas a constant-width interval derived from LCZ4r cross-validation errors supported confident classification of none. The framework offers a statistically principled, operationally viable basis for intra-urban heat monitoring in data-heterogeneous settings.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.26612" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.26612" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

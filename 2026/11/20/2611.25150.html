@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bayesian Nonparametric Survival Regression with Time-Varying Covariates and Random Effects</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bayesian Nonparametric Survival Regression with Time-Varying Covariates and Random Effects" />
+<meta name="author" content="Kemin Zhang, Yudan Zou, Fan Li, Liangyuan Hu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In longitudinal survival studies, biomarkers and treatments change across visits, their associations with event risk may be nonlinear and change over time, and subjects with identical measurements may differ in risk. Existing tree-ensemble survival models address these features separately: discrete-time formulations accommodate covariate updates without subject-specific random effects, and hazard-based ensembles with frailty take covariates as fixed at baseline. We propose Time-Varying Survival Bayesian Additive Regression Trees (TVSurvBART), a continuous-time hazard model combining a flexible baseline, a log-linear tree ensemble, and subject-specific random intercepts and slopes; covariates enter as predictable step processes, and interval-start time among the tree inputs lets…" />
+<meta name="twitter:description" property="og:description" content="In longitudinal survival studies, biomarkers and treatments change across visits, their associations with event risk may be nonlinear and change over time, and subjects with identical measurements may differ in risk. Existing tree-ensemble survival models address these features separately: discrete-time formulations accommodate covariate updates without subject-specific random effects, and hazard-based ensembles with frailty take covariates as fixed at baseline. We propose Time-Varying Survival Bayesian Additive Regression Trees (TVSurvBART), a continuous-time hazard model combining a flexible baseline, a log-linear tree ensemble, and subject-specific random intercepts and slopes; covariates enter as predictable step processes, and interval-start time among the tree inputs lets…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.25150.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.25150.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-20T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-20T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bayesian Nonparametric Survival Regression with Time-Varying Covariates and Random Effects" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kemin Zhang, Yudan Zou, Fan Li, Liangyuan Hu"},"dateModified":"2026-11-20T00:00:00+01:00","datePublished":"2026-11-20T00:00:00+01:00","description":"In longitudinal survival studies, biomarkers and treatments change across visits, their associations with event risk may be nonlinear and change over time, and subjects with identical measurements may differ in risk. Existing tree-ensemble survival models address these features separately: discrete-time formulations accommodate covariate updates without subject-specific random effects, and hazard-based ensembles with frailty take covariates as fixed at baseline. We propose Time-Varying Survival Bayesian Additive Regression Trees (TVSurvBART), a continuous-time hazard model combining a flexible baseline, a log-linear tree ensemble, and subject-specific random intercepts and slopes; covariates enter as predictable step processes, and interval-start time among the tree inputs lets…","headline":"Bayesian Nonparametric Survival Regression with Time-Varying Covariates and Random Effects","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.25150.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.25150.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bayesian Nonparametric Survival Regression with Time-Varying Covariates and Random Effects</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Kemin Zhang, Yudan Zou, Fan Li, Liangyuan Hu
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      20 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces a Bayesian nonparametric survival model with time‑varying covariates and random effects using tree‑based additive regression.</div><h3>Abstract</h3>
+  <p>In longitudinal survival studies, biomarkers and treatments change across visits, their associations with event risk may be nonlinear and change over time, and subjects with identical measurements may differ in risk. Existing tree-ensemble survival models address these features separately: discrete-time formulations accommodate covariate updates without subject-specific random effects, and hazard-based ensembles with frailty take covariates as fixed at baseline. We propose Time-Varying Survival Bayesian Additive Regression Trees (TVSurvBART), a continuous-time hazard model combining a flexible baseline, a log-linear tree ensemble, and subject-specific random intercepts and slopes; covariates enter as predictable step processes, and interval-start time among the tree inputs lets effects change across visits. Integrated exposure offsets absorb the within-interval variation of the baseline and random slopes, so the tree leaves retain conjugate updates. Re-centering moves along likelihood-invariant directions and alternating centered and non-centered covariance updates address the resulting posterior dependence. In two simulation families, TVSurvBART’s landmark predictions from held-out subjects’ histories up to the landmark time have higher time-dependent AUC than the Cox, frailty Cox, and forest benchmarks in every setting and lower Brier scores in all but one comparison, although population-summary gains are not uniform. In the CARRA juvenile idiopathic arthritis registry, discrimination for recorded flares is similar to Cox regression, while a secondary interval-probability score favors TVSurvBART.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.25150" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.25150" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

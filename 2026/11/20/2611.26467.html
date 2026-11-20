@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Optimal Transport Rank Regression for Robust Multivariate-Response Regression</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Optimal Transport Rank Regression for Robust Multivariate-Response Regression" />
+<meta name="author" content="Yizhe Ding, Yifan Jiang, Runze Li, Lingzhou Xue" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this paper, we propose optimal transport rank regression for robust multivariate-response mean regression. The proposed method maps residual distributions to the uniform measure on the unit ball and constructs its loss from the resulting optimal transport ranks. This construction exploits cross-response dependence to improve efficiency while preserving population Fisher consistency and orthogonal invariance. Beyond these population properties, we establish statistical guarantees for the proposed method in both linear and nonparametric regression. For linear models, we establish asymptotic normality, characterise robustness, and develop orthogonally invariant asymptotic inference. We derive a distribution-uniform lower bound on asymptotic efficiency relative to least-squares and…" />
+<meta name="twitter:description" property="og:description" content="In this paper, we propose optimal transport rank regression for robust multivariate-response mean regression. The proposed method maps residual distributions to the uniform measure on the unit ball and constructs its loss from the resulting optimal transport ranks. This construction exploits cross-response dependence to improve efficiency while preserving population Fisher consistency and orthogonal invariance. Beyond these population properties, we establish statistical guarantees for the proposed method in both linear and nonparametric regression. For linear models, we establish asymptotic normality, characterise robustness, and develop orthogonally invariant asymptotic inference. We derive a distribution-uniform lower bound on asymptotic efficiency relative to least-squares and…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.26467.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.26467.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-20T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-20T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Optimal Transport Rank Regression for Robust Multivariate-Response Regression" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yizhe Ding, Yifan Jiang, Runze Li, Lingzhou Xue"},"dateModified":"2026-11-20T00:00:00+01:00","datePublished":"2026-11-20T00:00:00+01:00","description":"In this paper, we propose optimal transport rank regression for robust multivariate-response mean regression. The proposed method maps residual distributions to the uniform measure on the unit ball and constructs its loss from the resulting optimal transport ranks. This construction exploits cross-response dependence to improve efficiency while preserving population Fisher consistency and orthogonal invariance. Beyond these population properties, we establish statistical guarantees for the proposed method in both linear and nonparametric regression. For linear models, we establish asymptotic normality, characterise robustness, and develop orthogonally invariant asymptotic inference. We derive a distribution-uniform lower bound on asymptotic efficiency relative to least-squares and…","headline":"Optimal Transport Rank Regression for Robust Multivariate-Response Regression","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.26467.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2611.26467.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Optimal Transport Rank Regression for Robust Multivariate-Response Regression</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Yizhe Ding, Yifan Jiang, Runze Li, Lingzhou Xue
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      20 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces optimal transport rank regression for robust multivariate-response regression, providing theory and deep learning implementation.</div><h3>Abstract</h3>
+  <p>In this paper, we propose optimal transport rank regression for robust multivariate-response mean regression. The proposed method maps residual distributions to the uniform measure on the unit ball and constructs its loss from the resulting optimal transport ranks. This construction exploits cross-response dependence to improve efficiency while preserving population Fisher consistency and orthogonal invariance. Beyond these population properties, we establish statistical guarantees for the proposed method in both linear and nonparametric regression. For linear models, we establish asymptotic normality, characterise robustness, and develop orthogonally invariant asymptotic inference. We derive a distribution-uniform lower bound on asymptotic efficiency relative to least-squares and demonstrate efficiency gains over coordinatewise methods under several heavy-tailed and contaminated distributions. For nonparametric regression, we establish non-asymptotic (L^2(P)) convergence rates and robustness guarantees modulo additive constants using deep neural networks under possibly asymmetric heavy-tailed noise, attaining the minimax-optimal rate up to logarithmic factors. Numerical experiments demonstrate improvements in estimation accuracy and inferential efficiency over coordinatewise and radial robust methods, alongside stability under orthogonal transformations of the responses. An oral microbiome application further shows that the proposed method identifies more associations that are significant in all examined orthonormal response representations compared with each competing method.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.26467" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.26467" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

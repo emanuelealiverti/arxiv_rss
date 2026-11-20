@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Quantum Nondecimated Wavelet Transform: Theory, Circuits, and Applications</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Quantum Nondecimated Wavelet Transform: Theory, Circuits, and Applications" />
+<meta name="author" content="Brani Vidakovic" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The quantum nondecimated wavelet transform uses a shift register to apply circular shifts to an amplitude encoded signal before a single orthogonal wavelet transform. We show that tracing out the shift register gives level probabilities equal to the normalized nondecimated wavelet energies, invariant under circular shifts. Its diagonal gives moving averages of squared coefficients. We derive a multinomial model for the level counts and show how to read the autocovariance at lag one for all but the coarsest detail level. For these global statistics, direct Fourier basis measurement of the input is at least as precise and uses a simpler…" />
+<meta name="twitter:description" property="og:description" content="The quantum nondecimated wavelet transform uses a shift register to apply circular shifts to an amplitude encoded signal before a single orthogonal wavelet transform. We show that tracing out the shift register gives level probabilities equal to the normalized nondecimated wavelet energies, invariant under circular shifts. Its diagonal gives moving averages of squared coefficients. We derive a multinomial model for the level counts and show how to read the autocovariance at lag one for all but the coarsest detail level. For these global statistics, direct Fourier basis measurement of the input is at least as precise and uses a simpler…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2512.21478.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2512.21478.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-20T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-20T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Quantum Nondecimated Wavelet Transform: Theory, Circuits, and Applications" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Brani Vidakovic"},"dateModified":"2026-11-20T00:00:00+01:00","datePublished":"2026-11-20T00:00:00+01:00","description":"The quantum nondecimated wavelet transform uses a shift register to apply circular shifts to an amplitude encoded signal before a single orthogonal wavelet transform. We show that tracing out the shift register gives level probabilities equal to the normalized nondecimated wavelet energies, invariant under circular shifts. Its diagonal gives moving averages of squared coefficients. We derive a multinomial model for the level counts and show how to read the autocovariance at lag one for all but the coarsest detail level. For these global statistics, direct Fourier basis measurement of the input is at least as precise and uses a simpler…","headline":"Quantum Nondecimated Wavelet Transform: Theory, Circuits, and Applications","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2512.21478.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/20/2512.21478.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Quantum Nondecimated Wavelet Transform: Theory, Circuits, and Applications</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Brani Vidakovic
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      20 Nov 2026
+    </div>
+  </div><div class="summary-box">Presents a quantum circuit for the nondecimated wavelet transform using shift registers and block shrinkage for denoising.</div><h3>Abstract</h3>
+  <p>The quantum nondecimated wavelet transform uses a shift register to apply circular shifts to an amplitude encoded signal before a single orthogonal wavelet transform. We show that tracing out the shift register gives level probabilities equal to the normalized nondecimated wavelet energies, invariant under circular shifts. Its diagonal gives moving averages of squared coefficients. We derive a multinomial model for the level counts and show how to read the autocovariance at lag one for all but the coarsest detail level. For these global statistics, direct Fourier basis measurement of the input is at least as precise and uses a simpler circuit. For denoising, we insert a block encoded shrinkage operator between the transform and its inverse. Postselection on the shift register implements the cycle spinning average exactly as a linear combination of unitaries. Weights shared within each level give a translation equivariant filter with zero phase. Local weights also preserve translation equivariance when indexed by the nondecimated translate. The circuit provides access to individual decimated branches and combines them coherently. We illustrate the method with James Stein shrinkage, local empirical Wiener filtering, and a scaling analysis of turbulent wind velocity. Gate simulations verify the construction, and we report state preparation, weight estimation, and output costs separately.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2512.21478" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2512.21478" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
