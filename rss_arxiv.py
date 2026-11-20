@@ -16,22 +16,27 @@ FEED_URLS = [
     'https://rss.arxiv.org/rss/stat.AP',
 ]
 # Tried in order at startup; the first that answers with valid JSON is used for
-# the whole run. Being in the public catalogue is not enough: this account can
-# invoke only 8 of the 57 chat models listed, the rest return 404 "Not found
-# for account". Models also get retired without notice — the previous default,
-# meta/llama-3.1-8b-instruct, reached end of life on 2026-08-26.
+# the whole run. Being in the public catalogue is not enough: a listed model may
+# not be enabled for this account (404 "Not found for account"). Models also get
+# retired without notice (410): llama-3.2-11b-vision and deepseek-v4-pro, the
+# previous top two, were gone by 2026-11-20, and nemotron-3-super and
+# gpt-oss-20b had left the catalogue.
 #
-# Measured on 3 real abstracts (2026-09-09): llama-3.2-11b 6.7s/article with
-# concise summaries and well-spread scores; deepseek-v4-pro 8.7s and nemotron
-# nano-omni 9.4s, both wordier. Reasoning models whose scratchpad overruns the
-# token budget (nemotron-3.5-lightning, nemotron-3-super) and gpt-oss-20b (over
-# 90s per call) are deliberately left out.
+# Order as of 2026-11-20 (not yet benchmarked): non-reasoning instruction
+# models first, since reasoning models can spend the token budget thinking and
+# never emit the JSON. nemotron nano-omni is last as the known-working
+# fallback (~6s/article, occasionally no JSON). nemotron-3.5-lightning is left
+# out for overrunning the token budget.
 MODEL_CANDIDATES = [
-    "meta/llama-3.2-11b-vision-instruct",
-    "deepseek-ai/deepseek-v4-pro-0813",
+    "google/gemma-3-12b-it",
+    "google/gemma-4-31b-it",
+    "z-ai/glm-5.3-flash",
+    "minimaxai/minimax-m3.1-flash",
+    "mistralai/mistral-large-4-1t-a52b",
+    "moonshotai/kimi-k3.1-pro",
+    "google/gemma-3-4b-it",
+    "nvidia/nemotron-3.5-bolt-e4b",
     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-    "nvidia/nemotron-3-super-120b-a12b",
-    "openai/gpt-oss-20b",
 ]
 POSTS_DIR = Path("_posts")
 PREFS_FILE = Path("preferences.yml")

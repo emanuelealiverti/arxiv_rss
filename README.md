@@ -21,5 +21,6 @@ Edit `preferences.yml` to update your research context, keywords, and followed a
 - The `main` branch holds the infrastructure; `gh-pages` holds the deployed site
 - If the NVIDIA API is unavailable, scoring falls back to keyword/author matching only; the run log then carries an explicit `WARNING`, since a fallback-only run produces scores that are all multiples of 1.75 and empty summaries
 - NVIDIA retires models without notice and a listed model may not be enabled for a given account, so the script probes `MODEL_CANDIDATES` in order and uses the first that returns valid JSON
+- To compare all candidates (speed, scores, sample summaries), run the workflow manually with the `probe_models` box ticked, or locally `python probe_models.py` with `NVIDIA_API_KEY` set
 
 This project started from a personal first draft and was then vibe coded with [Claude Code](https://claude.ai/claude-code).
