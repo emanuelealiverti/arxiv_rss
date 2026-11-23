@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Exact Online $Q_n$ Estimation: Exploiting Sliding-Window Rank Invariance</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Exact Online $Q_n$ Estimation: Exploiting Sliding-Window Rank Invariance" />
+<meta name="author" content="Robin Nunkesser" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The $Q_n$ scale estimator (Rousseeuw and Croux, 1993) combines a 50% finite-sample breakdown point with high Gaussian efficiency, but its computation requires selecting an order statistic among the $\binom{n}{2}$ pairwise distances. We study exact online $Q_n$ computation in a sliding window by exploiting temporal rank coherence between consecutive windows. Formalizing the multiset decomposition of surviving pairwise distances in terms of strict and weak rank counts, we derive a tie-exact dual-rank update that verifies whether the previous unscaled estimate remains valid in $\mathcal{O}(\log n)$ comparisons while maintaining the sorted window in $\mathcal{O}(n)$ time. When the target rank shifts by $m$ positions,…" />
+<meta name="twitter:description" property="og:description" content="The $Q_n$ scale estimator (Rousseeuw and Croux, 1993) combines a 50% finite-sample breakdown point with high Gaussian efficiency, but its computation requires selecting an order statistic among the $\binom{n}{2}$ pairwise distances. We study exact online $Q_n$ computation in a sliding window by exploiting temporal rank coherence between consecutive windows. Formalizing the multiset decomposition of surviving pairwise distances in terms of strict and weak rank counts, we derive a tie-exact dual-rank update that verifies whether the previous unscaled estimate remains valid in $\mathcal{O}(\log n)$ comparisons while maintaining the sorted window in $\mathcal{O}(n)$ time. When the target rank shifts by $m$ positions,…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.26852.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.26852.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-23T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-23T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Exact Online $Q_n$ Estimation: Exploiting Sliding-Window Rank Invariance" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robin Nunkesser"},"dateModified":"2026-11-23T00:00:00+01:00","datePublished":"2026-11-23T00:00:00+01:00","description":"The $Q_n$ scale estimator (Rousseeuw and Croux, 1993) combines a 50% finite-sample breakdown point with high Gaussian efficiency, but its computation requires selecting an order statistic among the $\\binom{n}{2}$ pairwise distances. We study exact online $Q_n$ computation in a sliding window by exploiting temporal rank coherence between consecutive windows. Formalizing the multiset decomposition of surviving pairwise distances in terms of strict and weak rank counts, we derive a tie-exact dual-rank update that verifies whether the previous unscaled estimate remains valid in $\\mathcal{O}(\\log n)$ comparisons while maintaining the sorted window in $\\mathcal{O}(n)$ time. When the target rank shifts by $m$ positions,…","headline":"Exact Online $Q_n$ Estimation: Exploiting Sliding-Window Rank Invariance","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.26852.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.26852.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Exact Online $Q_n$ Estimation: Exploiting Sliding-Window Rank Invariance</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Robin Nunkesser
+      <span class="sep">&middot;</span>
+      stat.CO
+      <span class="sep">&middot;</span>
+      23 Nov 2026
+    </div>
+  </div><div class="summary-box">Develops exact sliding-window algorithms for online Q_n scale estimation using rank-invariance updates and implicit order-statistic selection.</div><h3>Abstract</h3>
+  <p>The $Q_n$ scale estimator (Rousseeuw and Croux, 1993) combines a 50% finite-sample breakdown point with high Gaussian efficiency, but its computation requires selecting an order statistic among the $\binom{n}{2}$ pairwise distances. We study exact online $Q_n$ computation in a sliding window by exploiting temporal rank coherence between consecutive windows. Formalizing the multiset decomposition of surviving pairwise distances in terms of strict and weak rank counts, we derive a tie-exact dual-rank update that verifies whether the previous unscaled estimate remains valid in $\mathcal{O}(\log n)$ comparisons while maintaining the sorted window in $\mathcal{O}(n)$ time. When the target rank shifts by $m$ positions, a localized row-heap procedure initialized via a monotonic two-pointer frontier scan extracts the new exact order statistic in $\mathcal{O}(n + m\log n)$ comparisons without materializing the difference matrix, complemented by a hybrid fallback that executes frontier-guided implicit matrix selection in $\mathcal{O}(n\log n)$ time for larger rank shifts. On deterministic multi-regime stress streams, our implementation matches the offline batch reference. In repeated same-platform benchmarks on a synthetic Gaussian stream, our implementation achieves median internal throughputs from 2,220,000 updates/s ($n=25$) and 1,140,000 updates/s ($n=51$) to 127,000 updates/s ($n=201$), outperforming both the exact FQN baseline ($2.5\times$ to $6.4\times$) and the approximate AFQN sketch ($1.3\times$ to $2.7\times$) across all tested window sizes.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.26852" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.26852" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

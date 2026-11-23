@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Smoothed Conformal Testing with Small Calibration Sets</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Smoothed Conformal Testing with Small Calibration Sets" />
+<meta name="author" content="Mingzhou Deng, Yan Fu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A small calibration sample restricts split conformal $p$-values to a coarse rank grid. Randomization removes this discretization, but its effect depends on both the smoothing interval and the allocation of auxiliary random variables. Independent tie-block randomization is exactly valid under null exchangeability. When calibration and null scores are jointly exchangeable conditional on the alternative scores, we prove positive regression dependence and hence Benjamini–Hochberg false discovery rate control, including for atomic score distributions. Smoothing over calibration-dependent rank cells agrees with tie-block randomization when calibration scores are distinct and no test score ties a calibration score, but can fail marginal validity with…" />
+<meta name="twitter:description" property="og:description" content="A small calibration sample restricts split conformal $p$-values to a coarse rank grid. Randomization removes this discretization, but its effect depends on both the smoothing interval and the allocation of auxiliary random variables. Independent tie-block randomization is exactly valid under null exchangeability. When calibration and null scores are jointly exchangeable conditional on the alternative scores, we prove positive regression dependence and hence Benjamini–Hochberg false discovery rate control, including for atomic score distributions. Smoothing over calibration-dependent rank cells agrees with tie-block randomization when calibration scores are distinct and no test score ties a calibration score, but can fail marginal validity with…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.27315.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.27315.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-23T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-23T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Smoothed Conformal Testing with Small Calibration Sets" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mingzhou Deng, Yan Fu"},"dateModified":"2026-11-23T00:00:00+01:00","datePublished":"2026-11-23T00:00:00+01:00","description":"A small calibration sample restricts split conformal $p$-values to a coarse rank grid. Randomization removes this discretization, but its effect depends on both the smoothing interval and the allocation of auxiliary random variables. Independent tie-block randomization is exactly valid under null exchangeability. When calibration and null scores are jointly exchangeable conditional on the alternative scores, we prove positive regression dependence and hence Benjamini–Hochberg false discovery rate control, including for atomic score distributions. Smoothing over calibration-dependent rank cells agrees with tie-block randomization when calibration scores are distinct and no test score ties a calibration score, but can fail marginal validity with…","headline":"Smoothed Conformal Testing with Small Calibration Sets","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.27315.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.27315.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Smoothed Conformal Testing with Small Calibration Sets</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Mingzhou Deng, Yan Fu
+      <span class="sep">&middot;</span>
+      stat.ME, stat.TH
+      <span class="sep">&middot;</span>
+      23 Nov 2026
+    </div>
+  </div><div class="summary-box">Analyzes randomized smoothing of split conformal p-values, establishing validity and FDR results while identifying failures with small calibration sets.</div><h3>Abstract</h3>
+  <p>A small calibration sample restricts split conformal $p$-values to a coarse rank grid. Randomization removes this discretization, but its effect depends on both the smoothing interval and the allocation of auxiliary random variables. Independent tie-block randomization is exactly valid under null exchangeability. When calibration and null scores are jointly exchangeable conditional on the alternative scores, we prove positive regression dependence and hence Benjamini–Hochberg false discovery rate control, including for atomic score distributions. Smoothing over calibration-dependent rank cells agrees with tie-block randomization when calibration scores are distinct and no test score ties a calibration score, but can fail marginal validity with atoms. Assigning sorted random draws according to score order can invalidate even a single null $p$-value. An exact two-test example violates the usual $\pi_0\alpha$ bound, and simulations with continuous scores exhibit false discovery rates above the nominal level $\alpha$. Finally, conditional moment identities and normal-model illustrations show that removing the rank grid does not remove calibration uncertainty. Randomization can produce additional discoveries, including when ordinary conformal testing cannot reject at all, but it does not generally substitute for a larger calibration sample.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.27315" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.27315" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

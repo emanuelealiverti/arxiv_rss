@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Uncovering Multimorbidity Patterns Through a Novel Randomized Clustering Algorithm</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Uncovering Multimorbidity Patterns Through a Novel Randomized Clustering Algorithm" />
+<meta name="author" content="Ali Jafari, Hari Balasubramanian" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Patients with several chronic conditions rarely share the same combination: in four years of the nationally representative Medical Expenditure Panel Survey (MEPS), we find 32,789 distinct combinations of two to seven conditions, and over 90% of those involving four or more occur in a single patient. Methods that search for common combinations discard most of this heterogeneity. We present the Randomized Length Sequential Clustering Algorithm (RLSCA), which links diseases by lift, a pairwise association measure counted only above a user-set support threshold. A mixed-integer program repeatedly selects and removes the group of conditions with the greatest internal lift, up to…" />
+<meta name="twitter:description" property="og:description" content="Patients with several chronic conditions rarely share the same combination: in four years of the nationally representative Medical Expenditure Panel Survey (MEPS), we find 32,789 distinct combinations of two to seven conditions, and over 90% of those involving four or more occur in a single patient. Methods that search for common combinations discard most of this heterogeneity. We present the Randomized Length Sequential Clustering Algorithm (RLSCA), which links diseases by lift, a pairwise association measure counted only above a user-set support threshold. A mixed-integer program repeatedly selects and removes the group of conditions with the greatest internal lift, up to…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.26927.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.26927.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-23T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-23T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Uncovering Multimorbidity Patterns Through a Novel Randomized Clustering Algorithm" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ali Jafari, Hari Balasubramanian"},"dateModified":"2026-11-23T00:00:00+01:00","datePublished":"2026-11-23T00:00:00+01:00","description":"Patients with several chronic conditions rarely share the same combination: in four years of the nationally representative Medical Expenditure Panel Survey (MEPS), we find 32,789 distinct combinations of two to seven conditions, and over 90% of those involving four or more occur in a single patient. Methods that search for common combinations discard most of this heterogeneity. We present the Randomized Length Sequential Clustering Algorithm (RLSCA), which links diseases by lift, a pairwise association measure counted only above a user-set support threshold. A mixed-integer program repeatedly selects and removes the group of conditions with the greatest internal lift, up to…","headline":"Uncovering Multimorbidity Patterns Through a Novel Randomized Clustering Algorithm","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.26927.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/23/2611.26927.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Uncovering Multimorbidity Patterns Through a Novel Randomized Clustering Algorithm</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Ali Jafari, Hari Balasubramanian
+      <span class="sep">&middot;</span>
+      stat.AP, stat.ME
+      <span class="sep">&middot;</span>
+      23 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces a randomized mixed-integer clustering algorithm using lift thresholds to identify multimorbidity patterns in MEPS survey data.</div><h3>Abstract</h3>
+  <p>Patients with several chronic conditions rarely share the same combination: in four years of the nationally representative Medical Expenditure Panel Survey (MEPS), we find 32,789 distinct combinations of two to seven conditions, and over 90% of those involving four or more occur in a single patient. Methods that search for common combinations discard most of this heterogeneity. We present the Randomized Length Sequential Clustering Algorithm (RLSCA), which links diseases by lift, a pairwise association measure counted only above a user-set support threshold. A mixed-integer program repeatedly selects and removes the group of conditions with the greatest internal lift, up to a random size; 100 iterations yield a database of clusters scored by size, rediscovery frequency, and body systems spanned. In MEPS 2019, stratified by age and sex, RLSCA recovers known groupings at a high threshold, such as diabetes with lipid disorders and hypertension, and at a lower threshold returns clusters of up to eight conditions spanning five body systems. Frequent itemset mining, at its lowest feasible support, finds no set above five conditions; hierarchical clustering cannot control cluster size. With a clinical large language model, the database could suggest which further conditions a patient is at risk of.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.26927" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.26927" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
