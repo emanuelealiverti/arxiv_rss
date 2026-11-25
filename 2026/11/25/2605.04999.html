@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Tutorial for Evaluating Cure Model Appropriateness</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="A Tutorial for Evaluating Cure Model Appropriateness" />
+<meta name="author" content="Geethanjalee Mudunkotuwa, Durbadal Ghosh, Subodh Selukar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In survival analysis, traditional models assume all individuals will eventually experience the event of interest. However, advances in therapeutics have led to multiple clinical contexts with potentially curative therapies, and in these contexts, certain individuals may never experience the event. Statisticians have developed cure models as a methodology to address this challenge. However, despite significant statistical advances in cure models, we have seen more limited uptake in biomedical applications, and we hypothesize that this reflects limited guidance on the appropriate application of cure models. Cure models require specific identifiability conditions for valid parameter estimation, and previous reports have demonstrated significant…" />
+<meta name="twitter:description" property="og:description" content="In survival analysis, traditional models assume all individuals will eventually experience the event of interest. However, advances in therapeutics have led to multiple clinical contexts with potentially curative therapies, and in these contexts, certain individuals may never experience the event. Statisticians have developed cure models as a methodology to address this challenge. However, despite significant statistical advances in cure models, we have seen more limited uptake in biomedical applications, and we hypothesize that this reflects limited guidance on the appropriate application of cure models. Cure models require specific identifiability conditions for valid parameter estimation, and previous reports have demonstrated significant…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2605.04999.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2605.04999.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-25T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-25T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="A Tutorial for Evaluating Cure Model Appropriateness" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Geethanjalee Mudunkotuwa, Durbadal Ghosh, Subodh Selukar"},"dateModified":"2026-11-25T00:00:00+01:00","datePublished":"2026-11-25T00:00:00+01:00","description":"In survival analysis, traditional models assume all individuals will eventually experience the event of interest. However, advances in therapeutics have led to multiple clinical contexts with potentially curative therapies, and in these contexts, certain individuals may never experience the event. Statisticians have developed cure models as a methodology to address this challenge. However, despite significant statistical advances in cure models, we have seen more limited uptake in biomedical applications, and we hypothesize that this reflects limited guidance on the appropriate application of cure models. Cure models require specific identifiability conditions for valid parameter estimation, and previous reports have demonstrated significant…","headline":"A Tutorial for Evaluating Cure Model Appropriateness","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2605.04999.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2605.04999.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>A Tutorial for Evaluating Cure Model Appropriateness</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Geethanjalee Mudunkotuwa, Durbadal Ghosh, Subodh Selukar
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      25 Nov 2026
+    </div>
+  </div><div class="summary-box">Presents a systematic procedure for assessing cure model appropriateness using clinical judgment, Kaplan-Meier curves, and quantitative evaluation.</div><h3>Abstract</h3>
+  <p>In survival analysis, traditional models assume all individuals will eventually experience the event of interest. However, advances in therapeutics have led to multiple clinical contexts with potentially curative therapies, and in these contexts, certain individuals may never experience the event. Statisticians have developed cure models as a methodology to address this challenge. However, despite significant statistical advances in cure models, we have seen more limited uptake in biomedical applications, and we hypothesize that this reflects limited guidance on the appropriate application of cure models. Cure models require specific identifiability conditions for valid parameter estimation, and previous reports have demonstrated significant issues with the inappropriate application of cure models. Existing tutorials for cure models focus on model implementation and either assume or provide only limited guidance on whether cure modeling is appropriate for the given dataset. This tutorial addresses this gap by describing a systematic procedure that integrates clinical judgment, visual inspection of Kaplan-Meier curves, and quantitative evaluation. We provide a worked example using data from a randomized clinical trial in acute myeloid leukemia, and we also summarize findings from a series of other datasets of hematopoietic cell transplantation to suggest broad practical guidance for choosing to apply cure models. By systematically evaluating cure model appropriateness before fitting these models, researchers can achieve more reliable survival analysis and improved clinical decision-making.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2605.04999" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2605.04999" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

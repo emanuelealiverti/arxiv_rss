@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Statistical Inference for Fuzzy Clustering</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Statistical Inference for Fuzzy Clustering" />
+<meta name="author" content="Qiuyi Wu, Zihan Zhu, Anru R. Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Clustering is a central tool in biomedical research for discovering heterogeneous patient subpopulations, where group boundaries are often diffuse rather than sharply separated. While soft clustering methods such as fuzzy $c$-means (FCM) allow mixed memberships, principled statistical inference for fuzzy clustering remains limited. We propose a weighted fuzzy $c$-means (WFCM) framework for settings with cluster-size imbalance. Cluster-specific weights $\mathbf{w}$ re-balance the classic FCM criterion to adjust the relative influence of clusters of unequal size, and we construct a normalized working density from the weighted objective with scale parameter $\sigma$ and fuzziness parameter $m$. Estimation is performed via FCM-style alternating initialization…" />
+<meta name="twitter:description" property="og:description" content="Clustering is a central tool in biomedical research for discovering heterogeneous patient subpopulations, where group boundaries are often diffuse rather than sharply separated. While soft clustering methods such as fuzzy $c$-means (FCM) allow mixed memberships, principled statistical inference for fuzzy clustering remains limited. We propose a weighted fuzzy $c$-means (WFCM) framework for settings with cluster-size imbalance. Cluster-specific weights $\mathbf{w}$ re-balance the classic FCM criterion to adjust the relative influence of clusters of unequal size, and we construct a normalized working density from the weighted objective with scale parameter $\sigma$ and fuzziness parameter $m$. Estimation is performed via FCM-style alternating initialization…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2601.02656.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2601.02656.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-25T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-25T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Statistical Inference for Fuzzy Clustering" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Qiuyi Wu, Zihan Zhu, Anru R. Zhang"},"dateModified":"2026-11-25T00:00:00+01:00","datePublished":"2026-11-25T00:00:00+01:00","description":"Clustering is a central tool in biomedical research for discovering heterogeneous patient subpopulations, where group boundaries are often diffuse rather than sharply separated. While soft clustering methods such as fuzzy $c$-means (FCM) allow mixed memberships, principled statistical inference for fuzzy clustering remains limited. We propose a weighted fuzzy $c$-means (WFCM) framework for settings with cluster-size imbalance. Cluster-specific weights $\\mathbf{w}$ re-balance the classic FCM criterion to adjust the relative influence of clusters of unequal size, and we construct a normalized working density from the weighted objective with scale parameter $\\sigma$ and fuzziness parameter $m$. Estimation is performed via FCM-style alternating initialization…","headline":"Statistical Inference for Fuzzy Clustering","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2601.02656.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2601.02656.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Statistical Inference for Fuzzy Clustering</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Qiuyi Wu, Zihan Zhu, Anru R. Zhang
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      25 Nov 2026
+    </div>
+  </div><div class="summary-box">Develops weighted fuzzy c-means with importance-sampling likelihood approximation, bootstrap confidence intervals, and asymptotic theory for imbalanced clusters.</div><h3>Abstract</h3>
+  <p>Clustering is a central tool in biomedical research for discovering heterogeneous patient subpopulations, where group boundaries are often diffuse rather than sharply separated. While soft clustering methods such as fuzzy $c$-means (FCM) allow mixed memberships, principled statistical inference for fuzzy clustering remains limited. We propose a weighted fuzzy $c$-means (WFCM) framework for settings with cluster-size imbalance. Cluster-specific weights $\mathbf{w}$ re-balance the classic FCM criterion to adjust the relative influence of clusters of unequal size, and we construct a normalized working density from the weighted objective with scale parameter $\sigma$ and fuzziness parameter $m$. Estimation is performed via FCM-style alternating initialization followed by numerical likelihood refinement; the intractable normalizing constant is approximated by importance sampling using a data-adaptive Gaussian-mixture as the proposal distribution. We further develop bootstrap-based confidence intervals. We establish consistency and asymptotic normality of the maximum likelihood estimator, validate the method in simulations, and illustrate it on single-cell RNA-seq, Alzheimer’s Disease Neuroimaging Initiative (ADNI), and TCGA-BRCA data. These applications illustrate uncertainty quantification and interpretable soft memberships, ranging from imbalanced cell populations to graded compatibility with AD-like and non-AD-like prototypes.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2601.02656" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2601.02656" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

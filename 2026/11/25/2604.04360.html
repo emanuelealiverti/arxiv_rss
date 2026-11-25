@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Generalized win fraction regression for composite survival endpoints</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Generalized win fraction regression for composite survival endpoints" />
+<meta name="author" content="Zhiqiang Cao, Xi Fang, Fan Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose a generalized win fraction regression framework for prioritized composite survival outcomes. The framework models the conditional win fraction through a chosen link function (including identity, logit, or probit), thereby accommodating multi-component time-to-event endpoints within a unified regression structure. To handle right censoring, we construct inverse-probability-of-censoring-weighted estimating equations that target the win fraction as if censoring were absent. Under the identity link, regression parameters characterize covariate associations on the natural win fraction scale. Under the logit link, they characterize the log odds of winning – a new and complementary effect measure that treats ties as failures to win, imposing…" />
+<meta name="twitter:description" property="og:description" content="We propose a generalized win fraction regression framework for prioritized composite survival outcomes. The framework models the conditional win fraction through a chosen link function (including identity, logit, or probit), thereby accommodating multi-component time-to-event endpoints within a unified regression structure. To handle right censoring, we construct inverse-probability-of-censoring-weighted estimating equations that target the win fraction as if censoring were absent. Under the identity link, regression parameters characterize covariate associations on the natural win fraction scale. Under the logit link, they characterize the log odds of winning – a new and complementary effect measure that treats ties as failures to win, imposing…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2604.04360.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2604.04360.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-25T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-25T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Generalized win fraction regression for composite survival endpoints" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zhiqiang Cao, Xi Fang, Fan Li"},"dateModified":"2026-11-25T00:00:00+01:00","datePublished":"2026-11-25T00:00:00+01:00","description":"We propose a generalized win fraction regression framework for prioritized composite survival outcomes. The framework models the conditional win fraction through a chosen link function (including identity, logit, or probit), thereby accommodating multi-component time-to-event endpoints within a unified regression structure. To handle right censoring, we construct inverse-probability-of-censoring-weighted estimating equations that target the win fraction as if censoring were absent. Under the identity link, regression parameters characterize covariate associations on the natural win fraction scale. Under the logit link, they characterize the log odds of winning – a new and complementary effect measure that treats ties as failures to win, imposing…","headline":"Generalized win fraction regression for composite survival endpoints","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2604.04360.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2604.04360.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Generalized win fraction regression for composite survival endpoints</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Zhiqiang Cao, Xi Fang, Fan Li
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      25 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces generalized win fraction regression for composite survival endpoints using link functions, censoring-weighted estimating equations, and sandwich variance estimation.</div><h3>Abstract</h3>
+  <p>We propose a generalized win fraction regression framework for prioritized composite survival outcomes. The framework models the conditional win fraction through a chosen link function (including identity, logit, or probit), thereby accommodating multi-component time-to-event endpoints within a unified regression structure. To handle right censoring, we construct inverse-probability-of-censoring-weighted estimating equations that target the win fraction as if censoring were absent. Under the identity link, regression parameters characterize covariate associations on the natural win fraction scale. Under the logit link, they characterize the log odds of winning – a new and complementary effect measure that treats ties as failures to win, imposing a more conservative standard than the win ratio or win odds. When there are no ties, the logit win fraction model reduces to proportional win fraction regression; moreover, the unweighted version of our estimating equations numerically coincides with the proportional win fraction point estimator regardless of ties. We establish large-sample properties of the proposed estimators and derive a consistent sandwich variance estimator that accounts for uncertainty from the estimated censoring weights. Extensive simulations examine finite-sample performance across link functions and censoring rates, and our method is illustrated through a reanalysis of the HF-ACTION clinical trial.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2604.04360" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2604.04360" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Cross-Order Information-Guided Estimation for Non-Uniform Hypergraphs</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Cross-Order Information-Guided Estimation for Non-Uniform Hypergraphs" />
+<meta name="author" content="Rongzhuo Nie, Menghao Wang, Sanguo Zhang, Mingyang Ren, Guojun Zhu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many real-world interactions involve groups of nodes rather than pairs. A non-uniform hypergraph records such interactions as hyperedges of different orders, where the order counts the nodes in a hyperedge. Full estimation evaluates every candidate hyperedge, whose number grows exponentially with the order, and classical remedies sacrifice higher-order information or aggravate computation. The orders are not isolated: the lower orders, cheap to compute and rich in information, reveal where higher-order hyperedges are likely to occur. We propose CINE (Cross-order Information-guided Negative-sampling Estimation) under a latent space model in which all orders share latent positions. Starting from order two, CINE climbs…" />
+<meta name="twitter:description" property="og:description" content="Many real-world interactions involve groups of nodes rather than pairs. A non-uniform hypergraph records such interactions as hyperedges of different orders, where the order counts the nodes in a hyperedge. Full estimation evaluates every candidate hyperedge, whose number grows exponentially with the order, and classical remedies sacrifice higher-order information or aggravate computation. The orders are not isolated: the lower orders, cheap to compute and rich in information, reveal where higher-order hyperedges are likely to occur. We propose CINE (Cross-order Information-guided Negative-sampling Estimation) under a latent space model in which all orders share latent positions. Starting from order two, CINE climbs…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2611.32430.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2611.32430.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-25T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-25T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Cross-Order Information-Guided Estimation for Non-Uniform Hypergraphs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rongzhuo Nie, Menghao Wang, Sanguo Zhang, Mingyang Ren, Guojun Zhu"},"dateModified":"2026-11-25T00:00:00+01:00","datePublished":"2026-11-25T00:00:00+01:00","description":"Many real-world interactions involve groups of nodes rather than pairs. A non-uniform hypergraph records such interactions as hyperedges of different orders, where the order counts the nodes in a hyperedge. Full estimation evaluates every candidate hyperedge, whose number grows exponentially with the order, and classical remedies sacrifice higher-order information or aggravate computation. The orders are not isolated: the lower orders, cheap to compute and rich in information, reveal where higher-order hyperedges are likely to occur. We propose CINE (Cross-order Information-guided Negative-sampling Estimation) under a latent space model in which all orders share latent positions. Starting from order two, CINE climbs…","headline":"Cross-Order Information-Guided Estimation for Non-Uniform Hypergraphs","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2611.32430.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2611.32430.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Cross-Order Information-Guided Estimation for Non-Uniform Hypergraphs</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Rongzhuo Nie, Menghao Wang, Sanguo Zhang, Mingyang Ren, Guojun Zhu
+      <span class="sep">&middot;</span>
+      stat.CO, stat.ME
+      <span class="sep">&middot;</span>
+      25 Nov 2026
+    </div>
+  </div><div class="summary-box">CINE guides negative sampling with lower-order hypergraph information to efficiently estimate non-uniform hypergraphs under a shared latent space model.</div><h3>Abstract</h3>
+  <p>Many real-world interactions involve groups of nodes rather than pairs. A non-uniform hypergraph records such interactions as hyperedges of different orders, where the order counts the nodes in a hyperedge. Full estimation evaluates every candidate hyperedge, whose number grows exponentially with the order, and classical remedies sacrifice higher-order information or aggravate computation. The orders are not isolated: the lower orders, cheap to compute and rich in information, reveal where higher-order hyperedges are likely to occur. We propose CINE (Cross-order Information-guided Negative-sampling Estimation) under a latent space model in which all orders share latent positions. Starting from order two, CINE climbs one order at a time. At each higher order, CINE keeps all present hyperedges, samples a small subset of negative examples guided by lower-order scores, and corrects for the known inclusion probabilities to preserve the target of full estimation. CINE thereby lets users choose the trade-off between computation time and estimation accuracy: the retained orders and the sampling budget set the time, and the retained information provably approaches full-data information as the sampling budget grows. In simulations, CINE approaches the accuracy of full estimation at a small fraction of its computation time, and larger teams in MADStat reveal research associations.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.32430" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.32430" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

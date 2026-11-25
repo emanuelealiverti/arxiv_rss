@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PHM-ensemble: Scalable and Stable Probabilistic Multiresolution Clustering via Ensemble Density Estimation</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="PHM-ensemble: Scalable and Stable Probabilistic Multiresolution Clustering via Ensemble Density Estimation" />
+<meta name="author" content="Ali Turfah, Xiaoquan Wen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Clustering is a foundational tool for exploratory data analysis across the sciences. We argue that clustering methods should be evaluated along four dimensions: fidelity to the data’s underlying structure, interpretability of the recovered groups, stability under data perturbations and algorithmic randomness, and scalability to modern scientific datasets. Yet existing methods rarely satisfy all four criteria. To address this gap, we introduce PHM-ensemble, a general probabilistic framework for multiresolution clustering that estimates the underlying data density by pooling mixture models from an ensemble of fits and subsequently constructs a clustering hierarchy through hierarchical merging of the mixture components. On simulated datasets…" />
+<meta name="twitter:description" property="og:description" content="Clustering is a foundational tool for exploratory data analysis across the sciences. We argue that clustering methods should be evaluated along four dimensions: fidelity to the data’s underlying structure, interpretability of the recovered groups, stability under data perturbations and algorithmic randomness, and scalability to modern scientific datasets. Yet existing methods rarely satisfy all four criteria. To address this gap, we introduce PHM-ensemble, a general probabilistic framework for multiresolution clustering that estimates the underlying data density by pooling mixture models from an ensemble of fits and subsequently constructs a clustering hierarchy through hierarchical merging of the mixture components. On simulated datasets…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2611.32945.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2611.32945.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-25T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-25T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="PHM-ensemble: Scalable and Stable Probabilistic Multiresolution Clustering via Ensemble Density Estimation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ali Turfah, Xiaoquan Wen"},"dateModified":"2026-11-25T00:00:00+01:00","datePublished":"2026-11-25T00:00:00+01:00","description":"Clustering is a foundational tool for exploratory data analysis across the sciences. We argue that clustering methods should be evaluated along four dimensions: fidelity to the data’s underlying structure, interpretability of the recovered groups, stability under data perturbations and algorithmic randomness, and scalability to modern scientific datasets. Yet existing methods rarely satisfy all four criteria. To address this gap, we introduce PHM-ensemble, a general probabilistic framework for multiresolution clustering that estimates the underlying data density by pooling mixture models from an ensemble of fits and subsequently constructs a clustering hierarchy through hierarchical merging of the mixture components. On simulated datasets…","headline":"PHM-ensemble: Scalable and Stable Probabilistic Multiresolution Clustering via Ensemble Density Estimation","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2611.32945.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/25/2611.32945.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>PHM-ensemble: Scalable and Stable Probabilistic Multiresolution Clustering via Ensemble Density Estimation</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Ali Turfah, Xiaoquan Wen
+      <span class="sep">&middot;</span>
+      stat.ML, stat.ME
+      <span class="sep">&middot;</span>
+      25 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces an ensemble mixture-model density estimation framework for scalable, stable multiresolution clustering of large datasets.</div><h3>Abstract</h3>
+  <p>Clustering is a foundational tool for exploratory data analysis across the sciences. We argue that clustering methods should be evaluated along four dimensions: fidelity to the data’s underlying structure, interpretability of the recovered groups, stability under data perturbations and algorithmic randomness, and scalability to modern scientific datasets. Yet existing methods rarely satisfy all four criteria. To address this gap, we introduce PHM-ensemble, a general probabilistic framework for multiresolution clustering that estimates the underlying data density by pooling mixture models from an ensemble of fits and subsequently constructs a clustering hierarchy through hierarchical merging of the mixture components. On simulated datasets and the MNIST benchmark, PHM-ensemble matches or outperforms widely used clustering algorithms in agreement with ground truth, produces more stable results across runs, and reveals complex underlying structures. Applied to 1.82 million peripheral blood cells from the Human Immune Health Atlas, PHM-ensemble achieves higher agreement with expert-curated major cell-type annotations than the Leiden clustering used in the original study (adjusted Rand index 0.965 versus 0.789), while requiring only half the computing time. Beyond identifying major immune lineages, it reveals biologically coherent relationships among cell types and resolves finer structure within individual lineages, uncovering subtypes and cellular states consistent with known biology.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.32945" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.32945" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
