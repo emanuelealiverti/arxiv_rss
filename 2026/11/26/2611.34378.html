@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>BADGERS: Bayesian Adaptive Graph-Guided Errors-in-Variables Regression Solution for Structured High-Dimensional Data</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="BADGERS: Bayesian Adaptive Graph-Guided Errors-in-Variables Regression Solution for Structured High-Dimensional Data" />
+<meta name="author" content="Zeyu Hu, Kewen Qu, Qi Long, Jun Yan, Wenrui Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Knowledge-guided learning methods that incorporate biological graph information into the analysis of structured high-dimensional data, such as genomic data, can improve variable selection and prediction accuracy while yielding more interpretable results. However, these methods typically assume that covariates are measured without error. This assumption is often violated in omics studies involving replicated measurements. To address this gap, we develop the Bayesian Adaptive Graph-guided Errors-in-variables Regression Solution (BADGERS), a Bayesian framework that jointly accounts for covariate measurement error and incorporates graph information while accommodating varying numbers of replicates across covariates. BADGERS treats the true covariates as latent variables and integrates three…" />
+<meta name="twitter:description" property="og:description" content="Knowledge-guided learning methods that incorporate biological graph information into the analysis of structured high-dimensional data, such as genomic data, can improve variable selection and prediction accuracy while yielding more interpretable results. However, these methods typically assume that covariates are measured without error. This assumption is often violated in omics studies involving replicated measurements. To address this gap, we develop the Bayesian Adaptive Graph-guided Errors-in-variables Regression Solution (BADGERS), a Bayesian framework that jointly accounts for covariate measurement error and incorporates graph information while accommodating varying numbers of replicates across covariates. BADGERS treats the true covariates as latent variables and integrates three…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34378.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34378.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-26T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-26T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="BADGERS: Bayesian Adaptive Graph-Guided Errors-in-Variables Regression Solution for Structured High-Dimensional Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zeyu Hu, Kewen Qu, Qi Long, Jun Yan, Wenrui Li"},"dateModified":"2026-11-26T00:00:00+01:00","datePublished":"2026-11-26T00:00:00+01:00","description":"Knowledge-guided learning methods that incorporate biological graph information into the analysis of structured high-dimensional data, such as genomic data, can improve variable selection and prediction accuracy while yielding more interpretable results. However, these methods typically assume that covariates are measured without error. This assumption is often violated in omics studies involving replicated measurements. To address this gap, we develop the Bayesian Adaptive Graph-guided Errors-in-variables Regression Solution (BADGERS), a Bayesian framework that jointly accounts for covariate measurement error and incorporates graph information while accommodating varying numbers of replicates across covariates. BADGERS treats the true covariates as latent variables and integrates three…","headline":"BADGERS: Bayesian Adaptive Graph-Guided Errors-in-Variables Regression Solution for Structured High-Dimensional Data","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34378.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34378.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>BADGERS: Bayesian Adaptive Graph-Guided Errors-in-Variables Regression Solution for Structured High-Dimensional Data</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-high">high</span>
+      Zeyu Hu, Kewen Qu, Qi Long, Jun Yan, Wenrui Li
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      26 Nov 2026
+    </div>
+  </div><div class="summary-box">Bayesian errors-in-variables regression with latent covariates, graph-informed graphical lasso priors, and an MCMC algorithm for high-dimensional genomic data.</div><h3>Abstract</h3>
+  <p>Knowledge-guided learning methods that incorporate biological graph information into the analysis of structured high-dimensional data, such as genomic data, can improve variable selection and prediction accuracy while yielding more interpretable results. However, these methods typically assume that covariates are measured without error. This assumption is often violated in omics studies involving replicated measurements. To address this gap, we develop the Bayesian Adaptive Graph-guided Errors-in-variables Regression Solution (BADGERS), a Bayesian framework that jointly accounts for covariate measurement error and incorporates graph information while accommodating varying numbers of replicates across covariates. BADGERS treats the true covariates as latent variables and integrates three key components: a Gaussian errors-in-variables model using replicated measurements to inform the latent true covariates, a Bayesian adaptive graphical lasso with a graph-informed prior to model their dependence structure, and a regression model with an adaptive structured shrinkage prior to leverage graph information and facilitate variable selection. We develop an efficient Markov chain Monte Carlo algorithm for posterior sampling. We demonstrate the advantages of BADGERS over existing methods through simulation studies and analyses of gene expression datasets for Alzheimer’s disease and multiple myeloma.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.34378" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.34378" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

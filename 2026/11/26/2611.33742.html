@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning to Infer: Statistical Inference through Meta Learning</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Learning to Infer: Statistical Inference through Meta Learning" />
+<meta name="author" content="Xiaolu Li, Yun Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study meta learning for statistical inference, in which neural networks learn inference rules from simulated tasks and apply them to new datasets without parameter updates, providing a form of in-context learning. We draw on statistical decision theory to design training objectives whose population minimizers are Bayes rules and exploit their connections to classical inference procedures to establish frequentist guarantees for the learned rules. The structure of classical inference procedures also motivates the design of our neural network architecture, called Residual Recurrent Deep Sets (RRDS), which repeatedly aggregates information across observations in a permutation-invariant manner and refines its internal state…" />
+<meta name="twitter:description" property="og:description" content="We study meta learning for statistical inference, in which neural networks learn inference rules from simulated tasks and apply them to new datasets without parameter updates, providing a form of in-context learning. We draw on statistical decision theory to design training objectives whose population minimizers are Bayes rules and exploit their connections to classical inference procedures to establish frequentist guarantees for the learned rules. The structure of classical inference procedures also motivates the design of our neural network architecture, called Residual Recurrent Deep Sets (RRDS), which repeatedly aggregates information across observations in a permutation-invariant manner and refines its internal state…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.33742.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.33742.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-26T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-26T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Learning to Infer: Statistical Inference through Meta Learning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xiaolu Li, Yun Yang"},"dateModified":"2026-11-26T00:00:00+01:00","datePublished":"2026-11-26T00:00:00+01:00","description":"We study meta learning for statistical inference, in which neural networks learn inference rules from simulated tasks and apply them to new datasets without parameter updates, providing a form of in-context learning. We draw on statistical decision theory to design training objectives whose population minimizers are Bayes rules and exploit their connections to classical inference procedures to establish frequentist guarantees for the learned rules. The structure of classical inference procedures also motivates the design of our neural network architecture, called Residual Recurrent Deep Sets (RRDS), which repeatedly aggregates information across observations in a permutation-invariant manner and refines its internal state…","headline":"Learning to Infer: Statistical Inference through Meta Learning","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.33742.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.33742.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Learning to Infer: Statistical Inference through Meta Learning</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Xiaolu Li, Yun Yang
+      <span class="sep">&middot;</span>
+      stat.ME, stat.ML, stat.TH
+      <span class="sep">&middot;</span>
+      26 Nov 2026
+    </div>
+  </div><h3>Abstract</h3>
+  <p>We study meta learning for statistical inference, in which neural networks learn inference rules from simulated tasks and apply them to new datasets without parameter updates, providing a form of in-context learning. We draw on statistical decision theory to design training objectives whose population minimizers are Bayes rules and exploit their connections to classical inference procedures to establish frequentist guarantees for the learned rules. The structure of classical inference procedures also motivates the design of our neural network architecture, called Residual Recurrent Deep Sets (RRDS), which repeatedly aggregates information across observations in a permutation-invariant manner and refines its internal state through residual updates. Under suitable regularity and training conditions, we establish asymptotic efficiency in parameter estimation, consistency in model selection, and variable selection guarantees in high-dimensional regression models. The RRDS architecture allows us to avoid the curse of sample size that arises in generic neural network approximation when the network takes the entire dataset as input. For fixed-dimensional models, the network size and the number of meta training tasks need only grow polynomially in the sample size; under additional analyticity conditions, these requirements improve to polylogarithmic growth in network size and nearly linear growth in the number of training tasks. Numerical experiments illustrate the finite-sample advantages of the learned inference rules over classical methods.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.33742" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.33742" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

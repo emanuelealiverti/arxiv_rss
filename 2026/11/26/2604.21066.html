@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When the Prior Is Wrong: Probing Misspecified Diffusion Priors in Inverse Problems</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="When the Prior Is Wrong: Probing Misspecified Diffusion Priors in Inverse Problems" />
+<meta name="author" content="Frederic Wang, Katherine L. Bouman" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="While diffusion priors generate high-quality posterior samples across many scientific inverse problems, they are often trained on purely simulated data, thus inheriting the errors and biases of these underlying sources. Many approaches to adapting diffusion priors from a single observation require sufficient conflict between the data and the prior to successfully adapt and do not allow specific misspecification hypotheses to be tested. On the other hand, existing out-of-distribution (OOD) detection methods determine whether the observation is compatible with a fixed prior, rather than specifying which assumptions to relax or by how much. To address these issues, we propose PIVOT: Prior…" />
+<meta name="twitter:description" property="og:description" content="While diffusion priors generate high-quality posterior samples across many scientific inverse problems, they are often trained on purely simulated data, thus inheriting the errors and biases of these underlying sources. Many approaches to adapting diffusion priors from a single observation require sufficient conflict between the data and the prior to successfully adapt and do not allow specific misspecification hypotheses to be tested. On the other hand, existing out-of-distribution (OOD) detection methods determine whether the observation is compatible with a fixed prior, rather than specifying which assumptions to relax or by how much. To address these issues, we propose PIVOT: Prior…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2604.21066.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2604.21066.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-26T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-26T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="When the Prior Is Wrong: Probing Misspecified Diffusion Priors in Inverse Problems" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Frederic Wang, Katherine L. Bouman"},"dateModified":"2026-11-26T00:00:00+01:00","datePublished":"2026-11-26T00:00:00+01:00","description":"While diffusion priors generate high-quality posterior samples across many scientific inverse problems, they are often trained on purely simulated data, thus inheriting the errors and biases of these underlying sources. Many approaches to adapting diffusion priors from a single observation require sufficient conflict between the data and the prior to successfully adapt and do not allow specific misspecification hypotheses to be tested. On the other hand, existing out-of-distribution (OOD) detection methods determine whether the observation is compatible with a fixed prior, rather than specifying which assumptions to relax or by how much. To address these issues, we propose PIVOT: Prior…","headline":"When the Prior Is Wrong: Probing Misspecified Diffusion Priors in Inverse Problems","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2604.21066.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2604.21066.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>When the Prior Is Wrong: Probing Misspecified Diffusion Priors in Inverse Problems</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Frederic Wang, Katherine L. Bouman
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      26 Nov 2026
+    </div>
+  </div><div class="summary-box">PIVOT infers posterior distributions over scientifically plausible prior misspecification directions in diffusion-based inverse problems using observation-driven transformations.</div><h3>Abstract</h3>
+  <p>While diffusion priors generate high-quality posterior samples across many scientific inverse problems, they are often trained on purely simulated data, thus inheriting the errors and biases of these underlying sources. Many approaches to adapting diffusion priors from a single observation require sufficient conflict between the data and the prior to successfully adapt and do not allow specific misspecification hypotheses to be tested. On the other hand, existing out-of-distribution (OOD) detection methods determine whether the observation is compatible with a fixed prior, rather than specifying which assumptions to relax or by how much. To address these issues, we propose PIVOT: Prior Inference Via Observation-driven Transformations, which formulates diffusion prior misspecification as inference over an underlying latent variable representing a scientifically plausible discrepancy. By expanding the prior along these plausible directions of misspecification, PIVOT infers a posterior over the strength of each proposed discrepancy given the observation. This process can be efficiently amortized with just one posterior sampling pass using a conditional diffusion model. We also demonstrate how to determine if a proposed discrepancy is inconclusive because the measurement is too noisy or ill-posed. We validate PIVOT on seismic imaging and real-world black hole imaging problems, where we find that OOD observations generally lead to larger perturbation strengths when the proposed discrepancy family captures relevant components of the mismatch, as long as the discrepancy is visible to the measurement. PIVOT thereby provides an interpretable probe into how real-world priors could be misspecified.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2604.21066" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2604.21066" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

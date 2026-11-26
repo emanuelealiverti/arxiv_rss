@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Pseudo-IPD Reconstruction from Published Kaplan-Meier Curves under Unidentified Within-Interval Censoring</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Pseudo-IPD Reconstruction from Published Kaplan-Meier Curves under Unidentified Within-Interval Censoring" />
+<meta name="author" content="Yi-Cheng Tai, Weijing Wang, Martin T. Wells" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reconstruction of pseudo-individual patient data (pseudo-IPD) from published Kaplan-Meier curves and number-at-risk tables is widely used to support secondary survival analyses when individual-level data are unavailable. However, the reconstruction is generally not unique because the published information does not determine how censoring is distributed within each risk-table interval. We study the non-identifiability that remains after interval-level event and censoring totals have been reconstructed. Different within-interval censoring placements can yield similarly good Kaplan-Meier agreement but different risk-set and censoring patterns, with possible effects on subsequent analyses. We characterize this non-identifiability, introduce a systematic allocation scheme, and assess its impact on reconstructed…" />
+<meta name="twitter:description" property="og:description" content="Reconstruction of pseudo-individual patient data (pseudo-IPD) from published Kaplan-Meier curves and number-at-risk tables is widely used to support secondary survival analyses when individual-level data are unavailable. However, the reconstruction is generally not unique because the published information does not determine how censoring is distributed within each risk-table interval. We study the non-identifiability that remains after interval-level event and censoring totals have been reconstructed. Different within-interval censoring placements can yield similarly good Kaplan-Meier agreement but different risk-set and censoring patterns, with possible effects on subsequent analyses. We characterize this non-identifiability, introduce a systematic allocation scheme, and assess its impact on reconstructed…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34326.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34326.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-26T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-26T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Pseudo-IPD Reconstruction from Published Kaplan-Meier Curves under Unidentified Within-Interval Censoring" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yi-Cheng Tai, Weijing Wang, Martin T. Wells"},"dateModified":"2026-11-26T00:00:00+01:00","datePublished":"2026-11-26T00:00:00+01:00","description":"Reconstruction of pseudo-individual patient data (pseudo-IPD) from published Kaplan-Meier curves and number-at-risk tables is widely used to support secondary survival analyses when individual-level data are unavailable. However, the reconstruction is generally not unique because the published information does not determine how censoring is distributed within each risk-table interval. We study the non-identifiability that remains after interval-level event and censoring totals have been reconstructed. Different within-interval censoring placements can yield similarly good Kaplan-Meier agreement but different risk-set and censoring patterns, with possible effects on subsequent analyses. We characterize this non-identifiability, introduce a systematic allocation scheme, and assess its impact on reconstructed…","headline":"Pseudo-IPD Reconstruction from Published Kaplan-Meier Curves under Unidentified Within-Interval Censoring","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34326.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34326.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Pseudo-IPD Reconstruction from Published Kaplan-Meier Curves under Unidentified Within-Interval Censoring</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-medium">medium</span>
+      Yi-Cheng Tai, Weijing Wang, Martin T. Wells
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      26 Nov 2026
+    </div>
+  </div><div class="summary-box">Characterizes non-identifiability of pseudo-IPD reconstruction from Kaplan-Meier curves and proposes systematic within-interval censoring allocation assessed via simulation.</div><h3>Abstract</h3>
+  <p>Reconstruction of pseudo-individual patient data (pseudo-IPD) from published Kaplan-Meier curves and number-at-risk tables is widely used to support secondary survival analyses when individual-level data are unavailable. However, the reconstruction is generally not unique because the published information does not determine how censoring is distributed within each risk-table interval. We study the non-identifiability that remains after interval-level event and censoring totals have been reconstructed. Different within-interval censoring placements can yield similarly good Kaplan-Meier agreement but different risk-set and censoring patterns, with possible effects on subsequent analyses. We characterize this non-identifiability, introduce a systematic allocation scheme, and assess its impact on reconstructed pseudo-IPD and downstream analyses. Simulation studies were conducted to examine how within-interval censoring allocation affects pseudo-IPD reconstruction under different risk-table resolutions and censoring settings. The proposed approach was also illustrated using published data from CheckMate 067. Our analysis suggests that considering multiple reconstructions provides a practical way to assess the impact of this non-identifiability on downstream analyses.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.34326" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.34326" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

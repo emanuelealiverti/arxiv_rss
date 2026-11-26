@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bias Correction for Scalar-on-Density Regression Models</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Bias Correction for Scalar-on-Density Regression Models" />
+<meta name="author" content="Fenglin Xie, Todd Ogden" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In one extension of scalar-on-function regression modeling, the covariate is taken to be a density that is estimated from a finite number of measurements gathered for each observational unit. When this number of measurements is relatively small, the estimated coefficient function suffers from attenuation bias. This paper studies how the bias depends on the number of measurements per unit and proposes a bias-correction method based on simulation extrapolation (SIMEX). We establish that the bias decreases monotonically as the number of measurements per unit increases. The proposed SIMEX procedure applies bootstrap resampling to simulate smaller measurement counts and then extrapolates to…" />
+<meta name="twitter:description" property="og:description" content="In one extension of scalar-on-function regression modeling, the covariate is taken to be a density that is estimated from a finite number of measurements gathered for each observational unit. When this number of measurements is relatively small, the estimated coefficient function suffers from attenuation bias. This paper studies how the bias depends on the number of measurements per unit and proposes a bias-correction method based on simulation extrapolation (SIMEX). We establish that the bias decreases monotonically as the number of measurements per unit increases. The proposed SIMEX procedure applies bootstrap resampling to simulate smaller measurement counts and then extrapolates to…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2606.04523.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2606.04523.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-26T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-26T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bias Correction for Scalar-on-Density Regression Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Fenglin Xie, Todd Ogden"},"dateModified":"2026-11-26T00:00:00+01:00","datePublished":"2026-11-26T00:00:00+01:00","description":"In one extension of scalar-on-function regression modeling, the covariate is taken to be a density that is estimated from a finite number of measurements gathered for each observational unit. When this number of measurements is relatively small, the estimated coefficient function suffers from attenuation bias. This paper studies how the bias depends on the number of measurements per unit and proposes a bias-correction method based on simulation extrapolation (SIMEX). We establish that the bias decreases monotonically as the number of measurements per unit increases. The proposed SIMEX procedure applies bootstrap resampling to simulate smaller measurement counts and then extrapolates to…","headline":"Bias Correction for Scalar-on-Density Regression Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2606.04523.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2606.04523.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Bias Correction for Scalar-on-Density Regression Models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Fenglin Xie, Todd Ogden
+      <span class="sep">&middot;</span>
+      stat.ME
+      <span class="sep">&middot;</span>
+      26 Nov 2026
+    </div>
+  </div><div class="summary-box">Proposes a SIMEX-based bootstrap bias-correction procedure for scalar-on-density regression coefficients estimated from finite measurements per unit.</div><h3>Abstract</h3>
+  <p>In one extension of scalar-on-function regression modeling, the covariate is taken to be a density that is estimated from a finite number of measurements gathered for each observational unit. When this number of measurements is relatively small, the estimated coefficient function suffers from attenuation bias. This paper studies how the bias depends on the number of measurements per unit and proposes a bias-correction method based on simulation extrapolation (SIMEX). We establish that the bias decreases monotonically as the number of measurements per unit increases. The proposed SIMEX procedure applies bootstrap resampling to simulate smaller measurement counts and then extrapolates to infinitely many measurements, thereby correcting finite-measurement bias. A comprehensive simulation study, conducted over a range of sample sizes and noise levels, shows that the mean integrated squared error of the coefficient function decreases with more measurements per unit and that the SIMEX-extrapolated estimates achieve lower bias than the naive estimates based on the full set of measurements. The practical utility of the method is further illustrated through an application to the National Health and Nutrition Examination Survey, for which we relate 24-hour physical activity profiles to all-cause mortality. This example supports the validity of the method and demonstrates its ability to detect and correct for finite-measurement bias.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2606.04523" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2606.04523" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Modeling time series of high-resolution spectra using the asymmetric Hilbert-Schmidt decomposition with application to radial velocity exoplanet searches</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Modeling time series of high-resolution spectra using the asymmetric Hilbert-Schmidt decomposition with application to radial velocity exoplanet searches" />
+<meta name="author" content="Kevin Tao, Thomas Loredo, David Ruppert" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We describe a framework for building low-rank separable expansions to model spectroscopic data from systems with time-varying spectra, in settings where the spectral dimension is finely sampled (in wavelength), but the temporal dimension is sparsely and possibly irregulary sampled. The motivating application is detection and characterization of small exoplanets, e.g., Earth-like planets around Sun-like stars. Such planets cannot be seen directly, but can be detected via the minute Doppler shifts of the host star spectrum due to the star’s motion as the planet and star revolve around their mutual center of mass. Current instruments are reaching the precision necessary to…" />
+<meta name="twitter:description" property="og:description" content="We describe a framework for building low-rank separable expansions to model spectroscopic data from systems with time-varying spectra, in settings where the spectral dimension is finely sampled (in wavelength), but the temporal dimension is sparsely and possibly irregulary sampled. The motivating application is detection and characterization of small exoplanets, e.g., Earth-like planets around Sun-like stars. Such planets cannot be seen directly, but can be detected via the minute Doppler shifts of the host star spectrum due to the star’s motion as the planet and star revolve around their mutual center of mass. Current instruments are reaching the precision necessary to…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34786.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34786.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-26T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-26T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Modeling time series of high-resolution spectra using the asymmetric Hilbert-Schmidt decomposition with application to radial velocity exoplanet searches" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kevin Tao, Thomas Loredo, David Ruppert"},"dateModified":"2026-11-26T00:00:00+01:00","datePublished":"2026-11-26T00:00:00+01:00","description":"We describe a framework for building low-rank separable expansions to model spectroscopic data from systems with time-varying spectra, in settings where the spectral dimension is finely sampled (in wavelength), but the temporal dimension is sparsely and possibly irregulary sampled. The motivating application is detection and characterization of small exoplanets, e.g., Earth-like planets around Sun-like stars. Such planets cannot be seen directly, but can be detected via the minute Doppler shifts of the host star spectrum due to the star’s motion as the planet and star revolve around their mutual center of mass. Current instruments are reaching the precision necessary to…","headline":"Modeling time series of high-resolution spectra using the asymmetric Hilbert-Schmidt decomposition with application to radial velocity exoplanet searches","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34786.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.34786.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Modeling time series of high-resolution spectra using the asymmetric Hilbert-Schmidt decomposition with application to radial velocity exoplanet searches</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Kevin Tao, Thomas Loredo, David Ruppert
+      <span class="sep">&middot;</span>
+      stat.AP
+      <span class="sep">&middot;</span>
+      26 Nov 2026
+    </div>
+  </div><div class="summary-box">Introduces an asymmetric Hilbert-Schmidt decomposition for low-rank modeling of irregularly sampled dynamic spectra, improving spectral basis estimation over PCA.</div><h3>Abstract</h3>
+  <p>We describe a framework for building low-rank separable expansions to model spectroscopic data from systems with time-varying spectra, in settings where the spectral dimension is finely sampled (in wavelength), but the temporal dimension is sparsely and possibly irregulary sampled. The motivating application is detection and characterization of small exoplanets, e.g., Earth-like planets around Sun-like stars. Such planets cannot be seen directly, but can be detected via the minute Doppler shifts of the host star spectrum due to the star’s motion as the planet and star revolve around their mutual center of mass. Current instruments are reaching the precision necessary to detect the ~10 cm/s motions corresponding to an exo-Earth. But the small Doppler shifts from such low-amplitude orbital motion can be masked or mimicked by the effects of stellar activity on the surface of the host star. e.g., starspots (dark regions), faculae (bright filaments), etc. One technique astronomers have used to try to model the stellar activity component of the signal is PCA, applied to an ensemble of spectra collected over time. But PCA neglects the continuous function nature of a spectrum at a given time, and the continuous evolution of spectra over time. We address model building from a function approximation perspective, via the asymmetric Hilbert-Schmidt decomposition (HSD). This provides a PCA-like low-rank decomposition of a dynamic spectrum, but it explicitly accounts for time dependence, both estimating temporal basis functions, and accounting for irregular temporal sampling when estimating spectral basis functions. We show that HSD improves the fidelity of a fixed-order model of the dynamic spectrum of a Sun-like star with a starspot, with mean squared error for spectral basis functions many times smaller than achieved via PCA when spectra are randomly sampled sparsely and irregularly in time.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.34786" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.34786" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>

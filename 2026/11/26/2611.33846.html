@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Simple, general strategies for correcting the upward bias of calibration summaries of prediction models</title><!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Simple, general strategies for correcting the upward bias of calibration summaries of prediction models" />
+<meta name="author" content="Mohsen Sadatsafavi, Ramin Rezaeianzadeh, Hessam Sadatsafavi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For clinical prediction models, calibration across the spectrum of predicted values is often assessed via flexible calibration curves and associated scalar summaries such as the integrated calibration index (ICI). However, these scalar summaries tend to have a finite-sample upward bias, as they are based on the absolute value of an estimate whose sampling distribution can cross zero. We show the mechanism underlying this bias and quantify its magnitude as a function of the true calibration error and its variance. This mechanism motivates easily implementable methods for reducing the bias (plug-in and inversion methods, each applied locally or globally) that are…" />
+<meta name="twitter:description" property="og:description" content="For clinical prediction models, calibration across the spectrum of predicted values is often assessed via flexible calibration curves and associated scalar summaries such as the integrated calibration index (ICI). However, these scalar summaries tend to have a finite-sample upward bias, as they are based on the absolute value of an estimate whose sampling distribution can cross zero. We show the mechanism underlying this bias and quantify its magnitude as a function of the true calibration error and its variance. This mechanism motivates easily implementable methods for reducing the bias (plug-in and inversion methods, each applied locally or globally) that are…" />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.33846.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.33846.html" />
+<meta property="og:site_name" content="Stat arXiv of the Last Week" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-26T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-26T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Simple, general strategies for correcting the upward bias of calibration summaries of prediction models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mohsen Sadatsafavi, Ramin Rezaeianzadeh, Hessam Sadatsafavi"},"dateModified":"2026-11-26T00:00:00+01:00","datePublished":"2026-11-26T00:00:00+01:00","description":"For clinical prediction models, calibration across the spectrum of predicted values is often assessed via flexible calibration curves and associated scalar summaries such as the integrated calibration index (ICI). However, these scalar summaries tend to have a finite-sample upward bias, as they are based on the absolute value of an estimate whose sampling distribution can cross zero. We show the mechanism underlying this bias and quantify its magnitude as a function of the true calibration error and its variance. This mechanism motivates easily implementable methods for reducing the bias (plug-in and inversion methods, each applied locally or globally) that are…","headline":"Simple, general strategies for correcting the upward bias of calibration summaries of prediction models","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.33846.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2026/11/26/2611.33846.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat arXiv of the Last Week" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+    <main aria-label="Content">
+      <div class="w">
+        <div class="post-nav">
+  <a class="back-link" href="/arxiv_rss/">&larr; back</a>
+  <button class="unmark-btn" id="unmark-btn">don't mark as read</button>
+</div>
+
+<article>
+  <div class="post-header">
+    <h1>Simple, general strategies for correcting the upward bias of calibration summaries of prediction models</h1>
+    <div class="post-meta-block">
+      <span class="badge badge-low">low</span>
+      Mohsen Sadatsafavi, Ramin Rezaeianzadeh, Hessam Sadatsafavi
+      <span class="sep">&middot;</span>
+      stat.ME, stat.AP
+      <span class="sep">&middot;</span>
+      26 Nov 2026
+    </div>
+  </div><div class="summary-box">Proposes plug-in and inversion corrections for upward bias in calibration summaries such as the integrated calibration index.</div><h3>Abstract</h3>
+  <p>For clinical prediction models, calibration across the spectrum of predicted values is often assessed via flexible calibration curves and associated scalar summaries such as the integrated calibration index (ICI). However, these scalar summaries tend to have a finite-sample upward bias, as they are based on the absolute value of an estimate whose sampling distribution can cross zero. We show the mechanism underlying this bias and quantify its magnitude as a function of the true calibration error and its variance. This mechanism motivates easily implementable methods for reducing the bias (plug-in and inversion methods, each applied locally or globally) that are applicable to any smoothing method that generates an estimate and its sampling variance for each point on the calibration curve. These methods are general in that 1) they can be used for different outcome types (continuous, binary, time-to-event, as well as counterfactual outcomes for models that predict treatment benefit), and 2) the resulting bias-adjusted calibration error curves yield bias-corrected estimates of other metrics such as quantile-based ones (e.g., E50 and E90). Focusing on ICI as an exemplary metric, numerical and case studies demonstrate that the upward bias can be substantial, especially when the sample is small and the true ICI is close to zero. Results show that the Global Inversion method removed the most bias, particularly when the bias was substantial, although it could slightly increase the mean absolute error if the bias was small.</p>
+
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2611.33846" target="_blank" rel="noopener">Read full paper</a>
+    <a class="paper-btn paper-btn-secondary" href="https://arxiv.org/pdf/2611.33846" target="_blank" rel="noopener">Read PDF</a>
+  </div>
+</article>
+
+<script>
+(function () {
+  var key = 'read:' + window.location.pathname;
+  localStorage.setItem(key, '1');
+  var btn = document.getElementById('unmark-btn');
+  btn.onclick = function () {
+    localStorage.removeItem(key);
+    btn.textContent = 'kept unread';
+    btn.disabled = true;
+  };
+})();
+</script>
+
+      </div>
+    </main>
+  </body>
+</html>
